@@ -1,20 +1,105 @@
+// app.js (ESM)
 import express from 'express';
 import fetch from 'node-fetch';
-import FormData from 'form-data';
+import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Fix for __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 const app = express();
 const PORT = process.env.PORT || 10000;
-const API_KEY = process.env.NEOCITIES_API_KEY;
-const SITE = process.env.NEOCITIES_SITE;  // e.g., "myusername"
+const DATA_FILE = path.join(__dirname, 'data.json');
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set CSP headers at runtime
+// --- Helper functions ---
+
+/**
+ * Parse GitHub URL, return { user, repo }
+ * @throws Error if invalid URL
+ */
+function parseGitHubUrl(repoUrl) {
+  const regex = /^https?:\/\/(?:www\.)?github\.com\/([^\/]+)\/([^\/]+)(?:\/.+)?$/;
+  const match = repoUrl.match(regex);
+  if (!match) throw new Error('Invalid GitHub URL format');
+  return { user: match[1], repo: match[2] };
+}
+
+/**
+ * Fetch JSON file from raw GitHub URL
+ */
+async function fetchJsonFromRepo(user, repo, jsonPath) {
+  const url = `https://raw.githubusercontent.com/${user}/${repo}/main/${jsonPath}`;
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error('Failed to fetch JSON file from GitHub');
+  return resp.json();
+}
+
+/**
+ * Extract required and optional fields from target JSON
+ */
+function buildEntry(target) {
+  const entry = {
+    id: target.id,
+    name: target.name,
+    author: target.author,
+    description: target.description
+  };
+  ['badge_colour', 'dependencies', 'conflicts', 'provides', 'version'].forEach(key => {
+    if (key in target) entry[key] = target[key];
+  });
+  return entry;
+}
+
+/**
+ * Fetch releases info from GitHub API
+ */
+async function fetchReleases(user, repo) {
+  const url = `https://api.github.com/repos/${user}/${repo}/releases`;
+  const resp = await fetch(url);
+  if (!resp.ok) return [];
+  const rels = await resp.json();
+  return rels.map(r => ({
+    tag: r.tag_name,
+    notes: r.body || '',
+    size: (r.assets || []).reduce((sum, a) => sum + (a.size || 0), 0),
+    published_at: r.published_at
+  }));
+}
+
+/**
+ * Fetch README.md from the repo
+ */
+async function fetchReadme(user, repo) {
+  const url = `https://raw.githubusercontent.com/${user}/${repo}/main/README.md`;
+  const resp = await fetch(url);
+  return resp.ok ? resp.text() : '';
+}
+
+/**
+ * Read or initialize data.json
+ */
+async function readData() {
+  try {
+    const txt = await fs.readFile(DATA_FILE, 'utf-8');
+    return JSON.parse(txt);
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Write data.json back to disk
+ */
+async function writeData(data) {
+  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
+}
+
+// Set Content Security Policy header
 app.use((req, res, next) => {
   res.setHeader(
     'Content-Security-Policy',
@@ -26,43 +111,56 @@ app.use((req, res, next) => {
   next();
 });
 
-// Handle form submissions
-app.post('/append', async (req, res) => {
+// 1) Welcome page
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Photon Mod Manager</h1>
+    <ul>
+      <li><a href="/submit">Submit a repo JSON</a></li>
+      <li><a href="/browse">Browse data.json</a></li>
+    </ul>
+  `);
+});
+
+// 2) Form page
+app.get('/submit', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'submit.html'));
+});
+
+// 3) Handle submission
+app.post('/submit', async (req, res) => {
   try {
     const { repoUrl, jsonPath } = req.body;
-    const m = repoUrl.match(/github\.com\/([^\/]+)\/([^\/]+)(?:\/|$)/);
-    if (!m) return res.status(400).json({ error: 'Invalid GitHub URL' });
-    const [, user, repo] = m;
-    const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/main/${jsonPath}`;
+    const { user, repo } = parseGitHubUrl(repoUrl);
 
-    const ghRes = await fetch(rawUrl);
-    if (!ghRes.ok) return res.status(400).json({ error: 'GitHub file not found' });
-    const remoteJson = await ghRes.json();
+    const target = await fetchJsonFromRepo(user, repo, jsonPath);
+    const entry = buildEntry(target);
 
-    const FILENAME = 'data.json';
-    const neocRes = await fetch(`https://${SITE}.neocities.org/${FILENAME}`);
-    let existing = {};
-    if (neocRes.ok) {
-      existing = await neocRes.json().catch(() => ({}));
-    }
+    entry.releases = await fetchReleases(user, repo);
+    entry.readme = await fetchReadme(user, repo);
 
-    existing[`${repo}@${user}`] = remoteJson;
+    const data = await readData();
+    data[`${repo}@${user}`] = entry;
+    await writeData(data);
 
-    const form = new FormData();
-    form.append('file', Buffer.from(JSON.stringify(existing, null, 2)), { filename: FILENAME });
-
-    const uploadRes = await fetch('https://neocities.org/api/upload', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${API_KEY}` },
-      body: form
-    });
-    const result = await uploadRes.json();
-
-    return res.json(result);
+    res.json({ success: true, key: `${repo}@${user}` });
   } catch (err) {
     console.error(err);
-    return res.status(500).json({ error: 'Internal server error', details: err.message });
+    res.status(400).json({ error: err.message });
   }
 });
 
-app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
+
+// 4) Browse data.json
+app.get('/browse', async (req, res) => {
+  try {
+    const txt = await fs.readFile(DATA_FILE, 'utf-8');
+    res.type('application/json').send(txt);
+  } catch {
+    res.json({});
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+});

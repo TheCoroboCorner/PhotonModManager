@@ -46,19 +46,16 @@
           <div class="wrapper">
             <form id="gh-form">
               <label>
-                Repo URL:
-                <input type="url" name="repoUrl" placeholder="https://github.com/user/repo" required>
-              </label>
-              <br>
-              <label>
-                JSON Path:
-                <input type="text" name="jsonPath" placeholder="data/info.json" required>
-              </label>
-              <br>
-              <button type="submit">Fetch & Submit</button>
-            </form>
-            
-            <script src="/append.js"></script>
+                GitHub Repo URL:<br>
+                    <input name="repoUrl" type="url" required placeholder="https://github.com/user/repo">
+            </label><br><br>
+            <label>
+            JSON Path in Repo:<br>
+            <input name="jsonPath" type="text" required placeholder="data/info.json">
+            </label><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <script src="/append.js"></script>
           </div>
         </div>
       </div>
