@@ -156,16 +156,75 @@ app.post('/submit', async (req, res) => {
   }
 });
 
+/**
+ * Sort entries object by key
+ * @param {{[key: string]: object}} entries
+ * @param {string} field - 'published_at' or 'favourites'
+ * @param {string} order - 'asc' or 'desc'
+ * @returns {Array<object>} sorted array of entries with key included
+ */
+function sortEntries(entries, field, order = 'desc') {
+  const arr = Object.entries(entries).map(([key, entry]) => ({ key, ...entry }));
+  arr.sort((a, b) => {
+    let av = a[field];
+    let bv = b[field];
+    if (field === 'published_at') {
+      av = Date.parse(av);
+      bv = Date.parse(bv);
+    }
+    if (av < bv) return order === 'asc' ? -1 : 1;
+    if (av > bv) return order === 'asc' ? 1 : -1;
+    return 0;
+  });
+  return arr;
+}
 
 // 4) Browse data.json
 app.get('/browse', async (req, res) => {
   try {
-    const txt = await fs.readFile(DATA_FILE, 'utf-8');
-    res.type('application/json').send(txt);
-  } catch {
-    res.json({});
+    const data = await readData();
+    const { sortBy, order } = req.query;
+    let entries = Object.entries(data).map(([key, entry]) => ({ key, ...entry }));
+    if (sortBy === 'published_at' || sortBy === 'favourites') {
+      entries = sortEntries(data, sortBy, order === 'asc' ? 'asc' : 'desc');
+    }
+
+    // Build HTML
+    let html = `
+      <h1>Browse Entries</h1>
+      <form method="get">
+        <label>Sort by:
+          <select name="sortBy">
+            <option value="">--none--</option>
+            <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
+            <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
+          </select>
+        </label>
+        <label>Order:
+          <select name="order">
+            <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
+            <option value="desc"${order==='desc'?' selected':''}>Descending</option>
+          </select>
+        </label>
+        <button type="submit">Apply</button>
+      </form>
+      <ul>
+    `;
+    for (const e of entries) {
+      html += `<li><strong>${e.name}</strong> by ${e.author}<br>` +
+              `Published: ${e.published_at}<br>` +
+              `Favourites: ${e.favourites}<br>` +
+              `<a href="/data">View raw JSON</a>` +
+              `</li><hr>`;
+    }
+    html += '</ul>';
+    res.send(html);
+  } catch (err) {
+    console.error('Browse error:', err);
+    res.status(500).send('<p>Server Error</p>');
   }
 });
+
 
 // Serve raw data.json file
 app.get('/data', (_req, res) => {
