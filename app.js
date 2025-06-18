@@ -132,18 +132,21 @@ app.post('/submit', async (req, res) => {
   try {
     const { repoUrl, jsonPath } = req.body;
     const { user, repo } = parseGitHubUrl(repoUrl);
+    const key = `${repo}@${user}`;
+
+    const data = await readData();
+    if (key in data) {
+      return res.status(409).json({ error: `Entry for '${key}' already exists` });
+    }
 
     const target = await fetchJsonFromRepo(user, repo, jsonPath);
     const entry = buildEntry(target);
-
-    entry.releases = await fetchReleases(user, repo);
     entry.readme = await fetchReadme(user, repo);
 
-    const data = await readData();
-    data[`${repo}@${user}`] = entry;
+    data[key] = entry;
     await writeData(data);
 
-    res.json({ success: true, key: `${repo}@${user}` });
+    res.json({ success: true, key });
   } catch (err) {
     console.error(err);
     res.status(400).json({ error: err.message });
