@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url';
 
 import { Octokit } from "@octokit/rest";
 import cron from "node-cron";
-import fs from "fs/promises";
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const OWNER  = "TheCoroboCorner";
