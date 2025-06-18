@@ -2,7 +2,11 @@ import express from 'express';
 import fetch from 'node-fetch';
 import FormData from 'form-data';
 import path from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 10000;
 const API_KEY = process.env.NEOCITIES_API_KEY;
