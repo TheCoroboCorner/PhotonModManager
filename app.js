@@ -192,33 +192,87 @@ app.get('/browse', async (req, res) => {
 
     // Build HTML
     let html = `
-      <h1>Browse Entries</h1>
-      <form method="get">
-        <label>Sort by:
-          <select name="sortBy">
-            <option value="">--none--</option>
-            <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
-            <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
-          </select>
-        </label>
-        <label>Order:
-          <select name="order">
-            <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
-            <option value="desc"${order==='desc'?' selected':''}>Descending</option>
-          </select>
-        </label>
-        <button type="submit">Apply</button>
-      </form>
-      <ul>
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Browse - Photon</title>
+          <!-- The style.css file allows you to change the look of your web pages.
+              If you include the next line in all your web pages, they will all share the same look.
+              This makes it easier to make new pages for your site. -->
+          <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+        </head>
+        <body>
+          <div id="main-container">
+            <div id="navbar">
+              <ul class="nav">
+                <li>
+                  <a href="https://photonmodmanager.onrender.com">Home</a>
+                </li>
+                <li>
+                  <a href="https://photonmodmanager.onrender.com/submit">Submit</a>
+                </li>
+                <li>
+                  <a href="https://photonmodmanager.onrender.com/browse">Browse</a>
+                </li>
+              </ul>
+            </div>
+          
+            <div class="content-wrapper flex alignment">
+              <div id="content-container" style="flex-grow: 1;">
+                <div class="wrapper">
+                  <h1>
+                    Browse
+                  </h1>
+                  <br>
+                  <p>
+                    Here, you may browse various mods, all of which have been uploaded to this database, as well as download them. As this database is still new, the list may be a bit limited, but have faith that it will grow in time.
+                  </p>
+                </div>
+                <form method="get">
+                  <label>
+                    <select name="sortBy">
+                      <option value="">--none--</option>
+                      <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
+                      <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
+                    </select>
+                  </label>
+                  <label>Order:
+                    <select name="order">
+                      <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
+                      <option value="desc"${order==='desc'?' selected':''}>Descending</option>
+                    </select>
+                  </label>
+                  <button type="submit">Apply</button>
+                </form>
+                <ul>
     `;
     for (const e of entries) {
+      const [repo, owner] = e.key.split('@');
+      const githubLink = `https://github.com/${owner}/${repo}`
+
       html += `<li><strong>${e.name}</strong> by ${e.author}<br>` +
               `Published: ${e.published_at}<br>` +
               `Favourites: ${e.favourites}<br>` +
-              `<a href="/data">View raw JSON</a>` +
+              `<a href="${githubLink}">View Github page</a>` +
               `</li><hr>`;
     }
-    html += '</ul>';
+    html += `
+                  </div>
+            </div>
+            
+            <div id="footer">
+              <div class="footer-wrapper">
+                <p>
+                  A website meant to manage mods from Balatro by LocalThunk. We do not claim to own Balatro in any way.
+                </p>
+              </div>
+            </div>
+          </div>
+        </body>
+      </html>
+    `;
     res.send(html);
   } catch (err) {
     console.error('Browse error:', err);
