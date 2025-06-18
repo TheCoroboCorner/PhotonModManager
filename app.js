@@ -4,6 +4,7 @@ import fetch from 'node-fetch';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { backupDataJson } from './github-backup.js';
 
 // Fix for __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -148,6 +149,7 @@ app.post('/submit', async (req, res) => {
 
     data[key] = entry;
     await writeData(data);
+    backupDataJson().catch(console.error);
 
     res.json({ success: true, key });
   } catch (err) {
