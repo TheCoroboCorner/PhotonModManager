@@ -275,88 +275,61 @@ app.get('/browse', async (req, res) => {
             </div>
           </div>
           <script>
-            var x, i, j, l, ll, selElmnt, a, b, c;
-            x = document.getElementsByClassName("select-box");
-            l = x.length;
-            for (i = 0; i < l; i++)
-            {
-              selElmnt = x[i].getElementsByTagName("select")[0];
-              ll = selElmnt.length;
-              // Create a new div at each element that acts as the element
-              a = document.createElement("DIV");
-              a.setAttribute("class", "select-selected");
-              a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-              x[i].appendChild(a);
-              // Create a new div at each element that contains the option list
-              b = document.createElement("DIV");
-              b.setAttribute("class", "select-items select-hide");
-              for (j = 1; j < ll; j++)
-              {
-                // For each option in the selection element, create a new div at that point that will act as an option
-                c = document.createElement("DIV");
-                c.innerHTML = selElmnt.options[j].innerHTML;
-                c.addEventListener("click", function(e) 
-                {
-                  var y, i, k, s, h, sl, yl;
-                  s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                  sl = s.length;
-                  h = this.parentNode.previousSibling;
-                  for (i = 0; i < sl; i++)
-                  {
-                    if (s.options[i].innerHTML == this.innerHTML)
-                    {
-                      s.selectedIndex = i;
-                      h.innerHTML = this.innerHTML;
-                      y = this.parentNode.getElementsByClassName("same-as-selected");
-                      yl = y.length;
-                      for (k = 0; k < yl; k++)
-                      {
-                        y[k].removeAttribute("class");
-                      }
-                      this.setAttribute("class", "same-as-selected");
-                      break;
-                    }
-                  }
-                  h.click();
-                });
-                b.appendChild(c);
-              }
-              x[i].appendChild(b);
-              a.addEventListener("click", function(e)
-              {
-                e.stopPropagation();
-                closeAllSelect(this);
-                this.nextSibling.classList.toggle("select-hide");
-                this.classList.toggle("select-arrow-active");
+            $(document).ready(function() {
+              $(".drop .option").click(function() {
+                var val = $(this).attr("data-value"),
+                    $drop = $(".drop"),
+                    prevActive = $(".drop .option.active").attr("data-value"),
+                    options = $(".drop .option").length;
+                $drop.find(".option.active").addClass("mini-hack");
+                $drop.toggleClass("visible");
+                $drop.removeClass("withBG");
+                $(this).css("top");
+                $drop.toggleClass("opacity");
+                $(".mini-hack").removeClass("mini-hack");
+                if ($drop.hasClass("visible")) {
+                  setTimeout(function() {
+                    $drop.addClass("withBG");
+                  }, 400 + options*100); 
+                }
+                triggerAnimation();
+                if (val !== "placeholder" || prevActive === "placeholder") {
+                  $(".drop .option").removeClass("active");
+                  $(this).addClass("active");
+                };
               });
-            }
-            function closeAllSelect(elmnt)
+              
+              function triggerAnimation() {
+                var finalWidth = $(".drop").hasClass("visible") ? 22 : 20;
+                $(".drop").css("width", "24em");
+                setTimeout(function() {
+                  $(".drop").css("width", finalWidth + "em");
+                }, 400);
+              }
+            });
+
+            var el = {};
+            $('.select-box').on('click', function(ev)
             {
-              var x, y, i, xl, yl, arrNo = [];
-              x = document.getElementsByClassName("select-items");
-              y = document.getElementsByClassName("select-selected");
-              xl = x.length;
-              yl = y.length;
-              for (i = 0; i < yl; i++)
-              {
-                if (elmnt == y[i])
-                {
-                  arrNo.push(i);
-                }
-                else
-                {
-                  y[i].classList.remove("select-arrow-active");
-                }
-              }
-              for (i = 0; i < xl; i++)
-              {
-                if (arrNo.indexOf(i))
-                {
-                  x[i].classList.add("select-hide");
-                }
-              }
-            }
-            document.addEventListener("click", closeAllSelect);
+              $('.select-box').css('opacity', '0');
+              $('.list__ul').toggle();
+            });
+
+            $('.list__ul a').on('click', function(ev)
+            {
+              ev.preventDefault();
+              var index = $(this).parent().index();
+
+              $('.select-box').text($(this).text()).css('opacity', '1');
+              $('.list__ul').find('li').eq(index).prependTo('.list__ul');
+              $('.list__ul').toggle();
+            });
+
+            $('select').on('change', function(e)
+            {
+              $('.select-box').text(this.value);
+              $(this).animate({width: $('.select-box').width() + 'px'});
+            });
           </script>
         </body>
       </html>
