@@ -20,6 +20,7 @@ async function getFileSha() {
   if (resp.status === 404) return null;
   if (!resp.ok) throw new Error(`GitHub GET contents failed: ${resp.status}`);
   const body = await resp.json();
+  console.log(body.sha);
   return body.sha;
 }
 
@@ -29,6 +30,7 @@ export async function backupDataJson() {
   const sha     = await getFileSha();
 
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/data.json`;
+  console.log("Fetching data.json...")
   const resp = await fetch(url, {
     method: 'PUT',
     headers: {
@@ -41,8 +43,11 @@ export async function backupDataJson() {
       sha: sha || undefined
     })
   });
+  console.log("Finishing fetching data.json...")
   if (!resp.ok) {
     const err = await resp.text();
     throw new Error(`GitHub PUT contents failed (${resp.status}): ${err}`);
   }
+  const data = await resp.json();
+  console.log("Backup commit URL:", data.content && data.content.html_url)
 }
