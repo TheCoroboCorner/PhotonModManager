@@ -1,0 +1,120 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+:root {
+  /* Global */
+  --font-family: sans-serif;
+  --font-size: 16px;
+  --line-height: 1.8em;
+  --font-colour: #B4D0FA;
+  --link-colour: #5A8DDB;
+  --background-colour: #112c54;
+  
+  /* Navbar */
+  --navitems-alignment: center;
+  --space-between-navitems: 60px;
+  --navbar-margin-bottom: 10px;
+  --nav-bg-colour: #14376B;
+  
+  /* Main Content */
+  --content-padding: 25px;
+  --content-bg-colour: #164182;
+  
+  /* Footer */
+  --footer-height: 60px;
+  --footer-bg-colour: #14376B;
+  
+  /* Container */
+  --container-width: 800px;
+  --container-bg-colour: #1A4C96;
+  
+  /* Row Gap */
+  --row-gap: 5px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-colour);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--font-colour);
+}
+
+body a {
+  color: var(--link-colour);
+  font-weight: bold;
+  text-decoration: var(--link-text-decoration);
+}
+
+#main-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  background-color: var(--container-bg-colour);
+}
+
+.flex {
+  display: flex;
+  margin-bottom: var(--row-gap);
+}
+
+.content-wrap {
+  margin-top: var(--content-margin-top);
+}
+
+#content-container {
+  width: 60%;
+  margin-bottom: var(--row-gap);
+  background-color: var(--content-bg-colour);
+}
+
+#navbar {
+  margin-bottom: var(--row-gap);
+}
+
+#footer {
+    height: var(--footer-height);
+    text-align: center;
+    color: var(--font-colour);
+    background-color: var(--footer-bg-colour);
+}
+
+.nav {
+  margin-left: 0;
+  text-align: var(--navitems-alignment);
+  margin-top: 0;
+  margin-bottom: var(--navbar-margin-bottom);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: var(--nav-bg-colour);
+}
+
+.nav li {
+  display: inline-block;
+  padding-right: var(--space-between-navitems);
+}
+
+.wrapper {
+  padding: var(--content-padding);
+  padding-top: var(--sidebar-padding);
+}
+
+.footer-wrapper {
+  padding: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+  
+  #content-container {
+    width: 100%;
+    display: block;
+    order: 1;
+    margin-bottom: 10px;
+  }
+}

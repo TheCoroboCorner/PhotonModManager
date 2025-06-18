@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" 
+          content="
+            default-src 'self' 'unsafe-inline';
+            connect-src 'self' 'unsafe-inline' https://photonmodmanager.onrender.com;
+            script-src  'self' 'unsafe-inline';
+            style-src   'self' 'unsafe-inline';
+          ">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload - Photon</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="navbar">
+        <ul class="nav">
+          <li>
+            <a href="https://photonmodmanager.neocities.org">Home</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.neocities.org/submit">Submit</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.neocities.org/browse">Browse</a>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="content-wrapper flex alignment">
+        <div id="content-container" style="flex-grow: 1;">
+          <div class="wrapper">
+            <h1>
+              Upload a Project
+            </h1>
+            <br>
+            <p>
+              Submitting a project to the database is rather simple. Simply give the link to your repository below, and the path to the metadata file, and it will be added to the database.
+            </p>
+          </div>
+          <div class="wrapper">
+            <form id="gh-form">
+              <label>
+                Repo URL:
+                <input type="url" name="repoUrl" placeholder="https://github.com/user/repo" required>
+              </label>
+              <br>
+              <label>
+                JSON Path:
+                <input type="text" name="jsonPath" placeholder="data/info.json" required>
+              </label>
+              <br>
+              <button type="submit">Fetch & Submit</button>
+            </form>
+            
+            <script src="/append.js"></script>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">
+        <div class="footer-wrapper">
+          <p>
+            A website meant to manage mods from Balatro by LocalThunk. We do not claim to own Balatro in any way.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
