@@ -161,6 +161,13 @@ app.get('/browse', async (req, res) => {
   }
 });
 
+// Serve raw data.json file
+app.get('/data', (_req, res) => {
+  res.sendFile(DATA_FILE);
+});
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
 });
