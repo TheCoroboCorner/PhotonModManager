@@ -2,7 +2,6 @@ import express from 'express';
 import fetch from 'node-fetch';
 import FormData from 'form-data';
 import path from 'path';
-import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
