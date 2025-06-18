@@ -26,7 +26,7 @@ async function getFileSha() {
 
 export async function backupDataJson() {
   const content = await fs.readFile(DATA_FILE, 'utf8');
-  const base64  = Buffer.from(content, 'utf‑8').toString('base64');
+  const base64  = Buffer.from(content, 'utf8').toString('base64');
   const sha     = await getFileSha();
 
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/data.json`;
