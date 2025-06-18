@@ -5,6 +5,51 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+import { Octokit } from "@octokit/rest";
+import cron from "node-cron";
+import fs from "fs/promises";
+
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const OWNER  = "TheCoroboCorner";
+const REPO   = "PhotonModManager";
+const PATH   = "data.json";
+
+// helper to get the current sha if the file already exists
+async function getFileSha() {
+  try {
+    const { data } = await octokit.repos.getContent({
+      owner: OWNER,
+      repo: REPO,
+      path: PATH,
+    });
+    return data.sha;
+  } catch (err) {
+    if (err.status === 404) return null;
+    throw err;
+  }
+}
+
+async function backupDataJson() {
+  const content = await fs.readFile(DATA_FILE, "utf‑8");
+  const base64   = Buffer.from(content).toString("base64");
+  const sha      = await getFileSha();
+
+  await octokit.repos.createOrUpdateFileContents({
+    owner: OWNER,
+    repo: REPO,
+    path: PATH,
+    message: `Automated backup of data.json @ ${new Date().toISOString()}`,
+    content: base64,
+    sha: sha || undefined,
+  });
+  console.log("data.json backed up to GitHub at", new Date().toISOString());
+}
+
+// schedule to run every day at midnight UTC
+cron.schedule("0 0 * * *", () => {
+  backupDataJson().catch(console.error);
+});
+
 // Fix for __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -47,9 +92,11 @@ function buildEntry(target) {
     id: target.id,
     name: target.name,
     author: target.author,
-    description: target.description
+    description: target.description,
+    favourites: 0
   };
-  ['badge_colour', 'dependencies', 'conflicts', 'provides', 'version'].forEach(key => {
+  ['badge_colour', 'dependencies', 'conflicts', 'provides', 'git_owner', 'git_repo',
+    'mod_index_id', 'mod_path', 'subpath', 'download_suffix', 'update_mandatory', 'target_version'].forEach(key => {
     if (key in target) entry[key] = target[key];
   });
   return entry;
@@ -142,6 +189,7 @@ app.post('/submit', async (req, res) => {
     const target = await fetchJsonFromRepo(user, repo, jsonPath);
     const entry = buildEntry(target);
     entry.readme = await fetchReadme(user, repo);
+    entry.published_at = new Date().toISOString();
 
     data[key] = entry;
     await writeData(data);
