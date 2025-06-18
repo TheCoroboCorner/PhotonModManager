@@ -1,11 +1,16 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const OWNER = process.env.GITHUB_OWNER;
 const REPO  = process.env.GITHUB_REPO;
 const TOKEN = process.env.GITHUB_TOKEN;
 const DATA_FILE = path.join(__dirname, 'data.json');
 const API_BASE = 'https://api.github.com';
+
+
 
 async function getFileSha() {
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/data.json`;
