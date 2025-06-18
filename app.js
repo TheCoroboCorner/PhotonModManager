@@ -50,7 +50,7 @@ function buildEntry(target) {
     description: target.description,
     favourites: 0
   };
-  ['badge_colour', 'dependencies', 'conflicts', 'provides', 'git_owner', 'git_repo',
+  ['id', 'name', 'author', 'description', 'badge_colour', 'dependencies', 'conflicts', 'provides', 'git_owner', 'git_repo',
     'mod_index_id', 'mod_path', 'subpath', 'download_suffix', 'update_mandatory', 'target_version'].forEach(key => {
     if (key in target) entry[key] = target[key];
   });
