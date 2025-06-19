@@ -31,8 +31,9 @@ async function loadMods() {
     const ul = document.getElementById('mod-list');
     entries.forEach(e => {
         const li = document.createElement('li');
+        const authorText = Array.isArray(e.author) ? e.author.join(', ') : String(e.author);
         li.innerHTML = `
-            <strong>${e.name}</strong> by ${e.author.replace(/,\s*/g, ', ')}<br>
+            <strong>${e.name}</strong> by ${authorText}<br>
             Published: ${e.published_at}<br>
             Favourites: ${e.favourites}<br>
             <a href="https://github.com/${e.git_owner}/${e.git_repo}" target="_blank">
