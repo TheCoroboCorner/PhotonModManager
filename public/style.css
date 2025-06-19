@@ -167,14 +167,22 @@ select option:checked {
   color: var(--font-colour);
 }
 
-input, textarea {
-  background-color: #5643CC;
+input[type="text"],
+input[type="url"],
+textarea {
+  background-color: #36288f;
   color: var(--font-colour);
-  border: 1px solid #5132a8;
+  border: 1px solid #2d1c5e;
   border-radius: 7px;
   padding: 0.5em;
   transition: border-color 0.2s, box-shadow 0.2s;
   width: 300px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--font-colour);
+  opacity: 1;
 }
 
 input:focus, textarea:focus {
@@ -190,6 +198,20 @@ textarea[readonly] {
   background-color: #5132a8;
   color: var(--font-colour);
   cursor: not-allowed;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  box-shadow: inset 0 0 0px 1000px #36288f;
+  -webkit-text-fill-color: var(--font-colour);
+  border-radius: 7px;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  box-shadow: inset 0 0 0px 1000px #2d1c5e,
+              0 0 0 2px rgba(42, 157, 143, 0.3);
+  -webkit-text-fill-color: var(--font-colour);
 }
 
 @media only screen and (max-width: 800px) {
