@@ -109,23 +109,27 @@ app.post('/submit', async (req, res) => {
     const { repoUrl, jsonPath } = req.body;
     let user, repo, branch, filepath, jsonData, key;
 
+    const url = new URL(repoUrl);
+
     // direct raw url?
-    if (/^https?:\/\/raw\.githubusercontent\.com\//.test(repoUrl))
+    if (url.hostname === 'raw.githubusercontent.com')
     {
-      const { pathname } = new URL(repoUrl);
-      [ , user, repo, branch, ...rest ] = pathname.split('/');
+      [ , user, repo, branch, ...rest ] = url.split('/');
       filepath = rest.join('/');
     } // standard github blob url?
-    else if (/^https?:\/\/github\.com\/[^\/]+\/[^\/]+\/blob\//.test(repoUrl))
+    else if (url.hostname === 'github.com' && url.pathname.split('/').includes('blob'))
     {
-      const url = new URL(repoUrl);
       [ , user, repo, , branch, ...rest] = url.pathname.split('/');
       filepath = rest.join('/');
+    }
+    else if (url.hostname === 'github.com' && jsonPath)
+    {
+      [ , user, repo ] = url.pathname.split('/');
+      filepath = jsonPath;
     }
     else
     {
       ({user, repo} = parseGitHubUrl(repoUrl));
-      branch = 'main';
       filepath = jsonPath
     }
 
@@ -136,7 +140,24 @@ app.post('/submit', async (req, res) => {
       return res.status(409).json({ error: `Entry for '${key}' already exists` });
     }
 
-    const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${filepath}?ref=${branch}`;
+    const repoInfoRes = await fetch(`https://api.github.com/repos/${user}/${rpeo}`,
+    {
+      headers:
+      {
+        'User-Agent': 'photonmodmanager',
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': `Bearer ${process.env.GITHUB_FETCH_TOKEN}`
+      }
+    });
+    if (!repoInfoRes.ok)
+    {
+      const err = await repoInfoRes.json();
+      throw new Error(`GitHub API (repo) error: ${repoInfoRes.status} ${err.message || repoInfoRes.statusText}`);
+    }
+
+    const { default_branch } = await repoInfoRes.json();
+
+    const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${filepath}?ref=${default_branch}`;
     const apiRes = await fetch(apiUrl, 
     {
       headers:
