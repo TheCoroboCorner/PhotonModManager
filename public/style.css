@@ -9,7 +9,7 @@
   --line-height: 1.8em;
   --font-colour: #B4D0FA;
   --link-colour: #5A8DDB;
-  --background-colour: #112c54;
+  --background-colour: linear-gradient(92.88deg, #212d58 9.16%, #1e1750 43.89%, #291758 64.72%);
   
   /* Navbar */
   --navitems-alignment: center;
@@ -130,6 +130,35 @@ body a {
 .click-me:hover {
   box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
   transition-duration: .1s;
+}
+
+select {
+  background-color: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  color: var(--font-colour);
+
+  border-radius: 8px;
+  border: 1px solid linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  padding: 0.4em 0.6em;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.5);
+}
+
+select option {
+  background-color: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  color: var(--font-colour);
+}
+
+select option:hover {
+  background-color: var(--background-colour);
+  color: var(--font-colour);
+}
+
+select option:checked {
+  background-color: linear-gradient(92.88deg, #35478a 9.16%, #40329c 43.89%, #5132a8 64.72%);
+  color: var(--font-colour);
 }
 
 @media only screen and (max-width: 800px) {
