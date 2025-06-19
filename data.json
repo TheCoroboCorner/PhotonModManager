@@ -60,5 +60,24 @@
     "readme": "# Grab Bag\nGrab Bag is a Balatro mod that currently adds: \n- 46 (+8) Jokers\n- 3 Tarots\n- 1 Spectral\n- 3 Enhancements \n- 15 Boss Blinds\n- 5 Showdown Boss Blinds\n- and 4 Decks.\n\nThe content in this mod is supposed to feel vanilla, and I created this new content to be largely in line with the rules and design philosophy that localthunk follows when making Jokers and other content. \n\n## Jokers\nAs of the latest update, this mod contains 21 Common, 15 Uncommon, and 10 Rare Jokers.\n### Common\n- Bad Trip\n- Bait\n- Bullseye\n- Counterfeit Joker\n- Coupon\n- Dunce\n- Gasoline\n- Hadal Zone\n- Jackpot\n- Morose Joker\n- Patience\n- Postage Stamp\n- Qubits\n- Receipt\n- Revolution 9\n- Sketchy Joker\n- Torchlight\n- Waterfall\n- Wild Joker\n- Hot Potato\n- Polariser\n  \n### Uncommon\n- Another Brick\n- Bank Teller\n- Boing Ball\n- Calculator\n- Candle\n- Cheque Stub\n- Double Gulp\n- First Strike\n- Honeycomb\n- Impostor\n- Knight\n- Lover's Locket\n- Wax Joker\n- Wheel of Misfortune\n- Yellow Pages\n  \n### Rare\n- Apparition\n- D20\n- Double King\n- Forest Fire\n- Golden Cookie\n- Lobster Claw\n- Pentagram\n- Retro Joker\n- Silver Hammer\n- The Moon's Oceans\n\n## Enhancements\nAs of the latest update, this mod contains 2 new enhancements.\n- River (and The River Tarot)\n- Wooden (and The Life Tarot)\n\n## Shattered Jokers\nJokers can be shattered into more powerful Shattered jokers with the Shatter consumable, which may show up in Arcana and Spectral Packs.\n### Shatterable Jokers\n- Obelisk\n- Flower Pot\n- Fibonacci\n- Polariser\n- Rough Gem\n- Splash\n- Joker\n- Invisible Joker\n\n## Decks\nThere are 4 decks in the latest update of the mod.\n- Gem Deck\n- Mathematical Deck\n- Negative Deck\n- Tech Deck\n",
     "published_at": "2025-06-19T16:08:16.556Z",
     "type": "Mod"
+  },
+  "Lucky-Rabbit@Trif3ctal": {
+    "id": "LuckyRabbit",
+    "name": "Lucky Rabbit",
+    "author": [
+      "Fennex",
+      "Trif",
+      "HarmoniousJoker"
+    ],
+    "description": "Vanilla+ content mod that adds new jokers, boss blinds, a new consumable type, and more to expand upon the base game. It's time to get silly!",
+    "favourites": 0,
+    "badge_colour": "f0c87e",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0614a)",
+      "Lovely (>=0.7.1)"
+    ],
+    "readme": "# Lucky Rabbit\nLucky Rabbit is a WIP Vanilla+ Balatro mod that adds new Jokers, boss blinds, a new consumable type, and more to expand upon the base game, cooked up by [Fennex](https://www.twitch.tv/mrfennex), [Trif](https://github.com/Trif3ctal), and [HarmoniousJoker](https://github.com/HarmoniousJoker). It’s time to get silly!\n\n*Note: This mod requires [Steamodded](https://github.com/Steamopollys/Steamodded/archive/refs/heads/main.zip) and [Lovely](https://github.com/ethangreen-dev/lovely-injector/releases/latest) (obviously)*\n\nAs of now, this mod adds:\n- **42** fun new Jokers\n- **23** new Silly consumable cards\n- **3** brand-new card modifiers known as **Markings**\n- **2** new Enhancements to expand your deck\n- **15** upgraded and helpful Vouchers\n- **5** practical Decks\n- **4** skip-worthy Tags\n- **11** tough new Boss Blinds\n- **6** themed Friends of Jimbo-style card skins\n\n__Feel free to check out [the in-depth mod progress spreadsheet!](https://docs.google.com/spreadsheets/d/1-gmJJKUTY5EP2TqhpfTXqD-P1NzQQxCRvEpoFnwK72g/edit?gid=1809378509#gid=1809378509)__\n\n*Give us feedback or notify us of issues at [the official Balatro Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)*\n-\n\n![image](https://github.com/user-attachments/assets/971a669a-ae21-4699-8caa-a58b7ee9748b)\n",
+    "published_at": "2025-06-19T16:27:24.948Z",
+    "type": "Mod"
   }
 }
