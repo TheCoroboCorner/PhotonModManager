@@ -79,5 +79,21 @@
     "readme": "# Lucky Rabbit\nLucky Rabbit is a WIP Vanilla+ Balatro mod that adds new Jokers, boss blinds, a new consumable type, and more to expand upon the base game, cooked up by [Fennex](https://www.twitch.tv/mrfennex), [Trif](https://github.com/Trif3ctal), and [HarmoniousJoker](https://github.com/HarmoniousJoker). It’s time to get silly!\n\n*Note: This mod requires [Steamodded](https://github.com/Steamopollys/Steamodded/archive/refs/heads/main.zip) and [Lovely](https://github.com/ethangreen-dev/lovely-injector/releases/latest) (obviously)*\n\nAs of now, this mod adds:\n- **42** fun new Jokers\n- **23** new Silly consumable cards\n- **3** brand-new card modifiers known as **Markings**\n- **2** new Enhancements to expand your deck\n- **15** upgraded and helpful Vouchers\n- **5** practical Decks\n- **4** skip-worthy Tags\n- **11** tough new Boss Blinds\n- **6** themed Friends of Jimbo-style card skins\n\n__Feel free to check out [the in-depth mod progress spreadsheet!](https://docs.google.com/spreadsheets/d/1-gmJJKUTY5EP2TqhpfTXqD-P1NzQQxCRvEpoFnwK72g/edit?gid=1809378509#gid=1809378509)__\n\n*Give us feedback or notify us of issues at [the official Balatro Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)*\n-\n\n![image](https://github.com/user-attachments/assets/971a669a-ae21-4699-8caa-a58b7ee9748b)\n",
     "published_at": "2025-06-19T16:27:24.948Z",
     "type": "Mod"
+  },
+  "Ortalab@Eremel": {
+    "id": "ortalab",
+    "name": "Ortalab",
+    "author": [
+      "Balatro Discord"
+    ],
+    "description": "Every action has an opposite reaction. In another world, in the nation of \"Virtue\", a simple indie developer created Ortalab, which so happened to be the opposite of our world's Balatro. This mod is intended to port everything from that parallel world to Balatro. Within this demo, it includes 75 Jokers, 10 Decks, 7 sets of Coupons, a new Consumable Type with Boosters - Loteria Cards, 8 Enhancements, 4 Editions, 12 patches, and 2 Stakes for you to try out.",
+    "favourites": 0,
+    "badge_colour": "990000",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0322a)"
+    ],
+    "readme": "",
+    "published_at": "2025-06-19T18:02:01.854Z",
+    "type": "Mod"
   }
 }
