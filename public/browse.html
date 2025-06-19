@@ -39,7 +39,7 @@
             </p>
             <form method="get">
               <label>
-                Sort By:       
+                <span>Sort By:       </span>
                 <select name="sortBy">
                   <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
                   <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
@@ -48,7 +48,7 @@
               <br>
               <br>
               <label>
-                Order:        
+                <span>Order:        </span>
                 <select name="order">
                   <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
                   <option value="desc"${order==='desc'?' selected':''}>Descending</option>
@@ -57,7 +57,7 @@
               <br>
               <br>
               <label>
-                Filter By Tag:
+                <span>Filter By Tag:</span>
                 <select name="tag">
                   <option value="">All</option>
                   <option value="Textures">Textures</option>
