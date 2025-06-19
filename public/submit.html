@@ -50,7 +50,7 @@
             <form id="gh-form">
               <fieldset>
                 <legend>Tags</legend>
-                <div class="tag-options"></div>
+                <div class="tag-options">
                   <label class="switch">
                     <input type="checkbox" name="tags" value="Textures">
                     <span class="label-text">Textures</span>
@@ -98,21 +98,21 @@
                 </div>
               </fieldset>
               <br>
-              <div>
-                <label>
-                  GitHub Repo URL:<br>
-                  <input name="repoUrl" type="url" required placeholder="https://github.com/user/repo">
-                </label>
-                <br>
-                <br>
-                <label>
-                  JSON Path in Repo:<br>
-                  <input name="jsonPath" type="text" required placeholder="data/info.json">
-                </label>
-                <br>
-                <br>
-                <button class="click-me" type="submit">Submit</button>
-              </div>
+              <label>
+                GitHub Repo URL:<br>
+                <input name="repoUrl" type="url" required placeholder="https://github.com/user/repo">
+              </label>
+              <br>
+              <br>
+              <label>
+                JSON Path in Repo:<br>
+                <input name="jsonPath" type="text" required placeholder="data/info.json">
+              </label>
+              <br>
+              <br>
+              <button type="submit">Submit</button>
+              <br>
+              <br>
             </form>
             <script src="/append.js"></script>
           </div>

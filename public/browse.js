@@ -54,6 +54,7 @@ async function loadMods() {
         return order === 'asc' ? -diff : diff;
     });
 
+    // tag limit when it's in the index page
     const isIndex = window.location.pathname === '/' || window.location.pathname === '/index.html'
     if (isIndex) entries = entries.slice(0, 5);
 
@@ -80,37 +81,9 @@ async function loadMods() {
         // owner / repo variables
         const [repo, owner] = e.key.split('@');
 
-        // favourites
-        const favBtn = document.createElement('button');
-        favBtn.className = 'favourite-btn';
-        favBtn.textContent = `❤ Favourite (${e.favourites ?? 0})`;
-
-        const favs = new Set(JSON.parse(localStorage.getItem('favourited') || '[]'));
-        if (favs.has(e.key))
-            favBtn.disabled = true;
-
-        favBtn.addEventListener('click', async () =>
-        {
-            favBtn.disabled = true;
-            const res = await fetch(`/favourite/${encodeURIComponent(e.key)}`, 
-            {
-                method: 'POST'
-            });
-            const json = await res.json();
-            if (json.success)
-            {
-                favBtn.textContent = `❤ Favourite (${json.newCount})`;
-                favs.add(e.key);
-                localStorage.setItem('favourited', JSON.stringify(Array.from(favs)));
-            }
-            else
-            {
-                console.warn(json.message || json.error);
-            }
-        });
-
         li.innerHTML = `
             <strong>${e.name ?? "Unknown"}</strong> by ${authorText ?? "Unknown"}<br>
+            <button class="favourite-btn">❤ Favourite (${e.favourites})</button><br>
             Description: ${e.description ?? "None"}<br>
             Published: ${publishedText ?? "Unknown"}<br>
             Type: ${e.type ?? "Unknown"}<br>
@@ -140,10 +113,32 @@ async function loadMods() {
 
         li.appendChild(tagBar);
 
-        // favourites again
-        const strong = li.querySelector('strong');
-        strong.insertAdjacentElement('afterend', favBtn);
-        favBtn.insertAdjacentElement('afterend', '<br>');
+        // favourites
+        const favBtn = li.querySelector('.favourite-btn');
+
+        const favs = new Set(JSON.parse(localStorage.getItem('favourited') || '[]'));
+        if (favs.has(e.key))
+            favBtn.disabled = true;
+
+        favBtn.addEventListener('click', async () =>
+        {
+            favBtn.disabled = true;
+            const res = await fetch(`/favourite/${encodeURIComponent(e.key)}`, 
+            {
+                method: 'POST'
+            });
+            const json = await res.json();
+            if (json.success)
+            {
+                favBtn.textContent = `❤ Favourite (${json.newCount})`;
+                favs.add(e.key);
+                localStorage.setItem('favourited', JSON.stringify(Array.from(favs)));
+            }
+            else
+            {
+                console.warn(json.message || json.error);
+            }
+        });
 
         ul.appendChild(li);
         ul.appendChild(document.createElement('hr'));
