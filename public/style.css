@@ -338,6 +338,7 @@ textarea:-webkit-autofill:focus {
 .filter-form .click-me {
   height: 2.75em;
   line-height: 2.75em;
+  padding: 0 0.75em;
 }
 
 .filter-form select {
@@ -347,6 +348,12 @@ textarea:-webkit-autofill:focus {
 .filter-form > .click-me {
   margin: 0;
   flex-shrink: 0;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @media only screen and (max-width: 800px) {
