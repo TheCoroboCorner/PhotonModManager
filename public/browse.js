@@ -47,12 +47,14 @@ async function loadMods() {
         });
         const publishedText = `${formattedDate} at ${formattedTime}`;
 
+        const [repo, owner] = e.key.split('@');
+
         li.innerHTML = `
             <strong>${e.name}</strong> by ${authorText}<br>
             Published: ${publishedText}<br>
             Favourites: ${e.favourites}<br>
             Type: ${e.type}<br>
-            <a href="https://github.com/${e.git_owner}/${e.git_repo}" target="_blank">
+            <a href="https://github.com/${owner}/${repo}" target="_blank">
                 View Github page
             </a>
             `;
