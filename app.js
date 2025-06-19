@@ -119,6 +119,7 @@ app.post('/submit', async (req, res) => {
     const entry = buildEntry(target);
     entry.readme = await fetchReadme(user, repo);
     entry.published_at = new Date().toISOString();
+    entry.type = "Mod";
 
     data[key] = entry;
     await writeData(data);

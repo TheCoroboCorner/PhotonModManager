@@ -28,6 +28,10 @@ async function loadMods() {
         return order === 'asc' ? -diff : diff;
     });
 
+    const path = window.location.pathname;
+    const isIndex = path === '/' || path.endsWith('index.html');
+    if (isIndex) entries = entries.slice(0, 5);
+
     const ul = document.getElementById('mod-list');
     entries.forEach(e => {
         const li = document.createElement('li');
@@ -48,6 +52,7 @@ async function loadMods() {
             <strong>${e.name}</strong> by ${authorText}<br>
             Published: ${publishedText}<br>
             Favourites: ${e.favourites}<br>
+            Type: ${e.type}<br>
             <a href="https://github.com/${e.git_owner}/${e.git_repo}" target="_blank">
                 View Github page
             </a>
