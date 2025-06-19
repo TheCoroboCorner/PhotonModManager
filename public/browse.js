@@ -83,7 +83,7 @@ async function loadMods() {
 
         li.innerHTML = `
             <strong>${e.name ?? "Unknown"}</strong> by ${authorText ?? "Unknown"}<br>
-            <button class="favourite-btn click-me">❤ Favourite (${e.favourites})</button><br>
+            <button style="width: 120px; height: 40px;" class="favourite-btn click-me">❤ Favourite (${e.favourites})</button><br>
             Description: ${e.description ?? "None"}<br>
             Published: ${publishedText ?? "Unknown"}<br>
             Type: ${e.type ?? "Unknown"}<br>
