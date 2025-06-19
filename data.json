@@ -120,5 +120,21 @@
     "published_at": "2025-06-19T20:50:51.882Z",
     "type": "Mod",
     "tags": []
+  },
+  "SuperFine@energykid": {
+    "id": "superfine",
+    "name": "SuperFine!!",
+    "author": [
+      "ENNWAY",
+      "Fred"
+    ],
+    "description": "SuperFine is a 'Vanilla++' mod - aiming to add content that fits in with vanilla's balance, but stands out on its own.",
+    "favourites": 0,
+    "badge_colour": "FF4A93",
+    "dependencies": [],
+    "readme": "",
+    "published_at": "2025-06-19T20:51:14.447Z",
+    "type": "Mod",
+    "tags": []
   }
 }
