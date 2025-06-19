@@ -37,44 +37,44 @@
             <p>
               Here, you may browse various mods, all of which have been uploaded to this database, as well as download them. As this database is still new, the list may be a bit limited, but have faith that it will grow in time.
             </p>
-            <form method="get" class="filter-form">
-              <div class="form-group">
-                <label>
-                  Sort By:  
-                  <select name="sortBy">
-                    <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
-                    <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
-                  </select>
-                </label>
-              </div>
-              <div class="form-group">
-                <label>
-                  Order:  
-                  <select name="order">
-                    <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
-                    <option value="desc"${order==='desc'?' selected':''}>Descending</option>
-                  </select>
-                </label>
-              </div>
-              <div class="form-group">
-                <label>
-                  Filter By Tag:
-                  <select name="tag">
-                    <option value="">All</option>
-                    <option value="Textures">Textures</option>
-                    <option value="SFX">SFX / Music</option>
-                    <option value="Vanilla Plus">Vanilla Plus</option>
-                    <option value="Jokers">Jokers</option>
-                    <option value="Consumables">Consumables</option>
-                    <option value="Cards">Cards</option>
-                    <option value="Blinds">Blinds</option>
-                    <option value="Modifiers">Modifiers</option>
-                    <option value="Mechanics">Mechanics</option>
-                    <option value="Quality of Life">Quality of Life</option>
-                    <option value="Misc">Miscellaneous</option>
-                  </select>
-                </label>
-              </div>
+            <form method="get">
+              <label>
+                Sort By:       
+                <select name="sortBy">
+                  <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
+                  <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
+                </select>
+              </label>
+              <br>
+              <br>
+              <label>
+                Order:        
+                <select name="order">
+                  <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
+                  <option value="desc"${order==='desc'?' selected':''}>Descending</option>
+                </select>
+              </label>
+              <br>
+              <br>
+              <label>
+                Filter By Tag:
+                <select name="tag">
+                  <option value="">All</option>
+                  <option value="Textures">Textures</option>
+                  <option value="SFX">SFX / Music</option>
+                  <option value="Vanilla Plus">Vanilla Plus</option>
+                  <option value="Jokers">Jokers</option>
+                  <option value="Consumables">Consumables</option>
+                  <option value="Cards">Cards</option>
+                  <option value="Blinds">Blinds</option>
+                  <option value="Modifiers">Modifiers</option>
+                  <option value="Mechanics">Mechanics</option>
+                  <option value="Quality of Life">Quality of Life</option>
+                  <option value="Misc">Miscellaneous</option>
+                </select>
+              </label>
+              <br>
+              <br>
               <button class="click-me" type="submit">Apply</button>
             </form>
             <script src="browse.js"></script>

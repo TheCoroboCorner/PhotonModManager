@@ -319,43 +319,6 @@ textarea:-webkit-autofill:focus {
   box-shadow: 0 0 10px rgba(174, 0, 255, 0.4);
 }
 
-.filter-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.filter-form > label {
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.filter-form select,
-.filter-form .click-me {
-  height: 2.75em;
-  line-height: 2.75em;
-  padding: 0 0.75em;
-}
-
-.filter-form select {
-  padding: 0 0.75em;
-}
-
-.filter-form > .click-me {
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.form-group {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 @media only screen and (max-width: 800px) {
   .flex {
     flex-wrap: wrap;
