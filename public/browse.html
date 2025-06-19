@@ -35,10 +35,6 @@
               Browse
             </h1>
             <p>
-              (Remember to exercise caution with downloading mods from this website, as anyone is allowed to submit mods here. We are not responsible for the contents of the GitHub pages and implore our users to use the same level of caution they would otherwise downloading stuff from the internet.)
-            </p>
-            <br>
-            <p>
               Here, you may browse various mods, all of which have been uploaded to this database, as well as download them. As this database is still new, the list may be a bit limited, but have faith that it will grow in time.
             </p>
             <form method="get">
@@ -60,9 +56,27 @@
               </label>
               <br>
               <br>
+              <label>
+                Filter By Tag:
+                <select name="tag">
+                  <option value="">All</option>
+                  <option value="Textures">Textures</option>
+                  <option value="SFX">SFX / Music</option>
+                  <option value="VPlus">Vanilla Plus</option>
+                  <option value="Jokers">Jokers</option>
+                  <option value="Consumables">Consumables</option>
+                  <option value="Cards">Cards</option>
+                  <option value="Blinds">Blinds</option>
+                  <option value="Modifiers">Modifiers</option>
+                  <option value="Mechanics">Mechanics</option>
+                  <option value="Misc">Miscellaneous</option>
+                </select>
               <button class="click-me" type="submit">Apply</button>
             </form>
             <script src="browse.js"></script>
+            <p>
+              (Remember to exercise caution with downloading mods from this website, as anyone is allowed to submit mods here. We are not responsible for the contents of the GitHub pages and implore our users to use the same level of caution they would otherwise downloading stuff from the internet.)
+            </p>
           </div>
           <ul id="mod-list"></ul>
         </div>

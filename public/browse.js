@@ -5,14 +5,40 @@ async function loadMods() {
     const params = new URLSearchParams(window.location.search);
     const sortBy = params.get('sortBy') || 'published_at';
     const order = params.get('order') || 'desc';
+    const tagFilter = params.get('tag') || '';
 
     const sortSelect = document.querySelector('select[name="sortBy"]');
     const orderSelect = document.querySelector('select[name="order"]');
+    const tagSelect = document.querySelector('select[name="tag"]');
     if (sortSelect) sortSelect.value = sortBy;
     if (orderSelect) orderSelect.value = order;
+    if (tagSelect) tagSelect.value = tagFilter;
 
     var entries = Object.entries(data)
         .map(([key, e]) => ({key, ...e}));
+
+    const allTags = new Set();
+    entries.forEach(e => 
+    {
+        if (Array.isArray(e.tags))
+        {
+            e.tags.forEach(t => allTags.add(t));
+        }
+    });
+
+    if (tagSelect)
+    {
+        Array.from(allTags).sort().forEach(t => 
+        {
+            const opt = document.createElement('option');
+            opt.value = t;
+            opt.textContent = t.charAt(0).toUpperCase() + t.slice(1);
+            if (t === tagFilter) opt.selected = true;
+            tagSelect.appendChild(opt);
+        });
+    }
+
+    if (tagFilter) entries = entries.filter(e => Array.isArray(e.tags) && e.tags.includes(tagFilter));
 
     entries.sort((a, b) => {
         let diff;
@@ -50,14 +76,36 @@ async function loadMods() {
         const [repo, owner] = e.key.split('@');
 
         li.innerHTML = `
-            <strong>${e.name}</strong> by ${authorText}<br>
-            Published: ${publishedText}<br>
-            Favourites: ${e.favourites}<br>
-            Type: ${e.type}<br>
+            <strong>${e.name ?? "Unknown"}</strong> by ${authorText ?? "Unknown"}<br>
+            Description: ${e.description ?? "None"}<br>
+            Published: ${publishedText ?? "Unknown"}<br>
+            Favourites: ${e.favourites ?? "Unknown"}<br>
+            Type: ${e.type ?? "Unknown"}<br>
             <a href="https://github.com/${owner}/${repo}" target="_blank">
                 View Github page
             </a>
             `;
+
+        const tagBar = document.createElement('div');
+        tagBar.className = 'tag-bar';
+
+        ;(Array.isArray(e.tags) ? e.tags : []).forEach(tag => 
+        {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = tag;
+            btn.className = 'tag-btn';
+            btn.addEventListener('click', () => 
+            {
+                const params = new URLSearchParams(window.location.search);
+                params.set('tag', tag);
+                window.location.search = params.toString();
+            });
+            tagBar.appendChild(btn);
+        });
+
+        li.appendChild(tagBar);
+
         ul.appendChild(li);
         ul.appendChild(document.createElement('hr'));
     });

@@ -106,8 +106,10 @@ app.get('/submit', (req, res) => {
 
 app.post('/submit', async (req, res) => {
   try {
-    const { repoUrl, jsonPath } = req.body;
+    const { repoUrl, jsonPath, tags } = req.body;
     let user, repo, branch, filepath, jsonData, key;
+
+    const tagArray = Array.isArray(tags) ? tags : (tags ? [tags] : []);
 
     const url = new URL(repoUrl);
 
@@ -182,6 +184,7 @@ app.post('/submit', async (req, res) => {
       entry.readme = await fetchReadme(user, repo);
     entry.published_at = new Date().toISOString();
     entry.type = "Mod";
+    entry.tags = tagArray;
 
     data[key] = entry;
     await writeData(data);
