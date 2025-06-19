@@ -159,6 +159,10 @@ app.get('/browse', (_req, res) =>
   res.sendFile(path.join(__dirname, 'public', 'browse.html'))
 );
 
+app.get('/browse', (_req, res) =>
+  res.sendFile(path.join(__dirname, 'public', 'about.html'))
+);
+
 app.get('/data', (_req, res) => {
   res.sendFile(DATA_FILE);
 });

@@ -29,7 +29,7 @@ async function loadMods() {
     });
 
     const path = window.location.pathname;
-    const isIndex = path === '/' || path.endsWith('index.html');
+    const isIndex = path === '/' || path === '';
     if (isIndex) entries = entries.slice(0, 5);
 
     const ul = document.getElementById('mod-list');
