@@ -32,7 +32,7 @@ async function loadMods() {
     entries.forEach(e => {
         const li = document.createElement('li');
         li.innerHTML = `
-            <strong>${e.name}</strong> by ${e.author}<br>
+            <strong>${e.name}</strong> by ${e.author.replace(/,\s*/g, ', ')}<br>
             Published: ${e.published_at}<br>
             Favourites: ${e.favourites}<br>
             <a href="https://github.com/${e.git_owner}/${e.git_repo}" target="_blank">
