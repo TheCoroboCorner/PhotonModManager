@@ -320,6 +320,11 @@ textarea:-webkit-autofill:focus {
   box-shadow: 0 0 10px rgba(174, 0, 255, 0.4);
 }
 
+.align-filter > .selection {
+  float: right;
+  margin-right: 0;
+}
+
 @media only screen and (max-width: 800px) {
   .flex {
     flex-wrap: wrap;
