@@ -37,20 +37,25 @@
             </p>
             <form method="get">
               <label>
+                Sort By:<br>
                 <select name="sortBy">
                   <option value="">--none--</option>
                   <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
                   <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
                 </select>
               </label>
-              <label>Order:
+              <label>
+                Order:<br>
                 <select name="order">Add commentMore actions
                   <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
                   <option value="desc"${order==='desc'?' selected':''}>Descending</option>
                 </select>
               </label>
+              <br>
+              <br>
               <button class="click-me" type="submit">Apply</button>
             </form>
+            <script src="browse.js"></script>
           </div>
           <ul id="mod-list"></ul>
         </div>
