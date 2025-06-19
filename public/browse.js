@@ -11,7 +11,7 @@ async function loadMods() {
     if (sortSelect) sortSelect.value = sortBy;
     if (orderSelect) orderSelect.value = order;
 
-    const entries = Object.entries(data)
+    var entries = Object.entries(data)
         .map(([key, e]) => ({key, ...e}));
 
     entries.sort((a, b) => {
@@ -28,9 +28,7 @@ async function loadMods() {
         return order === 'asc' ? -diff : diff;
     });
 
-    console.log("Pathname:", window.location.pathname);
-    const path = window.location.pathname;
-    const isIndex = path === '/' || path === '';
+    const isIndex = window.location.pathname === '/' || window.location.pathname === '/index.html'
     if (isIndex) entries = entries.slice(0, 5);
 
     const ul = document.getElementById('mod-list');
