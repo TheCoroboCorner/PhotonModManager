@@ -222,7 +222,7 @@ textarea:-webkit-autofill:focus {
   position: relative;
   width: fit-content;
   padding: 10px 20px;
-  background-color: rgb(46, 46, 46);
+  background-color: rgba(174, 0, 255, 0.438);
   border-radius: 50px;
   z-index: 1;
   cursor: pointer;
@@ -254,16 +254,33 @@ textarea:-webkit-autofill:focus {
   justify-content: center;
   gap: 5px;
   border: 1px solid #888;
-  background: rgb(46, 46, 46);
+  background: rgb(174, 0, 255, 0.438);
   cursor: pointer;
   transition: all 0.3s;
   font-size: 0.7em;
   font-weight: 600;
+  color: white;
 }
 
 .tag-btn:hover {
   background: rgb(174, 0, 255);
   box-shadow: 0px 0px 40px rgba(174, 0, 255, 0.438);
+}
+
+.tag-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag-options label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.tag-options input {
+  margin-right: 0.25em;
 }
 
 @media only screen and (max-width: 800px) {
