@@ -37,7 +37,7 @@
             <p>
               Here, you may browse various mods, all of which have been uploaded to this database, as well as download them. As this database is still new, the list may be a bit limited, but have faith that it will grow in time.
             </p>
-            <form method="get">
+            <form method="get" class="filter-form">
               <label>
                 Sort By:  
                 <select name="sortBy">
@@ -45,8 +45,6 @@
                   <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
                 </select>
               </label>
-              <br>
-              <br>
               <label>
                 Order:  
                 <select name="order">
@@ -54,8 +52,6 @@
                   <option value="desc"${order==='desc'?' selected':''}>Descending</option>
                 </select>
               </label>
-              <br>
-              <br>
               <label>
                 Filter By Tag:
                 <select name="tag">
@@ -73,8 +69,6 @@
                   <option value="Misc">Miscellaneous</option>
                 </select>
               </label>
-              <br>
-              <br>
               <button class="click-me" type="submit">Apply</button>
             </form>
             <script src="browse.js"></script>

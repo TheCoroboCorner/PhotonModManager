@@ -83,7 +83,7 @@ async function loadMods() {
 
         li.innerHTML = `
             <strong>${e.name ?? "Unknown"}</strong> by ${authorText ?? "Unknown"}<br>
-            <button style="width: 160px; height: 30px;" class="favourite-btn click-me">❤ Favourite (${e.favourites})</button><br>
+            <button class="favourite-btn click-me">❤ Favourite (${e.favourites})</button><br>
             Description: ${e.description ?? "None"}<br>
             Published: ${publishedText ?? "Unknown"}<br>
             Type: ${e.type ?? "Unknown"}<br>
@@ -115,6 +115,8 @@ async function loadMods() {
 
         // favourites
         const favBtn = li.querySelector('.favourite-btn');
+        favBtn.style.width = '160px';
+        favBtn.style.height = '30px';
 
         const favs = new Set(JSON.parse(localStorage.getItem('favourited') || '[]'));
         if (favs.has(e.key))

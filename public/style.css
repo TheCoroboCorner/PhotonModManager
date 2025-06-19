@@ -319,6 +319,26 @@ textarea:-webkit-autofill:focus {
   box-shadow: 0 0 10px rgba(174, 0, 255, 0.4);
 }
 
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-form > label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-form > button {
+  margin: 0;
+  flex-shrink: 0;
+}
+
 @media only screen and (max-width: 800px) {
   .flex {
     flex-wrap: wrap;
