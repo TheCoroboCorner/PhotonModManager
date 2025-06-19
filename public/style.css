@@ -329,12 +329,22 @@ textarea:-webkit-autofill:focus {
 
 .filter-form > label {
   margin: 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.filter-form > button {
+.filter-form select,
+.filter-form .click-me {
+  height: 2.75em;
+  line-height: 2.75em;
+}
+
+.filter-form select {
+  padding: 0 0.75em;
+}
+
+.filter-form > .click-me {
   margin: 0;
   flex-shrink: 0;
 }
