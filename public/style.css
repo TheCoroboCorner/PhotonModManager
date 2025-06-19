@@ -106,6 +106,7 @@ body a {
 .wrapper {
   padding: var(--content-padding);
   padding-top: var(--sidebar-padding);
+  align-items: center;
 }
 
 .footer-wrapper {
