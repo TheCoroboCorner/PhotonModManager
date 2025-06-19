@@ -32,9 +32,21 @@ async function loadMods() {
     entries.forEach(e => {
         const li = document.createElement('li');
         const authorText = Array.isArray(e.author) ? e.author.join(', ') : String(e.author);
+
+        const dt = new Date(e.published_at);
+        const formattedDate = dt.toLocaleDateString(undefined,
+        {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
+        const formattedTime = dt.toLocaleTimeString(undefined,
+        {
+            hour: 'numeric', 'minute': '2-digit'
+        });
+        const publishedText = `${formattedDate} at ${formattedTime}`;
+
         li.innerHTML = `
             <strong>${e.name}</strong> by ${authorText}<br>
-            Published: ${e.published_at}<br>
+            Published: ${publishedText}<br>
             Favourites: ${e.favourites}<br>
             <a href="https://github.com/${e.git_owner}/${e.git_repo}" target="_blank">
                 View Github page
