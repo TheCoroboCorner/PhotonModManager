@@ -140,7 +140,7 @@ app.post('/submit', async (req, res) => {
       return res.status(409).json({ error: `Entry for '${key}' already exists` });
     }
 
-    const repoInfoRes = await fetch(`https://api.github.com/repos/${user}/${rpeo}`,
+    const repoInfoRes = await fetch(`https://api.github.com/repos/${user}/${repo}`,
     {
       headers:
       {
