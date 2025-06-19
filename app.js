@@ -232,21 +232,17 @@ app.get('/browse', async (req, res) => {
                 </div>
                 <form method="get">
                   <label>
-                    <div class="select-box" style="width:200px;">
-                      <select name="sortBy">
-                        <option value="">--none--</option>
-                        <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
-                        <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
-                      </select>
-                    </div>
+                    <select name="sortBy">
+                      <option value="">--none--</option>
+                      <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
+                      <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
+                    </select>
                   </label>
                   <label>Order:
-                    <div class="select-box" style="width:200px;">
-                      <select name="order">
-                        <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
-                        <option value="desc"${order==='desc'?' selected':''}>Descending</option>
-                      </select>
-                    </div>
+                    <select name="order">Add commentMore actions
+                      <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
+                      <option value="desc"${order==='desc'?' selected':''}>Descending</option>
+                    </select>
                   </label>
                   <button class="click-me" type="submit">Apply</button>
                 </form>
