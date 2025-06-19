@@ -124,9 +124,9 @@ app.post('/submit', async (req, res) => {
     {
       const url = new URL(repoUrl);
       [ , user, repo, , branch, ...rest] = url.pathname.split('/');
-      filePath = rest.join('/');
+      filepath = rest.join('/');
       key = `${repo}@${user}`;
-      const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${filePath}`;
+      const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${filepath}`;
       const resp = await fetch(rawUrl);
       if (!resp.ok) throw new Error('Cannot fetch JSON at blob URL');
       jsonData = await resp.json();
@@ -134,9 +134,9 @@ app.post('/submit', async (req, res) => {
     else
     {
       ({user, repo} = parseGitHubUrl(repoUrl));
-      filePath = jsonPath;
+      filepath = jsonPath;
       key = `${repo}@${user}`;
-      jsonData = await fetchJsonFromRepo(useReducer, repo, filePath);
+      jsonData = await fetchJsonFromRepo(useReducer, repo, filepath);
     }
 
     const data = await readData();
