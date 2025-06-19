@@ -112,37 +112,49 @@ app.post('/submit', async (req, res) => {
     // direct raw url?
     if (/^https?:\/\/raw\.githubusercontent\.com\//.test(repoUrl))
     {
-      ({ pathname } = new URL(repoUrl));
+      const { pathname } = new URL(repoUrl);
       [ , user, repo, branch, ...rest ] = pathname.split('/');
       filepath = rest.join('/');
-      key = `${repo}@${user}`;
-      const resp = await fetch(repoUrl);
-      if (!resp.ok) throw new Error('Cannot fetch JSON at raw URL');
-      jsonData = await resp.json();
     } // standard github blob url?
     else if (/^https?:\/\/github\.com\/[^\/]+\/[^\/]+\/blob\//.test(repoUrl))
     {
       const url = new URL(repoUrl);
       [ , user, repo, , branch, ...rest] = url.pathname.split('/');
       filepath = rest.join('/');
-      key = `${repo}@${user}`;
-      const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${filepath}`;
-      const resp = await fetch(rawUrl);
-      if (!resp.ok) throw new Error('Cannot fetch JSON at blob URL');
-      jsonData = await resp.json();
     }
     else
     {
       ({user, repo} = parseGitHubUrl(repoUrl));
-      filepath = jsonPath;
-      key = `${repo}@${user}`;
-      jsonData = await fetchJsonFromRepo(user, repo, filepath);
+      branch = 'main';
+      filepath = jsonPath
     }
+
+    key = `${repo}@${user}`;
 
     const data = await readData();
     if (key in data) {
       return res.status(409).json({ error: `Entry for '${key}' already exists` });
     }
+
+    const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${filepath}?ref=${branch}`;
+    const apiRes = await fetch(apiUrl, 
+    {
+      headers:
+      {
+        'User-Agent': 'photonmodmanager',
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': `Bearer ${process.env.GITHUB_FETCH_TOKEN}`
+      }
+    });
+    if (!apiRes.ok)
+    {
+      const err = await apiRes.json();
+      throw new Error(`GitHub API error: ${apiRes.status} ${err.message || apiRes.statusText}`);
+    }
+
+    const { content, encoding } = await apiRes.json();
+    const raw = Buffer.from(content, encoding).toString('utf8');
+    jsonData = JSON.parse(raw);
 
     const entry = buildEntry(jsonData);
     if (!repoUrl.includes('raw.githubusercontent.com') && !repoUrl.includes('/blob/'))
