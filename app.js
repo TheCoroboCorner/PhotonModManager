@@ -18,10 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // --- Helper functions ---
 
-/**
- * Parse GitHub URL, return { user, repo }
- * @throws Error if invalid URL
- */
 function parseGitHubUrl(repoUrl) {
   const regex = /^https?:\/\/(?:www\.)?github\.com\/([^\/]+)\/([^\/]+)(?:\/.+)?$/;
   const match = repoUrl.match(regex);
@@ -29,9 +25,6 @@ function parseGitHubUrl(repoUrl) {
   return { user: match[1], repo: match[2] };
 }
 
-/**
- * Fetch JSON file from raw GitHub URL
- */
 async function fetchJsonFromRepo(user, repo, jsonPath) {
   const url = `https://raw.githubusercontent.com/${user}/${repo}/main/${jsonPath}`;
   const resp = await fetch(url);
@@ -39,9 +32,6 @@ async function fetchJsonFromRepo(user, repo, jsonPath) {
   return resp.json();
 }
 
-/**
- * Extract required and optional fields from target JSON
- */
 function buildEntry(target) {
   const entry = {
     id: target.id,
@@ -57,9 +47,6 @@ function buildEntry(target) {
   return entry;
 }
 
-/**
- * Fetch releases info from GitHub API
- */
 async function fetchReleases(user, repo) {
   const url = `https://api.github.com/repos/${user}/${repo}/releases`;
   const resp = await fetch(url);
@@ -73,18 +60,12 @@ async function fetchReleases(user, repo) {
   }));
 }
 
-/**
- * Fetch README.md from the repo
- */
 async function fetchReadme(user, repo) {
   const url = `https://raw.githubusercontent.com/${user}/${repo}/main/README.md`;
   const resp = await fetch(url);
   return resp.ok ? resp.text() : '';
 }
 
-/**
- * Read or initialize data.json
- */
 async function readData() {
   try {
     const txt = await fs.readFile(DATA_FILE, 'utf-8');
@@ -94,14 +75,10 @@ async function readData() {
   }
 }
 
-/**
- * Write data.json back to disk
- */
 async function writeData(data) {
   await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
-// Set Content Security Policy header
 app.use((req, res, next) => {
   res.setHeader(
     'Content-Security-Policy',
@@ -113,7 +90,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// 1) Welcome page
 app.get('/', (req, res) => {
   res.send(`
     <h1>Photon Mod Manager</h1>
@@ -124,12 +100,10 @@ app.get('/', (req, res) => {
   `);
 });
 
-// 2) Form page
 app.get('/submit', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'submit.html'));
 });
 
-// 3) Handle submission
 app.post('/submit', async (req, res) => {
   try {
     const { repoUrl, jsonPath } = req.body;
@@ -180,7 +154,6 @@ function sortEntries(entries, field, order = 'desc') {
   return arr;
 }
 
-// 4) Browse data.json
 app.get('/browse', async (req, res) => {
   try {
     const data = await readData();
@@ -190,7 +163,6 @@ app.get('/browse', async (req, res) => {
       entries = sortEntries(data, sortBy, order === 'asc' ? 'asc' : 'desc');
     }
 
-    // Build HTML
     let html = `
       <!DOCTYPE html>
       <html>
@@ -229,23 +201,23 @@ app.get('/browse', async (req, res) => {
                   <p>
                     Here, you may browse various mods, all of which have been uploaded to this database, as well as download them. As this database is still new, the list may be a bit limited, but have faith that it will grow in time.
                   </p>
+                  <form method="get">
+                    <label>
+                      <select name="sortBy">
+                        <option value="">--none--</option>
+                        <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
+                        <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
+                      </select>
+                    </label>
+                    <label>Order:
+                      <select name="order">Add commentMore actions
+                        <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
+                        <option value="desc"${order==='desc'?' selected':''}>Descending</option>
+                      </select>
+                    </label>
+                    <button class="click-me" type="submit">Apply</button>
+                  </form>
                 </div>
-                <form method="get">
-                  <label>
-                    <select name="sortBy">
-                      <option value="">--none--</option>
-                      <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
-                      <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
-                    </select>
-                  </label>
-                  <label>Order:
-                    <select name="order">Add commentMore actions
-                      <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
-                      <option value="desc"${order==='desc'?' selected':''}>Descending</option>
-                    </select>
-                  </label>
-                  <button class="click-me" type="submit">Apply</button>
-                </form>
                 <ul>
     `;
     for (const e of entries) {
@@ -270,90 +242,6 @@ app.get('/browse', async (req, res) => {
               </div>
             </div>
           </div>
-          <script>
-            var x, i, j, l, ll, selElmnt, a, b, c;
-            x = document.getElementsByClassName("select-box");
-            l = x.length;
-            for (i = 0; i < l; i++)
-            {
-              selElmnt = x[i].getElementsByTagName("select")[0];
-              ll = selElmnt.length;
-              // Create a new div at each element that acts as the element
-              a = document.createElement("DIV");
-              a.setAttribute("class", "select-selected");
-              a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-              x[i].appendChild(a);
-              // Create a new div at each element that contains the option list
-              b = document.createElement("DIV");
-              b.setAttribute("class", "select-items select-hide");
-              for (j = 1; j < ll; j++)
-              {
-                // For each option in the selection element, create a new div at that point that will act as an option
-                c = document.createElement("DIV");
-                c.innerHTML = selElmnt.options[j].innerHTML;
-                c.addEventListener("click", function(e) 
-                {
-                  var y, i, k, s, h, sl, yl;
-                  s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                  sl = s.length;
-                  h = this.parentNode.previousSibling;
-                  for (i = 0; i < sl; i++)
-                  {
-                    if (s.options[i].innerHTML == this.innerHTML)
-                    {
-                      s.selectedIndex = i;
-                      h.innerHTML = this.innerHTML;
-                      y = this.parentNode.getElementsByClassName("same-as-selected");
-                      yl = y.length;
-                      for (k = 0; k < yl; k++)
-                      {
-                        y[k].removeAttribute("class");
-                      }
-                      this.setAttribute("class", "same-as-selected");
-                      break;
-                    }
-                  }
-                  h.click();
-                });
-                b.appendChild(c);
-              }
-              x[i].appendChild(b);
-              a.addEventListener("click", function(e)
-              {
-                e.stopPropagation();
-                closeAllSelect(this);
-                this.nextSibling.classList.toggle("select-hide");
-                this.classList.toggle("select-arrow-active");
-              });
-            }
-            function closeAllSelect(elmnt)
-            {
-              var x, y, i, xl, yl, arrNo = [];
-              x = document.getElementsByClassName("select-items");
-              y = document.getElementsByClassName("select-selected");
-              xl = x.length;
-              yl = y.length;
-              for (i = 0; i < yl; i++)
-              {
-                if (elmnt == y[i])
-                {
-                  arrNo.push(i);
-                }
-                else
-                {
-                  y[i].classList.remove("select-arrow-active");
-                }
-              }
-              for (i = 0; i < xl; i++)
-              {
-                if (arrNo.indexOf(i))
-                {
-                  x[i].classList.add("select-hide");
-                }
-              }
-            }
-            document.addEventListener("click", closeAllSelect);
-          </script>
         </body>
       </html>
     `;
@@ -364,8 +252,6 @@ app.get('/browse', async (req, res) => {
   }
 });
 
-
-// Serve raw data.json file
 app.get('/data', (_req, res) => {
   res.sendFile(DATA_FILE);
 });
