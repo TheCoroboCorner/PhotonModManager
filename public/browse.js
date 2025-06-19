@@ -6,6 +6,11 @@ async function loadMods() {
     const sortBy = params.get('sortBy') || 'published_at';
     const order = params.get('order') || 'desc';
 
+    const sortSelect = document.querySelector('select[name="sortBy"]');
+    const orderSelect = document.querySelector('select[name="order"]');
+    if (sortSelect) sortSelect.value = sortBy;
+    if (orderSelect) orderSelect.value = order;
+
     const entries = Object.entries(data)
         .map(([key, e]) => ({key, ...e}));
 

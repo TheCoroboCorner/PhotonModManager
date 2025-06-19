@@ -39,7 +39,6 @@
               <label>
                 Sort By:  
                 <select name="sortBy">
-                  <option value="">--none--</option>
                   <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
                   <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
                 </select>
@@ -48,7 +47,7 @@
               <br>
               <label>
                 Order:  
-                <select name="order">Add commentMore actions
+                <select name="order">
                   <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
                   <option value="desc"${order==='desc'?' selected':''}>Descending</option>
                 </select>
