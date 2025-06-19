@@ -28,6 +28,7 @@ async function loadMods() {
         return order === 'asc' ? -diff : diff;
     });
 
+    console.log("Pathname:", window.location.pathname);
     const path = window.location.pathname;
     const isIndex = path === '/' || path === '';
     if (isIndex) entries = entries.slice(0, 5);

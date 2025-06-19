@@ -159,7 +159,7 @@ app.get('/browse', (_req, res) =>
   res.sendFile(path.join(__dirname, 'public', 'browse.html'))
 );
 
-app.get('/browse', (_req, res) =>
+app.get('/about', (_req, res) =>
   res.sendFile(path.join(__dirname, 'public', 'about.html'))
 );
 
