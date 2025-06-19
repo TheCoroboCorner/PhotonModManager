@@ -136,7 +136,7 @@ app.post('/submit', async (req, res) => {
       ({user, repo} = parseGitHubUrl(repoUrl));
       filepath = jsonPath;
       key = `${repo}@${user}`;
-      jsonData = await fetchJsonFromRepo(useReducer, repo, filepath);
+      jsonData = await fetchJsonFromRepo(user, repo, filepath);
     }
 
     const data = await readData();
