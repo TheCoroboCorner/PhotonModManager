@@ -274,63 +274,6 @@ app.get('/browse', async (req, res) => {
               </div>
             </div>
           </div>
-          <script>
-            $(document).ready(function() {
-              $(".drop .option").click(function() {
-                var val = $(this).attr("data-value"),
-                    $drop = $(".drop"),
-                    prevActive = $(".drop .option.active").attr("data-value"),
-                    options = $(".drop .option").length;
-                $drop.find(".option.active").addClass("mini-hack");
-                $drop.toggleClass("visible");
-                $drop.removeClass("withBG");
-                $(this).css("top");
-                $drop.toggleClass("opacity");
-                $(".mini-hack").removeClass("mini-hack");
-                if ($drop.hasClass("visible")) {
-                  setTimeout(function() {
-                    $drop.addClass("withBG");
-                  }, 400 + options*100); 
-                }
-                triggerAnimation();
-                if (val !== "placeholder" || prevActive === "placeholder") {
-                  $(".drop .option").removeClass("active");
-                  $(this).addClass("active");
-                };
-              });
-              
-              function triggerAnimation() {
-                var finalWidth = $(".drop").hasClass("visible") ? 22 : 20;
-                $(".drop").css("width", "24em");
-                setTimeout(function() {
-                  $(".drop").css("width", finalWidth + "em");
-                }, 400);
-              }
-            });
-
-            var el = {};
-            $('.select-box').on('click', function(ev)
-            {
-              $('.select-box').css('opacity', '0');
-              $('.list__ul').toggle();
-            });
-
-            $('.list__ul a').on('click', function(ev)
-            {
-              ev.preventDefault();
-              var index = $(this).parent().index();
-
-              $('.select-box').text($(this).text()).css('opacity', '1');
-              $('.list__ul').find('li').eq(index).prependTo('.list__ul');
-              $('.list__ul').toggle();
-            });
-
-            $('select').on('change', function(e)
-            {
-              $('.select-box').text(this.value);
-              $(this).animate({width: $('.select-box').width() + 'px'});
-            });
-          </script>
         </body>
       </html>
     `;
