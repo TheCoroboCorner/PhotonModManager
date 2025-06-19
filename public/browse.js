@@ -1,9 +1,27 @@
 async function loadMods() {
     const res = await fetch('/data');
     const data = await res.json();
+
+    const params = new URLSearchParams(window.location.search);
+    const sortBy = params.get('sortBy') || 'published_at';
+    const order = params.get('order') || 'desc';
+
     const entries = Object.entries(data)
-        .map(([key, e]) => ({ key, ...e }))
-        .sort((a, b) => Date.parse(b.published_at) - Date.parse(a.published_at)); // or your sort logic
+        .map(([key, e]) => ({key, ...e}));
+
+    entries.sort((a, b) => {
+        let diff;
+        if (sortBy === 'favourites')
+        {
+            diff = b.favourites - a.favourites;
+        }
+        else
+        {
+            diff = Date.parse(b.published_at) - Date.parse(a.published_at)
+        }
+
+        return order === 'asc' ? -diff : diff;
+    });
 
     const ul = document.getElementById('mod-list');
     entries.forEach(e => {
