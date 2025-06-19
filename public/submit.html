@@ -88,26 +88,31 @@
                     <span class="label-text">Mechanics</span>
                   </label>
                   <label class="switch">
+                    <input type="checkbox" name="tags" value="QoL">
+                    <span class="label-text">Quality of Life</span>
+                  </label>
+                  <label class="switch">
                     <input type="checkbox" name="tags" value="Misc">
                     <span class="label-text">Miscellaneous</span>
                   </label>
                 </div>
               </fieldset>
               <br>
-              <br>
-              <label>
-                GitHub Repo URL:<br>
-                <input name="repoUrl" type="url" required placeholder="https://github.com/user/repo">
-              </label>
-              <br>
-              <br>
-              <label>
-                JSON Path in Repo:<br>
-                <input name="jsonPath" type="text" required placeholder="data/info.json">
-              </label>
-              <br>
-              <br>
-              <button type="submit">Submit</button>
+              <div>
+                <label>
+                  GitHub Repo URL:<br>
+                  <input name="repoUrl" type="url" required placeholder="https://github.com/user/repo">
+                </label>
+                <br>
+                <br>
+                <label>
+                  JSON Path in Repo:<br>
+                  <input name="jsonPath" type="text" required placeholder="data/info.json">
+                </label>
+                <br>
+                <br>
+                <button class="click-me" type="submit">Submit</button>
+              </div>
             </form>
             <script src="/append.js"></script>
           </div>

@@ -59,9 +59,13 @@ async function loadMods() {
 
     const ul = document.getElementById('mod-list');
     entries.forEach(e => {
+        // list element
         const li = document.createElement('li');
+
+        // author text
         const authorText = Array.isArray(e.author) ? e.author.join(', ') : String(e.author);
 
+        // date and time variables
         const dt = new Date(e.published_at);
         const formattedDate = dt.toLocaleDateString(undefined,
         {
@@ -73,19 +77,49 @@ async function loadMods() {
         });
         const publishedText = `${formattedDate} at ${formattedTime}`;
 
+        // owner / repo variables
         const [repo, owner] = e.key.split('@');
+
+        // favourites
+        const favBtn = document.createElement('button');
+        favBtn.className = 'favourite-btn';
+        favBtn.textContent = `❤ Favourite (${e.favourites ?? 0})`;
+
+        const favs = new Set(JSON.parse(localStorage.getItem('favourited') || '[]'));
+        if (favs.has(e.key))
+            favBtn.disabled = true;
+
+        favBtn.addEventListener('click', async () =>
+        {
+            favBtn.disabled = true;
+            const res = await fetch(`/favourite/${encodeURIComponent(e.key)}`, 
+            {
+                method: 'POST'
+            });
+            const json = await res.json();
+            if (json.success)
+            {
+                favBtn.textContent = `❤ Favourite (${json.newCount})`;
+                favs.add(e.key);
+                localStorage.setItem('favourited', JSON.stringify(Array.from(favs)));
+            }
+            else
+            {
+                console.warn(json.message || json.error);
+            }
+        });
 
         li.innerHTML = `
             <strong>${e.name ?? "Unknown"}</strong> by ${authorText ?? "Unknown"}<br>
             Description: ${e.description ?? "None"}<br>
             Published: ${publishedText ?? "Unknown"}<br>
-            Favourites: ${e.favourites ?? "Unknown"}<br>
             Type: ${e.type ?? "Unknown"}<br>
             <a href="https://github.com/${owner}/${repo}" target="_blank">
                 View Github page
             </a>
             `;
 
+        // tags
         const tagBar = document.createElement('div');
         tagBar.className = 'tag-bar';
 
@@ -105,6 +139,11 @@ async function loadMods() {
         });
 
         li.appendChild(tagBar);
+
+        // favourites again
+        const strong = li.querySelector('strong');
+        strong.insertAdjacentElement('afterend', favBtn);
+        favBtn.insertAdjacentElement('afterend', '<br>');
 
         ul.appendChild(li);
         ul.appendChild(document.createElement('hr'));

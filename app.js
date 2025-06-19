@@ -4,6 +4,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { backupDataJson } from './github-backup.js';
+import crypto from 'crypto';
 
 // Fix for __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -12,6 +13,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 10000;
 const DATA_FILE = path.join(__dirname, 'data.json');
+const VOTES_FILE = path.join(__dirname, 'votes.json');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,21 +21,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // --- Helper functions ---
 
-function parseGitHubUrl(repoUrl) {
+function parseGitHubUrl(repoUrl)
+{
   const regex = /^https?:\/\/(?:www\.)?github\.com\/([^\/]+)\/([^\/]+)(?:\/.+)?$/;
   const match = repoUrl.match(regex);
   if (!match) throw new Error('Invalid GitHub URL format');
   return { user: match[1], repo: match[2] };
 }
 
-async function fetchJsonFromRepo(user, repo, jsonPath) {
+async function fetchJsonFromRepo(user, repo, jsonPath)
+{
   const url = `https://raw.githubusercontent.com/${user}/${repo}/main/${jsonPath}`;
   const resp = await fetch(url);
   if (!resp.ok) throw new Error('Failed to fetch JSON file from GitHub');
   return resp.json();
 }
 
-function buildEntry(target) {
+function buildEntry(target)
+{
   const entry = {
     id: target.id,
     name: target.name,
@@ -48,7 +53,8 @@ function buildEntry(target) {
   return entry;
 }
 
-async function fetchReleases(user, repo) {
+async function fetchReleases(user, repo)
+{
   const url = `https://api.github.com/repos/${user}/${repo}/releases`;
   const resp = await fetch(url);
   if (!resp.ok) return [];
@@ -61,13 +67,15 @@ async function fetchReleases(user, repo) {
   }));
 }
 
-async function fetchReadme(user, repo) {
+async function fetchReadme(user, repo)
+{
   const url = `https://raw.githubusercontent.com/${user}/${repo}/main/README.md`;
   const resp = await fetch(url);
   return resp.ok ? resp.text() : '';
 }
 
-async function readData() {
+async function readData()
+{
   try {
     const txt = await fs.readFile(DATA_FILE, 'utf-8');
     return JSON.parse(txt);
@@ -76,11 +84,42 @@ async function readData() {
   }
 }
 
-async function writeData(data) {
+async function writeData(data)
+{
   await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
-app.use((req, res, next) => {
+async function readVotes()
+{
+  try
+  {
+    const txt = await fs.readFile(VOTES_FILE, 'utf8');
+    return JSON.parse(txt);
+  }
+  catch
+  {
+    return {};
+  }
+}
+
+async function writeVotes(v)
+{
+  await fs.writeFile(VOTES_FILE, JSON.stringify(v, null, 2));
+}
+
+app.use((req, res, next) =>
+{
+  const raw = req.headers.cookie || '';
+  const cookies = Object.fromEntries(raw.split(';').map(s => s.trim().split('=').map(decodeURIComponent)));
+
+  let vid = cookies.voteId;
+  if (!vid)
+  {
+    vid = crypto.randomBytes(16).toString('hex');
+    res.setHeader('Set-Cookie', `voteId=${vid}; Path=/; HttpOnly; SameSite=Lax`);
+  }
+  req.voteId = vid;
+  
   res.setHeader(
     'Content-Security-Policy',
     "default-src 'self'; " +
@@ -91,7 +130,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) =>
+{
   res.send(`
     <h1>Photon Mod Manager</h1>
     <ul>
@@ -101,11 +141,37 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.get('/submit', (req, res) => {
+app.get('/submit', (req, res) =>
+{
   res.sendFile(path.join(__dirname, 'public', 'submit.html'));
 });
 
-app.post('/submit', async (req, res) => {
+app.post('/favourite/:key', async (req, res) =>
+{
+  const { key } = req.params;
+  const userId = req.voteId;
+
+  const votes = await readVotes();
+  votes[key] = votes[key] || [];
+
+  if (votes[key].includes(userId)) 
+    return res.status(200).json({ success: false, message: 'Already favourited' });
+
+  const data = await readData();
+  if (!data[key]) 
+    return res.status(404).json({ error: 'Mod not found' });
+
+  data[key].favourites = (data[key].favourites || 0) + 1;
+  await writeData(data);
+
+  votes[key].push(userId);
+  await writeVotes(votes);
+
+  res.json({ success: true, newCount: data[key].favourites });
+});
+
+app.post('/submit', async (req, res) =>
+{
   try {
     const { repoUrl, jsonPath, tags } = req.body;
     let user, repo, branch, filepath, jsonData, key;
@@ -205,7 +271,8 @@ app.post('/submit', async (req, res) => {
  * @param {string} order - 'asc' or 'desc'
  * @returns {Array<object>} sorted array of entries with key included
  */
-function sortEntries(entries, field, order = 'desc') {
+function sortEntries(entries, field, order = 'desc')
+{
   const arr = Object.entries(entries).map(([key, entry]) => ({ key, ...entry }));
   arr.sort((a, b) => {
     let av = a[field];
@@ -229,7 +296,8 @@ app.get('/about', (_req, res) =>
   res.sendFile(path.join(__dirname, 'public', 'about.html'))
 );
 
-app.get('/data', (_req, res) => {
+app.get('/data', (_req, res) =>
+{
   res.sendFile(DATA_FILE);
 });
 
