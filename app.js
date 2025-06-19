@@ -107,17 +107,46 @@ app.get('/submit', (req, res) => {
 app.post('/submit', async (req, res) => {
   try {
     const { repoUrl, jsonPath } = req.body;
-    const { user, repo } = parseGitHubUrl(repoUrl);
-    const key = `${repo}@${user}`;
+    let user, repo, branch, filepath, jsonData, key;
+
+    // direct raw url?
+    if (/^https?:\/\/raw\.githubusercontent\.com\//.test(repoUrl))
+    {
+      ({ pathname } = new URL(repoUrl));
+      [ , user, repo, branch, ...rest ] = pathname.split('/');
+      filepath = rest.join('/');
+      key = `${repo}@${user}`;
+      const resp = await fetch(repoUrl);
+      if (!resp.ok) throw new Error('Cannot fetch JSON at raw URL');
+      jsonData = await resp.json();
+    } // standard github blob url?
+    else if (/^https?:\/\/github\.com\/[^\/]+\/[^\/]+\/blob\//.test(repoUrl))
+    {
+      const url = new URL(repoUrl);
+      [ , user, repo, , branch, ...rest] = url.pathname.split('/');
+      filePath = rest.join('/');
+      key = `${repo}@${user}`;
+      const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${filePath}`;
+      const resp = await fetch(rawUrl);
+      if (!resp.ok) throw new Error('Cannot fetch JSON at blob URL');
+      jsonData = await resp.json();
+    }
+    else
+    {
+      ({user, repo} = parseGitHubUrl(repoUrl));
+      filePath = jsonPath;
+      key = `${repo}@${user}`;
+      jsonData = await fetchJsonFromRepo(useReducer, repo, filePath);
+    }
 
     const data = await readData();
     if (key in data) {
       return res.status(409).json({ error: `Entry for '${key}' already exists` });
     }
 
-    const target = await fetchJsonFromRepo(user, repo, jsonPath);
-    const entry = buildEntry(target);
-    entry.readme = await fetchReadme(user, repo);
+    const entry = buildEntry(jsonData);
+    if (!repoUrl.includes('raw.githubusercontent.com') && !repoUrl.includes('/blob/'))
+      entry.readme = await fetchReadme(user, repo);
     entry.published_at = new Date().toISOString();
     entry.type = "Mod";
 
