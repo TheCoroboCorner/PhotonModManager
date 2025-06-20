@@ -218,5 +218,19 @@
     "published_at": "2025-06-20T01:22:45.778Z",
     "type": "Mod",
     "tags": []
+  },
+  "SystemClock@Breezebuilder": {
+    "id": "SystemClock",
+    "name": "SystemClock",
+    "author": [
+      "Breezebuilder"
+    ],
+    "description": "Shows the local time in-game. Don't fall into the Black Hole.",
+    "favourites": 0,
+    "badge_colour": "638fe1",
+    "readme": "# SystemClock for Balatro\n\n<p align=\"center\">\n    <img width=\"80%\" alt=\"Header\" src=\"https://github.com/user-attachments/assets/6de7287f-9968-4681-b315-e732a44036f4\"/>\n    &nbsp;\n    <img width=\"49%\" alt=\"In-game examples\" src=\"https://github.com/user-attachments/assets/23fd4fcd-27c3-433d-916f-fca5eb64f971\"/>\n    &nbsp;\n    <img width=\"46%\" alt=\"Configuration menu\" src=\"https://github.com/user-attachments/assets/d6059c8f-4c41-4cc2-99d7-a5188872f713\"/>\n</p>\n\nSystemClock is a mod for [Balatro](https://store.steampowered.com/app/2379780/Balatro/) which adds a draggable, resizable, customizable clock to the game screen.\n\nIt includes 5 editable presets and supports a variety of time formats, UI styles, and color options.\n\nKeep track of time - don't fall into the `Black Hole`.\n\n\n## Installation\n1. Install [Lovely](https://github.com/ethangreen-dev/lovely-injector/releases) by following the [installation instructions here](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation).\n    - On **Windows**, `version.dll` should be in the same folder as `Balatro.exe`\n    - On **macOS**, `liblovely.dylib` should be in the same folder as `Balatro.app`\n\n2. Open the **Mods** folder or create one if it does not exist.\n    - On **Windows** this should be located at `%AppData%/Balatro/Mods`\n    - On **macOS** this should be located at `/Users/$USER/Library/Application Support/Balatro/Mods`\n\n3. ﻿**Install SystemClock** by copying the **SystemClock** folder **from inside** [SystemClock-version.zip](https://github.com/Breezebuilder/SystemClock/releases) into the **Mods** folder.\n\n4. **Configure SystemClock** to your liking by **right-clicking** on the clock\n    - With only Lovely installed, this menu can also be found at **Settings** -> **Clock**\n    - If [Steamodded](https://github.com/Steamodded/smods) is also installed, this menu can be found at **MODS** -> **SystemClock** -> **Config** tab\n\n\n## Contribute\nHave an idea for a feature? Found a bug?\n[Create an issue here](https://github.com/Breezebuilder/SystemClock/issues/)\n",
+    "published_at": "2025-06-20T02:08:04.858Z",
+    "type": "Mod",
+    "tags": []
   }
 }
