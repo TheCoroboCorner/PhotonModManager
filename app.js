@@ -178,9 +178,6 @@ app.post('/submit', async (req, res) =>
     let user, repo, branch, filepath, jsonData, key;
 
     const tagArray = Array.isArray(tags) ? tags : (tags ? [tags] : []);
-    console.log(req.body);
-    console.log(tags);
-    console.log(tagArray);
 
     const url = new URL(repoUrl);
 
