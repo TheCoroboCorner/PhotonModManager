@@ -210,55 +210,58 @@ app.post('/submit', async (req, res) =>
       return res.status(409).json({ error: `Entry for '${key}' already exists` });
     }
 
-    const repoInfoRes = await fetch(`https://api.github.com/repos/${user}/${repo}`,
+    const headers = {
+      'User-Agent': 'photonmodmanager',
+      'Accept': 'application/vnd.github.v3+json',
+      'Authorization': `Bearer ${process.env.GITHUB_FETCH_TOKEN}`
+    };
+    const repoInfoP = fetch(`https://api.github.com/repos/${user}/${repo}`, { headers }).then(r =>
     {
-      headers:
-      {
-        'User-Agent': 'photonmodmanager',
-        'Accept': 'application/vnd.github.v3+json',
-        'Authorization': `Bearer ${process.env.GITHUB_FETCH_TOKEN}`
-      }
+      if (!r.ok)
+        throw new Error(`Github repo info ${r.status}`);
+      return r.json();
     });
-    if (!repoInfoRes.ok)
-    {
-      const err = await repoInfoRes.json();
-      throw new Error(`GitHub API (repo) error: ${repoInfoRes.status} ${err.message || repoInfoRes.statusText}`);
-    }
 
-    const { default_branch } = await repoInfoRes.json();
-
-    const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${filepath}?ref=${default_branch}`;
-    const apiRes = await fetch(apiUrl, 
+    const contentsP = repoInfoP.then(({ default_branch }) =>
     {
-      headers:
+      const url = `https://api.github.com/repos/${user}/${repo}/contents/${filepath}?ref=${default_branch}`;
+      return fetch(url, { headers }).then(r => 
       {
-        'User-Agent': 'photonmodmanager',
-        'Accept': 'application/vnd.github.v3+json',
-        'Authorization': `Bearer ${process.env.GITHUB_FETCH_TOKEN}`
-      }
+        if (!r.ok)
+          throw new Error(`Contents API ${r.status}`);
+        return r.json().then(j => ({ j, default_branch }));
+      });
     });
-    if (!apiRes.ok)
-    {
-      const err = await apiRes.json();
-      throw new Error(`GitHub API error: ${apiRes.status} ${err.message || apiRes.statusText}`);
-    }
 
-    const { content, encoding } = await apiRes.json();
+    const [{ default_branch }, { j: {content, encoding } }] = await Promise.all([repoInfoP, contentsP]);
     const raw = Buffer.from(content, encoding).toString('utf8');
     jsonData = JSON.parse(raw);
-
+    
     const entry = buildEntry(jsonData);
-    if (!repoUrl.includes('raw.githubusercontent.com') && !repoUrl.includes('/blob/'))
-      entry.readme = await fetchReadme(user, repo);
     entry.published_at = new Date().toISOString();
     entry.type = "Mod";
     entry.tags = tagArray;
 
     data[key] = entry;
     await writeData(data);
-    backupDataJson().catch(console.error);
-
     res.json({ success: true, key });
+
+    (async () =>
+    {
+      try
+      {
+        if (!repoUrl.includes('raw.githubusercontent.com') && !repoUrl.includes('/blob/'))
+        {
+          const readme = await fetchReadme(user, repo);
+          const d2 = await readData();
+          d2[key].readme = readme;
+          await writeData(d2);
+        }
+        await backupDataJson();
+      }
+      catch (err) { console.error('Background job failed:', err); }
+    })();
+
   } catch (err) {
     console.error(err);
     res.status(400).json({ error: err.message });
