@@ -8,6 +8,8 @@ const OWNER = process.env.GITHUB_OWNER;
 const REPO  = process.env.GITHUB_REPO;
 const TOKEN = process.env.GITHUB_TOKEN;
 const DATA_FILE = path.join(__dirname, 'data.json');
+const VOTES_FILE = path.join(__dirname, 'votes.json');
+
 const API_BASE = 'https://api.github.com';
 
 
@@ -24,13 +26,25 @@ async function getFileSha() {
   return body.sha;
 }
 
+async function getVoteSha() {
+  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/votes.json`;
+  const resp = await fetch(url, {
+    headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }
+  });
+  if (resp.status === 404) return null;
+  if (!resp.ok) throw new Error(`GitHub GET contents failed: ${resp.status}`);
+  const body = await resp.json();
+  console.log(body.sha);
+  return body.sha;
+}
+
 export async function backupDataJson() {
   const content = await fs.readFile(DATA_FILE, 'utf8');
   const base64  = Buffer.from(content, 'utf8').toString('base64');
   const sha     = await getFileSha();
 
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/data.json`;
-  console.log("Fetching data.json...")
+  console.log("Fetching data.json...");
   const resp = await fetch(url, {
     method: 'PUT',
     headers: {
@@ -49,5 +63,34 @@ export async function backupDataJson() {
     throw new Error(`GitHub PUT contents failed (${resp.status}): ${err}`);
   }
   const data = await resp.json();
-  console.log("Backup commit URL:", data.content && data.content.html_url)
+  console.log("Backup commit URL:", data.content && data.content.html_url);
+}
+
+export async function backupVotesJson() {
+  const content = await fs.readFile(VOTES_FILE, 'utf8');
+  const base64 = Buffer.from(content, 'utf8').toString('base64');
+  const sha = await getVoteSha();
+
+  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/votes.json`;
+  console.log("Fetching votes.json...");
+  const resp = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      Authorization: `token ${TOKEN}`,
+      Accept: 'application/vnd.github.v3+json'
+    },
+    body: JSON.stringify({
+      message: `Automated backup of data.json @ ${new Date().toISOString()}`,
+      content: base64,
+      sha: sha || undefined
+    })
+  });
+  console.log("Finishing fetching votes.json...");
+  if (!resp.ok)
+  {
+    const err = await resp.text();
+    throw new Error(`GitHub PUT contents failed (${resp.status}): ${err}`);
+  }
+  const votes = await resp.json();
+  console.log("Backup commit URL:", votes.content && votes.content.html_url);
 }
