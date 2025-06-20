@@ -8,7 +8,7 @@
       "MrC33ps"
     ],
     "description": "Adds various Stands (perhaps one may call them JoJokers) to Balatro. Please excuse the poor quality, this is my first mod.",
-    "favourites": 0,
+    "favourites": 2,
     "badge_colour": "2a0057",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-1225a)"
@@ -70,7 +70,7 @@
       "Th30ne"
     ],
     "description": "Adds 50+ new Jokers, alongside other content. (HINT: You can turn off the custom music in config.lua)",
-    "favourites": 0,
+    "favourites": 1,
     "badge_colour": "793A80",
     "dependencies": [],
     "readme": "# Grab Bag\nGrab Bag is a Balatro mod that currently adds: \n- 46 (+8) Jokers\n- 3 Tarots\n- 1 Spectral\n- 3 Enhancements \n- 15 Boss Blinds\n- 5 Showdown Boss Blinds\n- and 4 Decks.\n\nThe content in this mod is supposed to feel vanilla, and I created this new content to be largely in line with the rules and design philosophy that localthunk follows when making Jokers and other content. \n\n## Jokers\nAs of the latest update, this mod contains 21 Common, 15 Uncommon, and 10 Rare Jokers.\n### Common\n- Bad Trip\n- Bait\n- Bullseye\n- Counterfeit Joker\n- Coupon\n- Dunce\n- Gasoline\n- Hadal Zone\n- Jackpot\n- Morose Joker\n- Patience\n- Postage Stamp\n- Qubits\n- Receipt\n- Revolution 9\n- Sketchy Joker\n- Torchlight\n- Waterfall\n- Wild Joker\n- Hot Potato\n- Polariser\n  \n### Uncommon\n- Another Brick\n- Bank Teller\n- Boing Ball\n- Calculator\n- Candle\n- Cheque Stub\n- Double Gulp\n- First Strike\n- Honeycomb\n- Impostor\n- Knight\n- Lover's Locket\n- Wax Joker\n- Wheel of Misfortune\n- Yellow Pages\n  \n### Rare\n- Apparition\n- D20\n- Double King\n- Forest Fire\n- Golden Cookie\n- Lobster Claw\n- Pentagram\n- Retro Joker\n- Silver Hammer\n- The Moon's Oceans\n\n## Enhancements\nAs of the latest update, this mod contains 2 new enhancements.\n- River (and The River Tarot)\n- Wooden (and The Life Tarot)\n\n## Shattered Jokers\nJokers can be shattered into more powerful Shattered jokers with the Shatter consumable, which may show up in Arcana and Spectral Packs.\n### Shatterable Jokers\n- Obelisk\n- Flower Pot\n- Fibonacci\n- Polariser\n- Rough Gem\n- Splash\n- Joker\n- Invisible Joker\n\n## Decks\nThere are 4 decks in the latest update of the mod.\n- Gem Deck\n- Mathematical Deck\n- Negative Deck\n- Tech Deck\n",
@@ -103,7 +103,7 @@
       "Balatro Discord"
     ],
     "description": "Every action has an opposite reaction. In another world, in the nation of \"Virtue\", a simple indie developer created Ortalab, which so happened to be the opposite of our world's Balatro. This mod is intended to port everything from that parallel world to Balatro. Within this demo, it includes 75 Jokers, 10 Decks, 7 sets of Coupons, a new Consumable Type with Boosters - Loteria Cards, 8 Enhancements, 4 Editions, 12 patches, and 2 Stakes for you to try out.",
-    "favourites": 0,
+    "favourites": 1,
     "badge_colour": "990000",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0322a)"
@@ -119,7 +119,7 @@
       "Somethingcom515"
     ],
     "description": "Allows seals on Everything also comes with more seals",
-    "favourites": 0,
+    "favourites": 6,
     "badge_colour": "E8463D",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0509b-STEAMODDED)",
@@ -139,11 +139,35 @@
       "Fred"
     ],
     "description": "SuperFine is a 'Vanilla++' mod - aiming to add content that fits in with vanilla's balance, but stands out on its own.",
-    "favourites": 0,
+    "favourites": 2,
     "badge_colour": "FF4A93",
     "dependencies": [],
     "readme": "",
     "published_at": "2025-06-19T20:51:14.447Z",
+    "type": "Mod",
+    "tags": []
+  },
+  "CardSleeves@larswijn": {
+    "id": "CardSleeves",
+    "name": "Card Sleeves",
+    "author": [
+      "Larswijn"
+    ],
+    "description": "Adds sleeves as modifier to decks.  See full description in-game by enabling mod or checking `descriptions.Mods.CardSleeves`.",
+    "favourites": 0,
+    "badge_colour": "0047AA",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-1206c)",
+      "Lovely (>=0.6.0)"
+    ],
+    "conflicts": [
+      "GRM (<=0.9.5)",
+      "VNBalatro (<=1.3.0)",
+      "SKHDecks (<=1.2.2)",
+      "MoreFluff (<=1.0.3)"
+    ],
+    "readme": "# ![icon](assets/1x/icon.png) CardSleeves\nA Steamodded+lovely Balatro Mod that adds Sleeves.\n\n![Balatro_Card_Sleeves](Balatro_Card_Sleeves.png)\n\n# Requirements\nRequires `steamodded >= 1.0.0~ALPHA-1206c` - [link](https://github.com/Steamodded/smods/wiki).\n\nRequires `Lovely >= 0.6.0` - [link](https://github.com/ethangreen-dev/lovely-injector). This should already be installed as part of steamodded's installation process.\n\n# Installation\nGet the latest stable version from the [Releases](https://github.com/larswijn/CardSleeves/releases/latest), then download and extract the zip.\nOr use `git clone` for the latest development code, which is more up-to-date, but might be unstable.\n\nMake sure to put the `CardSleeves` folder in the `Mods` directory, and that it is not nested.\n\n# Features\nSleeves are run modifiers similar to decks. Any deck and sleeve can be combined.\n\nCardSleeves adds 15 Sleeves by default, some of which have an unique and different effect when paired with their corresponding deck:\n| Sleeve           | Base effect                                            | Unique effect                                                          |\n|------------------|--------------------------------------------------------|------------------------------------------------------------------------|\n| Red Sleeve       | +1 discard                                             | +1 discard, -1 hand                                                    |\n| Blue Sleeve      | +1 hand                                                | +1 hand, -1 discard                                                    |\n| Yellow Sleeve    | +$10                                                   | Seed Money Voucher                                                     |\n| Green Sleeve     | +$1 per remaining hand/discard                         | Can go up to -$2 in debt for every hand and discard                    |\n| Black Sleeve     | +1 joker slot, -1 hand                                 | +1 joker slot, -1 discard                                              |\n| Magic Sleeve     | Crystal Ball Voucher, 2 Fools                          | Omen Globe Voucher                                                     |\n| Nebula Sleeve    | Telescope Voucher, -1 consumable slot                  | Observatory Voucher                                                    |\n| Ghost Sleeve     | Spectral cards appear in shop, Hex card                | Spectrals appear more often in shop, Spectral pack size increases by 2 |\n| Abandoned Sleeve | No Face Cards in starting deck                         | Face Cards never appear                                                |\n| Checkered Sleeve | 26 Spades and 26 Hearts in starting deck               | Only Spades and Hearts appear                                          |\n| Zodiac Sleeve    | Tarot Merchant, Planet Merchant and Overstock Vouchers | Arcana/Celestial pack size increases by 2                              |\n| Painted Sleeve   | +2 hand size, -1 joker slot                            | +1 card selection limit, -1 joker slot                                 |\n| Anaglyph Sleeve  | Double Tag after each Boss Blind                       | Double Tag after each Small/Big Blind                                  |\n| Plasma Sleeve    | Balance chips/mult, X2 base Blind size                 | Balance prices in shop                                                 |\n| Erratic Sleeve   | All ranks/suits in starting deck are randomized        | Starting Hands/Discards/Dollars/Joker slots are randomized between 3-6 |\n\nOther mods have the ability to add their own Sleeves! Some of these mods include:\n+ [Cryptid](https://github.com/MathIsFun0/Cryptid)\n+ [Familiar](https://github.com/RattlingSnow353/Familiar)\n+ [SDM_0's Stuff](https://github.com/SDM0/SDM_0-s-Stuff)\n+ [MoreFluff](https://github.com/notmario/MoreFluff)\n+ [Reverie](https://github.com/dvrp0/reverie)\n+ [Pokermon](https://github.com/InertSteak/Pokermon)\n+ [Buffoonery](https://github.com/pinkmaggit-hub/Buffoonery)\n+ [Balatro Drafting](https://github.com/spire-winder/Balatro-Draft)\n+ [Themed Jokers](https://github.com/cerloCasa/Themed-Jokers)\n+ [Jimbo's Pack](https://github.com/art-muncher/Jimbo-s-Pack)\n+ And more!\n\nCardSleeves also has support for [Galdur](https://github.com/Eremel/Galdur)'s improved new run menu!\n\n# API (for mod developers)\nAny other mod can create new sleeves. See [the wiki](https://github.com/larswijn/CardSleeves/wiki) for more information.\n\n# Credits\nBig thanks to Sable for the original idea and the original art, all the cool people who helped translate, and the amazing balatro modding community for helping out with the lua code.\n\nAny suggestions, improvements or bugs are welcome and can be submitted through Github's Issues, or on the Balatro Discord [Thread](https://discord.com/channels/1116389027176787968/1279246553931976714).\n",
+    "published_at": "2025-06-20T00:23:42.053Z",
     "type": "Mod",
     "tags": []
   }
