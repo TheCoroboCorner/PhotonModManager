@@ -246,5 +246,26 @@
     "published_at": "2025-06-20T02:08:19.097Z",
     "type": "Mod",
     "tags": []
+  },
+  "Balatro-Aikoyoris-Shenanigans@Aikoyori": {
+    "id": "aikoyorisshenanigans",
+    "name": "Aikoyori's Shenanigans",
+    "author": [
+      "Aikoyori"
+    ],
+    "description": "Adds a bunch of stuff I want to add to the game.",
+    "favourites": 0,
+    "badge_colour": "ff475a",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0530b)",
+      "Lovely (>=0.8.0)",
+      "Balatro (>=1.0.1o)"
+    ],
+    "conflicts": [],
+    "provides": [],
+    "readme": "# Aikoyori's Shenanigans\r\nA Balatro mod that adds things I want to add.\r\n\r\n> [!IMPORTANT]\r\n> If you are specifically told to \"download from main\" by me then click [this](https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/archive/refs/heads/main.zip) link\r\n\r\nMod Discord is [here](https://discord.gg/JVg8Bynm7k)!\r\n\r\nWords from the English Words Repo : https://github.com/dwyl/english-words\r\nFiltered using the Profanity List here : https://github.com/dsojevic/profanity-list\r\nUsed MathParser from https://github.com/ByteXenon/MathParser.lua\r\n\r\nMaxwell's Notebook sprite by larantula_l on Discord\r\n\r\nArt in guestJokerArts.png is copyrighted by and belong to their respective owners and I was given permission to use these.\r\n\r\nAssets (Music/Sounds/Graphics/etc.) unless stated otherwise are licensed under CC-BY-NC-SA 4.0, Code is licensed under GPL v3",
+    "published_at": "2025-06-20T02:57:51.876Z",
+    "type": "Mod",
+    "tags": []
   }
 }
