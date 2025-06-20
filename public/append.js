@@ -1,7 +1,5 @@
 document.getElementById('gh-form').addEventListener('submit', async e =>
 {
-  e.preventDefault();
-
   const form = e.target;
   const formData = new formData(form);
 
