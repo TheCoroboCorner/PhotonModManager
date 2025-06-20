@@ -132,6 +132,10 @@ body a {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .click-me:hover {
