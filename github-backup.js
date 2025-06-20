@@ -68,7 +68,7 @@ export async function backupDataJson() {
 export async function backupVotesJson() {
   const content = await fs.readFile(VOTES_FILE, 'utf8');
   const base64 = Buffer.from(content, 'utf8').toString('base64');
-  const sha = await getVoteSha();
+  const sha = await getVotesSha();
 
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/votes.json`;
   console.log("Fetching votes.json...");
