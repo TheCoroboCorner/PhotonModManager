@@ -268,5 +268,32 @@
     "published_at": "2025-06-20T02:57:51.876Z",
     "type": "Mod",
     "tags": []
+  },
+  "BalatroBakery@BakersDozenBagels": {
+    "id": "Bakery",
+    "name": "Bakery",
+    "author": [
+      "BakersDozenBagels"
+    ],
+    "description": "Some miscellaneous additions.",
+    "favourites": 0,
+    "badge_colour": "EDD198",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-0330a)",
+      "Lovely (>=0.6)"
+    ],
+    "conflicts": [],
+    "provides": [],
+    "published_at": "2025-06-20T16:05:30.700Z",
+    "type": "Mod",
+    "tags": [
+      "Vanilla Plus",
+      "Jokers",
+      "Consumables",
+      "Blinds",
+      "Mechanics",
+      "Misc"
+    ],
+    "readme": "# Bakery\n\nA mod for [Balatro](https://www.playbalatro.com/) that adds various miscellaneous things, created by BakersDozenBagels.\n\nAdditions are generally meant to be well-balanced with vanilla, although the decks are a bit wackier.\n\nCurrent contents:\n\n- 22 Jokers\n- 10 Charms (a new kind of thing in the shop)\n- 20 Tags\n- 3 Decks\n- 3 [Deck Sleeves](https://github.com/larswijn/CardSleeves)\n- 5 Blinds\n- 3 Challenges\n- 1 Tarot Card\n- 2 Spectral Cards\n- 2 Enhancements\n- 1 Edition\n- Miscellaneous modding API features (If this mod does something interesting, it can probably be used as a dependency to do that thing)\n\n## Cross-Mod Content\n\nWith certain other mods installed, Bakery will add extra items:\n- [Revo's Vault](https://github.com/Cdrvo/Revos-Vault---Balatro-Mod) - 1 Charm\n- [MoreFluff](https://github.com/notmario/MoreFluff) - 1 Charm\n- [Cryptid](https://github.com/SpectralPack/Cryptid) - 2 Charms\n\n## Installation\n\n1. Bakery requires [Steamodded](https://github.com/Steamodded/smods). Follow the instructions to install it if you haven't already.\n2. Clone this repository into your mods folder, or download it as a zip and place it there.\n3. Enjoy!\n\n## Lite Version\n\nIf another mod depends on Bakery, but you do not want Bakery's additions, you can install the [lite version](https://github.com/BakersDozenBagels/BalatroBakery/tree/lite). This version only has a modding API and nothing else. Note that both versions can be installed together without issue so long as both are up-to-date.\n\n## Other Contributors\n\nThanks to GhostSalt (@ghost12salt) and SadCube (@sadcube) on Discord for some of the artwork used.\n"
   }
 }
