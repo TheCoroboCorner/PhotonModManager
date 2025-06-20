@@ -233,5 +233,40 @@
     "published_at": "2025-06-20T02:57:51.876Z",
     "type": "Mod",
     "tags": []
+  },
+  "JoJoMod@TheCoroboCorner": {
+    "id": "JoJoMod",
+    "name": "JoJo Mod",
+    "author": [
+      "TheCoroboCorner",
+      "Monachromee",
+      "MrC33ps"
+    ],
+    "description": "Adds various Stands (perhaps one may call them JoJokers) to Balatro. Please excuse the poor quality, this is my first mod.",
+    "favourites": 0,
+    "badge_colour": "2a0057",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "conflicts": [
+      "incantation"
+    ],
+    "git_owner": "TheCoroboCorner",
+    "git_repo": "JoJoMod",
+    "mod_path": "Mods/JoJoMod",
+    "subpath": "JoJoMod",
+    "download_suffix": "Release.zip",
+    "update_mandatory": false,
+    "target_version": "-1",
+    "readme": "# JoJo Mod\n\nThis is a mod that aims to add a lot of the different Stands from JoJo's Bizarre Adventure.\nCurrently, there are *45* Jokers, *29* Consumables, *1* enhancement, and *1* sticker.\n\nTextures are still incomplete for now, with most of them using placeholders, so please stay tuned for the future, and I hope you enjoy the mod!\n\n# How to Install\n\nYou will require [Steamodded](https://github.com/Steamodded/smods) in order to use this mod. Instructions on [how to install Steamodded](https://github.com/Steamodded/smods/wiki) are listed on their Github page.\n\nOnce that's installed, just unzip the file called \"Release.zip\" into your Mods folder, and you should be good to go!\n\n(Oh, and this mod isn't compatible with the Incantation mod; it causes some issues with one of our Jokers. I'll try to fix that in the future, but for right now, if you have both, it won't work.)\n\nEnjoy!\n",
+    "published_at": "2025-06-20T14:54:58.775Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Modifiers",
+      "Mechanics",
+      "Misc"
+    ]
   }
 }
