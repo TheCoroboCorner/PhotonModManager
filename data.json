@@ -204,5 +204,19 @@
     "published_at": "2025-06-20T00:30:28.484Z",
     "type": "Mod",
     "tags": []
+  },
+  "balatro-typist-mod@kasimeka": {
+    "id": "typist",
+    "name": "typist",
+    "author": [
+      "kasimeka"
+    ],
+    "description": "Fully keyboard-driven UX with keybindings for (almost) every game action.",
+    "favourites": 0,
+    "badge_colour": "ffffff",
+    "readme": "",
+    "published_at": "2025-06-20T01:22:45.778Z",
+    "type": "Mod",
+    "tags": []
   }
 }
