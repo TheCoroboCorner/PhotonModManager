@@ -3,7 +3,7 @@ import express from 'express';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { backupDataJson } from './github-backup.js';
+import { backupDataJson, backupVotesJson } from './github-backup.js';
 import crypto from 'crypto';
 
 // Fix for __dirname in ESM
@@ -166,6 +166,7 @@ app.post('/favourite/:key', async (req, res) =>
 
   votes[key].push(userId);
   await writeVotes(votes);
+  backupVotesJson().catch(console.error);
 
   res.json({ success: true, newCount: data[key].favourites });
 });

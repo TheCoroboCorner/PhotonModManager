@@ -26,15 +26,14 @@ async function getFileSha() {
   return body.sha;
 }
 
-async function getVoteSha() {
+async function getVotesSha() {
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/votes.json`;
   const resp = await fetch(url, {
     headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }
   });
   if (resp.status === 404) return null;
-  if (!resp.ok) throw new Error(`GitHub GET contents failed: ${resp.status}`);
+  if (!resp.ok) throw new Error(`GitHub GET votes failed: ${resp.status}`);
   const body = await resp.json();
-  console.log(body.sha);
   return body.sha;
 }
 
