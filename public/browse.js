@@ -28,6 +28,13 @@ async function loadMods() {
 
     if (tagSelect)
     {
+        tagSelect.innerHTML = '';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.textContent = 'All';
+        if (!tagFilter) defaultOpt.selected = true;
+        tagSelect.appendChild(defaultOpt);
+        
         Array.from(allTags).sort().forEach(t => 
         {
             const opt = document.createElement('option');

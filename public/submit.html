@@ -45,6 +45,9 @@
             <p>
               Submitting a project to the database is rather simple. Simply give the link to your repository below, and the path to the metadata file, and it will be added to the database.
             </p>
+            <p>
+              There is one thing to keep in mind: In your metadata JSON file, you must have an "allow_redistribution" variable set to true. This is to prevent other people from uploading creators' mods without their consent.
+            </p>
           </div>
           <div class="wrapper">
             <form id="gh-form">
@@ -100,12 +103,14 @@
               <br>
               <label>
                 GitHub Repo URL:<br>
+                <small>(This is the link to your GitHub repository. Simply click on your GitHub repository list, go to the repository for the mod, and copy the link for it.)</small><br>
                 <input name="repoUrl" type="url" required placeholder="https://github.com/user/repo">
               </label>
               <br>
               <br>
               <label>
-                JSON Path in Repo:<br>
+                JSON Filepath in Repo:<br>
+                <small>(This is the filepath to the file that contains all the metadata for your mod, such as the name, ID, description, dependencies, etc...)</small><br>
                 <input name="jsonPath" type="text" required placeholder="data/info.json">
               </label>
               <br>

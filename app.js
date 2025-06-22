@@ -46,6 +46,11 @@ function buildEntry(target)
     description: target.description,
     favourites: 0
   };
+
+  if (target.allow_redistribution)
+    entry.allow_redistribution = target.allow_redistribution;
+  else throw new Error('allow_redistribution variable in target JSON file is either missing or false! Cannot redistribute without permission!');
+
   ['id', 'name', 'author', 'description', 'badge_colour', 'dependencies', 'conflicts', 'provides', 'git_owner', 'git_repo',
     'mod_index_id', 'mod_path', 'subpath', 'download_suffix', 'update_mandatory', 'target_version'].forEach(key => {
     if (key in target) entry[key] = target[key];
@@ -161,12 +166,13 @@ app.post('/favourite/:key', async (req, res) =>
   if (!data[key]) 
     return res.status(404).json({ error: 'Mod not found' });
 
-  data[key].favourites = (data[key].favourites || 0) + 1;
-  await writeData(data);
-
   votes[key].push(userId);
   await writeVotes(votes);
   backupVotesJson().catch(console.error);
+
+  data[key].favourites = votes[key].length;
+  await writeData(data);
+  backupDataJson().catch(console.error);
 
   res.json({ success: true, newCount: data[key].favourites });
 });
