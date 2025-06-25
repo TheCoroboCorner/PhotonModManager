@@ -241,7 +241,7 @@
       "Breezebuilder"
     ],
     "description": "Click to dismiss discovery alert icons.",
-    "favourites": 0,
+    "favourites": 3,
     "badge_colour": "cc3c33",
     "readme": "# ![icon](https://github.com/user-attachments/assets/42a37f6d-46ed-4d38-97b4-886da6ef45ca) DismissAlert for Balatro\n\n<p align=\"center\">\n    <img width=\"47%\" alt=\"Main menu example\" src=\"https://github.com/user-attachments/assets/2985bfbc-6f05-4301-b9ea-d608638c039f\"/>\n    &nbsp;\n    <img width=\"47%\" alt=\"In-game menu example\" src=\"https://github.com/user-attachments/assets/0da65e18-5cea-410c-8395-6c0254e167f8\"/>\n</p>\n\nDismissAlert is a mod for [Balatro](https://store.steampowered.com/app/2379780/Balatro/) which allows the discovery alert icons to be dismissed and hidden with a single click.\n\n\n## Installation\n1. Install [Lovely](https://github.com/ethangreen-dev/lovely-injector/releases) by following the [installation instructions here](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation).\n    - On **Windows**, `version.dll` should be in the same folder as `Balatro.exe`\n    - On **macOS**, `liblovely.dylib` should be in the same folder as `Balatro.app`\n\n2. Open the **Mods** folder or create one if it does not exist.\n    - On **Windows** this should be located at `%AppData%/Balatro/Mods`\n    - On **macOS** this should be located at `/Users/$USER/Library/Application Support/Balatro/Mods`\n\n3. **Install DismissAlert** by copying the **DismissAlert** folder **from inside** [DismissAlert.zip](https://github.com/Breezebuilder/DismissAlert/releases) into the **Mods** folder.\n\n\n## Contribute\nHave an idea for a feature? Found a bug?\n[Create an issue here](https://github.com/Breezebuilder/DismissAlert/issues/)\n",
     "published_at": "2025-06-20T02:08:19.097Z",
@@ -255,7 +255,7 @@
       "Aikoyori"
     ],
     "description": "Adds a bunch of stuff I want to add to the game.",
-    "favourites": 0,
+    "favourites": 6,
     "badge_colour": "ff475a",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0530b)",
@@ -276,7 +276,7 @@
       "BakersDozenBagels"
     ],
     "description": "Some miscellaneous additions.",
-    "favourites": 0,
+    "favourites": 2,
     "badge_colour": "EDD198",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-0330a)",
