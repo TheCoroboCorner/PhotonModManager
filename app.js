@@ -233,6 +233,7 @@ app.post('/submit', async (req, res) =>
       return res.status(409).json({ error: `Entry for '${key}' already exists` });
     }
 
+    /*
     const headers = {
       'User-Agent': 'photonmodmanager',
       'Accept': 'application/vnd.github.v3+json',
@@ -259,7 +260,13 @@ app.post('/submit', async (req, res) =>
     const [{ default_branch }, { j: {content, encoding } }] = await Promise.all([repoInfoP, contentsP]);
     const raw = Buffer.from(content, encoding).toString('utf8');
     jsonData = JSON.parse(raw);
+    */
     
+    const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${default_branch}/${filepath}`;
+    const resp = await fetch(rawUrl, { headers: { 'User-Agent': 'photonmodmanager' } });
+    if (!resp.ok) throw new Error(`Raw JSON fetch failed: ${resp.status}`);
+    jsonData = await resp.json();
+
     const entry = buildEntry(jsonData);
     entry.published_at = new Date().toISOString();
     entry.type = "Mod";
