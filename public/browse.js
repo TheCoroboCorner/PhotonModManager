@@ -5,14 +5,14 @@ async function loadMods() {
     const params = new URLSearchParams(window.location.search);
     const sortBy = params.get('sortBy') || 'published_at';
     const order = params.get('order') || 'desc';
-    const tagFilter = params.get('tags');
+    const tagFilter = params.getAll('tags');
     const exclude = params.get('exclude') === '1';
 
     console.log({ tagFilter, exclude });
 
     const sortSelect = document.querySelector('select[name="sortBy"]');
     const orderSelect = document.querySelector('select[name="order"]');
-    const tagSelect = document.querySelector('select[name="tag"]');
+    const tagSelect = document.querySelector('select[name="tags"]');
     if (sortSelect) sortSelect.value = sortBy;
     if (orderSelect) orderSelect.value = order;
     if (tagSelect) 
@@ -25,7 +25,7 @@ async function loadMods() {
 
             if (tagFilter.includes(tag)) opt.selected = true;
             tagSelect.appendChild(opt);
-        })
+        });
     }    
 
     var entries = Object.entries(data)

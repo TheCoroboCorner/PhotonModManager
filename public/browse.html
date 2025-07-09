@@ -58,8 +58,8 @@
               <br>
               <label>
                 <span>Filter By Tag:</span>
-                <!--
-                <select name="tags">
+                <select name="tags" multiple size="1">
+                  <!--
                   <option value="">All</option>
                   <option value="Textures">Textures</option>
                   <option value="SFX">SFX / Music</option>
@@ -73,18 +73,12 @@
                   <option value="Quality of Life">Quality of Life</option>
                   <option value="JokerForge">JokerForge</option>
                   <option value="Misc">Miscellaneous</option>
+                  -->
                 </select>
-                -->
-                <details id="tag-filter-dropdown" style="margin-bottom: 1em">
-                  <summary style="cursor: pointer;">
-                    Filter By Tag<span id="tag-filter-summary-count"></span>
-                  </summary>
-                  <div id="tag-filter-options" style="padding: 0.5em;"></div>
-                  <label style="display: block; margin-top: 0.5em">
-                    <input type="checkbox" name="exclude" value="1" ${exclude ? 'checked' : ''}>
-                      Exclude Selected
-                  </label>
-                </details>
+              </label>
+              <label style="margin-left: 1em">
+                <input type="checkbox" name="exclude" value="1">
+                  Exclude selected
               </label>
               <br>
               <br>
