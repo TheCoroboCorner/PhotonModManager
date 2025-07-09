@@ -232,7 +232,8 @@ async function loadModDetail()
 
     favContainer.appendChild(favBtn);
 
-    const li = document.createElement('li');
+    const tagsContainer = document.getElementById('mod-tags');
+    tagsContainer.innerHTML = '';
 
     const tagBar = document.createElement('div');
     tagBar.className = 'tag-bar';
@@ -245,14 +246,12 @@ async function loadModDetail()
         btn.className = 'tag-btn';
         btn.addEventListener('click', () => 
         {
-            const params = new URLSearchParams(window.location.search);
-            params.set('tag', tag);
-            window.location.search = params.toString();
+            window.location.href = `/browse?tag=${encodeURIComponent(tag)}`;
         });
         tagBar.appendChild(btn);
     });
 
-    li.appendChild(tagBar);
+    tagsContainer.appendChild(tagBar);
 
     const [repo, owner] = key.split('@');
     document.getElementById('mod-github').href = `https://github.com/${owner}/${repo}`;
