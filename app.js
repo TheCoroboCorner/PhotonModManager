@@ -233,6 +233,7 @@ app.post('/submit', async (req, res) =>
       return res.status(409).json({ error: `Entry for '${key}' already exists` });
     }
 
+    /*
     const headers = {
       'User-Agent': 'photonmodmanager',
       'Accept': 'application/vnd.github.v3+json',
@@ -257,15 +258,34 @@ app.post('/submit', async (req, res) =>
     });
 
     const [{ default_branch }, { j: {content, encoding } }] = await Promise.all([repoInfoP, contentsP]);
-    /*
+    
     const raw = Buffer.from(content, encoding).toString('utf8');
     jsonData = JSON.parse(raw);
     */
+
+    const { default_branch } = await fetch(`https://api.github.com/repos/${user}/${repo}`, { headers }).then(r => {
+      if (!r.ok) throw new Error(`Failed to fetch repo info: ${r.status}`);
+      return r.json();
+    });
     
     const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${default_branch}/${filepath}`;
+
     const resp = await fetch(rawUrl, { headers: { 'User-Agent': 'photonmodmanager' } });
-    if (!resp.ok) throw new Error(`Raw JSON fetch failed: ${resp.status}`);
-    jsonData = await resp.json();
+    if (!resp.ok) throw new Error(`Failed to fetch raw JSON at ${rawUrl}: ${resp.status}`);
+    
+    const txt = await resp.text();
+    console.log('Raw JSON preview:', txt.slice(0, 200).replace(/\n/g, '\\n'));
+    
+    let jsonData;
+    try
+    {
+      jsonData = JSON.parse(txt);
+    }
+    catch (parseErr)
+    {
+      console.error('Full raw response (first 1000 chars):', txt.slice(0, 1000));
+      throw parseErr;
+    }
 
     const entry = buildEntry(jsonData);
     entry.published_at = new Date().toISOString();
