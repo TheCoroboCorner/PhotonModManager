@@ -258,9 +258,6 @@ async function loadModDetail()
     const depRanges = collectRanges('dependencies', key, data);
     const confRanges = collectRanges('conflicts', key, data);
 
-    renderRangeList(depRanges, 'dep-list');
-    renderRangeList(confRanges, 'conf-list');
-
     function renderRangeList(rangeMap, ulID)
     {
         const ul = document.getElementById(ulID);
@@ -296,36 +293,8 @@ async function loadModDetail()
         }
     }
 
-    const ul = document.getElementById('dep-list');
-    ul.innerHTML = '';
-    if (rangeMap.size === 0)
-    {
-        ul.innerHTML = '<li><em>None</em></li>';
-    }
-    else
-    {
-        for (const [rawStr, vRange] of rangeMap)
-        {
-            const li = document.createElement('li');
-            
-            const modName = rawStr.split(/\s*\(/)[0];
-            const foundKey = Object.keys(data).find(k => data[k].id === modName || data[k].name === modName);
-
-            let titleNode;
-            if (foundKey)
-            {
-                
-            }
-            else titleNode = document.createTextNode(modName);
-
-            li.appendChild(titleNode);
-
-            const rangeText = document.createTextNode(` - versions: ${vRange.toString()}`);
-            li.appendChild(rangeText);
-
-            ul.appendChild(li);
-        }
-    }
+    renderRangeList(depRanges, 'dep-list');
+    renderRangeList(confRanges, 'conf-list');
 }
 
 document.addEventListener('DOMContentLoaded', loadModDetail);
