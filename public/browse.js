@@ -10,7 +10,7 @@ async function loadMods() {
 
     const sortSelect = document.querySelector('select[name="sortBy"]');
     const orderSelect = document.querySelector('select[name="order"]');
-    const tagSelect = document.querySelector('select[name="tag"]');
+    const tagSelect = document.querySelector('select[name="tags"]');
     if (sortSelect) sortSelect.value = sortBy;
     if (orderSelect) orderSelect.value = order;
     if (tagSelect) 
@@ -62,8 +62,8 @@ async function loadMods() {
     if (tagFilter.length)
     {
         entries = entries.filter(e => {
-            const t = Array.isArray(e.tags) ? e.tags : [];
-            const has = rawTags.some(tag => t.includes(tag));
+            const tags = Array.isArray(e.tags) ? e.tags : [];
+            const has = rawTags.some(tag => tags.includes(tag));
             return exclude ? !has : has;
         });
     }
