@@ -261,13 +261,13 @@ app.post('/submit', async (req, res) =>
     /*
     const raw = Buffer.from(content, encoding).toString('utf8');
     jsonData = JSON.parse(raw);
-    */
 
     const { default_branch } = await fetch(`https://api.github.com/repos/${user}/${repo}`, { headers }).then(r => {
       if (!r.ok) throw new Error(`Failed to fetch repo info: ${r.status}`);
       return r.json();
     });
-    
+    */
+
     const rawUrl = `https://raw.githubusercontent.com/${user}/${repo}/${default_branch}/${filepath}`;
 
     const resp = await fetch(rawUrl, { headers: { 'User-Agent': 'photonmodmanager',
