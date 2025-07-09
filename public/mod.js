@@ -87,7 +87,7 @@ class VersionRange {
         }
         if (other.max)
         {
-            if (!newMax || compareVersions(other.max.ver, mewMax.ver) < 0 || compareVersions(other.max.ver, newMax.ver) === 0 && other.max.inclusive === false)
+            if (!newMax || compareVersions(other.max.ver, newMax.ver) < 0 || compareVersions(other.max.ver, newMax.ver) === 0 && other.max.inclusive === false)
                 newMax = other.max;
         }
 
@@ -231,6 +231,8 @@ async function loadModDetail()
         });
 
     favContainer.appendChild(favBtn);
+
+    const li = document.createElement('li');
 
     const tagBar = document.createElement('div');
     tagBar.className = 'tag-bar';
