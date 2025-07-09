@@ -49,35 +49,77 @@ class Constraint
 }
 
 class VersionRange {
-    constructor(constraints = [])
+    /**
+     * @param {{ver:string, inclusive:boolean, isLower:boolean}} lb
+     * @param {{ver:string, inclusive:boolean, isLower:boolean}} ub 
+     */
+
+    constructor(lb = null, ub = null)
     {
-        this.constraints = constraints;
+        this.min = lb;
+        this.max = ub;
     }
 
-    static parse(rangeStr)
+    static parse(str)
     {
-        const m = String(rangeStr).trim().match(/^(>=|<=|>|<|=)?\s*(.+)$/);
+        const m = String(str).trim().match(/^(>=|<=|>|<|=)?\s*(.+)$/);
         const op = m[1] || '>=';
         const ver = m[2] || '';
-        return new VersionRange([new Constraint(op, ver)]);
+
+        switch (op)
+        {
+            case '>=': return new VersionRange({ver, inclusive: true, isLower: true}, null);
+            case '>': return new VersionRange({ver, inclusive: false, isLower: true}, null);
+            case '<=': return new VersionRange(null, {ver, inclusive: true, isLower: false});
+            case '<': return new VersionRange(null, {ver, inclusive: false, isLower: false});
+            case '=': return new VersionRange({ver, inclusive: true, isLower: true}, {ver, inclusive: true, isLower: false});
+            default: return new VersionRange();
+        }
     }
 
     intersect(other)
     {
-        return new VersionRange([
-            ...this.constraints,
-            ...other.constraints
-        ]);
-    }
+        let newMin = this.min, newMax = this.max;
+        if (other.min)
+        {
+            if (!newMin || compareVersions(other.min.ver, newMin.ver) > 0 || compareVersions(other.min.ver, newMin.ver) === 0 && other.min.inclusive === false)
+                newMin = other.min;
+        }
+        if (other.max)
+        {
+            if (!newMax || compareVersions(other.max.ver, mewMax.ver) < 0 || compareVersions(other.max.ver, newMax.ver) === 0 && other.max.inclusive === false)
+                newMax = other.max;
+        }
 
-    test(version)
-    {
-        return this.constraints.every(c => c.test(version));
+        return new VersionRange(newMin, newMax);
     }
 
     toString()
     {
-        return this.constraints.map(c => c.toString()).join(' and ');
+        if (!this.min && !this.max)
+            return "Any";
+
+        if (this.min && this.max)
+        {
+            const cmp = compareVersions(this.min.ver, this.max.ver);
+
+            if (cmp > 0 || (cmp === 0 && (!this.min.inclusive || !this.max.inclusive)))
+                return `[Version requirement conflict detected; version ${this.max.ver} recommended]`;
+
+            if (cmp === 0 && this.min.inclusive && this.max.inclusive)
+                return this.min.ver;
+        }
+
+        const left = this.min
+            ? (this.min.inclusive ? '[' : '(') + this.min.ver
+            : '( ...';
+        
+        const right = this.max
+            ? this.max.ver + (this.max.inclusive ? ']' : ')')
+            : '... )';
+        
+        
+        return `${left}, ${right}`;
     }
 }
 
@@ -207,13 +249,13 @@ async function loadModDetail()
             {
                 titleNode = document.createElement('a');
                 titleNode.href = `/mod.html?key=${encodeURIComponent(foundKey)}`;
-                titleNode.textContent = rawStr;
+                titleNode.textContent = modName;
             }
-            else titleNode = document.createTextNode(rawStr);
+            else titleNode = document.createTextNode(modName);
 
             li.appendChild(titleNode);
 
-            const rangeText = document.createTextNode(` - versions ${vRange.toString()}`);
+            const rangeText = document.createTextNode(` - versions: ${vRange.toString()}`);
             li.appendChild(rangeText);
 
             ul.appendChild(li);
