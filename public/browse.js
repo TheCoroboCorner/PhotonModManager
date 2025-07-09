@@ -5,14 +5,26 @@ async function loadMods() {
     const params = new URLSearchParams(window.location.search);
     const sortBy = params.get('sortBy') || 'published_at';
     const order = params.get('order') || 'desc';
-    const tagFilter = params.get('tag') || '';
+    const tagFilter = params.get('tags');
+    const exclude = params.get('exclude') === '1';
 
     const sortSelect = document.querySelector('select[name="sortBy"]');
     const orderSelect = document.querySelector('select[name="order"]');
     const tagSelect = document.querySelector('select[name="tag"]');
     if (sortSelect) sortSelect.value = sortBy;
     if (orderSelect) orderSelect.value = order;
-    if (tagSelect) tagSelect.value = tagFilter;
+    if (tagSelect) 
+    {
+        tagSelect.innerHTML = '';
+        Array.from(allTags).sort().forEach(tag => {
+            const opt = document.createElement('option');
+            opt.value = tag;
+            opt.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
+
+            if (tagFilter.includes(tag)) opt.selected = true;
+            tagSelect.appendChild(opt);
+        })
+    }    
 
     var entries = Object.entries(data)
         .map(([key, e]) => ({key, ...e}));
@@ -46,6 +58,15 @@ async function loadMods() {
     }
 
     if (tagFilter) entries = entries.filter(e => Array.isArray(e.tags) && e.tags.includes(tagFilter));
+
+    if (tagFilter.length)
+    {
+        entries = entries.filter(e => {
+            const t = Array.isArray(e.tags) ? e.tags : [];
+            const has = rawTags.some(tag => t.includes(tag));
+            return exclude ? !has : has;
+        });
+    }
 
     entries.sort((a, b) => {
         let diff;
@@ -103,7 +124,7 @@ async function loadMods() {
         const tagBar = document.createElement('div');
         tagBar.className = 'tag-bar';
 
-        ;(Array.isArray(e.tags) ? e.tags : []).forEach(tag => 
+        (Array.isArray(e.tags) ? e.tags : []).forEach(tag => 
         {
             const btn = document.createElement('button');
             btn.type = 'button';

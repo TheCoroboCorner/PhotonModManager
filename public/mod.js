@@ -123,7 +123,14 @@ class VersionRange {
     }
 }
 
-function collectDependenciesWithRanges(startKey, data)
+/**
+ * 
+ * @param {string} fieldName  either "dependencies" or "conflicts"
+ * @param {*} startKey        the mod key to start from
+ * @param {*} data            your full data object
+ * @returns Map<rawStr, VersionRange>
+ */
+function collectRanges(fieldName, startKey, data)
 {
     const seen = new Set();
     const rangeMap = new Map();
@@ -135,10 +142,10 @@ function collectDependenciesWithRanges(startKey, data)
         
         seen.add(key);
         const entry = data[key];
-        if (!entry || !Array.isArray(entry.dependencies))
+        if (!entry || !Array.isArray(entry[fieldName]))
             return;
 
-        for (const raw of entry.dependencies)
+        for (const raw of entry[fieldName])
         {
             const rawStr = (typeof raw === 'string')
                             ? raw
@@ -225,10 +232,70 @@ async function loadModDetail()
 
     favContainer.appendChild(favBtn);
 
+    const tagBar = document.createElement('div');
+    tagBar.className = 'tag-bar';
+
+    (Array.isArray(e.tags) ? e.tags : []).forEach(tag => 
+    {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = tag;
+        btn.className = 'tag-btn';
+        btn.addEventListener('click', () => 
+        {
+            const params = new URLSearchParams(window.location.search);
+            params.set('tag', tag);
+            window.location.search = params.toString();
+        });
+        tagBar.appendChild(btn);
+    });
+
+    li.appendChild(tagBar);
+
     const [repo, owner] = key.split('@');
     document.getElementById('mod-github').href = `https://github.com/${owner}/${repo}`;
 
-    const rangeMap = collectDependenciesWithRanges(key, data);
+    const depRanges = collectRanges('dependencies', key, data);
+    const confRanges = collectRanges('conflicts', key, data);
+
+    renderRangeList(depRanges, 'dep-list');
+    renderRangeList(confRanges, 'conf-list');
+
+    function renderRangeList(rangeMap, ulID)
+    {
+        const ul = document.getElementById(ulID);
+        ul.innerHTML = '';
+
+        if (rangeMap.size === 0)
+        {
+            ul.innerHTML = '<li><em>None</em></li>';
+            return;
+        }
+        
+        for (const [rawStr, vRange] of rangeMap)
+        {
+            const li = document.createElement('li');
+            const modName = rawStr.split(/\s*\(/)[0];
+            const foundKey = Object.keys(data).find(k => data[k].id === modName || data[k].name === modName);
+
+            let titleNode;
+            if (foundKey)
+            {
+                titleNode = document.createElement('a');
+                titleNode.href = `/mod.html?key=${encodeURIComponent(foundKey)}`;
+                titleNode.textContent = modName;
+            }
+            else titleNode = document.createTextNode(modName);
+
+            li.appendChild(titleNode);
+
+            const rangeText = document.createTextNode(` - versions: ${vRange.toString()}`);
+            li.appendChild(rangeText);
+
+            ul.appendChild(li);
+        }
+    }
+
     const ul = document.getElementById('dep-list');
     ul.innerHTML = '';
     if (rangeMap.size === 0)
@@ -247,9 +314,7 @@ async function loadModDetail()
             let titleNode;
             if (foundKey)
             {
-                titleNode = document.createElement('a');
-                titleNode.href = `/mod.html?key=${encodeURIComponent(foundKey)}`;
-                titleNode.textContent = modName;
+                
             }
             else titleNode = document.createTextNode(modName);
 

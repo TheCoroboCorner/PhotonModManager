@@ -58,7 +58,7 @@
               <br>
               <label>
                 <span>Filter By Tag:</span>
-                <select name="tag">
+                <select name="tags" multiple>
                   <option value="">All</option>
                   <option value="Textures">Textures</option>
                   <option value="SFX">SFX / Music</option>
@@ -70,8 +70,14 @@
                   <option value="Modifiers">Modifiers</option>
                   <option value="Mechanics">Mechanics</option>
                   <option value="Quality of Life">Quality of Life</option>
+                  <option value="JokerForge">JokerForge</option>
                   <option value="Misc">Miscellaneous</option>
                 </select>
+              </label>
+              <label>
+                <input type="hidden" name="exclude" value="0">
+                <input type="checkbox" name="exclude" value="1">
+                Exclude selected
               </label>
               <br>
               <br>
