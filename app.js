@@ -276,7 +276,6 @@ app.post('/submit', async (req, res) =>
     const txt = await resp.text();
     console.log('Raw JSON preview:', txt.slice(0, 200).replace(/\n/g, '\\n'));
     
-    let jsonData;
     try
     {
       jsonData = JSON.parse(txt);
