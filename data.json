@@ -360,5 +360,30 @@
       "Jokers"
     ],
     "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n"
+  },
+  "Alloy@TheCoroboCorner": {
+    "id": "Alloy",
+    "name": "Alloy",
+    "author": [
+      "TheCoroboCorner"
+    ],
+    "description": "Tries to remaster the experience of the game with new mechanics and quality of life changes",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "git_owner": "TheCoroboCorner",
+    "git_repo": "Alloy",
+    "mod_path": "Mods/Alloy",
+    "download_suffix": "Release.zip",
+    "published_at": "2025-07-09T16:40:10.986Z",
+    "type": "Mod",
+    "tags": [
+      "Mechanics",
+      "Quality of Life",
+      "Misc"
+    ],
+    "readme": ""
   }
 }
