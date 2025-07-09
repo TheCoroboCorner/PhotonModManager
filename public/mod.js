@@ -1,5 +1,3 @@
-const { version } = require("react");
-
 function compareVersions(a, b)
 {
     const re = /\d+|[A-Za-z]+/g;
@@ -217,7 +215,7 @@ async function loadModDetail()
 
             const rangeText = document.createTextNode(` - versions ${vRange.toString()}`);
             li.appendChild(rangeText);
-            
+
             ul.appendChild(li);
         }
     }
