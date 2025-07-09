@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Mod - Photon</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="navbar">
+        <ul class="nav">
+          <li>
+            <a href="https://photonmodmanager.onrender.com">Home</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.onrender.com/submit">Submit</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.onrender.com/browse">Browse</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.onrender.com/about">About</a>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="content-wrapper flex alignment">
+        <div id="content-container" style="flex-grow: 1;">
+          <div class="wrapper">
+            <a href="/browse">← Back</a>
+            <br>
+            <h1 id="mod-name">
+              Loading...
+            </h1>
+            <div id="mod-favourites-container"></div>
+
+            <div class="section">
+                <strong>Author:</strong> <span id="mod-author"></span><br>
+                <strong>Published:</strong> <span id="mod-published"></span><br>
+                <strong>Description:</strong><br>
+                <p id="mod-description"></p>
+                <p><a id="mod-github" href="#" target="_blank">View on GitHub</a></p>
+            </div>
+
+            <div class="section">
+                <h2>Dependencies</h2>
+                <ul id="dep-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">
+        <div class="footer-wrapper">
+          <p>
+            A website meant to manage mods from Balatro by LocalThunk. We do not claim to own Balatro in any way.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

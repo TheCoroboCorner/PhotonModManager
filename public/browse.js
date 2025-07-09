@@ -89,7 +89,7 @@ async function loadMods() {
         const [repo, owner] = e.key.split('@');
 
         li.innerHTML = `
-            <strong>${e.name ?? "Unknown"}</strong> by ${authorText ?? "Unknown"}<br>
+            <a href=".mod.html?key=${encodeURIComponent(e.key)}"><strong>${e.name ?? "Unknown"}</strong></a> by ${authorText ?? "Unknown"}<br>
             <button class="favourite-btn click-me">❤ Favourite (${e.favourites})</button><br>
             Description: ${e.description ?? "None"}<br>
             Published: ${publishedText ?? "Unknown"}<br>
