@@ -8,6 +8,8 @@ async function loadMods() {
     const tagFilter = params.get('tags');
     const exclude = params.get('exclude') === '1';
 
+    console.log({ tagFilter, exclude });
+
     const sortSelect = document.querySelector('select[name="sortBy"]');
     const orderSelect = document.querySelector('select[name="order"]');
     const tagSelect = document.querySelector('select[name="tag"]');
@@ -57,6 +59,7 @@ async function loadMods() {
         });
     }
 
+    console.log(`Before filter: ${entries.length} mods`);
     if (tagFilter.length)
     {
         entries = entries.filter(e => {
@@ -65,6 +68,7 @@ async function loadMods() {
             return exclude ? !has : has;
         });
     }
+    console.log(`After filter: ${entries.length} mods`);
 
     entries.sort((a, b) => {
         let diff;
