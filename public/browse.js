@@ -8,7 +8,49 @@ async function loadMods() {
     const tagFilter = params.getAll('tags');
     const exclude = params.get('exclude') === '1';
 
-    console.log({ tagFilter, exclude });
+    let entries = Object.entries(data).map(([key, e]) => ({key, ...e}));
+
+    const allTags = new Set();
+    entries.forEach(e => {
+        if (Array.isArray(e.tags))
+            e.tags.forEach(t => allTags.add(t));
+    });
+
+    const tagSelect = document.querySelector('select[name="tags"');
+    if (tagSelect)
+    {
+        tagSelect.innerHTML = '';
+
+        tagSelect.appendChild(new Option('All', ''));
+        Array.from(allTags).sort().forEach(tag => {
+            const opt = new Option(tag, tag);
+            if (tagFilter.includes(tag))
+                opt.selected = true;
+
+            tagSelect.appendChild(opt);
+        });
+    }
+
+    if (rawTags.length)
+    {
+        entries = entries.filter(e => {
+            const t = Array.isArray(e.tags) ? e.tags : [];
+            const has = rawTags.some(tag => t.includes(tag));
+            return exclude ? !has : has;
+        });
+    }
+
+    console.log(`Mods before filter: ${Object.keys(data).length}, after filter: ${entries.length}`);
+
+    entries.sort((a, b) => {
+        const diff = sortBy === 'favourites'
+                    ? b.favourites - a.favourites
+                    : Date.parse(b.published_at) - Date.parse(a.published_at);
+
+        return order === 'asc' ? -diff : diff;
+    });
+
+    /*
 
     const sortSelect = document.querySelector('select[name="sortBy"]');
     const orderSelect = document.querySelector('select[name="order"]');
@@ -108,6 +150,8 @@ async function loadMods() {
         return order === 'asc' ? -diff : diff;
     });
 
+    */
+    
     // tag limit when it's in the index page
     const isIndex = window.location.pathname === '/' || window.location.pathname === '/index.html'
     if (isIndex) entries = entries.slice(0, 5);
