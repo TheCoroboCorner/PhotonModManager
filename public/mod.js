@@ -1,3 +1,5 @@
+const { version } = require("react");
+
 function compareVersions(a, b)
 {
     const re = /\d+|[A-Za-z]+/g;
@@ -98,27 +100,24 @@ function collectDependenciesWithRanges(startKey, data)
 
         for (const raw of entry.dependencies)
         {
-            let depKey, verStr;
-            if (typeof raw === 'string')
-            {
-                depKey = raw;
-                verStr = '';
-            }
-            else
-            {
-                depKey = raw.key;
-                verStr = raw.version || '';
-            }
+            const rawStr = (typeof raw === 'string')
+                            ? raw
+                            : `${raw.key} (${raw.version})`;
 
-            const newRange = VersionRange.parse(verStr);
-            if (rangeMap.has(depKey))
-            {
-                const merged = rangeMap.get(depKey).intersect(newRange);
-                rangeMap.set(depKey, merged);
-            }
-            else rangeMap.set(depKey, newRange);
+            const versionPart = rawStr.match(/\((.*)\)$/)?.[1] || '';
+            const newRange = VersionRange.parse(versionPart);
 
-            recurse(depKey);
+            if (rangeMap.has(rawStr))
+            {
+                const merged = rangeMap.get(rawStr).intersect(newRange);
+                rangeMap.set(rawStr, merged);
+            }
+            else rangeMap.set(rawStr, newRange);
+
+            const modName = rawStr.split(/\s*\(/)[0];
+            const foundKey = Object.keys(data).find(k => data[k].id === modName);
+            if (foundKey) 
+                recurse(foundKey);
         }
     }
 
@@ -198,10 +197,27 @@ async function loadModDetail()
     }
     else
     {
-        for (const [depKey, vRange] of rangeMap)
+        for (const [rawStr, vRange] of rangeMap)
         {
             const li = document.createElement('li');
-            li.textContent = `${depKey} - versions ${vRange.toString()}`;
+            
+            const modName = rawStr.split(/\s*\(/)[0];
+            const foundKey = Object.keys(data).find(k => data[k].id === modName || data[k].name === modName);
+
+            let titleNode;
+            if (foundKey)
+            {
+                titleNode = document.createElement('a');
+                titleNode.href = `/mod.html?key=${encodeURIComponent(foundKey)}`;
+                titleNode.textContent = rawStr;
+            }
+            else titleNode = document.createTextNode(rawStr);
+
+            li.appendChild(titleNode);
+
+            const rangeText = document.createTextNode(` - versions ${vRange.toString()}`);
+            li.appendChild(rangeText);
+            
             ul.appendChild(li);
         }
     }
