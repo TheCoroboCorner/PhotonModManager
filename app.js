@@ -81,10 +81,27 @@ async function fetchReadme(user, repo)
 
 async function readData()
 {
-  try {
+  try 
+  {
     const txt = await fs.readFile(DATA_FILE, 'utf-8');
-    return JSON.parse(txt);
-  } catch {
+    
+    try
+    {
+      return JSON.parse(txt);
+    }
+    catch (err)
+    {
+      console.error('JSON parse error:', err.message);
+      if (typeof err.position === 'number')
+      {
+        const pos = err.position;
+        console.error('...context:', txt.slice(Math.max(0, pos - 20), pos + 20).replace(/\n/g, '\\n'));
+      }
+      throw err;
+    }
+  } 
+  catch
+  {
     return {};
   }
 }
