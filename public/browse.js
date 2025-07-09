@@ -5,70 +5,14 @@ async function loadMods() {
     const params = new URLSearchParams(window.location.search);
     const sortBy = params.get('sortBy') || 'published_at';
     const order = params.get('order') || 'desc';
-    const tagFilter = params.getAll('tags');
-    const exclude = params.get('exclude') === '1';
-
-    let entries = Object.entries(data).map(([key, e]) => ({key, ...e}));
-
-    const allTags = new Set();
-    entries.forEach(e => {
-        if (Array.isArray(e.tags))
-            e.tags.forEach(t => allTags.add(t));
-    });
-
-    const tagSelect = document.querySelector('select[name="tags"');
-    if (tagSelect)
-    {
-        tagSelect.innerHTML = '';
-
-        tagSelect.appendChild(new Option('All', ''));
-        Array.from(allTags).sort().forEach(tag => {
-            const opt = new Option(tag, tag);
-            if (tagFilter.includes(tag))
-                opt.selected = true;
-
-            tagSelect.appendChild(opt);
-        });
-    }
-
-    if (rawTags.length)
-    {
-        entries = entries.filter(e => {
-            const t = Array.isArray(e.tags) ? e.tags : [];
-            const has = rawTags.some(tag => t.includes(tag));
-            return exclude ? !has : has;
-        });
-    }
-
-    console.log(`Mods before filter: ${Object.keys(data).length}, after filter: ${entries.length}`);
-
-    entries.sort((a, b) => {
-        const diff = sortBy === 'favourites'
-                    ? b.favourites - a.favourites
-                    : Date.parse(b.published_at) - Date.parse(a.published_at);
-
-        return order === 'asc' ? -diff : diff;
-    });
-
-    /*
+    const tagFilter = params.get('tag') || '';
 
     const sortSelect = document.querySelector('select[name="sortBy"]');
     const orderSelect = document.querySelector('select[name="order"]');
-    const tagSelect = document.querySelector('select[name="tags"]');
+    const tagSelect = document.querySelector('select[name="tag"]');
     if (sortSelect) sortSelect.value = sortBy;
     if (orderSelect) orderSelect.value = order;
-    if (tagSelect) 
-    {
-        tagSelect.innerHTML = '';
-        Array.from(allTags).sort().forEach(tag => {
-            const opt = document.createElement('option');
-            opt.value = tag;
-            opt.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
-
-            if (tagFilter.includes(tag)) opt.selected = true;
-            tagSelect.appendChild(opt);
-        });
-    }    
+    if (tagSelect) tagSelect.value = tagFilter;
 
     var entries = Object.entries(data)
         .map(([key, e]) => ({key, ...e}));
@@ -101,40 +45,7 @@ async function loadMods() {
         });
     }
 
-    const opts = document.getElementById('tag-filter-options');
-    opts.innerHTML = '';
-
-    Array.from(allTags).sort().forEach(tag => {
-        const id = `filter-tag-${tag}`;
-        const label = document.createElement('label');
-        label.htmlFor = id;
-        label.style.display = 'block';
-        label.style.margin = '0.25em 0';
-
-        const cb = document.createElement('input');
-        cb.type = 'checkbox';
-        cb.name = 'tags';
-        cb.value = tag;
-        cb.id = id;
-
-        if (tagFilter.includes(tag))
-            cb.checked = true;
-
-        label.appendChild(cb);
-        label.appendChild(document.createTextNode(' ' + tag.charAt(0).toUpperCase() + tag.slice(1)));
-        opts.appendChild(label);
-    });
-
-    console.log(`Before filter: ${entries.length} mods`);
-    if (tagFilter.length)
-    {
-        entries = entries.filter(e => {
-            const tags = Array.isArray(e.tags) ? e.tags : [];
-            const has = rawTags.some(tag => tags.includes(tag));
-            return exclude ? !has : has;
-        });
-    }
-    console.log(`After filter: ${entries.length} mods`);
+    if (tagFilter) entries = entries.filter(e => Array.isArray(e.tags) && e.tags.includes(tagFilter));
 
     entries.sort((a, b) => {
         let diff;
@@ -150,8 +61,6 @@ async function loadMods() {
         return order === 'asc' ? -diff : diff;
     });
 
-    */
-    
     // tag limit when it's in the index page
     const isIndex = window.location.pathname === '/' || window.location.pathname === '/index.html'
     if (isIndex) entries = entries.slice(0, 5);
@@ -194,7 +103,7 @@ async function loadMods() {
         const tagBar = document.createElement('div');
         tagBar.className = 'tag-bar';
 
-        (Array.isArray(e.tags) ? e.tags : []).forEach(tag => 
+        ;(Array.isArray(e.tags) ? e.tags : []).forEach(tag => 
         {
             const btn = document.createElement('button');
             btn.type = 'button';

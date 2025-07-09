@@ -37,7 +37,7 @@
             <p>
               Here, you may browse various mods, all of which have been uploaded to this database, as well as download them. As this database is still new, the list may be a bit limited, but have faith that it will grow in time.
             </p>
-            <form method="get" action="/browse">
+            <form method="get">
               <label>
                 <span>Sort By:       </span>
                 <select name="sortBy">
@@ -58,8 +58,7 @@
               <br>
               <label>
                 <span>Filter By Tag:</span>
-                <select name="tags" multiple size="1">
-                  <!--
+                <select name="tag">
                   <option value="">All</option>
                   <option value="Textures">Textures</option>
                   <option value="SFX">SFX / Music</option>
@@ -71,14 +70,8 @@
                   <option value="Modifiers">Modifiers</option>
                   <option value="Mechanics">Mechanics</option>
                   <option value="Quality of Life">Quality of Life</option>
-                  <option value="JokerForge">JokerForge</option>
                   <option value="Misc">Miscellaneous</option>
-                  -->
                 </select>
-              </label>
-              <label style="margin-left: 1em">
-                <input type="checkbox" name="exclude" value="1">
-                  Exclude selected
               </label>
               <br>
               <br>
