@@ -59,6 +59,30 @@ async function loadMods() {
         });
     }
 
+    const opts = document.getElementById('tag-filter-options');
+    opts.innerHTML = '';
+
+    Array.from(allTags).sort().forEach(tag => {
+        const id = `filter-tag-${tag}`;
+        const label = document.createElement('label');
+        label.htmlFor = id;
+        label.style.display = 'block';
+        label.style.margin = '0.25em 0';
+
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.name = 'tags';
+        cb.value = tag;
+        cb.id = id;
+
+        if (tagFilter.includes(tag))
+            cb.checked = true;
+
+        label.appendChild(cb);
+        label.appendChild(document.createTextNode(' ' + tag.charAt(0).toUpperCase() + tag.slice(1)));
+        opts.appendChild(label);
+    });
+
     console.log(`Before filter: ${entries.length} mods`);
     if (tagFilter.length)
     {
