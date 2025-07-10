@@ -423,7 +423,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     const allGitHubFiles = await listGitHubFiles(owner, repo);
 
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
-    const luaFileContents = {};
+    let luaFileContents = {};
 
     await pLimit(CONCURRENCY_LIMIT, luaFilesToDownload, async (luaPath) => {
       try
