@@ -44,6 +44,9 @@ function parseAllEntities(txt) {
         if (type === 'Atlas')
             continue;
 
+        if (!/^[A-Z]/.test(type))
+            continue;
+
         const body = m[2];
         const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
         if (!key)
@@ -67,14 +70,44 @@ async function fetchRaw(owner, repo, p)
 function parseLoc(txt)
 {
     const map = {};
-    const re = /SMODS\.([A-Za-z0-9_]+)\.([A-Za-z0-9_]+)\s*=\s*['"]([^'"]*)['"]/g;
-    let m;
-    while (m = re.exec(txt))
+
+    const descMatch = txt.match(/descriptions\s*=\s*{([\s\S]*?)},\s*[^}]*$/m);
+    if (!descMatch) return map;
+    const body = descMatch[1];
+
+    const typeRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
+    let tm;
+    while (tm = typeRe.exec(body))
     {
-        const type = m[1];
-        const key = m[2];
-        const val = m[3];
-        map[`${type}.${key}`] = val;
+        const typeName = tm[1];
+        const typeBody = tm[2];
+
+        const keyRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
+        let km;
+        while (km = keyRe.exec(typeBody))
+        {
+            const keyName = km[1];
+            const entry   = km[2];
+
+            const nameMatch = entry.match(/name\s*=\s*['"]([^'"]+)['"]/);
+            const name = nameMatch ? nameMatch[1] : '';
+
+            const textMatch = entry.match(/text\s*=\s*{([\s\S]*?)}/m);
+            let lines = [];
+            if (textMatch)
+            {
+                const txtBody = textMatch[1];
+
+                const lineRe = /['"]([^'"]*)['"]/g;
+                let lm;
+                while (lm = lineRe.exec(txtBody))
+                {
+                    lines.push(lm[1]);
+                }
+            }
+
+            map[`${typeName}.${keyName}`] = { name, text: lines };
+        }
     }
 
     return map;
@@ -119,14 +152,31 @@ function parseLoc(txt)
     }
 
     const listDiv = document.getElementById('card-list');
-    cards.forEach((c, i) => {
-        const div = document.createElement('div');
-        div.textContent = `${c.type}.${c.key}`;
-        div.className = 'card-link';
-        div.onclick = () => showCard(i);
-        listDiv.appendChild(div);
-    });
+    const select = document.getElementById('card-select');
 
+    const groups = cards.reduce((acc, c, i) => {
+        (acc[c.type] ||= []).push({ card: c, index: i });
+        return acc;
+    }, {});
+
+    for (let [type, items] of Object.entries(groups))
+    {
+        const og = document.createElement('optgroup');
+        og.label = type;
+        for (let { card, index } of items)
+        {
+            const opt = document.createElement('option');
+            opt.value = index;
+            opt.textContent = card.key;
+            og.appendChild(opt);
+        }
+        select.appendChild(og);
+    }
+
+    select.addEventListener('change', () => {
+        const idx = parseInt(select.value, 10);
+        showCard(idx);
+    });
 
     const sprite = document.getElementById('sprite');
     const title = document.getElementById('card-title');
@@ -140,8 +190,21 @@ function parseLoc(txt)
 
         const c = cards[idx];
         title.textContent = `${c.type}.${c.key}`;
-        locP.textContent = locMap[`${c.type}.${c.key}`] || '-no text-';
-        rawPre.textContent = c.raw;
+        
+        const locEntry = locMap[`${c.type}.${c.key}`];
+        if (locEntry)
+        {
+            title.textContent = locEntry.name;
+            locP.innerHTML    = locEntry.text.join('<br>');
+            rawPre.style.display = 'none';
+        } 
+        else
+        {
+            title.textContent   = `${c.type}.${c.key}`;
+            locP.textContent    = '—no text—';
+            rawPre.textContent  = c.raw;
+            rawPre.style.display = 'block';
+        }
 
         if (c.atlas && c.pos && atlasDefs[c.atlas])
         {

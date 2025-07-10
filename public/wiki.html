@@ -25,17 +25,6 @@
             padding: .5em;
             font-weight: bold;
         }
-        .card-link {
-            display: block;
-            padding: .25em .5em;
-            cursor: pointer;
-            color: #352552;
-            text-decoration: none;
-        }
-        .card-link:hover, .card-link.selected {
-            background: #352552;
-            color: #352552;
-        }
         #sprite {
             margin: 1em 0;
             background-repeat: no-repeat;
@@ -64,6 +53,9 @@
             <a href="https://photonmodmanager.onrender.com/browse">Browse</a>
           </li>
           <li>
+            <a href="https://photonmodmanager.onrender.com/wiki">Wiki</a>
+          </li>
+          <li>
             <a href="https://photonmodmanager.onrender.com/about">About</a>
           </li>
         </ul>
@@ -73,7 +65,9 @@
         <div id="content-container" style="flex-grow: 1;">
           <div id="sidebar wrapper">
             <h2 style="padding: .5em; margin: 0">Cards</h2>
-            <div id="card-list"></div>
+            <select id="card-select" style="width: 100%; padding: .5em; margin: .5em 0">
+              <option value="" disabled selected>-- Select a Card --</option>
+            </select>
           </div>
           <div class="detail wrapper">
             <h1 id="card-title">Select a Card</h1>

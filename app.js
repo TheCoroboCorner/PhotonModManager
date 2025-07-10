@@ -3,7 +3,7 @@ import express from 'express';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { backupDataJson, backupVotesJson } from './github-backup.js';
+import { backupDataJson, backupVotesJson, backupCache } from './github-backup.js';
 import crypto from 'crypto';
 
 // Fix for __dirname in ESM
@@ -405,6 +405,8 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
   const newCache = { version: latestTag, locMap, atlases: atlasDefs, cards };
   await fs.mkdir(CACHE_DIR, { recursive: true });
   await fs.writeFile(cacheFile, JSON.stringify(newCache, null, 2), 'utf8');
+  
+  backupCache(modKey).catch(console.error);
 
   res.json(newCache);
 });
@@ -458,14 +460,44 @@ async function fetchRaw(owner, repo, p)
 function parseLoc(txt)
 {
   const map = {};
-  const re = /SMODS\.([A-Za-z0-9_]+)\.([A-Za-z0-9_]+)\s*=\s*['"]([^'"]*)['"]/g;
-  let m;
-  while (m = re.exec(txt))
+
+  const descMatch = txt.match(/descriptions\s*=\s*{([\s\S]*?)},\s*[^}]*$/m);
+  if (!descMatch) return map;
+  const body = descMatch[1];
+
+  const typeRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
+  let tm;
+  while (tm = typeRe.exec(body))
   {
-    const type = m[1];
-    const key = m[2];
-    const val = m[3];
-    map[`${type}.${key}`] = val;
+    const typeName = tm[1];
+    const typeBody = tm[2];
+
+    const keyRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
+    let km;
+    while (km = keyRe.exec(typeBody))
+    {
+      const keyName = km[1];
+      const entry   = km[2];
+
+      const nameMatch = entry.match(/name\s*=\s*['"]([^'"]+)['"]/);
+      const name = nameMatch ? nameMatch[1] : '';
+
+      const textMatch = entry.match(/text\s*=\s*{([\s\S]*?)}/m);
+      let lines = [];
+      if (textMatch)
+      {
+        const txtBody = textMatch[1];
+
+        const lineRe = /['"]([^'"]*)['"]/g;
+        let lm;
+        while (lm = lineRe.exec(txtBody))
+        {
+          lines.push(lm[1]);
+        }
+      }
+
+      map[`${typeName}.${keyName}`] = { name, text: lines };
+    }
   }
 
   return map;
@@ -482,6 +514,10 @@ app.get('/about', (_req, res) =>
 app.get('/data', (_req, res) =>
 {
   res.sendFile(DATA_FILE);
+});
+
+app.get('/wiki', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'wiki.html'));
 });
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
