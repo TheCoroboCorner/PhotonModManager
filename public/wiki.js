@@ -113,11 +113,13 @@ function parseLoc(txt)
     return map;
 }
 
-;(async function() {
+document.addEventListener('DOMContentLoaded', async () => {
     const params = new URLSearchParams(location.search);
     const modKey = params.get('mod');
     if (!modKey)
         return document.getElementById('detail').textcontent = 'No mod specified';
+
+    const select = document.getElementById('card-select');
 
     const [repo, owner] = modKey.split('@');
 
@@ -155,7 +157,10 @@ function parseLoc(txt)
     const select = document.getElementById('card-select');
 
     const groups = cards.reduce((acc, c, i) => {
-        (acc[c.type] ||= []).push({ card: c, index: i });
+        if (!acc[c.type])
+            acc[c.type] = [];
+
+        acc[c.type].push({ card: c, index: i });
         return acc;
     }, {});
 
@@ -175,7 +180,8 @@ function parseLoc(txt)
 
     select.addEventListener('change', () => {
         const idx = parseInt(select.value, 10);
-        showCard(idx);
+        if (!isNaN(idx))
+            showCard(idx);
     });
 
     const sprite = document.getElementById('sprite');
@@ -222,5 +228,8 @@ function parseLoc(txt)
     }
 
     if (cards.length)
-        showCard(0);
-})();
+    {
+        select.selectedIndex = 1;
+        select.dispatchEvent(new Event('change'));
+    }
+});
