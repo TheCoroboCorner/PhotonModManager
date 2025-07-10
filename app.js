@@ -3,7 +3,7 @@ import express from 'express';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { backupDataJson, backupVotesJson, backupCache } from './github-backup.js';
+import { backupDataJson, backupVotesJson, backupMetadata } from './github-backup.js';
 import crypto from 'crypto';
 
 // Fix for __dirname in ESM
@@ -320,16 +320,10 @@ function sortEntries(entries, field, order = 'desc')
 app.get('/wiki-data/:modKey.json', async(req, res) => {
   const modKey = req.params.modKey;
   const [repo, owner] = modKey.split('@');
-  const cacheFile = path.join(CACHE_DIR, `${modKey}.json`);
 
-  let cache = null;
-  try
-  {
-    cache = JSON.parse(await fs.readFile(cacheFile, 'utf8'));
-  }
-  catch {}
-
+  const modLocalCacheDir = path.join(WIKI_LOCAL_DATA_DIR, modKey);
   let latestTag = '';
+
   try
   {
     const tagRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
@@ -338,78 +332,149 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       const tagJson = await tagRes.json();
       latestTag = tagJson.tag_name || '';
     }
-  }
+    else
+    {
+      console.warn(`[Server] Could not get latest release tag for ${modKey}. Status: ${tagRes.status}`);
+    }
+  } 
   catch(e)
   {
-    console.error('GitHub tag lookup failed', e);
+    console.error(`[Server] Error fetching latest release tag for ${modKey}:`, e);
   }
 
-  if (cache && cache.version === latestTag)
-    return res.json(cache);
+  const versionSpecificCacheDir = path.join(modLocalCacheDir, latestTag || 'no-tag');
+  const metadataFile = path.join(versionSpecificCacheDir, 'metadata.json');
 
-  async function listFiles(dir = '')
+  let cachedData = null;
+  try 
   {
-    const resp = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${dir}`);
-    if (!resp.ok)
-      return [];
+    cachedData = JSON.parse(await fs.readFile(metadataFile, 'utf8'));
+    console.log(`[Server] Serving cached data for ${modKey} (version: ${latestTag || 'no-tag'}).`);
+    return res.json(cachedData);
+  } 
+  catch (readError) 
+  {
+    console.log(`[Server] Cache miss for ${modKey} (version: ${latestTag || 'no-tag'}). Fetching from GitHub...`);
+  }
 
-    const items = await resp.json();
+  try 
+  {
+    await fs.mkdir(versionSpecificCacheDir, { recursive: true });
+
+    async function listGitHubFiles(ghOwner, ghRepo, dirPath = '') 
+    {
+        const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${dirPath}`);
+        if (!res.ok) return [];
+        const items = await res.json();
+        let out = [];
+        for (let i of items) 
+        {
+            const fullPath = i.path;
+            if (i.type === 'file')
+                out.push(fullPath);
+            else if (i.type === 'dir')
+                out.push(...await listGitHubFiles(ghOwner, ghRepo, fullPath));
+        }
+        return out;
+    }
+    const allGitHubFiles = await listGitHubFiles(owner, repo);
+
+    const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
+    const luaFileContents = {};
+
+    for (const luaPath of luaFilesToDownload) 
+    {
+      try 
+      {
+        const txt = await fetchRaw(owner, repo, luaPath);
+        const localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
+        await fs.writeFile(localLuaPath, txt);
+        luaFileContents[luaPath] = txt;
+      } 
+      catch (err) 
+      {
+        console.error(`[Server] Error downloading/caching Lua file ${luaPath}:`, err);
+      }
+    }
+
+    const locPathInRepo = luaFilesToDownload.find(p => p.endsWith('en-us.lua')) || luaFilesToDownload.find(p => p.endsWith('default.lua'));
+    const locTxt = locPathInRepo ? luaFileContents[locPathInRepo] : '';
+    const locMap = parseLoc(locTxt);
+
+    const atlasDefs = {};
+    const cards = [];
+
+    const codeLuaPaths = luaFilesToDownload.filter(p => p !== locPathInRepo);
+    for (const luaPath of codeLuaPaths) 
+    {
+      const txt = luaFileContents[luaPath];
+      Object.assign(atlasDefs, parseAtlasDefs(txt));
+      cards.push(...parseAllEntities(txt));
+    }
+
+    for (let key in atlasDefs) 
+    {
+      const at = atlasDefs[key];
+      const name = at.path.split('/').pop();
+      let matchedGitHubPath = null;
+
+      for (const ghFilePath of allGitHubFiles) 
+      {
+        if (ghFilePath.toLowerCase().includes('/assets/') &&
+            ghFilePath.toLowerCase().includes('/2x/') &&
+            ghFilePath.toLowerCase().endsWith('/' + name.toLowerCase())) 
+        {
+          matchedGitHubPath = ghFilePath;
+          break;
+        }
+      }
+      at.resolvedGitHubPath = matchedGitHubPath || at.path;
+
+      if (at.resolvedGitHubPath) 
+      {
+        const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${at.resolvedGitHubPath}`;
+        try 
+        {
+          const buffer = await fetchRawBinary(owner, repo, at.resolvedGitHubPath);
+          if (buffer) 
+          {
+            const localImagePath = path.join(versionSpecificCacheDir, path.basename(at.resolvedGitHubPath));
+            await fs.writeFile(localImagePath, Buffer.from(buffer));
+            at.localPath = `/wiki-data/${modKey}/${latestTag || 'no-tag'}/${path.basename(at.resolvedGitHubPath)}`;
+          } 
+          else 
+          {
+            console.warn(`[Server] Failed to fetch image binary for ${at.key} from ${imgUrl}`);
+            at.localPath = null;
+          }
+        } 
+        catch (downloadError) 
+        {
+          console.error(`[Server] Error downloading/caching image for ${at.key} from ${imgUrl}:`, downloadError);
+          at.localPath = null;
+        }
+      } 
+      else 
+      {
+        console.warn(`[Server] Could not find resolved GitHub path for atlas ${at.key}. Original: ${at.path}`);
+        at.localPath = null;
+      }
+    }
+
+    const finalDataForCache = { locMap, atlases: atlasDefs, cards, version: latestTag || 'no-tag' };
+    await fs.writeFile(metadataFile, JSON.stringify(finalDataForCache, null, 2), 'utf8');
     
-    let out = [];
-    for (let i of items)
-    {
-      if (i.type === 'file')
-        out.push(i.path);
-      else if(i.type === 'dir')
-        out.push(...await listFiles(i.path));
-    }
+    backupMetadata(modKey, latestTag || 'no-tag').catch(console.error);
 
-    return out;
-  }
-  const files = await listFiles();
+    console.log(`[Server] Successfully fetched, parsed, and cached data for ${modKey} (version: ${latestTag || 'no-tag'}).`);
+    res.json(finalDataForCache);
 
-  const locPath = files.find(f => f.endsWith('en-us.lua')) || '';
-  const locTxt = locPath ? await fetchRaw(owner, repo, locPath) : '';
-  const locMap = parseLoc(locTxt);
-
-  const codePaths = files.filter(f => f.endsWith('.lua') && !f.endsWith('en-us.lua'));
-
-  const atlasDefs = {};
-  const cards = [];
-
-  for (let relPath of codePaths)
+  } 
+  catch (fetchError) 
   {
-    const txt = await fetchRaw(owner, repo, relPath);
-
-    Object.assign(atlasDefs, parseAtlasDefs(txt));
-    cards.push(...parseAllEntities(txt));
+    console.error(`[Server] Fatal error processing wiki data for ${modKey}:`, fetchError);
+    res.status(500).json({ error: 'Internal server error while processing mod data.' });
   }
-
-  for (let key in atlasDefs)
-  {
-    const at = atlasDefs[key];
-    const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${at.path}`;
-    try
-    {
-      const buf = await fetch(imgUrl).then(r => r.arrayBuffer());
-      const dir = path.join(__dirname, 'public', 'images', repo);
-      
-      await fs.mkdir(dir, { recursive: true });
-      const name = path.basename(at.path);
-      
-      await fs.writeFile(path.join(dir, name), Buffer.from(buf));
-      at.localPath = `/images/${repo}/${name}`;
-    }
-    catch {}
-  }
-
-  const newCache = { version: latestTag, locMap, atlases: atlasDefs, cards };
-  await fs.mkdir(CACHE_DIR, { recursive: true });
-  await fs.writeFile(cacheFile, JSON.stringify(newCache, null, 2), 'utf8');
-  
-  backupCache(modKey).catch(console.error);
-
-  res.json(newCache);
 });
 
 function parseAtlasDefs(txt)
@@ -458,46 +523,180 @@ async function fetchRaw(owner, repo, p)
   return r.ok ? r.text() : '';
 }
 
+async function fetchRawBinary(owner, repo, p)
+{
+  const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/${p}`);
+  return r.ok ? r.arrayBuffer() : null;
+}
+
 function parseLoc(txt)
 {
   const map = {};
 
-  const descMatch = txt.match(/descriptions\s*=\s*{([\s\S]*?)},\s*[^}]*$/m);
-  if (!descMatch) return map;
-  const body = descMatch[1];
-
-  const typeRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
-  let tm;
-  while (tm = typeRe.exec(body))
+  function extractBlockContent(str, startIndex)
   {
-    const typeName = tm[1];
-    const typeBody = tm[2];
-
-    const keyRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
-    let km;
-    while (km = keyRe.exec(typeBody))
+    let braceCount = 0;
+    let contentStart = -1;
+    for (let i = startIndex; i < str.length; i++)
     {
-      const keyName = km[1];
-      const entry   = km[2];
-
-      const nameMatch = entry.match(/name\s*=\s*['"]([^'"]+)['"]/);
-      const name = nameMatch ? nameMatch[1] : '';
-
-      const textMatch = entry.match(/text\s*=\s*{([\s\S]*?)}/m);
-      let lines = [];
-      if (textMatch)
+      if (str[i] === '{')
       {
-        const txtBody = textMatch[1];
-
-        const lineRe = /['"]([^'"]*)['"]/g;
-        let lm;
-        while (lm = lineRe.exec(txtBody))
+        if (contentStart === -1)
+          contentStart = i + 1;
+        braceCount++;
+      }
+      else if (str[i] === '}')
+      {
+        braceCount--;
+        if (braceCount === 0)
         {
-          lines.push(lm[1]);
+          const content = str.substring(contentStart, i);
+          return { content: content, endIndex: i };
         }
       }
+    }
+    return null;
+  }
 
-      map[`${typeName}.${keyName}`] = { name, text: lines };
+  const keyOpenBraceRe = /(\w+)\s*=\s*{/g;
+  const lineRe = /(['"])(.*?)\1(?:,\s*)?/g;
+  const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
+
+  let currentPos = 0;
+  while (true)
+  {
+    keyOpenBraceRe.lastIndex = currentPos;
+    let topLevelMatch = keyOpenBraceRe.exec(txt);
+
+    if (!topLevelMatch)
+      break;
+
+    const sectionName = topLevelMatch[1];
+    const blockStartIdx = topLevelMatch.index + topLevelMatch[0].length - 1;
+
+    const blockResult = extractBlockContent(txt, blockStartIdx);
+    if (!blockResult)
+    {
+      console.warn(`parseLoc: Mismatched braces for section ${sectionName} starting at ${blockStartIdx}`);
+      currentPos = topLevelMatch.index + topLevelMatch[0].length;
+      continue;
+    }
+    const sectionBody = blockResult.content;
+    currentPos = blockResult.endIndex + 1;
+
+    if (sectionName === "descriptions")
+    {
+      let categoryPos = 0;
+      while (true)
+      {
+        keyOpenBraceRe.lastIndex = categoryPos;
+        let categoryMatch = keyOpenBraceRe.exec(sectionBody);
+
+        if (!categoryMatch)
+          break;
+
+        const categoryKey = categoryMatch[1];
+        const catBlockStartIdx = categoryMatch.index + categoryMatch[0].length - 1;
+
+        const catBlockResult = extractBlockContent(sectionBody, catBlockStartIdx);
+        if (!catBlockResult)
+        {
+          console.warn(`parseLoc: Mismatched braces for category ${categoryKey} in descriptions`);
+          categoryPos = categoryMatch.index + categoryMatch[0].length;
+          continue;
+        }
+
+        const categoryBodyContent = catBlockResult.content;
+        categoryPos = catBlockResult.endIndex + 1;
+
+        let itemPos = 0;
+        while (true)
+        {
+          keyOpenBraceRe.lastIndex = itemPos;
+          let itemMatch = keyOpenBraceRe.exec(categoryBodyContent);
+
+          let (!itemMatch)
+            break;
+
+          const cardKey = itemMatch[1];
+          const itemBlockStartIdx = itemMatch.index + itemMatch[0].length - 1;
+
+          const itemBlockResult = extractBlockContent(categoryBodyContent, itemBlockStartIdx);
+          if (!itemBlockResult)
+          {
+            console.warn(`parseLoc: Mismatched braces for item ${cardKey} in category ${categoryKey}`);
+            itemPos = itemMatch.index + itemMatch[0].length;
+            continue;
+          }
+
+          const entryBody = itemBlockResult.content;
+          itemPos = itemBlockResult.endIndex + 1;
+
+          const nameMatch = entryBody.match(/name\s*=\s*(['"])(.*?)\1/);
+          const name = nameMatch ? nameMatch[2] : '';
+
+          const lines = [];
+          const textBlockRe = /text\s*=\s*{/g;
+          textBlockRe.lastIndex = 0;
+          const textBlockMatch = textBlockRe.exec(entryBody);
+
+          if (textBlockMatch)
+          {
+            const textContentStartIdx = textBlockMatch.index + textBlockMatch[0].length - 1;
+            const textBlockResult = extractBlockContent(entryBody, textContentStartIdx);
+
+            if (textBlockResult)
+            {
+              const txtBody = textBlockResult.content;
+              lineRe.lastIndex = 0;
+
+              let lineMatch;
+              while ((lineMatch = lineRe.exec(txtBody)))
+                lines.push(lineMatch[2]);
+            }
+            else console.warn(`parseLoc: Mismatched braces for text field in item ${cardKey}`);
+          }
+
+          map[cardKey] = { name, text: lines, type: categoryKey };
+        }
+      }
+    }
+    else if (sectionName === "misc")
+    {
+      let miscSubSectionPos = 0;
+      while (true)
+      {
+        keyOpenBraceRe.lastIndex = miscSubSectionPos;
+        let subSectionMatch = keyOpenBraceRe.exec(sectionBody);
+
+        if (!subSectionMatch)
+          break;
+
+        const subSectionName = subSectionMatch[1];
+        const miscSubBlockStartIdx = subSectionMatch.index + subSectionMatch[0].length - 1;
+
+        const miscSubBlockResult = extractBlockContent(sectionBody, miscSubBlockStartIdx);
+        if (!miscSubBlockResult)
+        {
+          console.warn(`parseLoc: Mismatched braces for sub-section ${subSectionName} in misc`);
+          miscSubSectionPos = subSectionMatch.index + subSectionMatch[0].length;
+          continue;
+        }
+
+        const subSectionContent = miscSubBlockResult.content;
+        miscSubSectionPos = miscSubBlockResult.endIndex + 1;
+
+        itemPairRe.lastIndex = 0;
+        let itemPairMatch;
+        while ((itemPairMatch = itemPairRe.exec(subsectionContent)))
+        {
+          const itemKey = itemPairMatch[1];
+          const itemValue = itemPairMatch[2] || itemPairMatch[3] || '';
+
+          if (!map.hasOwnProperty(itemKey))
+            map[itemKey] = { name: itemValue, text: [], type: subSectionName };
+        }
+      }
     }
   }
 

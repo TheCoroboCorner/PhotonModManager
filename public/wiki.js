@@ -227,34 +227,32 @@ document.addEventListener('DOMContentLoaded', async () => {
   const [repo, owner] = modKey.split('@');
   console.log('>>> Loading wiki for', repo, owner);
 
-  const files = await listFiles(owner, repo);
-  console.log('Files found:', files.length);
-
-  const locPath = files.find(p => p.endsWith('en-us.lua')) || files.find(p => p.endsWith('default.lua'));
-
-  if (!locPath)
+  const wikiDataUrl = `/wiki-data/${modKey}.json`;
+  let wikiData = null;
+  try
   {
-    console.error("Localization files 'en-us.lua', 'default.lua' not found in the repository!");
-    console.log("All files found:", files);
-    document.getElementById("detail").textContent = "Error: Localization file (en-us.lua) not found in the repository.";
+    const wikiDataRes = await fetch(wikiDataUrl);
+    if (!wikiDataRes.ok)
+    {
+      const errorText = await wikiDataRes.text();
+      console.error(`Failed to fetch wiki data from ${wikiDataUrl}: ${wikiDataRes.status} - ${errorText}`);
+      document.getElementById('detail').textContent = `Error: Could not load wiki data from server.`;
+      return;
+    }
+
+    wikiData = await wikiDataRes.json();
+    console.log('[Client] Received wiki data from server.');
+  }
+  catch (err)
+  {
+    console.error('[Client] Network error fetching wiki data:', error);
+    document.getElementById('detail').textContent = 'Error: Network issue fetching wiki data from server.';
     return;
   }
 
-  console.log("Found localization file at path:", locPath);
-
-  const locTxt  = await fetchRaw(owner, repo, locPath);
-
-  if (!locTxt)
-  {
-    console.error(`Failed to fetch raw content for ${locPath} or file is empty.`);
-    document.getElementById("detail").textContent = `Error: Failed to load content from localization file (${locPath}). It might be empty or a network issue occurred.`;
-    return;
-  }
-
-  console.log(`Successfully fetched ${locTxt.length} characters from ${locPath}.`);
-
-  const locMap  = parseLoc(locTxt);
-  console.log('Localization entries:', Object.keys(locMap));
+  const locMap = wikiData.locMap;
+  const atlasDefs = wikiData.atlases;
+  const cards = wikiData.cards;
 
   const comprehensiveValidSuffixes = new Set();
   const suffixToFullKeyMap = new Map();
@@ -274,51 +272,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  Object.keys(locMap).forEach((fullKey) => {
-    const underscoreSegments = fullKey.split("_");
-    for (let i = 0; i < underscoreSegments.length; i++)
-        comprehensiveValidSuffixes.add(underscoreSegments.slice(i).join("_"));
-  });
-
-  const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
-  const atlasDefs = {}, cards = [];
-  for (let p of codeFiles)
-  {
-    const txt = await fetchRaw(owner, repo, p);
-    Object.assign(atlasDefs, parseAtlasDefs(txt));
-    cards.push(...parseAllEntities(txt));
-  }
-  console.log('Parsed cards:', cards.map(c => c.key));
-
-  const filesLowerCaseMap = new Map();
-  files.forEach(p => filesLowerCaseMap.set(p.toLowerCase(), p));
-
-  Object.values(atlasDefs).forEach(at => {
-    const name = at.path.split('/').pop();
-    const expectedPartialPathLower = 'assets/' + '2x/' + name.toLowerCase();
-
-    let matchedPath = null;
-    for (const filePath of files)
-    {
-        if (filePath.toLowerCase().includes(expectedPartialPathLower))
-        {
-            if (filePath.toLowerCase().includes('/assets/') && filePath.toLowerCase().includes('/2x/') && filePath.toLowerCase().endsWith('/' + name.toLowerCase()))
-            {
-                matchedPath = filePath;
-                break;
-            }
-        }
-    }
-    at.resolvedPath = matchedPath || at.path;
-  });
-
   const filtered = cards.filter(c => {
     const ok = comprehensiveValidSuffixes.has(c.key);
     if (!ok)
-      console.warn('Dropping card', c.key, 'no loc entry');
+      console.warn('Dropping card', c.key, 'due to no loc entry');
     return ok;
   });
-  console.log('Filtered cards:', filtered.map(c => c.key));
+  console.log('Filtered cards:', filtered);
 
   const select = document.getElementById('card-select');
   const groups = filtered.reduce((acc, c, i) => {
@@ -391,13 +351,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (c.atlas && c.pos && atlasDefs[c.atlas])
     {
       const at = atlasDefs[c.atlas];
-      sprite.style.display = 'block';
-      sprite.style.width      = (at.px * 2) + 'px';
-      sprite.style.height     = (at.py * 2) + 'px';
-      sprite.style.backgroundImage =
-        `url(https://raw.githubusercontent.com/${owner}/${repo}/main/${at.resolvedPath})`;
-      sprite.style.backgroundPosition =
-        `-${c.pos.x*at.px*2}px -${c.pos.y*at.py*2}px`;
+
+      const imageUrl = at.localPath;
+      if (imageUrl)
+      {
+        sprite.style.display = 'block';
+        prite.style.width      = (at.px * 2) + 'px';
+        sprite.style.height     = (at.py * 2) + 'px';
+        sprite.style.backgroundImage = `url(${imageUrl})`;
+        sprite.style.backgroundPosition = `-${c.pos.x*at.px*2}px -${c.pos.y*at.py*2}px`;
+      }
+      else
+      {
+        sprite.style.dispaly = 'none';
+      }
     } 
     else
     {
