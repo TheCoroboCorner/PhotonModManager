@@ -437,7 +437,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       cards.push(...parseAllEntities(txt));
     }
 
-    delete luaFileContents;
+    luaFileContents = null;
 
     const atlasKeys = Object.keys(atlasDefs);
     await pLimit(CONCURRENCY_LIMIT, atlasKeys, async (key) => {
