@@ -400,12 +400,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     console.log(`[Server] Cache miss for ${modKey} (version: ${latestTag || 'no-tag'}). Fetching from GitHub...`);
   }
 
-  const allGitHubFiles = await listGitHubFiles(owner, repo);
-  try 
-  {
-    await fs.mkdir(versionSpecificCacheDir, { recursive: true });
-
-    async function listGitHubFiles(ghOwner, ghRepo, dirPath = '') 
+  async function listGitHubFiles(ghOwner, ghRepo, dirPath = '') 
     {
         const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${dirPath}`, { headers: GITHUB_HEADERS });
         if (!res.ok) return [];
@@ -421,6 +416,13 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         }
         return out;
     }
+
+  const allGitHubFiles = await listGitHubFiles(owner, repo);
+  try 
+  {
+    await fs.mkdir(versionSpecificCacheDir, { recursive: true });
+
+    
     
 
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
