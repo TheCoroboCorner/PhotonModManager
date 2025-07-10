@@ -123,6 +123,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const files = await listFiles(owner, repo);
 
+    const atlasDefs = {};
+    const cards = [];
+    for (let p of codeFiles)
+    {
+        const txt = await fetchRaw(owner, repo, p);
+        Object.assign(atlasDefs, parseAtlasDefs(txt));
+        cards.push(...parseAllEntities(txt));
+    }
+
     Object.keys(atlasDefs).forEach(key => {
         const at = atlasDefs[key];
         const name = at.path.split('/').pop();
@@ -135,15 +144,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const locMap = parseLoc(locTxt);
 
     const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
-
-    const atlasDefs = {};
-    const cards = [];
-    for (let p of codeFiles)
-    {
-        const txt = await fetchRaw(owner, repo, p);
-        Object.assign(atlasDefs, parseAtlasDefs(txt));
-        cards.push(...parseAllEntities(txt));
-    }
 
     const filteredCards = cards.filter(c => locMap.hasOwnProperty(c.key));
     
