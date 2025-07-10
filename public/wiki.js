@@ -130,6 +130,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   const locMap  = parseLoc(locTxt);
   console.log('Localization entries:', Object.keys(locMap));
 
+  const comprehensiveValidSuffixes = new Set();
+
+  Object.keys(locMap).forEach((key) => {
+    comprehensiveValidSuffixes.add(key);
+  });
+
+  Object.keys(locMap).forEach((fullKey) => {
+    const underscoreSegments = fullKey.split("_");
+    for (let i = 0; i < underscoreSegments.length; i++)
+        comprehensiveValidSuffixes.add(underscoreSegments.slice(i).join("_"));
+  });
+
   const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
   const atlasDefs = {}, cards = [];
   for (let p of codeFiles)
@@ -151,7 +163,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   const filtered = cards.filter(c => {
-    const ok = locMap.hasOwnProperty(c.key);
+    const ok = locMap.hasOwnProperty(c.key) || comprehensiveValidSuffixes.has(c.key);
     if (!ok)
       console.warn('Dropping card', c.key, 'no loc entry');
     return ok;
@@ -170,7 +182,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     items.forEach(({card, idx}) => {
       const opt = document.createElement('option');
       opt.value = idx;
-      opt.textContent = card.key;
+      const displayName = locMap[card.key]?.name || Array.from(comprehensiveValidSuffixes).find(suf => fullKey.endsWith(suf) && locMap[suf])?.name || card.key;
+      opt.textContent = displayName;
       og.appendChild(opt);
     });
     select.appendChild(og);
@@ -196,8 +209,26 @@ document.addEventListener('DOMContentLoaded', async () => {
   {
     const c = filtered[idx];
     const locEntry = locMap[c.key];
-    title.textContent = locEntry.name;
-    locP.innerHTML    = locEntry.text.join('<br>');
+
+    if (!locEntry)
+    {
+        const matchingSuffix = Array.from(comprehensiveValidSuffixes).filter(suffix => c.key.endsWith(suffix) && locMap[suffix]).sort((a, b) => b.length - a.length)[0];
+
+        if (matchingSuffix)
+            locEntry = locMap[matchingSuffix];
+    }
+
+    if (locEntry)
+    {
+        title.textContent = locEntry.name;
+        locP.innerHTML    = locEntry.text.join('<br>');
+    }
+    else
+    {
+        title.textContent = c.key;
+        locP.innerHTML = <i>Localization entry not found.</i>
+    }
+    
     rawPre.style.display = 'none';
 
     if (c.atlas && c.pos && atlasDefs[c.atlas])
