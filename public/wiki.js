@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const listDiv = document.getElementById('card-list');
-    const select = document.getElementById('card-select');
+    listDiv.innerHTML = '';
 
     const groups = filteredCards.reduce((acc, c, i) => {
         if (!acc[c.type])
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     filteredCards.forEach((c, idx) => {
         const link = document.createElement('div');
-        listDiv.innerHTML = '';
+        
         link.textContent = `${c.type}.${c.key}`;
         link.className = 'card-link';
         link.style.cursor = 'pointer';
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         listDiv.appendChild(link);
     });
     
-    
+
 
     /*
     for (let [type, items] of Object.entries(groups))
