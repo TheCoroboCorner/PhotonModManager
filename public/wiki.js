@@ -73,32 +73,28 @@ function parseLoc(txt) {
   function extractBlockContent(str, startIndex) {
     let braceCount = 0;
     let contentStart = -1;
-    // Iterate from the character *after* the opening brace, up to the end of the string
     for (let i = startIndex; i < str.length; i++) {
       if (str[i] === '{') {
-        if (contentStart === -1) contentStart = i + 1; // Mark start of actual content if it's the very first '{'
+        if (contentStart === -1) contentStart = i + 1;
         braceCount++;
       } else if (str[i] === '}') {
         braceCount--;
         if (braceCount === 0) {
-          // Found matching closing brace for the block started by startIndex's '{'
           const content = str.substring(contentStart, i);
           return { content: content, endIndex: i };
         }
       }
     }
-    return null; // Mismatched braces or not found
+    return null;
   }
 
-  // Regex for finding a key = { pattern, but not capturing the content yet
   const keyOpenBraceRe = /(\w+)\s*=\s*{/g;
   const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
   const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
 
 
-  let currentPos = 0; // Track position in the main text
+  let currentPos = 0;
 
-  // --- Top-level sections ---
   while (true) {
     keyOpenBraceRe.lastIndex = currentPos;
     let topLevelMatch = keyOpenBraceRe.exec(txt);
@@ -106,12 +102,12 @@ function parseLoc(txt) {
     if (!topLevelMatch) break;
 
     const sectionName = topLevelMatch[1];
-    const blockStartIdx = topLevelMatch.index + topLevelMatch[0].length - 1; // Position of the '{'
+    const blockStartIdx = topLevelMatch.index + topLevelMatch[0].length - 1;
 
     const blockResult = extractBlockContent(txt, blockStartIdx);
     if (!blockResult) {
       console.warn(`parseLoc: Mismatched braces for section ${sectionName} starting at ${blockStartIdx}`);
-      currentPos = topLevelMatch.index + topLevelMatch[0].length; // Move past potential issue
+      currentPos = topLevelMatch.index + topLevelMatch[0].length;
       continue;
     }
     const sectionBody = blockResult.content;
@@ -138,7 +134,6 @@ function parseLoc(txt) {
         categoryPos = catBlockResult.endIndex + 1;
 
         let itemPos = 0;
-        // --- Items within a category ---
         while (true) {
           keyOpenBraceRe.lastIndex = itemPos;
           let itemMatch = keyOpenBraceRe.exec(categoryBodyContent);
@@ -157,39 +152,36 @@ function parseLoc(txt) {
           const entryBody = itemBlockResult.content;
           itemPos = itemBlockResult.endIndex + 1;
 
-          const nameMatch = entryBody.match(/name\s*=\s*['"]([^'"]+)['"]/);
-          const name = nameMatch ? nameMatch[1] : '';
+          const nameMatch = entryBody.match(/name\s*=\s*(['"])(.*?)\1/);
+          const name = nameMatch ? nameMatch[2] : '';
 
           const lines = [];
-
-          // --- MODIFIED: Capture text block content using extractBlockContent ---
-          const textBlockRe = /text\s*=\s*{/g; // Regex to find "text = {"
-          textBlockRe.lastIndex = 0; // Reset for this internal search
+          const textBlockRe = /text\s*=\s*{/g;
+          textBlockRe.lastIndex = 0;
           const textBlockMatch = textBlockRe.exec(entryBody);
 
           if (textBlockMatch) {
-            const textContentStartIdx = textBlockMatch.index + textBlockMatch[0].length - 1; // Position of the '{' for text
-            const textBlockResult = extractBlockContent(entryBody, textContentStartIdx);
+          const textContentStartIdx = textBlockMatch.index + textBlockMatch[0].length - 1;
+          const textBlockResult = extractBlockContent(entryBody, textContentStartIdx);
 
-            if (textBlockResult) {
-              const txtBody = textBlockResult.content;
-              lineRe.lastIndex = 0; // Reset for text lines loop
+          if (textBlockResult) {
+            const txtBody = textBlockResult.content;
+              const lineRe = /(['"])(.*?)\1(?:,\s*)?/g;
+              lineRe.lastIndex = 0;
               let lineMatch;
               while ((lineMatch = lineRe.exec(txtBody))) {
-                lines.push(lineMatch[1]);
+              lines.push(lineMatch[2]);
               }
-            } else {
+          } else {
               console.warn(`parseLoc: Mismatched braces for text field in item ${cardKey}`);
-            }
           }
-          // --- END MODIFIED ---
+          }
 
           map[cardKey] = { name, text: lines, type: categoryKey };
         }
       }
     } else if (sectionName === "misc") {
       let miscSubSectionPos = 0;
-      // --- Sub-sections within 'misc' (dictionary, labels) ---
       while (true) {
         keyOpenBraceRe.lastIndex = miscSubSectionPos;
         let subSectionMatch = keyOpenBraceRe.exec(sectionBody);
@@ -208,16 +200,14 @@ function parseLoc(txt) {
         const subSectionContent = miscSubBlockResult.content;
         miscSubSectionPos = miscSubBlockResult.endIndex + 1;
 
-        // Regex for key-value pairs within dictionary/labels
         itemPairRe.lastIndex = 0;
         let itemPairMatch;
         while ((itemPairMatch = itemPairRe.exec(subSectionContent))) {
           const itemKey = itemPairMatch[1];
           const itemValue = itemPairMatch[2] || itemPairMatch[3] || '';
 
-          if (!map.hasOwnProperty(itemKey)) {
-            map[itemKey] = { name: itemValue, text: [], type: subSectionName };
-          }
+          if (!map.hasOwnProperty(itemKey))
+              map[itemKey] = { name: itemValue, text: [], type: subSectionName };
         }
       }
     }
@@ -240,11 +230,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const files = await listFiles(owner, repo);
   console.log('Files found:', files.length);
 
-  const locPath = files.find(p => p.endsWith('en-us.lua'));
+  const locPath = files.find(p => p.endsWith('en-us.lua')) || files.find(p => p.endsWith('default.lua'));
 
   if (!locPath)
   {
-    console.error("Localization file 'en-us.lua' not found in the repository!");
+    console.error("Localization files 'en-us.lua', 'default.lua' not found in the repository!");
     console.log("All files found:", files);
     document.getElementById("detail").textContent = "Error: Localization file (en-us.lua) not found in the repository.";
     return;
@@ -300,14 +290,26 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   console.log('Parsed cards:', cards.map(c => c.key));
 
+  const filesLowerCaseMap = new Map();
+  files.forEach(p => filesLowerCaseMap.set(p.toLowerCase(), p));
+
   Object.values(atlasDefs).forEach(at => {
     const name = at.path.split('/').pop();
-    const match = files.find(f =>
-      f.toLowerCase().includes('assets/') &&
-      f.toLowerCase().includes('/2x/') &&
-      f.toLowerCase().endsWith('/' + name.toLowerCase())
-    );
-    at.resolvedPath = match || at.path;
+    const expectedPartialPathLower = 'assets/' + '2x/' + name.toLowerCase();
+
+    let matchedPath = null;
+    for (const filePath of files)
+    {
+        if (filePath.toLowerCase().includes(expectedPartialPathLower))
+        {
+            if (filePath.toLowerCase().includes('/assets/') && filePath.toLowerCase().includes('/2x/') && filePath.toLowerCase().endsWith('/' + name.toLowerCase()))
+            {
+                matchedPath = filePath;
+                break;
+            }
+        }
+    }
+    at.resolvedPath = matchedPath || at.path;
   });
 
   const filtered = cards.filter(c => {
