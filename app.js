@@ -146,9 +146,10 @@ app.use((req, res, next) =>
   res.setHeader(
     'Content-Security-Policy',
     "default-src 'self'; " +
-    "connect-src 'self' https://api.github.com; " +
+    "connect-src 'self' https://api.github.com https://raw.githubusercontent.com; " +
     "script-src 'self' 'unsafe-inline'; " +
-    "style-src 'self' 'unsafe-inline';"
+    "style-src 'self' 'unsafe-inline';" +
+    "img-src 'self' https://raw.githubusercontent.com"
   );
   next();
 });
