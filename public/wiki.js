@@ -145,8 +145,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const locTxt = await fetchRaw(owner, repo, locPath);
     const locMap = parseLoc(locTxt);
 
-    const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
-
     const filteredCards = cards.filter(c => locMap.hasOwnProperty(c.key));
     
     for (let key in atlasDefs)
