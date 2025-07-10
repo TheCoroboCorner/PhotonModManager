@@ -112,149 +112,98 @@ function parseLoc(txt) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const params = new URLSearchParams(location.search);
-    const modKey = params.get('mod');
-    if (!modKey)
-        return document.getElementById('detail').textContent = 'No mod specified';
+  const params = new URLSearchParams(location.search);
+  const modKey = params.get('mod');
+  if (!modKey)
+  {
+    document.getElementById('detail').textContent = 'No mod specified';
+    return;
+  }
+  const [repo, owner] = modKey.split('@');
 
-    const select = document.getElementById('card-select');
+  const files = await listFiles(owner, repo);
 
-    const [repo, owner] = modKey.split('@');
+  const locPath = files.find(p => p.endsWith('en-us.lua')) || '';
+  const locTxt  = locPath ? await fetchRaw(owner, repo, locPath) : '';
+  const locMap  = parseLoc(locTxt);
 
-    const files = await listFiles(owner, repo);
+  const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
+  const atlasDefs = {}, cards = [];
+  for (let p of codeFiles)
+  {
+    const txt = await fetchRaw(owner, repo, p);
+    Object.assign(atlasDefs, parseAtlasDefs(txt));
+    cards.push(...parseAllEntities(txt));
+  }
 
-    const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
+  Object.values(atlasDefs).forEach(at => {
+    const name = at.path.split('/').pop();
+    const match = files.find(f =>
+      f.toLowerCase().includes('assets/') &&
+      f.toLowerCase().includes('/2x/') &&
+      f.toLowerCase().endsWith('/' + name.toLowerCase())
+    );
+    at.resolvedPath = match || at.path;
+  });
 
-    const atlasDefs = {};
-    const cards = [];
-    for (let p of codeFiles)
-    {
-        const txt = await fetchRaw(owner, repo, p);
-        Object.assign(atlasDefs, parseAtlasDefs(txt));
-        cards.push(...parseAllEntities(txt));
-    }
+  const filtered = cards.filter(c => locMap[c.key]);
 
-    Object.keys(atlasDefs).forEach(key => {
-        const at = atlasDefs[key];
-        const name = at.path.split('/').pop();
-        const match = files.find(f => /assets\//i.test(f) && /\2x\//.test(f) && f.toLowerCase().endsWith('/' + name.toLowerCase()));
-        at.resolvedPath = match || at.path;
+  const select = document.getElementById('card-select');
+  const groups = filtered.reduce((acc, c, i) => {
+    (acc[c.type] ||= []).push({ card: c, idx: i });
+    return acc;
+  }, {});
+  for (let [type, items] of Object.entries(groups))
+  {
+    const og = document.createElement('optgroup');
+    og.label = type;
+    items.forEach(({card, idx}) => {
+      const opt = document.createElement('option');
+      opt.value = idx;
+      opt.textContent = card.key;
+      og.appendChild(opt);
     });
+    select.appendChild(og);
+  }
 
-    const locPath = files.find(p => p.endsWith('en-us.lua')) || '';
-    const locTxt = await fetchRaw(owner, repo, locPath);
-    const locMap = parseLoc(locTxt);
+  select.addEventListener('change', () => {
+    const idx = parseInt(select.value, 10);
+    if (!isNaN(idx)) showCard(idx);
+  });
+  if (filtered.length)
+  {
+    select.selectedIndex = 1;
+    select.dispatchEvent(new Event('change'));
+  }
 
-    const filteredCards = cards.filter(c => locMap.hasOwnProperty(c.key));
-    
-    for (let key in atlasDefs)
+  const listDiv = document.getElementById('card-list'); // unused now
+  const sprite  = document.getElementById('sprite');
+  const title   = document.getElementById('card-title');
+  const locP    = document.getElementById('loc-text');
+  const rawPre  = document.getElementById('raw-def');
+
+  function showCard(idx)
+  {
+    const c = filtered[idx];
+    const locEntry = locMap[c.key];
+    title.textContent = locEntry.name;
+    locP.innerHTML    = locEntry.text.join('<br>');
+    rawPre.style.display = 'none';
+
+    if (c.atlas && c.pos && atlasDefs[c.atlas])
     {
-        const at = atlasDefs[key];
-        const url = `https://raw.githubusercontent.com/${owner}/${repo}/main/${at.path}`;
-        try
-        {
-            const buf = await fetch(url).then(r => r.arrayBuffer());
-            const dir = `images/${repo}`;
-            await fetch(`/save-image?repo=${repo}&name=${encodeURIComponent(at.path)}`, { method: 'POST', body: buf });
-        }
-        catch {}
-    }
-
-    const listDiv = document.getElementById('card-list');
-    listDiv.innerHTML = '';
-
-    const groups = filteredCards.reduce((acc, c, i) => {
-        if (!acc[c.type])
-            acc[c.type] = [];
-
-        acc[c.type].push({ card: c, index: i });
-        return acc;
-    }, {});
-
-
-    filteredCards.forEach((c, idx) => {
-        const link = document.createElement('div');
-        
-        link.textContent = `${c.type}.${c.key}`;
-        link.className = 'card-link';
-        link.style.cursor = 'pointer';
-        link.onclick = () => showCard(idx);
-        listDiv.appendChild(link);
-    });
-    
-
-
-    /*
-    for (let [type, items] of Object.entries(groups))
+      const at = atlasDefs[c.atlas];
+      sprite.style.display = 'block';
+      sprite.style.width      = at.px + 'px';
+      sprite.style.height     = at.py + 'px';
+      sprite.style.backgroundImage =
+        `url(https://raw.githubusercontent.com/${owner}/${repo}/main/${at.resolvedPath})`;
+      sprite.style.backgroundPosition =
+        `-${c.pos.x*at.px}px -${c.pos.y*at.py}px`;
+    } 
+    else
     {
-        const og = document.createElement('optgroup');
-        og.label = type;
-        for (let { card, index } of items)
-        {
-            const opt = document.createElement('option');
-            opt.value = index;
-            opt.textContent = card.key;
-            og.appendChild(opt);
-        }
-        select.appendChild(og);
+      sprite.style.display = 'none';
     }
-
-    select.addEventListener('change', () => {
-        const idx = parseInt(select.value, 10);
-        if (!isNaN(idx))
-            showCard(idx);
-    });
-    */
-
-    const sprite = document.getElementById('sprite');
-    const title = document.getElementById('card-title');
-    const locP = document.getElementById('loc-text');
-    const rawPre = document.getElementById('raw-def');
-
-    function showCard(idx)
-    {
-        listDiv.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
-        listDiv.children[idx].classList.add('selected');
-
-        const c = filteredCards[idx];
-        title.textContent = `${c.type}.${c.key}`;
-        
-        const locEntry = locMap[`${c.type}.${c.key}`];
-        if (locEntry)
-        {
-            title.textContent = locEntry.name;
-            locP.innerHTML    = locEntry.text.join('<br>');
-            rawPre.style.display = 'none';
-        } 
-        else
-        {
-            title.textContent   = `${c.type}.${c.key}`;
-            locP.textContent    = '—no text—';
-            rawPre.textContent  = c.raw;
-            rawPre.style.display = 'block';
-        }
-
-        if (c.atlas && c.pos && atlasDefs[c.atlas])
-        {
-            const at = atlasDefs[c.atlas];
-            sprite.style.display = 'block';
-            sprite.style.width = at.px + 'px';
-            sprite.style.height = at.py + 'px';
-            const imgPath = at.resolvedPath;
-            sprite.style.backgroundImage = `url(https://raw.githubusercontent.com/${owner}/${repo}/main/${imgPath})`;
-            sprite.style.backgroundPosition = `-${c.pos.x * at.px}px -${c.pos.y * at.py}px`;
-        }
-        else
-        {
-            sprite.style.display = 'none';
-        }
-    }
-
-    /*
-    if (filteredCards.length)
-    {
-        select.selectedIndex = 1;
-        select.dispatchEvent(new Event('change'));
-    }
-    */
+  }
 });
