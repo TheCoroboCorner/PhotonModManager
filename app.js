@@ -400,7 +400,11 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     console.log(`[Server] Cache miss for ${modKey} (version: ${latestTag || 'no-tag'}). Fetching from GitHub...`);
   }
 
-  async function listGitHubFiles(ghOwner, ghRepo, dirPath = '') 
+  try 
+  {
+    await fs.mkdir(versionSpecificCacheDir, { recursive: true });
+
+    async function listGitHubFiles(ghOwner, ghRepo, dirPath = '') 
     {
         const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${dirPath}`, { headers: GITHUB_HEADERS });
         if (!res.ok) return [];
@@ -416,14 +420,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         }
         return out;
     }
-
-  const allGitHubFiles = await listGitHubFiles(owner, repo);
-  try 
-  {
-    await fs.mkdir(versionSpecificCacheDir, { recursive: true });
-
-    
-    
+    const allGitHubFiles = await listGitHubFiles(owner, repo);
 
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
     let luaFileContents = {};
@@ -469,7 +466,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       const name = at.path.split('/').pop();
       let matchedGitHubPath = null;
 
-      for (const ghFilePath of allGithubFiles)
+      for (const ghFilePath of allGitHubFiles)
       {
         if (ghFilePath.toLowerCase().includes('/assets/') &&
             ghFilePath.toLowerCase().includes('/2x/') &&
