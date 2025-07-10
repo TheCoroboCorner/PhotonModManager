@@ -217,6 +217,14 @@ function parseLoc(txt) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+  const detailElement = document.getElementById('detail');
+  if (!detailElement)
+  {
+    console.error("HTML element with id 'detail' not found. Cannot display messages.");
+    alert('An unexpected error occurred: UI element missing.');
+    return;
+  }
+
   const params = new URLSearchParams(location.search);
   const modKey = params.get('mod');
   if (!modKey)
