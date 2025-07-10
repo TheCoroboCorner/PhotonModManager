@@ -68,39 +68,98 @@ async function fetchRaw(owner, repo, p)
 }
 
 function parseLoc(txt) {
-    const map = {};
+  const map = {};
 
-  const tableDefinitionRe = /(\w+)\s*=\s*{([\s\S]*?)}(?:,\s*)?(?:--[^\n]*)?\s*/g;
-  const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
-  const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
+  function extractBlockContent(str, startIndex) {
+    let braceCount = 0;
+    let contentStart = -1;
+    for (let i = startIndex; i < str.length; i++) {
+      if (str[i] === '{') {
+        if (contentStart === -1) contentStart = i + 1;
+        braceCount++;
+      } else if (str[i] === '}') {
+        braceCount--;
+        if (braceCount === 0) {
+          const content = str.substring(contentStart, i);
+          return { content: content, endIndex: i };
+        }
+      }
+    }
+    return null;
+  }
 
-  tableDefinitionRe.lastIndex = 0;
-  let topLevelMatch;
-  while ((topLevelMatch = tableDefinitionRe.exec(txt))) {
+  const keyOpenBraceRe = /(\w+)\s*=\s*{/g;
+
+  let currentPos = 0;
+
+  while (true) {
+    keyOpenBraceRe.lastIndex = currentPos;
+    let topLevelMatch = keyOpenBraceRe.exec(txt);
+
+    if (!topLevelMatch) break;
+
     const sectionName = topLevelMatch[1];
-    const sectionBody = topLevelMatch[2];
+    const blockStartIdx = topLevelMatch.index + topLevelMatch[0].length - 1;
+
+    const blockResult = extractBlockContent(txt, blockStartIdx);
+    if (!blockResult) {
+      console.warn(`parseLoc: Mismatched braces for section ${sectionName} starting at ${blockStartIdx}`);
+      currentPos = topLevelMatch.index + topLevelMatch[0].length;
+      continue;
+    }
+    const sectionBody = blockResult.content;
+    currentPos = blockResult.endIndex + 1;
+
 
     if (sectionName === "descriptions") {
-      tableDefinitionRe.lastIndex = 0;
-      let categoryMatch;
-      while ((categoryMatch = tableDefinitionRe.exec(sectionBody))) {
-        const categoryKey = categoryMatch[1];
-        const categoryBody = categoryMatch[2];
+      let categoryPos = 0;
+      while (true) {
+        keyOpenBraceRe.lastIndex = categoryPos;
+        let categoryMatch = keyOpenBraceRe.exec(sectionBody);
 
-        tableDefinitionRe.lastIndex = 0;
-        let itemMatch;
-        while ((itemMatch = tableDefinitionRe.exec(categoryBody))) {
+        if (!categoryMatch) break;
+
+        const categoryKey = categoryMatch[1];
+        const catBlockStartIdx = categoryMatch.index + categoryMatch[0].length - 1;
+
+        const catBlockResult = extractBlockContent(sectionBody, catBlockStartIdx);
+        if (!catBlockResult) {
+          console.warn(`parseLoc: Mismatched braces for category ${categoryKey} in descriptions`);
+          categoryPos = categoryMatch.index + categoryMatch[0].length;
+          continue;
+        }
+        const categoryBodyContent = catBlockResult.content;
+        categoryPos = catBlockResult.endIndex + 1;
+
+
+        let itemPos = 0;
+        while (true) {
+          keyOpenBraceRe.lastIndex = itemPos;
+          let itemMatch = keyOpenBraceRe.exec(categoryBodyContent);
+
+          if (!itemMatch) break;
+
           const cardKey = itemMatch[1];
-          const entryBody = itemMatch[2];
+          const itemBlockStartIdx = itemMatch.index + itemMatch[0].length - 1;
+
+          const itemBlockResult = extractBlockContent(categoryBodyContent, itemBlockStartIdx);
+          if (!itemBlockResult) {
+            console.warn(`parseLoc: Mismatched braces for item ${cardKey} in category ${categoryKey}`);
+            itemPos = itemMatch.index + itemMatch[0].length;
+            continue;
+          }
+          const entryBody = itemBlockResult.content;
+          itemPos = itemBlockResult.endIndex + 1;
 
           const nameMatch = entryBody.match(/name\s*=\s*['"]([^'"]+)['"]/);
           const name = nameMatch ? nameMatch[1] : '';
 
-          lineRe.lastIndex = 0;
-          const textMatch = entryBody.match(/text\s*=\s*{([\s\S]*?)}/m);
           const lines = [];
+          const textMatch = entryBody.match(/text\s*=\s*{([\s\S]*?)}/m);
           if (textMatch) {
             const txtBody = textMatch[1];
+            const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
+            lineRe.lastIndex = 0;
             let lineMatch;
             while ((lineMatch = lineRe.exec(txtBody))) {
               lines.push(lineMatch[1]);
@@ -111,12 +170,26 @@ function parseLoc(txt) {
         }
       }
     } else if (sectionName === "misc") {
-      tableDefinitionRe.lastIndex = 0;
-      let subSectionMatch;
-      while ((subSectionMatch = tableDefinitionRe.exec(sectionBody))) {
-        const subSectionName = subSectionMatch[1];
-        const subSectionContent = subSectionMatch[2];
+      let miscSubSectionPos = 0;
+      while (true) {
+        keyOpenBraceRe.lastIndex = miscSubSectionPos;
+        let subSectionMatch = keyOpenBraceRe.exec(sectionBody);
 
+        if (!subSectionMatch) break;
+
+        const subSectionName = subSectionMatch[1];
+        const miscSubBlockStartIdx = subSectionMatch.index + subSectionMatch[0].length - 1;
+
+        const miscSubBlockResult = extractBlockContent(sectionBody, miscSubBlockStartIdx);
+        if (!miscSubBlockResult) {
+          console.warn(`parseLoc: Mismatched braces for sub-section ${subSectionName} in misc`);
+          miscSubSectionPos = subSectionMatch.index + subSectionMatch[0].length;
+          continue;
+        }
+        const subSectionContent = miscSubBlockResult.content;
+        miscSubSectionPos = miscSubBlockResult.endIndex + 1;
+
+        const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
         itemPairRe.lastIndex = 0;
         let itemPairMatch;
         while ((itemPairMatch = itemPairRe.exec(subSectionContent))) {
