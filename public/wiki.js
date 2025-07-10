@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (imageUrl)
       {
         sprite.style.display = 'block';
-        prite.style.width      = (at.px * 2) + 'px';
+        sprite.style.width      = (at.px * 2) + 'px';
         sprite.style.height     = (at.py * 2) + 'px';
         sprite.style.backgroundImage = `url(${imageUrl})`;
         sprite.style.backgroundPosition = `-${c.pos.x*at.px*2}px -${c.pos.y*at.py*2}px`;
