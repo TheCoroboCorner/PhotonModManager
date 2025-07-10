@@ -338,7 +338,7 @@ async function pLimit(concurrency, iterable, mapper)
 }
 
 app.get('/wiki-data/:modKey.json', async(req, res) => {
-  const CONCURRENCY_LIMIT = 16;
+  const CONCURRENCY_LIMIT = 8;
 
   const modKey = req.params.modKey;
   const [repo, owner] = modKey.split('@');
@@ -436,6 +436,8 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       Object.assign(atlasDefs, parseAtlasDefs(txt));
       cards.push(...parseAllEntities(txt));
     }
+
+    delete luaFileContents;
 
     const atlasKeys = Object.keys(atlasDefs);
     await pLimit(CONCURRENCY_LIMIT, atlasKeys, async (key) => {
