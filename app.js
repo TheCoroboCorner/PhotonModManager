@@ -13,9 +13,10 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 10000;
+
 const DATA_FILE = path.join(__dirname, 'data.json');
 const VOTES_FILE = path.join(__dirname, 'votes.json');
-const CACHE_DIR = path.join(__dirname, 'wiki-cache');
+const WIKI_LOCAL_DATA_DIR = path.join(__dirname, 'wiki-data');
 
 const GITHUB_HEADERS = process.env.GITHUB_FETCH_TOKEN ? 
 {
