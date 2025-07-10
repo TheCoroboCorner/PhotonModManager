@@ -105,7 +105,7 @@ function parseLoc(txt) {
                         const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
                         let lineMatch;
                         while ((lineMatch = lineRe.exec(txtBody)))
-                            lines.push(lineMatch(1));
+                            lines.push(lineMatch[1]);
                     }
 
                     map[cardKey] = { name, text: lines, type: categoryKey };
@@ -126,7 +126,7 @@ function parseLoc(txt) {
                 while ((itemPairMatch = itemPairRe.exec(subSectionContent)))
                 {
                     const itemKey = itemPairMatch[1];
-                    const itemValue = itemPairMatch[2];
+                    const itemValue = itemPairMatch[2] || itemPairMatch[3] || '';
 
                     if (!map.hasOwnProperty(itemKey))
                         map[itemKey] = { name: itemValue, text: [], type: subSectionName };
