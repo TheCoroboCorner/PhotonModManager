@@ -16,6 +16,17 @@ const DATA_FILE = path.join(__dirname, 'data.json');
 const VOTES_FILE = path.join(__dirname, 'votes.json');
 const CACHE_DIR = path.join(__dirname, 'wiki-cache');
 
+const GITHUB_HEADERS = process.env.GITHUB_FETCH_TOKEN ? 
+{
+  'Authorization': `Bearer ${process.env.GITHUB_FETCH_TOKEN}`,
+  'Accept': 'application/vnd.github.v3+json',
+  'User-Agent': 'photonmodmanager'
+} :
+{
+  'Accept': 'application/vnd.github.v3+json',
+  'User-Agent': 'photonmodmanager'
+};
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
@@ -348,7 +359,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
   try
   {
-    const tagRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
+    const tagRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`, { headers: GITHUB_HEADERS });
     if (tagRes.ok)
     {
       const tagJson = await tagRes.json();
@@ -385,7 +396,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     async function listGitHubFiles(ghOwner, ghRepo, dirPath = '') 
     {
-        const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${dirPath}`);
+        const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${dirPath}`, { headers: GITHUB_HEADERS });
         if (!res.ok) return [];
         const items = await res.json();
         let out = [];
@@ -591,13 +602,13 @@ function parseAllEntities(txt) {
 
 async function fetchRaw(owner, repo, p)
 {
-  const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/${p}`);
+  const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/${p}`, { headers: GITHUB_HEADERS });
   return r.ok ? r.text() : '';
 }
 
 async function fetchRawBinary(owner, repo, p)
 {
-  const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/${p}`);
+  const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/${p}`, { headers: GITHUB_HEADERS });
   return r.ok ? r.arrayBuffer() : null;
 }
 
