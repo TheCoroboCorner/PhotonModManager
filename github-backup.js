@@ -108,7 +108,7 @@ async function getShaFor(pathInRepo) {
   return body.sha;
 }
 
-export async function backupCache(modKey, versionTag) {
+export async function backupMetadata(modKey, versionTag) {
   const localMetadataPath = path.join(WIKI_LOCAL_DATA_DIR, modKey, versionTag, 'metadata.json');
   const repoPath = `wiki-data-cache/${modKey}/${versionTag}/metadata.json`;
 
