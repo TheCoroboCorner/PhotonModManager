@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { backupDataJson, backupVotesJson, backupMetadata } from './github-backup.js';
 import crypto from 'crypto';
+import { versions } from 'process';
 
 // Fix for __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -359,11 +360,13 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
   try
   {
+    console.log(`[Server] Fetching latest tag for ${modKey}`);
     const tagRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`, { headers: GITHUB_HEADERS });
     if (tagRes.ok)
     {
       const tagJson = await tagRes.json();
       latestTag = tagJson.tag_name || '';
+      console.log(`[Server] Latest tag for ${modKey}: ${latestTag}`);
     }
     else
     {
@@ -372,21 +375,27 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
   } 
   catch(e)
   {
-    console.error(`[Server] Error fetching latest release tag for ${modKey}:`, e);
+    console.error(`[Server] Critical error fetching latest tag for ${modKey}:`, e);
+    return res.status(500).json({ error: 'Failed to determine latest mod version.' });
   }
 
   const versionSpecificCacheDir = path.join(modLocalCacheDir, latestTag || 'no-tag');
   const metadataFile = path.join(versionSpecificCacheDir, 'metadata.json');
 
   let cachedData = null;
+  console.log(`[Server] Attempting to read cache from: ${metadataFile}`);
   try 
   {
-    cachedData = JSON.parse(await fs.readFile(metadataFile, 'utf8'));
+    await fs.mkdir(versionSpecificCacheDir, { recursive: true });
+
+    const fileContent = await fs.readFile(metadataFile, 'utf8');
+    cachedData = JSON.parse(fileContent);
     console.log(`[Server] Serving cached data for ${modKey} (version: ${latestTag || 'no-tag'}).`);
     return res.json(cachedData);
   } 
   catch (readError) 
   {
+    console.warn(`[Server] Cache read failed for ${modKey} (${metadataFile}):`, readError.message);
     console.log(`[Server] Cache miss for ${modKey} (version: ${latestTag || 'no-tag'}). Fetching from GitHub...`);
   }
 
