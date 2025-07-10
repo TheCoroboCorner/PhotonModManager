@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function showCard(idx)
   {
     const c = filtered[idx];
-    const locEntry = locMap[c.key];
+    let locEntry = locMap[c.key];
 
     if (!locEntry)
     {
