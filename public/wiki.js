@@ -73,25 +73,32 @@ function parseLoc(txt) {
   function extractBlockContent(str, startIndex) {
     let braceCount = 0;
     let contentStart = -1;
+    // Iterate from the character *after* the opening brace, up to the end of the string
     for (let i = startIndex; i < str.length; i++) {
       if (str[i] === '{') {
-        if (contentStart === -1) contentStart = i + 1;
+        if (contentStart === -1) contentStart = i + 1; // Mark start of actual content if it's the very first '{'
         braceCount++;
       } else if (str[i] === '}') {
         braceCount--;
         if (braceCount === 0) {
+          // Found matching closing brace for the block started by startIndex's '{'
           const content = str.substring(contentStart, i);
           return { content: content, endIndex: i };
         }
       }
     }
-    return null;
+    return null; // Mismatched braces or not found
   }
 
+  // Regex for finding a key = { pattern, but not capturing the content yet
   const keyOpenBraceRe = /(\w+)\s*=\s*{/g;
+  const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
+  const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
 
-  let currentPos = 0;
 
+  let currentPos = 0; // Track position in the main text
+
+  // --- Top-level sections ---
   while (true) {
     keyOpenBraceRe.lastIndex = currentPos;
     let topLevelMatch = keyOpenBraceRe.exec(txt);
@@ -99,17 +106,16 @@ function parseLoc(txt) {
     if (!topLevelMatch) break;
 
     const sectionName = topLevelMatch[1];
-    const blockStartIdx = topLevelMatch.index + topLevelMatch[0].length - 1;
+    const blockStartIdx = topLevelMatch.index + topLevelMatch[0].length - 1; // Position of the '{'
 
     const blockResult = extractBlockContent(txt, blockStartIdx);
     if (!blockResult) {
       console.warn(`parseLoc: Mismatched braces for section ${sectionName} starting at ${blockStartIdx}`);
-      currentPos = topLevelMatch.index + topLevelMatch[0].length;
+      currentPos = topLevelMatch.index + topLevelMatch[0].length; // Move past potential issue
       continue;
     }
     const sectionBody = blockResult.content;
     currentPos = blockResult.endIndex + 1;
-
 
     if (sectionName === "descriptions") {
       let categoryPos = 0;
@@ -131,8 +137,8 @@ function parseLoc(txt) {
         const categoryBodyContent = catBlockResult.content;
         categoryPos = catBlockResult.endIndex + 1;
 
-
         let itemPos = 0;
+        // --- Items within a category ---
         while (true) {
           keyOpenBraceRe.lastIndex = itemPos;
           let itemMatch = keyOpenBraceRe.exec(categoryBodyContent);
@@ -155,22 +161,35 @@ function parseLoc(txt) {
           const name = nameMatch ? nameMatch[1] : '';
 
           const lines = [];
-          const textMatch = entryBody.match(/text\s*=\s*{([\s\S]*?)}/m);
-          if (textMatch) {
-            const txtBody = textMatch[1];
-            const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
-            lineRe.lastIndex = 0;
-            let lineMatch;
-            while ((lineMatch = lineRe.exec(txtBody))) {
-              lines.push(lineMatch[1]);
+
+          // --- MODIFIED: Capture text block content using extractBlockContent ---
+          const textBlockRe = /text\s*=\s*{/g; // Regex to find "text = {"
+          textBlockRe.lastIndex = 0; // Reset for this internal search
+          const textBlockMatch = textBlockRe.exec(entryBody);
+
+          if (textBlockMatch) {
+            const textContentStartIdx = textBlockMatch.index + textBlockMatch[0].length - 1; // Position of the '{' for text
+            const textBlockResult = extractBlockContent(entryBody, textContentStartIdx);
+
+            if (textBlockResult) {
+              const txtBody = textBlockResult.content;
+              lineRe.lastIndex = 0; // Reset for text lines loop
+              let lineMatch;
+              while ((lineMatch = lineRe.exec(txtBody))) {
+                lines.push(lineMatch[1]);
+              }
+            } else {
+              console.warn(`parseLoc: Mismatched braces for text field in item ${cardKey}`);
             }
           }
+          // --- END MODIFIED ---
 
           map[cardKey] = { name, text: lines, type: categoryKey };
         }
       }
     } else if (sectionName === "misc") {
       let miscSubSectionPos = 0;
+      // --- Sub-sections within 'misc' (dictionary, labels) ---
       while (true) {
         keyOpenBraceRe.lastIndex = miscSubSectionPos;
         let subSectionMatch = keyOpenBraceRe.exec(sectionBody);
@@ -189,7 +208,7 @@ function parseLoc(txt) {
         const subSectionContent = miscSubBlockResult.content;
         miscSubSectionPos = miscSubBlockResult.endIndex + 1;
 
-        const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
+        // Regex for key-value pairs within dictionary/labels
         itemPairRe.lastIndex = 0;
         let itemPairMatch;
         while ((itemPairMatch = itemPairRe.exec(subSectionContent))) {
@@ -371,12 +390,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     {
       const at = atlasDefs[c.atlas];
       sprite.style.display = 'block';
-      sprite.style.width      = at.px + 'px';
-      sprite.style.height     = at.py + 'px';
+      sprite.style.width      = (at.px * 2) + 'px';
+      sprite.style.height     = (at.py * 2) + 'px';
       sprite.style.backgroundImage =
         `url(https://raw.githubusercontent.com/${owner}/${repo}/main/${at.resolvedPath})`;
       sprite.style.backgroundPosition =
-        `-${c.pos.x*at.px}px -${c.pos.y*at.py}px`;
+        `-${c.pos.x*at.px*2}px -${c.pos.y*at.py*2}px`;
     } 
     else
     {
