@@ -44,8 +44,8 @@ function parseAllEntities(txt) {
         if (type === 'Atlas')
             continue;
 
-        if (!/^[A-Z]/.test(type))
-            continue;
+        // if (!/^[A-Z]/.test(type))
+        //     continue;
 
         const body = m[2];
         const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
@@ -120,12 +120,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
   const [repo, owner] = modKey.split('@');
+  console.log('>>> Loading wiki for', repo, owner);
 
   const files = await listFiles(owner, repo);
+  console.log('Files found:', files.length);
 
   const locPath = files.find(p => p.endsWith('en-us.lua')) || '';
   const locTxt  = locPath ? await fetchRaw(owner, repo, locPath) : '';
   const locMap  = parseLoc(locTxt);
+  console.log('Localization entries:', Object.keys(locMap));
 
   const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
   const atlasDefs = {}, cards = [];
@@ -135,6 +138,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     Object.assign(atlasDefs, parseAtlasDefs(txt));
     cards.push(...parseAllEntities(txt));
   }
+  console.log('Parsed cards:', cards.map(c => c.key));
 
   Object.values(atlasDefs).forEach(at => {
     const name = at.path.split('/').pop();
@@ -146,7 +150,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     at.resolvedPath = match || at.path;
   });
 
-  const filtered = cards.filter(c => locMap[c.key]);
+  const filtered = cards.filter(c => {
+    const ok = locMap.hasOwnProperty(c.key);
+    if (!ok)
+      console.warn('Dropping card', c.key, 'no loc entry');
+    return ok;
+  });
+  console.log('Filtered cards:', filtered.map(c => c.key));
 
   const select = document.getElementById('card-select');
   const groups = filtered.reduce((acc, c, i) => {
