@@ -67,38 +67,36 @@ async function fetchRaw(owner, repo, p)
     return r.ok ? r.text() : '';
 }
 
-function parseLoc(txt)
-{
+function parseLoc(txt) {
     const map = {};
 
     const descMatch = txt.match(/descriptions\s*=\s*{([\s\S]*?)},\s*[^}]*$/m);
-    if (!descMatch) return map;
+    if (!descMatch) 
+        return map;
     const body = descMatch[1];
 
-    const typeRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
+    const typeRe = /[A-Za-z0-9_]+\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
     let tm;
-    while (tm = typeRe.exec(body))
+    while (tm = typeRe.exec(body)) 
     {
-        const typeName = tm[1];
-        const typeBody = tm[2];
+        const typeBody = tm[1];
 
         const keyRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
         let km;
         while (km = keyRe.exec(typeBody))
         {
-            const keyName = km[1];
+            const cardKey = km[1];
             const entry   = km[2];
 
             const nameMatch = entry.match(/name\s*=\s*['"]([^'"]+)['"]/);
             const name = nameMatch ? nameMatch[1] : '';
 
             const textMatch = entry.match(/text\s*=\s*{([\s\S]*?)}/m);
-            let lines = [];
+            const lines = [];
             if (textMatch)
             {
                 const txtBody = textMatch[1];
-
-                const lineRe = /['"]([^'"]*)['"]/g;
+                const lineRe  = /['"]([^'"]*)['"]/g;
                 let lm;
                 while (lm = lineRe.exec(txtBody))
                 {
@@ -106,7 +104,7 @@ function parseLoc(txt)
                 }
             }
 
-            map[`${typeName}.${keyName}`] = { name, text: lines };
+            map[cardKey] = { name, text: lines };
         }
     }
 
@@ -139,6 +137,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         Object.assign(atlasDefs, parseAtlasDefs(txt));
         cards.push(...parseAllEntities(txt));
     }
+
+    const filteredCards = cards.filter(c => locMap.hasOwnProperty(c.key));
     
     for (let key in atlasDefs)
     {
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const listDiv = document.getElementById('card-list');
     const select = document.getElementById('card-select');
 
-    const groups = cards.reduce((acc, c, i) => {
+    const groups = filteredCards.reduce((acc, c, i) => {
         if (!acc[c.type])
             acc[c.type] = [];
 
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         listDiv.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
         listDiv.children[idx].classList.add('selected');
 
-        const c = cards[idx];
+        const c = filteredCards[idx];
         title.textContent = `${c.type}.${c.key}`;
         
         const locEntry = locMap[`${c.type}.${c.key}`];
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    if (cards.length)
+    if (filteredCards.length)
     {
         select.selectedIndex = 1;
         select.dispatchEvent(new Event('change'));
