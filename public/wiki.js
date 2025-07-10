@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     else
     {
         title.textContent = c.key;
-        locP.innerHTML = <i>Localization entry not found.</i>
+        locP.innerHTML = "<i>Localization entry not found.</i>";
     }
     
     rawPre.style.display = 'none';
