@@ -115,13 +115,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     const params = new URLSearchParams(location.search);
     const modKey = params.get('mod');
     if (!modKey)
-        return document.getElementById('detail').textcontent = 'No mod specified';
+        return document.getElementById('detail').textContent = 'No mod specified';
 
     const select = document.getElementById('card-select');
 
     const [repo, owner] = modKey.split('@');
 
     const files = await listFiles(owner, repo);
+
+    Object.keys(atlasDefs).forEach(key => {
+        const at = atlasDefs[key];
+        const name = at.path.split('/').pop();
+        const match = files.find(f => /assets\//i.test(f) && /\2x\//.test(f) && f.toLowerCase().endsWith('/' + name.toLowerCase()));
+        at.resolvedPath = match || at.path;
+    });
 
     const locPath = files.find(p => p.endsWith('en-us.lua')) || '';
     const locTxt = await fetchRaw(owner, repo, locPath);
@@ -233,7 +240,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             sprite.style.display = 'block';
             sprite.style.width = at.px + 'px';
             sprite.style.height = at.py + 'px';
-            sprite.style.backgroundImage = `url(https://raw.githubusercontent.com/${owner}/${repo}/main/${at.path})`;
+            const imgPath = at.resolvedPath;
+            sprite.style.backgroundImage = `url(https://raw.githubusercontent.com/${owner}/${repo}/main/${imgPath})`;
             sprite.style.backgroundPosition = `-${c.pos.x * at.px}px -${c.pos.y * at.py}px`;
         }
         else

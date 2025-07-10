@@ -516,7 +516,7 @@ app.get('/data', (_req, res) =>
   res.sendFile(DATA_FILE);
 });
 
-app.get('/wiki', (req, res) => {
+app.get('/wiki', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'wiki.html'));
 });
 
