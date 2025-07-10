@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   catch (err)
   {
-    console.error('[Client] Network error fetching wiki data:', error);
+    console.error('[Client] Network error fetching wiki data:', err);
     document.getElementById('detail').textContent = 'Error: Network issue fetching wiki data from server.';
     return;
   }

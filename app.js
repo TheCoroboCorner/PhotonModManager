@@ -317,7 +317,29 @@ function sortEntries(entries, field, order = 'desc')
   return arr;
 }
 
+async function pLimit(concurrency, iterable, mapper)
+{
+  const executing = [];
+  const results = [];
+
+  for (const item of iterable)
+  {
+    const p = Promise.resolve().then(() => mapper(item));
+    results.push(p);
+
+    const e = p.then(() => executing.splice(executing.indexOf(e), 1));
+    executing.push(e);
+
+    if (executing.length >= concurrency)
+      await Promise.race(executing);
+  }
+
+  return Promise.all(results);
+}
+
 app.get('/wiki-data/:modKey.json', async(req, res) => {
+  const CONCURRENCY_LIMIT = 16;
+
   const modKey = req.params.modKey;
   const [repo, owner] = modKey.split('@');
 
@@ -382,20 +404,23 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
     const luaFileContents = {};
 
-    for (const luaPath of luaFilesToDownload) 
-    {
-      try 
+    await pLimit(CONCURRENCY_LIMIT, luaFilesToDownload, async (luaPath) => {
+      try
       {
         const txt = await fetchRaw(owner, repo, luaPath);
-        const localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
-        await fs.writeFile(localLuaPath, txt);
-        luaFileContents[luaPath] = txt;
-      } 
-      catch (err) 
+        if (txt)
+        {
+          const localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
+          await fs.writeFile(localLuaPath, txt);
+          luaFileContents[luaPath] = txt;
+        }
+        else console.warn(`[Server] Empty content for Lua file ${luaPath}, skipping cache.`);
+      }
+      catch (err)
       {
         console.error(`[Server] Error downloading/caching Lua file ${luaPath}:`, err);
       }
-    }
+    });
 
     const locPathInRepo = luaFilesToDownload.find(p => p.endsWith('en-us.lua')) || luaFilesToDownload.find(p => p.endsWith('default.lua'));
     const locTxt = locPathInRepo ? luaFileContents[locPathInRepo] : '';
@@ -411,6 +436,51 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       Object.assign(atlasDefs, parseAtlasDefs(txt));
       cards.push(...parseAllEntities(txt));
     }
+
+    const atlasKeys = Object.keys(atlasDefs);
+    await pLimit(CONCURRENCY_LIMIT, atlasKeys, async (key) => {
+      const at = atlasDefs[key];
+      const name = at.path.split('/').pop();
+      let matchedGitHubPath = null;
+
+      for (const ghFilePath of allGithubFiles)
+      {
+        if (ghFilePath.toLowerCase().includes('/assets/') &&
+            ghFilePath.toLowerCase().includes('/2x/') &&
+            ghFilePath.toLowerCase().endsWith('/' + name.toLowerCase())) 
+        {
+          matchedGitHubPath = ghFilePath;
+          break;
+        }
+      }
+      at.resolvedGitHubPath = matchedGitHubPath || at.path;
+
+      if (at.resolvedGitHubPath)
+      {
+        const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${at.resolvedGitHubPath}`;
+        try
+        {
+          const buffer = await fetchRawBinary(owner, repo, at.resolvedGitHubPath);
+          if (buffer)
+          {
+            const localImagePath = path.join(versionSpecificCacheDir, path.basename(at.resolvedGitHubPath));
+            await fs.writeFile(localImagePath, Buffer.from(buffer));
+            at.localPath = `/wiki-data/${modKey}/${latestTag || 'no-tag'}/${path.basename(at.resolvedGitHubPath)}`;
+          }
+          else console.warn(`[Server] Empty buffer for image ${at.key} from ${imgUrl}, skipping cache.`);
+        }
+        catch (downloadError) 
+        {
+          console.error(`[Server] Error downloading/caching image for ${at.key} from ${imgUrl}:`, downloadError);
+          at.localPath = null;
+        }
+      }
+      else
+      {
+        console.warn(`[Server] Could not find resolved GitHub path for atlas ${at.key}. Original: ${at.path}`);
+        at.localPath = null;
+      }
+    });
 
     for (let key in atlasDefs) 
     {
