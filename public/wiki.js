@@ -156,8 +156,29 @@ document.addEventListener('DOMContentLoaded', async () => {
   const files = await listFiles(owner, repo);
   console.log('Files found:', files.length);
 
-  const locPath = files.find(p => p.endsWith('en-us.lua')) || '';
-  const locTxt  = locPath ? await fetchRaw(owner, repo, locPath) : '';
+  const locPath = files.find(p => p.endsWith('en-us.lua'));
+
+  if (!locPath)
+  {
+    console.error("Localization file 'en-us.lua' not found in the repository!");
+    console.log("All files found:", files);
+    document.getElementById("detail").textContent = "Error: Localization file (en-us.lua) not found in the repository.";
+    return;
+  }
+
+  console.log("Found localization file at path:", locPath);
+
+  const locTxt  = await fetchRaw(owner, repo, locPath);
+
+  if (!locTxt)
+  {
+    console.error(`Failed to fetch raw content for ${locPath} or file is empty.`);
+    document.getElementById("detail").textContent = `Error: Failed to load content from localization file (${locPath}). It might be empty or a network issue occurred.`;
+    return;
+  }
+
+  console.log(`Successfully fetched ${locTxt.length} characters from ${locPath}.`);
+
   const locMap  = parseLoc(locTxt);
   console.log('Localization entries:', Object.keys(locMap));
 
