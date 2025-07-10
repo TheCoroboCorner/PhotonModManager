@@ -615,7 +615,7 @@ function parseLoc(txt)
           keyOpenBraceRe.lastIndex = itemPos;
           let itemMatch = keyOpenBraceRe.exec(categoryBodyContent);
 
-          let (!itemMatch)
+          if (!itemMatch)
             break;
 
           const cardKey = itemMatch[1];
