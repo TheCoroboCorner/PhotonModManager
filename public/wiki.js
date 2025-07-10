@@ -70,76 +70,70 @@ async function fetchRaw(owner, repo, p)
 function parseLoc(txt) {
     const map = {};
 
-    const topLevelTableRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
+    const tableDefinitionRe = /(\w+)\s*=\s*{([\s\S]*?)}(?:,\s*)?(?:--[^\n]*)?\s*/g;
 
-  let topMatch;
-  while ((topMatch = topLevelTableRe.exec(txt)))
-  {
-    const sectionName = topMatch[1];
-    const sectionBody = topMatch[2];
-
-    if (sectionName === "descriptions")
+    let topLevelMatch;
+    while((topLevelMatch = tableDefinitionRe.exec(txt)))
     {
-      const categoryRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
-      let catMatch;
-      while ((catMatch = categoryRe.exec(sectionBody)))
-      {
-        const categoryKey = catMatch[1];
-        const categoryBody = catMatch[2];
+        const sectionName = topLevelMatch[1];
+        const sectionBody = topLevelMatch[2];
 
-        const itemRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
-        let itemMatch;
-        while ((itemMatch = itemRe.exec(categoryBody))) 
+        if (sectionName === "descriptions")
         {
-          const cardKey = itemMatch[1];
-          const entryBody = itemMatch[2];
+            let categoryMatch;
 
-          const nameMatch = entryBody.match(/name\s*=\s*['"]([^'"]+)['"]/);
-          const name = nameMatch ? nameMatch[1] : "";
-
-          const textMatch = entryBody.match(/text\s*=\s*{([\s\S]*?)}/m);
-          const lines = [];
-          if (textMatch)
-          {
-            const txtBody = textMatch[1];
-            const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
-            let lineMatch;
-            while ((lineMatch = lineRe.exec(txtBody))) 
+            while ((categoryMatch = tableDefinitionRe.exec(sectionBody)))
             {
-              lines.push(lineMatch[1]);
+                const categoryKey = categoryMatch[1];
+                const categoryBody = categoryMatch[2];
+
+                let itemMatch;
+
+                while ((itemMatch = tableDefinitionRe.exec(categoryBody)))
+                {
+                    const cardKey = itemMatch[1];
+                    const entryBody = itemMatch[2];
+
+                    const nameMatch = entryBody.match(/name\s*=\s*['"]([^'"]+)['"]/);
+                    const name = nameMatch ? nameMatch[1] : '';
+
+                    const textMatch = entryBody.match(/text\s*=\s*{([\s\S]*?)}/m);
+                    const lines = [];
+                    if (textMatch)
+                    {
+                        const txtBody = textMatch[1];
+                        const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
+                        let lineMatch;
+                        while ((lineMatch = lineRe.exec(txtBody)))
+                            lines.push(lineMatch(1));
+                    }
+
+                    map[cardKey] = { name, text: lines, type: categoryKey };
+                }
             }
-          }
-
-          map[cardKey] = { name, text: lines, type: categoryKey };
         }
-      }
-    } 
-    else if (sectionName === "misc")
-    {
-      const miscSubSectionRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
-      let miscSubMatch;
-      while ((miscSubMatch = miscSubSectionRe.exec(sectionBody)))
-      {
-        const subSectionName = miscSubMatch[1];
-        const subSectionContent = miscSubMatch[2];
-
-        const itemPairRe = /([A-Za-z0-9_]+)\s*=\s*(?:['"]([^'"]*)['"]|([^,\s{}]+))(?:\s*,)?/g;
-        let itemPairMatch;
-        while ((itemPairMatch = itemPairRe.exec(subSectionContent)))
+        else if (sectionName === "misc")
         {
-          const itemKey = itemPairMatch[1];
-          const itemValue = itemPairMatch[2] || itemPairMatch[3] || "";
+            let subSectionMatch;
+            
+            while ((subsectionMatch = tableDefinitionRe.exec(sectionBody)))
+            {
+                const subSectionName = subSectionMatch[1];
+                const subSectionContent = subSectionMatch[2];
 
-          if (!map.hasOwnProperty(itemKey))
-          {
-             map[itemKey] = { name: itemValue, text: [], type: subSectionName };
-          }
+                const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
+                let itemPairMatch;
+                while ((itemPairMatch = itemPairRe.exec(subSectionContent)))
+                {
+                    const itemKey = itemPairMatch[1];
+                    const itemValue = itemPairMatch[2];
+
+                    if (!map.hasOwnProperty(itemKey))
+                        map[itemKey] = { name: itemValue, text: [], type: subSectionName };
+                }
+            }
         }
-      }
     }
-  }
-
-  return map;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
