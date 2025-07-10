@@ -781,7 +781,7 @@ function parseLoc(txt)
 
         itemPairRe.lastIndex = 0;
         let itemPairMatch;
-        while ((itemPairMatch = itemPairRe.exec(subsectionContent)))
+        while ((itemPairMatch = itemPairRe.exec(subSectionContent)))
         {
           const itemKey = itemPairMatch[1];
           const itemValue = itemPairMatch[2] || itemPairMatch[3] || '';
