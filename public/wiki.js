@@ -123,6 +123,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const files = await listFiles(owner, repo);
 
+    const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
+
     const atlasDefs = {};
     const cards = [];
     for (let p of codeFiles)
