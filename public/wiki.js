@@ -70,45 +70,73 @@ async function fetchRaw(owner, repo, p)
 function parseLoc(txt) {
     const map = {};
 
-    const descMatch = txt.match(/descriptions\s*=\s*{([\s\S]*?)},\s*[^}]*$/m);
-    if (!descMatch) 
-        return map;
-    const body = descMatch[1];
+    const sectionsRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
+  let sm;
 
-    const typeRe = /[A-Za-z0-9_]+\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
-    let tm;
-    while (tm = typeRe.exec(body)) 
+  while ((sm = sectionsRe.exec(txt))) 
+  {
+    const sectionName = sm[1];
+    const sectionBody = sm[2];
+
+    if (sectionName === "descriptions")
     {
-        const typeBody = tm[1];
+      const categoryRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
+      let cm;
+      while ((cm = categoryRe.exec(sectionBody)))
+      {
+        const categoryKey = cm[1];
+        const categoryBody = cm[2];
 
-        const keyRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)(?=^[ \t]*[A-Za-z0-9_]+\s*=|\s*$)}/gm;
-        let km;
-        while (km = keyRe.exec(typeBody))
+        const itemRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
+        let im;
+        while ((im = itemRe.exec(categoryBody)))
         {
-            const cardKey = km[1];
-            const entry   = km[2];
+          const cardKey = im[1];
+          const entry = im[2];
 
-            const nameMatch = entry.match(/name\s*=\s*['"]([^'"]+)['"]/);
-            const name = nameMatch ? nameMatch[1] : '';
+          const nameMatch = entry.match(/name\s*=\s*['"]([^'"]+)['"]/);
+          const name = nameMatch ? nameMatch[1] : "";
 
-            const textMatch = entry.match(/text\s*=\s*{([\s\S]*?)}/m);
-            const lines = [];
-            if (textMatch)
+          const textMatch = entry.match(/text\s*=\s*{([\s\S]*?)}/m);
+          const lines = [];
+          if (textMatch)
+          {
+            const txtBody = textMatch[1];
+            const lineRe = /['"]([^'"]*)['"](?:\s*,\s*)?/g;
+            let lm;
+            while ((lm = lineRe.exec(txtBody)))
             {
-                const txtBody = textMatch[1];
-                const lineRe  = /['"]([^'"]*)['"]/g;
-                let lm;
-                while (lm = lineRe.exec(txtBody))
-                {
-                    lines.push(lm[1]);
-                }
+              lines.push(lm[1]);
             }
+          }
 
-            map[cardKey] = { name, text: lines };
+          map[cardKey] = { name, text: lines, type: categoryKey };
         }
+      }
     }
+    else if (sectionName === "misc")
+    {
+      const miscSubSectionRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
+      let msm;
+      while ((msm = miscSubSectionRe.exec(sectionBody)))
+      {
+        const subSectionName = msm[1];
+        const subSectionContent = msm[2];
 
-    return map;
+        const itemRe = /([A-Za-z0-9_]+)\s*=\s*(?:['"]([^'"]*)['"]|([^,\s}]+))(?:\s*,)?/gm;
+        let im;
+        while ((im = itemRe.exec(subSectionContent)))
+        {
+          const itemKey = im[1];
+          const itemValue = im[2] || im[3];
+
+          map[itemKey] = map[itemKey] || { name: itemValue, text: [], type: subSectionName };
+        }
+      }
+    }
+  }
+
+  return map;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -131,9 +159,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log('Localization entries:', Object.keys(locMap));
 
   const comprehensiveValidSuffixes = new Set();
+  const suffixToFullKeyMap = new Map();
 
   Object.keys(locMap).forEach((key) => {
     comprehensiveValidSuffixes.add(key);
+    suffixToFullKeyMap.set(key, key);
+
+    const underscoreSegments = key.split("_");
+    for (let i = 0; i < underscoreSegments.length; i++)
+    {
+      const suffix = underscoreSegments.slice(i).join("_");
+      comprehensiveValidSuffixes.add(suffix);
+
+      if (!suffixToFullKeyMap.has(suffix))
+        suffixToFullKeyMap.set(suffix, key);
+    }
   });
 
   Object.keys(locMap).forEach((fullKey) => {
@@ -163,7 +203,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   const filtered = cards.filter(c => {
-    const ok = locMap.hasOwnProperty(c.key) || comprehensiveValidSuffixes.has(c.key);
+    const ok = comprehensiveValidSuffixes.has(c.key);
     if (!ok)
       console.warn('Dropping card', c.key, 'no loc entry');
     return ok;
@@ -182,8 +222,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     items.forEach(({card, idx}) => {
       const opt = document.createElement('option');
       opt.value = idx;
-      const displayName = locMap[card.key]?.name || Array.from(comprehensiveValidSuffixes).find(suf => fullKey.endsWith(suf) && locMap[suf])?.name || card.key;
-      opt.textContent = displayName;
+
+      let displayName = locMap[card.key]?.name
+      if (!displayName)
+      {
+        const fullKeyFromSuffix = suffixToFullKeyMap.get(card.key);
+        if (fullKeyFromSuffix && locMap[fullKeyFromSuffix])
+            displayName = locMap[fullKeyFromSuffix].name;
+      }
+
+      opt.textContent = displayName || card.key;
       og.appendChild(opt);
     });
     select.appendChild(og);
@@ -195,7 +243,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   if (filtered.length)
   {
-    select.selectedIndex = 1;
+    select.selectedIndex = 0;
     select.dispatchEvent(new Event('change'));
   }
 
@@ -212,10 +260,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (!locEntry)
     {
-        const matchingSuffix = Array.from(comprehensiveValidSuffixes).filter(suffix => c.key.endsWith(suffix) && locMap[suffix]).sort((a, b) => b.length - a.length)[0];
-
-        if (matchingSuffix)
-            locEntry = locMap[matchingSuffix];
+        const fullKeyFromSuffix = suffixToFullKeyMap.get(c.key);
+        if (fullKeyFromSuffix)
+            locEntry = locMap[fullKeyFromSuffix];
     }
 
     if (locEntry)
