@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const codeFiles = files.filter(p => p.endsWith('.lua') && !p.endsWith('en-us.lua'));
 
     const atlasDefs = {};
-    const cards =[];
+    const cards = [];
     for (let p of codeFiles)
     {
         const txt = await fetchRaw(owner, repo, p);
@@ -164,6 +164,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         return acc;
     }, {});
 
+
+    filteredCards.forEach((c, idx) => {
+        const link = document.createElement('div');
+        listDiv.innerHTML = '';
+        link.textContent = `${c.type}.${c.key}`;
+        link.className = 'card-link';
+        link.style.cursor = 'pointer';
+        link.onclick = () => showCard(idx);
+        listDiv.appendChild(link);
+    });
+    
+    
+
+    /*
     for (let [type, items] of Object.entries(groups))
     {
         const og = document.createElement('optgroup');
@@ -183,6 +197,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!isNaN(idx))
             showCard(idx);
     });
+    */
 
     const sprite = document.getElementById('sprite');
     const title = document.getElementById('card-title');
@@ -227,9 +242,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    /*
     if (filteredCards.length)
     {
         select.selectedIndex = 1;
         select.dispatchEvent(new Event('change'));
     }
+    */
 });
