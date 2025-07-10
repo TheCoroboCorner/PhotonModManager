@@ -70,67 +70,70 @@ async function fetchRaw(owner, repo, p)
 function parseLoc(txt) {
     const map = {};
 
-    const sectionsRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
-  let sm;
+    const topLevelTableRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
 
-  while ((sm = sectionsRe.exec(txt))) 
+  let topMatch;
+  while ((topMatch = topLevelTableRe.exec(txt)))
   {
-    const sectionName = sm[1];
-    const sectionBody = sm[2];
+    const sectionName = topMatch[1];
+    const sectionBody = topMatch[2];
 
     if (sectionName === "descriptions")
     {
-      const categoryRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
-      let cm;
-      while ((cm = categoryRe.exec(sectionBody)))
+      const categoryRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
+      let catMatch;
+      while ((catMatch = categoryRe.exec(sectionBody)))
       {
-        const categoryKey = cm[1];
-        const categoryBody = cm[2];
+        const categoryKey = catMatch[1];
+        const categoryBody = catMatch[2];
 
-        const itemRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
-        let im;
-        while ((im = itemRe.exec(categoryBody)))
+        const itemRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
+        let itemMatch;
+        while ((itemMatch = itemRe.exec(categoryBody))) 
         {
-          const cardKey = im[1];
-          const entry = im[2];
+          const cardKey = itemMatch[1];
+          const entryBody = itemMatch[2];
 
-          const nameMatch = entry.match(/name\s*=\s*['"]([^'"]+)['"]/);
+          const nameMatch = entryBody.match(/name\s*=\s*['"]([^'"]+)['"]/);
           const name = nameMatch ? nameMatch[1] : "";
 
-          const textMatch = entry.match(/text\s*=\s*{([\s\S]*?)}/m);
+          const textMatch = entryBody.match(/text\s*=\s*{([\s\S]*?)}/m);
           const lines = [];
           if (textMatch)
           {
             const txtBody = textMatch[1];
-            const lineRe = /['"]([^'"]*)['"](?:\s*,\s*)?/g;
-            let lm;
-            while ((lm = lineRe.exec(txtBody)))
+            const lineRe = /['"]([^'"]*)['"](?:,\s*)?/g;
+            let lineMatch;
+            while ((lineMatch = lineRe.exec(txtBody))) 
             {
-              lines.push(lm[1]);
+              lines.push(lineMatch[1]);
             }
           }
 
           map[cardKey] = { name, text: lines, type: categoryKey };
         }
       }
-    }
+    } 
     else if (sectionName === "misc")
     {
-      const miscSubSectionRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?=\s*,?\s*[A-Za-z0-9_]+\s*=\s*{|\s*$)/gm;
-      let msm;
-      while ((msm = miscSubSectionRe.exec(sectionBody)))
+      const miscSubSectionRe = /([A-Za-z0-9_]+)\s*=\s*{([\s\S]*?)}(?:,\s*)?/g;
+      let miscSubMatch;
+      while ((miscSubMatch = miscSubSectionRe.exec(sectionBody)))
       {
-        const subSectionName = msm[1];
-        const subSectionContent = msm[2];
+        const subSectionName = miscSubMatch[1];
+        const subSectionContent = miscSubMatch[2];
 
-        const itemRe = /([A-Za-z0-9_]+)\s*=\s*(?:['"]([^'"]*)['"]|([^,\s}]+))(?:\s*,)?/gm;
-        let im;
-        while ((im = itemRe.exec(subSectionContent)))
+        const itemPairRe = /([A-Za-z0-9_]+)\s*=\s*(?:['"]([^'"]*)['"]|([^,\s{}]+))(?:\s*,)?/g;
+        let itemPairMatch;
+        while ((itemPairMatch = itemPairRe.exec(subSectionContent)))
         {
-          const itemKey = im[1];
-          const itemValue = im[2] || im[3];
+          const itemKey = itemPairMatch[1];
+          const itemValue = itemPairMatch[2] || itemPairMatch[3] || "";
 
-          map[itemKey] = map[itemKey] || { name: itemValue, text: [], type: subSectionName };
+          if (!map.hasOwnProperty(itemKey))
+          {
+             map[itemKey] = { name: itemValue, text: [], type: subSectionName };
+          }
         }
       }
     }
