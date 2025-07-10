@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - Photon</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+        #sidebar {
+            width: 240px;
+            overflow-y: auto;
+            border-right: 1px solid #352552;
+        }
+        #detail {
+            flex: 1;
+            padding: 1em;
+            overflow-y: auto;
+        }
+        .card-section {
+            margin: 0;
+            padding: .5em;
+            font-weight: bold;
+        }
+        .card-link {
+            display: block;
+            padding: .25em .5em;
+            cursor: pointer;
+            color: #352552;
+            text-decoration: none;
+        }
+        .card-link:hover, .card-link.selected {
+            background: #352552;
+            color: #352552;
+        }
+        #sprite {
+            margin: 1em 0;
+            background-repeat: no-repeat;
+        }
+        #loc-text {
+            white-space: pre-wrap;
+        }
+        pre {
+            background: #111;
+            padding: 1em;
+            overflow-x: auto;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="navbar">
+        <ul class="nav">
+          <li>
+            <a href="https://photonmodmanager.onrender.com">Home</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.onrender.com/submit">Submit</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.onrender.com/browse">Browse</a>
+          </li>
+          <li>
+            <a href="https://photonmodmanager.onrender.com/about">About</a>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="content-wrapper flex alignment">
+        <div id="content-container" style="flex-grow: 1;">
+          <div id="sidebar wrapper">
+            <h2 style="padding: .5em; margin: 0">Cards</h2>
+            <div id="card-list"></div>
+          </div>
+          <div class="detail wrapper">
+            <h1 id="card-title">Select a Card</h1>
+            <div id="sprite"></div>
+            <p id="loc-text"></p>
+            <pre id="raw-def"></pre>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">
+        <div class="footer-wrapper">
+          <p>
+            A website meant to manage mods from Balatro by LocalThunk. We do not claim to own Balatro in any way.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="wiki.js"></script>
+  </body>
+</html>

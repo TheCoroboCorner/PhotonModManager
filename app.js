@@ -14,10 +14,11 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 const DATA_FILE = path.join(__dirname, 'data.json');
 const VOTES_FILE = path.join(__dirname, 'votes.json');
+const CACHE_DIR = path.join(__dirname, 'wiki-cache');
 
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
 
 // --- Helper functions ---
 
@@ -313,6 +314,161 @@ function sortEntries(entries, field, order = 'desc')
     return 0;
   });
   return arr;
+}
+
+app.get('/wiki-data/:modKey.json', async(req, res) => {
+  const modKey = req.params.modKey;
+  const [repo, owner] = modKey.split('@');
+  const cacheFile = path.join(CACHE_DIR, `${modKey}.json`);
+
+  let cache = null;
+  try
+  {
+    cache = JSON.parse(await fs.readFile(cacheFile, 'utf8'));
+  }
+  catch {}
+
+  let latestTag = '';
+  try
+  {
+    const tagRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
+    if (tagRes.ok)
+    {
+      const tagJson = await tagRes.json();
+      latestTag = tagJson.tag_name || '';
+    }
+  }
+  catch(e)
+  {
+    console.error('GitHub tag lookup failed', e);
+  }
+
+  if (cache && cache.version === latestTag)
+    return res.json(cache);
+
+  async function listFiles(dir = '')
+  {
+    const resp = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${dir}`);
+    if (!resp.ok)
+      return [];
+
+    const items = await resp.json();
+    
+    let out = [];
+    for (let i of items)
+    {
+      if (i.type === 'file')
+        out.push(i.path);
+      else if(i.type === 'dir')
+        out.push(...await listFiles(i.path));
+    }
+
+    return out;
+  }
+  const files = await listFiles();
+
+  const locPath = files.find(f => f.endsWith('en-us.lua')) || '';
+  const locTxt = locPath ? await fetchRaw(owner, repo, locPath) : '';
+  const locMap = parseLoc(locTxt);
+
+  const codePaths = files.filter(f => f.endsWith('.lua') && !f.endsWith('en-us.lua'));
+
+  const atlasDefs = {};
+  const cards = [];
+
+  for (let relPath of codePaths)
+  {
+    const txt = await fetchRaw(owner, repo, relPath);
+
+    Object.assign(atlasDefs, parseAtlasDefs(txt));
+    cards.push(...parseAllEntities(txt));
+  }
+
+  for (let key in atlasDefs)
+  {
+    const at = atlasDefs[key];
+    const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${at.path}`;
+    try
+    {
+      const buf = await fetch(imgUrl).then(r => r.arrayBuffer());
+      const dir = path.join(__dirname, 'public', 'images', repo);
+      
+      await fs.mkdir(dir, { recursive: true });
+      const name = path.basename(at.path);
+      
+      await fs.writeFile(path.join(dir, name), Buffer.from(buf));
+      at.localPath = `/images/${repo}/${name}`;
+    }
+    catch {}
+  }
+
+  const newCache = { version: latestTag, locMap, atlases: atlasDefs, cards };
+  await fs.mkdir(CACHE_DIR, { recursive: true });
+  await fs.writeFile(cacheFile, JSON.stringify(newCache, null, 2), 'utf8');
+
+  res.json(newCache);
+});
+
+function parseAtlasDefs(txt)
+{
+  const out = {};
+  txt.replace(/SMODS\.Atlas\s*{([\s\S]*?)}/g, (_, body) => {
+    const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
+    const path = /path\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
+
+    const px   = +(/px\s*=\s*(\d+)/.exec(body)?.[1]||0);
+    const py   = +(/py\s*=\s*(\d+)/.exec(body)?.[1]||0);
+
+    if (key && path)
+      out[key] = { path, px, py };
+  });
+  return out;
+}
+
+function parseAllEntities(txt) {
+  const out = [];
+  const re  = /SMODS\.([A-Za-z0-9_]+)\s*{([\s\S]*?)}/g;
+  let m;
+  while (m = re.exec(txt))
+  {
+    const type = m[1];
+    if (type === 'Atlas')
+      continue;
+
+    const body = m[2];
+    const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
+    if (!key)
+      continue;
+
+    const atlas = /atlas\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1] || null;
+    const pm    = /pos\s*=\s*{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
+    const pos   = pm ? { x:+pm[1], y:+pm[2] } : null;
+
+    out.push({ type, key, atlas, pos, raw: body.trim() });
+  }
+  return out;
+}
+
+async function fetchRaw(owner, repo, p)
+{
+  const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/${p}`);
+  return r.ok ? r.text() : '';
+}
+
+function parseLoc(txt)
+{
+  const map = {};
+  const re = /SMODS\.([A-Za-z0-9_]+)\.([A-Za-z0-9_]+)\s*=\s*['"]([^'"]*)['"]/g;
+  let m;
+  while (m = re.exec(txt))
+  {
+    const type = m[1];
+    const key = m[2];
+    const val = m[3];
+    map[`${type}.${key}`] = val;
+  }
+
+  return map;
 }
 
 app.get('/browse', (_req, res) =>
