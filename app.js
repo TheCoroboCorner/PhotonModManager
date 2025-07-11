@@ -652,8 +652,10 @@ function parseLoc(txt)
   }
 
   const keyOpenBraceRe = /(\w+)\s*=\s*{/g;
-  const lineRe = /(['"])(.*?)\1(?:,\s*)?/g;
-  const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
+  // const lineRe = /(['"])(.*?)\1(?:,\s*)?/g;
+  // const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
+
+  const stringRe = /(['"])((?:\\.|(?!\1).)*?)\1/g;
 
   let currentPos = 0;
   while (true)
@@ -741,11 +743,13 @@ function parseLoc(txt)
             if (textBlockResult)
             {
               const txtBody = textBlockResult.content;
-              lineRe.lastIndex = 0;
+              stringRe.lastIndex = 0;
 
               let lineMatch;
-              while ((lineMatch = lineRe.exec(txtBody)))
-                lines.push(lineMatch[2]);
+              while ((lineMatch = stringRe.exec(txtBody)))
+                lines.push(lineMatch[2].replace(/\\(["'\\bnfrt])/g, (_, ch) => {
+                  return { n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' }[ch] || ch;
+                }));
             }
             else console.warn(`parseLoc: Mismatched braces for text field in item ${cardKey}`);
           }
@@ -779,9 +783,9 @@ function parseLoc(txt)
         const subSectionContent = miscSubBlockResult.content;
         miscSubSectionPos = miscSubBlockResult.endIndex + 1;
 
-        itemPairRe.lastIndex = 0;
+        stringRe.lastIndex = 0;
         let itemPairMatch;
-        while ((itemPairMatch = itemPairRe.exec(subSectionContent)))
+        while ((itemPairMatch = stringRe.exec(subSectionContent)))
         {
           const itemKey = itemPairMatch[1];
           const itemValue = itemPairMatch[2] || itemPairMatch[3] || '';
