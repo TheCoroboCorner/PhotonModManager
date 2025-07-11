@@ -158,7 +158,7 @@ export async function backupMetadata(modKey, versionTag) {
     },
     body: JSON.stringify({
       message: `Backup wiki cache for ${modKey} @ ${new Date().toISOString()}`,
-      content: base64,
+      content: 'base64',
       sha: existingSha || undefined
     })
   });
