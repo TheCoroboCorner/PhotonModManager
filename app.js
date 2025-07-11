@@ -588,40 +588,50 @@ function parseAtlasDefs(txt)
   return out;
 }
 
+function unescapeLuaString(str) 
+{
+  return str.replace(/\\(["'\\bfnrt])/g, (_, ch) => ({ n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' })[ch] || ch);
+}
+
 function parseAllEntities(txt) {
   const out = [];
-  const re  = /SMODS\.([A-Za-z0-9_]+)\s*{([\s\S]*?)}/g;
-  let m;
-  while (m = re.exec(txt))
+  const topRe  = /SMODS\.([A-Za-z0-9_]+)\s*{([\s\S]*?)}/g;
+  let m, currentPos = 0;
+
+  while (true)
   {
+    topRe.lastIndex = currentPos;
+    m = topRe.exec(txt);
+    if (!m)
+      break;
+
     const type = m[1];
-    if (type === 'Atlas')
+
+    const blockStart = m.index + m[0].length - 1;
+    const block = extractBlockContent(txt, blockStart);
+    if (!block)
+    {
+      currentPos = m.index + m[0].length;
       continue;
+    }
 
-    const body = m[2];
+    const body = block.content;
+    currentPos = block.endIndex + 1;
 
-    // const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
-
-    let key = null;
     const keyMatch = /key\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
-    if (keyMatch)
-      key = keyMatch[2].replace(/\\(["'\\bfnrt])/g, (_, ch) =>({ n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' })[ch] || ch);
-
-    if (!key)
+    if (!keyMatch)
       continue;
+    const key = unescapeLuaString(keyMatch[2]);
 
-    // const atlas = /atlas\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1] || null;
-
-    let atlas = null;
     const atlasMatch = /atlas\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
-    if (atlasMatch)
-      atlas = atlasMatch[2].replace(/\\(["'\\bfnrt])/g, (_, ch) =>({ n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' })[ch] || ch);
+    const atlas = atlasMatch ? unescapeLuaString(atlasMatch[2]) : null;
 
-    const pm    = /pos\s*=\s*{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
-    const pos   = pm ? { x:+pm[1], y:+pm[2] } : null;
+    const posMatch = /pos\s*=\s*{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
+    const pos = posMatch ? { x: +posMatch[1], y: +posMatch[2] } : null;
 
     out.push({ type, key, atlas, pos, raw: body.trim() });
   }
+
   return out;
 }
 
