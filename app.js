@@ -430,10 +430,10 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     await pLimit(CONCURRENCY_LIMIT, luaFilesToDownload, async (luaPath) => {
       try
       {
-        const txt = await fetchRaw(owner, repo, luaPath);
+        let txt = await fetchRaw(owner, repo, luaPath);
         if (txt)
         {
-          let localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
+          const localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
           await fs.writeFile(localLuaPath, txt);
           luaFileContents[luaPath] = txt;
           
