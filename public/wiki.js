@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const rawPre  = document.getElementById('raw-def');
 
   modTitle.textContent = repo;
-  detailElement.textContent = "Select a Card"
 
   function showCard(idx)
   {
