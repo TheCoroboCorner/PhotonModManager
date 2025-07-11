@@ -599,11 +599,24 @@ function parseAllEntities(txt) {
       continue;
 
     const body = m[2];
-    const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
+
+    // const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
+
+    let key = null;
+    const keyMatch = /key\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
+    if (keyMatch)
+      key = keyMatch[2].replace(/\\(["'\\bfnrt])/g, (_, ch) =>({ n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' })[ch] || ch);
+
     if (!key)
       continue;
 
-    const atlas = /atlas\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1] || null;
+    // const atlas = /atlas\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1] || null;
+
+    let atlas = null;
+    const atlasMatch = /atlas\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
+    if (atlasMatch)
+      atlas = atlasMatch[2].replace(/\\(["'\\bfnrt])/g, (_, ch) =>({ n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' })[ch] || ch);
+
     const pm    = /pos\s*=\s*{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
     const pos   = pm ? { x:+pm[1], y:+pm[2] } : null;
 

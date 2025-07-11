@@ -153,16 +153,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
       else
       {
-        sprite.style.dispaly = 'none';
+        sprite.style.display = 'none';
       }
     } 
     else
     {
       sprite.style.display = 'none';
     }
-
-    console.log('CARD:', c);
-    console.log(' atlas key:', c.atlas);
-    console.log(' atlasDef:', atlasDefs[c.atlas]);
   }
 });
