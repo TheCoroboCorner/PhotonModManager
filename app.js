@@ -424,6 +424,14 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     }
     const allGitHubFiles = await listGitHubFiles(owner, repo);
 
+    const byName = new Map();
+    for (const filePath of allGitHubFiles)
+    {
+      const name = path.basename(filePath).toLowerCase();
+      if (!byName.has(name))
+        byName.set(name, filePath);
+    }
+
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
     let luaFileContents = {};
 
@@ -464,6 +472,19 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       cards.push(...parseAllEntities(txt));
     }
 
+    for (const [key, at] of Object.entries(atlasDefs))
+    {
+      const wanted = at.path.split('/').pop().toLowerCase();
+      const match = byName.get(wanted);
+      if (match)
+        at.resolvedGitHubPath = match;
+      else
+      {
+        console.warn(`[Server] Could not find atlas file for ${key}: expected ${wanted}`);
+        at.resolvedGitHubPath = null;
+      }
+    }
+
     luaFileContents = null;
 
     const atlasKeys = Object.keys(atlasDefs);
@@ -472,6 +493,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       const name = at.path.split('/').pop();
       let matchedGitHubPath = null;
 
+      /*
       for (const ghFilePath of allGitHubFiles)
       {
         if (ghFilePath.toLowerCase().includes('/assets/') &&
@@ -483,10 +505,13 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         }
       }
       at.resolvedGitHubPath = matchedGitHubPath || at.path;
+      */
 
       if (at.resolvedGitHubPath)
       {
-        const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${at.resolvedGitHubPath}`;
+        const encodedPath = at.resolvedGitHubPath.split('/').map(encodeURIComponent).join('/');
+
+        const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${encodedPath}`;
         try
         {
           const buffer = await fetchRawBinary(owner, repo, at.resolvedGitHubPath);
