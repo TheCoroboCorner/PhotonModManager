@@ -41,7 +41,7 @@
       "type": "Joker"
     },
     "j_jojo_stand_magiciansRed": {
-      "name": "Magician\\",
+      "name": "Magician's Red",
       "text": [
         "First discarded hand is {C:attention}destroyed{};",
         "hand size is {C:attention}decreased {}by the size of said hand",
@@ -148,7 +148,7 @@
       "type": "Joker"
     },
     "j_jojo_stand_heavensDoor": {
-      "name": "Heaven\\",
+      "name": "Heaven's Door",
       "text": [
         "{C:attention}All{} values on consumable",
         "cards are {C:attention}doubled"
@@ -299,7 +299,7 @@
       "type": "Joker"
     },
     "j_jojo_stand_dragonsDream": {
-      "name": "Dragon\\",
+      "name": "Dragon's Dream",
       "text": [
         "{C:money}+$#1#{} for each scored {C:attention}#2#{},",
         "{C:money}-$#1#{} for each scored {C:attention}#3#{},",
@@ -804,10 +804,40 @@
       ],
       "type": "Other"
     },
-    "\"": {
-      "name": "Requiem",
+    "k_jojo_requiem": {
+      "name": "\"Requiem\"",
       "text": [],
       "type": "dictionary"
+    },
+    "k_jojo_stand": {
+      "name": "\"Stand\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_jojo_stand_cards": {
+      "name": "\"Stand Summons\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jojo_scraps": {
+      "name": "\"Scraps\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_jojo_scraps_cards": {
+      "name": "\"Scraps\"\r\n\t\t\t",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jojo_stand": {
+      "name": "\"Stand\"",
+      "text": [],
+      "type": "labels"
+    },
+    "jojo_scraps": {
+      "name": "\"Scraps\"",
+      "text": [],
+      "type": "labels"
     }
   },
   "atlases": {
