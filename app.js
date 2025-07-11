@@ -651,31 +651,6 @@ function parseLoc(txt)
 {
   const map = {};
 
-  function extractBlockContent(str, startIndex)
-  {
-    let braceCount = 0;
-    let contentStart = -1;
-    for (let i = startIndex; i < str.length; i++)
-    {
-      if (str[i] === '{')
-      {
-        if (contentStart === -1)
-          contentStart = i + 1;
-        braceCount++;
-      }
-      else if (str[i] === '}')
-      {
-        braceCount--;
-        if (braceCount === 0)
-        {
-          const content = str.substring(contentStart, i);
-          return { content: content, endIndex: i };
-        }
-      }
-    }
-    return null;
-  }
-
   const keyOpenBraceRe = /(\w+)\s*=\s*{/g;
   // const lineRe = /(['"])(.*?)\1(?:,\s*)?/g;
   // const itemPairRe = /(\w+)\s*=\s*(?:['"]([^'"]*)['"]|([^,{}\s]+))(?:\s*,\s*)?/g;
@@ -845,6 +820,31 @@ function parseLoc(txt)
   }
 
   return map;
+}
+
+function extractBlockContent(str, startIndex)
+{
+  let braceCount = 0;
+  let contentStart = -1;
+  for (let i = startIndex; i < str.length; i++)
+  {
+    if (str[i] === '{')
+    {
+      if (contentStart === -1)
+        contentStart = i + 1;
+      braceCount++;
+    }
+    else if (str[i] === '}')
+    {
+      braceCount--;
+      if (braceCount === 0)
+      {
+        const content = str.substring(contentStart, i);
+        return { content: content, endIndex: i };
+      }
+    }
+  }
+  return null;
 }
 
 app.get('/browse', (_req, res) =>
