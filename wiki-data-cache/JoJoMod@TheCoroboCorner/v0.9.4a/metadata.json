@@ -52,8 +52,8 @@
     "j_jojo_stand_hermitPurple": {
       "name": "Hermit Purple",
       "text": [
-        "\\",
-        "will be the {C:attention, s:1.1}#1# of #2#{}!\\"
+        "\"...and the {C:attention}next card{} you'll draw",
+        "will be the {C:attention, s:1.1}#1# of #2#{}!\""
       ],
       "type": "Joker"
     },
@@ -804,40 +804,10 @@
       ],
       "type": "Other"
     },
-    "k_jojo_requiem": {
+    "\"": {
       "name": "Requiem",
       "text": [],
       "type": "dictionary"
-    },
-    "k_jojo_stand": {
-      "name": "Stand",
-      "text": [],
-      "type": "dictionary"
-    },
-    "b_jojo_stand_cards": {
-      "name": "Stand Summons",
-      "text": [],
-      "type": "dictionary"
-    },
-    "k_jojo_scraps": {
-      "name": "Scraps",
-      "text": [],
-      "type": "dictionary"
-    },
-    "b_jojo_scraps_cards": {
-      "name": "Scraps",
-      "text": [],
-      "type": "dictionary"
-    },
-    "jojo_stand": {
-      "name": "Stand",
-      "text": [],
-      "type": "labels"
-    },
-    "jojo_scraps": {
-      "name": "Scraps",
-      "text": [],
-      "type": "labels"
     }
   },
   "atlases": {
