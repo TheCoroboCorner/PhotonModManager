@@ -456,6 +456,10 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     for (const luaPath of codeLuaPaths) 
     {
       const txt = luaFileContents[luaPath];
+
+      if (!txt)
+        continue;
+
       Object.assign(atlasDefs, parseAtlasDefs(txt));
       cards.push(...parseAllEntities(txt));
     }
@@ -536,6 +540,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
             const localImagePath = path.join(versionSpecificCacheDir, path.basename(at.resolvedGitHubPath));
             await fs.writeFile(localImagePath, Buffer.from(buffer));
             at.localPath = `/wiki-data/${modKey}/${latestTag || 'no-tag'}/${path.basename(at.resolvedGitHubPath)}`;
+            console.log(`Successfully fetched/downloaded image binary for ${at.key} into ${at.localPath}`)
           } 
           else 
           {
@@ -574,7 +579,11 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
 function parseAtlasDefs(txt)
 {
+  if (!txt)
+    return {};
+
   const out = {};
+
   txt.replace(/SMODS\.Atlas\s*{([\s\S]*?)}/g, (_, body) => {
     const key  = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
     const path = /path\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
