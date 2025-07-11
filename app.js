@@ -353,7 +353,7 @@ async function pLimit(concurrency, iterable, mapper)
 }
 
 app.get('/wiki-data/:modKey.json', async(req, res) => {
-  const CONCURRENCY_LIMIT = 8;
+  const CONCURRENCY_LIMIT = 4;
 
   const modKey = req.params.modKey;
   const [repo, owner] = modKey.split('@');
@@ -436,6 +436,10 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           const localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
           await fs.writeFile(localLuaPath, txt);
           luaFileContents[luaPath] = txt;
+          
+          parseAllEntities(txt);
+
+          txt = null;
         }
         else console.warn(`[Server] Empty content for Lua file ${luaPath}, skipping cache.`);
       }
