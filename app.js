@@ -433,7 +433,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         const txt = await fetchRaw(owner, repo, luaPath);
         if (txt)
         {
-          const localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
+          let localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
           await fs.writeFile(localLuaPath, txt);
           luaFileContents[luaPath] = txt;
           
