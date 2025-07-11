@@ -727,8 +727,12 @@ function parseLoc(txt)
           const entryBody = itemBlockResult.content;
           itemPos = itemBlockResult.endIndex + 1;
 
-          const nameMatch = entryBody.match(/name\s*=\s*(['"])(.*?)\1/);
-          const name = nameMatch ? nameMatch[2] : '';
+          // const nameMatch = entryBody.match(/name\s*=\s*(['"])(.*?)\1/);
+          // const name = nameMatch ? nameMatch[2] : '';
+
+          const nameRe = /name\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/;
+          const nm = nameRe.exec(entryBody);
+          const name = nm ? nm[2].replace(/\\(["'\\bfnrt])/g, (_, ch) => ({ n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' }[ch] || ch)) : '';
 
           const lines = [];
           const textBlockRe = /text\s*=\s*{/g;
@@ -783,12 +787,30 @@ function parseLoc(txt)
         const subSectionContent = miscSubBlockResult.content;
         miscSubSectionPos = miscSubBlockResult.endIndex + 1;
 
-        stringRe.lastIndex = 0;
+        /*
+        itemPairRe.lastIndex = 0;
         let itemPairMatch;
-        while ((itemPairMatch = stringRe.exec(subSectionContent)))
+        while ((itemPairMatch = itemPairRe.exec(subSectionContent)))
         {
           const itemKey = itemPairMatch[1];
           const itemValue = itemPairMatch[2] || itemPairMatch[3] || '';
+
+          if (!map.hasOwnProperty(itemKey))
+            map[itemKey] = { name: itemValue, text: [], type: subSectionName };
+        }
+        */
+
+        const pairRe = /(\w+)\s*=\s*([^\s,{][^,{}]*|(['"])((?:\\.|(?!\3).)*?)\3)/g;
+        let pm;
+        while ((pm = pairRe.exec(subSectionContent)))
+        {
+          const itemKey = pm[1];
+          let itemValue = pm[2];
+
+          if (pm[3])
+          {
+            itemValue = pm[4].replace(/\\(["'\\bfnrt])/g, (_, ch) => ({ n: '\n', r: '\r', t: '\t', '"': '"', "'": "'", '\\': '\\' }[ch] || ch));
+          }
 
           if (!map.hasOwnProperty(itemKey))
             map[itemKey] = { name: itemValue, text: [], type: subSectionName };

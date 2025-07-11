@@ -112,11 +112,13 @@ export async function backupMetadata(modKey, versionTag) {
   const localMetadataPath = path.join(WIKI_LOCAL_DATA_DIR, modKey, versionTag, 'metadata.json');
   const repoPath = `wiki-data-cache/${modKey}/${versionTag}/metadata.json`;
 
+  let existingSha;
+
   try
   {
     const content = await fs.readFile(localMetadataPath, 'utf8');
     const base64 = Buffer.from(content, 'utf8').toString('base64');
-    const existingSha = await getShaFor(repoPath);
+    existingSha = await getShaFor(repoPath);
 
     const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${repoPath}`;
     console.log(`[GitHub Backup] Backing up ${repoPath}...`);
