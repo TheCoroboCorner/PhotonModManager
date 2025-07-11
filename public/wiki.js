@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const modTitle = document.getElementById('mod-name');
   const detailElement = document.getElementById('detail');
+  const photonElement = document.getElementById('photon');
   if (!detailElement)
   {
     console.error("HTML element with id 'detail' not found. Cannot display messages.");
     alert('An unexpected error occurred: UI element missing.');
     return;
   }
-  detailElement.textContent = "Loading cards..."
+  if (photonElement)
+    photonElement.textContent = "Photon Wiki -- Loading cards..."
 
   const params = new URLSearchParams(location.search);
   const modKey = params.get('mod');
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
   const [repo, owner] = modKey.split('@');
+
+  modTitle.textContent = repo;
   console.log('>>> Loading wiki for', repo, owner);
 
   const wikiDataUrl = `/wiki-data/${modKey}.json`;
@@ -115,7 +119,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const locP    = document.getElementById('loc-text');
   const rawPre  = document.getElementById('raw-def');
 
-  modTitle.textContent = repo;
+  if (photonElement)
+    photonElement.textContent = "Photon Wiki"
 
   function showCard(idx)
   {
