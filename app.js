@@ -353,7 +353,7 @@ async function pLimit(concurrency, iterable, mapper)
 }
 
 app.get('/wiki-data/:modKey.json', async(req, res) => {
-  const CONCURRENCY_LIMIT = 4;
+  const CONCURRENCY_LIMIT = 8;
 
   const modKey = req.params.modKey;
   const [repo, owner] = modKey.split('@');
@@ -430,16 +430,12 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     await pLimit(CONCURRENCY_LIMIT, luaFilesToDownload, async (luaPath) => {
       try
       {
-        let txt = await fetchRaw(owner, repo, luaPath);
+        const txt = await fetchRaw(owner, repo, luaPath);
         if (txt)
         {
           const localLuaPath = path.join(versionSpecificCacheDir, path.basename(luaPath));
           await fs.writeFile(localLuaPath, txt);
           luaFileContents[luaPath] = txt;
-          
-          parseAllEntities(txt);
-
-          txt = null;
         }
         else console.warn(`[Server] Empty content for Lua file ${luaPath}, skipping cache.`);
       }
@@ -599,34 +595,47 @@ function unescapeLuaString(str)
 
 function parseAllEntities(txt) {
   const out = [];
-  const re = /SMODS\.([A-Z][A-Za-z0-9_]*)\s*\{/g;
-  let m;
+  let cursor = 0;
 
-  while ((m = re.exec(txt)))
+  while (true)
   {
-    const type = m[1];
-    if (type === 'Atlas')
-      continue;
+    const dotIdx = txt.indexOf("SMODS", cursor);
+    if (dotIdx === -1)
+      break;
 
-    const blockStart = m.index + m[0].length - 1;
-    const block = extractBlockContent(txt, blockStart);
+    const rest = txt.slice(dotIdx + 6);
+    const typeMatch = /^[A-Z][A-Za-z0-9_]*/.exec(rest);
+    if (!typeMatch)
+    {
+      cursor = dotIdx + 6;
+      continue;
+    }
+    const type = typeMatch[0];
+
+    const braceIdx = txt.indexOf("{", dotIdx + 6 + type.length);
+    if (braceIdx === -1)
+      break;
+
+    const block = extractBlockContent(txt, braceIdx);
     if (!block)
+    {
+      cursor = braceIdx + 1;
       continue;
-
-    re.lastIndex = block.lastIndex + 1;
+    }
 
     const body = block.content;
+    cursor = block.endIndex + 1;
 
-    const keyMatch = /key\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
-    if (!keyMatch)
+    const keyM = /key\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
+    if (!keyM)
       continue;
-    const key = unescapeLuaString(keyMatch[2]);
+    const key = unescapeLuaString(keyM[2]);
 
-    const atlasMatch = /atlas\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
-    const atlas = atlasMatch ? unescapeLuaString(atlasMatch[2]) : null;
+    const atlasM = /atlas\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
+    const atlas = atlasM ? unescapeLuaString(atlasM[2]) : null;
 
-    const posMatch = /pos\s*=\s*{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
-    const pos = posMatch ? { x: +posMatch[1], y: +posMatch[2] } : null;
+    const posM = /pos\s*=\s*{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
+    const pos = posM ? { x: +posM[1], y: +posM[2] } : null;
 
     out.push({ type, key, atlas, pos, raw: body.trim() });
   }
