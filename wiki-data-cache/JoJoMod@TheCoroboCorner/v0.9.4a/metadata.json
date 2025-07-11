@@ -845,36 +845,31 @@
       "path": "attributes.png",
       "px": 71,
       "py": 95,
-      "resolvedGitHubPath": "JoJoMod/assets/2x/attributes.png",
-      "localPath": "/wiki-data/JoJoMod@TheCoroboCorner/v0.9.4a/attributes.png"
+      "resolvedGitHubPath": "JoJoMod/assets/2x/attributes.png"
     },
     "stands": {
       "path": "jokers.png",
       "px": 71,
       "py": 95,
-      "resolvedGitHubPath": "JoJoMod/assets/2x/jokers.png",
-      "localPath": "/wiki-data/JoJoMod@TheCoroboCorner/v0.9.4a/jokers.png"
+      "resolvedGitHubPath": "JoJoMod/assets/2x/jokers.png"
     },
     "items": {
       "path": "items.png",
       "px": 71,
       "py": 95,
-      "resolvedGitHubPath": "JoJoMod/assets/2x/items.png",
-      "localPath": "/wiki-data/JoJoMod@TheCoroboCorner/v0.9.4a/items.png"
+      "resolvedGitHubPath": "JoJoMod/assets/2x/items.png"
     },
     "modicon": {
       "path": "jojo_icon.png",
       "px": 34,
       "py": 34,
-      "resolvedGitHubPath": "JoJoMod/assets/2x/jojo_icon.png",
-      "localPath": "/wiki-data/JoJoMod@TheCoroboCorner/v0.9.4a/jojo_icon.png"
+      "resolvedGitHubPath": "JoJoMod/assets/2x/jojo_icon.png"
     },
     "decks": {
       "path": "decks.png",
       "px": 71,
       "py": 95,
-      "resolvedGitHubPath": "JoJoMod/assets/2x/decks.png",
-      "localPath": "/wiki-data/JoJoMod@TheCoroboCorner/v0.9.4a/decks.png"
+      "resolvedGitHubPath": "JoJoMod/assets/2x/decks.png"
     }
   },
   "cards": [
