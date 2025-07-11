@@ -595,7 +595,7 @@ function unescapeLuaString(str)
 
 function parseAllEntities(txt) {
   const out = [];
-  const re = /SMODS\.([A-Za-z0-9_]+)\s*{([\s\S]*?)}/g;
+  const re = /SMODS\.([A-Z][A-Za-z0-9_]*)\s*\{/g;
   let m;
 
   while ((m = re.exec(txt)))
@@ -608,6 +608,8 @@ function parseAllEntities(txt) {
     const block = extractBlockContent(txt, blockStart);
     if (!block)
       continue;
+
+    re.lastIndex = block.lastIndex + 1;
 
     const body = block.content;
 
@@ -623,8 +625,6 @@ function parseAllEntities(txt) {
     const pos = posMatch ? { x: +posMatch[1], y: +posMatch[2] } : null;
 
     out.push({ type, key, atlas, pos, raw: body.trim() });
-
-    re.lastIndex = block.endIndex + 1;
   }
 
   return out;
