@@ -150,26 +150,4 @@ export async function backupMetadata(modKey, versionTag) {
   {
     console.error(`[Github Backup] Failed to backup metadata for ${modKey} v${versionTag}:`, error);
   }
-
-  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${repoPath}`;
-  const resp = await fetch(url, {
-    method: 'PUT',
-    headers: {
-      Authorization: `token ${TOKEN}`,
-      Accept: 'application/vnd.github.v3+json'
-    },
-    body: JSON.stringify({
-      message: `Backup wiki cache for ${modKey} @ ${new Date().toISOString()}`,
-      content: 'base64',
-      sha: existingSha || undefined
-    })
-  });
-
-  if (!resp.ok)
-  {
-    const err = await resp.text();
-    throw new Error(`GitHub PUT ${repoPath} failed (${resp.status}): ${err}`);
-  }
-  const data = await resp.json();
-  console.log(`Backed up ${repoPath} to commit`, data.content.html_url);
 }
