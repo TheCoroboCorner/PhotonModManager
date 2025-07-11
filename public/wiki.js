@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
+  const modTitle = document.getElementById('mod-name');
   const detailElement = document.getElementById('detail');
   if (!detailElement)
   {
@@ -6,12 +7,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     alert('An unexpected error occurred: UI element missing.');
     return;
   }
+  detailElement.textContent = "Loading cards..."
 
   const params = new URLSearchParams(location.search);
   const modKey = params.get('mod');
   if (!modKey)
   {
-    document.getElementById('detail').textContent = 'No mod specified';
+    detailElement.textContent = 'No mod specified';
     return;
   }
   const [repo, owner] = modKey.split('@');
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     {
       const errorText = await wikiDataRes.text();
       console.error(`Failed to fetch wiki data from ${wikiDataUrl}: ${wikiDataRes.status} - ${errorText}`);
-      document.getElementById('detail').textContent = `Error: Could not load wiki data from server.`;
+      detailElement.textContent = `Error: Could not load wiki data from server.`;
       return;
     }
 
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   catch (err)
   {
     console.error('[Client] Network error fetching wiki data:', err);
-    document.getElementById('detail').textContent = 'Error: Network issue fetching wiki data from server.';
+    detailElement.textContent = 'Error: Network issue fetching wiki data from server.';
     return;
   }
 
@@ -112,6 +114,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const title   = document.getElementById('card-title');
   const locP    = document.getElementById('loc-text');
   const rawPre  = document.getElementById('raw-def');
+
+  modTitle.textContent = repo;
+  detailElement.textContent = "Select a Card"
 
   function showCard(idx)
   {
