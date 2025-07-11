@@ -160,5 +160,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     {
       sprite.style.display = 'none';
     }
+
+    console.log('CARD:', c);
+    console.log(' atlas key:', c.atlas);
+    console.log(' atlasDef:', atlasDefs[c.atlas]);
   }
 });
