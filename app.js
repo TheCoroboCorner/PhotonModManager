@@ -558,30 +558,48 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       card.infoQueue = [];
 
       const lvIdx = card.raw.indexOf('loc_vars');
-      if (lvIdx !== -1)
+      if (lvIdx === -1)
+        console.log(`[loc_vars] (skip) no loc_vars for ${card.key}`);
+      else
       {
         const fnKeywordIdx = card.raw.indexOf('function', lvIdx);
-        const braceIdx = card.raw.indexOf('{', fnKeywordIdx);
-        const fnBlock = extractBlockContent(card.raw, braceIdx);
-        if (fnBlock)
+        if (fnKeywordIdx === -1)
+          console.warn(`[loc_vars] loc_vars but no "function" keyword for ${card.key}`);
+        else
         {
-          const fnBody = fnBlock.content;
-          const locVarsFn = new Function('self', 'info_queue', 'card', fnBody);
+          const braceIdx = card.raw.indexOf('{', fnKeywordIdx);
+          if (braceIdx === -1)
+            console.warn(`[loc_vars] loc_vars function has no "{" for ${card.key}`);
+          else
+          {
+            const fnBlock = extractBlockContent(card.raw, braceIdx);
+            if (!fnBlock)
+              console.warn(`[loc_vars] Couldn't match braces in loc_vars for ${card.key}`);
+            else
+            {
+              const fnBody = fnBlock.content;
+              console.log(`[loc_vars] loc_vars fnBody for ${card.key}:\n`, fnBody);
 
-          try
-          {
-            const result = locVarsFn({}, card.infoQueue, card);
-            if (result && Array.isArray(result.vars))
-              card.vars = result.vars;
-          }
-          catch (err)
-          {
-            console.warn(`loc_vars execution failed for ${card.key}:`, e);
+              try
+              {
+                const locVarsFn = new Function('self', 'info_queue', 'card', fnBody);
+                const result = locVarsFn({}, card.infoQueue, card);
+
+                if (result && Array.isArray(result.vars))
+                {
+                  card.vars = result.vars;
+                  console.log(`[loc_vars] → card.vars for ${card.key}:`, card.vars);
+                }
+                else console.log(`→ loc_vars for ${card.key} returned no vars`);
+              }
+              catch (err)
+              {
+                console.error(`⚠ loc_vars compile/exec error for ${card.key}:`, e);
+              }
+            }
           }
         }
-        else console.warn(`Could not extract loc_vars body for ${card.key}`);
       }
-      else console.warn(`No loc_vars found in raw for ${card.key}`);
     }
 
     const finalDataForCache = { locMap, atlases: atlasDefs, cards, version: latestTag || 'no-tag' };
