@@ -594,7 +594,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
               }
               catch (err)
               {
-                console.error(`⚠ loc_vars compile/exec error for ${card.key}:`, e);
+                console.error(`⚠ loc_vars compile/exec error for ${card.key}:`, err);
               }
             }
           }
