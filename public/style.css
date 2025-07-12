@@ -332,6 +332,34 @@ textarea:-webkit-autofill:focus {
   margin: 1rem;
 }
 
+@keyframes popin {
+  0% { 
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.motion-popin {
+  display: inline-block;
+  animation: popin .3s ease-out;
+}
+
+@keyframes bump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-.2em);
+  }
+}
+.motion-bump {
+  display: inline-block;
+  animation: bump .6s ease-in-out;
+}
+
 @media only screen and (max-width: 800px) {
   .flex {
     flex-wrap: wrap;
