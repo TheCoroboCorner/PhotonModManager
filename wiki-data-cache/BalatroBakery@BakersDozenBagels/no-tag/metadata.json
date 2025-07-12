@@ -1,0 +1,1409 @@
+{
+  "locMap": {
+    "j_Bakery_Tarmogoyf": {
+      "name": "Tarmogoyf",
+      "text": [
+        "{C:red}+#1#{} Mult for each {C:attention}unique{}",
+        "rank discarded this {C:attention}round",
+        "{C:inactive}(Currently {C:red}+#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Auctioneer": {
+      "name": "Auctioneer",
+      "text": [
+        "When {C:attention}Blind{} is selected",
+        "{C:money}sells{} Joker to the right",
+        "for {C:attention}#1#x{} its sell value"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Don": {
+      "name": "Don",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "Lose {C:money}$#2#{} per played hand"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Werewolf": {
+      "name": "Werewolf (Day)",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "{C:attention}Transform{} this Joker",
+        "at end of round if",
+        "{C:attention}no discards{} were used"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Werewolf_Back": {
+      "name": "Werewolf (Night)",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "{C:attention}Transform{} this Joker",
+        "at end of round",
+        "if {C:attention}2 or more",
+        "{C:attention}discards{} were used"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Spinner": {
+      "name": "Spinner",
+      "text": [
+        "Gives the {C:attention}bottom{} bonus",
+        "Rotates {C:attention}clockwise",
+        "at end of {C:attention}round"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Proxy": {
+      "name": "Proxy",
+      "text": [
+        "Copies ability of most",
+        "recently purchased {C:attention}Joker{}",
+        "{C:inactive}(Currently {C:attention}#1#{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_StickerSheet": {
+      "name": "Sticker Sheet",
+      "text": [
+        "Each {C:attention}stickered{} Joker",
+        "gives {X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_PlayingCard": {
+      "name": "1 of Spades",
+      "text": [
+        "Gives {C:mult}Mult{} and {C:chips}Chips",
+        "of {C:attention}High Card"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_PlayingCard11": {
+      "name": "11 of Spades",
+      "text": [
+        "Gives {C:mult}Mult{} and {C:chips}Chips",
+        "of {C:attention}Pair"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_EvilSteven": {
+      "name": "Evil Steven",
+      "text": [
+        "{C:red}Destroys{} all scored cards",
+        "with {C:attention}even{} rank",
+        "{C:inactive}(2, 4, 6, 8, 10)"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_AwfulTodd": {
+      "name": "Awful Todd",
+      "text": [
+        "{C:red}Destroys{} all scored cards",
+        "with {C:attention}odd{} rank",
+        "{C:inactive}(A, 3, 5, 7, 9)"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_JokerAgainstHumanity": {
+      "name": "Joker Against Humanity",
+      "text": [
+        "Gains {C:mult}+#1#{} Mult when played",
+        "{C:attention}poker hand{} is {C:attention}level 1{}",
+        "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult){}"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_CardSleeve": {
+      "name": "Card Sleeve",
+      "text": [
+        "{C:attention}Holds{} one",
+        "playing card"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_BongardProblem": {
+      "name": "Bongard Problem",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult if",
+        "leftmost and rightmost",
+        "scoring cards are",
+        "different {C:attention}suits"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_CoinSlot": {
+      "name": "Coin Slot",
+      "text": [
+        "Gains {C:mult}+#1#{} Mult",
+        "per {C:money}$#2#{} put",
+        "into the slot",
+        "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Pyrite": {
+      "name": "Pyrite",
+      "text": [
+        "Draw {C:attention}#1#{} extra cards",
+        "in {C:attention}first hand{} of round"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Snowball": {
+      "name": "Snowball",
+      "text": [
+        "Gains {X:mult,C:white}X#1#{} Mult",
+        "when {C:attention}Blind{} is selected",
+        "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_GetOutOfJailFreeCard": {
+      "name": "Get Out of Jail Free Card",
+      "text": [
+        "{C:attention}Use{} to get {X:mult,C:white}X#1#{} Mult for {C:attention}one hand",
+        "{C:inactive}This card may be kept",
+        "{C:inactive}until needed or sold"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_TransparentBackBuffer": {
+      "name": "Transparent Back Buffer",
+      "text": [
+        "{C:mult}+#1#{} Mult per scored card",
+        "if played hand alternates",
+        "{C:attention}red{} and {C:attention}black{} suits"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_TierList": {
+      "name": "Tier List",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult for each {C:attention}unique",
+        "{C:attention}rarity{} among your {C:attention}Jokers{}",
+        "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_Tag": {
+      "name": "Tag",
+      "text": [
+        "{C:attention}Tags{} give {X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_Bakery_GlassCannon": {
+      "name": "Glass Cannon",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "{C:red}Self-destructs{} if Mult is",
+        "{C:attention}at least #2#{} afterwards"
+      ],
+      "type": "Joker"
+    },
+    "tag_Bakery_RetriggerTag": {
+      "name": "Retrigger Tag",
+      "text": [
+        "Shop has a free",
+        "{C:dark_edition}Retrigger Joker"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_ChocolateTag": {
+      "name": "Chocolate Tag",
+      "text": [
+        "Gives {C:chips}+#1# Chips{} and",
+        "{C:mult}+#2# Mult{} when scored",
+        "{C:chips}-#3# Chips{} and {C:mult}-#4# Mult{0}",
+        "for every hand played"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_PolyTag": {
+      "name": "Poly Tag",
+      "text": [
+        "Gives {X:mult,C:white}X#1#{} Mult when scored",
+        "Lasts {C:attention}1{} round"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_PennyTag": {
+      "name": "Penny Tag",
+      "text": [
+        "Scored cards give {C:money}$#1#",
+        "for the next {C:attention}#2#{} hands"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_BlankTag": {
+      "name": "Blank Tag",
+      "text": [
+        "{C:inactive}Does nothing?"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_AntiTag": {
+      "name": "Anti Tag",
+      "text": [
+        "{C:dark_edition}+1{} Joker slot"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_CharmTag": {
+      "name": "Equip Tag",
+      "text": [
+        "Adds two {C:attention}Charms",
+        "to the next shop"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_DownTag": {
+      "name": "Down Tag",
+      "text": [
+        "Disables effect of",
+        "next {C:attention}Boss Blind"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_UpTag": {
+      "name": "Up Tag",
+      "text": [
+        "{C:attention}Retrigger{} all scored",
+        "cards for the next",
+        "{C:attention}#1#{} hands"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_AlertTag": {
+      "name": "Alert Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_GoldTag": {
+      "name": "Gold Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_BatteryTag": {
+      "name": "Battery Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_RockTag": {
+      "name": "Rock Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_EqualTag": {
+      "name": "Equal Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_RouletteTag": {
+      "name": "Roulette Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_BlueTag": {
+      "name": "Blue Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_RedTag": {
+      "name": "Red Tag",
+      "text": [
+        "Enhances next {C:attention}#1#",
+        "scored cards to",
+        "{C:attention}#2#"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_StrangeTag": {
+      "name": "Strange Tag",
+      "text": [],
+      "type": "Tag"
+    },
+    "tag_Bakery_TopTag": {
+      "name": "Top Tag",
+      "text": [
+        "Gives {C:money}$1{} per",
+        "card in your deck",
+        "{C:inactive}(Will give {C:money}$#1#{C:inactive})"
+      ],
+      "type": "Tag"
+    },
+    "tag_Bakery_BottomTag": {
+      "name": "Bottom Tag",
+      "text": [
+        "Gives {C:money}$10{} per",
+        "empty Joker slot",
+        "{C:inactive}(Will give {C:money}$#1#{C:inactive})"
+      ],
+      "type": "Tag"
+    },
+    "b_Bakery_Violet": {
+      "name": "Violet Deck",
+      "text": [
+        "Gives {X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Back"
+    },
+    "b_Bakery_House": {
+      "name": "House Deck",
+      "text": [
+        "Each played card has a",
+        "{C:green}#1# in #2#{} chance",
+        "to change rank and suit",
+        "after a hand is scored"
+      ],
+      "type": "Back"
+    },
+    "b_Bakery_Credit": {
+      "name": "Credit Deck",
+      "text": [
+        "Start with extra {C:money}$#1#{}",
+        "Earn {C:red}no money{}",
+        "from any source"
+      ],
+      "type": "Back"
+    },
+    "sleeve_Bakery_Violet": {
+      "name": "Violet Sleeve",
+      "text": [
+        "Gives {X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Sleeve"
+    },
+    "sleeve_Bakery_House": {
+      "name": "House Sleeve",
+      "text": [
+        "Each played card has a",
+        "{C:green}#1# in #2#{} chance",
+        "to change rank and suit",
+        "after a hand is scored"
+      ],
+      "type": "Sleeve"
+    },
+    "sleeve_Bakery_House_alt": {
+      "name": "House Sleeve",
+      "text": [
+        "Cards are {C:green}twice{} as",
+        "likely to change and",
+        "can gain modifications"
+      ],
+      "type": "Sleeve"
+    },
+    "sleeve_Bakery_Credit": {
+      "name": "Credit Sleeve",
+      "text": [
+        "Start with extra {C:money}$#1#{}",
+        "Earn {C:red}no money{}",
+        "from any source"
+      ],
+      "type": "Sleeve"
+    },
+    "sleeve_Bakery_Credit_alt": {
+      "name": "Credit Sleeve",
+      "text": [
+        "Start with extra {C:money}$#1#{}",
+        "Lose {C:red}$1{} per card played"
+      ],
+      "type": "Sleeve"
+    },
+    "bl_Bakery_Aleph": {
+      "name": "The Leader",
+      "text": [
+        "-1 Hand",
+        "-1 Discard"
+      ],
+      "type": "Blind"
+    },
+    "bl_Bakery_Tsadi": {
+      "name": "The Attrition",
+      "text": [
+        "{C:red}-#1#{} Mult",
+        "before scoring"
+      ],
+      "type": "Blind"
+    },
+    "bl_Bakery_He": {
+      "name": "The Solo",
+      "text": [
+        "Only {C:attention}one",
+        "card scores"
+      ],
+      "type": "Blind"
+    },
+    "bl_Bakery_Qof": {
+      "name": "The Witch",
+      "text": [
+        "Adds {C:attention}#1#{} {C:purple}Curses",
+        "to your deck"
+      ],
+      "type": "Blind"
+    },
+    "bl_Bakery_Kaf": {
+      "name": "The Build",
+      "text": [
+        "No base Chips"
+      ],
+      "type": "Blind"
+    },
+    "bl_Bakery_Samekh": {
+      "name": "The Ruler",
+      "text": [
+        "Cards with no rank",
+        "or suit are debuffed"
+      ],
+      "type": "Blind"
+    },
+    "bl_Bakery_Lammed": {
+      "name": "The Stoic",
+      "text": [
+        "Charm is debuffed"
+      ],
+      "type": "Blind"
+    },
+    "c_Bakery_Astrology": {
+      "name": "Astrology",
+      "text": [
+        "{C:money}Sell{} all {C:attention}hand levels",
+        "for {C:money}$#1#{} each"
+      ],
+      "type": "Spectral"
+    },
+    "c_Bakery_TimeMachine": {
+      "name": "Time Machine",
+      "text": [
+        "Enhances {C:attention}#1#{} selected",
+        "card into a {C:attention}#2#"
+      ],
+      "type": "Spectral"
+    },
+    "c_Bakery_Boids": {
+      "name": "Boids",
+      "text": [
+        "Converts up to {C:attention}#1#{} selected",
+        "cards into the {C:attention}same",
+        "random {C:attention}suit {}and {C:attention}rank"
+      ],
+      "type": "Spectral"
+    },
+    "c_Bakery_Scribe": {
+      "name": "The Scribe",
+      "text": [
+        "Create {C:attention}#1#{} {C:dark_edition}Carbon{}",
+        "copy of {C:attention}#2#{} selected",
+        "{C:attention}playing card{} or {C:attention}Joker",
+        "{C:inactive}(Must have room)",
+        "{C:inactive}(Removes {C:eternal}Eternal{C:inactive} from copy)"
+      ],
+      "type": "Tarot"
+    },
+    "m_Bakery_TimeWalk": {
+      "name": "Time Walk",
+      "text": [
+        "{C:blue}+#1#{} Hand",
+        "No rank or suit"
+      ],
+      "type": "Enhanced"
+    },
+    "m_Bakery_Curse": {
+      "name": "Curse",
+      "text": [
+        "No rank or suit"
+      ],
+      "type": "Enhanced"
+    },
+    "e_Bakery_Carbon": {
+      "name": "Carbon",
+      "text": [
+        "{C:red}Self-destructs",
+        "after scoring"
+      ],
+      "type": "Edition"
+    },
+    "BakeryCharm_Bakery_Palette": {
+      "name": "Palette",
+      "text": [
+        "{C:attention}Flushes{} may be made",
+        "with at least",
+        "{C:attention}4 suits"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_AnaglyphLens": {
+      "name": "Anaglyph Lens",
+      "text": [
+        "Poker hands are determined",
+        "as though the {C:attention}first{} card",
+        "had been {C:attention}duplicated"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Pedigree": {
+      "name": "Pedigree",
+      "text": [
+        "{C:attention}Full Houses{} may be",
+        "made with {C:attention}suits{}",
+        "{C:inactive}(in addition to {C:attention}ranks{C:inactive})"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Epitaph": {
+      "name": "Epitaph",
+      "text": [
+        "{C:attention}Unscored{} played cards",
+        "give {X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Rune": {
+      "name": "Rune",
+      "text": [
+        "You can {C:attention}discard",
+        "{C:attention}0 cards{} to draw",
+        "{C:attention}#1#{} extra cards"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Obsession": {
+      "name": "Obsession",
+      "text": [
+        "You can {C:attention}discard",
+        "{C:attention}0 cards{} to",
+        "earn {C:money}$#1#{}"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Introversion": {
+      "name": "Introversion",
+      "text": [
+        "{C:attention}Jokers{} do not",
+        "appear in the shop"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Extroversion": {
+      "name": "Extroversion",
+      "text": [
+        "{C:attention}Tarot{} and {C:attention}Planet{} cards",
+        "do not appear in the shop"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Coin": {
+      "name": "Coin",
+      "text": [
+        "{C:attention}Interest{} is earned",
+        "for every {C:money}$#1#",
+        "{C:inactive}(instead of every {C:money}$5{C:inactive})"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Void": {
+      "name": "Void",
+      "text": [
+        "{C:dark_edition}Negative{} cards appear",
+        "{X:dark_edition,C:white}#1#X{} as often"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_PrintError": {
+      "name": "Print Error",
+      "text": [
+        "Printers print twice"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Posterization": {
+      "name": "Posterization",
+      "text": [
+        "{C:colourcard}Colour{} cards only",
+        "take {C:attention}half{} a slot"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Marm": {
+      "name": "Marm",
+      "text": [
+        "Every hand is a {C:attention}Pair{}",
+        "Every {C:attention}played card",
+        "counts in scoring"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_DuctTape": {
+      "name": "Duct Tape",
+      "text": [
+        "{C:common}Common{} and {C:uncommon}Uncommon",
+        "{C:attention}Jokers{} don't appear",
+        "{C:red}Cannot be removed"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Virus": {
+      "name": "Virus",
+      "text": [
+        "{C:green}Infects{} a random uninfected",
+        "card held in hand after scoring"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_PetriDish": {
+      "name": "Petri Dish",
+      "text": [
+        "{C:attention}+#1#{} consumable slots"
+      ],
+      "type": "BakeryCharm"
+    },
+    "BakeryCharm_Bakery_Cogwheel": {
+      "name": "Cogwheel",
+      "text": [
+        "{C:attention}-#1#{} Antes,",
+        "{C:attention}-#2#{} card in shop"
+      ],
+      "type": "BakeryCharm"
+    },
+    "Bakery_charm": {
+      "name": "Charm",
+      "text": [
+        "Only one Charm may",
+        "be equipped at a time,",
+        "purchasing a new Charm",
+        "replaces an old one"
+      ],
+      "type": "Other"
+    },
+    "undiscovered_bakerycharm": {
+      "name": "Undiscovered",
+      "text": [
+        "Equip this Charm",
+        "in an unseeded run",
+        "to learn what it does"
+      ],
+      "type": "Other"
+    },
+    "c_Bakery_Balanced": {
+      "name": "\"Balanced\"",
+      "text": [],
+      "type": "challenge_names"
+    },
+    "c_Bakery_Vagabond": {
+      "name": "\"Vagabond\"",
+      "text": [],
+      "type": "challenge_names"
+    },
+    "c_Bakery_Sprint": {
+      "name": "\"Sprint\"",
+      "text": [],
+      "type": "challenge_names"
+    },
+    "b_Bakery_store": {
+      "name": "\"STORE\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_Bakery_return": {
+      "name": "\"GET\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_Bakery_shattered": {
+      "name": "\"Shattered!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_Bakery_charm": {
+      "name": "\"Charm\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_Bakery_charms": {
+      "name": "\"Charms\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_Bakery_double_tags": {
+      "name": "\"Double Tags\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_bakerycharm": {
+      "name": "\"Charm\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_Bakery_equip": {
+      "name": "\"EQUIP\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_Bakery_ante": {
+      "name": "\"(Ante)\"\n        ",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_Bakery_deposit": {
+      "name": "\"DEPOSIT $#1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "b_Bakery_ante_times": {
+      "name": "\"(Ante*#1#)\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "v_Bakery_artist": {
+      "name": "\"Art: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "v_Bakery_coder": {
+      "name": "\"Code: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "v_Bakery_idea": {
+      "name": "\"Idea: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "v_Bakery_by": {
+      "name": "\"Made by: #1#\"\n        ",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Bakery_Carbon": {
+      "name": "\"Carbon\"\n        ",
+      "text": [],
+      "type": "labels"
+    },
+    "Bakery_StuffedHouse": {
+      "name": "\"Stuffed House\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_StuffedFlush": {
+      "name": "\"Stuffed Flush\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_StraightHouse": {
+      "name": "\"Harem\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_StraightFlushHouse": {
+      "name": "\"Flush Harem\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_RoyalFlushHouse": {
+      "name": "\"Royal Harem\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_SixOfAKind": {
+      "name": "\"Six Of A Kind\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_FlushSix": {
+      "name": "\"Flush Six\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_ThreePair": {
+      "name": "\"Three Pair\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_FlushThreePair": {
+      "name": "\"Flush Three Pair\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_TwoTriplets": {
+      "name": "\"Two Triplets\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_FlushTriplets": {
+      "name": "\"Flush Triplets\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Bakery_FlushMansion": {
+      "name": "\"Flush Mansion\"       -- Flush & Four of a Kind & Pair\n        ",
+      "text": [],
+      "type": "poker_hands"
+    }
+  },
+  "atlases": {
+    "BakeryBack": {
+      "path": "BakeryBack.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryBack.png",
+      "resolvedGitHubPath": "assets/1x/BakeryBack.png"
+    },
+    "BakerySleeves": {
+      "path": "BakerySleeves.png",
+      "px": 73,
+      "py": 95,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakerySleeves.png",
+      "resolvedGitHubPath": "assets/1x/BakerySleeves.png"
+    },
+    "BakeryBlinds": {
+      "path": "BakeryBlinds.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryBlinds.png",
+      "resolvedGitHubPath": "assets/1x/BakeryBlinds.png"
+    },
+    "CharmsUtil": {
+      "path": "BakeryCharmsUtil.png",
+      "px": 68,
+      "py": 68,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryCharmsUtil.png",
+      "resolvedGitHubPath": "assets/1x/BakeryCharmsUtil.png"
+    },
+    "Charms": {
+      "path": "BakeryCharms.png",
+      "px": 68,
+      "py": 68,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryCharms.png",
+      "resolvedGitHubPath": "assets/1x/BakeryCharms.png"
+    },
+    "BakeryConsumables": {
+      "path": "BakeryConsumables.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryConsumables.png",
+      "resolvedGitHubPath": "assets/1x/BakeryConsumables.png"
+    },
+    "BakeryEnhancements": {
+      "path": "BakeryEnhancements.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryEnhancements.png",
+      "resolvedGitHubPath": "assets/1x/BakeryEnhancements.png"
+    },
+    "Bakery": {
+      "path": "Bakery.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//Bakery.png",
+      "resolvedGitHubPath": "assets/1x/Bakery.png"
+    },
+    "BakeryJokerAgainstHumanity": {
+      "path": "BakeryJokerAgainstHumanity.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryJokerAgainstHumanity.png",
+      "resolvedGitHubPath": "assets/1x/BakeryJokerAgainstHumanity.png"
+    },
+    "modicon": {
+      "path": "Icon.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//Icon.png",
+      "resolvedGitHubPath": "assets/1x/Icon.png"
+    },
+    "BakeryTags": {
+      "path": "BakeryTags.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryTags.png",
+      "resolvedGitHubPath": "assets/1x/BakeryTags.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "BakeryBack",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakeryBack\",\n    path = \"BakeryBack.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Back",
+      "key": "Violet",
+      "atlas": "BakeryBack",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"Violet\",\n    name = \"Violet\",\n    config = {\n        extra = {\n            x_mult = 2\n        }\n    },\n    atlas = \"BakeryBack\",\n    pos = {\n        x = 0,\n        y = 0\n    },\n    unlocked = false,\n    discovered = false,\n    check_for_unlock = function(self, args)\n        return Bakery_API.defeated_blinds['bl_final_vessel'] > 0\n    end,\n    locked_loc_vars = function(self, args)\n        if G.P_BLINDS['bl_final_vessel'].discovered then\n            return {\n                vars = {localize {\n                    type = 'name_text',\n                    key = 'bl_final_vessel',\n                    set = \"Blind\"\n                }}\n            }\n        end\n        return {\n            vars = {localize('k_unknown')}\n        }\n    end,\n    loc_vars = function(self, info_queue, back)\n        return {\n            vars = {self.config.extra.x_mult}\n        }\n    end,\n    calculate = function(self, back, args)\n        if args.context == 'final_scoring_step' then\n            args.mult = args.mult * self.config.extra.x_mult\n\n            local skip = Talisman and Talisman.config_file and Talisman.config_file.disable_anims\n\n            update_hand_text({\n                delay = 0\n            }, {\n                mult = args.mult\n            })\n            if not skip then\n                G.E_MANAGER:add_event(Event {\n                    trigger = 'before',\n                    delay = 0.8125,\n                    func = function()\n                        attention_text {\n                            text = localize {\n                                type = 'variable',\n                                key = 'a_xmult',\n                                vars = {self.config.extra.x_mult}\n                            },\n                            scale = 1.4,\n                            hold = 2,\n                            offset = {\n                                x = 0,\n                                y = -2.7\n                            },\n                            major = G.play\n                        }\n                        play_sound('multhit2', 0.845 + 0.04 * math.random(), 0.7)\n                        G.ROOM.jiggle = G.ROOM.jiggle + 0.7\n                        return true\n                    end\n                })\n            end\n\n            return args.chips, args.mult\n        end\n    end"
+    },
+    {
+      "type": "Back",
+      "key": "House",
+      "atlas": "BakeryBack",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"House\",\n    name = \"House\",\n    config = {\n        extra = {\n            odds_bottom = 4\n        }\n    },\n    atlas = \"BakeryBack\",\n    pos = {\n        x = 1,\n        y = 0\n    },\n    unlocked = false,\n    discovered = false,\n    check_for_unlock = function(self, args)\n        return get_deck_win_stake('b_erratic') > 0\n    end,\n    locked_loc_vars = function(self, back)\n        if G.P_CENTERS['b_erratic'].discovered then\n            return {\n                vars = {localize {\n                    type = 'name_text',\n                    key = 'b_erratic',\n                    set = \"Back\"\n                }}\n            }\n        end\n        return {\n            vars = {localize('k_unknown')}\n        }\n    end,\n    loc_vars = function(self)\n        return {\n            vars = {(G.GAME and G.GAME.probabilities.normal or 1) * (is_double_house() and 2 or 1),\n                    self.config.extra.odds_bottom}\n        }\n    end,\n    calculate = function(self, back, args)\n        if args.context == 'final_scoring_step' then\n            local anim = {}\n\n            local double = is_double_house()\n\n            for i = 1, #G.play.cards do\n                local choice = pseudorandom(pseudoseed(\"HouseDeck\"), 0, self.config.extra.odds_bottom)\n                if double then\n                    choice = choice / 2\n                end\n                if choice <= (G.GAME and G.GAME.probabilities.normal or 1) then\n                    table.insert(anim, G.play.cards[i])\n                end\n            end\n\n            if #anim == 0 then\n                return\n            end\n\n            G.E_MANAGER:add_event(Event({\n                trigger = 'after',\n                delay = 0.4,\n                func = function()\n                    play_sound('tarot1')\n                    return true\n                end\n            }))\n            for i = 1, #anim do\n                local percent = 1.15 - (i - 0.999) / (#anim - 0.998) * 0.3\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'after',\n                    delay = 0.15,\n                    func = function()\n                        anim[i]:flip();\n                        play_sound('card1', percent);\n                        anim[i]:juice_up(0.3, 0.3);\n                        return true\n                    end\n                }))\n            end\n\n            delay(0.2)\n\n            for i = 1, #anim do\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'after',\n                    delay = 0.1,\n                    func = function()\n                        local card = anim[i]\n                        local rank = pseudorandom_element(SMODS.Ranks, pseudoseed(\"HouseDeck\")).card_key\n                        local suit = pseudorandom_element(SMODS.Suits, pseudoseed(\"HouseDeck\")).card_key\n                        card:set_base(G.P_CARDS[suit .. \"_\" .. rank])\n                        if double then\n                            if not card.edition then\n                                local ed = poll_edition(\"HouseDeck\", nil, true)\n                                if ed then\n                                    card:set_edition(ed)\n                                end\n                            end\n                            if card.ability.name == G.P_CENTERS.c_base.name then\n                                local en = SMODS.poll_enhancement {\n                                    type_key = \"HouseDeck\"\n                                }\n                                if en then\n                                    card:set_ability(G.P_CENTERS[en])\n                                end\n                            end\n                            if not card:get_seal(true) then\n                                local se = SMODS.poll_seal {\n                                    type_key = \"HouseDeck\"\n                                }\n                                if se then\n                                    card:set_seal(se)\n                                end\n                            end\n                        end\n                        return true\n                    end\n                }))\n                local percent = 0.85 + (i - 0.999) / (#anim - 0.998) * 0.3\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'after',\n                    delay = 0.15,\n                    func = function()\n                        anim[i]:flip();\n                        play_sound('tarot2', percent, 0.6);\n                        anim[i]:juice_up(0.3, 0.3);\n                        return true\n                    end\n                }))\n            end\n\n            delay(0.7)\n        end\n    end"
+    },
+    {
+      "type": "Back",
+      "key": "Credit",
+      "atlas": "Joker",
+      "pos": {
+        "x": 5,
+        "y": 1
+      },
+      "raw": "key = \"Credit\",\n    name = \"Credit\",\n    config = {\n        dollars = 200,\n        no_interest = true\n    },\n    atlas = \"Joker\",\n    prefix_config = {\n        atlas = false\n    },\n    pos = {\n        x = 5,\n        y = 1\n    },\n    unlocked = false,\n    discovered = false,\n    check_for_unlock = function(self, args)\n        return get_deck_win_stake('b_yellow') > 3\n    end,\n    locked_loc_vars = function(self, back)\n        if G.P_CENTERS['b_yellow'].discovered then\n            return {\n                vars = {\n                    localize {\n                        type = 'name_text',\n                        key = 'b_yellow',\n                        set = \"Back\"\n                    },\n                    localize {\n                        type = 'name_text',\n                        set = 'Stake',\n                        key = 'stake_black'\n                    },\n                    colours = {G.C.BLACK}\n                }\n            }\n        end\n        return {\n            vars = {\n                localize('k_unknown'),\n                localize {\n                    type = 'name_text',\n                    set = 'Stake',\n                    key = 'stake_black'\n                },\n                colours = {G.C.BLACK}\n            }\n        }\n    end,\n    loc_vars = function(self, info_queue, back)\n        return {\n            vars = {self.config.dollars}\n        }\n    end,\n    apply = function(self, back)\n        G.GAME.modifiers.no_blind_reward = {\n            Small = true,\n            Big = true,\n            Boss = true\n        }\n        G.GAME.modifiers.no_extra_hand_money = true\n        for _, k in ipairs(Bakery_API.econ_only_items) do\n            G.GAME.banned_keys[k] = true\n        end\n    end"
+    },
+    {
+      "type": "Atlas",
+      "key": "BakerySleeves",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakerySleeves\",\n        path = \"BakerySleeves.png\",\n        px = 73,\n        py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "BakeryBlinds",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakeryBlinds\",\n    path = \"BakeryBlinds.png\",\n    px = 34,\n    py = 34,\n    atlas_table = 'ANIMATION_ATLAS',\n    frames = 21"
+    },
+    {
+      "type": "Blind",
+      "key": "Aleph",
+      "atlas": "BakeryBlinds",
+      "pos": null,
+      "raw": "key = \"Aleph\", -- The Leader\n    atlas = \"BakeryBlinds\",\n    boss = {\n        min = 3,\n        max = 0\n    },\n    boss_colour = HEX('a9e74b'),\n    -- -1 Hand, -1 Discard\n    set_blind = function(self)\n        ease_discard(-1)\n        ease_hands_played(-1)\n    end,\n    disable = function(self)\n        ease_discard(1)\n        ease_hands_played(1)\n    end"
+    },
+    {
+      "type": "Blind",
+      "key": "Tsadi",
+      "atlas": "BakeryBlinds",
+      "pos": null,
+      "raw": "key = \"Tsadi\", -- The Attrition\n    atlas = \"BakeryBlinds\",\n    pos = {\n        y = 1\n    },\n    boss = {\n        min = 3,\n        max = 0\n    },\n    boss_colour = HEX('ff004b'),\n    -- -(Ante*5) Mult before scoring\n    config = {\n        extra = {\n            scale = 5\n        }\n    },\n    collection_loc_vars = function(self)\n        return {\n            vars = { localize {\n                type = 'variable',\n                key = 'b_Bakery_ante_times',\n                vars = { self.config.extra.scale }\n            } }\n        }\n    end,\n    loc_vars = function(self)\n        return {\n            vars = { G.GAME.round_resets.ante * self.config.extra.scale }\n        }\n    end,\n    modify_hand = function(self, cards, poker_hands, text, mult, hand_chips)\n        return mult - (G.GAME.round_resets.ante * self.config.extra.scale), hand_chips, true\n    end"
+    },
+    {
+      "type": "Blind",
+      "key": "He",
+      "atlas": "BakeryBlinds",
+      "pos": null,
+      "raw": "key = \"He\", -- The Solo\n    atlas = \"BakeryBlinds\",\n    pos = {\n        y = 2\n    },\n    boss = {\n        min = 3,\n        max = 0\n    },\n    boss_colour = HEX('ffd78e')\n    -- Only one card scores"
+    },
+    {
+      "type": "Blind",
+      "key": "Qof",
+      "atlas": "BakeryBlinds",
+      "pos": null,
+      "raw": "key = \"Qof\", -- The Witch\n    atlas = \"BakeryBlinds\",\n    pos = {\n        y = 3\n    },\n    boss = {\n        min = 2,\n        max = 0\n    },\n    boss_colour = HEX('e9b4ff'),\n    -- Adds (Ante) curses to your deck\n    collection_loc_vars = function(self)\n        return { vars = { localize 'b_Bakery_ante' } }\n    end,\n    loc_vars = function(self)\n        return { vars = { G.GAME.round_resets.ante } }\n    end,\n    set_blind = function(self)\n        local cards = {}\n        for _ = 1, G.GAME.round_resets.ante do\n            local front = pseudorandom_element(G.P_CARDS, pseudoseed('bl_Bakery_Qof'))\n            G.playing_card = (G.playing_card and G.playing_card + 1) or 1\n            local card = Card(G.discard.T.x + G.discard.T.w / 2, G.discard.T.y, G.CARD_W, G.CARD_H, front,\n                G.P_CENTERS.m_Bakery_Curse, { playing_card = G.playing_card })\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    card:start_materialize({ G.C.SECONDARY_SET.Enhanced })\n                    G.play:emplace(card)\n                    table.insert(G.playing_cards, card)\n                    return true\n                end\n            }))\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    G.deck.config.card_limit = G.deck.config.card_limit + 1\n                    return true\n                end\n            }))\n            cards[#cards + 1] = card\n        end\n\n        for i = 1, G.GAME.round_resets.ante do\n            draw_card(G.play, G.deck, 90 + i, 'up', nil)\n        end\n        playing_card_joker_effects(cards)\n    end,\n    disable = function(self)\n        local done = 0\n        for i = 1, #G.deck.cards do\n            if G.deck.cards[i].config.center.key == 'm_Bakery_Curse' then\n                local card = G.deck.cards[i]\n                G.E_MANAGER:add_event(Event {\n                    func = function()\n                        card:start_dissolve()\n                        return true\n                    end\n                })\n                done = done + 1\n                if done >= G.GAME.round_resets.ante then\n                    return\n                end\n            end\n        end\n    end"
+    },
+    {
+      "type": "Blind",
+      "key": "Kaf",
+      "atlas": "BakeryBlinds",
+      "pos": null,
+      "raw": "key = \"Kaf\", -- The Build\n    atlas = \"BakeryBlinds\",\n    pos = {\n        y = 4\n    },\n    boss = {\n        min = 2,\n        max = 0\n    },\n    boss_colour = HEX('93a9ff'),\n    -- No base chips\n    modify_hand = function(self, cards, poker_hands, text, mult, hand_chips)\n        return mult, 0, hand_chips ~= 0\n    end"
+    },
+    {
+      "type": "Blind",
+      "key": "Samekh",
+      "atlas": "BakeryBlinds",
+      "pos": null,
+      "raw": "key = \"Samekh\", -- The Ruler\n    atlas = \"BakeryBlinds\",\n    pos = {\n        y = 5\n    },\n    boss = {\n        min = 3,\n        max = 0\n    },\n    boss_colour = HEX('eaba23'),\n    artist = 'Jack5',\n    coder = 'Jack5',\n    idea = 'Jack5',\n    -- Cards with no rank or suit are debuffed\n    recalc_debuff = function(self, card, from_blind)\n        return\n            not G.GAME.blind.disabled and\n            card.area ~= G.jokers and\n            card.area ~= G.Bakery_charm_area and\n            (SMODS.has_no_rank(card) or SMODS.has_no_suit(card))\n    end,\n    -- Only appears if 1 in 6 cards have no rank or suit\n    in_pool = function()\n        if not G.playing_cards then return false end\n        local count = 0\n        for i = 1, #G.playing_cards do\n            if SMODS.has_no_rank(G.playing_cards[i]) or SMODS.has_no_suit(G.playing_cards[i]) then\n                count = count + 1\n                if count >= #G.playing_cards / 6 then\n                    return true\n                end\n            end\n        end\n        return false\n    end"
+    },
+    {
+      "type": "Blind",
+      "key": "Lammed",
+      "atlas": "BakeryBlinds",
+      "pos": null,
+      "raw": "key = \"Lammed\", -- The Stoic\n    atlas = \"BakeryBlinds\",\n    pos = {\n        y = 6\n    },\n    boss = {\n        min = 3,\n        max = 0\n    },\n    boss_colour = HEX('5a6159'),\n    artist = 'Jack5',\n    coder = 'Jack5',\n    idea = 'Jack5',\n    -- Charm is debuffed\n    set_blind = function(self)\n        if G.GAME.Bakery_charm then\n            G.P_CENTERS[G.GAME.Bakery_charm]:unequip(G.Bakery_charm_area.cards[1])\n            G.GAME.Bakery_charm = nil\n        end\n    end,\n    disable = function(self)\n        if G.Bakery_charm_area and #G.Bakery_charm_area.cards == 1 and not G.GAME.Bakery_charm then\n            G.GAME.Bakery_charm = G.Bakery_charm_area.cards[1].config.center.key\n            G.P_CENTERS[G.GAME.Bakery_charm]:equip(G.Bakery_charm_area.cards[1])\n            SMODS.recalc_debuff(G.Bakery_charm_area.cards[1])\n        end\n    end,\n    defeat = function(self)\n        self:disable()\n    end,\n    recalc_debuff = function(self, card, from_blind)\n        return not G.GAME.blind.disabled and card.area == G.Bakery_charm_area\n    end"
+    },
+    {
+      "type": "Challenge",
+      "key": "Balanced",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Balanced',\n    rules = {\n        custom = { {\n            id = 'Bakery_Balanced'\n        } }\n    }"
+    },
+    {
+      "type": "Challenge",
+      "key": "Vagabond",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Vagabond',\n    rules = {\n        custom = { {\n            id = 'Bakery_Vagabond',\n            value = 10\n        } }\n    },\n    restrictions = {\n        banned_cards = { {\n            id = 'v_seed_money',\n            ids = { 'v_money_tree' }\n        }, {\n            id = 'j_to_the_moon'\n        }, {\n            id = 'j_credit_card'\n        } }\n    }"
+    },
+    {
+      "type": "Challenge",
+      "key": "Sprint",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Sprint',\n    rules = {\n        custom = {\n            { id = 'Bakery_Sprint_Small' },\n            { id = 'Bakery_Sprint_Big' }\n        }\n    }"
+    },
+    {
+      "type": "ObjectType",
+      "key": "BakeryCharm",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakeryCharm\""
+    },
+    {
+      "type": "Center",
+      "key": "Bakery_charm",
+      "atlas": null,
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "required_params = { \"key\" },\n        unlocked = true,\n        discovered = false,\n        pos = {\n            x = 0,\n            y = 0\n        },\n        cost = 8,\n        config = {},\n        consumeable = true,\n        set = 'BakeryCharm',\n        class_prefix = 'BakeryCharm',\n        pools = { \"BakeryCharm\" },\n        set_card_type_badge = function(self, card, badges)\n            badges[#badges + 1] = create_badge(localize('k_Bakery_charm'), G.C.DARK_EDITION, G.C.WHITE, 1.2)\n        end,\n        load = function(self, card, cardTable, other_card)\n            card.T.h = G.CARD_W\n            card.T.w = G.CARD_W\n        end,\n        register = function(self)\n            local raw_obj_loc_vars = self.loc_vars\n            self.loc_vars = function(self, info_queue, card)\n                info_queue[#info_queue + 1] = {\n                    set = \"Other\",\n                    key = \"Bakery_charm\"\n                }\n                if raw_obj_loc_vars then\n                    return raw_obj_loc_vars(self, info_queue, card)\n                end\n            end\n            Bakery_API.Charm.super.register(self)\n        end,\n        equip = function(self, card)\n        end,\n        unequip = function(self, card)\n        end"
+    },
+    {
+      "type": "Atlas",
+      "key": "CharmsUtil",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"CharmsUtil\",\n        px = 68,\n        py = 68,\n        path = \"BakeryCharmsUtil.png\""
+    },
+    {
+      "type": "UndiscoveredSprite",
+      "key": "BakeryCharm",
+      "atlas": "CharmsUtil",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = \"BakeryCharm\",\n        atlas = \"CharmsUtil\",\n        pos = {\n            x = 0,\n            y = 1\n        },\n        overlay_pos = {\n            x = 0,\n            y = 2\n        }"
+    },
+    {
+      "type": "PokerHandPart",
+      "key": "s_2",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 's_2',\n        func = function(hand)\n            return all_suits(2, hand)\n        end"
+    },
+    {
+      "type": "PokerHandPart",
+      "key": "s_3",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 's_3',\n        func = function(hand)\n            return all_suits(3, hand)\n        end"
+    },
+    {
+      "type": "PokerHandPart",
+      "key": "s_all_pairs",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 's_all_pairs',\n        func = function(hand)\n            local _2 = all_suits(2, hand)\n            if not next(_2) then\n                return {}\n            end\n            return { SMODS.merge_lists(_2) }\n        end"
+    },
+    {
+      "type": "Atlas",
+      "key": "Charms",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Charms\",\n    px = 68,\n    py = 68,\n    path = \"BakeryCharms.png\""
+    },
+    {
+      "type": "Atlas",
+      "key": "BakeryConsumables",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakeryConsumables\",\n    path = \"BakeryConsumables.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Consumable",
+      "key": "Astrology",
+      "atlas": "BakeryConsumables",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'Astrology',\n    set = 'Spectral',\n    atlas = \"BakeryConsumables\",\n    pos = {\n        x = 0,\n        y = 0\n    },\n    cost = 5,\n    hidden = true,\n    soul_set = 'Planet',\n    soul_rate = 0.003,\n    config = {\n        extra = {\n            multiplier = 10\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return {\n            vars = { card.ability.extra.multiplier }\n        }\n    end,\n    use = function(self, card, area, copier)\n        update_hand_text({\n            sound = 'button',\n            volume = 0.7,\n            pitch = 0.8,\n            delay = 0.3\n        }, {\n            handname = localize('k_all_hands'),\n            chips = '...',\n            mult = '...',\n            level = ''\n        })\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.2,\n            func = function()\n                play_sound('tarot1')\n                card:juice_up(0.8, 0.5)\n                G.TAROT_INTERRUPT_PULSE = true\n                return true\n            end\n        }))\n        update_hand_text({\n            delay = 0\n        }, {\n            mult = '=',\n            StatusText = true\n        })\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.9,\n            func = function()\n                play_sound('tarot1')\n                card:juice_up(0.8, 0.5)\n                return true\n            end\n        }))\n        update_hand_text({\n            delay = 0\n        }, {\n            chips = '=',\n            StatusText = true\n        })\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.9,\n            func = function()\n                play_sound('tarot1')\n                card:juice_up(0.8, 0.5)\n                G.TAROT_INTERRUPT_PULSE = nil\n                return true\n            end\n        }))\n        update_hand_text({\n            sound = 'button',\n            volume = 0.7,\n            pitch = 0.9,\n            delay = 0\n        }, {\n            level = '1'\n        })\n        delay(1.3)\n\n        local levels = 0\n        for k, v in pairs(G.GAME.hands) do\n            levels = levels + math.max(v.level - 1, 0)\n            v.level = 1\n            v.mult = math.max(v.s_mult + v.l_mult * (v.level - 1), 1)\n            v.chips = math.max(v.s_chips + v.l_chips * (v.level - 1), 0)\n        end\n\n        ease_dollars(levels * card.ability.extra.multiplier)\n\n        update_hand_text({\n            sound = 'button',\n            volume = 0.7,\n            pitch = 1.1,\n            delay = 0\n        }, {\n            mult = 0,\n            chips = 0,\n            handname = '',\n            level = ''\n        })\n    end,\n    can_use = function(self, card)\n        for k, v in pairs(G.GAME.hands) do\n            if Bakery_API.big(v.level) > Bakery_API.big(1) then\n                return true\n            end\n        end\n        return false\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "TimeMachine",
+      "atlas": "BakeryConsumables",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'TimeMachine',\n    set = 'Spectral',\n    atlas = \"BakeryConsumables\",\n    pos = {\n        x = 1,\n        y = 0\n    },\n    cost = 7,\n    config = {\n        mod_conv = 'm_Bakery_TimeWalk',\n        max_highlighted = 1\n    },\n    loc_vars = function(self, info_queue, card)\n        info_queue[#info_queue + 1] = G.P_CENTERS.m_Bakery_TimeWalk\n        return {\n            vars = { self.config.max_highlighted, localize {\n                type = 'name_text',\n                set = 'Enhanced',\n                key = self.config.mod_conv\n            } }\n        }\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "Scribe",
+      "atlas": "BakeryConsumables",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'Scribe',\n    set = 'Tarot',\n    atlas = \"BakeryConsumables\",\n    pos = {\n        x = 2,\n        y = 0\n    },\n    artist = \"GhostSalt\",\n    cost = 4,\n    config = {\n        extra = {\n            hl = 1,\n            copies = 1\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        info_queue[#info_queue + 1] = G.P_CENTERS.e_Bakery_Carbon\n        return {\n            vars = { card.ability.extra.copies, card.ability.extra.hl }\n        }\n    end,\n    can_use = function(self, card)\n        local count = #Bakery_API.get_highlighted() + #G.jokers.highlighted\n        return count >= 1 and count <= card.ability.extra.hl and\n            (#Bakery_API.get_highlighted() > 0 or #G.jokers.highlighted + #G.jokers.cards <= G.jokers.config.card_limit)\n    end,\n    use = function(self, card, area, copier)\n        if not self:can_use(card) then\n            return\n        end\n\n        G.E_MANAGER:add_event(Event({\n            func = function()\n                local new_cards = {}\n                for i = 1, #Bakery_API.get_highlighted() do\n                    local copied = Bakery_API.get_highlighted()[i]\n                    local _first_dissolve = nil\n                    for i = 1, card.ability.extra.copies do\n                        G.playing_card = (G.playing_card and G.playing_card + 1) or 1\n                        local _card = copy_card(copied, nil, nil, G.playing_card)\n                        _card:set_edition(\"e_Bakery_Carbon\", true, true)\n                        _card:set_eternal(nil)\n                        _card:add_to_deck()\n                        G.deck.config.card_limit = G.deck.config.card_limit + 1\n                        table.insert(G.playing_cards, _card)\n                        G.hand:emplace(_card)\n                        _card:start_materialize(nil, _first_dissolve)\n                        _first_dissolve = true\n                        new_cards[#new_cards + 1] = _card\n                    end\n                end\n\n                for i = 1, card.ability.extra.copies do\n                    for i = 1, #G.jokers.highlighted do\n                        if #G.jokers.highlighted + #G.jokers.cards <= G.jokers.config.card_limit then\n                            local copied = G.jokers.highlighted[i]\n                            local _card = copy_card(copied, nil, nil, nil, copied.edition)\n                            _card:set_edition(\"e_Bakery_Carbon\", true, true)\n                            _card:set_eternal(nil)\n                            _card:add_to_deck()\n                            G.jokers:emplace(_card)\n\n                            check_for_unlock { type = 'Bakery_Scribe_Joker', key = copied.config.center.key }\n                        end\n                    end\n                end\n\n                playing_card_joker_effects(new_cards)\n                return true\n            end\n        }))\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "Boids",
+      "atlas": "BakeryConsumables",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = 'Boids',\n    set = 'Spectral',\n    atlas = \"BakeryConsumables\",\n    pos = {\n        x = 3,\n        y = 0\n    },\n    cost = 6,\n    config = {\n        extra = {\n            cards = 5\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return {\n            vars = { card.ability.extra.cards }\n        }\n    end,\n    use = function(self, card, area, copier)\n        local front = pseudorandom_element(G.P_CARDS, pseudoseed 'c_Bakery_Boids')\n        G.E_MANAGER:add_event(Event {\n            trigger = 'after',\n            delay = 0.4,\n            func = function()\n                play_sound 'tarot1'\n                card:juice_up(0.3, 0.5)\n                return true\n            end\n        })\n        for i = 1, #Bakery_API.get_highlighted() do\n            local percent = 1.15 - (i - 0.999) / (#Bakery_API.get_highlighted() - 0.998) * 0.3\n            G.E_MANAGER:add_event(Event { trigger = 'after', delay = 0.15, func = function()\n                Bakery_API.get_highlighted()[i]:flip(); play_sound('card1', percent); Bakery_API.get_highlighted()[i]\n                    :juice_up(0.3, 0.3); return true\n            end })\n        end\n        delay(0.2)\n        for i = 1, #Bakery_API.get_highlighted() do\n            G.E_MANAGER:add_event(Event({\n                trigger = 'after',\n                delay = 0.1,\n                func = function()\n                    local card = Bakery_API.get_highlighted()[i]\n                    card:set_base(front)\n                    return true\n                end\n            }))\n        end\n        for i = 1, #Bakery_API.get_highlighted() do\n            local percent = 0.85 + (i - 0.999) / (#Bakery_API.get_highlighted() - 0.998) * 0.3\n            G.E_MANAGER:add_event(Event { trigger = 'after', delay = 0.15, func = function()\n                Bakery_API.get_highlighted()[i]:flip(); play_sound('tarot2', percent, 0.6); Bakery_API.get_highlighted()\n                    [i]:juice_up(0.3, 0.3); return true\n            end })\n        end\n        G.E_MANAGER:add_event(Event {\n            trigger = 'after',\n            delay = 0.2,\n            func = function()\n                Bakery_API.unhighlight_all(); return true\n            end\n        })\n        delay(0.5)\n    end,\n    can_use = function(self, card)\n        return #Bakery_API.get_highlighted() > 0 and #Bakery_API.get_highlighted() <= card.ability.extra.cards\n    end"
+    },
+    {
+      "type": "Shader",
+      "key": "Bakery_Carbon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Bakery_Carbon',\n    path = 'Bakery_Carbon.fs'"
+    },
+    {
+      "type": "Edition",
+      "key": "Carbon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Carbon',\n    shader = 'Bakery_Carbon',\n    weight = 0,\n    calculate = function(self, card, context)\n        if card.area ~= G.hand and card.area ~= G.play and not card.debuff and context.after and\n            (not card.area or card.area ~= G.hand) and not card.ability.eternal then\n            G.E_MANAGER:add_event(Event({\n                func = (function()\n                    if SMODS.shatters(card) then\n                        card:shatter()\n                    else\n                        card:start_dissolve(nil, true)\n                    end\n                    return true\n                end)\n            }))\n        end\n        if not card.debuff and context.destroy_card == card and (not card.area or card.area ~= G.hand) and\n            not card.ability.eternal then\n            return {\n                remove = true\n            }\n        end\n    end,\n    in_pool = function() return false end"
+    },
+    {
+      "type": "Atlas",
+      "key": "BakeryEnhancements",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakeryEnhancements\",\n    path = \"BakeryEnhancements.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Sound",
+      "key": "TimeWalk",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"TimeWalk\",\n    path = \"TimeWalk.ogg\""
+    },
+    {
+      "type": "Enhancement",
+      "key": "TimeWalk",
+      "atlas": "BakeryEnhancements",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"TimeWalk\",\n    atlas = 'BakeryEnhancements',\n    pos = {\n        x = 0,\n        y = 0\n    },\n    replace_base_card = true,\n    no_rank = true,\n    no_suit = true,\n    always_scores = true,\n    weight = 0.025,\n    artist = \"AmyWeber\",\n    config = {\n        extra = {\n            hands = 1\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return {\n            vars = { card.ability.extra.hands }\n        }\n    end,\n    calculate = function(self, card, context)\n        if context.cardarea == G.play and context.main_scoring then\n            if not (Talisman and Talisman.config_file and Talisman.config_file.disable_anims) then\n                G.E_MANAGER:add_event(Event {\n                    trigger = 'before',\n                    delay = 1,\n                    timer = 'REAL',\n                    func = function()\n                        play_sound(\"Bakery_TimeWalk\", 0.8 + math.random() * 0.2, 1)\n                        return true\n                    end\n                })\n                G.E_MANAGER:add_event(Event {\n                    trigger = 'immediate',\n                    func = function()\n                        card:juice_up(0.6, 0.1)\n                        return true\n                    end\n                })\n            end -- Entirely visual\n            ease_hands_played(card.ability.extra.hands)\n            if not (Talisman and Talisman.config_file and Talisman.config_file.disable_anims) then\n                delay(0.85)\n            end\n            return {\n                effect = true\n            }\n        end\n    end"
+    },
+    {
+      "type": "Enhancement",
+      "key": "Curse",
+      "atlas": "BakeryEnhancements",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"Curse\",\n    atlas = 'BakeryEnhancements',\n    pos = {\n        x = 1,\n        y = 0\n    },\n    replace_base_card = true,\n    no_rank = true,\n    no_suit = true,\n    never_scores = true,\n    weight = 0,\n    artist = \"ClausStephan\",\n    in_pool = function() return false end"
+    },
+    {
+      "type": "Atlas",
+      "key": "Bakery",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Bakery\",\n    path = \"Bakery.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Joker",
+      "key": "Tarmogoyf",
+      "atlas": null,
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"Tarmogoyf\",\n    pos = {\n        x = 0,\n        y = 0\n    },\n    rarity = 1,\n    cost = 5,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    config = {\n        extra = {\n            mult = 0,\n            mult_gain = 1,\n            used_ranks = {}\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return {\n            vars = { card.ability.extra.mult_gain, card.ability.extra.mult }\n        }\n    end,\n    calculate = function(self, card, context)\n        if context.discard and not context.blueprint and not context.retrigger_joker and not context.other_card.debuff then\n            local rank = context.other_card:get_id()\n            if rank > 0 -- Stone cards are random negative ranks\n                and card.ability.extra.used_ranks[rank] == nil then\n                card.ability.extra.used_ranks[rank] = true\n                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain\n                return {\n                    message = '+' .. (card.ability.extra.mult_gain),\n                    colour = G.C.RED,\n                    card = card\n                }\n            end\n        end\n\n        if context.joker_main and card.ability.extra.mult > 0 then\n            return {\n                mult_mod = card.ability.extra.mult,\n                message = localize {\n                    type = 'variable',\n                    key = 'a_mult',\n                    vars = { card.ability.extra.mult },\n                    card = card\n                }\n            }\n        end\n\n        if context.end_of_round and not context.repetition and context.game_over == false and not context.blueprint then\n            local flag = card.ability.extra.mult ~= 0\n            card.ability.extra.mult = 0\n            card.ability.extra.used_ranks = {}\n            if flag then\n                return {\n                    message = 'Reset',\n                    colour = G.C.RED,\n                    card = card\n                }\n            end\n        end\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "j_Bakery_Werewolf_Back",
+      "atlas": null,
+      "pos": null,
+      "raw": "generate_ui = function(_self, _info_queue, _card, _desc_nodes, _specific_vars, _full_UI_table)\n                if not card or not card.ability.extra.flipped then\n                    self.key = \"j_Bakery_Werewolf_Back\"\n                end\n                SMODS.Joker.generate_ui(self, _info_queue, _card, _desc_nodes, _specific_vars, _full_UI_table)\n                self.key = key\n            end"
+    },
+    {
+      "type": "Atlas",
+      "key": "BakeryJokerAgainstHumanity",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakeryJokerAgainstHumanity\",\n    path = \"BakeryJokerAgainstHumanity.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Joker",
+      "key": "CardSleeve",
+      "atlas": "Bakery",
+      "pos": {
+        "x": 0,
+        "y": 2
+      },
+      "raw": "key = \"CardSleeve\",\n    name = \"CardSleeve\",\n    atlas = 'Bakery',\n    pos = {\n        x = 0,\n        y = 2\n    },\n    rarity = 2,\n    cost = 6,\n    config = {\n        extra = {\n            occupied = false\n        }\n    },\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    _hand_available = function()\n        return\n            G.STATE == G.STATES.SELECTING_HAND or G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK or\n            G.STATE == G.STATES.SMODS_BOOSTER_OPENED or G.STATE == G.STATES.PLAY_TAROT\n    end,\n    Bakery_can_use = function(self, card)\n        if card.ability.extra.occupied then\n            return G.STATE == G.STATES.SELECTING_HAND or G.STATE == G.STATES.TAROT_PACK or G.STATE ==\n                G.STATES.SPECTRAL_PACK or G.STATE == G.STATES.SMODS_BOOSTER_OPENED\n        else\n            return not card.ability.extra.override and #G.hand.highlighted == 1\n        end\n    end,\n    Bakery_remove_card = function(self, card, force)\n        if card.ability.extra.occupied and not card.ability.extra.override then\n            if not G[\"Bakery_sleeve_\" .. card.ability.extra.key].cards then\n                sendErrorMessage('Sleeve ' .. card.ability.extra.key .. ' has no cards table', 'Bakery')\n                return\n            end\n            no_recurse = true\n            draw_card(G[\"Bakery_sleeve_\" .. card.ability.extra.key], self._hand_available() and G.hand or G.deck, nil,\n                nil, nil, G[\"Bakery_sleeve_\" .. card.ability.extra.key].cards[1], nil, nil, true)\n            G.E_MANAGER:add_event(Event {\n                trigger = 'immediate',\n                func = function()\n                    G[\"Bakery_sleeve_\" .. card.ability.extra.key]:remove()\n                    G[\"Bakery_sleeve_\" .. card.ability.extra.key] = nil\n                    card.ability.extra.key = nil\n                    card.ability.extra.occupied = false\n                    card.ability.extra.override = nil\n                    no_recurse = false\n                    Bakery_API.rehighlight(card)\n                    return true\n                end\n            })\n            card.ability.extra.override = true\n        end\n    end,\n    Bakery_use_joker = function(self, card)\n        if card.ability.extra.occupied then\n            self:Bakery_remove_card(card)\n        else\n            card.ability.extra.key = next_key()\n            CardSleeveCardArea(card.ability.extra.key, card)\n            draw_card(G.hand, G[\"Bakery_sleeve_\" .. card.ability.extra.key], nil, nil, nil, G.hand.highlighted[1], nil,\n                nil, true)\n            card.ability.extra.occupied = true\n            card:highlight(card.highlighted)\n        end\n    end,\n    Bakery_use_button_text = function(self, card)\n        return card.ability.extra.occupied and localize('b_Bakery_return') or localize('b_Bakery_store')\n    end"
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n        path = \"Icon.png\",\n        px = 34,\n        py = 34"
+    },
+    {
+      "type": "Atlas",
+      "key": "BakeryTags",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BakeryTags\",\n    path = \"BakeryTags.png\",\n    px = 34,\n    py = 34"
+    },
+    {
+      "type": "Tag",
+      "key": "RetriggerTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"RetriggerTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 0,\n        y = 0\n    },\n    min_ante = 4,\n    config = {\n        type = 'store_joker_create'\n    },\n    loc_vars = function(self, info_queue, card)\n        for k in pairs(Bakery_API.retrigger_jokers) do\n            if G.P_CENTERS[k] ~= nil then\n                info_queue[#info_queue + 1] = G.P_CENTERS[k]\n            end\n        end\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered and tag.config.type == context.type then\n            tag.triggered = true\n\n            local in_posession = { 0 }\n            for k, v in ipairs(G.jokers.cards) do\n                if Bakery_API.retrigger_jokers[v.config.center.key] and not in_posession[v.config.center.key] then\n                    in_posession[1] = in_posession[1] + 1\n                    in_posession[v.config.center.key] = true\n                end\n            end\n\n            if Bakery_API.retrigger_jokers.Length > in_posession[1] then\n                local j, k = pseudorandom_element(Bakery_API.retrigger_jokers, pseudoseed('Retrigger Tag'))\n                local card = create_card('Joker', context.area, nil, 2, nil, nil, k, 'Retrigger Tag')\n                create_shop_card_ui(card, 'Joker', context.area)\n                card.states.visible = false\n                tag:yep('+', G.C.RED, function()\n                    card:start_materialize()\n                    card.ability.couponed = true\n                    card:set_cost()\n                    return true\n                end)\n                return card\n            else\n                tag:nope()\n            end\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "ChocolateTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"ChocolateTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 1,\n        y = 0\n    },\n    min_ante = 0,\n    config = {\n        type = 'Bakery_play_hand_early',\n        chips = 25,\n        mult = 5,\n        d_chips = 5,\n        d_mult = 1\n    },\n    loc_vars = function(self, info_queue, tag)\n        tag.ability = tag.ability or {}\n        tag.ability.chips = tag.ability.chips or self.config.chips\n        tag.ability.mult = tag.ability.mult or self.config.mult\n        return {\n            vars = { tag.ability.chips, tag.ability.mult, self.config.d_chips, self.config.d_mult }\n        }\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered and self.config.type == context.type then\n            tag.ability = tag.ability or {}\n            tag.ability.chips = tag.ability.chips or self.config.chips\n            tag.ability.mult = tag.ability.mult or self.config.mult\n            local ret = {\n                chips = tag.ability.chips,\n                mult = tag.ability.mult\n            }\n            tag.ability.chips = math.max(tag.ability.chips - self.config.d_chips, 0)\n            tag.ability.mult = math.max(tag.ability.mult - self.config.d_mult, 0)\n            if tag.ability.chips == 0 and tag.ability.mult == 0 then\n                ret.after = function()\n                    tag:yep('X', G.C.RED, function()\n                        return true\n                    end)\n                end\n            end\n            return ret\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "PolyTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = \"PolyTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 2,\n        y = 0\n    },\n    min_ante = 0,\n    config = {\n        type = 'Bakery_play_hand_late',\n        x_mult = 1.5\n    },\n    loc_vars = function(self, info_queue, tag)\n        return {\n            vars = { self.config.x_mult }\n        }\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered and self.config.type == context.type then\n            return {\n                x_mult = self.config.x_mult\n            }\n        end\n        if not tag.triggered and context.type == 'eval' then\n            tag.triggered = true\n            tag:yep('X', G.C.RED, function()\n                return true\n            end)\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "PennyTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = \"PennyTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 3,\n        y = 0\n    },\n    min_ante = 0,\n    config = {\n        dollars = 1,\n        hands = 5\n    },\n    loc_vars = function(self, info_queue, tag)\n        tag.ability = tag.ability or {}\n        return {\n            vars = { tag.ability.dollars or self.config.dollars, tag.ability.hands or self.config.hands }\n        }\n    end,\n    apply = function(self, tag, context)\n        tag.ability = tag.ability or {}\n        if not tag.triggered and context.type == 'Bakery_score_card' then\n            return {\n                func = function()\n                    juice_card(tag)\n                end,\n                extra = {\n                    dollars = tag.ability.dollars or self.config.dollars\n                }\n            }\n        end\n        if not tag.triggered and context.type == 'Bakery_play_hand_late' then\n            tag.ability.hands = (tag.ability.hands or self.config.hands) - 1\n            if tag.ability.hands == 0 then\n                tag.triggered = true\n                tag:yep('X', G.C.RED, function()\n                    return true\n                end)\n            end\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "BlankTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = \"BlankTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 4,\n        y = 0\n    },\n    min_ante = 0,\n    in_pool = function(self, args)\n        for i = 1, #G.GAME.tags do\n            if G.GAME.tags[i].key == \"tag_Bakery_BlankTag\" then\n                return false\n            end\n        end\n        return true\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "AntiTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = \"AntiTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 5,\n        y = 0\n    },\n    min_ante = 1,\n    in_pool = function(self, args)\n        local found = false\n        for i = 1, #G.GAME.tags do\n            if G.GAME.tags[i].key == \"tag_Bakery_BlankTag\" then\n                if found then\n                    return true, {\n                        allow_duplicates = true\n                    }\n                end\n                found = true\n            end\n        end\n        return found, {\n            allow_duplicates = false\n        }\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered then\n            for i = 1, #G.GAME.tags do\n                if G.GAME.tags[i].key == \"tag_Bakery_BlankTag\" and not G.GAME.tags[i].triggered then\n                    G.GAME.tags[i].triggered = true\n                    G.GAME.tags[i]:yep('-', G.C.PURPLE, function()\n                        return true\n                    end)\n                    break\n                end\n            end\n\n            tag.triggered = true\n            tag:yep('-', G.C.PURPLE, function()\n                G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n                return true\n            end)\n            return true\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "CharmTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "key = \"CharmTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 6,\n        y = 0\n    },\n    min_ante = 2,\n    loc_vars = function(self, info_queue, tag)\n        info_queue[#info_queue + 1] = {\n            set = \"Other\",\n            key = \"Bakery_charm\"\n        }\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered and context.type == 'voucher_add' then\n            tag.triggered = true\n\n            local keys = Bakery_API.get_next_charms(nil, 2)\n            local tbl = G.GAME.current_round.Bakery_charm\n            if keys[1] and keys[1] ~= 'j_joker' then\n                tag:yep('+', G.C.SECONDARY_SET.Voucher, function()\n                    tbl[#tbl + 1] = keys[1]\n                    tbl.spawn[keys[1]] = true\n                    Bakery_API.add_charm_to_shop(keys[1], 'from_tag')\n                    if keys[2] and keys[2] ~= 'j_joker' then\n                        tbl[#tbl + 1] = keys[2]\n                        tbl.spawn[keys[2]] = true\n                        Bakery_API.add_charm_to_shop(keys[2], 'from_tag')\n                    end\n                    return true\n                end)\n            else\n                tag:nope()\n            end\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "DownTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "key = \"DownTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 7,\n        y = 0\n    },\n    min_ante = 2,\n    in_pool = function()\n        return (G.GAME.round_resets.ante) % G.GAME.win_ante ~= 0\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered and context.type == 'Bakery_set_blind' and context.blind.boss then\n            G.E_MANAGER:add_event(Event {\n                func = function()\n                    if context.blind.disabled or not context.blind.disable then\n                        tag.triggered = false\n                        return true\n                    end\n                    tag:yep(localize('ph_boss_disabled'), G.C.RED, function()\n                        return true\n                    end)\n                    context.blind:disable()\n                    play_sound('timpani')\n                    delay(0.4)\n                    return true\n                end\n            })\n            tag.triggered = true\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "UpTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 8,
+        "y": 0
+      },
+      "raw": "key = \"UpTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 8,\n        y = 0\n    },\n    min_ante = 4,\n    config = {\n        hands = 3\n    },\n    loc_vars = function(self, info_queue, tag)\n        tag.ability = tag.ability or {}\n        return {\n            vars = { tag.ability.hands or self.config.hands }\n        }\n    end,\n    apply = function(self, tag, context)\n        tag.ability = tag.ability or {}\n        if not tag.triggered and context.type == 'Bakery_add_repetitions_to_card' then\n            return {\n                func = function()\n                    juice_card(tag)\n                end,\n                repetitions = 1,\n                card = context.context.other_card\n            }\n        end\n        if not tag.triggered and context.type == 'Bakery_play_hand_late' then\n            tag.ability.hands = (tag.ability.hands or self.config.hands) - 1\n            if tag.ability.hands == 0 then\n                tag.triggered = true\n                tag:yep('X', G.C.RED, function()\n                    return true\n                end)\n            end\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "StrangeTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 8,
+        "y": 1
+      },
+      "raw": "key = \"StrangeTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 8,\n        y = 1\n    },\n    config = {\n        min = 10,\n        max = 30,\n        odds = 10\n    },\n    min_ante = 0,\n    loc_vars = function(self, info_queue, card)\n        local r_mults = {}\n        for i = self.config.min, self.config.max do\n            r_mults[#r_mults + 1] = tostring(i)\n        end\n        local loc_mult = ' ' .. (localize('k_mult')) .. ' '\n        return {\n            main_start = { { n = G.UIT.T, config = { text = '  +', colour = G.C.MULT, scale = 0.32 } },\n                { n = G.UIT.O, config = { object = DynaText({ string = r_mults, colours = { G.C.RED }, pop_in_rate = 9999999, silent = true, random_element = true, pop_delay = 0.5, scale = 0.32, min_cycle_time = 0 }) } },\n                {\n                    n = G.UIT.O,\n                    config = {\n                        object = DynaText({\n                            string = {\n                                { string = 'rand()', colour = G.C.JOKER_GREY }, { string = \"#@\" .. (G.deck and G.deck.cards[1] and G.deck.cards[#G.deck.cards].base.id or 11) .. (G.deck and G.deck.cards[1] and G.deck.cards[#G.deck.cards].base.suit:sub(1, 1) or 'D'), colour = G.C.RED },\n                                loc_mult, loc_mult, loc_mult, loc_mult, loc_mult, loc_mult, loc_mult, loc_mult, loc_mult,\n                                loc_mult, loc_mult, loc_mult, loc_mult },\n                            colours = { G.C.UI.TEXT_DARK },\n                            pop_in_rate = 9999999,\n                            silent = true,\n                            random_element = true,\n                            pop_delay = 0.2011,\n                            scale = 0.32,\n                            min_cycle_time = 0\n                        })\n                    }\n                }\n            }\n        }\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered and context.type == 'Bakery_play_hand_early' then\n            if pseudorandom('tag_Bakery_StrangeTag') < 1 / self.config.odds then\n                tag.triggered = true\n                tag:yep('X', G.C.RED, function()\n                    return true\n                end)\n            end\n            return {\n                mult = self.config.min +\n                    math.floor((self.config.max - self.config.min) * pseudorandom('tag_Bakery_StrangeTag'))\n            }\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "TopTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 0,
+        "y": 2
+      },
+      "raw": "key = \"TopTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 0,\n        y = 2\n    },\n    min_ante = 4,\n    loc_vars = function(self, info_queue, card)\n        return {\n            vars = { G.deck and #G.deck.cards or 0 }\n        }\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered then\n            tag.triggered = true\n            local amount = G.deck and #G.deck.cards or 0\n            tag:yep(localize('$') .. amount, G.C.MONEY, function()\n                ease_dollars(amount)\n                return true\n            end)\n        end\n    end"
+    },
+    {
+      "type": "Tag",
+      "key": "BottomTag",
+      "atlas": "BakeryTags",
+      "pos": {
+        "x": 1,
+        "y": 2
+      },
+      "raw": "key = \"BottomTag\",\n    atlas = 'BakeryTags',\n    pos = {\n        x = 1,\n        y = 2\n    },\n    min_ante = 4,\n    loc_vars = function(self, info_queue, card)\n        return {\n            vars = { G.jokers and (G.jokers.config.card_limit - #G.jokers.cards) * 10 or 0 }\n        }\n    end,\n    apply = function(self, tag, context)\n        if not tag.triggered then\n            tag.triggered = true\n            local amount = G.jokers and (G.jokers.config.card_limit - #G.jokers.cards) * 10 or 0\n            tag:yep(localize('$') .. amount, G.C.MONEY, function()\n                ease_dollars(amount)\n                return true\n            end)\n        end\n    end"
+    }
+  ],
+  "version": "no-tag"
+}
