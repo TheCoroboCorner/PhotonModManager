@@ -876,77 +876,77 @@
       "path": "BakeryBack.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryBack.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryBack.png",
       "resolvedGitHubPath": "assets/1x/BakeryBack.png"
     },
     "BakerySleeves": {
       "path": "BakerySleeves.png",
       "px": 73,
       "py": 95,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakerySleeves.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakerySleeves.png",
       "resolvedGitHubPath": "assets/1x/BakerySleeves.png"
     },
     "BakeryBlinds": {
       "path": "BakeryBlinds.png",
       "px": 34,
       "py": 34,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryBlinds.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryBlinds.png",
       "resolvedGitHubPath": "assets/1x/BakeryBlinds.png"
     },
     "CharmsUtil": {
       "path": "BakeryCharmsUtil.png",
       "px": 68,
       "py": 68,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryCharmsUtil.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryCharmsUtil.png",
       "resolvedGitHubPath": "assets/1x/BakeryCharmsUtil.png"
     },
     "Charms": {
       "path": "BakeryCharms.png",
       "px": 68,
       "py": 68,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryCharms.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryCharms.png",
       "resolvedGitHubPath": "assets/1x/BakeryCharms.png"
     },
     "BakeryConsumables": {
       "path": "BakeryConsumables.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryConsumables.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryConsumables.png",
       "resolvedGitHubPath": "assets/1x/BakeryConsumables.png"
     },
     "BakeryEnhancements": {
       "path": "BakeryEnhancements.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryEnhancements.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryEnhancements.png",
       "resolvedGitHubPath": "assets/1x/BakeryEnhancements.png"
     },
     "Bakery": {
       "path": "Bakery.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//Bakery.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/Bakery.png",
       "resolvedGitHubPath": "assets/1x/Bakery.png"
     },
     "BakeryJokerAgainstHumanity": {
       "path": "BakeryJokerAgainstHumanity.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryJokerAgainstHumanity.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryJokerAgainstHumanity.png",
       "resolvedGitHubPath": "assets/1x/BakeryJokerAgainstHumanity.png"
     },
     "modicon": {
       "path": "Icon.png",
       "px": 34,
       "py": 34,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//Icon.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/Icon.png",
       "resolvedGitHubPath": "assets/1x/Icon.png"
     },
     "BakeryTags": {
       "path": "BakeryTags.png",
       "px": 34,
       "py": 34,
-      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels//BakeryTags.png",
+      "localPath": "/wiki-data/BalatroBakery@BakersDozenBagels/no-tag/BakeryTags.png",
       "resolvedGitHubPath": "assets/1x/BakeryTags.png"
     }
   },
