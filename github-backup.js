@@ -146,7 +146,15 @@ export async function backupMetadata(modKey, versionTag) {
     const data = await resp.json();
     console.log(`[GitHub Backup] Backed up ${repoPath} to commit`, data.content && data.content.html_url);
 
-    backupWikiImages(modKey, versionTag);
+    try
+    {
+      await backupWikiImages(modKey, versionTag);
+      console.log('[GitHub Backup] All images backed up');
+    }
+    catch (imgErr)
+    {
+      console.error('[GitHub Backup] Image backup failed:', imgErr);
+    }
   }
   catch (error)
   {
@@ -198,7 +206,7 @@ async function backupWikiImages(modKey, versionTag)
       message: `Backup image ${fileName} for ${modKey}@${versionTag}`,
       content: base64,
       sha: sha || undefined,
-      branch: main
+      branch: 'main'
     };
 
     try
