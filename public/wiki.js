@@ -315,13 +315,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (locEntry)
     {
-        title.textContent = locEntry.name;
-        locP.innerHTML    = locEntry.text.map(line => formatMarkup(line)).join('<br>');
+      title.textContent = locEntry.name.map(line => formatMarkup(line));
+
+      const afterVars = locEntry.text.map(line => line.replace(/#(\d+)#/g, (_, num) => c.vars[num-1] != null ? c.vars[num-1] : ''));
+
+      locP.innerHTML    = afterVars.map(line => formatMarkup(line)).join('<br>');
     }
     else
     {
-        title.textContent = c.key;
-        locP.innerHTML = "<i>Localization entry not found.</i>";
+      title.textContent = c.key;
+      locP.innerHTML = "<i>Localization entry not found.</i>";
     }
     
     rawPre.style.display = 'none';

@@ -520,41 +520,53 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     luaFileContents = null;
 
-    /*
-    for (let key in atlasDefs) 
+    for (let card of cards)
     {
-      if (at.resolvedGitHubPath) 
+      card.vars = [];
+      card.infoQueue = [];
+
+      // Config first
+
+      const config = card.raw.match(/config\s*=\s*({[\s\S]*?})/);
+      if (config)
       {
-        const imgUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${at.resolvedGitHubPath}`;
-        try 
+        const tableText = config[1];
+
+        try
         {
-          const buffer = await fetchRawBinary(owner, repo, at.resolvedGitHubPath);
-          if (buffer) 
-          {
-            const localImagePath = path.join(versionSpecificCacheDir, path.basename(at.resolvedGitHubPath));
-            await fs.writeFile(localImagePath, Buffer.from(buffer));
-            at.localPath = `/wiki-data/${modKey}/${latestTag || 'no-tag'}/${path.basename(at.resolvedGitHubPath)}`;
-            console.log(`Successfully fetched/downloaded image binary for ${at.key} into ${at.localPath}`)
-          } 
-          else 
-          {
-            console.warn(`[Server] Failed to fetch image binary for ${at.key} from ${imgUrl}`);
-            at.localPath = null;
-          }
-        } 
-        catch (downloadError) 
-        {
-          console.error(`[Server] Error downloading/caching image for ${at.key} from ${imgUrl}:`, downloadError);
-          at.localPath = null;
+          const jsFunc = new Function(`return ${tableText.replace(/(\w+)\s*=/g, `"$1":`)}`);
+          card.config = jsFunc();
         }
-      } 
-      else 
+        catch (err)
+        {
+          console.warn(`Failed to parse config for ${card.key}:`, err);
+        }
+      }
+      else card.config = {};
+
+      card.ability = card.config;
+
+      // Then loc_vars
+
+      const fnMatch = card.raw.match(/loc_vars\s*=\s*function\s*\(\s*self\s*,\s*info_queue\s*,\s*card\s*\)\s*\{([\s\S]*?)\}\s*$/);
+      if (!fnMatch)
+        continue;
+
+      const fnBody = fnMatch[1];
+
+      const locVarsFn = new Function('self', 'info_queue', 'card', fnBody);
+
+      try
       {
-        console.warn(`[Server] Could not find resolved GitHub path for atlas ${at.key}. Original: ${at.path}`);
-        at.localPath = null;
+        const result = locVarsFn({}, card.infoQueue, card);
+        if (result && Array.isArray(result))
+          card.vars = result.vars;
+      }
+      catch (err)
+      {
+        console.warn(`loc_vars failed for ${card.key}:`, err);
       }
     }
-    */
 
     const finalDataForCache = { locMap, atlases: atlasDefs, cards, version: latestTag || 'no-tag' };
     await fs.writeFile(metadataFile, JSON.stringify(finalDataForCache, null, 2), 'utf8');
