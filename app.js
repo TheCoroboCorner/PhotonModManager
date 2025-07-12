@@ -669,7 +669,9 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
             for (let k = 1; k < 3; k++)
             {
-              if (args[k] === 'null')
+              if (args[k] === null)
+                continue;
+              else if (args[k] === 'null')
                 args[k] = null;
               else if (args[k].startsWith('card.'))
               {
@@ -718,9 +720,9 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
               }
             }
 
-            const n = args[1];
-            const d = args[2];
-            const i = args[3];
+            const n = args[1] || 1;
+            const d = args[2] || 1;
+            const i = args[3] || '';
 
             // const isNumeric = (x) => !isNaN(parseFloat(x)) && isFinite(x);
 
