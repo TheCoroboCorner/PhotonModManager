@@ -531,7 +531,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
         try
         {
-          const jsonLike = luaTable.replace(/(\w+)\s*=/g, `"$1":`);
+          const jsonLike = tableText.replace(/(\w+)\s*=/g, `"$1":`);
           card.config = new Function(`return ${jsonLike}`)();
         }
         catch (err)
