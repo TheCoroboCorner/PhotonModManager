@@ -526,21 +526,21 @@
       "path": "Jokers.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire//Jokers.png",
+      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire/no-tag/Jokers.png",
       "resolvedGitHubPath": "assets/1x/Jokers.png"
     },
     "dbbq_decks": {
       "path": "Decks.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire//Decks.png",
+      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire/no-tag/Decks.png",
       "resolvedGitHubPath": "assets/1x/Decks.png"
     },
     "dbbq_bus": {
       "path": "j_dbbq_bus.png",
       "px": 71,
       "py": 95,
-      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire//j_dbbq_bus.png",
+      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire/no-tag/j_dbbq_bus.png",
       "resolvedGitHubPath": "assets/1x/j_dbbq_bus.png"
     }
   },
