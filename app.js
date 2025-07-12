@@ -501,6 +501,24 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     console.log(`[Server] Final cache dir contents for ${modKey}@${latestTag}:`, diskFiles);
     diskFiles = null;
 
+    // For loc_vars
+
+    const G_STUB = {
+      GAME: {
+        probabilities: {
+          normal: 1
+        },
+        health: 100
+      }
+    }
+
+    const SMODS_STUB = {
+      get_probability_vars(card, numerator, denominator, identifier)
+      {
+        return [ numerator, denominator ];
+      }
+    }
+
     for (const key of Object.keys(atlasDefs))
     {
       const at = atlasDefs[key];
@@ -557,6 +575,38 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       card.vars = [];
       card.infoQueue = [];
 
+      const lvIdx = card.raw.indexOf('loc_vars');
+      if (lvIdx !== -1)
+      {
+        const fnIdx = card.raw.indexOf('function', lvIdx);
+        const brace = card.raw.indexOf('{', fnIdx);
+        const fnBlock = extractBlockContent(card.raw, brace);
+        if (fnBlock)
+        {
+          const fnBody = fnBlock.content;
+          console.log(`[loc_vars] running loc_vars for ${card.key} with body:\n`, fnBody);
+
+          try
+          {
+            const locVarsFn = new Function('self', 'info_queue', 'card', 'SMODS', 'G', fnBody);
+            const result = locVarsFn({}, card.infoQueue, card, SMODS_STUB, G_STUB);
+
+            if (result && Array.isArray(result.vars))
+            {
+              card.vars = result.vars;
+              console.log(`[loc_vars] → card.vars for ${card.key}:`, card.vars);
+            }
+          }
+          catch (err) 
+          {
+            console.error(`loc_vars execution error for ${card.key}:`, err);
+          }
+        }
+        else console.warn(`Couldn’t extract loc_vars body for ${card.key}`);
+      }
+      else console.log(`(no loc_vars) for ${card.key}`);
+
+      /*
       const retMatch = card.raw.match(/return\s*\{[\s\S]*?vars\s*=\s*\{([^}]*)\}/);
       if (retMatch)
       {
@@ -579,6 +629,18 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
             }
             card.vars.push(val);
           }
+          else if (expr.startsWith('G.'))
+          {
+            const path = expr.split('.');
+            let val = CONSTANTS;
+            for (let prop of path)
+            {
+              if (val == null)
+                break;
+              val = val[prop];
+            }
+            card.vars.push(val);
+          }
           else
           {
             const num = parseFloat(expr);
@@ -588,6 +650,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         console.log(`[loc_vars] → parsed card.vars for ${card.key}:`, card.vars);
       }
       else console.log(`[loc_vars] (no loc_vars) for ${card.key}`);
+      */
     }
 
     const finalDataForCache = { locMap, atlases: atlasDefs, cards, version: latestTag || 'no-tag' };
