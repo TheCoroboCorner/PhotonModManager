@@ -3,7 +3,7 @@ const COLOURS = {
   chips: '#009DFF',
   money: '#F3B958',
   xmult: '#FE5F55',
-  filter: '#FF9A00',
+  attention: '#FF9A00',
   blue: '#009DFF',
   red: '#FE5F55',
   green: '#4BC292',
@@ -63,7 +63,7 @@ const COLOURS = {
   clubs: '#235955',
   text_light: "#FFFFFF",
   text_dark: '#4F6367',
-  text_inactive: '#88888899',
+  inactive: '#88888899',
   background_light: '#B8D8D8',
   background_white: "#FFFFFF",
   background_dark: '#7A9E9F',
@@ -102,7 +102,7 @@ function formatMarkup(str)
   let i = 0;
 
   const closeSpan = () => {
-    if (stack.length)
+    while (stack.length)
     {
       stack.pop();
       out += '</span>';
@@ -174,6 +174,7 @@ function formatMarkup(str)
     }
   }
 
+  closeSpan();
   return out;
 }
 
