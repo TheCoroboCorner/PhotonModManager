@@ -63,6 +63,11 @@ class VersionRange {
     static parse(str)
     {
         const m = String(str).trim().match(/^(>=|<=|>|<|=)?\s*(.+)$/);
+        if (!m)
+        {
+            console.warn(`VersionRange.parse: couldn't parse "${str}", defaulting to any`);
+        }
+
         const op = m[1] || '>=';
         const ver = m[2] || '';
 
