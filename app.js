@@ -447,35 +447,6 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     const imgFiles = allGitHubFiles.filter(p => p.toLowerCase().startsWith('assets/2x/') && p.toLowerCase().endsWith('.png'));
 
-    await pLimit(CONCURRENCY_LIMIT, imgFiles, async (repoPath) => {
-      try 
-      {
-        const buf = await fetchRawBinary(owner, repo, repoPath);
-        if (!buf)
-        {
-          console.warn(`[Server] Empty buffer for ${repoPath}`);
-          return;
-        }
-
-        const fileName = path.basename(repoPath);
-        const localFile = path.join(versionSpecificCacheDir, fileName);
-        await fs.writeFile(localFile, Buffer.from(buf));
-
-        for (const key of Object.keys(atlasDefs))
-        {
-          if (atlasDefs[key].path.toLowerCase() === fileName.toLowerCase())
-          {
-            atlasDefs[key].localPath = `/wiki-data/${modKey}/${latestTag}/${encodeURIComponent(fileName)}`;
-            atlasDefs[key].resolvedGitHubPath = repoPath;
-          }
-        }
-      }
-      catch (err)
-      {
-        console.error(`[Server] Error caching ${repoPath}:`, err);
-      }
-    });
-
     const locPathInRepo = luaFilesToDownload.find(p => p.endsWith('en-us.lua')) || luaFilesToDownload.find(p => p.endsWith('default.lua'));
     const locTxt = locPathInRepo ? luaFileContents[locPathInRepo] : '';
     const locMap = parseLoc(locTxt);
@@ -494,6 +465,41 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       Object.assign(atlasDefs, parseAtlasDefs(txt));
       cards.push(...parseAllEntities(txt));
     }
+
+    await pLimit(CONCURRENCY_LIMIT, imgFiles, async (repoPath) => {
+      try 
+      {
+        const buf = await fetchRawBinary(owner, repo, repoPath);
+        if (!buf)
+        {
+          console.warn(`[Server] Empty buffer for ${repoPath}`);
+          return;
+        }
+
+        const fileName = path.basename(repoPath);
+        const localFile = path.join(versionSpecificCacheDir, fileName);
+        await fs.writeFile(localFile, Buffer.from(buf));
+        console.log(`[Server] Wrote image file ${localFile}`);
+
+        for (const key of Object.keys(atlasDefs))
+        {
+          if (atlasDefs[key].path.toLowerCase() === fileName.toLowerCase())
+          {
+            atlasDefs[key].localPath = `/wiki-data/${modKey}/${latestTag}/${encodeURIComponent(fileName)}`;
+            atlasDefs[key].resolvedGitHubPath = repoPath;
+            console.log(`[Server] Hooked atlas ${key} → ${atlasDefs[key].localPath}`);
+          }
+        }
+      }
+      catch (err)
+      {
+        console.error(`[Server] Error caching ${repoPath}:`, err);
+      }
+    });
+
+    let diskFiles = await fs.readdir(versionSpecificCacheDir);
+    console.log(`[Server] Final cache dir contents for ${modKey}@${latestTag}:`, diskFiles);
+    diskFiles = null;
 
     for (const key of Object.keys(atlasDefs))
     {
