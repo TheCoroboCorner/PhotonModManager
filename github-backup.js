@@ -14,7 +14,20 @@ const WIKI_LOCAL_DATA_DIR = path.join(__dirname, 'wiki-data');
 
 const API_BASE = 'https://api.github.com';
 
-
+async function listRemoteVersions(modKey)
+{
+  const pathInRepo = `wiki-data-cache/${modKey}`;
+  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${pathInRepo}`;
+  const resp = await fetch(url, { headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }});
+  if (!resp.ok)
+  {
+    if (resp.status === 404)
+      return [];
+    throw new Error(`Failed to list remote versions: ${resp.status}`);
+  }
+  const items = await resp.json();
+  return items.filter(i => i.type === 'dir').map(i => i.name);
+}
 
 async function getFileSha() {
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/data.json`;
@@ -109,6 +122,21 @@ async function getShaFor(pathInRepo) {
 }
 
 export async function backupMetadata(modKey, versionTag) {
+  try
+  {
+    const existing = await listRemoteVersions(modKey);
+    if (existing.includes(versionTag))
+    {
+      console.log(`[GitHub Backup] version "${versionTag}" already exists upstream; skipping backup`);
+      return;
+    }
+  }
+  catch (err)
+  {
+    console.warn(`[GitHub Backup] Could not check remote versions for ${modKey}:`, err);
+  }
+
+
   const localMetadataPath = path.join(WIKI_LOCAL_DATA_DIR, modKey, versionTag, 'metadata.json');
   const repoPath = `wiki-data-cache/${modKey}/${versionTag}/metadata.json`;
 

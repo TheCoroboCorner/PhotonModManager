@@ -522,6 +522,8 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     for (let card of cards)
     {
+      console.log(`[DEBUG CONFIG] card.raw for ${card.key}:\n`, card.raw);
+
       // Config first
 
       card.config = {};
@@ -534,15 +536,18 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         if (block)
         {
           const fullLuaTable = card.raw.slice(brace, block.endIndex + 1);
+          console.log(`[DEBUG CONFIG] fullLuaTable for ${card.key}:\n`, fullLuaTable);
           try
           {
             const jsonLike = fullLuaTable.replace(/(\w+)\s*=/g, `"$1":`);
+            console.log(`[DEBUG CONFIG] jsonLike for ${card.key}:\n`, jsonLike);
             card.config = new Function(`return ${jsonLike}`)();
           }
           catch (err)
           {
             console.warn(`Failed to parse full config for ${card.key}:`, err);
           }
+          console.log(`[DEBUG CONFIG] card.config for ${card.key}:`, card.config);
         }
       }
 
