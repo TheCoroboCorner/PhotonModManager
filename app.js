@@ -503,12 +503,14 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     // For loc_vars
 
-    const G_STUB = {
-      GAME: {
-        probabilities: {
-          normal: 1
-        },
-        health: 100
+    const CONSTANTS = {
+      G: {
+        GAME: {
+          probabilities: {
+            normal: 1
+          },
+          health: 100
+        } 
       }
     }
 
