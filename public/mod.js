@@ -66,6 +66,7 @@ class VersionRange {
         if (!m)
         {
             console.warn(`VersionRange.parse: couldn't parse "${str}", defaulting to any`);
+            return new VersionRange();
         }
 
         const op = m[1] || '>=';
