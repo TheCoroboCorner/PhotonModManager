@@ -884,10 +884,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = 'non-jokers',\r\n\tpath = 'attributes.png',\r\n\tpx = 71,\r\n\tpy = 95",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Atlas",
@@ -895,10 +895,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = 'stands',\r\n\tpath = 'jokers.png',\r\n\tpx = 71,\r\n\tpy = 95",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Atlas",
@@ -906,10 +906,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = 'items',\r\n\tpath = 'items.png',\r\n\tpx = 71,\r\n\tpy = 95",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Atlas",
@@ -917,10 +917,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = 'modicon',\r\n\tpath = 'jojo_icon.png',\r\n\tpx = 34,\r\n\tpy = 34",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Atlas",
@@ -928,10 +928,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = 'decks',\r\n\tpath = 'decks.png',\r\n\tpx = 71,\r\n\tpy = 95",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Back",
@@ -942,10 +942,10 @@
         "y": 0
       },
       "raw": "key = \"speed\",\r\n\t\r\n\tatlas = 'decks',\r\n\tpos = { x = 0, y = 0 },\r\n\t\r\n\tapply = function(self, back)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\tfunc = function()\r\n\t\t\t\tif not G.jokers then return false end\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_blueprint',\r\n\t\t\t\t\tedition = 'e_foil',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_requiem_madeInHeaven',\r\n\t\t\t\t\tedition = 'e_foil',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_requiem_madeInHeaven',\r\n\t\t\t\t\tedition = 'e_foil',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_moodyBlues',\r\n\t\t\t\t\tedition = 'e_foil',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\t}))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Back",
@@ -956,10 +956,10 @@
         "y": 0
       },
       "raw": "key = \"queensDream\",\r\n\t\r\n\tatlas = 'decks',\r\n\tpos = { x = 1, y = 0 },\r\n\t\r\n\tapply = function(self, back)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\tfunc = function()\r\n\t\t\t\tif not G.jokers then return false end\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_harvest',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_sheerHeartAttack',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_requiem_killerQueen',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_strayCat',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_softAndWet',\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\t}))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Back",
@@ -970,10 +970,10 @@
         "y": 0
       },
       "raw": "key = \"bucciarati\",\r\n\t\r\n\tatlas = 'decks',\r\n\tpos = { x = 2, y = 0 },\r\n\t\r\n\tapply = function(self, back)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\tfunc = function()\t\r\n\t\t\t\tif not G.jokers then return false end\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_goldExperience'\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_stickyFingers'\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_moodyBlues'\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_sixPistols'\r\n\t\t\t\t})\r\n\t\t\t\tSMODS.add_card({\r\n\t\t\t\t\tkey = 'j_jojo_stand_purpleHaze'\r\n\t\t\t\t})\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\t}))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "ConsumableType",
@@ -981,10 +981,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = 'jojo_Scraps',\r\n\tdefault = 'c_jojo_water',\r\n\tcollection_rows = { 4, 3 },\r\n\tprimary_colour = HEX('b5b5b5'),\r\n\tsecondary_colour = HEX('828282'),\r\n\tshop_rate = 3",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "ConsumableType",
@@ -992,10 +992,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = 'jojo_Stand',\r\n\tdefault = 'c_jojo_bullet',\r\n\tcollection_rows = { 4, 3 },\r\n\tprimary_colour = HEX('f0b11f'),\r\n\tsecondary_colour = HEX('cf981b')",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1007,13 +1007,7 @@
       },
       "raw": "key = 'standArrow',\r\n\tset = 'Spectral',\r\n\tconfig = { max_highlighted = 1 },\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn { vars = { card.ability.max_highlighted } }\r\n\tend,\r\n\thidden = true,\r\n\tsoul_rate = 0.02,\r\n\tcan_repeat_soul = true,\r\n\tsoul_set = 'Tarot',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 4, y = 4 },\t\r\n\tsoul_pos = { x = 5, y = 4 },\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tlocal key = G.jokers.highlighted[1].config.center.key\r\n\t\t\r\n\t\tlocal blackSabbathBoost = nil\r\n\t\tlocal blackSabbath = SMODS.find_card('j_jojo_stand_blackSabbath')\r\n\t\t\r\n\t\tif next(blackSabbath) then\r\n\t\t\tblackSabbathBoost = 'e_negative'\r\n\t\t\tblackSabbath[1]:start_dissolve()\r\n\t\tend\r\n\t\t\r\n\t\tif key == 'j_jojo_stand_silverChariot' then\r\n\t\t\tlocal stand = SMODS.add_card({ key = 'j_jojo_requiem_silverChariot', edition = blackSabbathBoost })\r\n\t\tend\r\n\t\tif key == 'j_jojo_stand_theWorld' then\r\n\t\t\tSMODS.add_card({ key = 'j_jojo_requiem_theWorld', edition = blackSabbathBoost })\r\n\t\tend\r\n\t\tif key == 'j_jojo_stand_killerQueen' then\r\n\t\t\tlocal stand = SMODS.add_card({ key = 'j_jojo_requiem_killerQueen', edition = blackSabbathBoost })\r\n\t\t\tstand.ability.extra.reward = G.jokers.highlighted[1].ability.extra.reward\r\n\t\tend\r\n\t\tif key == 'j_jojo_stand_goldExperience' then\r\n\t\t\tSMODS.add_card({ key = 'j_jojo_requiem_goldExperience', edition = blackSabbathBoost })\r\n\t\tend\r\n\t\tif key == 'j_jojo_stand_whitesnake' then\r\n\t\t\tlocal stand = SMODS.add_card({ key = 'j_jojo_requiem_cmoon', edition = blackSabbathBoost })\r\n\t\t\tstand.ability.extra.chips = G.jokers.highlighted[1].ability.extra.chips\r\n\t\t\tstand.ability.extra.plusmult = G.jokers.highlighted[1].ability.extra.plusmult\r\n\t\t\tstand.ability.extra.timesmult = G.jokers.highlighted[1].ability.extra.timesmult\r\n\t\tend\r\n\t\tif key == 'j_jojo_requiem_cmoon' then\r\n\t\t\tlocal stand = SMODS.add_card({ key = 'j_jojo_requiem_madeInHeaven', edition = blackSabbathBoost })\r\n\t\t\tstand.ability.extra.chips = G.jokers.highlighted[1].ability.extra.chips\r\n\t\t\tstand.ability.extra.plusmult = G.jokers.highlighted[1].ability.extra.plusmult\r\n\t\t\tstand.ability.extra.timesmult = G.jokers.highlighted[1].ability.extra.timesmult\r\n\t\tend\r\n\t\tif key == 'j_jojo_stand_tuskAct1' then\r\n\t\t\tlocal stand = SMODS.add_card({ key = 'j_jojo_requiem_tuskAct2', edition = blackSabbathBoost })\r\n\t\t\tstand.ability.extra.totalXmult = G.jokers.highlighted[1].ability.extra.totalXmult\r\n\t\tend\r\n\t\tif key == 'j_jojo_requiem_tuskAct2' then\r\n\t\t\tlocal stand = SMODS.add_card({ key = 'j_jojo_requiem_tuskAct3', edition = blackSabbathBoost })\r\n\t\t\tstand.ability.extra.totalXmult = G.jokers.highlighted[1].ability.extra.totalXmult\r\n\t\tend\r\n\t\tif key == 'j_jojo_requiem_tuskAct3' then\r\n\t\t\tlocal stand = SMODS.add_card({ key = 'j_jojo_requiem_tuskAct4', edition = blackSabbathBoost })\r\n\t\t\tstand.ability.extra.totalXmult = G.jokers.highlighted[1].ability.extra.totalXmult\r\n\t\tend\r\n\t\tif key == 'j_jojo_stand_softAndWet' then\r\n\t\t\tSMODS.add_card({ key = 'j_jojo_requiem_softAndWet', edition = blackSabbathBoost })\r\n\t\tend\r\n\t\t\r\n\t\tG.jokers.highlighted[1]:start_dissolve()\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\tlocal validTargets = {'j_jojo_stand_silverChariot', 'j_jojo_stand_theWorld',\r\n\t\t\t'j_jojo_stand_killerQueen', 'j_jojo_stand_goldExperience', 'j_jojo_stand_whitesnake',\r\n\t\t\t'j_jojo_requiem_cmoon', 'j_jojo_stand_tuskAct1', 'j_jojo_requiem_tuskAct2',\r\n\t\t\t'j_jojo_requiem_tuskAct3', 'j_jojo_stand_softAndWet'}\r\n\t\t\r\n\t\tfor _, v in ipairs(validTargets) do\r\n\t\t\tif G.jokers and G.jokers.highlighted and G.jokers.highlighted[1] and G.jokers.highlighted[1].config.center.key == v then\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\tend\r\n\t\treturn false\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {
-        "max_highlighted": 1
-      },
-      "ability": {
-        "max_highlighted": 1
-      }
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1025,13 +1019,7 @@
       },
       "raw": "key = 'bullet',\r\n\tset = 'jojo_Stand',\r\n\tconfig = { max_highlighted = 1 },\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn { vars = { card.ability.max_highlighted } }\r\n\tend,\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 2, y = 2 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\ttrigger = 'after',\r\n\t\t\tdelay = 0.4,\r\n\t\t\tfunc = function()\r\n\t\t\t\tplay_sound('tarot1')\r\n\t\t\t\tcard:juice_up(0.3, 0.5)\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\t}))\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\ttrigger = 'after',\r\n\t\t\tdelay = 0.2,\r\n\t\t\tfunc = function()\r\n\t\t\t\tSMODS.destroy_cards(G.hand.highlighted)\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\t}))\r\n\t\tdelay(0.3)\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {
-        "max_highlighted": 1
-      },
-      "ability": {
-        "max_highlighted": 1
-      }
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1043,15 +1031,7 @@
       },
       "raw": "key = 'bubble',\r\n\tset = 'jojo_Stand',\r\n\tconfig = { max_highlighted = 2, min_highlighted = 2 },\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn { vars = { card.ability.max_highlighted } }\r\n\tend,\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 3, y = 2 },\t\r\n\r\n\tuse = function(self, card, area, copier)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n            trigger = 'after',\r\n            delay = 0.4,\r\n            func = function()\r\n                play_sound('tarot1')\r\n                card:juice_up(0.3, 0.5)\r\n                return true\r\n            end\r\n        }))\r\n        for i = 1, #G.hand.highlighted do\r\n            local percent = 1.15 - (i - 0.999) / (#G.hand.highlighted - 0.998) * 0.3\r\n            G.E_MANAGER:add_event(Event({\r\n                trigger = 'after',\r\n                delay = 0.15,\r\n                func = function()\r\n                    G.hand.highlighted[i]:flip()\r\n                    play_sound('card1', percent)\r\n                    G.hand.highlighted[i]:juice_up(0.3, 0.3)\r\n                    return true\r\n                end\r\n            }))\r\n        end\r\n        delay(0.2)\r\n        local rightmost = G.hand.highlighted[1]\r\n        for i = 1, #G.hand.highlighted do\r\n            if G.hand.highlighted[i].T.x > rightmost.T.x then\r\n                rightmost = G.hand.highlighted[i]\r\n            end\r\n        end\r\n        for i = 1, #G.hand.highlighted do\r\n            G.E_MANAGER:add_event(Event({\r\n                trigger = 'after',\r\n                delay = 0.1,\r\n                func = function()\r\n                    if G.hand.highlighted[i] ~= rightmost then\r\n\t\t\t\t\t\tif next(SMODS.get_enhancements(rightmost)) then\r\n\t\t\t\t\t\t\tG.hand.highlighted[i]:set_ability(next(SMODS.get_enhancements(rightmost)))\r\n\t\t\t\t\t\tend\r\n                    end\r\n                    return true\r\n                end\r\n            }))\r\n        end\r\n        for i = 1, #G.hand.highlighted do\r\n            local percent = 0.85 + (i - 0.999) / (#G.hand.highlighted - 0.998) * 0.3\r\n            G.E_MANAGER:add_event(Event({\r\n                trigger = 'after',\r\n                delay = 0.15,\r\n                func = function()\r\n                    G.hand.highlighted[i]:flip()\r\n                    play_sound('tarot2', percent, 0.6)\r\n                    G.hand.highlighted[i]:juice_up(0.3, 0.3)\r\n                    return true\r\n                end\r\n            }))\r\n        end\r\n        G.E_MANAGER:add_event(Event({\r\n            trigger = 'after',\r\n            delay = 0.2,\r\n            func = function()\r\n                G.hand:unhighlight_all()\r\n                return true\r\n            end\r\n        }))\r\n        delay(0.5)\r\n    end",
       "vars": [],
-      "infoQueue": [],
-      "config": {
-        "max_highlighted": 2,
-        "min_highlighted": 2
-      },
-      "ability": {
-        "max_highlighted": 2,
-        "min_highlighted": 2
-      }
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1063,15 +1043,7 @@
       },
       "raw": "key = 'spinningBubble',\r\n\tset = 'jojo_Stand',\r\n\tconfig = { max_highlighted = 2, min_highlighted = 2 },\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn { vars = { card.ability.max_highlighted } }\r\n\tend,\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 4, y = 2 },\t\r\n\r\n\tuse = function(self, card, area, copier)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n            trigger = 'after',\r\n            delay = 0.4,\r\n            func = function()\r\n                play_sound('tarot1')\r\n                card:juice_up(0.3, 0.5)\r\n                return true\r\n            end\r\n        }))\r\n        for i = 1, #G.hand.highlighted do\r\n            local percent = 1.15 - (i - 0.999) / (#G.hand.highlighted - 0.998) * 0.3\r\n            G.E_MANAGER:add_event(Event({\r\n                trigger = 'after',\r\n                delay = 0.15,\r\n                func = function()\r\n                    G.hand.highlighted[i]:flip()\r\n                    play_sound('card1', percent)\r\n                    G.hand.highlighted[i]:juice_up(0.3, 0.3)\r\n                    return true\r\n                end\r\n            }))\r\n        end\r\n        delay(0.2)\r\n        local rightmost = G.hand.highlighted[1]\r\n        for i = 1, #G.hand.highlighted do\r\n            if G.hand.highlighted[i].T.x > rightmost.T.x then\r\n                rightmost = G.hand.highlighted[i]\r\n            end\r\n        end\r\n        for i = 1, #G.hand.highlighted do\r\n            G.E_MANAGER:add_event(Event({\r\n                trigger = 'after',\r\n                delay = 0.1,\r\n                func = function()\r\n                    if G.hand.highlighted[i] ~= rightmost then\r\n\t\t\t\t\t\tif next(SMODS.get_enhancements(rightmost)) then\r\n\t\t\t\t\t\t\tG.hand.highlighted[i]:set_ability(next(SMODS.get_enhancements(rightmost)))\r\n\t\t\t\t\t\tend\r\n\t\t\t\t\t\tif rightmost.edition then\r\n\t\t\t\t\t\t\tG.hand.highlighted[i]:set_edition(rightmost.edition.key)\r\n\t\t\t\t\t\tend\r\n\t\t\t\t\t\tif rightmost.seal then\r\n\t\t\t\t\t\t\tG.hand.highlighted[i]:set_seal(rightmost.seal)\r\n\t\t\t\t\t\tend\r\n                    end\r\n                    return true\r\n                end\r\n            }))\r\n        end\r\n        for i = 1, #G.hand.highlighted do\r\n            local percent = 0.85 + (i - 0.999) / (#G.hand.highlighted - 0.998) * 0.3\r\n            G.E_MANAGER:add_event(Event({\r\n                trigger = 'after',\r\n                delay = 0.15,\r\n                func = function()\r\n                    G.hand.highlighted[i]:flip()\r\n                    play_sound('tarot2', percent, 0.6)\r\n                    G.hand.highlighted[i]:juice_up(0.3, 0.3)\r\n                    return true\r\n                end\r\n            }))\r\n        end\r\n        G.E_MANAGER:add_event(Event({\r\n            trigger = 'after',\r\n            delay = 0.2,\r\n            func = function()\r\n                G.hand:unhighlight_all()\r\n                return true\r\n            end\r\n        }))\r\n        delay(0.5)\r\n    end",
       "vars": [],
-      "infoQueue": [],
-      "config": {
-        "max_highlighted": 2,
-        "min_highlighted": 2
-      },
-      "ability": {
-        "max_highlighted": 2,
-        "min_highlighted": 2
-      }
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1082,10 +1054,10 @@
         "y": 2
       },
       "raw": "key = 'kiss',\r\n\tset = 'jojo_Stand',\r\n\t\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tG.consumeables.config.highlighted_limit = G.consumeables.config.highlighted_limit + 1\r\n\tend,\r\n\tremove_from_deck = function(self, card, from_debuff)\r\n\t\tG.consumeables.config.highlighted_limit = math.max(G.consumeables.config.highlighted_limit - 1, 1)\r\n\tend,\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 5, y = 2 },\t\r\n\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tif #G.consumeables.highlighted == 1 then\r\n\t\t\tSMODS.Stickers[\"jojo_kiss\"]:apply(G.consumeables.highlighted[1], true)\r\n--\t\t\tSMODS.Stickers[\"eternal\"]:apply(G.consumeables.highlighted[1], true)\r\n\t\telseif #G.hand.highlighted == 1 then\r\n\t\t\tSMODS.Stickers[\"jojo_kiss\"]:apply(G.hand.highlighted[1], true)\r\n--\t\t\tSMODS.Stickers[\"eternal\"]:apply(G.hand.highlighted[1], true)\r\n\t\telse\r\n\t\t\tSMODS.Stickers[\"jojo_kiss\"]:apply(G.jokers.highlighted[1], true)\r\n--\t\t\tSMODS.Stickers[\"eternal\"]:apply(G.jokers.highlighted[1], true)\r\n\t\tend\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn (G.consumeables and #G.consumeables.highlighted == 2)\r\n\t\tor (G.jokers and #G.jokers.highlighted == 1)\r\n\t\tor (G.hand and #G.hand.highlighted == 1)\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1145,15 +1117,7 @@
       },
       "raw": "key = 'flan',\r\n\tset = 'jojo_Stand',\r\n\tconfig = { max_highlighted = 1, min_highlighted = 1 },\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 4, y = 3 },\t\r\n\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tlocal selectedCard = G.hand.highlighted[1]\r\n\t\tlocal probability = pseudorandom('flan' .. G.GAME.round_resets.ante)\r\n\t\t\r\n\t\tif probability < 19/40 then\r\n\t\t\tselectedCard:set_edition(\"e_foil\")\r\n\t\telseif probability < 323/400 then\r\n\t\t\tselectedCard:set_edition(\"e_holo\")\r\n\t\telseif probability < 31/32 then\r\n\t\t\tselectedCard:set_edition(\"e_polychrome\")\r\n\t\telse\r\n\t\t\tselectedCard:set_edition(\"e_negative\")\r\n\t\tend\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {
-        "max_highlighted": 1,
-        "min_highlighted": 1
-      },
-      "ability": {
-        "max_highlighted": 1,
-        "min_highlighted": 1
-      }
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1201,15 +1165,7 @@
       },
       "raw": "key = 'cannolo',\r\n\tset = 'jojo_Stand',\r\n\t\r\n\tconfig = { max_highlighted = 1, min_highlighted = 1 },\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 2, y = 4},\t\r\n\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tlocal selectedCard = G.hand.highlighted[1]\r\n\t\t\r\n\t\tif probability < 1/5 then\r\n\t\t\tselectedCard:set_ability(\"m_steel\")\r\n\t\telseif probability < 2/5 then\r\n\t\t\tselectedCard:set_ability(\"m_glass\")\r\n\t\telseif probability < 3/5 then\r\n\t\t\tselectedCard:set_ability(\"m_bonus\")\r\n\t\telseif probability < 4/5 then\r\n\t\t\tselectedCard:set_ability(\"m_mult\")\r\n\t\telse\r\n\t\t\tselectedCard:set_ability(\"m_jojo_frozen\")\r\n\t\tend\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\tfor _, v in ipairs(G.hand.cards) do\r\n\t\t\tif not next(SMODS.get_enhancements(v)) then\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\tend\r\n\t\treturn false\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {
-        "max_highlighted": 1,
-        "min_highlighted": 1
-      },
-      "ability": {
-        "max_highlighted": 1,
-        "min_highlighted": 1
-      }
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1232,10 +1188,10 @@
         "y": 0
       },
       "raw": "key = 'water',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 0, y = 0 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\treturn { message = \"Sip...\" }\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn true\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1246,10 +1202,10 @@
         "y": 0
       },
       "raw": "key = 'tomatoes',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 1, y = 0 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\treturn { message = \"Nom...\" }\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn true\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1260,10 +1216,10 @@
         "y": 0
       },
       "raw": "key = 'spaghetti',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 2, y = 0 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\treturn { message = \"Nom...\" }\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn true\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1274,10 +1230,10 @@
         "y": 0
       },
       "raw": "key = 'meat',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 3, y = 0 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\treturn { message = \"Nom...\" }\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn true\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1288,10 +1244,10 @@
         "y": 0
       },
       "raw": "key = 'caramel',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 4, y = 0 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tlocal probability = pseudorandom('caramel' .. G.GAME.round_resets.ante)\r\n\t\t\r\n\t\tvalid_cards = {}\r\n\t\tfor _, v in ipairs(G.hand.cards) do\r\n\t\t\tif not v.edition then\r\n\t\t\t\tvalid_cards[#valid_cards + 1] = v\r\n\t\t\tend\r\n\t\tend\r\n\t\t\r\n\t\tlocal randomCard = pseudorandom_element(valid_cards, pseudoseed('caramel' .. G.GAME.round_resets.ante))\r\n\t\t\r\n\t\tif probability < 19/40 then\r\n\t\t\trandomCard:set_edition(\"e_foil\")\r\n\t\telseif probability < 323/400 then\r\n\t\t\trandomCard:set_edition(\"e_holo\")\r\n\t\telseif probability < 19/20 then\r\n\t\t\trandomCard:set_edition(\"e_polychrome\")\r\n\t\telse\r\n\t\t\trandomCard:set_edition(\"e_negative\")\r\n\t\tend\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\tfor _, v in ipairs(G.hand.cards) do\r\n\t\t\tif not v.edition then\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\tend\r\n\t\treturn false\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1314,10 +1270,10 @@
         "y": 1
       },
       "raw": "key = 'dough',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 0, y = 1 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tlocal probability = pseudorandom('dough' .. G.GAME.round_resets.ante)\r\n\t\t\r\n\t\tvalid_cards = {}\r\n\t\tfor _, v in ipairs(G.hand.cards) do\r\n\t\t\tif not v.seal then\r\n\t\t\t\tvalid_cards[#valid_cards + 1] = v\r\n\t\t\tend\r\n\t\tend\r\n\t\t\r\n\t\tlocal randomCard = pseudorandom_element(valid_cards, pseudoseed('dough' .. G.GAME.round_resets.ante))\r\n\t\t\r\n\t\tif probability < 1/4 then\r\n\t\t\trandomCard:set_seal(\"Red\")\r\n\t\telseif probability < 1/2 then\r\n\t\t\trandomCard:set_seal(\"Blue\")\r\n\t\telseif probability < 3/4 then\r\n\t\t\trandomCard:set_seal(\"Purple\")\r\n\t\telse\r\n\t\t\trandomCard:set_seal(\"Gold\")\r\n\t\tend\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\tfor _, v in ipairs(G.hand.cards) do\r\n\t\t\tif not v.seal then\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\tend\r\n\t\treturn false\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1328,10 +1284,10 @@
         "y": 1
       },
       "raw": "key = 'mozzarella',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 1, y = 1 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\treturn { message = \"Nom...\" }\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn true\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1342,10 +1298,10 @@
         "y": 1
       },
       "raw": "key = 'ricotta',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 2, y = 1 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\tlocal probability = pseudorandom('ricotta' .. G.GAME.round_resets.ante)\r\n\t\t\r\n\t\tvalid_cards = {}\r\n\t\tfor _, v in ipairs(G.hand.cards) do\r\n\t\t\tif not next(SMODS.get_enhancements(v)) then\r\n\t\t\t\tvalid_cards[#valid_cards + 1] = v\r\n\t\t\tend\r\n\t\tend\r\n\t\t\r\n\t\tlocal randomCard = pseudorandom_element(valid_cards, pseudoseed('ricotta' .. G.GAME.round_resets.ante))\r\n\t\t\r\n\t\tif probability < 1/5 then\r\n\t\t\trandomCard:set_ability(\"m_steel\")\r\n\t\telseif probability < 2/5 then\r\n\t\t\trandomCard:set_ability(\"m_glass\")\r\n\t\telseif probability < 3/5 then\r\n\t\t\trandomCard:set_ability(\"m_bonus\")\r\n\t\telseif probability < 4/5 then\r\n\t\t\trandomCard:set_ability(\"m_mult\")\r\n\t\telse\r\n\t\t\trandomCard:set_ability(\"m_jojo_frozen\")\r\n\t\tend\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\tfor _, v in ipairs(G.hand.cards) do\r\n\t\t\tif not next(SMODS.get_enhancements(v)) then\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n\t\tend\r\n\t\treturn false\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1356,10 +1312,10 @@
         "y": 1
       },
       "raw": "key = 'coffeeBeans',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 3, y = 1 },\t\r\n\t\r\n\tuse = function(self, card, area, copier)\r\n\t\treturn { message = \"Nom...\" }\r\n\tend,\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn true\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_jojo_stand_pearlJam\"))\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1370,10 +1326,10 @@
         "y": 1
       },
       "raw": "key = 'bolts',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 4, y = 1 },\t\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn false\r\n\tend,\r\n\t\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tcard.sell_cost = 2\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn args.source == 'jojo_stand_harvest'\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1384,10 +1340,10 @@
         "y": 1
       },
       "raw": "key = 'pebbles',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 5, y = 1 },\t\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn false\r\n\tend,\r\n\t\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tcard.sell_cost = 1\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn args.source == 'jojo_stand_harvest'\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1398,10 +1354,10 @@
         "y": 2
       },
       "raw": "key = 'coin',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 0, y = 2 },\t\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn false\r\n\tend,\r\n\t\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tcard.sell_cost = 3\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn args.source == 'jojo_stand_harvest'\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Consumable",
@@ -1412,10 +1368,10 @@
         "y": 2
       },
       "raw": "key = 'gem',\r\n\tset = 'jojo_Scraps',\r\n\t\r\n\tatlas = 'items',\r\n\tpos = { x = 1, y = 2 },\t\r\n\t\r\n\tcan_use = function(self, card)\r\n\t\treturn false\r\n\tend,\r\n\t\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tcard.sell_cost = 10\r\n\tend,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn args.source == 'jojo_stand_harvest'\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Enhancement",
@@ -1522,10 +1478,10 @@
         "y": 0
       },
       "raw": "key = 'stand_judgement',\r\n\trarity = 3,\r\n\tcost = 9,\r\n\tblueprint_compat = false,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 7, y = 0 },\r\n\t\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tfor k, v in pairs(G.GAME.probabilities) do\r\n\t\t\tG.GAME.probabilities[k] = v * 3\r\n\t\tend\r\n\tend,\r\n\tremove_from_deck = function(self, card, from_debuff)\r\n\t\tfor k, v in pairs(G.GAME.probabilities) do\r\n\t\t\tG.GAME.probabilities[k] = v / 3\r\n\t\tend\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1561,9 +1517,7 @@
       },
       "raw": "key = 'stand_crazyDiamond',\r\n\tconfig = {},\r\n\trarity = 3,\r\n\tcost = 10,\r\n\tblueprint_compat = true,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 1, y = 1 },\r\n\t\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn {}\r\n\tend,\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\r\n\t\tif context.remove_playing_cards then\r\n\t\t\tfor _, removed_card in ipairs(context.removed) do\r\n\t\t\t\t-- Duplicate the card\r\n\t\t\t\tG.playing_card = (G.playing_card and G.playing_card + 1) or 1\r\n\t\t\t\tlocal copy_card = copy_card(removed_card, nil, nil, G.playing_card)\r\n\t\t\t\tcopy_card:add_to_deck()\r\n\t\t\t\tG.deck.config.card_limit = G.deck.config.card_limit + 1\r\n\t\t\t\ttable.insert(G.playing_cards, copy_card)\r\n\t\t\t\tG.hand:emplace(copy_card)\r\n\t\t\t\tcopy_card.states.visible = nil\r\n\r\n\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\tfunc = function()\r\n\t\t\t\t\t\tcopy_card:start_materialize()\r\n\t\t\t\t\t\treturn true\r\n\t\t\t\t\tend\r\n\t\t\t\t}))\r\n\t\t\tend\r\n\t\tend\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {},
-      "ability": {}
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1575,9 +1529,7 @@
       },
       "raw": "key = 'stand_theHand',\r\n\tconfig = {},\r\n\trarity = 2,\r\n\tcost = 7,\r\n\tblueprint_compat = false,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 2, y = 1 },\r\n\t\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn {}\r\n\tend,\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.destroy_card and context.cardarea == G.play and #context.full_hand == 3 and not context.blueprint then\r\n\t\t\tif context.destroy_card == context.scoring_hand[2] then\r\n\t\t\t\treturn { remove = true }\r\n\t\t\tend\r\n\t\tend\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {},
-      "ability": {}
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1600,10 +1552,10 @@
         "y": 6
       },
       "raw": "key = 'stand_heavensDoor',\r\n\trarity = 4,\r\n\tcost = 20,\r\n\tblueprint_compat = false,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 2, y = 6 },\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.card_added and context.card.ability.consumeable then\r\n\t\t\tif type(context.card.ability) == \"table\" then\r\n\t\t\t\tfor key, entry in pairs(context.card.ability) do\r\n\t\t\t\t\tif type(entry) == \"number\" then\r\n\t\t\t\t\t\tcontext.card.ability[key] = 2 * entry\r\n\t\t\t\t\tend\r\n\t\t\t\tend\r\n\t\t\telseif type(context.card.ability) == \"number\" then\r\n\t\t\t\tcontext.card.ability = context.card.ability * 2\r\n\t\t\tend\r\n\t\t\tif context.card.ability.extra then\r\n\t\t\t\tif type(context.card.ability.extra) == \"table\" then\r\n\t\t\t\t\tfor key, entry in pairs(context.card.ability.extra) do\r\n\t\t\t\t\t\tif type(entry) == \"number\" then\r\n\t\t\t\t\t\t\tcontext.card.ability.extra[key] = 2 * entry\r\n\t\t\t\t\t\tend\r\n\t\t\t\t\tend\r\n\t\t\t\tend\r\n\t\t\tend\r\n\t\tend\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1614,10 +1566,10 @@
         "y": 1
       },
       "raw": "key = 'stand_harvest',\r\n\trarity = 2,\r\n\tcost = 5,\r\n\tblueprint_compat = true,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 4, y = 1 },\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.setting_blind and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then\r\n\t\t\tlocal probability = pseudorandom('harvest' .. G.GAME.round_resets.ante)\r\n\t\t\t\r\n\t\t\tif probability < 1/2 then\r\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\r\n\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\tfunc = (function()\r\n\t\t\t\t\t\tSMODS.add_card {\r\n\t\t\t\t\t\t\tset = 'jojo_Scraps',\r\n\t\t\t\t\t\t\tkey_append = 'jojo_stand_harvest'\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\r\n\t\t\t\t\t\treturn true\r\n\t\t\t\t\tend)\r\n\t\t\t\t}))\r\n\t\t\t\t\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize('k_plus_tarot'),\r\n\t\t\t\t\tcolour = G.C.SECONDARY_SET.Tarot\r\n\t\t\t\t}\r\n\t\t\telseif probability < 13/20 then\r\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\r\n\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\tfunc = (function()\r\n\t\t\t\t\t\tSMODS.add_card {\r\n\t\t\t\t\t\t\tset = 'Tarot',\r\n\t\t\t\t\t\t\tkey_append = 'jojo_stand_harvest'\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\r\n\t\t\t\t\t\treturn true\r\n\t\t\t\t\tend)\r\n\t\t\t\t}))\r\n\t\t\t\t\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize('k_plus_tarot'),\r\n\t\t\t\t\tcolour = G.C.SECONDARY_SET.Tarot\r\n\t\t\t\t}\r\n\t\t\telseif probability < 4/5 then\r\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\r\n\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\tfunc = (function()\r\n\t\t\t\t\t\tSMODS.add_card {\r\n\t\t\t\t\t\t\tset = 'Planet',\r\n\t\t\t\t\t\t\tkey_append = 'jojo_stand_harvest'\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\r\n\t\t\t\t\t\treturn true\r\n\t\t\t\t\tend)\r\n\t\t\t\t}))\r\n\t\t\t\t\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize('k_plus_planet'),\r\n\t\t\t\t\tcolour = G.C.SECONDARY_SET.Tarot\r\n\t\t\t\t}\r\n\t\t\telseif probability < 19/20 then\r\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\r\n\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\tfunc = (function()\r\n\t\t\t\t\t\tSMODS.add_card {\r\n\t\t\t\t\t\t\tset = 'Spectral',\r\n\t\t\t\t\t\t\tkey_append = 'jojo_stand_harvest'\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\r\n\t\t\t\t\t\treturn true\r\n\t\t\t\t\tend)\r\n\t\t\t\t}))\r\n\t\t\t\t\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize('k_plus_spectral'),\r\n\t\t\t\t\tcolour = G.C.SECONDARY_SET.Tarot\r\n\t\t\t\t}\r\n\t\t\telse\r\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\r\n\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\tfunc = (function()\r\n\t\t\t\t\t\tSMODS.add_card {\r\n\t\t\t\t\t\t\tset = 'jojo_Stand',\r\n\t\t\t\t\t\t\tkey_append = 'jojo_stand_harvest'\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\r\n\t\t\t\t\t\treturn true\r\n\t\t\t\t\tend)\r\n\t\t\t\t}))\r\n\t\t\t\t\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize('k_plus_spectral'),\r\n\t\t\t\t\tcolour = G.C.SECONDARY_SET.Tarot\r\n\t\t\t\t}\r\n\t\t\tend\r\n\t\tend\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1628,10 +1580,10 @@
         "y": 1
       },
       "raw": "key = 'stand_atomHeartFather',\r\n\trarity = 3,\r\n\tcost = 7,\r\n\tblueprint_compat = false,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 5, y = 1 },\r\n\t\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.c_jojo_standArrow\r\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_negative\r\n\tend,\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.consumeable and not context.blueprint then\r\n\t\t\tif context.consumeable.config.center.key == \"c_jojo_standArrow\" then\r\n\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\tfunc = (function()\r\n\t\t\t\t\t\tSMODS.add_card {\r\n\t\t\t\t\t\t\tset = 'Spectral',\r\n\t\t\t\t\t\t\tkey = 'c_jojo_standArrow',\r\n\t\t\t\t\t\t\tkey_append = 'jojo_stand_atomHeartFather',\r\n\t\t\t\t\t\t\tedition = 'e_negative'\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\treturn true\r\n\t\t\t\t\tend)\r\n\t\t\t\t}))\r\n\t\t\t\tcard:start_dissolve()\r\n\t\t\tend\r\n\t\tend\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1702,10 +1654,10 @@
         "y": 2
       },
       "raw": "key = 'stand_blackSabbath',\r\n\trarity = 3,\r\n\tcost = 7,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 2, y = 2 },\r\n\t\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.c_jojo_standArrow\r\n\t\tinfo_queue[#info_queue + 1] = {key = \"jojo_requiem\", set = \"Other\"}\r\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_negative\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1717,9 +1669,7 @@
       },
       "raw": "key = 'stand_moodyBlues',\r\n\tconfig = {},\r\n\trarity = 3,\r\n\tcost = 10,\r\n\tblueprint_compat = true,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 3, y = 2 },\r\n\t\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\tif card.area and card.area == G.jokers then\r\n\t\t\tlocal other_joker\r\n\t\t\tfor i = 1, #G.jokers.cards do\r\n\t\t\t\tif G.jokers.cards[i] == card then\r\n\t\t\t\t\tother_joker = G.jokers.cards[i - 1]\r\n\t\t\t\tend\r\n\t\t\tend\r\n\t\t\tlocal compatible = other_joker and other_joker ~= card and other_joker.config.center.blueprint_compat\r\n\t\t\tmain_end = {\r\n\t\t\t\t{\r\n\t\t\t\t\tn = G.UIT.C,\r\n\t\t\t\t\tconfig = { align = \"bm\", minh = 0.4 },\r\n\t\t\t\t\tnodes = {\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tn = G.UIT.C,\r\n\t\t\t\t\t\t\tconfig = { ref_table = card, align = \"m\", colour = compatible and mix_colours(G.C.GREEN, G.C.JOKER_GREY, 0.8) or mix_colours(G.C.RED, G.C.JOKER_GREY, 0.8), r = 0.05, padding = 0.06 },\r\n\t\t\t\t\t\t\tnodes = {\r\n\t\t\t\t\t\t\t\t{ n = G.UIT.T, config = { text = ' ' .. localize('k_' .. (compatible and 'compatible' or 'incompatible')) .. ' ', colour = G.C.UI.TEXT_LIGHT, scale = 0.32 * 0.8 } },\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\treturn { main_end = main_end }\r\n\t\tend\r\n\tend,\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tlocal other_joker = nil\r\n\t\tfor i = 1, #G.jokers.cards do\r\n\t\t\tif G.jokers.cards[i] == card then\r\n\t\t\t\tother_joker = G.jokers.cards[i - 1]\r\n\t\t\tend\r\n\t\tend\r\n\t\treturn SMODS.blueprint_effect(card, other_joker, context)\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {},
-      "ability": {}
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1778,10 +1728,10 @@
         "y": 2
       },
       "raw": "key = 'stand_whiteAlbum',\r\n\trarity = 2,\r\n\tcost = 8,\r\n\tblueprint_compat = true,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 8, y = 2 },\r\n\t\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.m_jojo_frozen\r\n\tend,\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.before and context.main_eval then\r\n\t\t\tlocal randomCard = pseudorandom_element(context.scoring_hand, pseudoseed('whiteAlbum' .. G.GAME.round_resets.ante))\r\n\t\t\t\r\n\t\t\trandomCard:set_ability(\"m_jojo_frozen\")\r\n\t\tend\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1841,9 +1791,7 @@
       },
       "raw": "key = 'stand_softAndWet',\r\n\tconfig = {},\r\n\trarity = 2,\r\n\tcost = 7,\r\n\tblueprint_compat = true,\r\n\t\r\n\tatlas = \"stands\",\r\n\tpos = { x = 4, y = 3 },\r\n\t\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.c_jojo_bubble\r\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_negative\r\n\tend,\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.setting_blind then\r\n\t\t\treturn {\r\n\t\t\t\tfunc = function()\r\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\t\tfunc = (function()\r\n\t\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\t\t\t\t\t\tfunc = function()\r\n\t\t\t\t\t\t\t\t\tSMODS.add_card {\r\n\t\t\t\t\t\t\t\t\t\tkey = 'c_jojo_bubble',\r\n\t\t\t\t\t\t\t\t\t\tedition = 'e_negative',\r\n\t\t\t\t\t\t\t\t\t\tkey_append = 'jojo_softAndWet'\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\treturn true\r\n\t\t\t\t\t\t\t\tend\r\n\t\t\t\t\t\t\t}))\r\n\t\t\t\t\t\t\tSMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.MONEY },\r\n\t\t\t\t\t\t\t\tcontext.blueprint_card or card)\r\n\t\t\t\t\t\t\treturn true\r\n\t\t\t\t\t\tend)\r\n\t\t\t\t\t}))\r\n\t\t\t\tend\r\n\t\t\t}\r\n\t\tend\r\n\tend",
       "vars": [],
-      "infoQueue": [],
-      "config": {},
-      "ability": {}
+      "infoQueue": []
     },
     {
       "type": "Joker",
@@ -1995,10 +1943,10 @@
       "atlas": null,
       "pos": null,
       "raw": "key = \"requiem\",\r\n\tdefault_weight = 0,\r\n\tbadge_colour = HEX('f0b11f'),\r\n\tget_weight = function(self, weight, object_type)\r\n\t\treturn weight\r\n\tend,",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     },
     {
       "type": "Sticker",
@@ -2009,10 +1957,10 @@
         "y": 0
       },
       "raw": "key = \"kiss\",\r\n\tbadge_colour = HEX('c261bd'),\r\n\t\r\n\tatlas = \"non-jokers\",\r\n\tpos = { x = 1, y = 0 },\r\n\t\r\n\tapply = function(self, card, val)\r\n\t\tcard.ability[self.key] = val\r\n\t\tif card.area then\r\n\t\t\tlocal copy = copy_card(card, nil, nil, card and card.playing_card and G.playing_card or nil)\r\n\t\t\tcopy:add_to_deck()\r\n\t\t\tcard.area:emplace(copy)\r\n\t\tend\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.end_of_round and not context.repetition then\r\n\t\t\tSMODS.destroy_cards(card)\r\n\t\tend\r\n\tend",
-      "vars": [],
-      "infoQueue": [],
       "config": {},
-      "ability": {}
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
     }
   ],
   "version": "v0.9.4a"
