@@ -522,9 +522,6 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     for (let card of cards)
     {
-      card.vars = [];
-      card.infoQueue = [];
-
       // Config first
 
       const config = card.raw.match(/config\s*=\s*({[\s\S]*?})/);
@@ -534,8 +531,8 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
         try
         {
-          const jsFunc = new Function(`return ${tableText.replace(/(\w+)\s*=/g, `"$1":`)}`);
-          card.config = jsFunc();
+          const jsonLike = luaTable.replace(/(\w+)\s*=/g, `"$1":`);
+          card.config = new Function(`return ${jsonLike}`)();
         }
         catch (err)
         {
@@ -547,19 +544,20 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       card.ability = card.config;
 
       // Then loc_vars
+      card.vars = [];
+      card.infoQueue = [];
 
       const fnMatch = card.raw.match(/loc_vars\s*=\s*function\s*\(\s*self\s*,\s*info_queue\s*,\s*card\s*\)\s*\{([\s\S]*?)\}\s*$/);
       if (!fnMatch)
         continue;
 
       const fnBody = fnMatch[1];
-
       const locVarsFn = new Function('self', 'info_queue', 'card', fnBody);
 
       try
       {
         const result = locVarsFn({}, card.infoQueue, card);
-        if (result && Array.isArray(result))
+        if (result && Array.isArray(result.vars))
           card.vars = result.vars;
       }
       catch (err)
