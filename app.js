@@ -648,13 +648,29 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
             }
             card.vars.push(val);
           }
+          else if (expr.startsWith('stg.'))
+          {
+            const path = expr.split('.');
+            path.shift();
+
+            let val = card.ability.extra;
+            for (let prop of path)
+            {
+              if (val == null)
+                break;
+              val = val[prop];
+            }
+            card.vars.push(val);
+          }
           else if (expr.startsWith('SMODS.get_probability_vars'))
           {
             const args = expr.replace(/^SMODS\.get_probability_vars\s*\(\s*/, '').replace(/\)\s*$/, '').split(',').map(a => a.trim());
             const [ , num, den, id] = args;
 
-            const n = parseFloat(num) || 0;
-            const d = parseFloat(den) || 1;
+            const isNumeric = (x) => !isNaN(parseFloat(x)) && isFinite(x);
+
+            const n = isNumeric(num) ? parseFloat(num) : num;
+            const d = isNumeric(num) ? parseFloat(num) : num;
             // const i = id.replace(/^['"]|['"]$/g, '');
             // const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, i);
             // card.vars.push(nn, dd);
