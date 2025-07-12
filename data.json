@@ -120,7 +120,7 @@
       "Somethingcom515"
     ],
     "description": "Allows seals on Everything also comes with more seals",
-    "favourites": 8,
+    "favourites": 13,
     "badge_colour": "E8463D",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0509b-STEAMODDED)",
@@ -385,5 +385,29 @@
       "Misc"
     ],
     "readme": ""
+  },
+  "Tangents@Clickseee": {
+    "id": "tangent",
+    "name": "Tangents",
+    "author": [
+      "Nxkoo"
+    ],
+    "description": "What if Shenanigans and Randomness had a baby?",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "185ea6",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "published_at": "2025-07-12T06:47:04.841Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Blinds",
+      "Misc"
+    ],
+    "readme": "<img width=\"1550\" height=\"500\" alt=\"logo\" src=\"https://github.com/user-attachments/assets/a52bbcdb-5fcf-4ea2-ac9e-a17104bd454b\" />\n\n# Tangents\n\n Shenanigans and Randomness had a hot steamy intimate time\n\n # CREDITS TO THESE PEOPLE WHO HELPED ME/FOR THEIR CODES REFERENCE\n- N' (@nh6574 on discord)\n- Somethingcom515 (on discord)\n- BepisFever (on discord)\n- HeavenPierceHer (@kxeine_ on discord)\n- Freh (on discord) [for their timer code]\n- Aikoyori (on discord) [for their SMODS.Font tutorial]\n- PERKOLATED (on discord) [for the card title screen code]\n- SleepyG11 (on discord)\n- HuyTheKiller (on discord)\n- senfinbrare (on discord)\n- Victin (on discord)\n\n# HOW TO DOWNLOAD??????????\ngreen big obvious button on top, said download ZIP, enjyo\n"
   }
 }
