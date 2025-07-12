@@ -157,10 +157,14 @@ export async function backupMetadata(modKey, versionTag) {
 async function backupWikiImages(modKey, versionTag)
 {
   const localDir = path.join(__dirname, 'wiki-data', modKey, versionTag);
+
+  console.log(`[BackupImages] Backing up ${localDir}...`);
+
   let files;
   try
   {
     files = await fs.readdir(localDir);
+    console.log(`[BackupImages] Successfully accessed ${localDir}`);
   }
   catch (err)
   {
@@ -180,6 +184,7 @@ async function backupWikiImages(modKey, versionTag)
     {
       content = await fs.readFile(fullPath);
       sha = await getShaFor(repoPath);
+      console.log(`[BackupImages] Backing up ${fullPath}...`);
     }
     catch (err)
     {
