@@ -524,22 +524,27 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     {
       // Config first
 
-      const config = card.raw.match(/config\s*=\s*({[\s\S]*?})/);
-      if (config)
+      card.config = {};
+      const idx = card.raw.indexOf('config');
+      if (idx !== -1)
       {
-        const tableText = config[1];
-
-        try
+        const eq = card.raw.indexOf('=', idx);
+        const brace = card.raw.indexOf('{', eq);
+        const block = extractBlockContent(card.raw, brace);
+        if (block)
         {
-          const jsonLike = tableText.replace(/(\w+)\s*=/g, `"$1":`);
-          card.config = new Function(`return ${jsonLike}`)();
-        }
-        catch (err)
-        {
-          console.warn(`Failed to parse config for ${card.key}:`, err);
+          const fullLuaTable = card.raw.slice(brace, block.endIndex + 1);
+          try
+          {
+            const jsonLike = fullLuaTable.replace(/(\w+)\s*=/g, `"$1":`);
+            card.config = new Function(`return ${jsonLike}`)();
+          }
+          catch (err)
+          {
+            console.warn(`Failed to parse full config for ${card.key}:`, err);
+          }
         }
       }
-      else card.config = {};
 
       card.ability = card.config;
 
