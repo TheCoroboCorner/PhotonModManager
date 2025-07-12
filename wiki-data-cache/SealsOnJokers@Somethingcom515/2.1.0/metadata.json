@@ -1,0 +1,1666 @@
+{
+  "locMap": {
+    "b_soe_seal": {
+      "name": "Seal Deck",
+      "text": [
+        "All cards in shop",
+        "have seals"
+      ],
+      "type": "Back"
+    },
+    "bl_soe_theseal": {
+      "name": "The Seal",
+      "text": [
+        "All cards are face down",
+        "Seals show on the back of cards during this round"
+      ],
+      "type": "Blind"
+    },
+    "j_soe_stonecardjoker": {
+      "name": "Stone Card Joker",
+      "text": [
+        "{C:chips}+#1#{} Chips"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_sealjoker": {
+      "name": "Seal",
+      "text": [
+        "Cards can have {s:3,C:dark_edition}infinite{}",
+        "seals"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_infinityred": {
+      "name": "Infinity Red",
+      "text": [
+        "Every time a card triggers",
+        "put a {C:red}Red Seal{} on it"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_infinitypurple": {
+      "name": "Infinity Purple",
+      "text": [
+        "Purple"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_infinitygold": {
+      "name": "Infinity Gold",
+      "text": [
+        "Gold"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_infinityblue": {
+      "name": "Infinity Blue",
+      "text": [
+        "Blue"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_theinfinityseal": {
+      "name": "The Infinity Seal",
+      "text": [
+        "{C:dark_edition}ALL CARDS{}",
+        "Do the following things:",
+        "Give {C:money}$#1#{}",
+        "Get retriggered {C:attention}#2#{} times",
+        "Give {C:attention}#3#{} {C:dark_edition}Negative{} Black holes",
+        "Giv {C:attention}#4#{} random {C:dark_edition}Negative{} consumables",
+        "{V:1}LAG{}"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_extralife": {
+      "name": "Extra Life",
+      "text": [
+        "Prevents a game over {C:attention}#1#{} times"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_unorganizedjoker": {
+      "name": "Unorganized Joker",
+      "text": [
+        "If a card has a property that was not meant for that card,",
+        "it gives {X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_seeder": {
+      "name": "Seeder",
+      "text": [
+        "Change the current runs {C:attention}seed{}",
+        "once per ante",
+        "{C:inactive}(#1#){}"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_v_blankjoker": {
+      "name": "Blank Joker",
+      "text": [
+        "In {C:attention}#1#{} rounds, turn into",
+        "{C:dark_edition}Antimatter Joker{}"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_v_antimatterjoker": {
+      "name": "Antimatter Joker",
+      "text": [
+        "{C:attention}ALL{} {C:dark_edition}Negative{} cards",
+        "give {X:mult,C:white}X#1#{} Mult",
+        "and {C:dark_edition}Negative{} is {X:dark_edition,C:white}#2#X{} as often to appear"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_c_talismanjoker": {
+      "name": "Talisman Joker",
+      "text": [
+        "Gives a random scoring card",
+        "A {C:attention}Gold Seal{}",
+        "{C:inactive}(if possible){}"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_thinkingemoji": {
+      "name": "Thinking Emoji",
+      "text": [
+        "Gains {X:dark_edition,C:white}^#1#{} Mult",
+        "for every idea that I get",
+        "{C:inactive}(Currently {}{X:dark_edition,C:white}^#2#{} {C:inactive}Mult){}"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_reversesplash": {
+      "name": "Drought",
+      "text": [
+        "{C:attention}Played{} cards do {C:attention}not{} score"
+      ],
+      "type": "Joker"
+    },
+    "j_soe_ascendedjoker": {
+      "name": "Every Joker",
+      "text": [
+        "All at the same time"
+      ],
+      "type": "Joker"
+    },
+    "j_joker_u": {
+      "name": "Joker",
+      "text": [
+        "{C:chips,s:1.1}+#2#{} Chips",
+        "{C:red,s:1.1}+#1#{} Mult",
+        "{X:red,s:1.1,C:white}X#3#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "soe_sealseal_seal": {
+      "name": "Seal Seal",
+      "text": [
+        "If this card has a second seal,",
+        "Spread it to adjacent cards before scoring",
+        "Otherwise, {C:mult}+#1#{} Mult"
+      ],
+      "type": "Other"
+    },
+    "soe_rainbowseal_seal": {
+      "name": "Rainbow Seal",
+      "text": [
+        "{C:inactive}(For Jokers){}",
+        "If this Joker has an edition,",
+        "Scored cards will give the edition mult/chips",
+        "{C:inactive}(For Playing Cards){}",
+        "If this card has an edition,",
+        "1 in 4 chance cards in hand will give the edition mult/chips"
+      ],
+      "type": "Other"
+    },
+    "soe_reverseseal_seal": {
+      "name": "Reverse Seal",
+      "text": [
+        "If this card is facing {C:attention}down{},",
+        "{X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Other"
+    },
+    "soe_negativeseal_seal": {
+      "name": "Negative Seal",
+      "text": [
+        "This card {C:attention}ignores{} the selection limit,"
+      ],
+      "type": "Other"
+    },
+    "soe_carmineseal_seal": {
+      "name": "Carmine Seal",
+      "text": [
+        "If this card is played and not scored,",
+        "destroy this card"
+      ],
+      "type": "Other"
+    },
+    "soe_aquaseal_seal": {
+      "name": "Aqua Seal",
+      "text": [
+        "If this card is played and not scored,",
+        "destroy this card"
+      ],
+      "type": "Other"
+    },
+    "soe_yellowseal_seal": {
+      "name": "Yellow Seal",
+      "text": [
+        "This card is returned to hand",
+        "after scoring"
+      ],
+      "type": "Other"
+    },
+    "red_seal_joker": {
+      "name": "Red Seal",
+      "text": [
+        "Retrigger this",
+        "Joker {C:attention}1{} time"
+      ],
+      "type": "Other"
+    },
+    "purple_seal_joker": {
+      "name": "Purple Seal",
+      "text": [
+        "Creates a {C:tarot}Tarot{} card",
+        "when {C:attention}sold",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Other"
+    },
+    "gold_seal_joker": {
+      "name": "Gold Seal",
+      "text": [
+        "Earn {C:money}$3{} when this",
+        "Joker is scored"
+      ],
+      "type": "Other"
+    },
+    "blue_seal_joker": {
+      "name": "Blue Seal",
+      "text": [
+        "Creates the {C:planet}Planet{} card",
+        "for final played {C:attention}poker hand{}",
+        "of round",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Other"
+    },
+    "cry_green_seal_joker": {
+      "name": "Green Seal",
+      "text": [
+        "Creates a {C:cry_code}Code{} card",
+        "when this Joker does not score",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Other"
+    },
+    "cry_azure_seal_joker": {
+      "name": "Azure Seal",
+      "text": [
+        "Create {C:attention}3{} {C:dark_edition}Negative{}",
+        "{C:planet}Planets{} for played",
+        "{C:attention}poker hand{}, then",
+        "{C:red}destroy{} this Joker"
+      ],
+      "type": "Other"
+    },
+    "legallygold": {
+      "name": "Gold Card",
+      "text": [
+        "{C:money}$#1#{} at",
+        "end of round"
+      ],
+      "type": "Other"
+    },
+    "legallyplasmasleeve": {
+      "name": "Plasma Sleeve",
+      "text": [],
+      "type": "Other"
+    },
+    "c_soe_demjoker": {
+      "name": "Dem Joker",
+      "text": [
+        "{S:0.8}({S:0.8,V:1}lvl.#2#{S:0.8}){} Level up",
+        "{C:attention}#1#",
+        "{C:mult}+#3#{} Mult and",
+        "{C:chips}+#4#{} chip#<s>4#"
+      ],
+      "type": "Planet"
+    },
+    "c_soe_dejavuq": {
+      "name": "Deja Vu?",
+      "text": [
+        "Add a {C:red}Red Seal{}",
+        "to a random joker"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_tranceq": {
+      "name": "Trance?",
+      "text": [
+        "Add a {C:blue}Blue Seal{}",
+        "to a random joker"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_talismanq": {
+      "name": "Talisman?",
+      "text": [
+        "Add a {C:gold}Gold Seal{}",
+        "to a random joker"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_mediumq": {
+      "name": "Medium?",
+      "text": [
+        "Add a {C:purple}Purple Seal{}",
+        "to a random joker"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_typhoonq": {
+      "name": "Typhoon?",
+      "text": [
+        "Add a {C:cry_azure}Azure Seal{}",
+        "to a random joker"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_sourceq": {
+      "name": "Source?",
+      "text": [
+        "Add a {C:cry_code}Green Seal{}",
+        "to a random joker"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_eternalq": {
+      "name": "Eternal?",
+      "text": [
+        "Add {C:attention}Eternal{}",
+        "to a random card in hand"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_dejavuqq": {
+      "name": "Deja Vu??",
+      "text": [
+        "Add a {C:red}Red Seal{}",
+        "to a random consumable"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_dejavuqqq": {
+      "name": "DEJA VU???",
+      "text": [
+        "Add a {C:red}Red Seal{}",
+        "to the blind"
+      ],
+      "type": "Spectral"
+    },
+    "c_soe_devilq": {
+      "name": "Devil?",
+      "text": [
+        "Add the {C:attention}Gold{} Enhancement",
+        "to a random joker"
+      ],
+      "type": "Tarot"
+    },
+    "c_soe_towerq": {
+      "name": "Tower?",
+      "text": [
+        "Add the {C:attention}Stone{} Enhancement",
+        "to a random joker"
+      ],
+      "type": "Tarot"
+    },
+    "c_soe_chariotq": {
+      "name": "Chariot?",
+      "text": [
+        "Add the {C:attention}Steel{} Enhancement",
+        "to a random joker"
+      ],
+      "type": "Tarot"
+    },
+    "c_soe_empressq": {
+      "name": "Empress?",
+      "text": [
+        "Add the {C:attention}Mult{} Enhancement",
+        "to a random joker"
+      ],
+      "type": "Tarot"
+    },
+    "c_soe_hierophantq": {
+      "name": "Hierophant?",
+      "text": [
+        "Add the {C:attention}Bonus{} Enhancement",
+        "to a random joker"
+      ],
+      "type": "Tarot"
+    },
+    "c_soe_magicianq": {
+      "name": "Magician?",
+      "text": [
+        "Add the {C:attention}Lucky{} Enhancement",
+        "to a random joker"
+      ],
+      "type": "Tarot"
+    },
+    "c_soe_justiceq": {
+      "name": "Justice?",
+      "text": [
+        "Add the {C:attention}Glass{} Enhancement",
+        "to a random joker"
+      ],
+      "type": "Tarot"
+    },
+    "v_soe_blueprint": {
+      "name": "Blueprint",
+      "text": [
+        "Copies ability of",
+        "another {C:attention}Voucher{}",
+        "{C:inactive}(Currently copying: #1#){}"
+      ],
+      "type": "Voucher"
+    },
+    "v_soe_brainstorm": {
+      "name": "Brainstorm",
+      "text": [
+        "Copies the ability",
+        "of another {C:attention}Voucher{}",
+        "{C:inactive}(Currently copying: #1#){}"
+      ],
+      "type": "Voucher"
+    },
+    "sleeve_soe_seal": {
+      "name": "Seal Sleeve",
+      "text": [
+        "All cards in shop",
+        "have seals"
+      ],
+      "type": "Sleeve"
+    },
+    "sleeve_soe_seal_extra": {
+      "name": "Seal Sleeve",
+      "text": [
+        "Cards can have {C:attention}2{} Seals"
+      ],
+      "type": "Sleeve"
+    },
+    "sleeve_soe_redseal": {
+      "name": "Red Seal",
+      "text": [
+        "Effects of this deck",
+        "happen twice",
+        "{C:inactive}(#1#){}"
+      ],
+      "type": "Sleeve"
+    },
+    "sleeve_soe_goldseal": {
+      "name": "Gold Seal",
+      "text": [
+        "First scoring card",
+        "each hand gives {C:money}$3{}"
+      ],
+      "type": "Sleeve"
+    },
+    "BakeryCharm_soe_sealcharm": {
+      "name": "Seal Charm",
+      "text": [
+        "Vanilla seal effects are doubled"
+      ],
+      "type": "BakeryCharm"
+    },
+    "sp_soe_egg_upgrade1": {
+      "name": "Egg",
+      "text": [
+        "Egg upgrades by {C:money}$5{}",
+        "{C:inactive}(#1#/1)"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade1_name": {
+      "name": "Egg",
+      "text": [
+        "Egg"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade2": {
+      "name": "Egg",
+      "text": [
+        "Egg upgrades by {C:money}$8{}",
+        "{C:inactive}(#1#/1)"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade2_name": {
+      "name": "Egg",
+      "text": [
+        "Egg"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade3": {
+      "name": "Egg",
+      "text": [
+        "{C:green}1 in 4{} chance to give sell value",
+        "at end of round",
+        "{C:inactive}(#1#/1)"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade3_name": {
+      "name": "Egg",
+      "text": [
+        "Egg"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade4": {
+      "name": "Egg",
+      "text": [
+        "Egg upgrades by {C:money}$15{}",
+        "{C:inactive}(#1#/1)"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade4_name": {
+      "name": "Egg",
+      "text": [
+        "Egg"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade5": {
+      "name": "Egg",
+      "text": [
+        "Egg upgrade 3's chance is improved to {C:green}1 in 2{}",
+        "Guaranteed if blind is a boss blind",
+        "{C:inactive}(#1#/1)"
+      ],
+      "type": "SkillPerks"
+    },
+    "sp_soe_egg_upgrade5_name": {
+      "name": "Egg",
+      "text": [
+        "Egg"
+      ],
+      "type": "SkillPerks"
+    },
+    "ach_soe_completionist_plus_plus_plus": {
+      "name": "\"Earn a Gold Sticker on every Playing Card\"",
+      "text": [],
+      "type": "achievement_descriptions"
+    },
+    "k_soe_infinity": {
+      "name": "\"Infinity\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "soe_hand_joker_central": {
+      "name": "\"Joker Central\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "soe_skill_tree_jokerupgrades": {
+      "name": "\"Joker Upgrades\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "soe_joker_central": {
+      "name": "\"Joker Central\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "soe_nil": {
+      "name": "\"nil\"",
+      "text": [],
+      "type": "poker_hands"
+    }
+  },
+  "atlases": {
+    "What": {
+      "path": "What.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/What.png",
+      "resolvedGitHubPath": "assets/1x/What.png"
+    },
+    "Enhancers": {
+      "path": "Enhancers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Enhancers.png",
+      "resolvedGitHubPath": "assets/1x/Enhancers.png"
+    },
+    "PlayingCards": {
+      "path": "PlayingCards.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/PlayingCards.png",
+      "resolvedGitHubPath": "assets/1x/PlayingCards.png"
+    },
+    "BlueprintVouchers": {
+      "path": "BlueprintVouchers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/BlueprintVouchers.png",
+      "resolvedGitHubPath": "assets/1x/BlueprintVouchers.png"
+    },
+    "JokerEnhancements": {
+      "path": "JokerEnhancements.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/JokerEnhancements.png",
+      "resolvedGitHubPath": "assets/1x/JokerEnhancements.png"
+    },
+    "JokerFronts": {
+      "path": "JokerFronts.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/JokerFronts.png",
+      "resolvedGitHubPath": "assets/1x/JokerFronts.png"
+    },
+    "ExtraLife": {
+      "path": "ExtraLife.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/ExtraLife.png",
+      "resolvedGitHubPath": "assets/1x/ExtraLife.png"
+    },
+    "Tarots": {
+      "path": "Tarots.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Tarots.png",
+      "resolvedGitHubPath": "assets/1x/Tarots.png"
+    },
+    "Vouchers": {
+      "path": "Vouchers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Vouchers.png",
+      "resolvedGitHubPath": "assets/1x/Vouchers.png"
+    },
+    "Planets": {
+      "path": "Planets.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Planets.png",
+      "resolvedGitHubPath": "assets/1x/Planets.png"
+    },
+    "Sleeves": {
+      "path": "Sleeves.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Sleeves.png",
+      "resolvedGitHubPath": "assets/1x/Sleeves.png"
+    },
+    "Placeholders": {
+      "path": "Placeholders.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Placeholders.png",
+      "resolvedGitHubPath": "assets/1x/Placeholders.png"
+    },
+    "DeckSeals": {
+      "path": "DeckSeals.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/DeckSeals.png",
+      "resolvedGitHubPath": "assets/1x/DeckSeals.png"
+    },
+    "Seals": {
+      "path": "Seals.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Seals.png",
+      "resolvedGitHubPath": "assets/1x/Seals.png"
+    },
+    "SecondSeals": {
+      "path": "SecondSeals.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/SecondSeals.png",
+      "resolvedGitHubPath": "assets/1x/SecondSeals.png"
+    },
+    "Charms": {
+      "path": "Charms.png",
+      "px": 68,
+      "py": 68,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Charms.png",
+      "resolvedGitHubPath": "assets/1x/Charms.png"
+    },
+    "Boosters": {
+      "path": "Boosters.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Boosters.png",
+      "resolvedGitHubPath": "assets/1x/Boosters.png"
+    },
+    "Exotics": {
+      "path": "Exotics.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Exotics.png",
+      "resolvedGitHubPath": "assets/1x/Exotics.png"
+    },
+    "Think": {
+      "path": "Think.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Think.png",
+      "resolvedGitHubPath": "assets/1x/Think.png"
+    },
+    "InfinitySeals": {
+      "path": "InfinitySeals.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/InfinitySeals.png",
+      "resolvedGitHubPath": "assets/1x/InfinitySeals.png"
+    },
+    "Stakes": {
+      "path": "Stakes.png",
+      "px": 29,
+      "py": 29,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Stakes.png",
+      "resolvedGitHubPath": "assets/1x/Stakes.png"
+    },
+    "modicon": {
+      "path": "modicon.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/modicon.png",
+      "resolvedGitHubPath": "assets/1x/modicon.png"
+    },
+    "VanillaSleeves": {
+      "path": "VanillaSleeves.png",
+      "px": 73,
+      "py": 96,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/VanillaSleeves.png",
+      "resolvedGitHubPath": "assets/1x/VanillaSleeves.png"
+    },
+    "Blinds": {
+      "path": "Blinds.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/SealsOnJokers@Somethingcom515/2.1.0/Blinds.png",
+      "resolvedGitHubPath": "assets/1x/Blinds.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "What",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'What',\n    path = 'What.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Enhancers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Enhancers',\n    path = 'Enhancers.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "PlayingCards",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'PlayingCards',\n    path = 'PlayingCards.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "BlueprintVouchers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'BlueprintVouchers',\n    path = 'BlueprintVouchers.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "JokerEnhancements",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'JokerEnhancements',\n    path = 'JokerEnhancements.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "JokerFronts",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'JokerFronts',\n    path = 'JokerFronts.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "ExtraLife",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ExtraLife',\n    path = 'ExtraLife.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Tarots",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Tarots',\n    path = 'Tarots.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Vouchers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Vouchers',\n    path = 'Vouchers.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Planets",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Planets',\n    path = 'Planets.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Sleeves",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Sleeves',\n    path = 'Sleeves.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Placeholders",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Placeholders',\n    path = 'Placeholders.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "DeckSeals",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'DeckSeals',\n    path = 'DeckSeals.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Seals",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Seals',\n    path = 'Seals.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "SecondSeals",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'SecondSeals',\n    path = 'SecondSeals.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Charms",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Charms',\n    path = 'Charms.png',\n    px = 68,\n    py = 68"
+    },
+    {
+      "type": "Atlas",
+      "key": "Boosters",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Boosters',\n    path = 'Boosters.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Exotics",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Exotics',\n    path = 'Exotics.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Think",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Think',\n    path = 'Think.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "InfinitySeals",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'InfinitySeals',\n    path = 'InfinitySeals.png',\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "Stakes",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Stakes',\n    path = 'Stakes.png',\n    px = 29,\n    py = 29"
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'modicon',\n    path = 'modicon.png',\n    px = 34,\n    py = 34"
+    },
+    {
+      "type": "Atlas",
+      "key": "VanillaSleeves",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'VanillaSleeves',\n    path = 'VanillaSleeves.png',\n    px = 73,\n    py = 96"
+    },
+    {
+      "type": "Consumable",
+      "key": "dejavuq",
+      "atlas": "What",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'dejavuq',\n    set = 'Spectral',\n    atlas = 'What',\n    pos = {x = 0, y = 0},\n    config = {mod_conv = \"Red\", cards = 1},\n    loc_vars = function(self,info_queue,center)\n        info_queue[#info_queue+1] = { key = \"red_seal_joker\", set = \"Other\"}\n    end,\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('dejavu'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted:set_seal(\"Red\")\n                        print(highlighted.redsealcount)\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "tranceq",
+      "atlas": "What",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'tranceq',\n    set = 'Spectral',\n    atlas = 'What',\n    pos = {x = 1, y = 0},\n    config = {mod_conv = \"Blue\", cards = 1},\n    loc_vars = function(self,info_queue,center)\n        info_queue[#info_queue+1] = { key = \"blue_seal_joker\", set = \"Other\"}\n    end,\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('trance'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted:set_seal(\"Blue\")\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "talismanq",
+      "atlas": "What",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'talismanq',\n    set = 'Spectral',\n    atlas = 'What',\n    pos = {x = 2, y = 0},\n    config = {mod_conv = \"Gold\", cards = 1},\n    loc_vars = function(self,info_queue,center)\n        info_queue[#info_queue+1] = { key = \"gold_seal_joker\", set = \"Other\"}\n    end,\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('talisman'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted:set_seal(\"Gold\")\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "mediumq",
+      "atlas": "What",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = 'mediumq',\n    set = 'Spectral',\n    atlas = 'What',\n    pos = {x = 3, y = 0},\n    config = {mod_conv = \"Purple\", cards = 1},\n    loc_vars = function(self,info_queue,center)\n        info_queue[#info_queue+1] = { key = \"purple_seal_joker\", set = \"Other\"}\n    end,\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if IsEligibleForSeal(v) then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('medium'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted:set_seal(\"Purple\")\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "typhoonq",
+      "atlas": "What",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = 'typhoonq',\n        set = 'Spectral',\n        atlas = 'What',\n        pos = {x = 4, y = 0},\n        config = {mod_conv = \"cry_azure\", cards = 1},\n        loc_vars = function(self,info_queue,center)\n            info_queue[#info_queue+1] = { key = \"cry_azure_seal_joker\", set = \"Other\"}\n        end,\n        unlocked = true,\n        discovered = true,\n        can_use = function(self,card)\n            local eligible = {}\n            for k, v in pairs(G.jokers.cards) do\n                if not v.seal then\n                    eligible[#eligible + 1] = v\n                end\n            end\n            return #eligible > 0 and true or false\n        end,\n        use = function(self,card,area,copier)\n            local eligible = {}\n            for k, v in pairs(G.jokers.cards) do\n                if not v.seal then\n                    eligible[#eligible + 1] = v\n                end\n            end\n            local highlighted = pseudorandom_element(eligible, pseudoseed('typhoon'))\n            if highlighted then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        play_sound(\"tarot1\")\n                        highlighted:juice_up(0.3, 0.5)\n                        return true\n                    end,\n                }))\n                G.E_MANAGER:add_event(Event({\n                    trigger = \"after\",\n                    delay = 0.1,\n                    func = function()\n                        if highlighted then\n                            highlighted:set_seal(\"cry_azure\")\n                        end\n                        return true\n                    end,\n                }))\n            end\n        end"
+    },
+    {
+      "type": "Consumable",
+      "key": "sourceq",
+      "atlas": "What",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = 'sourceq',\n        set = 'Spectral',\n        atlas = 'What',\n        pos = {x = 5, y = 0},\n        config = {mod_conv = \"cry_green\", cards = 1},\n        loc_vars = function(self,info_queue,center)\n            info_queue[#info_queue+1] = { key = \"cry_green_seal_joker\", set = \"Other\"}\n        end,\n        unlocked = true,\n        discovered = true,\n        can_use = function(self,card)\n            local eligible = {}\n            for k, v in pairs(G.jokers.cards) do\n                if not v.seal then\n                    eligible[#eligible + 1] = v\n                end\n            end\n            return #eligible > 0 and true or false\n        end,\n        use = function(self,card,area,copier)\n            local eligible = {}\n            for k, v in pairs(G.jokers.cards) do\n                if not v.seal then\n                    eligible[#eligible + 1] = v\n                end\n            end\n            local highlighted = pseudorandom_element(eligible, pseudoseed('source'))\n            if highlighted then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        play_sound(\"tarot1\")\n                        highlighted:juice_up(0.3, 0.5)\n                        return true\n                    end,\n                }))\n                G.E_MANAGER:add_event(Event({\n                    trigger = \"after\",\n                    delay = 0.1,\n                    func = function()\n                        if highlighted then\n                            highlighted:set_seal(\"cry_green\")\n                        end\n                        return true\n                    end,\n                }))\n            end\n        end"
+    },
+    {
+      "type": "Consumable",
+      "key": "devilq",
+      "atlas": "What",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "key = 'devilq',\n    set = 'Tarot',\n    atlas = 'What',\n    pos = {x = 6, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('devil'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted.ability.legallyenhanced = \"Gold\"\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "towerq",
+      "atlas": "What",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "key = 'towerq',\n    set = 'Tarot',\n    atlas = 'What',\n    pos = {x = 7, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('tower'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted:set_ability(G.P_CENTERS.j_soe_stonecardjoker)\n                        highlighted.ability.legallyenhanced = \"Stone\"\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "chariotq",
+      "atlas": "What",
+      "pos": {
+        "x": 8,
+        "y": 0
+      },
+      "raw": "key = 'chariotq',\n    set = 'Tarot',\n    atlas = 'What',\n    pos = {x = 8, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('chariot'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted.ability.legallyenhanced = \"Steel\"\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "empressq",
+      "atlas": "What",
+      "pos": {
+        "x": 9,
+        "y": 0
+      },
+      "raw": "key = 'empressq',\n    set = 'Tarot',\n    atlas = 'What',\n    pos = {x = 9, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('empress'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted.ability.legallyenhanced = \"Mult\"\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "hierophantq",
+      "atlas": "What",
+      "pos": {
+        "x": 10,
+        "y": 0
+      },
+      "raw": "key = 'hierophantq',\n    set = 'Tarot',\n    atlas = 'What',\n    pos = {x = 10, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('hierophant'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted.ability.legallyenhanced = \"Bonus\"\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "magicianq",
+      "atlas": "What",
+      "pos": {
+        "x": 11,
+        "y": 0
+      },
+      "raw": "key = 'magicianq',\n    set = 'Tarot',\n    atlas = 'What',\n    pos = {x = 11, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('magician'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted.ability.legallyenhanced = \"Lucky\"\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "justiceq",
+      "atlas": "What",
+      "pos": {
+        "x": 12,
+        "y": 0
+      },
+      "raw": "key = 'justiceq',\n    set = 'Tarot',\n    atlas = 'What',\n    pos = {x = 12, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.jokers.cards) do\n            if not v.ability.legallyenhanced then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('justice'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted.ability.legallyenhanced = \"Glass\"\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "eternalq",
+      "atlas": "What",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'eternalq',\n    set = 'Spectral',\n    atlas = 'What',\n    pos = {x = 0, y = 0},\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.hand.cards) do\n            if not v.ability.eternal then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.hand.cards) do\n            if not v.ability.eternal then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('eternal'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted.ability.eternal = true\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "dejavuqq",
+      "atlas": "What",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'dejavuqq',\n    set = 'Spectral',\n    atlas = 'What',\n    pos = {x = 0, y = 0},\n    config = {mod_conv = \"Red\", cards = 1},\n    loc_vars = function(self,info_queue,center)\n        info_queue[#info_queue+1] = { key = \"red_seal_joker\", set = \"Other\"}\n    end,\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        local eligible = {}\n        for k, v in pairs(G.consumeables.cards) do\n            if not v.seal and v ~= card then\n                eligible[#eligible + 1] = v\n            end\n        end\n        return #eligible > 0 and true or false\n    end,\n    use = function(self,card,area,copier)\n        local eligible = {}\n        for k, v in pairs(G.consumeables.cards) do\n            if not v.seal and v ~= card then\n                eligible[#eligible + 1] = v\n            end\n        end\n        local highlighted = pseudorandom_element(eligible, pseudoseed('dejavu'))\n        if highlighted then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    play_sound(\"tarot1\")\n                    highlighted:juice_up(0.3, 0.5)\n                    return true\n                end,\n            }))\n            G.E_MANAGER:add_event(Event({\n                trigger = \"after\",\n                delay = 0.1,\n                func = function()\n                    if highlighted then\n                        highlighted:set_seal(\"Red\")\n                    end\n                    return true\n                end,\n            }))\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "dejavuqqq",
+      "atlas": "What",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'dejavuqqq',\n    set = 'Spectral',\n    atlas = 'What',\n    pos = {x = 0, y = 0},\n    config = {mod_conv = \"Red\", cards = 1},\n    loc_vars = function(self,info_queue,center)\n        info_queue[#info_queue+1] = { key = \"red_seal_joker\", set = \"Other\"}\n    end,\n    unlocked = true,\n    discovered = true,\n    can_use = function(self,card)\n        if G.GAME.blind.seal then\n            return false\n        elseif G.GAME.blind then\n            return true\n        end\n    end,\n    use = function(self,card,area,copier)\n        G.GAME.blind.seal = \"Red\"\n        if G.GAME.blind.config.blind.key == \"bl_akyrs_final_periwinkle_pinecone\" then\n            G.GAME.blind.permasealdebuffha = true\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "murder",
+      "atlas": "Tarots",
+      "pos": {
+        "x": 3,
+        "y": 1
+      },
+      "raw": "key = 'murder',\n    set = 'Tarot',\n    atlas = 'Tarots',\n    pos = {x = 3, y = 1},\n    unlocked = true,\n    discovered = true,\n    config = {max_highlighted = 2, min_highlighted = 2},\n    loc_txt = {\n        name = 'Murder',\n        text = {\n            \"Select {C:attention}#1#{} Jokers,\",\n            \"convert the {C:attention}left{} Joker\",\n            \"into the {C:attention}right{} Joker\",\n            \"{C:inactive}(Drag to rearrange)\",\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.max_highlighted } }\n    end,\n    can_use = function(self, card)\n        return G.jokers and #G.jokers.highlighted >= card.ability.min_highlighted and #G.jokers.highlighted <= card.ability.max_highlighted\n    end,\n    use = function(self, card, area, copier)\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.4,\n            func = function()\n                play_sound('tarot1')\n                card:juice_up(0.3, 0.5)\n                return true\n            end\n        }))\n        for i = 1, #G.jokers.highlighted do\n            local percent = 1.15 - (i - 0.999) / (#G.jokers.highlighted - 0.998) * 0.3\n            G.E_MANAGER:add_event(Event({\n                trigger = 'after',\n                delay = 0.15,\n                func = function()\n                    G.jokers.highlighted[i]:flip()\n                    play_sound('card1', percent)\n                    G.jokers.highlighted[i]:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n        end\n        delay(0.2)\n        local rightmost = G.jokers.highlighted[1]\n        for i = 1, #G.jokers.highlighted do\n            if G.jokers.highlighted[i].T.x > rightmost.T.x then\n                rightmost = G.jokers.highlighted[i]\n            end\n        end\n        for i = 1, #G.jokers.highlighted do\n            G.E_MANAGER:add_event(Event({\n                trigger = 'after',\n                delay = 0.1,\n                func = function()\n                    if G.jokers.highlighted[i] ~= rightmost then\n                        copy_card(rightmost, G.jokers.highlighted[i])\n                    end\n                    return true\n                end\n            }))\n        end\n        for i = 1, #G.jokers.highlighted do\n            local percent = 0.85 + (i - 0.999) / (#G.jokers.highlighted - 0.998) * 0.3\n            G.E_MANAGER:add_event(Event({\n                trigger = 'after',\n                delay = 0.15,\n                func = function()\n                    G.jokers.highlighted[i]:flip()\n                    play_sound('tarot2', percent, 0.6)\n                    G.jokers.highlighted[i]:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n        end\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.2,\n            func = function()\n                G.jokers:unhighlight_all()\n                return true\n            end\n        }))\n        delay(0.5)\n    end,"
+    },
+    {
+      "type": "Consumable",
+      "key": "decimal",
+      "atlas": "Tarots",
+      "pos": {
+        "x": 2,
+        "y": 5
+      },
+      "raw": "key = 'decimal',\n    set = 'Spectral',\n    atlas = 'Tarots',\n    pos = {x = 2, y = 5},\n    unlocked = true,\n    discovered = true,\n    config = {},\n    loc_txt = {\n        name = 'Decimal',\n        text = {\n            \"Add {C:dark_edition}Polychrome{} to a\",\n            \"random {C:attention}Playing card{} in hand, destroy\",\n            \"all other Playing cards in hand\",\n        },\n    },\n    can_use = function(self,card)\n        if (G.STATE == G.STATES.SELECTING_HAND or G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK or G.STATE == G.STATES.PLANET_PACK or G.STATE == G.STATES.SMODS_BOOSTER_OPENED) and #G.hand.cards > 1 then\n            return true\n        end\n        return false\n    end,\n    use = function(self, card, area, copier)\n        local editionless_cards = SMODS.Edition:get_edition_cards(G.hand, true)\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.4,\n            func = function()\n                local eligible_card = pseudorandom_element(editionless_cards, pseudoseed('decimal'))\n                eligible_card:set_edition({ polychrome = true })\n\n                local _first_dissolve = nil\n                for _, card in pairs(G.hand.cards) do\n                    if card ~= eligible_card and (not card.ability.eternal) then\n                        card:start_dissolve(nil, _first_dissolve)\n                        _first_dissolve = true\n                    end\n                end\n\n                card:juice_up(0.3, 0.5)\n                return true\n            end\n        }))\n    end,"
+    },
+    {
+      "type": "Consumable",
+      "key": "ghost",
+      "atlas": "Tarots",
+      "pos": {
+        "x": 5,
+        "y": 5
+      },
+      "raw": "key = 'ghost',\n    set = 'Spectral',\n    atlas = 'Tarots',\n    pos = {x = 5, y = 5},\n    unlocked = true,\n    discovered = true,\n    config = { max_highlighted = 1, extra = { cards = 2 } },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.cards, card.ability.max_highlighted } }\n    end,\n    loc_txt = {\n        name = 'Ghost',\n        text = {\n            \"Create {C:attention}#1#{} copies of\",\n            \"{C:attention}1{} selected Joker\",\n        },\n    },\n    can_use = function(self, card)\n        return G.jokers and #G.jokers.highlighted <= card.ability.max_highlighted and #G.jokers.highlighted > 0\n    end,\n    use = function(self, card, area, copier)\n        G.E_MANAGER:add_event(Event({\n            func = function()\n                local _first_dissolve = nil\n                local new_cards = {}\n                for i = 1, card.ability.extra.cards do\n                    local _card = copy_card(G.jokers.highlighted[1])\n                    _card:add_to_deck()\n                    G.jokers:emplace(_card)\n                    _card:start_materialize(nil, _first_dissolve)\n                    _first_dissolve = true\n                end\n                return true\n            end\n        }))\n    end,"
+    },
+    {
+      "type": "Consumable",
+      "key": "sacrifice",
+      "atlas": "Tarots",
+      "pos": {
+        "x": 9,
+        "y": 4
+      },
+      "raw": "key = 'sacrifice',\n    set = 'Spectral',\n    atlas = 'Tarots',\n    pos = {x = 9, y = 4},\n    unlocked = true,\n    discovered = true,\n    config = { extra = { destroy = 5, dollars = 20 } },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.destroy, card.ability.extra.dollars } }\n    end,\n    loc_txt = {\n        name = 'Sacrifice',\n        text = {\n            \"Destroys {C:attention}#1#{} random\",\n            \"Jokers,\",\n            \"gain {C:money}$#2#\",\n        },\n    },\n    use = function(self, card, area, copier)\n        local destroyed_cards = {}\n        local temp_hand = {}\n\n        for _, ccard in ipairs(G.jokers.cards) do if not ccard.ability.eternal then temp_hand[#temp_hand + 1] = ccard end end\n        pseudoshuffle(temp_hand, pseudoseed('sacrifice'))\n        for i = 1, card.ability.extra.destroy do destroyed_cards[#destroyed_cards + 1] = temp_hand[i] end\n\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.4,\n            func = function()\n                play_sound('tarot1')\n                card:juice_up(0.3, 0.5)\n                return true\n            end\n        }))\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.1,\n            func = function()\n                SMODS.destroy_cards(destroyed_cards)\n                return true\n            end\n        }))\n        delay(0.5)\n        ease_dollars(card.ability.extra.dollars)\n        delay(0.3)\n    end,\n    can_use = function(self, card)\n        return G.hand and #G.hand.cards > 0\n    end,"
+    },
+    {
+      "type": "Enhancement",
+      "key": "j_joker",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"j_joker\",\n    loc_txt = {\n        name = 'Joker',\n        text = {\n            '{C:red,s:1.1}+#1#{} Mult',\n        }\n    },\n    loc_vars = function(self, info_queue)\n        return {vars = {self.config.mult}}\n    end,\n    atlas = 'JokerEnhancements',\n    pos = {x = 0, y = 0},\n    no_collection = true,\n    config = {mult = 4},\n    replace_base_card = true,\n    always_scores = true,\n    no_suit = true,\n    no_rank = true,\n    weight = 0,\n    in_pool = function(self)\n        return false\n    end"
+    },
+    {
+      "type": "Enhancement",
+      "key": "j_jolly",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = \"j_jolly\",\n    loc_txt = {\n        name=\"Jolly Joker\",\n        text={\n            \"{C:red}+#1#{} Mult if played\",\n            \"hand contains\",\n            \"a {C:attention}#2#\",\n        },\n    },\n    loc_vars = function(self, info_queue)\n        return {vars = {self.config.extra.mult, self.config.extra.type}}\n    end,\n    atlas = 'JokerEnhancements',\n    pos = {x = 2, y = 0},\n    no_collection = true,\n    config = {extra = {mult = 8, type = 'Pair'}},\n    replace_base_card = true,\n    always_scores = true,\n    no_suit = true,\n    no_rank = true,\n    weight = 0,\n    in_pool = function(self)\n        return false\n    end,\n    calculate = function(self, card, context)\n        if context.cardarea == G.play and context.main_scoring and next(context.poker_hands[self.config.extra.type]) then\n            return {mult = self.config.extra.mult}\n        end\n    end"
+    },
+    {
+      "type": "Enhancement",
+      "key": "j_zany",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = \"j_zany\",\n    loc_txt = {\n        name=\"Zany Joker\",\n        text={\n            \"{C:red}+#1#{} Mult if played\",\n            \"hand contains\",\n            \"a {C:attention}#2#\",\n        },\n    },\n    loc_vars = function(self, info_queue)\n        return {vars = {self.config.extra.mult, self.config.extra.type}}\n    end,\n    atlas = 'JokerEnhancements',\n    pos = {x = 3, y = 0},\n    no_collection = true,\n    config = {extra = {mult = 12, type = 'Three of a Kind'}},\n    replace_base_card = true,\n    always_scores = true,\n    no_suit = true,\n    no_rank = true,\n    weight = 0,\n    in_pool = function(self)\n        return false\n    end,\n    calculate = function(self, card, context)\n        if context.cardarea == G.play and context.main_scoring and next(context.poker_hands[self.config.extra.type]) then\n            return {mult = self.config.extra.mult}\n        end\n    end"
+    },
+    {
+      "type": "Enhancement",
+      "key": "j_blueprint",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 0,
+        "y": 3
+      },
+      "raw": "key = \"j_blueprint\",\n    loc_txt = {\n        name=\"Blueprint\",\n        text={\n            \"Copies ability of\",\n            \"{C:attention}Playing Card{} to the right\",\n        },\n    },\n    atlas = 'JokerEnhancements',\n    pos = {x = 0, y = 3},\n    no_collection = true,\n    replace_base_card = true,\n    overrides_base_rank = true,\n    always_scores = true,\n    weight = 0,\n    in_pool = function(self)\n        return false\n    end,\n    calculate = function(self, card, context)\n        local other_card\n        if context.main_scoring then\n            for i = 1, #card.area.cards do\n                if card.area.cards[i] == card and card.area.cards[i+1] then\n                    other_card = card.area.cards[i+1]\n                end\n            end\n            if other_card then\n                local eval, post = eval_card(other_card, context)\n                if eval.playing_card then\n                    for k, v in pairs(eval.playing_card) do\n                        eval[k] = v\n                    end\n                end\n                return eval\n            end\n        end\n    end,\n    update = function(self, card, dt)\n        if G.play ~= nil then\n            if #G.play.cards ~= 0 then\n                for i = 1, #G.play.cards do\n                    if G.play.cards[i] == card then\n                        if #G.play.cards == 1 and i == 1 then\n                            card.ability.no_rank = true\n                            card.ability.no_suit = true\n                        else\n                            if i < #G.play.cards then\n                                local suit_prefix = G.play.cards[i+1].base.suit\n                                local rank_suffix = G.play.cards[i+1].base.value\n                                card.ability.no_rank = false\n                                card.ability.no_suit = false\n                                assert(SMODS.change_base(card, suit_prefix, rank_suffix))\n                            end\n                        end\n                    end\n                end\n            end\n            if G.hand and G.hand.cards and #G.hand.cards ~= 0 then\n                for i = 1, #G.hand.cards do\n                    if G.hand.cards[i] == card then\n                        if #G.hand.cards == 1 and i == 1 then\n                            card.ability.no_rank = true\n                            card.ability.no_suit = true\n                        else\n                            if i < #G.hand.cards then\n                                local suit_prefix = G.hand.cards[i+1].base.suit\n                                local rank_suffix = G.hand.cards[i+1].base.value\n                                card.ability.no_rank = false\n                                card.ability.no_suit = false\n                                assert(SMODS.change_base(card, suit_prefix, rank_suffix))\n                            end\n                        end\n                    end\n                end\n            end\n        end\n        if G.hand ~= nil then\n            if #G.hand.highlighted ~= 0 then\n                for i = 1, #G.hand.highlighted do\n                    if G.hand.highlighted[i] == card then\n                        if #G.hand.highlighted == 1 and i == 1 then\n                            card.ability.no_rank = true\n                            card.ability.no_suit = true\n                        else\n                            if i < #G.hand.highlighted then\n                                local suit_prefix = G.hand.highlighted[i+1].base.suit\n                                local rank_suffix = G.hand.highlighted[i+1].base.value\n                                card.ability.no_rank = false\n                                card.ability.no_suit = false\n                                assert(SMODS.change_base(card, suit_prefix, rank_suffix))\n                            end\n                        end\n                    end\n                end\n            end\n        end\n    end,"
+    },
+    {
+      "type": "Enhancement",
+      "key": "j_brainstorm",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 7,
+        "y": 7
+      },
+      "raw": "key = \"j_brainstorm\",\n    loc_txt = {\n        name=\"Brainstorm\",\n        text={\n            \"Copies the ability\",\n            \"of leftmost {C:attention}Playing Card\",\n        },\n    },\n    atlas = 'JokerEnhancements',\n    pos = {x = 7, y = 7},\n    no_collection = true,\n    replace_base_card = true,\n    always_scores = true,\n    no_rank = true,\n    weight = 0,\n    config = {extra = {blueprint = {}}},\n    in_pool = function(self)\n        return false\n    end,\n    calculate = function(self, card, context)\n        local other_card\n        if context.main_scoring then\n            for i = 1, #context.scoring_hand do\n                if context.scoring_hand[1] ~= card then\n                    other_card = context.scoring_hand[1]\n                end\n            end\n            if other_card then\n                card.ability.bonus = other_card:get_chip_bonus()\n                local eval, post = eval_card(other_card, context)\n                Card:set_edition()\n                if eval and eval.playing_card then\n                    for k, v in pairs(eval.playing_card) do\n                        card.ability.extra.blueprint[k] = v\n                        eval[k] = v\n                    end\n                end\n                if other_card.ability.extra.blueprint then\n                    for k, v in pairs(other_card.ability.extra.blueprint) do\n                        eval[k] = v\n                    end\n                end\n                return eval\n            end\n        end\n    end,\n    update = function(self, card, dt)\n        if G.play ~= nil then\n            if #G.play.cards ~= 0 then\n                if #G.play.cards[1] == card then\n                    card.ability.no_rank = true\n                    card.ability.no_suit = true\n                else\n                    local suit_prefix = G.play.cards[1].base.suit\n                    local rank_suffix = G.play.cards[1].base.value\n                    card.ability.no_rank = false\n                    card.ability.no_suit = false\n                    assert(SMODS.change_base(card, suit_prefix, rank_suffix))\n                end\n            end\n            if G.hand and G.hand.cards and #G.hand.cards ~= 0 then\n                if G.hand.cards[1] == card then\n                    card.ability.no_rank = true\n                    card.ability.no_suit = true\n                else\n                    local suit_prefix = G.hand.cards[1].base.suit\n                    local rank_suffix = G.hand.cards[1].base.value\n                    card.ability.no_rank = false\n                    card.ability.no_suit = false\n                    assert(SMODS.change_base(card, suit_prefix, rank_suffix))\n                end\n            end\n        end\n        if G.hand ~= nil then\n            if #G.hand.highlighted ~= 0 then\n                for i = 1, #G.hand.highlighted do\n                    if G.hand.highlighted[i] == card then\n                        if #G.hand.highlighted == 1 and i == 1 then\n                            card.ability.no_rank = true\n                            card.ability.no_suit = true\n                        else\n                            if i < #G.hand.highlighted then\n                                local suit_prefix = G.hand.highlighted[1].base.suit\n                                local rank_suffix = G.hand.highlighted[1].base.value\n                                card.ability.no_rank = false\n                                card.ability.no_suit = false\n                                assert(SMODS.change_base(card, suit_prefix, rank_suffix))\n                            end\n                        end\n                    end\n                end\n            end\n        end\n    end,"
+    },
+    {
+      "type": "Enhancement",
+      "key": "j_burnt",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 3,
+        "y": 7
+      },
+      "raw": "key = \"j_burnt\",\n    loc_txt = {\n        name=\"Burnt Joker\",\n        text={\n            \"Upgrade the level of\",\n            \"the first {C:attention}discarded\",\n            \"poker hand each round\",\n        },\n    },\n    atlas = 'JokerEnhancements',\n    pos = {x = 3, y = 7},\n    no_collection = true,\n    replace_base_card = true,\n    always_scores = true,\n    no_suit = true,\n    no_rank = true,\n    weight = 0,\n    in_pool = function(self)\n        return false\n    end,\n    calculate = function(self, card, context)\n        if context.pre_discard and G.GAME.current_round.discards_used <= 0 and not context.hook and context.cardarea ~= G.discard then\n            local text,disp_text = G.FUNCS.get_poker_hand_info(G.hand.highlighted)\n            card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = localize('k_upgrade_ex')})\n            update_hand_text({sound = 'button', volume = 0.7, pitch = 0.8, delay = 0.3}, {handname=localize(text, 'poker_hands'),chips = G.GAME.hands[text].chips, mult = G.GAME.hands[text].mult, level=G.GAME.hands[text].level})\n            level_up_hand(context.blueprint_card or card, text, nil, 1)\n            update_hand_text({sound = 'button', volume = 0.7, pitch = 1.1, delay = 0}, {mult = 0, chips = 0, handname = '', level = ''})\n        end\n    end"
+    },
+    {
+      "type": "Enhancement",
+      "key": "j_perkeo",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 7,
+        "y": 8
+      },
+      "raw": "key = \"j_perkeo\",\n    loc_txt = {\n        name = 'Perkeo',\n        text = {\n            \"Creates a {C:dark_edition}Negative{} copy of\",\n            \"{C:attention}1{} random {C:attention}consumable{}\",\n            \"card in your possession\",\n            \"at the end of the {C:attention}shop\",\n        }\n    },\n    atlas = 'JokerEnhancements',\n    pos = {x = 7, y = 8},\n    no_collection = true,\n    replace_base_card = true,\n    always_scores = true,\n    no_suit = true,\n    no_rank = true,\n    weight = 0,\n    in_pool = function(self)\n        return false\n    end,\n    calculate = function(self, card, context)\n        if G.consumeables.cards[1] and context.main_scoring and context.cardarea == G.play then\n            G.E_MANAGER:add_event(Event({\n                func = function() \n                    local card = copy_card(pseudorandom_element(G.consumeables.cards, pseudoseed('perkeo')), nil)\n                    card:set_edition({negative = true}, true)\n                    card:add_to_deck()\n                    G.consumeables:emplace(card)\n                    card:juice_up()\n                    return true\n                end}))\n            card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = localize('k_duplicated_ex')})\n        end\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "perkeoenhance",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'perkeoenhance',\n    order = 15,\n    func = function(self)\n        if SMODS.has_enhancement(self, 'm_soe_j_perkeo') then\n            self.children.floating_sprite = Sprite(self.T.x, self.T.y, self.T.w, self.T.h, je, {x = 7, y = 9})\n            self.children.floating_sprite.role.draw_major = self\n            self.children.floating_sprite:draw_shader('dissolve', 0, nil, nil, self.children.center)\n            self.children.floating_sprite:draw_shader('dissolve', nil, nil, nil, self.children.center)\n        end\n    end,"
+    },
+    {
+      "type": "PokerHand",
+      "key": "joker_central",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"joker_central\",\n    name = \"Joker Central\",\n    above_hand = abovehand,\n    visible = false,\n    chips = 250,\n    mult = 250,\n    l_chips = 25,\n    l_mult = 10,\n    example = {\n        { \"S_2\", true, enhancement = \"m_soe_j_joker\" },\n        { \"S_2\", true, enhancement = \"m_soe_j_perkeo\" },\n        { \"S_2\", true, enhancement = \"m_soe_j_joker\" },\n        { \"S_2\", true, enhancement = \"m_soe_j_perkeo\" },\n        { \"S_2\", true, enhancement = \"m_soe_j_perkeo\" },\n    },\n    evaluate = function(parts)\n        return parts.soe_jc_orig\n    end,"
+    },
+    {
+      "type": "PokerHandPart",
+      "key": "jc_orig",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'jc_orig',\n    func = function(hand)\n        if #hand < 5 then return {} end\n        local ret = {}\n        local jokers = 0\n        for i = 1, #hand do\n            local v = hand[i].base.value\n            if v then\n                if table.contains(vanilla_jokers_as_enhanced, hand[i].config.center.key) and jokers < 5 then\n                jokers = jokers + 1\n                table.insert(ret, hand[i])\n                end\n            end\n        end\n        if jokers >= 5 and #ret >= 5 then\n            return { ret }\n        else\n            return {}\n        end\n    end"
+    },
+    {
+      "type": "Consumable",
+      "key": "demjoker",
+      "atlas": "Planets",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "set = \"Planet\",\n\tkey = \"demjoker\",\n\tconfig = {hand_type = \"soe_joker_central\", softlock = true},\n\tpos = {x = 0, y = 0},\n\tatlas = \"Planets\",\n\tloc_vars = function(self, info_queue, center)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tlocalize(\"soe_hand_joker_central\"),\n\t\t\t\tG.GAME.hands[\"soe_joker_central\"].level,\n\t\t\t\tG.GAME.hands[\"soe_joker_central\"].l_mult,\n\t\t\t\tG.GAME.hands[\"soe_joker_central\"].l_chips,\n\t\t\t\tcolours = {\n\t\t\t\t\t(\n\t\t\t\t\t\tto_big(G.GAME.hands[\"soe_joker_central\"].level) == to_big(1) and G.C.UI.TEXT_DARK\n\t\t\t\t\t\tor G.C.HAND_LEVELS[to_big(math.min(7, G.GAME.hands[\"soe_joker_central\"].level)):to_number()]\n\t\t\t\t\t),\n\t\t\t\t},\n\t\t\t},\n\t\t}\n\tend,"
+    },
+    {
+      "type": "PokerHand",
+      "key": "nil",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"nil\",\n    name = \"nil\",\n    above_hand = \"soe_joker_central\",\n    visible = false,\n    chips = 50,\n    mult = 25,\n    l_chips = 12,\n    l_mult = 12,\n    example = {\n        { \"C_T\", false},\n        { \"S_Q\", false},\n        { \"H_8\", false},\n        { \"S_J\", false},\n        { \"C_3\", false},\n    },\n    evaluate = function(parts)\n        return parts.soe_nil_orig\n    end,"
+    },
+    {
+      "type": "PokerHandPart",
+      "key": "nil_orig",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'nil_orig',\n    func = function(hand)\n        if #SMODS.find_card('j_soe_reversesplash') > 0 then\n            local ret = {}\n            local cards = 0\n            for i = 1, #hand do\n                cards = cards + 1\n                table.insert(ret, hand[i])\n            end\n            if cards > 0 and #ret > 0 then\n                return { ret }\n            else\n                return {}\n            end\n        else\n            return {}\n        end\n    end"
+    },
+    {
+      "type": "Voucher",
+      "key": "blueprint",
+      "atlas": "BlueprintVouchers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'blueprint',\n    cost = 10,\n    atlas = 'BlueprintVouchers',\n    pos = { x = 0, y = 0 },\n    unlocked = true,\n    discovered = true,\n    loc_vars = function(self, info_queue, card)\n        return {vars = {SEALS.safe_get(G.localization.descriptions, \"Voucher\", G.GAME.blueprintvouchertocopy or \"ddfjvgbjbfjvbnfbcmvd\", \"name\") or \"Nothing\"}}\n    end,\n    calculate = function(self, card, context)\n        if G.GAME.blueprintvouchertocopy then\n            local other_voucher\n            for k, v in pairs(G.vouchers.cards) do\n                if v.config.center.key == G.GAME.blueprintvouchertocopy then\n                    other_voucher = v\n                    break\n                end\n            end\n            if other_voucher then\n                local center = other_voucher.config.center\n                if center.calculate and type(center.calculate) == 'function' then\n                    local o, t = center:calculate(other_voucher, context)\n                    if o or t then return o, t end\n                end\n            else\n                G.GAME.blueprintvouchertocopy = nil\n            end\n        end\n    end"
+    },
+    {
+      "type": "Voucher",
+      "key": "brainstorm",
+      "atlas": "BlueprintVouchers",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'brainstorm',\n    cost = 10,\n    atlas = 'BlueprintVouchers',\n    pos = { x = 1, y = 0 },\n    unlocked = true,\n    discovered = true,\n    loc_vars = function(self, info_queue, card)\n        return {vars = {SEALS.safe_get(G.localization.descriptions, \"Voucher\", G.GAME.brainstormvouchertocopy or \"ddfjvgbjbfjvbnfbcmvd\", \"name\") or \"Nothing\"}}\n    end,\n    calculate = function(self, card, context)\n        local other_voucher\n        for k, v in pairs(G.vouchers.cards) do\n            if v.config.center.key == G.GAME.brainstormvouchertocopy then\n                other_voucher = v\n                break\n            end\n        end\n        if other_voucher then\n            local center = other_voucher.config.center\n            if center.calculate and type(center.calculate) == 'function' then\n                local o, t = center:calculate(other_voucher, context)\n                if o or t then return o, t end\n            end\n        end\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "stonecardjoker",
+      "atlas": "Enhancers",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "name = 'StoneCardJoker',\n    key = 'stonecardjoker',\n    atlas = 'Enhancers',\n    pos = {x = 5, y = 0},\n    rarity = 3,\n    cost = 10,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    no_collection = true,\n    config = {\n        chips = 50\n    },\n    loc_vars = function(self,info_queue,center)\n        return {vars = {center.ability.chips}}\n    end,\n    calculate = function(self, card, context)\n        if context.joker_main and context.cardarea == G.jokers then\n            return {\n                chips = card.ability.chips,\n                colour = G.C.CHIPS,\n                card = card\n            }\n        end\n    end,\n    in_pool = function(self)\n        return false\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "reversesplash",
+      "atlas": "Placeholders",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "name = 'ReverseSplash',\n    key = 'reversesplash',\n    atlas = 'Placeholders',\n    pos = {x = 0, y = 0},\n    rarity = 1,\n    cost = 5,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,"
+    },
+    {
+      "type": "Joker",
+      "key": "ascendedjoker",
+      "atlas": "JokerEnhancements",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "name = 'AscendedJoker',\n    key = 'ascendedjoker',\n    atlas = 'JokerEnhancements',\n    pos = {x = 0, y = 0},\n    soul_pos = {x = 1000, y = 1000},\n    rarity = 4,\n    cost = 30,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    config = {\n        frames = {\n            xlevels = 0,\n            ylevels = 0\n        },\n        extra = {\n            mult = 4,\n            suitmult = 3,\n            mpair = 8,\n            mtoak = 12,\n            mtwopair = 10,\n            mstraight = 12,\n            mflush = 10,\n            cpair = 50,\n            ctoak = 100,\n            ctwopair = 80,\n            cstraight = 100,\n            cflush = 80,\n            halfmult = 20,\n            xmult = 1,\n            normretriggers = 1,\n            chadretriggers = 2,\n            debt = 20,\n            chips = 0,\n            mystic = 15,\n            loyaltyremaining = 5,\n            freerolls = 1,\n            fibmult = 8,\n            scarychips = 30,\n            evenmult = 4,\n            oddchips = 31,\n            scholar = {chips = 20, mult = 4},\n            businessodds = 2,\n            businessmoney = 2,\n            ridethebusgain = 1,\n            spaceodds = 4,\n            eggsellgain = 3,\n            burglarhands = 3,\n            blackboardxmult = 3,\n            runnergain = 15,\n            runnerchips = 0,\n            icecreamchips = 100,\n            icecreamloss = 5,\n            bluechips = 2,\n            constellationgain = 0.1,\n            hikerchips = 5,\n            facelessmoney = 5,\n            greengainloss = 1,\n            todomoney = 4,\n            cavendish = 3,\n            cardsharp = 3,\n            redcardgain = 3,\n            madnessgain = 0.5,\n            squaregain = 4,\n            vampiregain = 0.1,\n            hologramgain = 0.25,\n            vagabondmoney = 4,\n            baronxmult = 1.5,\n            cloudninemoney = 1,\n            money = 0,\n            rocketgain = 1,\n            obeliskgain = 0.2,\n            photoxmult = 2,\n            giftmoney = 1,\n            turtlebean = {handsize = 5, loss = 1},\n            erosiongain = 4,\n            reservedparkingmoney = 1,\n            maininrebatemoney = 5,\n            tothemoongain = 1, \t\n            hallucinationodds = 2,\n            fortunegain = 1,\n            juggler = 1,\n            drunkard = 1,\n            stonejokergain = 25,\n            luckycatgain = 0.25,\n            baseballxmult = 1.5,\n            bullchips = 2,\n            tradingcardmoney = 3,\n            flashcardgain = 2,\n            popcornloss = 4,\n            pantsgain = 2,\n            ancientxmult = 1.5,\n            ramen = {xmult = 2, loss = 0.01},\n            walkie = {chips = 10, mult = 4},\n            seltzerhandsleft = 10,\n            isseltzerdranken = false,\n            castlegain = 3,\n            smileymult = 5,\n            campfiregain = 0.25,\n            goldenticketmoney = 4,\n            mrbonesrequire = 0.25,\n            acrobatxmult = 3,\n            troubadour = {handsize = 2, hands = 1},\n            throwbackgain = 0.25,\n            roughgemmoney = 1,\n            bloodstone = {odds = 2, xmult = 1.5},\n            arrowheadchips = 50,\n            onyxagatemult = 7,\n            glassgain = 0.75,\n            flowerxmult = 3,\n            weegain = 8,\n            merryandy = {discards = 3, handsize = 1},\n            idolxmult = 2,\n            seeingdoublexmult = 2,\n            matadormoney = 8,\n            hittheroadgain = 0.5,\n            duoxmult = 2,\n            trioxmult = 3,\n            familyxmult = 4,\n            orderxmult = 3,\n            tribexmult = 2,\n            stuntman = {chips = 250, handsize = 2},\n            invisiblerounds = 2,\n            satelitegain = 1,\n            shootthemoonmult = 13,\n            driverslicensexmult = 3,\n            bootstraps = {mult = 2, dollars = 5},\n            cainogain = 1,\n            tribouletxmult = 2,\n            yorickgain = 1,\n        }\n    },\n    add_to_deck = function (self, card, from_debuff)\n        G.GAME.round_resets.discards = G.GAME.round_resets.discards + card.ability.extra.drunkard + card.ability.extra.merryandy.discards\n        ease_discard(card.ability.extra.drunkard + card.ability.extra.merryandy.discards)\n        G.GAME.bankrupt_at = G.GAME.bankrupt_at - card.ability.extra.debt\n        for k, v in pairs(G.GAME.probabilities) do \n            G.GAME.probabilities[k] = v*2\n        end\n        SMODS.change_free_rerolls(1)\n        calculate_reroll_cost(true)\n        G.hand:change_size(card.ability.extra.turtlebean.handsize)\n        G.GAME.interest_amount = G.GAME.interest_amount + 1\n        G.E_MANAGER:add_event(Event({func = function()\n            for k, v in pairs(G.I.CARD) do\n                if v.set_cost then v:set_cost() end\n            end\n            return true\n        end }))\n        G.hand:change_size(card.ability.extra.troubadour.handsize)\n        G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.troubadour.hands\n        G.hand:change_size(-card.ability.extra.stuntman.handsize)\n    end,\n    remove_from_deck = function (self, card, from_debuff)\n        G.GAME.round_resets.discards = G.GAME.round_resets.discards - card.ability.extra.drunkard - card.ability.extra.merryandy.discards\n        ease_discard(card.ability.extra.drunkard + card.ability.extra.merryandy.discards)\n        G.GAME.bankrupt_at = G.GAME.bankrupt_at + card.ability.extra.debt\n        for k, v in pairs(G.GAME.probabilities) do \n            G.GAME.probabilities[k] = v/2\n        end\n        SMODS.change_free_rerolls(-1)\n        calculate_reroll_cost(true)\n        G.hand:change_size(-card.ability.extra.turtlebean.handsize)\n        G.GAME.interest_amount = G.GAME.interest_amount - 1\n        G.E_MANAGER:add_event(Event({func = function()\n            for k, v in pairs(G.I.CARD) do\n                if v.set_cost then v:set_cost() end\n            end\n            return true\n        end }))\n        G.hand:change_size(-card.ability.extra.troubadour.handsize)\n        G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.troubadour.hands\n        G.hand:change_size(card.ability.extra.stuntman.handsize)\n    end,\n    calculate = function(self, card, context)\n        if context.setting_blind and not (context.blueprint_card or self).getting_sliced then\n            --[[\n            local my_pos\n            for i = 1, #G.jokers.cards do\n                if G.jokers.cards[i] == card then my_pos = i; break end\n            end\n            if my_pos and G.jokers.cards[my_pos+1] and not G.jokers.cards[my_pos+1].ability.eternal and not G.jokers.cards[my_pos+1].getting_sliced and not context.blueprint then \n                local sliced_card = G.jokers.cards[my_pos+1]\n                sliced_card.getting_sliced = true\n                G.GAME.joker_buffer = G.GAME.joker_buffer - 1\n                G.E_MANAGER:add_event(Event({func = function()\n                    card.children.center:set_sprite_pos({x = 5, y = 5})\n                    G.GAME.joker_buffer = 0\n                    card.ability.extra.mult = card.ability.extra.mult + sliced_card.sell_cost*2\n                    card:juice_up(0.8, 0.8)\n                    sliced_card:start_dissolve({HEX(\"57ecab\")}, nil, 1.6)\n                    play_sound('slice1', 0.96+math.random()*0.08)\n                return true end }))\n                card_eval_status_text(card, 'extra', card, nil, nil, {message = localize{type = 'variable', key = 'a_mult', vars = {card.ability.extra.mult+2*sliced_card.sell_cost}}, colour = G.C.RED, no_juice = true})\n            end\n            ]]\n            --[[\n            local front = pseudorandom_element(G.P_CARDS, pseudoseed('marb_fr'))\n            G.playing_card = (G.playing_card and G.playing_card + 1) or 1\n            local card = Card(G.discard.T.x + G.discard.T.w/2, G.discard.T.y, G.CARD_W, G.CARD_H, front, G.P_CENTERS.m_stone, {playing_card = G.playing_card})\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    card.children.center:set_sprite_pos({x = 3, y = 2})\n                    card:start_materialize({G.C.SECONDARY_SET.Enhanced})\n                    G.play:emplace(card)\n                    table.insert(G.playing_cards, card)\n                    return true\n                end}))\n            card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = localize('k_plus_stone'), colour = G.C.SECONDARY_SET.Enhanced})\n            ]]\n        end\n        if context.ending_shop then\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    card.children.center:set_sprite_pos({x = 7, y = 8})\n                    return true\n                end\n            }))\n            local eligibleJokers = {}\n            for i = 1, #G.consumeables.cards do\n                if G.consumeables.cards[i].ability.consumeable then\n                    eligibleJokers[#eligibleJokers + 1] = G.consumeables.cards[i]\n                end\n            end\n            if #eligibleJokers > 0 then\n                G.E_MANAGER:add_event(Event({\n                    func = function() \n                        local card = copy_card(pseudorandom_element(eligibleJokers, pseudoseed('perkeo')), nil)\n                        card:set_edition({negative = true}, true)\n                        card:add_to_deck()\n                        G.consumeables:emplace(card)\n                        card.ability.qty = 1\n                        return true\n                    end}))\n                card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = localize('k_duplicated_ex')})\n                return nil, true\n            end\n            return\n        end\n        if context.joker_main and context.cardarea == G.jokers then\n            SMODS.calculate_effect({mult = card.ability.extra.mult, card = card}, card)\n            if next(context.poker_hands[\"Pair\"]) then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 2, y = 0})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({mult = card.ability.extra.mpair, card = card}, card)\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 0, y = 14})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({chips = card.ability.extra.cpair, card = card}, card)\n            end\n            if next(context.poker_hands[\"Three of a Kind\"]) then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 3, y = 0})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({mult = card.ability.extra.mtoak, card = card}, card)\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 1, y = 14})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({chips = card.ability.extra.ctoak, card = card}, card)\n            end\n            if next(context.poker_hands[\"Two Pair\"]) then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 4, y = 0})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({mult = card.ability.extra.mtwopair, card = card}, card)\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 2, y = 14})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({chips = card.ability.extra.ctwopair, card = card}, card)\n            end\n            if next(context.poker_hands[\"Straight\"]) then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 5, y = 0})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({mult = card.ability.extra.mstraight, card = card}, card)\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 3, y = 14})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({chips = card.ability.extra.cstraight, card = card}, card)\n            end\n            if next(context.poker_hands[\"Flush\"]) then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 6, y = 0})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({mult = card.ability.extra.mflush, card = card}, card)\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 4, y = 14})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({chips = card.ability.extra.cflush, card = card}, card)\n            end\n            if #context.full_hand < 3 then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 7, y = 0})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({mult = card.ability.extra.halfmult, card = card}, card)\n            end\n            if G.GAME.current_round.discards_left == 0 then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 2, y = 2})\n                        return true\n                    end\n                }))\n                SMODS.calculate_effect({mult = card.ability.extra.mystic, card = card}, card)\n            end\n            return nil, true\n        end\n        if context.individual then\n            if context.cardarea == G.play then\n                if context.other_card:is_suit(\"Hearts\") then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 7, y = 1})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({mult = card.ability.extra.suitmult, card = context.other_card}, card)\n                end\n                if context.other_card:is_suit(\"Diamonds\") then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 6, y = 1})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({mult = card.ability.extra.suitmult, card = context.other_card}, card)\n                end\n                if context.other_card:is_suit(\"Spades\") then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 8, y = 1})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({mult = card.ability.extra.suitmult, card = context.other_card}, card)\n                end\n                if context.other_card:is_suit(\"Clubs\") then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 9, y = 1})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({mult = card.ability.extra.suitmult, card = context.other_card}, card)\n                end\n                if context.other_card:is_suit(\"Diamonds\") then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 9, y = 7})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({dollars = card.ability.extra.roughgemmoney, card = context.other_card}, card)\n                end\n                if context.other_card:is_suit(\"Spades\") then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 1, y = 8})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({chips = card.ability.extra.arrowheadchips, card = context.other_card}, card)\n                end\n                if context.other_card:is_suit(\"Clubs\") then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 2, y = 8})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({mult = card.ability.extra.onyxagatemult, card = context.other_card}, card)\n                end\n                if context.other_card:is_suit(\"Hearts\") and pseudorandom('bloodstone') < G.GAME.probabilities.normal/card.ability.extra.bloodstone.odds then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 0, y = 8})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({x_mult = card.ability.extra.bloodstone.xmult, card = context.other_card}, card)\n                end\n                if context.other_card:get_id() == 12 or context.other_card:get_id() == 13 then\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            card.children.center:set_sprite_pos({x = 4, y = 8})\n                            return true\n                        end\n                    }))\n                    SMODS.calculate_effect({x_mult = card.ability.extra.tribouletxmult, card = context.other_card}, card)\n                end\n                return nil, true\n            end\n            if context.cardarea == G.hand then\n                if not context.end_of_round then\n                    if context.other_card:get_id() == 12 then\n                        G.E_MANAGER:add_event(Event({\n                            func = function()\n                                card.children.center:set_sprite_pos({x = 2, y = 6})\n                                return true\n                            end\n                        }))\n                        if context.other_card.debuff then\n                            return {\n                                message = localize('k_debuffed'),\n                                colour = G.C.RED,\n                                card = card,\n                            }\n                        else\n                            return {\n                                mult = card.ability.extra.shootthemoonmult,\n                                card = card\n                            }\n                        end\n                    end\n                    if context.other_card:get_id() == 13 then\n                        G.E_MANAGER:add_event(Event({\n                            func = function()\n                                card.children.center:set_sprite_pos({x = 6, y = 12})\n                                return true\n                            end\n                        }))\n                        if context.other_card.debuff then\n                            return {\n                                message = localize('k_debuffed'),\n                                colour = G.C.RED,\n                                card = card,\n                            }\n                        else\n                            return {\n                                x_mult = card.ability.extra.baronxmult,\n                                card = card\n                            }\n                        end\n                    end\n                end\n            end\n        end\n        if context.repetition then\n            if context.cardarea == G.hand then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 4, y = 1})\n                        return true\n                    end\n                })) \n                return {\n                    message = localize('k_again_ex'),\n                    repetitions = card.ability.extra.normretriggers,\n                    card = card,\n                }\n            end\n            if context.cardarea == G.play then\n                local retriggeramount = 0\n                if not card.ability.extra.isseltzerdranken then\n                    retriggeramount = retriggeramount + card.ability.extra.normretriggers\n                end\n                if context.other_card:is_face() then\n                    retriggeramount = retriggeramount + card.ability.extra.normretriggers\n                end\n                if context.other_card:get_id() == 2 or context.other_card:get_id() == 3 or context.other_card:get_id() == 4 or context.other_card:get_id() == 5 then\n                    retriggeramount = retriggeramount + card.ability.extra.normretriggers\n                end\n                if G.GAME.current_round.hands_left == 0 then\n                    retriggeramount = retriggeramount + card.ability.extra.normretriggers\n                end\n                if context.other_card == context.scoring_hand[1] then\n                    retriggeramount = retriggeramount + card.ability.extra.chadretriggers\n                end\n                return {\n                    message = localize('k_again_ex'),\n                    repetitions = retriggeramount,\n                    card = card,\n                }\n            end\n        end\n        if context.after then\n            if card.ability.extra.seltzerhandsleft - 1 <= 0 and not card.ability.extra.isseltzerdranken then\n                card.ability.extra.seltzerhandsleft = 0\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 3, y = 15})\n                        play_sound('tarot1')\n                        card:juice_up(0.3, 0.4)\n                        return true\n                    end\n                })) \n                SMODS.calculate_effect({message = localize('k_drank_ex'), colour = G.C.FILTER}, card)\n                card.ability.extra.isseltzerdranken = true\n            elseif not card.ability.extra.isseltzerdranken then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({x = 3, y = 15})\n                        return true\n                    end\n                }))\n                card.ability.extra.seltzerhandsleft = card.ability.extra.seltzerhandsleft - 1\n                SMODS.calculate_effect({message = card.ability.extra.seltzerhandsleft..'', colour = G.C.FILTER}, card)\n            end\n        end\n    end,\n    update = function(self, card, dt)\n        if card.children.center.sprite_pos and card.children.center.sprite_pos.x >= 3 and card.children.center.sprite_pos.x <= 7 and card.children.center.sprite_pos.y == 8 then\n            card.children.floating_sprite:set_sprite_pos({x = card.children.center.sprite_pos.x, y = card.children.center.sprite_pos.y + 1})\n        elseif card.children.center.sprite_pos and card.children.center.sprite_pos.x == 4  and card.children.center.sprite_pos.y == 12 then\n            card.children.floating_sprite:set_sprite_pos({x = 2, y = 9})\n        else\n            card.children.floating_sprite:set_sprite_pos({x = 1000, y = 1000})\n        end\n        --[[\n        anim = {}\n        if not anim.t then anim.t = 0 end\n        anim.t = anim.t + dt\n        if anim.t > 1/(anim.fps or 10) then\n            anim.t = anim.t - 1/(anim.fps or 10)\n            next_frame = true\n        end\n        ]]\n        --[[\n        if true then\n            card.ability.frames.xlevels = card.ability.frames.xlevels + 0.1\n            if card.ability.frames.ylevels >= 9 and card.ability.frames.ylevels < 10 then\n                card.ability.frames.ylevels = 10\n            end\n            if card.ability.frames.xlevels >= 9 then\n                card.ability.frames.ylevels = card.ability.frames.ylevels + 0.1\n            end\n            if card.ability.frames.xlevels >= 10 then\n                card.ability.frames.xlevels = 0\n            end\n            if card.ability.frames.ylevels >= 15 then\n                card.ability.frames.xlevels = 0\n                card.ability.frames.ylevels = 0\n            end\n            card.children.center:set_sprite_pos({x = math.floor(card.ability.frames.xlevels), y = math.floor(card.ability.frames.ylevels)})\n        end\n        ]]\n    end,\n    in_pool = function(self)\n        return false\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "seeder",
+      "atlas": "Placeholders",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "name = 'Seeder',\n    key = 'seeder',\n    atlas = 'Placeholders',\n    pos = {x = 2, y = 0},\n    rarity = 3,\n    cost = 15,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    config = {\n        extra = {\n            seed = \"2K9H9HN\",\n            runnable = true\n        }\n    },\n    loc_vars = function(self,info_queue,card)\n        return {vars = {card.ability.extra.seed}}\n    end,\n    calculate = function(self, card, context)\n        if context.end_of_round and context.main_eval and context.game_over == false and G.GAME.blind.boss then\n            if not card.ability.extra.runnable then\n                card.ability.extra.runnable = true\n                return {\n                    message = localize('k_reset'),\n                }\n            end\n        end\n        if context.using_consumeable and card.ability.extra.runnable then\n            G.ENTERED_SEED = \"\"\n            G.E_MANAGER:add_event(Event({\n\t\t\t\tblockable = false,\n\t\t\t\tfunc = function()\n\t\t\t\t\tG.REFRESH_ALERTS = true\n\t\t\t\t\treturn true\n\t\t\t\tend,\n\t\t\t}))\n\t\t\tG.UIBOXGENERICOPTIONSREALLYSEED = create_UIBox_generic_options({\n\t\t\t\tno_back = true,\n\t\t\t\tcolour = HEX(\"04200c\"),\n\t\t\t\toutline_colour = G.C.SECONDARY_SET.Code,\n\t\t\t\tcontents = {\n\t\t\t\t\t{\n\t\t\t\t\t\tn = G.UIT.R,\n\t\t\t\t\t\tnodes = {\n\t\t\t\t\t\t\tcreate_text_input({\n\t\t\t\t\t\t\t\tcolour = G.C.SET.Code,\n\t\t\t\t\t\t\t\thooked_colour = darken(copy_table(G.C.SET.Code), 0.3),\n\t\t\t\t\t\t\t\tw = 4.5,\n\t\t\t\t\t\t\t\th = 1,\n\t\t\t\t\t\t\t\tmax_length = 8,\n\t\t\t\t\t\t\t\textended_corpus = true,\n\t\t\t\t\t\t\t\tprompt_text = \"ENTER A SEED\",\n\t\t\t\t\t\t\t\tref_table = G,\n\t\t\t\t\t\t\t\tref_value = \"ENTERED_SEED\",\n\t\t\t\t\t\t\t\tkeyboard_offset = 1,\n\t\t\t\t\t\t\t}),\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\tn = G.UIT.R,\n\t\t\t\t\t\tconfig = { align = \"cm\" },\n\t\t\t\t\t\tnodes = {\n\t\t\t\t\t\t\tUIBox_button({\n\t\t\t\t\t\t\t\tcolour = G.C.SET.Code,\n\t\t\t\t\t\t\t\tbutton = \"seed_apply\",\n\t\t\t\t\t\t\t\tlabel = {\"SEED\"},\n\t\t\t\t\t\t\t\tminw = 4.5,\n\t\t\t\t\t\t\t\tfocus_args = { snap_to = true },\n\t\t\t\t\t\t\t}),\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t})\n            G.UIBOXFORSEED = UIBox({\n                definition = G.UIBOXGENERICOPTIONSREALLYSEED,\n                config = {\n                    align = \"cm\",\n                    offset = { x = 0, y = 10 },\n                    major = G.ROOM_ATTACH,\n                    bond = \"Weak\",\n                    instance_type = \"POPUP\",\n                },\n            })\n            G.UIBOXFORSEED.alignment.offset.y = 0\n            G.ROOM.jiggle = G.ROOM.jiggle + 1\n            G.UIBOXFORSEED:align_to_major()\n            G.FUNCS.seed_apply = function()\n                G.ENTERED_SEED = string.upper(G.ENTERED_SEED) or \"r\"\n                card.ability.extra.runnable = false\n                card.ability.extra.seed = G.ENTERED_SEED\n                G.GAME.pseudorandom.seed = G.ENTERED_SEED\n                G.GAME.pseudorandom.hashed_seed = pseudohash(G.GAME.pseudorandom.seed)\n                G.UIBOXFORSEED:remove()\n            end\n        end\n    end,\n    in_pool = function(self)\n        return false\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "c_talismanjoker",
+      "atlas": "Tarots",
+      "pos": {
+        "x": 3,
+        "y": 4
+      },
+      "raw": "name = 'TalismanJoker',\n    key = 'c_talismanjoker',\n    atlas = 'Tarots',\n    pos = {x = 3, y = 4},\n    rarity = 3,\n    cost = 10,\n    boostershader = true,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    calculate = function(self, card, context)\n        local free = false\n        if context.before then\n            for k, v in pairs(context.scoring_hand) do\n                if IsEligibleForSeal(v) then\n                    free = true\n                    break\n                end\n            end\n            if not free then\n                return {\n                    message = localize('k_nope_ex'),\n                    card = card,\n                }\n            end\n            local randomcard = {}\n            while not IsEligibleForSeal(randomcard) do\n                randomcard = pseudorandom_element(context.scoring_hand, pseudoseed('talisman'))\n            end\n            if randomcard then\n                return {\n                    message = 'Talisman!',\n                    card = card,\n                    randomcard:set_seal('Gold')\n                }\n            end\n        end\n    end,"
+    },
+    {
+      "type": "Joker",
+      "key": "thesouljoker",
+      "atlas": "Tarots",
+      "pos": {
+        "x": 2,
+        "y": 2
+      },
+      "raw": "name = 'TheSoulJoker',\n    key = 'thesouljoker',\n    atlas = 'Tarots',\n    pos = {x = 2, y = 2},\n    rarity = 3,\n    cost = 10,\n    boostershader = true,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    calculate = function(self, card, context)\n        if context.before then\n            return {\n                message = localize('k_nope_ex'),\n                card = card,\n            }\n        end\n    end,"
+    },
+    {
+      "type": "DrawStep",
+      "key": "thesoulpos",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'thesoulpos',\n    order = 20,\n    func = function(self)\n        if self.config.center.key == 'thesouljoker' then\n            local scale_mod = 0.05 + 0.05*math.sin(1.8*G.TIMERS.REAL) + 0.07*math.sin((G.TIMERS.REAL - math.floor(G.TIMERS.REAL))*math.pi*14)*(1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL)))^3\n            local rotate_mod = 0.1*math.sin(1.219*G.TIMERS.REAL) + 0.07*math.sin((G.TIMERS.REAL)*math.pi*5)*(1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL)))^2\n            \n            local sprite = Sprite(self.T.x, self.T.y, self.T.w, self.T.h, G.ASSET_ATLAS[\"soe_Enhancers\"], {x = 0, y = 1})\n            sprite.role.draw_major = self\n            sprite:draw_shader('dissolve',0, nil, nil, self.children.center,scale_mod, rotate_mod,nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL),nil, 0.6)\n            sprite:draw_shader('dissolve', nil, nil, nil, self.children.center, scale_mod, rotate_mod)\n        end\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "v_blankjoker",
+      "atlas": "Vouchers",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "name = 'BlankJoker',\n    key = 'v_blankjoker',\n    atlas = 'Vouchers',\n    pos = {x = 7, y = 0},\n    rarity = 3,\n    cost = 10,\n    vouchershader = true,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    config = {\n        extra = {\n            roundsleft = 20\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return {vars = {card.ability.extra.roundsleft}}\n    end,\n    calculate = function(self, card, context)\n        if context.end_of_round and context.main_eval then\n            card.ability.extra.roundsleft = card.ability.extra.roundsleft - 1\n            if card.ability.extra.roundsleft <= 0 then\n                card:set_ability(G.P_CENTERS.j_soe_antimatterjoker)\n            else\n                return {\n                    message = 'Doing nothing...',\n                    sound = 'holo1'\n                }\n            end\n        end\n    end,"
+    },
+    {
+      "type": "Joker",
+      "key": "v_antimatterjoker",
+      "atlas": "Vouchers",
+      "pos": {
+        "x": 7,
+        "y": 1
+      },
+      "raw": "name = 'AntimatterJoker',\n    key = 'v_antimatterjoker',\n    atlas = 'Vouchers',\n    pos = {x = 7, y = 1},\n    rarity = 4,\n    cost = 10,\n    negativeshader = true,\n    unlocked = true,\n    discovered = true,\n    no_doe = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    config = {\n        extra = {\n            weightmult = 105,\n            xmult = 1.2\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return {vars = {card.ability.extra.xmult, card.ability.extra.weightmult}}\n    end,\n    calculate = function(self, card, context)\n        if (context.other_joker and context.other_joker.edition and context.other_joker.edition.key == 'e_negative') or (context.other_consumeable and context.other_consumeable.edition and context.other_consumeable.edition.key == 'e_negative') or (context.individual and context.other_card.edition and context.other_card.edition.key == 'e_negative' and not context.end_of_round) then\n            return {\n                Xmult_mod = card.ability.extra.xmult,\n                colour = G.C.MULT,\n                message = 'Negative!!',\n                card = card,\n            }\n        end\n    end,\n    in_pool = function(self)\n        return false\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "boostershader",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'boostershader',\n    order = 20,\n    func = function(self)\n        if self.config.center.boostershader then\n            self.children.center:draw_shader('booster',nil, self.ARGS.send_to_shader)\n        end\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "vouchershader",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'vouchershader',\n    order = 20,\n    func = function(self)\n        if self.config.center.vouchershader then\n            self.children.center:draw_shader('voucher',nil, self.ARGS.send_to_shader)\n        end\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "unorganizedjoker",
+      "atlas": "Placeholders",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "name = 'UnorganizedJoker',\n    key = 'unorganizedjoker',\n    atlas = 'Placeholders',\n    pos = {x = 3, y = 0},\n    rarity = unorganizedrarity,\n    cost = 20,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    config = {\n        extra = {\n            xmult = unorganizedxmult\n        }\n    },\n    loc_vars = function(self,info_queue,center)\n        return {vars = {center.ability.extra.xmult}}\n    end,\n    calculate = function(self, card, context)\n        if (context.other_joker and (context.other_joker.seal or context.other_joker.ability.legallyenhanced or context.other_joker.ability.legallysleeve)) or (context.other_consumeable and context.other_consumeable.seal) then\n            return {\n                x_mult = card.ability.extra.xmult,\n                colour = G.C.MULT,\n                card = context.other_joker or context.other_consumeable\n            }\n        end\n        if context.individual then\n            for k, v in pairs(SMODS.Stickers) do\n                if context.other_card.ability[k] then\n                    return {\n                        x_mult = card.ability.extra.xmult,\n                        colour = G.C.MULT,\n                        card = context.other_card\n                    }\n                end\n            end\n        end\n    end,"
+    },
+    {
+      "type": "Joker",
+      "key": "kingofheartscardjoker",
+      "atlas": "PlayingCards",
+      "pos": {
+        "x": 11,
+        "y": 0
+      },
+      "raw": "name = 'KingofHeartsCardJoker',\n    key = 'kingofheartscardjoker',\n    atlas = 'PlayingCards',\n    pos = {x = 11, y = 0},\n    rarity = 3,\n    cost = 10,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = true,\n    perishable_compat = true,\n    calculate = function(self, card, context)\n        if context.individual and (context.cardarea == G.play or context.cardarea == G.hand) and not context.end_of_round then\n            local kingcontext = {cardarea = G.play, main_scoring = true, other_card = context.other_card}\n            local eval, post = eval_card(context.other_card, kingcontext)\n            for k, v in pairs(eval) do\n                if type(v) == 'table' then\n                    for k, v in pairs(v) do\n                        eval[k] = v\n                    end\n                end\n            end\n            return eval\n        end\n    end,\n    in_pool = function(self)\n        return false\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "extralife",
+      "atlas": "ExtraLife",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "name = 'ExtraLife',\n    key = 'extralife',\n    atlas = 'ExtraLife',\n    pos = {x = 0, y = 0},\n    rarity = 3,\n    cost = 10,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = true,\n    eternal_compat = false,\n    perishable_compat = true,\n    no_collection = true,\n    config = {\n        lives = 1\n    },\n    loc_vars = function(self,info_queue,card)\n        return {vars = {card.ability.lives}}\n    end,\n    calculate = function(self, card, context)\n        if context.game_over then\n            card.ability.lives = card.ability.lives - 1\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    G.hand_text_area.blind_chips:juice_up()\n                    G.hand_text_area.game_chips:juice_up()\n                    play_sound('tarot1')\n                    if card.ability.lives < 1 then\n                        card:start_dissolve()\n                    end\n                    return true\n                end\n            })) \n            return {\n                saved = \"Life Used!\",\n                colour = G.C.RED\n            }\n        end\n    end,\n    in_pool = function(self)\n        return false\n    end,\n    add_to_deck = function (self, card, from_debuff)\n        if #SMODS.find_card('j_soe_extralife') > 0 then\n            for k, v in pairs(G.jokers.cards) do\n                if v.config.center.key == 'j_soe_extralife' then\n                    v.ability.lives = (v.ability.lives or 0) + 1\n                    break\n                end\n            end\n            card:start_dissolve()\n        end\n        if cryptidyeohna then\n            card.ability.cry_absolute = true\n        else\n            card.ability.eternal = true\n        end\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "sealjoker",
+      "atlas": "Exotics",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "name = 'SealJoker',\n    key = 'sealjoker',\n    atlas = 'Exotics',\n    pos = {x = 0, y = 0},\n    soul_pos = {x = 1, y = 0},\n    rarity = exoticrarity,\n    cost = 55,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = false,"
+    },
+    {
+      "type": "Joker",
+      "key": "thinkingemoji",
+      "atlas": "Think",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "name = 'ThinkingEmoji',\n        key = 'thinkingemoji',\n        atlas = 'Think',\n        pos = {x = 0, y = 0},\n        soul_pos = {x = 1, y = 0},\n        config = {extra = {emult_mod = 0.2, idea_count = 19}},\n        rarity = \"cry_exotic\",\n        cost = 62,\n        unlocked = true,\n        discovered = true,\n        blueprint_compat = true,\n        eternal_compat = true,\n        perishable_compat = false,\n        loc_vars = function(self,info_queue,card)\n            return {vars = {card.ability.extra.emult_mod, card.ability.extra.emult or (1 + (card.ability.extra.emult_mod * card.ability.extra.idea_count))}}\n        end,\n        calculate = function(self, card, context)\n            if context.joker_main and context.cardarea == G.jokers then\n                card.ability.extra.emult = 1 + (card.ability.extra.emult_mod * card.ability.extra.idea_count)\n                return {\n                    emult = card.ability.extra.emult,\n                    colour = G.C.DARK_EDITION\n                }\n            end\n        end"
+    },
+    {
+      "type": "Gradient",
+      "key": "seal_gradient",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'seal_gradient',\n        colours = {\n            HEX('E8463D'),\n            HEX('009CFD'),\n            HEX('A267E4'),\n            HEX('F7AF38'),\n        }"
+    },
+    {
+      "type": "Rarity",
+      "key": "infinity",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'infinity',\n    badge_colour = sealoverlords,"
+    },
+    {
+      "type": "Consumable",
+      "key": "infinityfuser",
+      "atlas": "Placeholders",
+      "pos": {
+        "x": 2,
+        "y": 2
+      },
+      "raw": "key = 'infinityfuser',\n    name = 'InfinityFuser',\n    atlas = 'Placeholders',\n    set = 'Spectral',\n    pos = {x = 2, y = 2},\n    hidden = true,\n    can_use = function (self, card) \n        local g = {}\n        if (#SMODS.find_card(\"j_soe_infinityred\") > 0 and #SMODS.find_card(\"j_soe_infinitygold\") > 0 and #SMODS.find_card(\"j_soe_infinityblue\") > 0 and #SMODS.find_card(\"j_soe_infinitypurple\") > 0) and #G.jokers.highlighted == 4 then\n            for k, v in pairs(G.jokers.highlighted) do\n                if v.config.center.key == 'j_soe_infinityred' or v.config.center.key == 'j_soe_infinitygold' or v.config.center.key == 'j_soe_infinityblue' or v.config.center.key == 'j_soe_infinitypurple' then\n                    table.insert(g, v)\n                else\n                    return false\n                end\n            end\n            return true\n        else\n            return false\n        end\n    end,\n    use = function (self, card, area, copier)\n        for k, v in pairs(G.jokers.highlighted) do\n            v:start_dissolve()\n        end\n        play_sound('explosion_release1')\n        SMODS.add_card({set = 'Joker', area = G.jokers, key = 'j_soe_infinity'})\n    end,\n    in_pool = function(self)\n        if (#SMODS.find_card(\"j_soe_infinityred\") > 0 and #SMODS.find_card(\"j_soe_infinitygold\") > 0 and #SMODS.find_card(\"j_soe_infinityblue\") > 0 and #SMODS.find_card(\"j_soe_infinitypurple\") > 0) then\n            return true\n        end\n        return false\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "theinfinityseal",
+      "atlas": "Placeholders",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "name = 'TheInfinitySeal',\n    key = 'theinfinityseal',\n    atlas = 'Placeholders',\n    pos = {x = 0, y = 1},\n    rarity = infinityrarity,\n    cost = 2147483647,\n    config = {\n        extra = {\n            dollars = 30,\n            retriggers = 3,\n            negativeblackholes = 2,\n            negativeconsumables = 3\n        }\n    },\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    dangerous = true,\n    perishable_compat = false,\n    loc_vars = function(self,info_queue,card)\n        info_queue[#info_queue+1] = G.P_CENTERS.c_black_hole\n        return {vars = {card.ability.extra.dollars, card.ability.extra.retriggers, card.ability.extra.negativeblackholes, card.ability.extra.negativeconsumables, colours = {sealoverlords}}}\n    end,\n    calculate = function(self, card, context)\n        if (context.individual and (context.cardarea == G.play or context.cardarea == G.hand)) or context.other_joker or context.other_consumeable then\n            G.E_MANAGER:add_event(Event({\n                trigger = \"before\",\n                delay = 0.0,\n                func = function()\n                    for i = 1, card.ability.extra.negativeblackholes do\n                        SMODS.add_card({set = 'Spectral', area = G.consumeables, key = 'c_black_hole', edition = 'e_negative'})\n                    end\n                    for i = 1, card.ability.extra.negativeconsumables do\n                        local forced_key = SEALS.randomconsumeable(\"theinfinityseal\"..i)\n                        SMODS.add_card({set = 'Consumeables', area = G.consumeables, key = forced_key.key, edition = 'e_negative'})\n                    end\n                    return true\n                end,\n            }))\n            return {\n                dollars = card.ability.extra.dollars,\n                colour = G.C.MONEY,\n                card = context.other_card,\n            }\n        end\n        if context.repetition then\n            return {\n                message = localize('k_again_ex'),\n                repetitions = card.ability.extra.retriggers,\n                func = function()\n                    G.E_MANAGER:add_event(Event({\n                        trigger = \"before\",\n                        delay = 0.0,\n                        func = function()\n                            juice_up_game()\n                            return true\n                        end,\n                    }))\n                end,\n                card = card,\n            }\n        end\n    end,"
+    },
+    {
+      "type": "Joker",
+      "key": "infinityred",
+      "atlas": "InfinitySeals",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "name = 'InfinityRed',\n    key = 'infinityred',\n    atlas = 'InfinitySeals',\n    pos = {x = 0, y = 0},\n    soul_pos = {x = 4, y = 0},\n    rarity = 'soe_infinity',\n    cost = 55,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = false,\n    calculate = function(self, card, context)\n\t\tif context.post_trigger and context.other_card.config.center.rarity ~= 'soe_infinity' then\n            context.other_card:set_seal('Red', true, true)\n            return {\n                message = 'Red!!!',\n                colour = G.C.RED,\n                card = card,\n                message_card = card\n            }\n\t\tend\n        if context.individual and context.cardarea == G.play then\n            context.other_card:set_seal('Red')\n            return {\n                message = 'Red!!!',\n                colour = G.C.RED,\n                card = card,\n                message_card = card\n            }\n        end\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "infinitypurple",
+      "atlas": "InfinitySeals",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "name = 'InfinityPurple',\n    key = 'infinitypurple',\n    atlas = 'InfinitySeals',\n    pos = {x = 1, y = 0},\n    soul_pos = {x = 5, y = 0,},\n    rarity = 'soe_infinity',\n    cost = 55,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = false,"
+    },
+    {
+      "type": "Joker",
+      "key": "infinitygold",
+      "atlas": "InfinitySeals",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "name = 'InfinityGold',\n    key = 'infinitygold',\n    atlas = 'InfinitySeals',\n    pos = {x = 2, y = 0},\n    soul_pos = {x = 6, y = 0,\n    draw = function(card, scale_mod, rotate_mod)\n        card.children.floating_sprite:draw_shader('dissolve', 0, nil, nil, card.children.center, scale_mod, rotate_mod, nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL),nil, 0.6)\n        card.children.floating_sprite:draw_shader('dissolve', nil, nil, nil, card.children.center, scale_mod, rotate_mod)\n        card.children.floating_sprite:draw_shader('voucher', 0, nil, nil, card.children.center, scale_mod, rotate_mod, nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL),nil, 0.6)\n        card.children.floating_sprite:draw_shader('voucher', nil, nil, nil, card.children.center, scale_mod, rotate_mod)\n    end\n},\n    rarity = 'soe_infinity',\n    cost = 55,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = false,\n    calculate = function(self, card, context)\n        if context.individual then\n            return {\n                dollar_message = 'Gold!!!',\n                message = 'Gold!!!',\n                dollars = 3,\n                colour = G.C.GOLD,\n                card = card,\n                message_card = card\n            }\n        end\n        if context.post_trigger and context.other_card.config.center.rarity ~= 'soe_infinity' then\n            return {\n                dollar_message = 'Gold!!!',\n                message = 'Gold!!!',\n                dollars = 3,\n                card = card,\n                message_card = card,\n                colour = G.C.GOLD\n            }\n        end\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "infinityblue",
+      "atlas": "InfinitySeals",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "name = 'InfinityBlue',\n    key = 'infinityblue',\n    atlas = 'InfinitySeals',\n    pos = {x = 3, y = 0},\n    soul_pos = {x = 7, y = 0},\n    rarity = 'soe_infinity',\n    cost = 55,\n    unlocked = true,\n    discovered = true,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = false,"
+    },
+    {
+      "type": "Seal",
+      "key": "sealseal",
+      "atlas": "Seals",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'sealseal',\n    name = 'SealSeal',\n    badge_colour = HEX('E8463D'),\n    atlas = 'Seals',\n    pos = { x = 0, y = 0 },\n    config = {omult = 5},\n    loc_vars = function(self, info_queue)\n        return {vars = {self.config.omult}}\n    end,\n    calculate = function(self, card, context)\n        if card.extraseal and context.before then\n            local adjacentright, adjacentleft\n            if context.cardarea == G.jokers or context.cardarea == G.hand or context.cardarea == G.consumeables or context.cardarea == G.play then\n                for i=1, #card.area.cards do\n                    if card.area.cards[i] == card then\n                        if card.area.cards[i+1] then\n                            adjacentright = card.area.cards[i+1]\n                        end\n                        if card.area.cards[i-1] then\n                            adjacentleft = card.area.cards[i-1]\n                        end\n                    end\n                end\n                if adjacentright then\n                    adjacentright:set_seal(card.extraseal)\n                end\n                if adjacentleft then\n                    adjacentleft:set_seal(card.extraseal)\n                end\n            end\n        end\n        if not card.extraseal and context.main_scoring then\n            return {\n                mult = self.config.omult,\n                colour = G.C.MULT,\n                card = card\n            }\n        end\n    end"
+    },
+    {
+      "type": "Seal",
+      "key": "rainbowseal",
+      "atlas": "Enhancers",
+      "pos": {
+        "x": 5,
+        "y": 4
+      },
+      "raw": "key = 'rainbowseal',\n    name = 'RainbowSeal',\n    badge_colour = G.C.DARK_EDITION,\n    atlas = 'Enhancers',\n    pos = { x = 5, y = 4 },\n    draw = function(self, card, layer)\n        G.shared_seals[self.key].role.draw_major = card\n        G.shared_seals[self.key]:draw_shader('dissolve', nil, nil, nil, card.children.center)\n        G.shared_seals[self.key]:draw_shader('polychrome', nil, card.ARGS.send_to_shader, nil, card.children.center)\n    end"
+    },
+    {
+      "type": "Seal",
+      "key": "reverseseal",
+      "atlas": "Seals",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'reverseseal',\n    name = 'ReverseSeal',\n    badge_colour = G.C.UI.TEXT_DARK,\n    atlas = 'Seals',\n    pos = { x = 0, y = 0 },\n    config = {extra = {downxmult = 3}},\n    loc_vars = function (self, info_queue, card)\n        return {vars = {self.config.extra.downxmult}}\n    end"
+    },
+    {
+      "type": "Seal",
+      "key": "negativeseal",
+      "atlas": "Enhancers",
+      "pos": {
+        "x": 6,
+        "y": 4
+      },
+      "raw": "key = 'negativeseal',\n    name = 'NegativeSeal',\n    badge_colour = G.C.DARK_EDITION,\n    atlas = 'Enhancers',\n    pos = { x = 6, y = 4 },\n    draw = function(self, card, layer)\n        G.shared_seals[self.key].role.draw_major = card\n        G.shared_seals[self.key]:draw_shader('dissolve', nil, nil, nil, card.children.center)\n        G.shared_seals[self.key]:draw_shader('negative', nil, card.ARGS.send_to_shader, nil, card.children.center)\n        G.shared_seals[self.key]:draw_shader('negative_shine', nil, card.ARGS.send_to_shader, nil, card.children.center)\n    end"
+    },
+    {
+      "type": "Seal",
+      "key": "carmineseal",
+      "atlas": "Enhancers",
+      "pos": {
+        "x": 5,
+        "y": 4
+      },
+      "raw": "key = 'carmineseal',\n    name = 'CarmineSeal',\n    badge_colour = HEX('FF0040'),\n    atlas = 'Enhancers',\n    pos = { x = 5, y = 4 },"
+    },
+    {
+      "type": "Seal",
+      "key": "aquaseal",
+      "atlas": "Enhancers",
+      "pos": {
+        "x": 5,
+        "y": 4
+      },
+      "raw": "key = 'aquaseal',\n    name = 'AquaSeal',\n    badge_colour = HEX('00FFFF'),\n    atlas = 'Enhancers',\n    pos = { x = 5, y = 4 },"
+    },
+    {
+      "type": "Seal",
+      "key": "yellowseal",
+      "atlas": "Enhancers",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'yellowseal',\n    name = 'YellowSeal',\n    badge_colour = HEX('F7AF38'),\n    atlas = 'Enhancers',\n    pos = {x = 2, y = 0},"
+    },
+    {
+      "type": "Back",
+      "key": "seal",
+      "atlas": "Enhancers",
+      "pos": {
+        "x": 5,
+        "y": 2
+      },
+      "raw": "key = 'seal',\n    name = 'AllSealsDeck',\n    atlas = 'Enhancers',\n    pos = {x = 5, y = 2},"
+    },
+    {
+      "type": "Stake",
+      "key": "seal",
+      "atlas": "Stakes",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'seal',\n    applied_stakes = {'stake_gold'},\n    loc_txt = {\n        name = 'Seal Stake',\n        text = {\n            'I dont know',\n        },\n        sticker = {\n            name = 'Seal Sticker',\n            text = {\n                'I dont know',\n            }\n        }\n    },\n    atlas = 'Stakes',\n    pos = {x = 0, y = 0},\n    colour = G.C.RED"
+    },
+    {
+      "type": "Achievement",
+      "key": "completionist_plus_plus_plus",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'completionist_plus_plus_plus',\n    unlock_condition = function(self, args)\n        return G.PROGRESS.card_stickers.tally/G.PROGRESS.card_stickers.of >= 1 \n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "a_hands",
+      "atlas": null,
+      "pos": null,
+      "raw": "calculate = function(self, card, context)\n            if context.setting_blind and not (context.blueprint_card or card).getting_sliced then\n                return {\n                    G.E_MANAGER:add_event(Event({func = function()\n                        ease_discard(-G.GAME.current_round.discards_left, nil, true)\n                        ease_hands_played(card.ability.extra)\n                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = localize{type = 'variable', key = 'a_hands', vars = {card.ability.extra}}})\n                    return true end }))\n                }\n            end\n        end"
+    },
+    {
+      "type": "Joker",
+      "key": "j_soe_extralife",
+      "atlas": null,
+      "pos": null,
+      "raw": "calculate = function(self, card, context)\n            if context.game_over and G.GAME.chips/G.GAME.blind.chips >= to_big(0.25) and not context.retrigger_joker then\n                local g\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        G.hand_text_area.blind_chips:juice_up()\n                        G.hand_text_area.game_chips:juice_up()\n                        play_sound('tarot1')\n                        card:start_dissolve()\n                        if card.seal == 'Red' then\n                            g = 'Extra Life!'\n                            local f = SMODS.add_card({set = 'Joker', area = G.jokers, key = 'j_soe_extralife', edition = 'e_negative'})\n                            f.ability.lives = 0\n                        end\n                        return true\n                    end\n                }))\n                return {\n                    message = localize('k_saved_ex'),\n                    saved = true,\n                    colour = G.C.RED,\n                    extra = {\n                        message = g,\n                        colour = G.C.RED\n                    }\n                }\n            end\n        end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "sealsforall",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'sealsforall',\n    order = 10,\n    func = function(self)\n        if (self.ability.set ~= 'Joker' and (self.ability.set ~= 'Default' and self.ability.set ~= 'Enhanced')) and self.seal then\n            G.shared_seals[self.seal].role.draw_major = self\n            G.shared_seals[self.seal]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n            if self.seal == 'Gold' then G.shared_seals[self.seal]:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center) end\n        end\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "secondsealsforall",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'secondsealsforall',\n    order = 11,\n    func = function(self, card)\n        if self.extraseal == 'Red' and not (#SMODS.find_card(\"j_soe_sealjoker\") > 0) then\n            G.shared_secondseals[self.extraseal].role.draw_major = self\n            G.shared_secondseals[self.extraseal]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n        end\n    end,\n    conditions = {vortex = false, facing = 'front'},"
+    },
+    {
+      "type": "DrawStep",
+      "key": "threeenhancementsforjokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'threeenhancementsforjokers',\n    order = 10,\n    func = function(self, card)\n        if self.ability.legallyenhanced and (self.ability.legallyenhanced == \"Mult\" or self.ability.legallyenhanced == \"Bonus\" or self.ability.legallyenhanced == \"Wild\") then\n            G.shared_jokerenhancements[self.ability.legallyenhanced].role.draw_major = self\n            G.shared_jokerenhancements[self.ability.legallyenhanced]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n        end\n    end,\n    conditions = {vortex = false, facing = 'front'},"
+    },
+    {
+      "type": "DrawStep",
+      "key": "sleevesforjokersandplayingcards",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'sleevesforjokersandplayingcards',\n    order = 10,\n    func = function(self, card)\n        if self.ability.legallysleeve then\n            G.shared_sleeves[self.ability.legallysleeve].role.draw_major = self\n            G.shared_sleeves[self.ability.legallysleeve]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n        end\n    end,\n    conditions = {vortex = false, facing = 'front'},"
+    },
+    {
+      "type": "DrawStep",
+      "key": "therestenhancementsforvanillajokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'therestenhancementsforvanillajokers',\n    order = 10,\n    func = function(self, card)\n        if self.ability.legallyenhanced and not (self.ability.legallyenhanced == \"Mult\" or self.ability.legallyenhanced == \"Bonus\" or self.ability.legallyenhanced == \"Wild\") and G.P_CENTERS[self.config.center.key] and not G.P_CENTERS[self.config.center.key].mod then\n            if not self.oldatlas or not self.oldpos then\n                self.oldatlas = self.children.center.atlas\n                self.oldpos =  self.children.center.sprite_pos\n            end\n            self.children.center.atlas = G.ASSET_ATLAS[\"soe_Enhancers\"]\n            if self.ability.legallyenhanced == \"Lucky\" then\n                self.children.center:set_sprite_pos(G.P_CENTERS.m_lucky.pos)\n            end\n            if self.ability.legallyenhanced == \"Steel\" then\n                self.children.center:set_sprite_pos(G.P_CENTERS.m_steel.pos)\n            end\n            if self.ability.legallyenhanced == \"Glass\" then\n                self.children.center:set_sprite_pos(G.P_CENTERS.m_glass.pos)\n            end\n            if self.ability.legallyenhanced == \"Gold\" then\n                self.children.center:set_sprite_pos(G.P_CENTERS.m_gold.pos)\n            end\n            G.shared_jokerfronts[self.config.center.key].role.draw_major = self\n            G.shared_jokerfronts[self.config.center.key]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n        elseif self.oldatlas and self.oldpos then\n            self.children.center.atlas = self.oldatlas\n            self.children.center:set_sprite_pos(self.oldpos)\n            self.oldatlas = nil\n            self.oldpos = nil\n        end\n    end,\n    conditions = {vortex = false, facing = 'front'},"
+    },
+    {
+      "type": "DrawStep",
+      "key": "foursealstoshow",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'foursealstoshow',\n    order = 12,\n    func = function(self, card)\n        if self.extraseals and (#SMODS.find_card(\"j_soe_sealjoker\") > 0) then\n            if table.contains(self.extraseals, \"Red\") then\n                G.shared_seals[\"Red\"].role.draw_major = self\n                G.shared_seals[\"Red\"]:draw_shader('dissolve', nil, nil, nil, self.children.center, nil, nil, nil, nil)\n            end\n            if table.contains(self.extraseals, \"Gold\") then\n                G.shared_seals[\"Gold\"].role.draw_major = self\n                G.shared_seals[\"Gold\"]:draw_shader('dissolve', nil, nil, nil, self.children.center, nil, nil, nil, 1)\n                G.shared_seals[\"Gold\"]:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center, nil, nil, nil, 1)\n            end\n            if table.contains(self.extraseals, \"Blue\") then\n                G.shared_seals[\"Blue\"].role.draw_major = self\n                G.shared_seals[\"Blue\"]:draw_shader('dissolve', nil, nil, nil, self.children.center, nil, nil, 0.5)\n            end\n            if table.contains(self.extraseals, \"Purple\") then\n                G.shared_seals[\"Purple\"].role.draw_major = self\n                G.shared_seals[\"Purple\"]:draw_shader('dissolve', nil, nil, nil, self.children.center, nil, nil, 0.5, 1)\n            end\n        end\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "stickersforplayingcards",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'stickersforplayingcards',\n    order = 13,\n    func = function(self, card)\n        if (self.ability.set == 'Default' or self.ability.set == 'Enhanced') and G.playing_cards and self.facing == 'front' then\n            if self.sticker and G.shared_stickers[self.sticker] then\n                G.shared_stickers[self.sticker].role.draw_major = self\n                G.shared_stickers[self.sticker]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n                G.shared_stickers[self.sticker]:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center)\n            elseif (self.sticker_run and G.shared_stickers[self.sticker_run]) and G.SETTINGS.run_stake_stickers then\n                G.shared_stickers[self.sticker_run].role.draw_major = self\n                G.shared_stickers[self.sticker_run]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n                G.shared_stickers[self.sticker_run]:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center)\n            end\n        end\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "reversesealonback",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'reversesealonback',\n    order = 14,\n    func = function(self, card)\n        if (self.seal == 'soe_reverseseal' or ((G and G.GAME and G.GAME.blind and G.GAME.blind.config.blind.key == 'bl_soe_theseal') and self.seal)) and self.facing == 'back' then\n            G.shared_seals[self.seal].role.draw_major = self\n            G.shared_seals[self.seal]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n            if self.seal == 'Gold' then G.shared_seals[self.seal]:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center) end\n        end\n    end"
+    },
+    {
+      "type": "Atlas",
+      "key": "Blinds",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Blinds',\n    path = 'Blinds.png',\n    atlas_table = 'ANIMATION_ATLAS',\n    frames = 21,\n    px = 34,\n    py = 34"
+    },
+    {
+      "type": "Blind",
+      "key": "theseal",
+      "atlas": "Blinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'theseal',\n    atlas = 'Blinds',\n    discovered = true,\n    pos = {x = 0, y = 0},\n    dollars = 8,\n    boss = {min = 1, max = 10, showdown = true},\n    boss_colour = HEX('E8463D'),\n    stay_flipped = function (self, area, card)\n        return area == G.hand\n    end,\n    set_blind = function (self)\n        for k, v in pairs(G.jokers.cards) do\n            if v.facing == 'front' then\n                v:flip()\n            end\n        end\n        for k, v in pairs(G.consumeables.cards) do\n            if v.facing == 'front' then\n                v:flip()\n            end\n        end\n    end,\n    defeat = function (self)\n        for k, v in pairs(G.jokers.cards) do\n            if v.facing == 'back' then\n                v:flip()\n            end\n        end\n        for k, v in pairs(G.consumeables.cards) do\n            if v.facing == 'back' then\n                v:flip()\n            end\n        end\n    end,\n    disable = function (self)\n        for k, v in pairs(G.jokers.cards) do\n            if v.facing == 'back' then\n                v:flip()\n            end\n        end\n        for k, v in pairs(G.consumeables.cards) do\n            if v.facing == 'back' then\n                v:flip()\n            end\n        end\n    end"
+    }
+  ],
+  "version": "2.1.0"
+}
