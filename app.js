@@ -655,9 +655,11 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
             const n = parseFloat(num) || 0;
             const d = parseFloat(den) || 1;
-            const i = id.replace(/^['"]|['"]$/g, '');
-            const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, i);
-            card.vars.push(nn, dd);
+            // const i = id.replace(/^['"]|['"]$/g, '');
+            // const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, i);
+            // card.vars.push(nn, dd);
+
+            card.vars.push(n, d);
           }
           else
           {
