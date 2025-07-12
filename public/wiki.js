@@ -120,11 +120,10 @@ function formatMarkup(str)
       const code = str.slice(i + 1, end);
       i = end + 1;
 
+      closeSpan();
+
       if (code === '')
-      {
-        closeSpan();
         continue;
-      }
 
       let styles = [];
       let attrs = [];
