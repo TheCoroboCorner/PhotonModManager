@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (locEntry)
     {
-      title.textContent = locEntry.name.map(line => formatMarkup(line));
+      title.textContent = formatMarkup(locEntry.name);
 
       const afterVars = locEntry.text.map(line => line.replace(/#(\d+)#/g, (_, num) => c.vars[num-1] != null ? c.vars[num-1] : ''));
 
