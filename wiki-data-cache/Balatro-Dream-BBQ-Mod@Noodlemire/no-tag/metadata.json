@@ -1,0 +1,861 @@
+{
+  "locMap": {
+    "j_dbbq_mean_dummy": {
+      "name": "Mean Joker",
+      "text": [
+        "All unenhanced cards",
+        "are destroyed after",
+        "being played and scored",
+        "When Blind is defeated,",
+        "transforms into {C:mult}Sales Joker{}"
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_sales_dummy": {
+      "name": "Sales Joker",
+      "text": [
+        "All played cards become",
+        "{C:attention}Mult{} cards when scored",
+        "When Blind is defeated,",
+        "transforms into {C:inactive}Mean Joker{}"
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_bathroom": {
+      "name": "Source",
+      "text": [
+        "Reaching the Bathroom is the goal",
+        "of Dream BBQ's first chapter, but",
+        "there are two routes to seek it.",
+        "One route is simple, but afterwards,",
+        "you must cross a perilous river that",
+        "distorts your vision. You only get",
+        "one chance during your run.",
+        "The other path requires much more",
+        "exploration, but grants you an item",
+        "that skips the river entirely.",
+        "In this Joker, needing to fight a",
+        "Blind without Jokers is that river.",
+        "You cannot avoid it at low-stake runs",
+        "but higher stakes' Eternal Jokers can",
+        "bypass the challenge. Though, you do",
+        "still need to lose a few Jokers to",
+        "gain a new slot."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_blobby": {
+      "name": "Source",
+      "text": [
+        "Unlike the other generic NPCs, the",
+        "physical features of 'blob' didn't",
+        "give me any particular ideas. However,",
+        "one line from a specific blob guy has it",
+        "remark that its friends criticized it",
+        "for visiting the Purge Event. It laughed,",
+        "however, because 'they are all the same.'",
+        "Thus, this Joker grants you a bonus",
+        "for trying something unusual in your",
+        "run. Easy to achieve in the early-game,",
+        "worthless for late-game."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_bunraku": {
+      "name": "Source",
+      "text": [
+        "Bunrako-man is a talking puppet",
+        "based on traditional Japanese",
+        "Bunraku performances. While you",
+        "interact with the puppet, some",
+        "some sort of ninja-like figure",
+        "is the one to operate him.",
+        "This Joker must also be operated",
+        "by your other Jokers, relying",
+        "on them for any sort of growth.",
+        "The puppet will occasionally",
+        "malfunction and slump down;",
+        "Ensure that your Jokers are able",
+        "to give it a firm hit to keep it",
+        "up and running smoothly."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_horse": {
+      "name": "Source",
+      "text": [
+        "Shoryo is a character based on the",
+        "Japanese 'Cucumber Horse', a decoration",
+        "said to help carry spirits to the",
+        "afterlife when they arrive to the Obon",
+        "festival.",
+        "This seems to be the explanation as to",
+        "why Shoryo asks you to retrieve his four",
+        "babies/pets, only for him to eat them.",
+        "Here, the Cucumber Horse also asks you to",
+        "bring it four Pet Jokers. But 10 units",
+        "of currency wouldn't be worth the effort",
+        "in Balatro, so instead, you get $10 every",
+        "round, on top of the sizable Chip bonus."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_beholder": {
+      "name": "Source",
+      "text": [
+        "You first meet this character as a short",
+        "round, pink/orange doll. But the visuals",
+        "quickly reveal that not only are there",
+        "many such dolls, they are but the pupils",
+        "inside of the eye sockets of an animate",
+        "stone statue of a lady.",
+        "With the difficulty of reaching her in mind,",
+        "this Joker also requests a difficult task",
+        "of you, one that collects a multitude that",
+        "will soon make up a singular goal."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_fax": {
+      "name": "Source",
+      "text": [
+        "Coral Glasses is the name of an almost",
+        "ordinary (if nervous) businesswoman",
+        "except for the coral growing out of one",
+        "side of her face. Oh, also, the fact that",
+        "her hairline hides a slot for fax papers",
+        "to emerge from.",
+        "While there are many chracters with secret",
+        "phone numbers that you can dial for bonus",
+        "dialogue, Coral Glasses is the only one who",
+        "directly gives you her number. It's in the",
+        "form of the Data Matrix seen on this Joker.",
+        "The digit of her phone number are the card",
+        "ranks you must assemble for this Joker.",
+        "There are seven of them, so this will be",
+        "rather difficult. Thus, if you succeed,",
+        "your cards' Chip values will skyrocket."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_girl": {
+      "name": "Source",
+      "text": [
+        "'Maiden' is a fancy word for a virgin",
+        "or unmarried girl. 'Taski' is a Quechuan",
+        "word that also refers to virgin or girl.",
+        "The name 'Taski Maiden' can just be",
+        "read as 'Girl Girl'.",
+        "Taski Maiden herself is a little gremlin",
+        "who frequently sees herself as having",
+        "traits she does not actually have.",
+        "She's far from the sanest person around,",
+        "and if her subtitles' spelling and grammer",
+        "are anything to go by, she is also not",
+        "good at organizing words.",
+        "She certainly isn't good at organizing",
+        "your Jokers. She does, at one point,",
+        "turn herself into some near-pitch-black",
+        "eldritch horror as a 'prank', though.",
+        "That's why this Joker can turn one of",
+        "your Jokers Negative."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_head": {
+      "name": "Source",
+      "text": [
+        "The Taxi Driver is a character who has",
+        "had his entire head stolen. Or rather",
+        "all three of them! Luckily, you find",
+        "them all as a single unit.",
+        "The exact head you speak to is entirely",
+        "random, different for each playthrough.",
+        "Locking this joker behind only one",
+        "of its possible effects for your entire",
+        "run would be boring, though, so instead,",
+        "it gains a random bonus from each hand."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_heno": {
+      "name": "Source",
+      "text": [
+        "'Henohenohomeji' is the Japanese practice",
+        "of trying to draw faces out of Hiragana",
+        "characters. The word itself comes from",
+        "trying to read one such face as a word.",
+        "Dratula's personality of 'I AM DRATULAAAA'",
+        "didn't leave me with much to work with,",
+        "so I focused on the idea of 'drawing faces'",
+        "into your hand each round.",
+        "Similar to Certificate. Enhancements are",
+        "less valuable than seals, but the Rank",
+        "variety is greatly reduced to compensate.",
+        "The face-writing in this Joker is meant",
+        "to be 'Jokeru' in Hiragana, but it doesn't",
+        "translate well into pixel art."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_hoarder": {
+      "name": "Source",
+      "text": [
+        "Hoarder Alex collects all sorts of junk.",
+        "He never really does anything with it,",
+        "except block your way past his bridge.",
+        "The main utility of this jokers is to",
+        "be able to hoard your items and create",
+        "a huge supply similar to his. The chips",
+        "are just a small bonus and probably won't",
+        "contribute much to your score.",
+        "Items you own don't show up in the shop",
+        "or packs again, you can even buy a bunch",
+        "of junk items to block them from spawning."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_bus": {
+      "name": "Source",
+      "text": [
+        "I'M THE BUS!"
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_legs": {
+      "name": "Source",
+      "text": [
+        "Since this generic NPC is clearly half",
+        "of something, my original idea was for",
+        "it to just be Half Joker But With Chips.",
+        "That's kinda boring, so now, the 'half'",
+        "part applies to your deck instead."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_kintsugi": {
+      "name": "Source",
+      "text": [
+        "'Kintsugi' is the Japanese tradition",
+        "of sealing cracks in pottery using gold",
+        "or other precious metals. The idea is",
+        "that the history of an object gives it",
+        "more value.",
+        "When first met, Kane is initially inside",
+        "a piggy bank covered in gold-coated cracks.",
+        "For whatever reason, he seems to be very",
+        "unlucky, and has a tendency to attract",
+        "meteors that try to destroy him.",
+        "Thus, this Joker begins initially as a",
+        "pseudo-Egg, gaining sell value over time",
+        "until you play an 'unlucky' card that",
+        "destroys the outer shell to reveal Kane."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_lazy": {
+      "name": "Source",
+      "text": [
+        "Now, Froggy probably isn't lying when",
+        "he says he can't join Ena in the Lonely",
+        "Door because he can't handle the smoke.",
+        "However, claiming to be working, while",
+        "very clearly sitting off to the side",
+        "doing nothing, doesn't seem like the",
+        "making of a hard worker.",
+        "Thus, if this Joker sees you going",
+        "well over the Blinds' requirements,",
+        "it will begin slacking off very soon.",
+        "Originally, I was instead going to",
+        "have offer +30 Mult, but be reduced",
+        "by every XMult granted by anything.",
+        "But this would be too powerful in the",
+        "early/mid-game where you might have",
+        "zero XMult sources, yet be able to",
+        "beat every Blind for free anyways."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_matry": {
+      "name": "Source",
+      "text": [
+        "As this generic NPC seems to have the",
+        "form of some strange, cracked and",
+        "distorted Matryoshka Doll, that's the",
+        "idea I went with. You can sell it to,",
+        "'open' it up to find a new Joker inside,",
+        "yet the contents will change based on",
+        "the rarities of your other Jokers."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_mayo": {
+      "name": "Source",
+      "text": [
+        "The flavor text already pretty well",
+        "describes how this item works in",
+        "Dream BBQ. Well, the guy blinded by",
+        "it blasts Hoarder Alex for blocking",
+        "the bridge, not you (AKA ENA), but",
+        "this works better for game purposes.",
+        "Initially, I wanted to make a Joker",
+        "out of the Vending Machine you buy the",
+        "Mayo from instead. However, my ideas",
+        "were all just worse than most other",
+        "money-making Jokers in the game."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_mean": {
+      "name": "Source",
+      "text": [
+        "ENA has two emotional states that she",
+        "will frequently flip between, even mid-",
+        "sentence: 'Salesperson' and 'Meanie'.",
+        "Distinctly, these two halves are often",
+        "in sync with each other, effectively",
+        "allowing ENA to play 'Good Cop Bad Cop'",
+        "with her own split personality.",
+        "This Joker represents her Meanie side.",
+        "It is very mean to the cards you play,",
+        "so that weak-willed cards that lack",
+        "Enhancements will go away. Strategic",
+        "use of the Sales version allows you",
+        "to protect only your best cards from",
+        "Mean's wrath, so that you can easily",
+        "build towards very specific decks."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_stalker": {
+      "name": "Source",
+      "text": [
+        "This entity, known only as 'Suspicious",
+        "Man', has studied ENA for a 'LONG. LONG?",
+        "TIME!' Yet, yet claims not to be a stalker.",
+        "'COMMON MISTAKE. BUT SAD. MISTAKE.', you see.",
+        "So naturally, this Joker grows in power the",
+        "more it stalks you through your run.",
+        "I'm unsure of how powerful it is. It has",
+        "expoential scaling, yet you have to leave a",
+        "Joker Slot open, and be lucky enough to see",
+        "Not Stalker again and again and again, if you",
+        "want a super-high XMult."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_party": {
+      "name": "Source",
+      "text": [
+        "Heh-Ito is a Power Ranger/Super Sentai-esque",
+        "character who speaks almost entirely in",
+        "explosions and acrobatics. There is an actual",
+        "voice somewhere in there, but it's unintelligible.",
+        "I figured a wild spirit like this could deal in",
+        "Wild Cards, which generally need all the help",
+        "they can get."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_pet": {
+      "name": "Source",
+      "text": [
+        "One of Shoryo's four babies/pets/meals.",
+        "Like Shoryo, you're allowed to 'consume'",
+        "a pet to get you past a Blind you couldn't",
+        "otherwise beat, or to beat it in one fewer",
+        "hand than you could otherwise.",
+        "However, the primary use for this is to",
+        "give it to the Joker based on Shoryo",
+        "since its power boost is more substantial",
+        "than a one-time effect."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_quartet": {
+      "name": "Source",
+      "text": [
+        "Dream BBQ's concept for this group of Witches",
+        "simply is that there are supposed to be",
+        "four of them, but one has gotten herself lost.",
+        "I couldn't directly re-create that without",
+        "just copying Cucumber Horse, so instead, I",
+        "made this Joker focus on only having four of",
+        "something. Jokers, in this case.",
+        "I did try to think of something based on how",
+        "each Witch has her own distinct personality,",
+        "but each idea quickly became overcomplicated."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_sales": {
+      "name": "Source",
+      "text": [
+        "ENA has two emotional states that she",
+        "will frequently flip between, even mid-",
+        "sentence: 'Salesperson' and 'Meanie'.",
+        "Distinctly, these two halves are often",
+        "in sync with each other, effectively",
+        "allowing ENA to play 'Good Cop Bad Cop'",
+        "with her own split personality.",
+        "This Joker represents her Salesperson",
+        "side. It allows you to rapidly build",
+        "up your deck with Mult Enhancements.",
+        "Yet, it does so even if the cards you",
+        "play already have their own Enchancements.",
+        "Mult cards are not the best option, nor",
+        "are they necessarily what you want long-term.",
+        "Like any true worker, you will want to",
+        "dispose of her once you expend her usefulness."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_sixeyed": {
+      "name": "Source",
+      "text": [
+        "A generic NPC in the form of a purple-",
+        "skinned child with six differently-",
+        "colored eyes on their face.",
+        "They are officially known as the",
+        "'Watchers', so this one Watches for",
+        "held 6s in hand to grant its bonus."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_smoker": {
+      "name": "Source",
+      "text": [
+        "This machine is the source of the Smoke",
+        "that blocks the way to the Boss.",
+        "It very presense significantly alters",
+        "the world in a manner that is implied",
+        "to be just an illusion.",
+        "While Froggy detests it, most other",
+        "characters greatly enjoy it, and are",
+        "confused that anybody would want to get",
+        "rid of it.",
+        "Because of this, you, too, will benefit",
+        "from flooding your hand with 'smoke' that",
+        "flips your cards face-down."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_spirit": {
+      "name": "Source",
+      "text": [
+        "These spirit entities are here to guide",
+        "you towards your destination. However,",
+        "only half of them tell the truth.",
+        "Normally, it is very easy to know",
+        "which one lies, because only the orange",
+        "ones tell the truth. This would make the",
+        "Joker too easy to figure out, though, so",
+        "you don't get to see which color says what."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_tumi": {
+      "name": "Source",
+      "text": [
+        "Mitu is a girl based on a ritualistic Tumi knife,",
+        "and is also constantly forced to play four-letter",
+        "Hangman with every sentence she speaks.",
+        "If she wins? Hooray! But if she loses? H U R T.",
+        "The easiest way to translate this into Balatro",
+        "was to require you to play specific hands for",
+        "a bonus. One big potential issue, though, was",
+        "that you could just be forced to lose if you",
+        "are only given low-scoring hands to work with.",
+        "Plus, Family also gives x4 Mult, while offering",
+        "a predictable hand requirement and no penalty.",
+        "Granting an extra hand with each successful play",
+        "Helps alleviate both issues. Now, as long as you",
+        "have cards left, proper use of Tumi lets you just",
+        "keep playing hands, over and over again, until you",
+        "beat the Blind.",
+        "It's maybe still not that good on its own, but many",
+        "Jokers are scaled based on the idea that you don't",
+        "typically send too many hands per round."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_tpao": {
+      "name": "Source",
+      "text": [
+        "The 'Shaman' has a very strange quirk where",
+        "he will create a clone of himself, only to",
+        "be quickly killed mid-sentence by said",
+        "clone. The clone then finishes talking for",
+        "him as if nothing just happened.",
+        "This idea wasn't entirely necessary to",
+        "directly translate into Balatro mechanics,",
+        "but it leads to some unique quirks.",
+        "This Joker will scale in a somewhat expoential",
+        "manner, if a slow one. Or, you could sell the",
+        "clone for a little extra cash if you don't",
+        "mind delaying the scaling.",
+        "Additionally, you can't maintain Editions",
+        "or any other modifications to this card if",
+        "you wish to let it scale up. After all, it's",
+        "the original, not the zero-modifications copy",
+        "that will be destroyed."
+      ],
+      "type": "Other"
+    },
+    "j_dbbq_source_unlucky": {
+      "name": "Source",
+      "text": [
+        "Kane is a Russain-speaking coin-cat",
+        "creature that, for whatever reason,",
+        "seems to be very unlucky, and has a",
+        "tendency to attract meteors that try",
+        "to destroy him.",
+        "The first meteor only destroys the",
+        "piggy bank he had been hiding in.",
+        "Talk to him enough times, and yet",
+        "another one appears and kills him",
+        "instantly.",
+        "Please be very cautious to protect",
+        "this innocent boy."
+      ],
+      "type": "Other"
+    }
+  },
+  "atlases": {
+    "dbbq_jokers": {
+      "path": "Jokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire//Jokers.png",
+      "resolvedGitHubPath": "assets/1x/Jokers.png"
+    },
+    "dbbq_decks": {
+      "path": "Decks.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire//Decks.png",
+      "resolvedGitHubPath": "assets/1x/Decks.png"
+    },
+    "dbbq_bus": {
+      "path": "j_dbbq_bus.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Balatro-Dream-BBQ-Mod@Noodlemire//j_dbbq_bus.png",
+      "resolvedGitHubPath": "assets/1x/j_dbbq_bus.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Back",
+      "key": "purge",
+      "atlas": "dbbq_decks",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"purge\",\n\tloc_txt = {\n\t\tname = \"Purge Deck\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Boss Blind{} is defeated:\",\n\t\t\t\"{C:mult}Destroy{} all playing cards\",\n\t\t\t\"of one random Rank\",\n\t\t\t\"Cycles through all possible Ranks,\",\n\t\t\t\"and repeats the order if necessary\"\n\t\t}\n\t},\n\tatlas = \"dbbq_decks\",\n\tpos = {x = 0, y = 0},\n\tcalculate = function(self, deck, context)\n\t\tif context.round_eval and G.GAME.last_blind and G.GAME.last_blind.boss then\n\t\t\tif not G.GAME.dbbq_purge_order then\n\t\t\t\tlocal order = {}\n\t\t\t\tfor k, v in pairs(SMODS.Ranks) do\n\t\t\t\t\tlocal i = 1 + pseudorandom(\"That whistle sounds... hungry...\") * #order\n\t\t\t\t\ttable.insert(order, i, k)\n\t\t\t\tend\n\t\t\t\tG.GAME.dbbq_purge_order = order\n\t\t\tend\n\t\t\tif not G.GAME.dbbq_purge_index or G.GAME.dbbq_purge_index >= #G.GAME.dbbq_purge_order then\n\t\t\t\tG.GAME.dbbq_purge_index = 1\n\t\t\telse\n\t\t\t\tG.GAME.dbbq_purge_index = G.GAME.dbbq_purge_index + 1\n\t\t\tend\n\t\t\tlocal rank = G.GAME.dbbq_purge_order[G.GAME.dbbq_purge_index]\n\t\t\tlocal destroy_cards = {}\n\t\t\tlocal destroy_indices = {}\n\t\t\tfor i, card in ipairs(G.playing_cards) do\n\t\t\t\tif card.base.value == rank and not SMODS.has_no_rank(card) then\n\t\t\t\t\ttable.insert(destroy_cards, card)\n\t\t\t\t\tdraw_card(G.deck, G.play, 1, \"up\", false, card)\n\t\t\t\tend\n\t\t\tend\n\t\t\tif #destroy_cards > 0 then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\tdelay = 0.1,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tSMODS.destroy_cards(destroy_cards)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend\n\t\t\t\t}))\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "bathroom",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"bathroom\",\n\tloc_txt = {\n\t\tname = \"BATHROOM\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Blind{} is selected:\",\n\t\t\t\"{C:mult}Destroy all Jokers{}\",\n\t\t\t\"For every third {C:attention}Joker{} destroyed,\",\n\t\t\t\"you gain {C:green}+#1# Joker Slot{}\",\n\t\t\t\"{C:inactive}(Includes itself)\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 8,\n\tpos = {x = 0, y = 0},\n\tblueprint_compat = false,\n\teternal_compat = false,\n\tconfig = {extra = {slot = 1}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_bathroom\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.slot}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.blueprint then return end\n\t\tlocal killcount = 0\n\t\tif context.setting_blind then\n\t\t\tfor _, joker in ipairs(G.jokers.cards) do\n\t\t\t\tif not joker.ability.eternal and not joker.getting_sliced then\n\t\t\t\t\tkillcount = killcount + 1\n\t\t\t\t\tjoker.getting_sliced = true\n\t\t\t\t\tjoker:start_dissolve()\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\t\tG.jokers.config.card_limit = G.jokers.config.card_limit + math.floor(killcount / 3)\n\tend,\n    in_pool = function(self, args)\n\t\treturn G.GAME.round_resets.ante >= 3\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "blobby",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"blobby\",\n\tloc_txt = {\n\t\tname = \"Blobby Joker\",\n\t\ttext = {\n\t\t\t\"{C:mult}+#1#{} Mult if you don't\",\n\t\t\t\"play one of your\",\n\t\t\t\"most played hands\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 1,\n\tcost = 4,\n\tpos = {x = 1, y = 0},\n\tblueprint_compat = true,\n\tconfig = {extra = {mult = 15, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_blobby_friends\"},\n\t\t{type = \"win\", key = \"j_dbbq_blobby_crazy\"},\n\t\t{type = \"lose\", key = \"j_dbbq_blobby_sick\"},\n\t\t{type = \"lose\", key = \"j_dbbq_blobby_run\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_blobby\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.mult}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tlocal mult = false\n\t\t\tlocal max_limit = G.GAME.hands[context.scoring_name].played - 1\n\t\t\tfor k, v in pairs(G.GAME.hands) do\n\t\t\t\tif k ~= context.scoring_name and v.played > max_limit and v.visible then\n\t\t\t\t\tmult = true\n\t\t\t\t\tbreak\n\t\t\t\tend\n\t\t\tend\n\t\t\tif mult then\n\t\t\t\treturn {mult = card.ability.extra.mult}\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "bunraku",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = \"bunraku\",\n\tloc_txt = {\n\t\tname = \"Bunraku\",\n\t\ttext = {\n\t\t\t\"Gains {X:mult,C:white}X#1#{} Mult every time a non-{C:attention}Bunraku{}\",\n\t\t\t\"Joker is triggered while in a {C:attention}Blind{}\",\n\t\t\t\"Half of Mult will be lost when one of your\",\n\t\t\t\"played cards is first scored, at random\",\n\t\t\t\"{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 8,\n\tpos = {x = 5, y = 0},\n\tblueprint_compat = true,\n    config = {extra = {Xmult_gain = 0.1, Xmult = 0, dbbq_quotes = {\n\t\t{type = \"any\", key = \"j_dbbq_bunraku_haters\"},\n\t\t{type = \"win\", key = \"j_dbbq_bunraku_harder\"},\n\t\t{type = \"win\", key = \"j_dbbq_bunraku_comes\"},\n\t\t{type = \"lose\", key = \"j_dbbq_bunraku_bathroom\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_bunraku\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.Xmult_gain, card.ability.extra.Xmult}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {xmult = card.ability.extra.Xmult}\n\t\telseif context.blueprint then\n\t\t\treturn\n\t\tend\n\t\tif context.before and context.main_eval then\n\t\t\tlocal nondebuffed = {}\n\t\t\tfor i, v in ipairs(context.scoring_hand) do\n\t\t\t\tif not v.debuff then\n\t\t\t\t\tnondebuffed[#nondebuffed+1] = i\n\t\t\t\tend\n\t\t\tend\n\t\t\tif #nondebuffed > 0 then\n\t\t\t\tcard.ability.extra.reset = pseudorandom_element(nondebuffed, \"Yeeeaaaahaha!!\")\n\t\t\tend\n\t\telseif context.individual and context.cardarea == G.play and context.other_card == context.scoring_hand[card.ability.extra.reset] then\n\t\t\tcard.ability.extra.reset = nil\n\t\t\tcard.ability.extra.Xmult = card.ability.extra.Xmult / 2\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\tcolour = G.C.RED,\n\t\t\t\tmessage_card = card\n\t\t\t}\n\t\telseif context.post_trigger and G.GAME.blind.in_blind and context.other_card.config.center and context.other_card.config.center.key ~= \"j_dbbq_bunraku\" then\n\t\t\tcard.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_gain\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_upgrade_ex\"),\n\t\t\t\tcolour = G.C.RED,\n\t\t\t\tmessage_card = card\n\t\t\t}\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "horse",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = \"horse\",\n\tloc_txt = {\n\t\tname = \"Cucumber Horse\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Blind{} is selected:\",\n\t\t\t\"Any {C:attention}Pet Joker{} you own is destroyed\",\n\t\t\t\"and adds {C:chips}+#1#{} Chips to this card\",\n\t\t\t\"{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)\",\n\t\t\t\"If all four {C:attention}Pet Jokers{} are given,\",\n\t\t\t\"this will also pay out {C:money}$#3# each Round\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 4,\n\tpos = {x = 2, y = 0},\n\tblueprint_compat = true,\n    config = {extra = {chips_gain = 100, chips = 0, money = 10, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_horse_boss\"},\n\t\t{type = \"lose\", key = \"j_dbbq_horse_no\"},\n\t\t{type = \"lose\", key = \"j_dbbq_horse_shitchat\"},\n\t\t{type = \"win\", key = \"j_dbbq_horse_money\"},\n\t\t{type = \"win\", key = \"j_dbbq_horse_early\"},\n\t\t{type = \"win\", key = \"j_dbbq_horse_meal\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_horse\", set = \"Other\"}\n\t\tend\n        return {vars = {\n\t\t\tcard.ability.extra.chips_gain,\n\t\t\tcard.ability.extra.chips,\n\t\t\tcard.ability.extra.money\n\t\t}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tchips = card.ability.extra.chips\n\t\t\t}\n\t\telseif context.setting_blind and not context.blueprint then\n\t\t\tlocal gain = 0\n\t\t\tfor _, joker in ipairs(G.jokers.cards) do\n\t\t\t\tif joker.config.center.key == \"j_dbbq_pet\" then\n\t\t\t\t\tgain = gain + 1\n\t\t\t\t\tjoker.getting_sliced = true\n\t\t\t\t\tjoker:start_dissolve()\n\t\t\t\tend\n\t\t\tend\n\t\t\tif gain > 0 then\n\t\t\t\tcard.ability.extra.chips = card.ability.extra.chips + gain * card.ability.extra.chips_gain\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize('k_upgrade_ex'),\n\t\t\t\t\tcolour = G.C.CHIPS\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n    calc_dollar_bonus = function(self, card)\n\t\tif card.ability.extra.chips >= 400 then\n        \treturn card.ability.extra.money\n\t\tend\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "beholder",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = \"beholder\",\n\tloc_txt = {\n\t\tname = \"Eye Of The Beholder\",\n\t\ttext = {\n\t\t\t\"Each time you play and score one of\",\n\t\t\t\"each {C:inactive}(Vanilla){} Rank, gain {X:mult,C:white}X#1#{} Mult\",\n\t\t\t\"{C:inactive}(Remaining: {C:chips}#2#{C:inactive})\",\n\t\t\t\"{C:inactive}(Currently: {X:mult,C:white}X#3#{C:inactive} Mult)\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 8,\n\tpos = {x = 3, y = 0},\n\tblueprint_compat = true,\n    config = {extra = {Xmult_gain = 1, played = {}, Xmult = 1, dbbq_quotes = {\n\t\t{type = \"lose\", key = \"j_dbbq_beholder_condolences\"},\n\t\t{type = \"lose\", key = \"j_dbbq_beholder_never\"},\n\t\t{type = \"any\", key = \"j_dbbq_beholder_food\"},\n\t\t{type = \"win\", key = \"j_dbbq_beholder_toilet\"},\n\t\t{type = \"lose\", key = \"j_dbbq_beholder_unforgiven\"},\n\t\t{type = \"lose\", key = \"j_dbbq_beholder_capable\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_beholder\", set = \"Other\"}\n\t\tend\n\t\tlocal remaining = \"\"\n\t\tfor _, rank in ipairs(VANILLA_RANKS) do\n\t\t\tif not card.ability.extra.played[rank] then\n\t\t\t\tif remaining:len() == 0 then\n\t\t\t\t\tremaining = rank\n\t\t\t\telse\n\t\t\t\t\tremaining = remaining..\", \"..rank\n\t\t\t\tend\n\t\t\tend\n\t\tend\n        return {vars = {card.ability.extra.Xmult_gain, remaining, card.ability.extra.Xmult}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.Xmult\n\t\t\t}\n\t\telseif context.before and context.main_eval and not context.blueprint then\n\t\t\tfor _, play in ipairs(context.scoring_hand) do\n\t\t\t\tlocal id = play:get_id()\n\t\t\t\tif id >= 2 and id <= 14 and not SMODS.has_no_rank(play) then\n\t\t\t\t\tif id == 11 then id = 'J'\n\t\t\t\t\telseif id == 12 then id = 'Q'\n\t\t\t\t\telseif id == 13 then id = 'K'\n\t\t\t\t\telseif id == 14 then id = 'A'\n\t\t\t\t\telse id = tostring(id)\n\t\t\t\t\tend\n\t\t\t\t\tcard.ability.extra.played[id] = true\n\t\t\t\tend\n\t\t\tend\n\t\t\tfor _, rank in ipairs(VANILLA_RANKS) do\n\t\t\t\tif not card.ability.extra.played[rank] then\n\t\t\t\t\treturn\n\t\t\t\tend\n\t\t\tend\n\t\t\tcard.ability.extra.played = {}\n\t\t\tcard.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_gain\n\t\t\treturn {\n\t\t\t\tmessage = localize('k_upgrade_ex'),\n\t\t\t\tcolour = G.C.MULT\n\t\t\t}\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "fax",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = \"fax\",\n\tloc_txt = {\n\t\tname = \"Fax Machine\",\n\t\ttext = {\n\t\t\t\"When {C:attention}poker hand{} is played:\",\n\t\t\t\"If held cards contain all of:\",\n\t\t\t\"Ranks {C:money}3{}, {C:money}4{}, {C:money}6{}, {C:money}8{}, and three {C:money}7{}s,\",\n\t\t\t\"All cards held in hand\",\n\t\t\t\"{C:chips}double{} their Chips\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 7,\n\tpos = {x = 4, y = 0},\n\tblueprint_compat = true,\n    config = {extra = {upgrade = false, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_fax_handshake\"},\n\t\t{type = \"lose\", key = \"j_dbbq_fax_shambles\"},\n\t\t{type = \"lose\", key = \"j_dbbq_fax_opportunity\"},\n\t\t{type = \"any\", key = \"j_dbbq_fax_highly\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_fax\", set = \"Other\"}\n\t\tend\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.before and context.main_eval and not context.blueprint then\n\t\t\tlocal ranks = {\n\t\t\t\t['3'] = 1,\n\t\t\t\t['4'] = 1,\n\t\t\t\t['6'] = 1,\n\t\t\t\t['7'] = 3,\n\t\t\t\t['8'] = 1,\n\t\t\t}\n\t\t\tfor _, held in ipairs(G.hand.cards) do\n\t\t\t\tlocal id = tostring(held:get_id())\n\t\t\t\tif not SMODS.has_no_rank(held) and not card.debuff and ranks[id] then\n\t\t\t\t\tranks[id] = ranks[id] - 1\n\t\t\t\tend\n\t\t\tend\n\t\t\tfor _, rank in pairs(ranks) do\n\t\t\t\tif rank > 0 then\n\t\t\t\t\tcard.ability.extra.upgrade = false\n\t\t\t\t\treturn\n\t\t\t\tend\n\t\t\tend\n\t\t\tcard.ability.extra.upgrade = true\n\t\telseif context.individual and context.cardarea == G.hand and not context.end_of_round and card.ability.extra.upgrade then\n\t\t\tif context.other_card.debuff then\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize('k_debuffed'),\n\t\t\t\t\tcolour = G.C.RED\n\t\t\t\t}\n\t\t\telse\n\t\t\t\tcontext.other_card.ability.perma_bonus = (context.other_card.ability.perma_bonus or 0) + context.other_card:get_chip_bonus()\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize('k_upgrade_ex'),\n\t\t\t\t\tcolour = G.C.CHIPS\n\t\t\t\t}\n            end\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "girl",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = \"girl\",\n\tloc_txt = {\n\t\tname = \"Girl Girl\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Blind{} is selected:\",\n\t\t\t\"Flip and shuffle all Jokers\",\n\t\t\t\"{C:green}#1# in #2#{} chance: Add {C:dark_edition}Negative{}\",\n\t\t\t\"to one other Joker at random\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 12,\n\tpos = {x = 0, y = 1},\n\tblueprint_compat = false,\n\tconfig = {extra = {num = 1, den = 6, dbbq_quotes = {\n\t\t{type = \"lose\", key = \"j_dbbq_girl_care\"},\n\t\t{type = \"lose\", key = \"j_dbbq_girl_thankz\"},\n\t\t{type = \"lose\", key = \"j_dbbq_girl_rude\"},\n\t\t{type = \"lose\", key = \"j_dbbq_girl_fell\"},\n\t\t{type = \"win\", key = \"j_dbbq_girl_words\"},\n\t\t{type = \"win\", key = \"j_dbbq_girl_resuemay\"},\n\t\t{type = \"win\", key = \"j_dbbq_girl_job\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_girl\", set = \"Other\"}\n\t\tend\n        info_queue[#info_queue + 1] = {key = \"e_negative\", set = \"Edition\", config = {extra = 1}}\n\t\tlocal num, den = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.den)\n\t\treturn {vars = {num, den}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.setting_blind and not context.blueprint then\n\t\t\tlocal neg_eligible = {}\n\t\t\tfor k, v in ipairs(G.jokers.cards) do\n\t\t\t\tv:flip()\n\t\t\t\tif v ~= card and not v.edition then\n\t\t\t\t\tneg_eligible[#neg_eligible+1] = v\n\t\t\t\tend\n\t\t\tend\n\t\t\tif #G.jokers.cards > 1 then \n\t\t\t\tG.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.2, func = function() \n\t\t\t\t\tG.E_MANAGER:add_event(Event({func = function() G.jokers:shuffle(\"I don care!\"); play_sound(\"cardSlide1\", 0.85); return true end})) \n\t\t\t\t\tdelay(0.15)\n\t\t\t\t\tG.E_MANAGER:add_event(Event({func = function() G.jokers:shuffle(\"DON CARE!!! >:OO\"); play_sound(\"cardSlide1\", 1.15); return true end})) \n\t\t\t\t\tdelay(0.15)\n\t\t\t\t\tG.E_MANAGER:add_event(Event({func = function() G.jokers:shuffle(\"GO AWAY!!!\"); play_sound(\"cardSlide1\", 1); return true end})) \n\t\t\t\t\tdelay(0.5)\n\t\t\t\t\treturn true\n\t\t\t\tend})) \n\t\t\tend\n\t\t\tif #neg_eligible > 0 then\n\t\t\t\tif SMODS.pseudorandom_probability(card, \"U know, im pretty good @ organizing words!!\", card.ability.extra.num, card.ability.extra.den) then\n\t\t\t\t\treturn {\n\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\tpseudorandom_element(neg_eligible, pseudoseed(\"umwbmhjnbgrzmmafbczlcmnkvn\")):set_edition({negative = true}, true)\n\t\t\t\t\t\tend\n\t\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t\treturn {message = localize(\"k_nope_ex\")}\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "head",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 1,
+        "y": 1
+      },
+      "raw": "key = \"head\",\n\tloc_txt = {\n\t\tname = \"Head Chaffeur\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Hand{} is played:\",\n\t\t\t\"Gain one of {C:chips}+#1#{} Chips, {C:mult}+#2#{} Mult,\",\n\t\t\t\"or {X:mult,C:white}X#3#{} Mult at random\",\n\t\t\t\"{C:inactive}(Currently {C:chips}+#4#{C:inactive} Chips, {C:mult}+#5#{C:inactive} Mult, {X:mult,C:white}X#6#{C:inactive} Mult)\",\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 6,\n\tpos = {x = 1, y = 1},\n\tblueprint_compat = true,\n    config = {extra = {chips_gain = 5, mult_gain = 1, Xmult_gain = 0.05, chips = 0, mult = 0, Xmult = 1, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_head_work\"},\n\t\t{type = \"any\", key = \"j_dbbq_head_party\"},\n\t\t{type = \"win\", key = \"j_dbbq_head_doom\"},\n\t\t{type = \"lose\", key = \"j_dbbq_head_awaiting\"},\n\t\t{type = \"win\", key = \"j_dbbq_head_ride\"},\n\t\t{type = \"lose\", key = \"j_dbbq_head_awful\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_head\", set = \"Other\"}\n\t\tend\n        return {vars = {\n\t\t\tcard.ability.extra.chips_gain,\n\t\t\tcard.ability.extra.mult_gain,\n\t\t\tcard.ability.extra.Xmult_gain,\n\t\t\tcard.ability.extra.chips,\n\t\t\tcard.ability.extra.mult,\n\t\t\tcard.ability.extra.Xmult\n\t\t}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tchips = card.ability.extra.chips,\n\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t\txmult = card.ability.extra.Xmult\n\t\t\t}\n\t\telseif context.before and context.main_eval and not context.blueprint then\n\t\t\tlocal gain = pseudorandom_element({\"chips\", \"mult\", \"Xmult\"}, pseudoseed(\"taxi\"))\n\t\t\tcard.ability.extra[gain] = card.ability.extra[gain] + card.ability.extra[gain..\"_gain\"]\n\t\t\treturn {message = gain}\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "heno",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 2,
+        "y": 1
+      },
+      "raw": "key = \"heno\",\n\tloc_txt = {\n\t\tname = \"Henohenomoheji\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Blind{} is selected:\",\n\t\t\t\"Create random {C:attention}Enhanced{} face\",\n\t\t\t\"card and draw it to hand\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 7,\n\tpos = {x = 2, y = 1},\n\tblueprint_compat = true,\n    config = {extra = {dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_heno_boss\"},\n\t\t{type = \"any\", key = \"j_dbbq_heno_dratula\"},\n\t\t{type = \"any\", key = \"j_dbbq_heno_nuts\"},\n\t\t{type = \"lose\", key = \"j_dbbq_heno_pengvin\"},\n\t\t{type = \"win\", key = \"j_dbbq_heno_stronk\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_heno\", set = \"Other\"}\n\t\tend\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.first_hand_drawn then\n\t\t\tlocal rank = pseudorandom_element({'J', 'Q', 'K'}, pseudoseed(\"I AM DRATULAAAAA!!!!!\"))\n\t\t\tlocal suit = pseudorandom_element({'S','H','D','C'}, pseudoseed(\"I AM A VAMPIRE, SO STRONK!\"))\n\t\t\tlocal cen_pool = {}\n\t\t\tfor k, v in pairs(G.P_CENTER_POOLS[\"Enhanced\"]) do\n\t\t\t\tif v.key ~= 'm_stone' and not v.no_rank then \n\t\t\t\t\tcen_pool[#cen_pool+1] = v\n\t\t\t\tend\n\t\t\tend\n\t\t\tlocal new_card = create_playing_card({front = G.P_CARDS[suit..'_'..rank], center = pseudorandom_element(cen_pool, pseudoseed(\"GOOD MORNINK!\"))}, G.hand, nil, false, {G.C.SECONDARY_SET.Enhanced}, true)\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\tfunc = function()\n\t\t\t\t\tG.hand:emplace(new_card)\n\t\t\t\t\tnew_card:start_materialize()\n\t\t\t\t\tG.GAME.blind:debuff_card(new_card)\n\t\t\t\t\tG.hand:sort()\n\t\t\t\t\tif context.blueprint_card then\n\t\t\t\t\t\tcontext.blueprint_card:juice_up()\n\t\t\t\t\telse\n\t\t\t\t\t\tcard:juice_up()\n\t\t\t\t\tend\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\t\tSMODS.calculate_context({playing_card_added = true, cards = {new_card}})\n\t\t\treturn nil, true\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "hoarder",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 3,
+        "y": 1
+      },
+      "raw": "key = \"hoarder\",\n\tloc_txt = {\n\t\tname = \"Hoarder\",\n\t\ttext = {\n\t\t\t\"{C:attention}+#1#{} Consumable Slots\",\n\t\t\t\"{C:chips}+#2#{} Chips per held Consumable\",\n\t\t\t\"Prevents use of cards\",\n\t\t\t\"in Consumable Slots\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 5,\n\tpos = {x = 3, y = 1},\n\tblueprint_compat = true,\n\tconfig = {extra = {slots = 1000, chips = 5, dbbq_quotes = {\n\t\t{type = \"lose\", key = \"j_dbbq_hoarder_another\"},\n\t\t{type = \"lose\", key = \"j_dbbq_hoarder_fought\"},\n\t\t{type = \"lose\", key = \"j_dbbq_hoarder_enjoy\"},\n\t\t{type = \"win\", key = \"j_dbbq_hoarder_ogling\"},\n\t\t{type = \"lose\", key = \"j_dbbq_hoarder_posterior\"},\n\t\t{type = \"win\", key = \"j_dbbq_hoarder_rad\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_hoarder\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.slots, card.ability.extra.chips}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.other_consumeable then\n\t\t\treturn {chips = card.ability.extra.chips}\n\t\tend\n\tend,\n\tadd_to_deck = function(self, card, from_debuff)\n\t\tG.consumeables.config.card_limit = G.consumeables.config.card_limit + card.ability.extra.slots\n\tend,\n\tremove_from_deck = function(self, card, from_debuff)\n\t\tG.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.extra.slots\n\tend,"
+    },
+    {
+      "type": "Joker",
+      "key": "bus",
+      "atlas": "dbbq_bus",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"bus\",\n\tloc_txt = {\n\t\tname = \"I'M THE BUS!\",\n\t\ttext = {\n\t\t\t\"Each played card scores {X:mult,C:white}X#1#{} Mult\",\n\t\t\t\"Add {X:mult,C:white}X#2#{} Mult to amount for each\",\n\t\t\t\"consecutive {C:attention}hand{} played\",\n\t\t\t\"without a scoring {C:attention}face{} card\"\n\t\t}\n\t},\n\tatlas = \"dbbq_bus\",\n\trarity = 4,\n\tcost = 20,\n\tpos = {x = 0, y = 0},\n\tblueprint_compat = true,\n\tconfig = {extra = {Xmult = 1, Xmult_gain = 0.05, timer = 0, frame = 0, anim = false, dbbq_quotes = {\n\t\t{type = \"any\", key = \"j_dbbq_im_the_bus\"},\n\t}}},\n\tupdate = function(self, joker, dt)\n\t\tif not joker.ability.extra.anim then return end\n\t\tif joker.ability.extra.timer < 3 then\n\t\t\tjoker.ability.extra.timer = joker.ability.extra.timer + 1\n\t\telse\n\t\t\tjoker.ability.extra.timer = 0\n\t\t\tjoker.ability.extra.frame = joker.ability.extra.frame + 1\n\t\t\tif joker.ability.extra.frame >= 65 then\n\t\t\t\tjoker.ability.extra.frame = 0\n\t\t\t\tjoker.ability.extra.anim = false\n\t\t\tend\n\t\t\tjoker.children.center:set_sprite_pos({\n\t\t\t\tx = joker.ability.extra.frame % 13,\n\t\t\t\ty = math.floor(joker.ability.extra.frame / 13)\n\t\t\t})\n\t\tend\n\tend,\n\tloc_vars = function(self, info_queue, joker)\n\t\tif joker.area and joker.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_bus\", set = \"Other\"}\n\t\tend\n\t\treturn {vars = {joker.ability.extra.Xmult, joker.ability.extra.Xmult_gain}}\n\tend,\n\tcalculate = function(self, joker, context)\n\t\tif context.before and context.main_eval and not context.blueprint then\n\t\t\tlocal faces = false\n\t\t\tfor _, card in ipairs(context.scoring_hand) do\n\t\t\t\tif card:is_face() then\n\t\t\t\t\tfaces = true\n\t\t\t\t\tbreak\n\t\t\t\tend\n\t\t\tend\n\t\t\tif not faces then\n\t\t\t\tjoker.ability.extra.Xmult = joker.ability.extra.Xmult + joker.ability.extra.Xmult_gain\n\t\t\t\tlocal output = {\n\t\t\t\t\tmessage = 'X'..joker.ability.extra.Xmult,\n\t\t\t\t\tcolour = G.C.MULT\n\t\t\t\t}\n\t\t\t\tif not joker.ability.extra.anim then\n\t\t\t\t\toutput.func = function()\n\t\t\t\t\t\tjoker.ability.extra.anim = true\n\t\t\t\t\t\tplay_sound(\"dbbq_bus\"..math.ceil(pseudorandom(\"I'M THE BUS!\") * 11))\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\t\treturn output\n\t\t\telseif joker.ability.extra.Xmult > 1 then\n\t\t\t\tjoker.ability.extra.Xmult = 1\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\t\tcolour = G.C.PURPLE\n\t\t\t\t}\n\t\t\tend\n\t\telseif context.individual and context.cardarea == G.play and joker.ability.extra.Xmult > 1 then\n\t\t\treturn {Xmult = joker.ability.extra.Xmult}\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "legs",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 4,
+        "y": 1
+      },
+      "raw": "key = \"legs\",\n\tloc_txt = {\n\t\tname = \"Joker Legs\",\n\t\ttext = {\n\t\t\t\"{C:chips}+#1#{} Chips if you\",\n\t\t\t\"have drawn through\",\n\t\t\t\"half of your deck\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 1,\n\tcost = 4,\n\tpos = {x = 4, y = 1},\n\tblueprint_compat = true,\n\tconfig = {extra = {chips = 100, dbbq_quotes = {\n\t\t{type = \"any\", key = \"j_dbbq_legs_obligation\"},\n\t\t{type = \"lose\", key = \"j_dbbq_legs_how\"},\n\t\t{type = \"lose\", key = \"j_dbbq_legs_damnation\"},\n\t\t{type = \"lose\", key = \"j_dbbq_legs_boobstraps\"},\n\t\t{type = \"win\", key = \"j_dbbq_legs_epic\"},\n\t\t{type = \"win\", key = \"j_dbbq_legs_imploded\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_legs\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.chips}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main and #G.deck.cards <= G.GAME.starting_deck_size / 2 then\n\t\t\treturn {\n\t\t\t\tchips = card.ability.extra.chips\n\t\t\t}\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "kintsugi",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 0,
+        "y": 2
+      },
+      "raw": "key = \"kintsugi\",\n\tloc_txt = {\n\t\tname = \"Kintsugi\",\n\t\ttext = {\n\t\t\t\"Gains {C:money}$#1#{} of {C:attention}sell value{}\",\n\t\t\t\"at end of round\",\n\t\t\t\"If {C:inactive}Glass Card{} shatters\",\n\t\t\t\"or a {C:attention}Lucky Card{} fails,\",\n\t\t\t\"pay out the {C:attention}sell value{} and\",\n\t\t\t\"transform into {C:chips}Unlucky Cat{}\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 6,\n\tpos = {x = 0, y = 2},\n\tblueprint_compat = false,\n    config = {extra = {price = 1}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_kintsugi\", set = \"Other\"}\n\t\tend\n\t\tinfo_queue[#info_queue+1] = G.P_CENTERS.j_dbbq_unlucky\n        return {vars = {card.ability.extra.price}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif not context.blueprint then\n\t\t\tlocal meteor = false\n\t\t\tif context.end_of_round and context.game_over == false and context.main_eval then\n\t\t\t\tcard.ability.extra_value = card.ability.extra_value + card.ability.extra.price\n\t\t\t\tcard:set_cost()\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize('k_val_up'),\n\t\t\t\t\tcolour = G.C.MONEY\n\t\t\t\t}\n\t\t\telseif context.remove_playing_cards then\n\t\t\t\tfor _, removed_card in ipairs(context.removed) do\n\t\t\t\t\tif removed_card.shattered then\n\t\t\t\t\t\tmeteor = true\n\t\t\t\t\t\tbreak\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\telseif context.individual and context.cardarea == G.play and SMODS.has_enhancement(context.other_card, 'm_lucky') and not context.other_card.lucky_trigger then\n\t\t\t\tmeteor = true\n\t\t\tend\n\t\t\tif meteor then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = 'after',\n\t\t\t\t\tdelay = 0.15,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tcard:flip()\n\t\t\t\t\t\tplay_sound('card1', percent)\n\t\t\t\t\t\tcard:juice_up(0.3, 0.3)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend\n\t\t\t\t}))\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = 'after',\n\t\t\t\t\tdelay = 0.1,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tcard:set_ability(\"j_dbbq_unlucky\")\n\t\t\t\t\t\t--Setting Xmult here prevents bizarre crash when viewing full deck post-transformation\n\t\t\t\t\t\tcard.ability.extra.Xmult = 2\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend\n\t\t\t\t}))\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = 'after',\n\t\t\t\t\tdelay = 0.15,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tcard:flip()\n\t\t\t\t\t\tplay_sound('tarot2', percent, 0.6)\n\t\t\t\t\t\tcard:juice_up(0.3, 0.3)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend\n\t\t\t\t}))\n\t\t\t\tG.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + card.sell_cost\n\t\t\t\treturn {\n\t\t\t\t\tdollars = card.sell_cost,\n\t\t\t\t\tfunc = function() -- This is for timing purposes, it runs after the dollar manipulation\n\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\tG.GAME.dollar_buffer = 0\n\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\tend\n\t\t\t\t\t\t}))\n\t\t\t\t\tend\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n    in_pool = function(self, args)\n\t\treturn #SMODS.find_card(\"j_dbbq_unlucky\") == 0\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "lazy",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 1,
+        "y": 2
+      },
+      "raw": "key = \"lazy\",\n\tloc_txt = {\n\t\tname = \"Lazy Coworker\",\n\t\ttext = {\n\t\t\t\"{C:mult}+#1#{} Mult\",\n\t\t\t\"When {C:attention}Blind{} is defeated,\",\n\t\t\t\"decrease Mult depending on\",\n\t\t\t\"how much your final chip total\",\n\t\t\t\"overshot the Blind's requirement\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 5,\n\tpos = {x = 1, y = 2},\n\tblueprint_compat = true,\n\tconfig = {extra = {mult = 50, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_lazy_sweat\"},\n\t\t{type = \"lose\", key = \"j_dbbq_lazy_slack\"},\n\t\t{type = \"win\", key = \"j_dbbq_lazy_easier\"},\n\t\t{type = \"win\", key = \"j_dbbq_lazy_proactive\"},\n\t\t{type = \"lose\", key = \"j_dbbq_lazy_meat\"},\n\t\t{type = \"lose\", key = \"j_dbbq_lazy_novice\"},\n\t\t{type = \"win\", key = \"j_dbbq_lazy_working\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_lazy\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.mult}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {mult = card.ability.extra.mult}\n\t\telseif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\n\t\t\tlocal prev_mult = card.ability.extra.mult\n\t\t\tcard.ability.extra.mult = math.ceil(card.ability.extra.mult / (G.GAME.chips / G.GAME.blind.chips))\n\t\t\tif type(card.ability.extra.mult) == \"table\" then card.ability.extra.mult = card.ability.extra.mult:to_number() end\n\t\t\tif prev_mult > card.ability.extra.mult then\n\t\t\t\treturn {\n\t\t\t\t\tmessage = (card.ability.extra.mult - prev_mult)..\" Mult\",\n\t\t\t\t\tcolor = G.C.MULT\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "matry",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 2,
+        "y": 2
+      },
+      "raw": "key = \"matry\",\n\tloc_txt = {\n\t\tname = \"Matryoshka Joker\",\n\t\ttext = {\n\t\t\t\"Sell this card to\",\n\t\t\t\"create a random {C:attention}Joker{}\",\n\t\t\t\"that is one step below\",\n\t\t\t\"your Jokers' highest rarity\",\n\t\t\t\"{C:inactive}(Currently: {B:1,C:white}#1#{C:inactive})\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 1,\n\tcost = 3,\n\tpos = {x = 2, y = 2},\n\tblueprint_compat = false,\n\tconfig = {extra = {dbbq_quotes = {\n\t\t{type = \"lose\", key = \"j_dbbq_matry_cents\"},\n\t\t{type = \"win\", key = \"j_dbbq_matry_toot\"},\n\t\t{type = \"lose\", key = \"j_dbbq_matry_ruin\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_matry\", set = \"Other\"}\n\t\tend\n\t\tlocal highest = 1\n\t\tfor _, joker in ipairs(G.jokers and G.jokers.cards or {}) do\n\t\t\tif type(joker.config.center.rarity) == \"number\" and joker.config.center.rarity > highest then\n\t\t\t\thighest = joker.config.center.rarity\n\t\t\tend\n\t\tend\n\t\tif highest >= 4 then\n        \treturn {vars = {colours = {HEX(\"fe5f55\")}, \"Rare\"}}\n\t\telseif highest == 3 then\n        \treturn {vars = {colours = {HEX(\"4BC292\")}, \"Uncommon\"}}\n\t\telseif highest == 2 then\n        \treturn {vars = {colours = {HEX(\"009dff\")}, \"Common\"}}\n\t\telse\n        \treturn {vars = {colours = {HEX(\"000000\")}, \"None\"}}\n\t\tend\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.selling_self then\n\t\t\tlocal highest = 1\n\t\t\tfor _, joker in ipairs(G.jokers and G.jokers.cards or {}) do\n\t\t\t\tif type(joker.config.center.rarity) == \"number\" and joker.config.center.rarity > highest then\n\t\t\t\t\thighest = joker.config.center.rarity\n\t\t\t\tend\n\t\t\tend\n\t\t\tif highest > 1 then\n\t\t\t\tif highest >= 4 then\n\t\t\t\t\thighest = \"Rare\"\n\t\t\t\telseif highest == 3 then\n\t\t\t\t\thighest = \"Uncommon\"\n\t\t\t\telse\n\t\t\t\t\thighest = \"Common\"\n\t\t\t\tend\n\t\t\t\tG.GAME.joker_buffer = G.GAME.joker_buffer + 1\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t            func = function()\n\t\t                SMODS.add_card {\n\t\t                    set = \"Joker\",\n\t\t                    rarity = highest,\n\t\t                    key_append = \"dbbq_matryoshka\"\n\t\t                }\n\t\t                G.GAME.joker_buffer = G.GAME.joker_buffer - 1\n\t\t                return true\n\t\t            end\n\t\t        }))\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "mayo",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 4,
+        "y": 4
+      },
+      "raw": "key = \"mayo\",\n\tloc_txt = {\n\t\tname = \"Mayonnaise\",\n\t\ttext = {\n\t\t\t\"Blind the {C:attention}Blind{}, so it can't\",\n\t\t\t\"see you cheating your {C:mult}discards{}\",\n\t\t\t\"{C:inactive}(Your discards are free){}\",\n\t\t\t\"However, it wil be extremely\",\n\t\t\t\"angry and become {X:mult,C:white}X#1#{} as strong\",\n\t\t\t\"{C:inactive}(You may get blasted by a giant laser)\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 12,\n\tpos = {x = 4, y = 4},\n\tblueprint_compat = false,\n\tconfig = {extra = {blind_angy = 10}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_mayo\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.blind_angy}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.blueprint then return end\n\t\tif context.setting_blind then\n\t\t\tG.GAME.blind.chips = G.GAME.blind.chips * card.ability.extra.blind_angy\n    \t\tG.GAME.blind.chip_text = number_format(G.GAME.blind.chips)\n\t\t\tG.GAME.blind:set_text()\n\t\t\tG.GAME.blind:wiggle()\n\t\telseif context.discard and context.other_card == context.full_hand[#context.full_hand] then\n\t\t\tease_discard(1, nil, true)\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "mean",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 3,
+        "y": 2
+      },
+      "raw": "key = \"mean\",\n\tloc_txt = {\n\t\tname = \"Mean Joker\",\n\t\ttext = {\n\t\t\t\"All unenhanced cards\",\n\t\t\t\"are destroyed after\",\n\t\t\t\"being played and scored\",\n\t\t\t\"When Blind is defeated,\",\n\t\t\t\"transforms into {C:mult}Sales Joker{}\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 4,\n\tcost = 20,\n\tpos = {x = 3, y = 2},\n\tblueprint_compat = false,\n\tconfig = {extra = {dbbq_quotes = {\n\t\t{type = \"lose\", key = \"j_dbbq_mean_boss\"},\n\t\t{type = \"win\", key = \"j_dbbq_mean_hogwash\"},\n\t\t{type = \"lose\", key = \"j_dbbq_mean_fraud\"},\n\t\t{type = \"lose\", key = \"j_dbbq_mean_sympathy\"},\n\t\t{type = \"win\", key = \"j_dbbq_mean_prices\"},\n\t\t{type = \"lose\", key = \"j_dbbq_mean_bullshit\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_mean\", set = \"Other\"}\n\t\tend\n\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_sales_dummy\", set = \"Other\"}\n        info_queue[#info_queue + 1] = G.P_CENTERS.m_mult\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.destroy_card and not context.blueprint and not next(SMODS.get_enhancements(context.destroy_card)) and not context.destroy_card.debuff then\n\t\t\tlocal found = false\n\t\t\tfor k, v in ipairs(context.scoring_hand) do\n\t\t\t\tif context.destroy_card == v then\n\t\t\t\t\tfound = true\n\t\t\t\t\tbreak\n\t\t\t\tend\n\t\t\tend\n\t\t\tif found then\n\t\t\t\treturn {\n\t\t\t\t\tremove = true\n\t\t\t\t}\n\t\t\tend\n\t\telseif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = 'after',\n\t\t\t\tdelay = 0.15,\n\t\t\t\tfunc = function()\n\t\t\t\t\tcard:flip()\n\t\t\t\t\tplay_sound('card1', percent)\n\t\t\t\t\tcard:juice_up(0.3, 0.3)\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = 'after',\n\t\t\t\tdelay = 0.1,\n\t\t\t\tfunc = function()\n\t\t\t\t\tcard:set_ability(\"j_dbbq_sales\")\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = 'after',\n\t\t\t\tdelay = 0.15,\n\t\t\t\tfunc = function()\n\t\t\t\t\tcard:flip()\n\t\t\t\t\tplay_sound('tarot2', percent, 0.6)\n\t\t\t\t\tcard:juice_up(0.3, 0.3)\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\tend\n\tend,\n    in_pool = function(self, args)\n        return false\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "stalker",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 4,
+        "y": 2
+      },
+      "raw": "key = \"stalker\",\n\tloc_txt = {\n\t\tname = \"Not Stalker\",\n\t\ttext = {\n\t\t\t\"When sold, all present\",\n\t\t\t\"and future copies of\",\n\t\t\t\"{C:attention}Not Stalker{} double their {X:mult,C:white}XMult\",\n\t\t\t\"{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)\",\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 4,\n\tpos = {x = 4, y = 2},\n\tblueprint_compat = true,\n\tconfig = {extra = {dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_stalker_boss\"},\n\t\t{type = \"lose\", key = \"j_dbbq_stalker_mistake\"},\n\t\t{type = \"any\", key = \"j_dbbq_stalker_heheheheh\"},\n\t\t{type = \"win\", key = \"j_dbbq_stalker_delight\"},\n\t\t{type = \"lose\", key = \"j_dbbq_stalker_captivity\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_stalker\", set = \"Other\"}\n\t\tend\n        return {vars = {(G.GAME.dbbq_not_stalkers_sold or 1)}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\txmult = (G.GAME.dbbq_not_stalkers_sold or 1)\n\t\t\t}\n\t\telseif not context.blueprint and context.selling_self then\n\t\t\tG.GAME.dbbq_not_stalkers_sold = (G.GAME.dbbq_not_stalkers_sold or 1) * 2\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "party",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 5,
+        "y": 1
+      },
+      "raw": "key = \"party\",\n\tloc_txt = {\n\t\tname = \"Party Ranger\",\n\t\ttext = {\n\t\t\t\"Retrigger each scoring {C:attention}Wild Card{}\",\n\t\t\t\"an additional {C:attention}#1#{} times.\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 6,\n\tpos = {x = 5, y = 1},\n\tblueprint_compat = true,\n    config = {extra = {repetitions = 2, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_party_boss\"},\n\t\t{type = \"lose\", key = \"j_dbbq_party_focusing\"},\n\t\t{type = \"lose\", key = \"j_dbbq_party_crazy\"},\n\t\t{type = \"any\", key = \"j_dbbq_party_whistle\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_party\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.repetitions}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.repetition and context.cardarea == G.play and SMODS.has_enhancement(context.other_card, \"m_wild\") then\n\t\t\treturn {repetitions = card.ability.extra.repetitions}\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "pet",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 0,
+        "y": 3
+      },
+      "raw": "key = \"pet\",\n\tloc_txt = {\n\t\tname = \"Pet? Joker\",\n\t\ttext = {\n\t\t\t\"Sell this card to\",\n\t\t\t\"reduce the current Blind's\",\n\t\t\t\"chip requirement by {C:attention}25%{}\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 1,\n\tcost = 4,\n\tpos = {x = 0, y = 3},\n\tblueprint_compat = false,\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_pet\", set = \"Other\"}\n\t\tend\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.selling_self and G.GAME.blind and G.GAME.blind.in_blind then\n\t\t\tG.GAME.blind.chips = math.max(math.floor(G.GAME.blind.chips * 0.75), 1)\n    \t\tG.GAME.blind.chip_text = number_format(G.GAME.blind.chips)\n\t\t\tG.GAME.blind:set_text()\n\t\t\tG.GAME.blind:wiggle()\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = 'immediate',\n\t\t\t\tfunc = function()\n\t\t\t\t\tif (to_big and to_big(G.GAME.chips - G.GAME.blind.chips) >= to_big(0)) or (not to_big and G.GAME.chips - G.GAME.blind.chips >= 0) then\n\t\t\t\t\t\tG.STATE = G.STATES.NEW_ROUND\n\t\t\t\t\t\tG.STATE_COMPLETE = false\n\t\t\t\t\tend\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\tend\n\tend,\n    in_pool = function(self, args)\n\t\tfor _, joker in ipairs(G.jokers.cards) do\n\t\t\tif joker.config.center.key == \"j_dbbq_horse\" and joker.ability.extra.chips >= 400 then\n\t\t\t\treturn false\n\t\t\tend\n\t\tend\n        return true\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "quartet",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 1,
+        "y": 3
+      },
+      "raw": "key = \"quartet\",\n\tloc_txt = {\n\t\tname = \"Quartet\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Hand{} is played:\",\n\t\t\t\"Gain {C:mult}+#1#{} Mult if you\",\n\t\t\t\"have exactly {C:chips}4{} Jokers\",\n\t\t\t\"{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)\",\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 4,\n\tpos = {x = 1, y = 3},\n\tblueprint_compat = true,\n    config = {extra = {mult_gain = 4, mult = 0, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_quartet_delightful\"},\n\t\t{type = \"any\", key = \"j_dbbq_quartet_reference\"},\n\t\t{type = \"lose\", key = \"j_dbbq_quartet_fault\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_quartet\", set = \"Other\"}\n\t\tend\n        return {vars = {\n\t\t\tcard.ability.extra.mult_gain,\n\t\t\tcard.ability.extra.mult\n\t\t}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult\n\t\t\t}\n\t\telseif context.before and context.main_eval and not context.blueprint and #G.jokers.cards == 4 then\n\t\t\tcard.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain\n\t\t\treturn {\n                message = localize({type = 'variable', key = 'a_mult', vars = {card.ability.extra.mult}}),\n                colour = G.C.RED\n            }\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "sales",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 2,
+        "y": 3
+      },
+      "raw": "key = \"sales\",\n\tloc_txt = {\n\t\tname = \"Sales Joker\",\n\t\ttext = {\n\t\t\t\"All played cards become\",\n\t\t\t\"{C:attention}Mult{} cards when scored\",\n\t\t\t\"When Blind is defeated,\",\n\t\t\t\"transforms into {C:inactive}Mean Joker{}\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 4,\n\tcost = 20,\n\tpos = {x = 2, y = 3},\n\tblueprint_compat = false,\n\tconfig = {extra = {dbbq_quotes = {\n\t\t{type = \"lose\", key = \"j_dbbq_sales_loop\"},\n\t\t{type = \"win\", key = \"j_dbbq_sales_ambush\"},\n\t\t{type = \"win\", key = \"j_dbbq_sales_doable\"},\n\t\t{type = \"lose\", key = \"j_dbbq_sales_child\"},\n\t\t{type = \"win\", key = \"j_dbbq_sales_bless\"},\n\t\t{type = \"lose\", key = \"j_dbbq_sales_personally\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_sales\", set = \"Other\"}\n\t\tend\n\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_mean_dummy\", set = \"Other\"}\n        info_queue[#info_queue + 1] = G.P_CENTERS.m_mult\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.before and context.main_eval and not context.blueprint then\n\t\t\tfor k, v in ipairs(context.scoring_hand) do\n\t\t\t\tv:set_ability(\"m_mult\", nil, true)\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tv:juice_up()\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend\n\t\t\t\t}))\n\t\t\tend\n\t\t\treturn {\n\t\t\t\tmessage = localize('k_mult'),\n\t\t\t\tcolour = G.C.MULT\n\t\t\t}\n\t\telseif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = 'after',\n\t\t\t\tdelay = 0.15,\n\t\t\t\tfunc = function()\n\t\t\t\t\tcard:flip()\n\t\t\t\t\tplay_sound('card1', percent)\n\t\t\t\t\tcard:juice_up(0.3, 0.3)\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = 'after',\n\t\t\t\tdelay = 0.1,\n\t\t\t\tfunc = function()\n\t\t\t\t\tcard:set_ability(\"j_dbbq_mean\")\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = 'after',\n\t\t\t\tdelay = 0.15,\n\t\t\t\tfunc = function()\n\t\t\t\t\tcard:flip()\n\t\t\t\t\tplay_sound('tarot2', percent, 0.6)\n\t\t\t\t\tcard:juice_up(0.3, 0.3)\n\t\t\t\t\treturn true\n\t\t\t\tend\n\t\t\t}))\n\t\tend\n\tend,\n    in_pool = function(self, args)\n\t\treturn #SMODS.find_card(\"j_dbbq_mean\") == 0\n    end"
+    },
+    {
+      "type": "Joker",
+      "key": "sixeyed",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 3,
+        "y": 3
+      },
+      "raw": "key = \"sixeyed\",\n\tloc_txt = {\n\t\tname = \"Six-Eyed Joker\",\n\t\ttext = {\n\t\t\t\"Each {C:attention}#1#{} held in hand\",\n\t\t\t\"gives {C:chips}+#2#{} Chips\",\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 1,\n\tcost = 5,\n\tpos = {x = 3, y = 3},\n\tblueprint_compat = true,\n\tconfig = {extra = {target = \"6\", chips = 36, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_sixeyed_thank\"},\n\t\t{type = \"lose\", key = \"j_dbbq_sixeyed_back\"},\n\t\t{type = \"win\", key = \"j_dbbq_sixeyed_before\"},\n\t\t{type = \"any\", key = \"j_dbbq_sixeyed_death\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_sixeyed\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.target, card.ability.extra.chips}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and not context.end_of_round and context.cardarea == G.hand and context.other_card:get_id() == 6 then\n\t\t\tif context.other_card.debuff then\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_debuffed\"),\n\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t}\n\t\t\telse\n\t\t\t\treturn {\n\t\t\t\t\tchips = card.ability.extra.chips,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "smoker",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 4,
+        "y": 3
+      },
+      "raw": "key = \"smoker\",\n\tloc_txt = {\n\t\tname = \"Smoker\",\n\t\ttext = {\n\t\t\t\"{C:green}#1# in #2#{} cards are drawn face down\",\n\t\t\t\"Each face down card held\",\n\t\t\t\"in hand grants {X:mult,C:white}X#3#{} Mult\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 9,\n\tpos = {x = 4, y = 3},\n\tblueprint_compat = true,\n\tconfig = {extra = {num = 1, den = 4, Xmult = 1.5}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_smoker\", set = \"Other\"}\n\t\tend\n\t\tlocal num, den = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.den)\n        return {vars = {num, den, card.ability.extra.Xmult}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.stay_flipped and context.to_area == G.hand then\n\t\t\tif SMODS.pseudorandom_probability(card, \"Remember, ENA...\", card.ability.extra.num, card.ability.extra.den) then\n\t\t\t\treturn {stay_flipped = true}\n\t\t\tend\n\t\telseif context.individual and not context.end_of_round and context.cardarea == G.hand and context.other_card.facing == \"back\" then\n\t\t\tif context.other_card.debuff then\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_debuffed\"),\n\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t}\n\t\t\telse\n\t\t\t\treturn {\n\t\t\t\t\tXmult = card.ability.extra.Xmult,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "spirit",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 0,
+        "y": 4
+      },
+      "raw": "key = \"spirit\",\n\tloc_txt = {\n\t\tname = \"Spirit Jokers\",\n\t\ttext = {\n\t\t\t\"Tells you the {C:attention}Ranks{} and {C:attention}Suits{}\",\n\t\t\t\"of the top {C:chips}#1#{} cards in your deck\",\n\t\t\t\"However, one always lies\",\n\t\t\t\"One says: {C:mult}\\\"#2#\\\"\",\n\t\t\t\"Another says: {C:mult}\\\"#3#\\\"\",\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 1,\n\tcost = 4,\n\tpos = {x = 0, y = 4},\n\tblueprint_compat = false,\n\tconfig = {extra = {cards = 5, say1 = NOTHING, say2 = NOTHING}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_spirit\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.cards, card.ability.extra.say1, card.ability.extra.say2}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.blueprint then return end\n\t\t--if context.first_hand_drawn or context.hand_drawn then\n\t\tif context.hand_drawn then\n\t\t\tlocal toptruth = pseudorandom(\"Green is a poisonous color?\") < 0.5\n\t\t\tlocal spirit1 = {}\n\t\t\tlocal spirit2 = {}\n\t\t\tfor i = 1, card.ability.extra.cards do\n\t\t\t\tspirit1.ind = #G.deck.cards + 1 - i\n\t\t\t\tspirit2.ind = 1 + math.floor(pseudorandom(\"Ha ha ha!\") * #G.deck.cards)\n\t\t\t\tif not toptruth then\n\t\t\t\t\tlocal temp = spirit1.ind\n\t\t\t\t\tspirit1.ind = spirit2.ind\n\t\t\t\t\tspirit2.ind = temp\n\t\t\t\tend\n\t\t\t\tfor _, spirit in ipairs({spirit1, spirit2}) do\n\t\t\t\t\tlocal playing_card = G.deck.cards[spirit.ind]\n\t\t\t\t\tif playing_card and not (SMODS.has_no_rank(playing_card) or SMODS.has_no_suit(playing_card)) then\n\t\t\t\t\t\tlocal rank = playing_card.base.value\n\t\t\t\t\t\tif rank ~= tostring(tonumber(rank)) then\n\t\t\t\t\t\t\trank = rank:sub(1, 1)\n\t\t\t\t\t\tend\n\t\t\t\t\t\tspirit.say = rank..playing_card.base.suit:sub(1, 1)\n\t\t\t\t\telse\n\t\t\t\t\t\tspirit.say = \"Nil\"\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\t\tif i == 1 then\n\t\t\t\t\tcard.ability.extra.say1 = spirit1.say\n\t\t\t\t\tcard.ability.extra.say2 = spirit2.say\n\t\t\t\telse\n\t\t\t\t\tcard.ability.extra.say1 = card.ability.extra.say1..\", \"..spirit1.say\n\t\t\t\t\tcard.ability.extra.say2 = card.ability.extra.say2..\", \"..spirit2.say\n\t\t\t\tend\n\t\t\tend\n\t\telseif context.end_of_round and context.game_over == false and context.main_eval then\n\t\t\tcard.ability.extra.say1 = NOTHING\n\t\t\tcard.ability.extra.say2 = NOTHING\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "tumi",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 1,
+        "y": 4
+      },
+      "raw": "key = \"tumi\",\n\tloc_txt = {\n\t\tname = \"Tumi\",\n\t\ttext = {\n\t\t\t\"If {C:attention}poker hand{} is {C:attention}#1#{}:\",\n\t\t\t\"{X:mult,C:white}X#2#{} Mult and {C:blue}+#3#{} hand\",\n\t\t\t\"{X:mult,C:white}X#4#{} Mult otherwise\",\n\t\t\t\"Poker hand changes\",\n\t\t\t\"after every hand played\"\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 8,\n\tpos = {x = 1, y = 4},\n\tblueprint_compat = true,\n\tconfig = {extra = {poker_hand = \"High Card\", Xmult = 4, hand = 1, penalty = 0, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_tumi_boss\"},\n\t\t{type = \"lose\", key = \"j_dbbq_tumi_nobody\"},\n\t\t{type = \"lose\", key = \"j_dbbq_tumi_waste\"},\n\t\t{type = \"win\", key = \"j_dbbq_tumi_menu\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_tumi\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.poker_hand, card.ability.extra.Xmult, card.ability.extra.hand, card.ability.extra.penalty}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tif context.scoring_name == card.ability.extra.poker_hand then\n\t\t\t\treturn {\n\t\t\t\t\txmult = card.ability.extra.Xmult,\n\t\t\t\t\tmessage = localize(\"ph_you_win\"),\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tease_hands_played(card.ability.extra.hand)\n\t\t\t\t\tend\n\t\t\t\t}\n\t\t\telse\n\t\t\t\treturn {\n\t\t\t\t\txmult = card.ability.extra.penalty,\n\t\t\t\t\tmessage = localize(\"k_nope_ex\")\n\t\t\t\t}\n\t\t\tend\n\t\telseif context.after and context.main_eval and not context.blueprint then\n\t\t\tlocal _poker_hands = {}\n\t\t\tfor k, v in pairs(G.GAME.hands) do\n\t\t\t\tif v.visible and k ~= card.ability.extra.poker_hand then\n\t\t\t\t\t_poker_hands[#_poker_hands + 1] = k\n\t\t\t\tend\n\t\t\tend\n\t\t\tcard.ability.extra.poker_hand = pseudorandom_element(_poker_hands, pseudoseed((card.area and card.area.config.type == \"title\") and \"false_to_do\" or \"to_do\"))\n\t\t\treturn {\n\t\t\t\tmessage = card.ability.extra.poker_hand\n\t\t\t}\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "tpao",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 2,
+        "y": 4
+      },
+      "raw": "key = \"tpao\",\n\tloc_txt = {\n\t\tname = \"Two Places At Once\",\n\t\ttext = {\n\t\t\t\"When {C:attention}Blind{} is selected:\",\n\t\t\t\"Unpin and copy self without modifiers,\",\n\t\t\t\"then pin the copy to the left\",\n\t\t\t\"{C:inactive}(Must have room){}\",\n\t\t\t\"When {C:attention}Blind{} is defeated:\",\n\t\t\t\"If there's a copy to the right,\",\n\t\t\t\"destroy it and gain {X:mult,C:white}X#1#{} Mult\",\n\t\t\t\"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)\",\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 3,\n\tcost = 10,\n\tpos = {x = 2, y = 4},\n\tblueprint_compat = true,\n    config = {extra = {Xmult_gain = 0.15, Xmult = 1, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_tpao_understand\"},\n\t\t{type = \"lose\", key = \"j_dbbq_tpao_life\"},\n\t\t{type = \"any\", key = \"j_dbbq_tpao_forgive\"},\n\t\t{type = \"any\", key = \"j_dbbq_tpao_done\"},\n\t\t{type = \"win\", key = \"j_dbbq_tpao_anew\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_tpao\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.Xmult_gain, card.ability.extra.Xmult}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.Xmult\n\t\t\t}\n\t\telseif not context.blueprint then\n\t\t\tif context.setting_blind and #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then\n\t\t\t\tG.GAME.joker_buffer = G.GAME.joker_buffer + 1\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tlocal copy = SMODS.add_card({key = \"j_dbbq_tpao\"})\n\t\t\t\t\t\tcopy.pinned = true\n\t\t\t\t\t\tcopy.ability.extra.Xmult = card.ability.extra.Xmult\n\t\t\t\t\t\tcard.pinned = nil\n\t\t\t\t\t\tcard.ability.pinned = nil\n\t\t\t\t\t\tG.GAME.joker_buffer = G.GAME.joker_buffer - 1\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend\n\t\t\t\t}))\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize('k_plus_joker'),\n\t\t\t\t\tcolour = G.C.BLUE,\n\t\t\t\t}\n\t\t\telseif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\n\t\t\t\tlocal found_self = false\n\t\t\t\tfor _, joker in ipairs(G.jokers and G.jokers.cards or {}) do\n\t\t\t\t\tif joker == card then\n\t\t\t\t\t\tfound_self = true\n\t\t\t\t\telseif found_self and joker.config.center.key == \"j_dbbq_tpao\" then\n\t\t\t\t\t\tjoker.getting_sliced = true\n\t\t\t\t\t\tjoker:start_dissolve()\n\t\t\t\t\t\tcard.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_gain\n\t\t\t\t\t\treturn {\n\t\t\t\t\t\t\tmessage = localize {type = 'variable', key = 'a_xmult', vars = {card.ability.extra.Xmult}}\n\t\t\t\t\t\t}\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\tend"
+    },
+    {
+      "type": "Joker",
+      "key": "unlucky",
+      "atlas": "dbbq_jokers",
+      "pos": {
+        "x": 3,
+        "y": 4
+      },
+      "raw": "key = \"unlucky\",\n\tloc_txt = {\n\t\tname = \"Unlucky Cat\",\n\t\ttext = {\n\t\t\t\"{X:mult,C:white} X#1# {} Mult\",\n\t\t\t\"If {C:inactive}Glass Card{} shatters\",\n\t\t\t\"or a {C:attention}Lucky Card{} fails,\",\n\t\t\t\"destroy this card\",\n\t\t}\n\t},\n\tatlas = \"dbbq_jokers\",\n\trarity = 2,\n\tcost = 6,\n\tpos = {x = 3, y = 4},\n\tblueprint_compat = true,\n    config = {extra = {Xmult = 2, dbbq_quotes = {\n\t\t{type = \"win\", key = \"j_dbbq_unlucky_boss\"},\n\t\t{type = \"lose\", key = \"j_dbbq_unlucky_simpleton\"},\n\t\t{type = \"win\", key = \"j_dbbq_unlucky_cruise\"},\n\t\t{type = \"lose\", key = \"j_dbbq_unlucky_poppers\"},\n\t}}},\n    loc_vars = function(self, info_queue, card)\n\t\tif card.area and card.area.config.collection then\n\t\t\tinfo_queue[#info_queue + 1] = {key = \"j_dbbq_source_unlucky\", set = \"Other\"}\n\t\tend\n        return {vars = {card.ability.extra.Xmult}}\n    end,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.Xmult\n\t\t\t}\n\t\telseif not context.blueprint then\n\t\t\tlocal meteor = false\n\t\t\tif context.remove_playing_cards then\n\t\t\t\tfor _, removed_card in ipairs(context.removed) do\n\t\t\t\t\tif removed_card.shattered then\n\t\t\t\t\t\tmeteor = true\n\t\t\t\t\t\tbreak\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\telseif context.individual and context.cardarea == G.play and SMODS.has_enhancement(context.other_card, 'm_lucky') and not context.other_card.lucky_trigger then\n\t\t\t\tmeteor = true\n\t\t\tend\n\t\t\tif meteor then\n\t\t\t\tcard.getting_sliced = true\n\t\t\t\tcard:start_dissolve()\n\t\t\tend\n\t\tend\n\tend,\n    in_pool = function(self, args)\n        return false\n    end"
+    },
+    {
+      "type": "Atlas",
+      "key": "dbbq_jokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"dbbq_jokers\",\n    path = \"Jokers.png\",\n    px = 71,\n    py = 95,"
+    },
+    {
+      "type": "Atlas",
+      "key": "dbbq_decks",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"dbbq_decks\",\n    path = \"Decks.png\",\n    px = 71,\n    py = 95,"
+    },
+    {
+      "type": "Atlas",
+      "key": "dbbq_bus",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"dbbq_bus\",\n    path = \"j_dbbq_bus.png\",\n    px = 71,\n    py = 95,"
+    }
+  ],
+  "version": "no-tag"
+}
