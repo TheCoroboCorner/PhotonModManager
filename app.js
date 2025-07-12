@@ -557,23 +557,31 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       card.vars = [];
       card.infoQueue = [];
 
-      const fnMatch = card.raw.match(/loc_vars\s*=\s*function\s*\(\s*self\s*,\s*info_queue\s*,\s*card\s*\)\s*\{([\s\S]*?)\}\s*$/);
-      if (!fnMatch)
-        continue;
-
-      const fnBody = fnMatch[1];
-      const locVarsFn = new Function('self', 'info_queue', 'card', fnBody);
-
-      try
+      const lvIdx = card.raw.indexOf('loc_vars');
+      if (lvIdx !== -1)
       {
-        const result = locVarsFn({}, card.infoQueue, card);
-        if (result && Array.isArray(result.vars))
-          card.vars = result.vars;
+        const fnKeywordIdx = card.raw.indexOf('function', lvIdx);
+        const braceIdx = card.raw.indexOf('{', fnKeywordIdx);
+        const fnBlock = extractBlockContent(card.raw, braceIdx);
+        if (fnBlock)
+        {
+          const fnBody = fnBlock.content;
+          const locVarsFn = new Function('self', 'info_queue', 'card', fnBody);
+
+          try
+          {
+            const result = locVarsFn({}, card.infoQueue, card);
+            if (result && Array.isArray(result.vars))
+              card.vars = result.vars;
+          }
+          catch (err)
+          {
+            console.warn(`loc_vars execution failed for ${card.key}:`, e);
+          }
+        }
+        else console.warn(`Could not extract loc_vars body for ${card.key}`);
       }
-      catch (err)
-      {
-        console.warn(`loc_vars failed for ${card.key}:`, err);
-      }
+      else console.warn(`No loc_vars found in raw for ${card.key}`);
     }
 
     const finalDataForCache = { locMap, atlases: atlasDefs, cards, version: latestTag || 'no-tag' };
