@@ -173,6 +173,8 @@ function formatMarkup(str)
       i += chunk.length;
     }
   }
+
+  return out;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
