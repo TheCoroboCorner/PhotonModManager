@@ -445,7 +445,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       }
     });
 
-    const imgFiles = allGitHubFiles.filter(p => p.toLowerCase().startsWith('assets/2x/') && p.toLowerCase().endsWith('.png'));
+    const imgFiles = allGitHubFiles.filter(p => p.toLowerCase().includes('assets/2x/') && p.toLowerCase().endsWith('.png'));
 
     const locPathInRepo = luaFilesToDownload.find(p => p.endsWith('en-us.lua')) || luaFilesToDownload.find(p => p.endsWith('default.lua'));
     const locTxt = locPathInRepo ? luaFileContents[locPathInRepo] : '';
