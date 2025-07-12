@@ -667,10 +667,65 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
             const args = expr.replace(/^SMODS\.get_probability_vars\s*\(\s*/, '').replace(/\)\s*$/, '').split(',').map(a => a.trim());
             const [ , num, den, id] = args;
 
-            const isNumeric = (x) => !isNaN(parseFloat(x)) && isFinite(x);
+            for (let k = 1; k < 3; k++)
+            {
+              if (args[k] === 'null')
+                args[k] = null;
+              else if (args[k].startsWith('card.'))
+              {
+                const path = args[k].split('.');
+                path.shift();
 
-            const n = isNumeric(num) ? parseFloat(num) : num;
-            const d = isNumeric(num) ? parseFloat(num) : num;
+                let val = card;
+                for (let prop of path)
+                {
+                  if (val == null)
+                    break;
+                  val = val[prop];
+                }
+                args[k] = val;
+              }
+              else if (args[k].startsWith('G.'))
+              {
+                const path = args[k].split('.');
+                let val = CONSTANTS;
+                for (let prop of path)
+                {
+                  if (val == null)
+                    break;
+                  val = val[prop];
+                }
+                args[k] = val;
+              }
+              else if (args[k].startsWith('stg.'))
+              {
+                const path = args[k].split('.');
+                path.shift();
+
+                let val = card.ability.extra;
+                for (let prop of path)
+                {
+                  if (val == null)
+                    break;
+                  val = val[prop];
+                }
+                args[k] = val;
+              }
+              else
+              {
+                const num = parseFloat(args[k]);
+                args[k] = isNaN(num) ? expr : num;
+              }
+            }
+
+            const n = args[1];
+            const d = args[2];
+            const i = args[3];
+
+            // const isNumeric = (x) => !isNaN(parseFloat(x)) && isFinite(x);
+
+            // const n = isNumeric(num) ? parseFloat(num) : num;
+            // const d = isNumeric(num) ? parseFloat(num) : num;
             // const i = id.replace(/^['"]|['"]$/g, '');
             // const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, i);
             // card.vars.push(nn, dd);
