@@ -575,6 +575,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       card.vars = [];
       card.infoQueue = [];
 
+      /*
       const lvIdx = card.raw.indexOf('loc_vars');
       if (lvIdx !== -1)
       {
@@ -605,8 +606,8 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         else console.warn(`Couldn’t extract loc_vars body for ${card.key}`);
       }
       else console.log(`(no loc_vars) for ${card.key}`);
-
-      /*
+      */
+      
       const retMatch = card.raw.match(/return\s*\{[\s\S]*?vars\s*=\s*\{([^}]*)\}/);
       if (retMatch)
       {
@@ -641,6 +642,17 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
             }
             card.vars.push(val);
           }
+          else if (expr.startsWith('SMODS.get_probability_vars'))
+          {
+            const args = expr.replace(/^SMODS\.get_probability_vars\s*\(\s*/, '').replace(/\)\s*$/, '').split(',').map(a => a.trim());
+            const [ , num, den, id] = args;
+
+            const n = parseFloat(num) || 0;
+            const d = parseFloat(den) || 1;
+            const i = id.replace(/^['"]|['"]$/g, '');
+            const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, i);
+            card.vars.push(nn, dd);
+          }
           else
           {
             const num = parseFloat(expr);
@@ -650,7 +662,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         console.log(`[loc_vars] → parsed card.vars for ${card.key}:`, card.vars);
       }
       else console.log(`[loc_vars] (no loc_vars) for ${card.key}`);
-      */
+      
     }
 
     const finalDataForCache = { locMap, atlases: atlasDefs, cards, version: latestTag || 'no-tag' };
