@@ -135,11 +135,11 @@ function formatMarkup(str)
         {
           case 'C':
             if (COLOURS[v])
-              styles.push('color:', COLOURS[v]);
+              styles.push(`color:${COLOURS[v]}`);
             break;
           case 'X':
             if (COLOURS[v])
-              styles.push('background-color:', COLOURS[v]);
+              styles.push(`background-color:${COLOURS[v]}`);
             break;
           case 'V':
             // Not implemented because I'm lazy
@@ -157,7 +157,7 @@ function formatMarkup(str)
             attrs.push(`data-tooltip="${v}"`);
             break;
           case 's':
-            styles.push(`font-size: ${(parseFloat(v) * 100)}%`);
+            styles.push(`font-size:${(parseFloat(v) * 100)}%`);
             break;
         }
       });
