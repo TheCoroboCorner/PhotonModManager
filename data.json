@@ -437,5 +437,26 @@
     "type": "Mod",
     "tags": [],
     "readme": ""
+  },
+  "pi_cubeds_jokers@pi-cubed-cat": {
+    "id": "picubedsjokers",
+    "name": "pi_cubed's Jokers",
+    "author": [
+      "pi_cubed"
+    ],
+    "description": "A collection of vanilla-friendly Jokers made by yours truly. Follow me on bluesky at @picubed.bsky.social!",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "34CEB1",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0530b)"
+    ],
+    "published_at": "2025-07-12T10:44:14.406Z",
+    "type": "Mod",
+    "tags": [
+      "Vanilla Plus",
+      "Jokers"
+    ],
+    "readme": "![Mod Logo](https://i.imgur.com/WgRA0cT.png)\nRequires Steamodded 1.0.0~BETA-0530b or newer\n\nList of Jokers (Modded Wiki Page): https://balatromods.miraheze.org/wiki/Pi_cubed's_Jokers/Jokers\n\nDocumentation spreadsheet (Planned content, patch notes, & more info): https://docs.google.com/spreadsheets/d/1s2MFswjKUeVcx3W0Cylmya1ZfFvx2fiQZD42ZThxd5Q/edit?usp=sharing\n\nDiscord discussion thread: https://discord.com/channels/1116389027176787968/1348621804696240201\n\npi_cubed's Jokers is a lightweight mod with minimal lovely patching and hooks. As a result, there should be few crashes due to conflicts with other mods.\n\n## Recommended Mods\n### Partner by baimao  \npi_cubed's Jokers adds 4 new Partners!  \nhttps://github.com/Icecanno/Partner-API  \n\n### Opandora's Box by opan \nA Joker pack I really enjoy with some interesting synergies, and stellar music.  \nhttps://github.com/ohpahn/opandoras-box\n\n### Extra Credit by CampfireCollective & more  \nhttps://github.com/GuilloryCraft/ExtraCredit\n\n### Neato Jokers by NEATO  \nhttps://github.com/neatoqueen/NeatoJokers\n\n### Paperback by PaperMoon, OppositeWolf770, srockw, GitNether, Victin, BBBalatroMod, & more  \nThe Bisexual Flag Joker is compatible with additional suits.  \nhttps://github.com/GitNether/paperback\n\n### Cryptid by MathIsFun_ & many more  \nThere's some hidden content that requires Cryptid. In addition, I've put a big focus on making sure the changing value mechanics and Misprintize behave properly with all Jokers!  \nhttps://github.com/SpectralPack/Cryptid\n\n## Config Options\nA game restart is required for Config options to take effect.\n\n### New Spectral Cards  \nThis option enables or disables the Spectral Cards Commander, Rupture, and Extinction from appearing.\n\n### Preorder Bonus' Hook  \nTurn this option off to rework the Joker's mechanics very slightly to remove its hook that I (very jankily) implemented. This option may be useful if you're experiencing conflicts regarding setting the cost of Booster Packs.\n\n### Custom Sound Effects  \nEnables or disables any custom sound effects I've implemented into the mod. Currently, this affects Rhythmic Joker, Explosher, On-beat, Off-beat, Pot, and Talking Flower.\n"
   }
 }
