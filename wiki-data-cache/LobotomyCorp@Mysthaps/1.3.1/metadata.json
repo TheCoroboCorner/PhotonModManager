@@ -1,0 +1,2576 @@
+{
+  "locMap": {
+    "und_j_lobc_scorched_girl": {
+      "name": "F-01-02",
+      "text": [
+        "I am coming to you.",
+        "You, who will be reduced",
+        "to ashes like me."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_one_sin": {
+      "name": "O-03-03",
+      "text": [
+        "It feeds on the \"evil\" that",
+        "seeps out during conversations",
+        "between people."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_queen_of_hatred": {
+      "name": "O-01-04",
+      "text": [
+        "In the name of",
+        "Love and Justice~",
+        "Here comes Magical Girl!"
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_happy_teddy_bear": {
+      "name": "T-04-06",
+      "text": [
+        "Its memories began",
+        "with a warm hug."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_red_shoes": {
+      "name": "O-04-08",
+      "text": [
+        "The girl begged in tears.",
+        "\"Mister, please cut off my feet...\""
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_theresia": {
+      "name": "T-09-09",
+      "text": [
+        "\"Do you remember this melody?",
+        "The professor used to play",
+        "this song when the students",
+        "were sleepy. Happy birthday.\""
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_old_lady": {
+      "name": "O-01-12",
+      "text": [
+        "She was so talkative before,",
+        "yet in the end,",
+        "loneliness was the only listener."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_nameless_fetus": {
+      "name": "O-01-15",
+      "text": [
+        "\"One day you'll understand.",
+        "The meaning of the desperation",
+        "on their faces when",
+        "the roulette spins.\""
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_wall_gazer": {
+      "name": "F-01-18",
+      "text": [
+        "Over time, her unbearable sorrow",
+        "grew into a mournful obsession,",
+        "covered in countless, lengthy hairs."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_nothing_there": {
+      "name": "O-06-20",
+      "text": [
+        "And the many shells",
+        "cry out one word,",
+        "\"{C:red}Manager{}\"."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_mhz": {
+      "name": "T-06-27",
+      "text": [
+        "This is a recording of",
+        "the day we must never forget."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_silent_orchestra": {
+      "name": "T-01-31",
+      "text": [
+        "From break and ruin,",
+        "the most beautiful performance begins."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_big_bird": {
+      "name": "O-02-40",
+      "text": [
+        "A month later, we",
+        "came to the conclusion:",
+        "There was no such",
+        "\"beast\" in the forest."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_all_around_helper": {
+      "name": "T-05-41",
+      "text": [
+        "Blood covers the whole floor,",
+        "screams echo,",
+        "people are running away..."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_spider_bud": {
+      "name": "T-02-43",
+      "text": [
+        "Unsurprisingly, not a single employee",
+        "volunteered to retrieve the corpse",
+        "of their cocooned colleague."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_plague_doctor": {
+      "name": "O-01-45",
+      "text": [
+        "I shall heal you,",
+        "curing you of all disease",
+        "and injury you possess."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_whitenight": {
+      "name": "T-03-46",
+      "text": [
+        "Rise, my servants.",
+        "Rise and serve me."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_rudolta": {
+      "name": "F-02-49",
+      "text": [
+        "With my infinite hatred,",
+        "I give you this gift."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_queen_bee": {
+      "name": "T-04-50",
+      "text": [
+        "If you feel an abdominal pain and",
+        "a tingling sensation in your neck,",
+        "the best thing you can do now is",
+        "look at the great blue sky",
+        "you'll never get to see again."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_forsaken_murderer": {
+      "name": "T-01-54",
+      "text": [
+        "\"What's really pitiful is",
+        "people like you dying",
+        "to the likes of me.\""
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_wellcheers": {
+      "name": "F-05-52",
+      "text": [
+        "Somewhere in the distance,",
+        "you can hear seagulls."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_child_galaxy": {
+      "name": "O-01-55",
+      "text": [
+        "A teardrop fell from the child's dewy",
+        "eyes, as stars showered from the sky.",
+        "The world falls into a slumber,",
+        "trapped in an ecstatic lullaby."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_punishing_bird": {
+      "name": "O-02-56",
+      "text": [
+        "People have been committing",
+        "sins since long ago.",
+        "\"Why do they commit sins,",
+        "knowing it's wrong?\""
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_little_red": {
+      "name": "F-01-57",
+      "text": [
+        "I’ll hang his head over my bed.",
+        "Only then can I get up in",
+        "the morning without having a nightmare."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_big_bad_wolf": {
+      "name": "F-02-58",
+      "text": [
+        "Still, it didn’t matter to him.",
+        "After all, he was \"destined\"",
+        "to be a big bad wolf."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_fragment_universe": {
+      "name": "O-03-60",
+      "text": [
+        "You see a song",
+        "in front of you.",
+        "It's approaching, becoming more",
+        "colorful by the second."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_judgement_bird": {
+      "name": "O-02-62",
+      "text": [
+        "Its scale would never",
+        "neglect the weight of",
+        "even the smallest sin."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_king_of_greed": {
+      "name": "O-01-64",
+      "text": [
+        "...Sadness says: \"Begone, pass away!\"",
+        "But greed seeks eternity-",
+        "seeks deep, deep eternity."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_apocalypse_bird": {
+      "name": "O-02-63",
+      "text": [
+        "Then, in the middle of all the",
+        "chaotic cries, someone shouted:",
+        "\"It's the monster! Big, terrible monster",
+        "lives in the dark, black forest!\""
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_price_of_silence": {
+      "name": "O-05-65",
+      "text": [
+        "Time flows as life does,",
+        "and life goes as time does."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_laetitia": {
+      "name": "O-01-67",
+      "text": [
+        "She was so sad that",
+        "she had to leave",
+        "her dear friends behind,",
+        "so she came up with",
+        "a brilliant idea!"
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_fotdb": {
+      "name": "T-01-68",
+      "text": [
+        "Where does one go",
+        "when they die?"
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_mosb": {
+      "name": "T-01-75",
+      "text": [
+        "The smiling faces are",
+        "unfamiliar yet sorrowful."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_heart_of_aspiration": {
+      "name": "T-09-77",
+      "text": [
+        "Excessive aspiration would bring",
+        "about unwarranted frenzy."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_giant_tree_sap": {
+      "name": "T-09-80",
+      "text": [
+        "The tree simply reaped",
+        "from what it sowed."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_shelter": {
+      "name": "T-09-82",
+      "text": [
+        "It literally makes itself into",
+        "\"the safest place on Earth.\""
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_fairy_festival": {
+      "name": "F-04-83",
+      "text": [
+        "Everything will be peaceful",
+        "while you are under",
+        "the fairies' care."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_meat_lantern": {
+      "name": "O-04-84",
+      "text": [
+        "...That's not a flower.",
+        "Order all the employees nearby",
+        "to evacuate immediately."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_iron_maiden": {
+      "name": "T-09-85",
+      "text": [
+        "Now everything will",
+        "be just fine."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_express_train": {
+      "name": "T-09-86",
+      "text": [
+        "When the time comes,",
+        "the train will chug down",
+        "the tracks and sound",
+        "its mighty horn."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_scarecrow_searching": {
+      "name": "F-01-87",
+      "text": [
+        "The city still remained",
+        "a beautiful place where",
+        "the emerald roads sparkled",
+        "bright as ever."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_censored": {
+      "name": "O-03-89",
+      "text": [
+        "If a flaw in the system disables",
+        "the censors covering the Abnormality,",
+        "we will once again have to sincerely",
+        "consider how to dispose of the manager."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_skin_prophecy": {
+      "name": "T-09-90",
+      "text": [
+        "Save us now and forevermore.",
+        "The truth shall set us free."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_shy_look": {
+      "name": "O-01-92",
+      "text": [
+        "It's a good day!",
+        "Are you still shy today?"
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_you_must_be_happy": {
+      "name": "T-09-94",
+      "text": [
+        "Many of those who underwent",
+        "an operation inside the machine",
+        "have found themselves",
+        "rested and healthy again."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_old_faith": {
+      "name": "T-09-97",
+      "text": [
+        "Those betrayed hearts",
+        "sank into the depths,",
+        "slowly forgotten in the",
+        "ever-lengthening corridors of time."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_void_dream": {
+      "name": "T-02-99",
+      "text": [
+        "Please, eat my dreams."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_firebird": {
+      "name": "O-02-101",
+      "text": [
+        "Those who succeed in the hunt",
+        "are granted with one of the",
+        "very feathers that countless",
+        "hunters once yearned for."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_servant_of_wrath": {
+      "name": "O-01-??",
+      "text": [
+        "Friend... A being more special",
+        "than any other, calling and",
+        "greeting each other by name..."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_jolliest_jester": {
+      "name": "M-01-13",
+      "text": [
+        "The most exhilirating feelings",
+        "of joy can be described",
+        "with only a single letter."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_sign_of_roses": {
+      "name": "O-04-21-22",
+      "text": [
+        "{C:red}What {C:attention}do {C:money}you {C:green}wish {C:chips}for?",
+        "A rose can bloom only when",
+        "you clearly wish for something."
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_electric_sheep": {
+      "name": "F-01-20-08",
+      "text": [
+        "The {C:purple}\"electric sheep\"{} seems to be in pain.",
+        "Could it be dreaming?"
+      ],
+      "type": "Other"
+    },
+    "und_j_lobc_youre_bald": {
+      "name": "Bald-Is-Awesome!",
+      "text": [
+        "You turn on your",
+        "electric hair clipper..."
+      ],
+      "type": "Other"
+    },
+    "p_lobc_extraction_normal": {
+      "name": "Extraction Pack",
+      "text": [
+        "Choose {C:attention}#1#{} of up to",
+        "{C:attention}#2#{C:joker} Abnormality{} cards"
+      ],
+      "type": "Other"
+    },
+    "lobc_obs_1": {
+      "name": "",
+      "text": [
+        "{C:inactive}- Observation Level 1 -",
+        "{C:attention}#1#/#2#"
+      ],
+      "type": "Other"
+    },
+    "lobc_obs_2": {
+      "name": "",
+      "text": [
+        "{C:inactive}- Observation Level 2 -",
+        "{C:attention}#1#/#2#"
+      ],
+      "type": "Other"
+    },
+    "lobc_obs_3": {
+      "name": "",
+      "text": [
+        "{C:inactive}- Observation Level 3 -",
+        "{C:attention}#1#/#2#"
+      ],
+      "type": "Other"
+    },
+    "lobc_obs_active_1": {
+      "name": "",
+      "text": [
+        "{C:purple}[Active Ability]",
+        "{C:inactive}- Observation Level 1 -",
+        "{C:attention}#1#/#2#"
+      ],
+      "type": "Other"
+    },
+    "lobc_obs_active_2": {
+      "name": "",
+      "text": [
+        "{C:purple}[Active Ability]",
+        "{C:inactive}- Observation Level 2 -",
+        "{C:attention}#1#/#2#"
+      ],
+      "type": "Other"
+    },
+    "lobc_obs_one_sin_2": {
+      "name": "",
+      "text": [
+        "{C:inactive}- Observation Level 2 -",
+        "Defeat {C:attention}??????????{}."
+      ],
+      "type": "Other"
+    },
+    "lobc_obs_plague_doctor_3": {
+      "name": "",
+      "text": [
+        "{C:inactive}- Observation Level 3 -",
+        "Defeat {C:attention}??????????{}."
+      ],
+      "type": "Other"
+    },
+    "lobc_hysteria": {
+      "name": "Hysteria",
+      "text": [
+        "This Abnormality",
+        "loses {X:mult,C:white} X0.25 {} Mult",
+        "after each blind",
+        "and {C:red}cannot{} be sold"
+      ],
+      "type": "Other"
+    },
+    "lobc_magical_girl_temp": {
+      "name": "Magical Girl",
+      "text": [
+        "{C:attention}Breaches{} when sold"
+      ],
+      "type": "Other"
+    },
+    "lobc_magical_girl": {
+      "name": "Magical Girl",
+      "text": [
+        "When sold or {C:attention}breached{},",
+        "fight this Abnormality at {C:attention}Boss Blind",
+        "{C:inactive}(starting fron Ante {C:attention}6{C:inactive})"
+      ],
+      "type": "Other"
+    },
+    "lobc_gift": {
+      "name": "Gift",
+      "text": [
+        "This card",
+        "was created from",
+        "{C:attention}O-01-67{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_blessed": {
+      "name": "Blessed",
+      "text": [
+        "This card",
+        "was baptized by",
+        "{C:attention}O-01-45{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_blessed_wn": {
+      "name": "Blessed",
+      "text": [
+        "This card",
+        "was baptized by",
+        "{C:attention}T-03-46{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_apostle": {
+      "name": "Apostle",
+      "text": [
+        "{C:red}Debuffed{}",
+        "{C:attention}Perishes{} when played"
+      ],
+      "type": "Other"
+    },
+    "lobc_bless_order": {
+      "name": "Bless Order",
+      "text": [
+        "First non-{C:attention}blessed{}",
+        "playing card {C:attention}played{},",
+        "then in {C:attention}hand{},",
+        "then in {C:attention}deck{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_plague_doctor_debuffed": {
+      "name": "Debuffed",
+      "text": [
+        "All abilities",
+        "are disabled",
+        "No duplicates"
+      ],
+      "type": "Other"
+    },
+    "lobc_amplified": {
+      "name": "Amplified",
+      "text": [
+        "{C:attention}Enhancements{} on",
+        "this card have",
+        "{C:attention}doubled{} values"
+      ],
+      "type": "Other"
+    },
+    "lobc_amplified_1": {
+      "name": "Amplified",
+      "text": [
+        "{C:inactive}...{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_pebble": {
+      "name": "Pebble",
+      "text": [
+        "Given by {C:attention}O-01-55{}",
+        "Effect removed at the",
+        "start of each hand"
+      ],
+      "type": "Other"
+    },
+    "lobc_pebble_1": {
+      "name": "Pebble",
+      "text": [
+        "{C:inactive}...{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_enchanted": {
+      "name": "Enchanted",
+      "text": [
+        "Always drawn to hand",
+        "Returns after {C:blue}play{} or {C:red}discard{}",
+        "Effect removed at the",
+        "end of the {C:attention}Blind{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_perma_enchanted": {
+      "name": "Enchanted",
+      "text": [
+        "Always drawn to hand",
+        "Returns after {C:blue}play{} or {C:red}discard{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_enchanted_1": {
+      "name": "Enchanted",
+      "text": [
+        "{C:inactive}...{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_active_ability": {
+      "name": "Active Ability",
+      "text": [
+        "One of this Abnormality's",
+        "effects can be manually",
+        "activated by selecting it",
+        "then pressing {C:red}USE{}"
+      ],
+      "type": "Other"
+    },
+    "lobc_sin": {
+      "name": "Sin",
+      "text": [
+        "When {C:attention}Blind{} is defeated,",
+        "decays by {C:attention}1{}",
+        "plus {C:attention}half{} at {C:attention}10+ {C:red}Sin"
+      ],
+      "type": "Other"
+    },
+    "lobc_marked": {
+      "name": "Marked",
+      "text": [
+        "Marked by {C:attention}F-01-57"
+      ],
+      "type": "Other"
+    },
+    "lobc_devoured": {
+      "name": "Devoured",
+      "text": [
+        "Devoured by {C:attention}F-02-58",
+        "Removed from Joker Slots",
+        "and becomes {C:red}debuffed"
+      ],
+      "type": "Other"
+    },
+    "lobc_prey_mark": {
+      "name": "Prey Mark",
+      "text": [
+        "Returns to hand after {C:blue}play{}",
+        "{C:red}Destroyed{} when discarded"
+      ],
+      "type": "Other"
+    },
+    "lobc_shield": {
+      "name": "Shield",
+      "text": [
+        "Reduces final score by {C:blue}Shield",
+        "{C:green}[Hand Start]{} Removes {C:blue}Shield"
+      ],
+      "type": "Other"
+    },
+    "lobc_metallic": {
+      "name": "Metallic Cards",
+      "text": [],
+      "type": "Other"
+    },
+    "j_lobc_scorched_girl": {
+      "name": "Scorched Girl",
+      "text": [
+        "When {C:attention}Blind{} is selected,",
+        "{C:attention}-#1#%{} Blind Size",
+        "{C:red}Debuffs{} first hand drawn"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_one_sin": {
+      "name": "One Sin and Hundreds of Good Deeds",
+      "text": [
+        "Played cards give {C:mult}+#1#{} Mult when scored",
+        "Punishment shall begin to",
+        "rain down {C:attention}WhiteNight{}."
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_queen_of_hatred": {
+      "name": "The Queen of Hatred",
+      "text": [
+        "{X:mult,C:white} X#1# {} Mult",
+        "If score is at least {X:mult,C:white} X3 {} {C:attention}Blind Size{},",
+        "this Abnormality enters {C:attention}Hysteria{}",
+        "At {X:mult,C:white} X1 {} Mult,",
+        "this Abnormality {C:attention}breaches{}"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_happy_teddy_bear_name_1": {
+      "name": "A Teddy Bear",
+      "text": [],
+      "type": "Joker"
+    },
+    "j_lobc_happy_teddy_bear": {
+      "name": "Happy Teddy Bear",
+      "text": [
+        "Upgrades level of played",
+        "{C:attention}poker hand{} once",
+        "If {C:attention}consecutive{} hands are",
+        "the same {C:attention}poker hand{},",
+        "reduce its level to {C:attention}0{}"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_red_shoes": {
+      "name": "Red Shoes",
+      "text": [
+        "Played cards permanently gain",
+        "{C:chips}+#1#{} Chips when scored",
+        "When {C:attention}Blind{} is selected, forces",
+        "{C:attention}2{} cards to always be selected",
+        "Destroys scoring cards with",
+        "{C:chips}100{} or more bonus Chips"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_theresia": {
+      "name": "Theresia",
+      "text": [
+        "This Abnormality gains",
+        "{C:chips}+#2#{} Chips each hand",
+        "{C:inactive}(Currently {C:chips}+#1#{C:inactive} chips)",
+        "After the third hand played,",
+        "{C:red}debuffs{} all {C:attention}playing cards{}"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_old_lady": {
+      "name": "Old Lady",
+      "text": [
+        "This Abnormality gains",
+        "{C:mult}+#2#{} Mult each hand",
+        "When another Joker is added,",
+        "this Abnormality loses {C:mult}#3#{} Mult",
+        "{C:inactive}(Currently {C:mult}#6##1#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_nameless_fetus": {
+      "name": "Nameless Fetus",
+      "text": [
+        "{X:mult,C:white} X#2# {} Mult after playing chosen hand type",
+        "{X:mult,C:white} X#3# {} Mult if other hand types are played",
+        "If the {C:attention}first hand{} of round has",
+        "only {C:attention}1{} card, destroy it",
+        "and change chosen hand type",
+        "{C:inactive}(Chosen hand type: {C:attention}#1#{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_wall_gazer_name_1": {
+      "name": "Wall Gazer",
+      "text": [],
+      "type": "Joker"
+    },
+    "j_lobc_wall_gazer": {
+      "name": "The Lady Facing the Wall",
+      "text": [
+        "Retriggers the {C:attention}lowest{} ranked",
+        "scoring card in {C:attention}first hand{}",
+        "randomly from {C:attention}#1#{} to {C:attention}#2#{} times",
+        "{C:attention}Playing cards{} are drawn {C:attention}face{}",
+        "{C:attention}down{} until hand is played"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_nothing_there": {
+      "name": "Nothing There",
+      "text": [
+        "Copies the abilities of adjacent {C:attention}Jokers{}",
+        "When {C:attention}Blind{} is defeated, moves to",
+        "a random Joker Slot",
+        "{C:red}Destroys{} Jokers copied last round and",
+        "take its skin if this Abnormality",
+        "is adjacent to one",
+        "{C:inactive}(once per round)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_mhz": {
+      "name": "1.76 MHz",
+      "text": [
+        "Removes visible playing card",
+        "ranks and suits",
+        "Played cards give {C:chips}+???{} chips",
+        "and {C:mult}+???{} Mult when scored"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_silent_orchestra": {
+      "name": "The Silent Orchestra",
+      "text": [
+        "When round starts, shuffles",
+        "{C:attention}#1#{} into the deck",
+        "When {C:attention}#1#{} is drawn,",
+        "{C:attention}#2#{} is shuffled next Blind",
+        "When round ends, or when this Abnormality",
+        "is removed, removes all {C:attention}Movements"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_big_bird": {
+      "name": "Big Bird",
+      "text": [
+        "When round begins, {C:enchanted}enchants{}",
+        "a random playing card",
+        "Scoring {C:enchanted}Enchanted{} cards give {X:mult,C:white} X#1# {} Mult",
+        "When round ends, if no {C:enchanted}Enchanted{}",
+        "cards were scored this round, destroy",
+        "them and lose {C:money}$#2#{} per card"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_all_around_helper": {
+      "name": "All-Around Helper",
+      "text": [
+        "This Abnormality gains {X:mult,C:white} X#2# {} Mult",
+        "after a {C:attention}Blind{} is defeated in {C:attention}1{} hand",
+        "After gaining Mult {C:attention}4{} times,",
+        "destroys a random Joker",
+        "{C:inactive}(Currently {X:mult,C:white} X#1# {C:inactive} Mult)",
+        "{C:inactive}Activates after {C:attention}#3#{C:inactive} blind(s)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_spider_bud": {
+      "name": "Spider Bud",
+      "text": [
+        "{C:attention}+#1#{} hand size",
+        "{C:red}Destroys{} the first {C:red}discarded{} card",
+        "each round for {C:attention}+#2#{} hand size,",
+        "resets when {C:attention}Boss Blind{} is defeated"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_plague_doctor": {
+      "name": "Plague Doctor",
+      "text": [
+        "{C:attention}Baptizes{} a playing card each hand",
+        "Played {C:attention}blessed{} cards give {C:mult}+#1#{} Mult",
+        "After {C:attention}12{} cards are {C:attention}blessed{},",
+        "{C:attention}breach{}.",
+        "{C:inactive}(Currently {C:attention}#2#{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_whitenight": {
+      "name": "WhiteNight",
+      "text": [
+        "{C:dark_edition}+1{} Joker Slot",
+        "{C:attention}Baptizes{} a playing card each hand",
+        "Played {C:attention}blessed{} cards give {C:mult}+#1#{} Mult",
+        "Retrigger {C:attention}blessed{} cards {C:attention}#2#{} times"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_rudolta": {
+      "name": "Rudolta of the Sleigh",
+      "text": [
+        "When a card is sold, lose {C:attention}money{}",
+        "equals to {X:money,C:white} X#3# {} its sell cost,",
+        "then creates a card of the same",
+        "{C:attention}type{} and/or {C:attention}rarity{}",
+        "{C:inactive}(For Abnormalities, same Risk Level)",
+        "Does not activate on cards created",
+        "by this Abnormality"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_queen_bee": {
+      "name": "Queen Bee",
+      "text": [
+        "Playing cards permanently gain",
+        "{C:mult}+#1#{} Mult when scored",
+        "Reduces the rank of each",
+        "scoring card by {C:attention}1{} after scoring",
+        "Cards that cannot rank down are",
+        "transformed into {C:attention}Worker Bee{} instead"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_forsaken_murderer": {
+      "name": "Forsaken Murderer",
+      "text": [
+        "First scoring card",
+        "gives {X:mult,C:white} X#1# {} Mult",
+        "{C:red}Debuffs{} last scoring card"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_wellcheers": {
+      "name": "Opened Can of WellCheers",
+      "text": [
+        "On {C:blue}play{} or {C:red}discard{},",
+        "changes the displayed can's color",
+        "{C:chips}+#2#{} chips if displayed can is {C:blue}blue{}",
+        "{C:mult}+#1#{} Mult if displayed can is {C:red}red{}",
+        "If someone offers you an already",
+        "opened can of {C:purple}grape-flavored soda{},",
+        "you most definitely should not drink it."
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_child_galaxy": {
+      "name": "Child of the Galaxy",
+      "text": [
+        "At the start of each hand, gives",
+        "{C:pebble}Pebble{} to {C:attention}5{} random cards in hand",
+        "Gives {X:purple,C:white} X#1# {} of played {C:attention}poker hand{}'s",
+        "base {C:chips}Chips{} and {C:mult}Mult{}",
+        "Gains {X:purple,C:white} X#2# {} per scoring card with {C:pebble}Pebble{},",
+        "and loses {X:purple,C:white} X#3# {} per scoring card without"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_punishing_bird_name_2": {
+      "name": "Small Bird",
+      "text": [],
+      "type": "Joker"
+    },
+    "j_lobc_punishing_bird": {
+      "name": "Punishing Bird",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "This Abnormality gains",
+        "{C:dark_edition}Negative{} after {C:attention}9{} rounds",
+        "{C:inactive}(Currently {C:attention}#2#{C:inactive} round(s)){}",
+        "If this Abnormality is {C:attention}sold{},",
+        "immediately {C:attention}lose{} the game"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_punishing_bird_apoc": {
+      "name": "Punishing Bird",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "This Abnormality gains",
+        "{C:dark_edition}Negative{} after {C:attention}9{} rounds",
+        "{C:inactive}(Currently {C:attention}#2#{C:inactive} round(s)){}",
+        "When this Abnormality is {C:attention}sold{}, encounter",
+        "an {C:attention}Abnormality{} next {C:attention}Boss Blind"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_little_red": {
+      "name": "Little Red Riding Hooded Mercenary",
+      "text": [
+        "If there is no {C:marked}Prey{}, a random",
+        "playing card becomes {C:marked}Marked{}",
+        "{C:purple}[Active Ability]",
+        "Pay {C:money}$#4#{} to destroy the {C:marked}Prey{} in hand",
+        "Increases cost by {C:money}$#9#{} after use",
+        "When the {C:marked}Prey{} is destroyed, earn {C:money}$#1#{},",
+        "and this Abnormality gains {C:mult}+#2#{} Mult",
+        "{C:inactive}(Currently {C:mult}#10##3#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_little_red_alt": {
+      "name": "Little Red Riding Hooded Mercenary",
+      "text": [
+        "{C:marked}Marks{} {C:attention}F-02-58{}",
+        "{C:purple}[Active Ability]",
+        "Pay {C:money}$#4#{} to destroy the {C:marked}Marked{} card",
+        "Increases cost by {C:money}$#9#{} after use",
+        "When the {C:marked}Prey{} is destroyed, earn {C:money}$#1#{},",
+        "and this Abnormality gains {C:mult}+#2#{} Mult",
+        "If the {C:marked}Prey{} is removed in any other way,",
+        "this Abnormality loses {C:mult}200{} Mult and",
+        "becomes {C:dark_edition}Eternal{}",
+        "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_big_bad_wolf": {
+      "name": "Big and Will be Bad Wolf",
+      "text": [
+        "When {C:attention}Blind{} is selected,",
+        "{C:devoured}devours{} a random Joker",
+        "{C:purple}[Active Ability]",
+        "Returns the {C:devoured}devoured{} Joker",
+        "When {C:attention}Blind{} is defeated,",
+        "if a Joker is {C:devoured}devoured{}, {C:red}destroy{} it for",
+        "this Abnormality to gain {C:chips}+#1#{} chips",
+        "{C:inactive}(Currently {C:chips}+#2#{C:inactive} chips)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_big_bad_wolf_alt": {
+      "name": "Big and Will be Bad Wolf",
+      "text": [
+        "When {C:attention}Blind{} is selected,",
+        "{C:devoured}devours {C:attention}F-01-57",
+        "{C:purple}[Active Ability]",
+        "Returns the {C:devoured}devoured{} Abnormality",
+        "When {C:attention}Blind{} is defeated,",
+        "if {C:attention}F-01-57{} is {C:devoured}devoured{}, {C:red}destroy{} it for",
+        "this Abnormality to gain {C:chips}+#1#{} chips",
+        "{C:inactive}(Currently {C:chips}+#2#{} chips)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_fragment_universe": {
+      "name": "Fragment of the Universe",
+      "text": [
+        "If {C:attention}poker hand{} contains {C:attention}3{}",
+        "different suits, {C:green}#1# in #2#{} chance to",
+        "create a random {C:dark_edition}Perishable {C:planet}Planet{} card",
+        "{C:green}#1# in #3#{} chance to create a",
+        "random {C:dark_edition}Eternal {C:spectral}Spectral{} card",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_judgement_bird_name_2": {
+      "name": "Long Bird",
+      "text": [],
+      "type": "Joker"
+    },
+    "j_lobc_judgement_bird": {
+      "name": "Judgement Bird",
+      "text": [
+        "Each card in full hand adds {C:attention}+1 {C:red}Sin",
+        "to all playing cards of that rank",
+        "Destroys scoring cards with {C:attention}5+ {C:red}Sin",
+        "This Abnormality gains {X:mult,C:white} X#1# {} Mult for each",
+        "{C:red}Sin{} in destroyed cards from any source",
+        "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_apocalypse_bird": {
+      "name": "Apocalypse Bird",
+      "text": [
+        "{C:dark_edition}+1{} Joker Slot",
+        "{C:attention}Permanently{} {C:enchanted}enchants{} leftmost",
+        "{C:enchanted}unenchanted{} scoring card,",
+        "and it gains {C:dark_edition}Negative{}",
+        "Scoring {C:enchanted}Enchanted{} cards give {X:mult,C:white} X#1# {} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_king_of_greed": {
+      "name": "The King of Greed",
+      "text": [
+        "Played {C:attention}Kings{} give {C:money}$#1#{} when scored",
+        "Decreases money given by {C:money}$#2#{}",
+        "if played hand triggered this Abnormality",
+        "If money spent this shop is not more than",
+        "the previous, this Abnormality {C:attention}breaches"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_price_of_silence": {
+      "name": "The Price of Silence",
+      "text": [
+        "Converts the {C:attention}rightmost{} scoring",
+        "card to the {C:attention}leftmost{} scoring card",
+        "After {C:attention}13{} seconds without {C:blue}play{} or {C:red}discard{},",
+        "{C:red}destroys{} a random Joker",
+        "Does not trigger if this {C:red}destroyed{} a Joker",
+        "this round or no Jokers are destructible"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_laetitia_name_1": {
+      "name": "A Wee Witch",
+      "text": [],
+      "type": "Joker"
+    },
+    "j_lobc_laetitia": {
+      "name": "Laetitia",
+      "text": [
+        "If only {C:hearts}Hearts{} cards score, copy",
+        "non-{C:attention}marked{}, scoring cards to hand",
+        "If no {C:hearts}Hearts{} are scored,",
+        "destroys all scoring cards",
+        "When this Abnormality is removed,",
+        "{C:attention}permanently{} {C:red}debuffs{} all {C:attention}marked{} cards"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_fotdb": {
+      "name": "Funeral of the Dead Butterflies",
+      "text": [
+        "This Abnormality is always {C:dark_edition}Eternal{}",
+        "{X:mult,C:white} X#2# {} Mult for each {C:dark_edition}Eternal{} Joker",
+        "{C:inactive}(Currently {X:mult,C:white} X#1# {C:inactive} Mult)",
+        "When {C:attention}Boss Blind{} is defeated,",
+        "adds {C:dark_edition}Eternal{} to a random Joker"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_mosb": {
+      "name": "The Mountain of Smiling Bodies",
+      "text": [
+        "Destroys all {C:attention}scored{} cards",
+        "This Abnormality gains {C:chips}+#3#{} Chips and",
+        "{C:mult}+#4#{} Mult when it destroys a card",
+        "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips and {C:mult}+#2#{C:inactive} Mult)",
+        "Increase {C:chips}Chips{} and {C:mult}Mult{} gain by {C:attention}#8#{}",
+        "if {C:attention}5{} cards are destroyed at once"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_heart_of_aspiration": {
+      "name": "The Heart of Aspiration",
+      "text": [
+        "{C:blue}Hands{} and {C:red}Discards{} are",
+        "not reset after each {C:attention}Blind{}",
+        "This Abnormality gains {X:mult,C:white} X#2# {}",
+        "Mult after each hand",
+        "{C:inactive}(Currently {X:mult,C:white} X#1# {C:inactive} Mult)",
+        "Resets {C:blue}Hands{}, {C:red}Discards{} and {C:mult}Mult{}",
+        "after defeating {C:attention}Boss Blind{}"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_giant_tree_sap": {
+      "name": "Giant Tree Sap",
+      "text": [
+        "{C:purple}[Active Ability]",
+        "Gives {C:money}$#2#{} and {C:blue}+#1#{} hand this round",
+        "{C:attention}#3#%{} chance to set hands to {C:blue}1{},",
+        "money to {C:attention}0{} and {C:red}self destructs{}",
+        "Increases chance by {C:attention}#4#%{} on use",
+        "{C:inactive}(max. #5#%)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_shelter": {
+      "name": "Shelter from the 27th of March",
+      "text": [
+        "{C:purple}[Active Ability]",
+        "Become {C:attention}Sheltered{}, {C:attention}halving{} this Abnormality's {C:mult}Mult{}",
+        "Use {C:purple}[Active Ability]{} again to remove",
+        "{C:attention}Sheltered{}, {C:attention}doubling{} this Abnormality's {C:mult}Mult{}",
+        "When hand is played while {C:attention}Sheltered{}, disables",
+        "{C:attention}Boss Blind{}, gives {X:mult,C:white} X#1# {} Mult after other",
+        "Jokers and {C:attention}halves{} this Abnormality's {C:mult}Mult{}"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_fairy_festival": {
+      "name": "Fairy Festival",
+      "text": [
+        "When entering a shop, sets a",
+        "random shop item's price to {C:money}$0{}",
+        "{C:inactive}(except Vouchers)",
+        "Buying a different item or rerolling",
+        "the affected item {C:red}destroys{}",
+        "all shop items and {C:attention}locks rerolls{}"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_meat_lantern": {
+      "name": "Meat Lantern",
+      "text": [
+        "When shop is {C:attention}rerolled{}, add a",
+        "random {C:attention}Booster Pack{} to the shop",
+        "{C:inactive}(max. {C:attention}#1#{C:inactive} per shop)",
+        "A random card in {C:attention}Booster Packs{}",
+        "gains {C:lantern}Lantern",
+        "If the {C:lantern}Lantern{} is selected,",
+        "permanently reduce {C:attention}hand size{} by {C:attention}#2#"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_iron_maiden": {
+      "name": "We Can Change Anything",
+      "text": [
+        "{C:purple}[Active Ability]",
+        "Every {C:attention}#1#{} seconds, {C:blue}-#2#{} hands and",
+        "this Abnormality gains {C:chips}+#3#{} chips",
+        "{C:inactive}(Currently {C:chips}+#6#{C:inactive} chips)",
+        "Every {C:attention}5{} times this gains Chips, increases",
+        "hands loss by {C:blue}-#4#{} and {C:attention}halves{} delay",
+        "When hand is played, becomes {C:red}inactive{}",
+        "and resets {C:red}all{} values"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_express_train": {
+      "name": "Express Train to Hell",
+      "text": [
+        "Every {C:attention}#3#{} seconds when in control,",
+        "a light will be {C:enchanted}illuminated{}",
+        "{C:purple}[Active Ability]",
+        "Give {C:mult}XMult{} and {C:money}money{} next hand based",
+        "on {C:enchanted}illuminated{} lights, then resets lights",
+        "{C:inactive}(Gives {X:mult,C:white} X#1# {C:inactive} Mult and {C:money}$#2#{C:inactive})",
+        "When {C:attention}4{} lights are lit up and another",
+        "is {C:enchanted}illuminated{}, randomly {C:red}destroys{} half of",
+        "owned Jokers, then resets lights"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_scarecrow_searching": {
+      "name": "Scarecrow Searching for Wisdom",
+      "text": [
+        "After each Blind, create {C:attention}2{}",
+        "{C:tarot}Wisdom{} cards {C:inactive}(Must have room)",
+        "After each hand, destroy a {C:tarot}Wisdom{} to give",
+        "scoring cards an {C:red}Enhancement{}, {C:blue}Seal{} or {C:dark_edition}Edition{}",
+        "If there are none, increase Blind Size by",
+        "{C:attention}10%{} per {C:tarot}Wisdom{} created {C:inactive}(once per round){}",
+        "{C:inactive}({C:tarot}Wisdoms{C:inactive} created: {C:attention}#1#{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_censored": {
+      "name": "CENSORED",
+      "text": [
+        "When acquired, {C:red}[CENSORED]{} {C:attention}10{} random cards",
+        "Removes all other descriptions",
+        "Each {C:red}[CENSORED]{} Joker gives {C:mult}+#1#{} Mult,",
+        "consumable gives {X:mult,C:white} X#2# {} Mult, and",
+        "card in hand gives {C:chips}+#3#{} chips",
+        "After each hand, {C:red}[CENSORED]{} a random card",
+        "{C:inactive}(Joker, consumable or playing card)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_skin_prophecy": {
+      "name": "Skin Prophecy",
+      "text": [
+        "{C:purple}[Active Ability]",
+        "{C:attention}Halves{} reroll cost this shop",
+        "{C:inactive}(rounded down, 10 uses per shop)",
+        "{C:attention}Doubles{} reroll cost increase this shop"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_shy_look": {
+      "name": "Today's Shy Look",
+      "text": [
+        "+{C:attention}Variable{} {C:chips}Chips{} and {C:mult}Mult{}",
+        "The face changes every {C:attention}#1#{} seconds",
+        "Happier faces give more Chips and Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_you_must_be_happy": {
+      "name": "You Must Be Happy",
+      "text": [
+        "When sold, modify {C:chips}Chips{}, {C:mult}Mult{} and {X:mult,C:white} XMult {}",
+        "sources for this {C:attention}Ante{} by {X:blue,C:white} X#1# {} or {X:red,C:white} X#2# {}",
+        "After each round, multiply values by",
+        "{X:blue,C:white} X#3# {} and {X:red,C:white} X#4# {}, then reduces delay",
+        "After {C:attention}6{} rounds held, destroys itself",
+        "and activates the {C:red}NO{} effect",
+        "{C:inactive}(Currently {C:attention}#8#{C:inactive} Round(s))"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_old_faith": {
+      "name": "Old Faith and Promise",
+      "text": [
+        "When {C:attention}Blind{} is selected, add",
+        "an {C:dark_edition}edition{} to a random card",
+        "{C:inactive}(Joker, consumable or playing card)",
+        "{C:green}#1# in #2#{} chance to",
+        "{C:attention}permanently{} {C:red}debuff{} it instead"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_void_dream": {
+      "name": "Void Dream",
+      "text": [
+        "Played cards have a {C:green}#1# in #2#{} chance",
+        "to give {C:money}$#3#{} when scored",
+        "Scoring cards have a fixed",
+        "{C:green}1 in 4{} chance to not score"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_firebird": {
+      "name": "The Firebird",
+      "text": [
+        "Cannot earn more than {C:money}$3{} at once",
+        "This Abnormality gains {X:mult,C:white} X#2# {} Mult",
+        "for each {C:money}${} lost by this effect",
+        "{s:0.9}(resets at end of round){}",
+        "{C:inactive}(Currently {X:mult,C:white} X#3# {C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_servant_of_wrath": {
+      "name": "The Servant of Wrath",
+      "text": [
+        "When round starts, plays {C:attention}5{}",
+        "random cards from your hand",
+        "Scoring cards this way give {X:mult,C:white} X#1# {} Mult",
+        "If {C:attention}three{} hands played this way are",
+        "{C:attention}High Cards{}, this Abnormality {C:attention}breaches{}"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_jolliest_jester": {
+      "name": "The Jolliest Jester",
+      "text": [
+        "{C:attention}Jolly Jokers{} can be bought",
+        "ignoring {C:attention}Joker Slot{} limit",
+        "{C:green}#1# in #2#{} chance for cards in shop",
+        "to be replaced by {C:attention}Jolly Joker",
+        "Increase base chance by {C:green}#3#{} if failed,",
+        "otherwise, {C:attention}halves{} chance",
+        "{C:inactive,s:0.8}(chance shared by all copies of this Abnormality)"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_sign_of_roses": {
+      "name": "Sign of Roses",
+      "text": [
+        "Adds {C:attention}#1#{} round to held {C:colourcard}Colour Cards{} for",
+        "every {C:attention}2{} unique suits in played hand",
+        "Scoring cards give {X:mult,C:white} X#2# {} Mult if",
+        "a playing card of the same suit",
+        "has already been scored this hand"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_sign_of_roses_alt": {
+      "name": "Sign of Roses",
+      "text": [
+        "This Abnormality gains {X:mult,C:white} X#3# {} Mult for",
+        "every {C:attention}2{} unique suits in played hand",
+        "{C:inactive}(Currently {X:mult,C:white} X#4# {C:inactive} Mult)",
+        "Scoring cards give {X:mult,C:white} X#2# {} Mult if",
+        "a playing card of the same suit",
+        "has already been scored this hand"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_electric_sheep": {
+      "name": "Dreaming Electric Sheep",
+      "text": [
+        "All non-{C:attention}Metallic Cards{} held in hand",
+        "are {C:red}debuffed{} for the entire round",
+        "{C:attention}Metallic Cards{} held in hand trigger",
+        "their scoring and end of round effects",
+        "once when a {C:attention}Metallic Card{} is scored",
+        "Does not trigger if more than {C:attention}5",
+        "{C:attention}Metallic Cards{} or {C:attention}none{} are held in hand"
+      ],
+      "type": "Joker"
+    },
+    "j_lobc_youre_bald": {
+      "name": "You're Bald...",
+      "text": [
+        "Future Jokers may",
+        "become {C:attention}bald{}"
+      ],
+      "type": "Joker"
+    },
+    "c_lobc_wisdom": {
+      "name": "Wisdom",
+      "text": [
+        "Creates a",
+        "{C:attention}playing card{}"
+      ],
+      "type": "EGO_Gift"
+    },
+    "c_lobc_tt2": {
+      "name": "TT2 Protocol",
+      "text": [
+        "Sets {C:attention}Ante{} to next",
+        "multiple of {C:attention}8{}, minus {C:attention}1{}",
+        "Destroy {C:attention}#1#{} playing cards",
+        "per {C:attention}Ante{} skipped"
+      ],
+      "type": "EGO_Gift"
+    },
+    "m_lobc_worker_bee": {
+      "name": "Worker Bee",
+      "text": [
+        "No rank or suit",
+        "Cannot change",
+        "enhancements"
+      ],
+      "type": "Enhanced"
+    },
+    "bl_lobc_whitenight": {
+      "name": "WhiteNight",
+      "text": [
+        "Destroyed Apostles reduce",
+        "Blind Size by 5X Base"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_apocalypse_bird": {
+      "name": "Apocalypse Bird",
+      "text": [
+        "\"It's the monster!",
+        "Big, terrible monster",
+        "lives in the dark,",
+        "black forest!\""
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_apocalypse_bird_effect": {
+      "name": "Apocalypse Bird",
+      "text": [
+        "Hand scores X0.3 less",
+        "for each #1# played"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_ab_beak": {
+      "name": "Small Beak",
+      "text": [
+        "???"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_ab_beak_effect": {
+      "name": "Small Beak",
+      "text": [
+        "No repeat hands",
+        "this blind"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_ab_eyes": {
+      "name": "Big Eyes",
+      "text": [
+        "???"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_ab_eyes_effect": {
+      "name": "Big Eyes",
+      "text": [
+        "Enchants leftmost unenchanted",
+        "playing card each hand"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_ab_arms": {
+      "name": "Long Arms",
+      "text": [
+        "???"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_ab_arms_effect": {
+      "name": "Long Arms",
+      "text": [
+        "Each unique rank in",
+        "played hand gains +1 Sin"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_mg_hatred": {
+      "name": "Hatred",
+      "text": [
+        "Marks #1# cards each hand,",
+        "destroy Marked cards",
+        "when hand is played",
+        "Hysteria: #2#"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dawn_base": {
+      "name": "Dawn Ordeal",
+      "text": [
+        "Fight against a",
+        "random Dawn Ordeal"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dawn_green": {
+      "name": "Green Dawn",
+      "text": [
+        "Reduces the level of",
+        "first hand played"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dawn_amber": {
+      "name": "Amber Dawn",
+      "text": [
+        "Debuffs 4 cards in deck",
+        "after playing a hand"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dawn_crimson": {
+      "name": "Crimson Dawn",
+      "text": [
+        "If 4 or more hands",
+        "played this round, all",
+        "cards debuffed until",
+        "a Joker is sold"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dawn_violet": {
+      "name": "Violet Dawn",
+      "text": [
+        "-1 hand if hand doesn't",
+        "score at least 20% of blind"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_noon_base": {
+      "name": "Noon Ordeal",
+      "text": [
+        "Fight against a",
+        "random Noon Ordeal"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_noon_green": {
+      "name": "Green Noon",
+      "text": [
+        "Reduces the level of played",
+        "poker hand if highest level"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_noon_indigo": {
+      "name": "Indigo Noon",
+      "text": [
+        "Increase Blind Size by X0.1",
+        "Base per card discarded"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_noon_crimson": {
+      "name": "Crimson Noon",
+      "text": [
+        "Immediately fight Crimson Dawn",
+        "after beating this Blind"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_noon_violet": {
+      "name": "Violet Noon",
+      "text": [
+        "-2 hands if hand scores",
+        "less than 20% of blind,",
+        "+X0.2 Blind Size per",
+        "Consumable slot"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dusk_base": {
+      "name": "Dusk Ordeal",
+      "text": [
+        "Fight against a",
+        "random Dusk Ordeal"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dusk_green": {
+      "name": "Green Dusk",
+      "text": [
+        "Decreases level of played",
+        "poker hand twice"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dusk_amber": {
+      "name": "Amber Dusk",
+      "text": [
+        "Random card debuffed",
+        "per card drawn, destroys played",
+        "debuffed cards before scoring"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_dusk_crimson": {
+      "name": "Crimson Dusk",
+      "text": [
+        "Immediately fight Crimson Noon",
+        "after beating this Blind"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_midnight_base": {
+      "name": "Midnight Ordeal",
+      "text": [
+        "Fight against a",
+        "random Midnight Ordeal"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_midnight_green": {
+      "name": "Green Midnight",
+      "text": [
+        "Halves level of",
+        "played poker hand",
+        "(rounded down)"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_midnight_amber": {
+      "name": "Amber Midnight",
+      "text": [
+        "Debuffs half of deck,",
+        "destroys played debuffed",
+        "cards before scoring"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_midnight_violet": {
+      "name": "Violet Midnight",
+      "text": [
+        "Lose if hand scores",
+        "less than 30% of blind,",
+        "+X1 Blind Size per",
+        "Joker slot, minus 3"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_erlking_heathcliff": {
+      "name": "Erlking Heathcliff",
+      "text": [],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist": {
+      "name": "The Red Mist",
+      "text": [
+        "The Red Mist",
+        "makes her return."
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_1": {
+      "name": "",
+      "text": [
+        "[PERMANENT]",
+        "Score is capped at",
+        "15% Blind Size each hand"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_2": {
+      "name": "",
+      "text": [
+        "Destroy 1-3 cards",
+        "held in hand"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_3": {
+      "name": "",
+      "text": [
+        "Lose $1 per played card,",
+        "destroy it if cannot afford"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_4": {
+      "name": "",
+      "text": [
+        "Must play 5 cards"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_5": {
+      "name": "",
+      "text": [
+        "Must play High Card"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_6": {
+      "name": "",
+      "text": [
+        "All Enhanced cards",
+        "are debuffed"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_7": {
+      "name": "",
+      "text": [
+        "All face cards",
+        "are debuffed"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_8": {
+      "name": "",
+      "text": [
+        "Base Chips and",
+        "Mult are halved"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_11": {
+      "name": "",
+      "text": [
+        "[PERMANENT]",
+        "Return all cards from",
+        "hand and discard to deck",
+        "at the start of each Phase",
+        "Refresh Discards"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_17": {
+      "name": "",
+      "text": [
+        "No hands allowed until",
+        "no consumables left"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_13": {
+      "name": "",
+      "text": [
+        "Destroy 1-3 played cards"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_14": {
+      "name": "",
+      "text": [
+        "Permanently debuff all",
+        "played Enhanced cards"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_15": {
+      "name": "",
+      "text": [
+        "Lose $2 per card in hand,",
+        "destroy it if cannot afford"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_16": {
+      "name": "",
+      "text": [
+        "Must play 5 cards"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_12": {
+      "name": "",
+      "text": [
+        "Debuff 1-3 random Jokers"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_18": {
+      "name": "",
+      "text": [
+        "Hand must contain",
+        "three different suits"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_19": {
+      "name": "",
+      "text": [
+        "Halves Base Mult, sets",
+        "Base Chips to Base Mult"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_21": {
+      "name": "",
+      "text": [
+        "[ENTIRE PHASE]",
+        "At the start of every",
+        "other hand, destroy a card",
+        "held in hand"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_22": {
+      "name": "",
+      "text": [
+        "Debuff all #1# Jokers"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_23": {
+      "name": "",
+      "text": [
+        "Must play exactly 1 card"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_24": {
+      "name": "",
+      "text": [
+        "Hand must contain",
+        "four different ranks"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_25": {
+      "name": "",
+      "text": [
+        "All cards give 25% less",
+        "chips, Mult and XMult"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_26": {
+      "name": "",
+      "text": [
+        "Halves level of",
+        "played poker hand",
+        "(rounded down)"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_27": {
+      "name": "",
+      "text": [
+        "Lose $3 per played card,",
+        "or destroy it if cannot afford"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_31": {
+      "name": "",
+      "text": [
+        "[ENTIRE PHASE]",
+        "At the start of every",
+        "hand, destroy a card",
+        "held in hand"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_32": {
+      "name": "",
+      "text": [
+        "Debuff all #1# Jokers"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_33": {
+      "name": "",
+      "text": [
+        "Debuff all #1# Jokers"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_34": {
+      "name": "",
+      "text": [
+        "No hands until",
+        "a Joker sold"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_35": {
+      "name": "",
+      "text": [
+        "No #1# allowed"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_36": {
+      "name": "",
+      "text": [
+        "All cards give 50% less",
+        "chips, Mult and XMult"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_red_mist_effect_37": {
+      "name": "",
+      "text": [
+        "Set level of played",
+        "poker hand to 0"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_what_blind": {
+      "name": "???",
+      "text": [],
+      "type": "Blind"
+    },
+    "bl_lobc_what_blind_name": {
+      "name": "GasHarpoon",
+      "text": [
+        "­",
+        "­"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_what_blind_name_copy": {
+      "name": "GasHarpoon",
+      "text": [
+        "­",
+        "­"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_what_blind_cutscene_1": {
+      "name": "GasHarpoon",
+      "text": [
+        "The time is finally upon",
+        "us, my dear crew!"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_what_blind_cutscene_2": {
+      "name": "GasHarpoon",
+      "text": [
+        "Now, carve yourself",
+        "in my stead!"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_what_pip": {
+      "name": "GasHarpoon",
+      "text": [
+        "Pip's Ego: #1#"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_what_starbuck": {
+      "name": "GasHarpoon",
+      "text": [
+        "Starbuck's Ego: #1#"
+      ],
+      "type": "Blind"
+    },
+    "bl_lobc_what_queequeg": {
+      "name": "GasHarpoon",
+      "text": [
+        "Queequeg's Ego: #1#"
+      ],
+      "type": "Blind"
+    },
+    "psv_lobc_fixed_encounter": {
+      "name": "Fixed Encounter",
+      "text": [
+        "This {C:attention}Blind{} cannot be {C:red}disabled{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_final_battle": {
+      "name": "Final Battle",
+      "text": [
+        "{C:blue}+1{} hand when hand is played"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_suppression": {
+      "name": "Abnormality Suppression",
+      "text": [
+        "When this {C:attention}Blind{} is suppressed,",
+        "create a special {C:attention}Abnormality{} card"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_harmony": {
+      "name": "Harmony",
+      "text": [
+        "When {C:attention}Blind{} is defeated, {C:blue}+1{} hand"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_irresponsible": {
+      "name": "Irresponsible",
+      "text": [
+        "Hand levels can be reduced to to {C:attention}0{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_the_time_has_come": {
+      "name": "The time has come.",
+      "text": [
+        "Convert all {C:attention}Blessed{} cards into {C:red}Apostles{}",
+        "All {C:red}Apostles{} are {C:red}debuffed{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_rise_and_serve_me": {
+      "name": "Rise and serve me.",
+      "text": [
+        "Before scoring, destroy all played {C:red}Apostles{}",
+        "Up to {C:attention}12{} {C:red}Apostles{} can be destroyed"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_kali": {
+      "name": "Kali",
+      "text": [
+        "After score exceeds Blind Size,",
+        "reset {C:red}discards{}, return all cards to deck",
+        "and moves to the next phase"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_the_strongest": {
+      "name": "The Strongest",
+      "text": [
+        "Score per hand is capped at {C:attention}15%{} Blind Size"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_the_red_mist": {
+      "name": "The Red Mist",
+      "text": [
+        "Blind effect changes after scoring",
+        "Possible effects change each phase"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_ego_manifestation": {
+      "name": "E.G.O Manifestation",
+      "text": [
+        "Active on Phases 3 and 4",
+        "{C:red}+1{} card destroyed before each hand",
+        "Increase score cap to {C:attention}20%{} Blind Size"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_the_three_birds": {
+      "name": "The Three Birds",
+      "text": [
+        "When {C:attention}Blind{} starts, fight against",
+        "{C:attention}Big Eyes{}, {C:red}Small Beak{} and {C:purple}Long Arms{}",
+        "in order before {C:dark_edition}Apocalypse Bird{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_cracking_eggs": {
+      "name": "Cracking Eggs",
+      "text": [
+        "When {C:attention}Blind{} is defeated, {C:blue}+1{} hand, {C:red}+1{} discards",
+        "and return all cards to deck",
+        "When {C:purple}Long Arms{} is defeated, reset {C:blue}hands{}",
+        "and {C:red}discards{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_monster_of_the_forest": {
+      "name": "The Monster of the Forest",
+      "text": [
+        "When phase changes, chosen suit changes",
+        "When phase changes, removes a {C:dark_edition}[Persistent]{}",
+        "effect from {C:attention}Big Eyes{}, {C:red}Small Beak{}",
+        "and {C:purple}Long Arms{}",
+        "When phase changes, {C:blue}+1{} hand"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_eternal_peace": {
+      "name": "Eternal Peace/Tranquility/Silence",
+      "text": [
+        "Score does not go above {C:attention}25{}/{C:attention}50{}/{C:attention}75%{}",
+        "Blind Size the first time"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_misdeeds": {
+      "name": "Misdeeds Not Allowed!",
+      "text": [
+        "{C:dark_edition}[Persistent]",
+        "No repeating hands played during {C:red}Small Beak{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_lamp": {
+      "name": "A Lamp that Burns Forever",
+      "text": [
+        "{C:dark_edition}[Persistent]",
+        "No hands with {C:attention}2{} or more {C:enchanted}Enchanted{} cards"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_judgement": {
+      "name": "Ceaseless Judgement",
+      "text": [
+        "{C:dark_edition}[Persistent]",
+        "Each card in full hand adds {C:attention}+1 {C:red}Sin",
+        "to all playing cards of that rank",
+        "Cards with {C:attention}5{} or more {C:red}Sin{} are debuffed"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_hatred": {
+      "name": "In the Name of Hate",
+      "text": [
+        "When a {C:attention}Marked{} card is {C:attention}played{} or {C:attention}discarded{},",
+        "increase {C:attention}Hysteria{} by {C:attention}1{}",
+        "When a {C:attention}Marked{} card is {C:red}destroyed{},",
+        "decrease {C:attention}Hysteria{} by {C:attention}1{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_adverse": {
+      "name": "Adverse Change",
+      "text": [
+        "When score reaches {C:attention}50%{} Blind Size,",
+        "transform, increase {C:attention}Hysteria{} by {C:attention}3{} and",
+        "{C:attention}+2 {C:blue}hands{} and {C:red}discards",
+        "Score cannot go above {C:attention}50%{} Blind Size",
+        "before this occurs"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_arcana": {
+      "name": "Arcana Slave",
+      "text": [
+        "Blind's effects are stronger based on",
+        "current {C:attention}Hysteria{}",
+        "Every {C:attention}3{} hands  or when {C:purple}Adverse Change",
+        "activates, change Blind's effect for a hand"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_1": {
+      "name": "Self-loathing",
+      "text": [
+        "All Skills target Heathcliff.",
+        "Wins Encounter if Heathcliff dies."
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_2": {
+      "name": "Explosive Emotions",
+      "text": [
+        "When this unit has 'Explosive' Affinity effects:",
+        "become weaker to the corresponding Affinities and",
+        "become stronger against every other Affinity;",
+        "gain a special effect when hit."
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_3": {
+      "name": "Spreading Emotions",
+      "text": [
+        "When an ally with the same Affinity to this",
+        "unit's Explosive Emotions effect is defeated:",
+        "lose Explosive Emotions effect on self, kill all",
+        "other allies, and gain {C:purple}Deep Bereavement{} next turn.",
+        "All Sinners gain the effects of the corresponding",
+        "Explosive Emotions effect, and protection",
+        "against the corresponding Affinity."
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_4": {
+      "name": "Amalgamated Resentment",
+      "text": [
+        "When this unit has an Explosive Emotions effect,",
+        "all Skill Affinities are replaced with the",
+        "corresponding Affinity.",
+        "Even after the Explosive Emotions effect expires,",
+        "the changed Skill Affinities remain changed for the",
+        "rest of the Phase."
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_5": {
+      "name": "Continuing Revenge",
+      "text": [
+        "Gains a new pattern at 75% and 35% of max HP.",
+        "When this unit gains a new pattern, halve the",
+        "Potency and Count of every negative effect on self"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_6": {
+      "name": "Antagonism",
+      "text": [
+        "If the target's current HP is higher than this unit's,",
+        "Clash Power +2 and deal +20% more damage"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_7": {
+      "name": "Long-awaited Moment",
+      "text": [
+        "Clash Win: Heal 5 SP on self",
+        "Clash Lose against Heathcliff: Lose 5 SP and gain 2",
+        "{C:attention}Bind{} next turn. (Once per turn)",
+        "If this unit did not land a single hit against",
+        "Heathcliff this turn, lose 5 SP at Turn End"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_8": {
+      "name": "Heart of Vengeance",
+      "text": [
+        "Turn Start: If not at -45 SP, heal 15 SP.",
+        "Turn End: If Panicked, recover from Panic at the",
+        "next Turn Start and reset SP to 0.",
+        "Turn End: If this unit recovers from Panic, gain",
+        "2 {C:red}Attack Power Up{} at the next Turn Start"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_erlking_9": {
+      "name": "Fixed Panic",
+      "text": [
+        "This unit's Panic Type does not change when",
+        "inflicted with an effect that changes Panic Types.",
+        "Instead, this unit is inflicted with the effect",
+        "that is inflicted against targets without SP."
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_sanity": {
+      "name": "{C:o_indigo}Sanity",
+      "text": [
+        "{C:blue}SP{} for you and {C:attention}GasHarpoon{} start at {C:blue}0{}",
+        "{C:green}[Before Scoring]{} Each playing card has a",
+        "{C:attention}100%{} chance to score, reduced by {C:attention}1%{}",
+        "per {C:blue}SP{} lower than {C:attention}GasHarpoon's{}",
+        "{C:green}[Phase Change]{} At less than {C:blue}0 SP{},",
+        "sets {C:blue}SP{} to {C:blue}0{}"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_what_1": {
+      "name": "Price of Nobility",
+      "text": [
+        "Loses {C:blue}10 SP{} if a Skill fails",
+        "You heal {C:blue}1 SP{} when a card is scored",
+        "You heal {C:blue}10 SP{} if a Skill fails"
+      ],
+      "type": "Passive"
+    },
+    "psv_lobc_what_2": {
+      "name": "Ahab",
+      "text": [
+        "Score per hand is capped at {C:attention}30%{} Blind Size",
+        "{C:green}[Hand Start]{} If not at {C:blue}-45 SP{}, heals {C:blue}15 SP{}",
+        "{C:green}[Hand Played]{} If at {C:blue}-45 SP{}, final score",
+        "increases by {C:attention}20%{} this hand, then",
+        "resets {C:blue}SP{} to {C:blue}0{} next hand",
+        "{C:green}[On Defeat] {C:attention}Phase changes{}, reset {C:red}discards{}",
+        "and returns all cards to deck {C:inactive(up to twice)"
+      ],
+      "type": "Passive"
+    },
+    "SkillLobc": {
+      "name": "Strike Me Down!",
+      "text": [
+        "{C:green}[Before Scoring]{} Destroy all",
+        "played {C:attention}#1#{}s, then inflict {C:blue}5 SP{}",
+        "damage for each destroyed card",
+        "{s:0.7}rank changes each hand"
+      ],
+      "type": "Passive"
+    },
+    "MovementLobc": {
+      "name": "The First Movement",
+      "text": [
+        "When drawn, {C:red}destroys{} a random playing card,",
+        "then permanently gives all playing cards",
+        "{C:chips}+#1#{} chips",
+        "{S:1.1,C:red,E:2}self-destructs{}"
+      ],
+      "type": "Passive"
+    },
+    "labels": {
+      "name": "",
+      "text": [],
+      "type": "misc"
+    },
+    "challenge_names": {
+      "name": "",
+      "text": [],
+      "type": "misc"
+    },
+    "v_text": {
+      "name": "",
+      "text": [],
+      "type": "misc"
+    },
+    "dictionary": {
+      "name": "Doubt",
+      "text": [],
+      "type": "misc"
+    },
+    "achievement_names": {
+      "name": "",
+      "text": [],
+      "type": "misc"
+    },
+    "achievement_descriptions": {
+      "name": "",
+      "text": [],
+      "type": "misc"
+    },
+    "v_dictionary": {
+      "name": "",
+      "text": [],
+      "type": "misc"
+    }
+  },
+  "atlases": {},
+  "cards": [
+    {
+      "type": "Challenge",
+      "key": "modifiers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modifiers\",\n    order = 45, -- Above stickers\n    func = function(self)\n        for _, v in ipairs(G.lobc_global_modifiers or {}) do\n            if self.ability[v] then\n                G.lobc_shared_modifiers[v].role.draw_major = self\n                G.lobc_shared_modifiers[v]:draw_shader('dissolve', nil, nil, nil, self.children.center)\n                G.lobc_shared_modifiers[v]:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center)\n            end\n        end\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "mood",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"mood\",\n    order = 50, -- Same order as The Soul/floating sprite\n    func = function(self)\n        if self.children.mood then\n            self.children.mood.role.draw_major = self\n            self.children.mood:draw_shader('dissolve', 0, nil, nil, self.children.center, nil, nil, nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL), nil, 0.6)\n            self.children.mood:draw_shader('dissolve', nil, nil, nil, self.children.center, nil, nil)\n        end\n    end"
+    },
+    {
+      "type": "DrawStep",
+      "key": "prey",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"prey\",\n    order = 51,\n    func = function(self)\n        if self.sprite_facing ~= \"front\" then return end\n        local h_mod = (self.config.center.abno and -0.15 or 0)\n        for _, v in ipairs({\"lantern\", \"prey\", \"prey_mark\"}) do\n            if self.children[\"lobc_\"..v] then\n                self.children[\"lobc_\"..v]:draw_shader('dissolve', 0, nil, nil, self.children.center, 0.1, nil, nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL) + self.T.h*-0.2-h_mod, nil, 0.6)\n                self.children[\"lobc_\"..v]:draw_shader('dissolve', nil, nil, nil, self.children.center, 0.1, nil, nil, self.T.h*-0.2-h_mod)\n                h_mod = h_mod + 0.5\n            end\n        end\n    end"
+    },
+    {
+      "type": "Booster",
+      "key": "extraction_normal",
+      "atlas": "LobotomyCorp_Booster",
+      "pos": null,
+      "raw": "key = 'extraction_normal',\n    weight = 1.75,\n    kind = \"Abnormality\",\n    cost = 5,\n    atlas = \"LobotomyCorp_Booster\",\n    config = {extra = 3, choose = 1},\n    create_card = function(self, card)\n        return { set = 'Abnormality', area = G.pack_cards, skip_materialize = true, soulable = true, key_append = 'abn' }\n    end,\n    ease_background_colour = function(self)\n        ease_background_colour_blind(G.STATES.PLANET_PACK)\n    end,\n    loc_vars = function(self, info_queue, card)\n\t\treturn { vars = {card.config.center.config.choose, card.ability.extra} }\n\tend,\n    group_key = \"k_lobc_extraction_pack\","
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_Jokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_Jokers\", \n    atlas_table = \"ASSET_ATLAS\", \n    path = \"LobotomyCorp_spritesheet.png\", \n    px = 71, \n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_Undiscovered",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_Undiscovered\", \n    atlas_table = \"ASSET_ATLAS\", \n    path = \"LobotomyCorp_undiscovered.png\", \n    px = 71, \n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_Booster",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_Booster\", \n    atlas_table = \"ASSET_ATLAS\", \n    path = \"LobotomyCorp_booster.png\", \n    px = 71, \n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_Blind",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_Blind\", \n    atlas_table = \"ANIMATION_ATLAS\", \n    path = \"LobotomyCorp_blind.png\", \n    px = 34, \n    py = 34,\n    frames = 21,"
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n    path = \"LobotomyCorp_icon.png\",\n    px = 34,\n    py = 34"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_moodboard",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_moodboard\",\n    path = \"LobotomyCorp_moodboard.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_yes_no",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_yes_no\",\n    path = \"LobotomyCorp_yes_no.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_lights",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_lights\",\n    path = \"LobotomyCorp_lights.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_wellcheers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_wellcheers\",\n    path = \"LobotomyCorp_wellcheers.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_jokersbald",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_jokersbald\",\n    path = \"LobotomyCorp_jokersbald.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_modifiers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_modifiers\",\n    path = \"LobotomyCorp_modifiers.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_consumable",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_consumable\",\n    path = \"LobotomyCorp_consumable.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_cutscenes",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_cutscenes\",\n    path = \"LobotomyCorp_cutscenes.png\",\n    px = 1024,\n    py = 654"
+    },
+    {
+      "type": "Atlas",
+      "key": "Erlking_Heathcliff",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Erlking_Heathcliff\", \n    atlas_table = \"ANIMATION_ATLAS\", \n    path = \"Erlking_Heathcliff.png\", \n    px = 1435, \n    py = 1042,\n    frames = 1,"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_ApocBird",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_ApocBird\", \n    atlas_table = \"ANIMATION_ATLAS\", \n    path = \"LobotomyCorp_ApocBird.png\", \n    px = 34, \n    py = 34,\n    frames = 21,"
+    },
+    {
+      "type": "Atlas",
+      "key": "what",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"what\", \n    atlas_table = \"ANIMATION_ATLAS\", \n    path = \"what_asset.png\", \n    px = 512, \n    py = 512,\n    frames = 1,"
+    },
+    {
+      "type": "Atlas",
+      "key": "what_huh",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"what_huh\", \n    atlas_table = \"ANIMATION_ATLAS\", \n    path = \"what_huh.png\", \n    px = 34, \n    py = 34,\n    frames = 21,"
+    },
+    {
+      "type": "Atlas",
+      "key": "black",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"black\",\n    path = \"black.png\",\n    px = 2000,\n    py = 2000"
+    },
+    {
+      "type": "Atlas",
+      "key": "what_skills",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"what_skills\",\n    path = \"Skills.png\",\n    px = 196,\n    py = 196"
+    },
+    {
+      "type": "Atlas",
+      "key": "LobotomyCorp_movement",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"LobotomyCorp_movement\",\n    path = \"LobotomyCorp_movement.png\",\n    px = 71,\n    py = 95"
+    },
+    {
+      "type": "ConsumableType",
+      "key": "EGO_Gift",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'EGO_Gift', \n    primary_colour = HEX('424e54'),\n    secondary_colour = HEX(\"dd4930\"),\n    loc_txt = {},\n    shop_rate = 0,\n    default = 'c_lobc_tt2',\n    no_doe = true,\n    no_collection = true,"
+    },
+    {
+      "type": "Shader",
+      "key": "pixelation",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"pixelation\",\n    path = \"pixelation.fs\""
+    },
+    {
+      "type": "Enhancement",
+      "key": "worker_bee",
+      "atlas": "LobotomyCorp_modifiers",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "key = \"worker_bee\",\n    atlas = \"LobotomyCorp_modifiers\",\n    pos = {x = 6, y = 0},\n    no_collection = true,\n    replace_base_card = true,\n    no_rank = true,\n    no_suit = true,\n    always_scores = true,\n    weight = 0,\n    in_pool = function() return false end"
+    },
+    {
+      "type": "BOOSTER_OPENED",
+      "key": "music_tpov",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_tpov\",\n        select_music_track = function()\n            if config.no_music then return false end\n            return (G.GAME.blind and G.GAME.blind.config.blind and G.GAME.blind.config.blind.key == \"bl_lobc_erlking_heathcliff\") and 644000 or false\n        end,"
+    }
+  ],
+  "version": "1.3.1"
+}
