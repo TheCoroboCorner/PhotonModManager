@@ -255,7 +255,7 @@ async function loadModDetail()
 
     const [repo, owner] = key.split('@');
     document.getElementById('mod-github').href = `https://github.com/${owner}/${repo}`;
-    document.getElementById('mod-wiki').href = `https://photonmodmanager.onrender.org/wiki?mod=${tag}`;
+    document.getElementById('mod-wiki').href = `https://photonmodmanager.onrender.org/wiki?mod=${key}`;
 
     const depRanges = collectRanges('dependencies', key, data);
     const confRanges = collectRanges('conflicts', key, data);
