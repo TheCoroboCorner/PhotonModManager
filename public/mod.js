@@ -255,6 +255,7 @@ async function loadModDetail()
 
     const [repo, owner] = key.split('@');
     document.getElementById('mod-github').href = `https://github.com/${owner}/${repo}`;
+    document.getElementById('mod-wiki').href = `/wiki?mod=${tag}`;
 
     const depRanges = collectRanges('dependencies', key, data);
     const confRanges = collectRanges('conflicts', key, data);
