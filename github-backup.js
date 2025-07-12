@@ -145,9 +145,70 @@ export async function backupMetadata(modKey, versionTag) {
 
     const data = await resp.json();
     console.log(`[GitHub Backup] Backed up ${repoPath} to commit`, data.content && data.content.html_url);
+
+    backupWikiImages(modKey, versionTag);
   }
   catch (error)
   {
     console.error(`[Github Backup] Failed to backup metadata for ${modKey} v${versionTag}:`, error);
+  }
+}
+
+async function backupWikiImages(modKey, versionTag)
+{
+  const localDir = path.join(__dirname, 'wiki-data', modKey, versionTag);
+  let files;
+  try
+  {
+    files = await fs.readdir(localDir);
+  }
+  catch (err)
+  {
+    console.error(`[BackupImages] Cannot read dir ${localDir}:`, err);
+    return;
+  }
+
+  files = files.filter(f => f.toLowerCase().endsWith('.png'));
+
+  for (const fileName of files)
+  {
+    const repoPath = `wiki-data-cache/${modKey}/${versionTag}/${fileName}`;
+    const fullPath = path.join(localDir, fileName);
+
+    let content, sha;
+    try
+    {
+      content = await fs.readFile(fullPath);
+      sha = await getShaFor(repoPath);
+    }
+    catch (err)
+    {
+      console.error(`[BackupImages] Skipping ${fileName}:`, err);
+      continue;
+    }
+
+    const base64 = content.toString('base64');
+    const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${repoPath}`;
+    const body = {
+      message: `Backup image ${fileName} for ${modKey}@${versionTag}`,
+      content: base64,
+      sha: sha || undefined,
+      branch: main
+    };
+
+    try
+    {
+      const resp = await fetch(url, { method: 'PUT', headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github/v3+json' }, body: JSON.stringify(body) });
+      if (!resp.ok)
+      {
+        const errText = await resp.text();
+        console.error(`[BackupImages] PUT ${fileName} failed (${resp.status}):`, errText);
+      }
+      else console.log(`[BackupImages] Backed up ${fileName} successfully.`);
+    }
+    catch (err)
+    {
+      console.error(`[BackupImages] Network error backing up ${fileName}:`, err);
+    }
   }
 }

@@ -29,11 +29,11 @@ const GITHUB_HEADERS = process.env.GITHUB_FETCH_TOKEN ?
   'User-Agent': 'photonmodmanager'
 };
 
+app.use('/wiki-data', express.static(WIKI_LOCAL_DATA_DIR, { maxAge: '1d', immutable: true }));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-
-app.use('/wiki-data', express.static(WIKI_LOCAL_DATA_DIR, { maxAge: '1d', immutable: true }));
 
 // --- Helper functions ---
 
