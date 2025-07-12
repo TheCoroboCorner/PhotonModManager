@@ -669,7 +669,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
             for (let k = 1; k < 3; k++)
             {
-              if (args[k] === null)
+              if (args[k] === null || args[k] === undefined)
                 continue;
               else if (args[k] === 'null')
                 args[k] = null;
