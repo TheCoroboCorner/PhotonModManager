@@ -616,9 +616,13 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         const inside = retMatch[1];
         const parts = inside.split(',').map(s => s.trim()).filter(s => s);
 
-        for (let expr of parts)
+        for (let rawExpr of parts)
         {
-          if (expr.startsWith('card.'))
+          let expr = rawExpr.replace(/\bnil\b/g, 'null');
+
+          if (expr === 'null')
+            card.vars.push(null);
+          else if (expr.startsWith('card.'))
           {
             const path = expr.split('.');
             path.shift();
