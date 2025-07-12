@@ -359,7 +359,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
   const [repo, owner] = modKey.split('@');
 
   const modLocalCacheDir = path.join(WIKI_LOCAL_DATA_DIR, modKey);
-  let latestTag = '';
+  let latestTag = 'no-tag';
 
   try
   {
@@ -368,7 +368,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
     if (tagRes.ok)
     {
       const tagJson = await tagRes.json();
-      latestTag = tagJson.tag_name || '';
+      latestTag = tagJson.tag_name || 'no-tag';
       console.log(`[Server] Latest tag for ${modKey}: ${latestTag}`);
     }
     else
