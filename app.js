@@ -526,6 +526,11 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       if (typeof expr !== 'string')
         return undefined;
 
+      function pathSearch(domain)
+        {
+          return path.reduce((o, p) => o?.[p], domain);
+        }
+
       expr = expr.trim();
       if (expr === '')
         return undefined;
@@ -537,9 +542,13 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       switch (path[0])
       {
         case 'stg': // Maximus
-          return parts.slice(1).reduce((o, p) => o?.[p], card.ability.extra) ?? parts.slice(1).reduce((o, p) => o?.[p], card.ability);
+          if (parts.length === 0)
+              return card.ability?.extra ?? card.ability;
+            if (card.ability?.extra != null & typeof card.ability?.extra === 'object' && parts[0] in card.ability?.extra)
+              return pathSearch(card.ability?.extra);
+            return pathSearch(card.ability);
         case 'card':
-          return parts.slice(1).reduce((o, p) => o?.[p], card);
+          return pathSearch(card);
         default:
           return undefined;
       }
