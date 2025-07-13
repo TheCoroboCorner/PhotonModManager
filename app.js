@@ -534,12 +534,25 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         return Number(expr);
 
       const parts = expr.split('.');
+      const tail = parts.slice(1);
+
+      function pathSearch(domain)
+        {
+          return tail.reduce((o, p) => o?.[p], domain);
+        }
+
       switch (parts[0])
       {
         case 'stg': // Maximus
-          return Array.isArray(card.ability?.extra) ? parts.slice(1).reduce((o, p) => o?.[p], card.ability.extra) : parts.slice(1).reduce((o, p) => o?.[p], card.ability);
+          if (tail.length === 0)
+            return card.ability?.extra && typeof card.ability.extra === 'object' 
+                    ? pathSearch(card.ability.extra)
+                    : pathSearch(card.ability);
+          return card.ability?.extra && typeof card.ability.extra === 'object' && tail[0] in card.ability.extra
+                    ? pathSearch(card.ability.extra)
+                    : pathSearch(card.ability);
         case 'card':
-          return parts.slice(1).reduce((o, p) => o?.[p], card);
+          return pathSearch(card);
         default:
           return undefined;
       }
@@ -585,7 +598,11 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           case 'card':
             return pathSearch(card);
           case 'stg': // Maximus
-            return Array.isArray(card.ability?.extra) ? pathSearch(card.ability?.extra) : pathSearch(card.ability);
+            if (parts.length === 0)
+              return card.ability?.extra ?? card.ability;
+            if (Array.isArray(card.ability?.extra) && parts[0] in card.ability?.extra)
+              return pathSearch(card.ability?.extra);
+            return pathSearch(card.ability);
           case 'G':
             return pathSearch(CONSTANTS.G);
           default:
