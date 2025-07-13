@@ -577,15 +577,26 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
         function pathSearch(domain)
         {
-          return parts.slice(1).reduce((o, p) => o?.[p], domain);
+          return parts.reduce((o, p) => o?.[p], domain);
         }
 
         switch (parts[0])
         {
           case 'card':
             return pathSearch(card);
-          case 'stg':
-            return pathSearch(card.ability?.extra);
+          case 'stg': // Maximus
+            let target = card.ability?.extra;
+            for (let p of parts)
+            {
+              if (target != null && p in target)
+                target = target[p];
+              else
+              {
+                target = pathSearch(card.ability);
+                break;
+              }
+            }
+            return target;
           case 'G':
             return pathSearch(CONSTANTS.G);
           default:
