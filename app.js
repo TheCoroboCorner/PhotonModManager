@@ -694,31 +694,31 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       if (retMatch)
       {
         const inside = retMatch[1];
-        const parts = inside.split(',').map(s => s.trim()).filter(s => s);
+        const parts = inside.split(/\s*,\s*/).map(s => s.trim()).filter(s => !!s);
 
         for (let rawExpr of parts)
         {
-          if (typeof rawExpr !== 'string')
-            continue;
+          // if (typeof rawExpr !== 'string')
+          //   continue;
 
-          rawExpr = rawExpr.replace(/\bnil\b/g, 'null');
-          if (rawExpr === 'null')
-          {
-            card.vars.push(null);
-            continue;
-          }
+          // rawExpr = rawExpr.replace(/\bnil\b/g, 'null');
+          // if (rawExpr === 'null')
+          // {
+          //   card.vars.push(null);
+          //   continue;
+          // }
           
-          const asNum = Number(rawExpr);
-          if (!isNaN(asNum))
-          {
-            card.vars.push(asNum);
-            continue;
-          }
+          // const asNum = Number(rawExpr);
+          // if (!isNaN(asNum))
+          // {
+          //   card.vars.push(asNum);
+          //   continue;
+          // }
 
           if (rawExpr.startsWith('SMODS.get_probability_vars'))
           {
             const args = splitTopLevelArgs(rawExpr);
-            if (args && args.length > 2) 
+            if (args && args.length > 3) 
             {
               const num = args[1];
               const den = args[2];
@@ -733,7 +733,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           }
           else
           {
-            card.vars.push(lookup(rawExpr, card));
+            card.vars.push(evalExpr(rawExpr, card));
           }
         }
         console.log(`[loc_vars] → parsed card.vars for ${card.key}:`, card.vars);
