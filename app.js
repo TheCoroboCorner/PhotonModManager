@@ -531,6 +531,10 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       if (!isNaN(expr))
         return Number(expr);
 
+      const parentheses = expr.match(/^\(\s*([\s\S]+?)\s*\)$/);
+      if (parentheses)
+        expr = parentheses[1];
+
       const or = expr.match(/^(.+?)\s+or\s+(.+)$/);
       if (or)
       {
