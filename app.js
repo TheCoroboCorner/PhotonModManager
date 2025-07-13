@@ -528,9 +528,6 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       if (!expr)
         return undefined;
 
-      if (!isNaN(expr))
-        return Number(expr);
-
       const parentheses = expr.match(/^\(\s*([\s\S]+?)\s*\)$/);
       if (parentheses)
         expr = parentheses[1];
@@ -553,6 +550,34 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         const [ , cond, yes, no] = ternary;
         return evalExpr(cond, card) ? evalExpr(yes, card) : evalExpr(no, card);
       }
+
+      const arithmetic = expr.match(/^([\s\S]+?)\s*([\*\+\/-])\s*([\s\S]+)$/);
+      if (arithmetic)
+      {
+        const [ , leftExpr, op, rightExpr] = arithmetic;
+        const L = evalExpr(leftExpr, card);
+        const R = evalExpr(rightExpr, card);
+
+        if (typeof L === 'number' && typeof R === 'number')
+        {
+          switch (op)
+          {
+            case '+':
+              return L + R;
+            case '-':
+              return L - R;
+            case '*':
+              return L * R;
+            case '/':
+              return L / R;
+          }
+        }
+
+        return undefined;
+      }
+
+      if (!isNaN(expr))
+        return Number(expr);
 
       const parts = expr.split('.');
       const tail = parts.slice(1);
