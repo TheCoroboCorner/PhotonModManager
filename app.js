@@ -599,6 +599,8 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
                     : pathSearch(card.ability);
         case 'card':
           return pathSearch(card);
+        case 'G':
+          return pathSearch(CONSTANTS.G);
         default:
           return undefined;
       }
