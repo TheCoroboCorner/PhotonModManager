@@ -587,7 +587,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           case 'stg':
             return pathSearch(card.ability?.extra);
           case 'G':
-            return pathSearch(constants.G);
+            return pathSearch(CONSTANTS.G);
           default:
             const prop = parts[0];
             const fromExtra = card.ability?.extra?.[prop];
