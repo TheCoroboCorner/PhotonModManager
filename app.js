@@ -565,7 +565,13 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         }
       }
 
-      function lookup(expr, card)
+      if (depth !== 0)
+        return null;
+      const body = callExpr.slice(open + 1, i);
+      return body.split(/\s*,\s*/);
+    }
+
+    function lookup(expr, card)
       {
         const parts = expr.split('.');
 
@@ -590,12 +596,6 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
             return card.ability?.[prop];
         }
       }
-
-      if (depth !== 0)
-        return null;
-      const body = callExpr.slice(open + 1, i);
-      return body.split(/\s*,\s*/);
-    }
 
     for (const key of Object.keys(atlasDefs))
     {
