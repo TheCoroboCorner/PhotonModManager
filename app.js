@@ -603,7 +603,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       if (!isNaN(expr))
         return Number(expr);
 
-      const parts = expr.split('.');
+      parts = expr.split('.');
       const tail = parts.slice(1);
 
       function pathSearch(domain)
