@@ -585,18 +585,11 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           case 'card':
             return pathSearch(card);
           case 'stg': // Maximus
-            let target = card.ability?.extra;
-            for (let p of parts)
-            {
-              if (target != null && p in target)
-                target = target[p];
-              else
-              {
-                target = pathSearch(card.ability);
-                break;
-              }
-            }
-            return target;
+            if (parts.length === 0)
+              return card.ability?.extra ?? card.ability;
+            if (card.ability?.extra != null & typeof card.ability?.extra === 'object' && parts[0] in card.ability?.extra)
+              return pathSearch(card.ability?.extra);
+            return pathSearch(card.ability);
           case 'G':
             return pathSearch(CONSTANTS.G);
           default:
