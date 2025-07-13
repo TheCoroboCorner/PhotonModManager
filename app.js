@@ -537,7 +537,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       switch (path[0])
       {
         case 'stg': // Maximus
-          return parts.slice(1).reduce((o, p) => o?.[p], card.ability.extra);
+          return parts.slice(1).reduce((o, p) => o?.[p], card.ability.extra) ?? parts.slice(1).reduce((o, p) => o?.[p], card.ability);
         case 'card':
           return parts.slice(1).reduce((o, p) => o?.[p], card);
         default:
