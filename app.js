@@ -523,27 +523,38 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     function evalExpr(expr, card)
     {
-      if (!isNaN(Number(expr)))
+      if (typeof expr !== 'string')
+        return undefined;
+
+      expr = expr.trim();
+      if (expr === '')
+        return undefined;
+
+      if (!isNaN(expr))
         return Number(expr);
 
       const path = expr.split('.');
+      let obj;
 
-      if (path[0] === 'stg') // Maximus
+      switch (parts[0])
       {
-        let val = card.ability.extra;
-        for (let p of path.slice(1))
-          val = val?.[p];
-        return val;
-      }
-      if (path[0] === 'card')
-      {
-        let val = card;
-        for (let p of path.slice(1))
-          val = val?.[p];
-        return val;
+        case 'stg': // Maximus
+          obj = card.ability?.extra;
+          break;
+        case 'card':
+          obj = card;
+          break;
+        default:
+          return undefined;
       }
 
-      return 0;
+      for (let i = 1; i < parts.length; i++)
+      {
+        if (obj == null)
+          return undefined;
+        obj = obj[parts[i]];
+      }
+      return obj;
     }
 
     for (const key of Object.keys(atlasDefs))
@@ -567,7 +578,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     for (let card of cards)
     {
-      console.log(`[DEBUG CONFIG] card.raw for ${card.key}:\n`, card.raw);
+      // console.log(`[DEBUG CONFIG] card.raw for ${card.key}:\n`, card.raw);
 
       // Config first
 
@@ -699,7 +710,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
             const d = evalExpr(args[2], card) || 1;
 
             const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, '');
-            
+
             card.vars.push(nn, dd);
           }
           else
