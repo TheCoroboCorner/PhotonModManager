@@ -565,6 +565,32 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         }
       }
 
+      function lookup(expr, card)
+      {
+        const parts = expr.split('.');
+
+        function pathSearch(domain)
+        {
+          return parts.slice(1).reduce((o, p) => o?.[p], domain);
+        }
+
+        switch (parts[0])
+        {
+          case 'card':
+            return pathSearch(card);
+          case 'stg':
+            return pathSearch(card.ability?.extra);
+          case 'G':
+            return pathSearch(constants.G);
+          default:
+            const prop = parts[0];
+            const fromExtra = card.ability?.extra?.[prop];
+            if (fromExtra !== undefined)
+              return fromExtra;
+            return card.ability?.[prop];
+        }
+      }
+
       if (depth !== 0)
         return null;
       const body = callExpr.slice(open + 1, i);
@@ -671,51 +697,21 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           if (typeof rawExpr !== 'string')
             continue;
 
-          let expr = rawExpr.replace(/\bnil\b/g, 'null');
-
-          if (expr === 'null')
+          rawExpr = rawExpr.replace(/\bnil\b/g, 'null');
+          if (rawExpr === 'null')
+          {
             card.vars.push(null);
-          else if (expr.startsWith('card.'))
+            continue;
+          }
+          
+          const asNum = Number(rawExpr);
+          if (!isNaN(asNum))
           {
-            const path = expr.split('.');
-            path.shift();
+            card.vars.push(asNum);
+            continue;
+          }
 
-            let val = card;
-            for (let prop of path)
-            {
-              if (val == null)
-                break;
-              val = val[prop];
-            }
-            card.vars.push(val);
-          }
-          else if (expr.startsWith('G.'))
-          {
-            const path = expr.split('.');
-            let val = CONSTANTS;
-            for (let prop of path)
-            {
-              if (val == null)
-                break;
-              val = val[prop];
-            }
-            card.vars.push(val);
-          }
-          else if (expr.startsWith('stg.'))
-          {
-            const path = expr.split('.');
-            path.shift();
-
-            let val = card.ability.extra;
-            for (let prop of path)
-            {
-              if (val == null)
-                break;
-              val = val[prop];
-            }
-            card.vars.push(val);
-          }
-          else if (expr.startsWith('SMODS.get_probability_vars'))
+          if (rawExpr.startsWith('SMODS.get_probability_vars'))
           {
             const args = splitTopLevelArgs(expr);
             if (args && args.length > 2) 
@@ -733,8 +729,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           }
           else
           {
-            const num = parseFloat(expr);
-            card.vars.push(isNaN(num) ? expr : num);
+            card.vars.push(lookup(rawExpr, card));
           }
         }
         console.log(`[loc_vars] → parsed card.vars for ${card.key}:`, card.vars);
