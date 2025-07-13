@@ -521,6 +521,31 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       }
     }
 
+    function evalExpr(expr, card)
+    {
+      if (!isNaN(Number(expr)))
+        return Number(expr);
+
+      const path = expr.split('.');
+
+      if (path[0] === 'stg') // Maximus
+      {
+        let val = card.ability.extra;
+        for (let p of path.slice(1))
+          val = val?.[p];
+        return val;
+      }
+      if (path[0] === 'card')
+      {
+        let val = card;
+        for (let p of path.slice(1))
+          val = val?.[p];
+        return val;
+      }
+
+      return 0;
+    }
+
     for (const key of Object.keys(atlasDefs))
     {
       const at = atlasDefs[key];
@@ -668,11 +693,13 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           else if (expr.startsWith('SMODS.get_probability_vars'))
           {
             const args = expr.replace(/^SMODS\.get_probability_vars\s*\(\s*/, '').replace(/\)\s*$/, '').split(',').map(a => a.trim());
-            const [ , num, den, ] = args;
 
-            const n = parseFloat(num) || 0;
-            const d = parseFloat(num) || 1;
+            // split into card, num, den, id
+            const n = evalExpr(args[1], card) || 0;
+            const d = evalExpr(args[2], card) || 1;
+
             const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, '');
+            
             card.vars.push(nn, dd);
           }
           else
