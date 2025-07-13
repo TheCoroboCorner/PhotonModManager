@@ -713,7 +713,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
           if (rawExpr.startsWith('SMODS.get_probability_vars'))
           {
-            const args = splitTopLevelArgs(expr);
+            const args = splitTopLevelArgs(rawExpr);
             if (args && args.length > 2) 
             {
               const num = args[1];
@@ -725,7 +725,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
               card.vars.push(n, d);
             }
-            else console.warn('[loc_vars] Bad get_probability_vars call, skipping:', expr);
+            else console.warn('[loc_vars] Bad get_probability_vars call, skipping:', rawExpr);
           }
           else
           {
