@@ -531,15 +531,6 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       if (!isNaN(expr))
         return Number(expr);
 
-      const locMatch = rawExpr.match(/^localize\s*\(\s*['"]([^'"]+)['"](?:\s*,[\s\S]*)?\)$/);
-      if (locMatch)
-      {
-        const key = locMatch[1];
-        const localized = locMap[key]?.name || locMap[key]?.text?.[0] || key;
-        card.vars.push(localized);
-        continue;
-      }
-
       const or = expr.match(/^(.+?)\s+or\s+(.+)$/);
       if (or)
       {
@@ -753,6 +744,15 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           //   card.vars.push(asNum);
           //   continue;
           // }
+
+          const locMatch = rawExpr.match(/^localize\s*\(\s*['"]([^'"]+)['"](?:\s*,[\s\S]*)?\)$/);
+          if (locMatch)
+          {
+            const key = locMatch[1];
+            const localized = locMap[key]?.name || locMap[key]?.text?.[0] || key;
+            card.vars.push(localized);
+            continue;
+          }
 
           if (rawExpr.startsWith('SMODS.get_probability_vars'))
           {
