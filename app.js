@@ -532,10 +532,28 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       if (parentheses)
         expr = parentheses[1];
 
-      const or = expr.match(/^(.+?)\s+or\s+(.+)$/);
-      if (or)
+      expr = expr.replace(/\[\s*(['"]?)([^\]'"]+)\1\s*\]/g, '.$2');
+
+      function splitTopLevel(expr, op)
       {
-        const [ , left, right] = or;
+        let depth = 0;
+        for (let i = 0; i <= expr.length - op.length; i++)
+        {
+          const ch = expr[i];
+          if (ch === '(')
+            depth++;
+          else if (ch === ')')
+            depth --;
+          else if (depth === 0 && expr.slice(i, i + op.length) === op)
+            return [expr.slice(0, i).trim(), expr.slice(i + op.length).trim()];
+        }
+        return null;
+      }
+
+      const parts = splitTopLevel(expr, ' or ');
+      if (parts)
+      {
+        const [left, right] = parts;
         
         const L = evalExpr(left, card);
         const R = evalExpr(right, card);
@@ -543,37 +561,43 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         return (L !== undefined && L !== null && L !== false) ? L : R;
       }
 
-      expr = expr.replace(/\[\s*(['"]?)([^\]'"]+)\1\s*\]/g, '.$2');
-      const ternary = expr.match(/^(.+?)\s+and\s+(.+?)\s+or\s+(.+)$/);
-      if (ternary)
+      
+      parts = splitTopLevel(expr, ' and ');
+      if (parts)
       {
-        const [ , cond, yes, no] = ternary;
-        return evalExpr(cond, card) ? evalExpr(yes, card) : evalExpr(no, card);
+        const [cond, rest] = parts;
+        const thenFalse = splitTopLevel(rest, ' or ');
+        if (thenFalse)
+        {
+          const [Y, N] = thenFalse;
+          return evalExpr(cond, card) ? evalExpr(Y, card) : evalExpr(N, card);
+        }
+        return evalExpr(rest);
       }
 
-      const arithmetic = expr.match(/^([\s\S]+?)\s*([\*\+\/-])\s*([\s\S]+)$/);
-      if (arithmetic)
+      for (let op of ['*', '/', '+', '-'])
       {
-        const [ , leftExpr, op, rightExpr] = arithmetic;
-        const L = evalExpr(leftExpr, card);
-        const R = evalExpr(rightExpr, card);
-
-        if (typeof L === 'number' && typeof R === 'number')
+        parts = splitTopLevel(expr, ` ${op} `);
+        if (parts)
         {
-          switch (op)
+          const [A, B] = parts;
+          const a = evalExpr(a, card), b = evalExpr(B, card);
+          if (typeof a === 'number' && typeof b === 'number')
           {
-            case '+':
-              return L + R;
-            case '-':
-              return L - R;
-            case '*':
-              return L * R;
-            case '/':
-              return L / R;
+            switch (op)
+            {
+              case '+':
+                return a + b;
+              case '-':
+                return a - b;
+              case '*':
+                return a * b;
+              case '/':
+                return a / b;
+            }
           }
+          return undefined;
         }
-
-        return undefined;
       }
 
       if (!isNaN(expr))
