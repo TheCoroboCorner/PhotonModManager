@@ -550,7 +550,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         return null;
       }
 
-      const parts = splitTopLevel(expr, ' or ');
+      let parts = splitTopLevel(expr, ' or ');
       if (parts)
       {
         const [left, right] = parts;
