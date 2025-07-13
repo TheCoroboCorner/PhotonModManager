@@ -545,6 +545,32 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       }
     }
 
+    function splitTopLevelArgs(callExpr)
+    {
+      const open = callExpr.indexOf('(');
+      if (open < 0)
+        return null;
+
+      let depth = 1;
+      let i = open + 1;
+      for(; i < callExpr.length; i++)
+      {
+        if (callExpr[i] === '(')
+          depth++;
+        else if (callExpr[i] === ')')
+        {
+          depth--;
+          if (depth === 0)
+            break;
+        }
+      }
+
+      if (depth !== 0)
+        return null;
+      const body = callExpr.slice(open + 1, i);
+      return body.split(/\s*,\s*/);
+    }
+
     for (const key of Object.keys(atlasDefs))
     {
       const at = atlasDefs[key];
@@ -691,22 +717,19 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           }
           else if (expr.startsWith('SMODS.get_probability_vars'))
           {
-            const smodsExpr = expr.replace(/^SMODS\.get_probability_vars\s*\(\s*/, '').replace(/\)\s*$/, '').split(',').map(a => a.trim());
-            if (smodsExpr) 
+            const args = splitTopLevelArgs(expr);
+            if (args && args.length > 2) 
             {
-              const args = smodsExpr[1].split(/\s*,\s*/);
-              console.log('[loc_vars] parsed args:', args);
-
               const num = args[1];
               const den = args[2];
 
               const n = evalExpr(num, card) ?? 0;
               const d = evalExpr(den, card) ?? 1;
-              console.log(`[loc_vars] ${card.key}→ n = ${n}, d = ${d}`)
+              console.log(`[loc_vars] ${card.key}: ${num} → ${n}, ${den} → ${d}`);
 
               card.vars.push(n, d);
             }
-            else console.warn(`[loc_vars] Couldn't parse get_probability_vars call on ${card.key}:`, expr);
+            else console.warn('[loc_vars] Bad get_probability_vars call, skipping:', expr);
           }
           else
           {
