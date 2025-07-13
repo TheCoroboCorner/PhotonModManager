@@ -534,27 +534,15 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         return Number(expr);
 
       const path = expr.split('.');
-      let obj;
-
-      switch (parts[0])
+      switch (path[0])
       {
         case 'stg': // Maximus
-          obj = card.ability?.extra;
-          break;
+          return parts.slice(1).reduce((o, p) => o?.[p], card.ability.extra);
         case 'card':
-          obj = card;
-          break;
+          return parts.slice(1).reduce((o, p) => o?.[p], card);
         default:
           return undefined;
       }
-
-      for (let i = 1; i < parts.length; i++)
-      {
-        if (obj == null)
-          return undefined;
-        obj = obj[parts[i]];
-      }
-      return obj;
     }
 
     for (const key of Object.keys(atlasDefs))
@@ -703,15 +691,22 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
           }
           else if (expr.startsWith('SMODS.get_probability_vars'))
           {
-            const args = expr.replace(/^SMODS\.get_probability_vars\s*\(\s*/, '').replace(/\)\s*$/, '').split(',').map(a => a.trim());
+            const smodsExpr = expr.replace(/^SMODS\.get_probability_vars\s*\(\s*/, '').replace(/\)\s*$/, '').split(',').map(a => a.trim());
+            if (smodsExpr) 
+            {
+              const args = smodsExpr[1].split(/\s*,\s*/);
+              console.log('[loc_vars] parsed args:', args);
 
-            // split into card, num, den, id
-            const n = evalExpr(args[1], card) || 0;
-            const d = evalExpr(args[2], card) || 1;
+              const num = args[1];
+              const den = args[2];
 
-            const [nn, dd] = SMODS_STUB.get_probability_vars(card, n, d, '');
+              const n = evalExpr(num, card) ?? 0;
+              const d = evalExpr(den, card) ?? 1;
+              console.log(`[loc_vars] ${card.key}→ n = ${n}, d = ${d}`)
 
-            card.vars.push(nn, dd);
+              card.vars.push(n, d);
+            }
+            else console.warn(`[loc_vars] Couldn't parse get_probability_vars call on ${card.key}:`, expr);
           }
           else
           {
