@@ -523,15 +523,41 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
 
     function evalExpr(expr, card)
     {
-      if (typeof expr !== 'string')
-        return undefined;
+      expr = String(expr).trim();
 
-      expr = expr.trim();
-      if (expr === '')
+      if (!expr)
         return undefined;
 
       if (!isNaN(expr))
         return Number(expr);
+
+      const locMatch = rawExpr.match(/^localize\s*\(\s*['"]([^'"]+)['"](?:\s*,[\s\S]*)?\)$/);
+      if (locMatch)
+      {
+        const key = locMatch[1];
+        const localized = locMap[key]?.name || locMap[key]?.text?.[0] || key;
+        card.vars.push(localized);
+        continue;
+      }
+
+      const or = expr.match(/^(.+?)\s+or\s+(.+)$/);
+      if (or)
+      {
+        const [ , left, right] = or;
+        
+        const L = evalExpr(left, card);
+        const R = evalExpr(right, card);
+
+        return (L !== undefined && L !== null && L !== false) ? L : R;
+      }
+
+      expr = expr.replace(/\[\s*(['"]?)([^\]'"]+)\1\s*\]/g, '.$2');
+      const ternary = expr.match(/^(.+?)\s+and\s+(.+?)\s+or\s+(.+)$/);
+      if (ternary)
+      {
+        const [ , cond, yes, no] = ternary;
+        return evalExpr(cond, card) ? evalExpr(yes, card) : evalExpr(no, card);
+      }
 
       const parts = expr.split('.');
       const tail = parts.slice(1);
