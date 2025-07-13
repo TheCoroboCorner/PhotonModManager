@@ -581,7 +581,7 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
         if (parts)
         {
           const [A, B] = parts;
-          const a = evalExpr(a, card), b = evalExpr(B, card);
+          const a = evalExpr(A, card), b = evalExpr(B, card);
           if (typeof a === 'number' && typeof b === 'number')
           {
             switch (op)
