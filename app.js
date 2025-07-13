@@ -542,9 +542,9 @@ app.get('/wiki-data/:modKey.json', async(req, res) => {
       switch (path[0])
       {
         case 'stg': // Maximus
-          if (parts.length === 0)
+          if (path.length === 0)
               return card.ability?.extra ?? card.ability;
-            if (card.ability?.extra != null & typeof card.ability?.extra === 'object' && parts[0] in card.ability?.extra)
+            if (card.ability?.extra != null & typeof card.ability?.extra === 'object' && path[0] in card.ability?.extra)
               return pathSearch(card.ability?.extra);
             return pathSearch(card.ability);
         case 'card':
