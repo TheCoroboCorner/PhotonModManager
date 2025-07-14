@@ -1,0 +1,1579 @@
+{
+  "locMap": {
+    "b_para_hundreddeck": {
+      "name": "Deck of Hundreds",
+      "text": [
+        "+#1# {C:attention}Joker{} slots",
+        "Start with an extra {C:money}$#2#{}",
+        "{C:blue}+#3#{} hands",
+        "{C:red}+#4#{} discards",
+        "{C:attention}+#5#{} consumable slots",
+        "{C:attention}+#6#{} hand size",
+        "Beat {C:attention}#7#{} more Antes to win",
+        "{C:inactive,s:0.8}100 times stronger than other decks!{}"
+      ],
+      "type": "Back"
+    },
+    "b_para_naneinfdeck": {
+      "name": "Naneinf Deck",
+      "text": [
+        "Start with an",
+        "{C:attention,T:m_eternal}Eternal{} {C:dark_edition,T:e_negative}Negative{} {C:rare,T:j_baron}Baron{} and",
+        "an {C:attention}Eternal {C:dark_edition}Negative {C:uncommon,T:j_mime}Mime",
+        "All cards in deck are",
+        "{C:attention,T:m_steel}Steel{} {C:red,T:Red}Red Seal{} {C:attention}Kings",
+        "Win at Ante {C:attention}#1#"
+      ],
+      "type": "Back"
+    },
+    "b_para_yurideck": {
+      "name": "Yuri Deck",
+      "text": [
+        "Start with an",
+        "{C:attention,T:m_eternal}Eternal{} {C:rare,T:j_blueprint}Blueprint{} and",
+        "an {C:attention}Eternal{} {C:rare,T:j_brainstorm}Brainstorm",
+        "{C:red}#1#{} Joker slot",
+        "{C:red}#2#{} hand",
+        "{C:inactive,s:0.8}Art credit to",
+        "{C:inactive,s:0.8}@silly_goober_0nthewall on Discord"
+      ],
+      "type": "Back"
+    },
+    "b_para_yaoideck": {
+      "name": "Yaoi Deck",
+      "text": [
+        "Start with an",
+        "{C:attention,T:m_eternal}Eternal{} {C:rare,T:j_para_fakemadness}Madness{} and",
+        "an {C:attention}Eternal{} {C:rare,T:j_vagabond}Vagabond",
+        "{C:red}#1#{} Joker slot",
+        "{C:red}#2#{} hand",
+        "{C:inactive,s:0.8}Art credit to",
+        "{C:inactive,s:0.8}@mr.cr33ps on Discord"
+      ],
+      "type": "Back"
+    },
+    "b_para_bonniedeck": {
+      "name": "Bonnie Deck",
+      "text": [
+        "Start with an {C:attention,T:m_eternal}Eternal{} {C:uncommon,T:j_para_bonnie}Bonnie{}",
+        "and #1# random {C:attention}Food Jokers"
+      ],
+      "type": "Back"
+    },
+    "b_para_artisticdeck": {
+      "name": "Artistic Deck",
+      "text": [
+        "{C:red}#1#{} Joker slots",
+        "{C:attention}+#2#{} hand size"
+      ],
+      "type": "Back"
+    },
+    "b_para_voiddeck": {
+      "name": "Void Deck",
+      "text": [
+        "{C:attention}+#1#{} Joker slots",
+        "{C:red}#2#{} hands each round",
+        "{C:inactive,s:0.8}Art credit to",
+        "{C:inactive,s:0.8}@silly_goober_0nthewall on Discord"
+      ],
+      "type": "Back"
+    },
+    "b_para_chasmdeck": {
+      "name": "Chasm Deck",
+      "text": [
+        "{C:red}#1#{} Joker slots",
+        "{C:red}#2#{} hands each round",
+        "{C:attention}+#3#{} hand size",
+        "{C:inactive,s:0.8}Art credit to",
+        "{C:inactive,s:0.8}@silly_goober_0nthewall on Discord"
+      ],
+      "type": "Back"
+    },
+    "bl_para_plain": {
+      "name": "The Plain",
+      "text": [
+        "All enhanced cards",
+        "are debuffed"
+      ],
+      "type": "Blind"
+    },
+    "bl_para_singular": {
+      "name": "The Singular",
+      "text": [
+        "Non-unique Jokers,",
+        "Blueprint, and",
+        "Brainstorm, are",
+        "debuffed"
+      ],
+      "type": "Blind"
+    },
+    "j_para_fakemadness": {
+      "name": "Madness",
+      "text": [
+        "When {C:attention}Small Blind{} or {C:attention}Big Blind{}",
+        "is selected, gain {X:mult,C:white}X0.5{} Mult",
+        "and {C:attention}destroy{} a random Joker",
+        "{C:inactive}(Currently {X:mult,C:white}X1{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_para_bonnie": {
+      "name": "Bonnie",
+      "text": [
+        "When exiting the {C:attention}shop{}",
+        "after defeating a {C:attention}Boss Blind{},",
+        "create a {C:enhanced}Safe Room Tag{}",
+        "{C:inactive,s:0.8}I'm a chef cooker!!!"
+      ],
+      "type": "Joker"
+    },
+    "j_para_bluecard": {
+      "name": "Blue Card",
+      "text": [
+        "This Joker gains {C:chips}+#1#{} Chips",
+        "when any {C:attention}Booster Pack{} is opened.",
+        "{C:inactive}(Currently {}{C:chips}+#2#{} {C:inactive}Chips){}",
+        "{C:inactive,s:0.8}I'm blue, da ba dee da ba die,",
+        "{C:inactive,s:0.8}da ba dee da ba die, da ba dee da ba die.",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_orangecard": {
+      "name": "Orange Card",
+      "text": [
+        "This Joker gains {X:mult,C:white}X#1#{} Mult",
+        "when any {C:attention}Booster Pack{} is skipped.",
+        "{C:red}Works once per shop{}",
+        "{C:inactive}(Currently {}{X:mult,C:white}X#2#{} {C:inactive}Mult and #3#){}"
+      ],
+      "type": "Joker"
+    },
+    "j_para_yellowcard": {
+      "name": "Yellow Card",
+      "text": [
+        "Earn {C:money}$#1#{} at end of round. ",
+        "Payout increases by {C:money}$#2#{} when",
+        "any {C:attention}Booster Pack{} is skipped."
+      ],
+      "type": "Joker"
+    },
+    "j_para_pineapple": {
+      "name": "Pineapple",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "{C:inactive,s:0.8}Don't eat pineapples!",
+        "{C:inactive,s:0.8}You're allergic."
+      ],
+      "type": "Joker"
+    },
+    "j_para_cookie": {
+      "name": "Cookie",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "For each round played, lose {X:mult,C:white}X#2#{} Mult",
+        "{C:inactive,s:0.8}Boring but delicious. Cookies, the taste of home."
+      ],
+      "type": "Joker"
+    },
+    "j_para_plantainchips": {
+      "name": "Plantain Chips",
+      "text": [
+        "{X:chips,C:white}X#1#{} Chips",
+        "For each round played, lose {X:chips,C:white}X#2#{} Chips",
+        "{C:inactive,s:0.8}Crunchy. Delicious. And full of potassium.",
+        "{C:inactive,s:0.8}That's plantain chips!!!",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_onigiri": {
+      "name": "Onigiri",
+      "text": [
+        "Gives either {C:chips}+#1#{} Chips, {C:mult}+#2#{} Mult, or {X:mult,C:white}X#3#{} Mult",
+        "Disappears in {C:attention}#4#{} hands",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_fishhead": {
+      "name": "Fish Head",
+      "text": [
+        "Earn {C:money}$#1#{} at the end of the round",
+        "For each {C:money}$1{} you have over {C:money}$#2#{} at",
+        "end of round, this Joker permanently earns {C:money}$1{} less",
+        "{C:inactive,s:0.8}Fish heads are yummy and the",
+        "{C:inactive,s:0.8}textures are different and good!!!"
+      ],
+      "type": "Joker"
+    },
+    "j_para_nft": {
+      "name": "Joker NFT.png",
+      "text": [
+        "Drop sell value by",
+        "{C:money}$#1#{} every round",
+        "{C:inactive}(Minimum of {C:money}$#2#{C:inactive})",
+        "{C:inactive,s:0.8}L"
+      ],
+      "type": "Joker"
+    },
+    "j_para_deltarunetomorrow": {
+      "name": "Jokerrune",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult per chapter of",
+        "{C:attention}Deltarune{} released",
+        "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+        "{C:inactive,s:0.8}HOW MUCH LONGER NOW...",
+        "{C:inactive,s:0.8}MY DELTARUNE."
+      ],
+      "type": "Joker"
+    },
+    "j_para_madeline": {
+      "name": "Madeline",
+      "text": [
+        "On the next {C:attention}#2#{} cards",
+        "triggered, {C:mult}+#1#{} Mult",
+        "Art credit to",
+        "{C:planet}@secun{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_burntsamosas": {
+      "name": "Burnt Samosas",
+      "text": [
+        "{C:chips}+#1#{} Chips",
+        "At the end of the round, this",
+        "Joker loses {C:chips}-#2#{} Chips",
+        "{C:inactive,s:0.8}Leftovers.{}"
+      ],
+      "type": "Joker"
+    },
+    "j_para_palmier": {
+      "name": "Palmiers",
+      "text": [
+        "{C:chips}+#1#{} Chips",
+        "Every time a playing card is",
+        "triggered, this Joker loses",
+        "{C:chips}-#2#{} Chips and that card",
+        "gains {C:chips}+#2#{} Chips",
+        "{C:inactive,s:0.8}They're yummy, they're{}",
+        "{C:inactive,s:0.8}crunchy, they get crumbs{}",
+        "{C:inactive,s:0.8}everywhere, MOVING ON!{}",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_malangafritter": {
+      "name": "Malanga Fritters",
+      "text": [
+        "For the next {C:attention}#1#{} hands,",
+        "first played card becomes {C:dark_edition}Polychrome{}.",
+        "{C:inactive}(First played card must have no{}",
+        "{C:inactive}edition for Joker to trigger){}",
+        "{C:inactive,s:0.8}You just feel like they're missing{}",
+        "{C:inactive,s:0.8}some spicy peppers for some reason.{}"
+      ],
+      "type": "Joker"
+    },
+    "j_para_airplane": {
+      "name": "Airplane",
+      "text": [
+        "For each purchased {C:attention}Tier 1{} Voucher,",
+        "gain {C:attention}#1#{} free {C:green}reroll{} per shop",
+        "{C:inactive}#3#{C:attention}#2#{C:inactive}#4#",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_tower": {
+      "name": "Tower",
+      "text": [
+        "Earn {C:money}$#1#{} at end of round",
+        "if you have at least two {C:attention}Towers",
+        "Duplicate {C:attention}Towers{} can appear",
+        "without {C:attention}Showman",
+        "{C:inactive,s:0.8}oh boy i sure hope nobody",
+        "{C:inactive,s:0.8}crashes an airplane into me",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_astro": {
+      "name": "< Astro >w< >",
+      "text": [
+        "{X:dark_edition,C:white}^^#1#{} Chips if played hand is a {C:attention}Flush",
+        "Gains {X:dark_edition,C:white}^^#2#{} Chips for each scoring {C:spades}Spade",
+        "Used {C:planet}Planet{} cards have a {C:green}#3# in #4#{} chance",
+        "to {C:attention}level up{} the card's poker hand",
+        "{C:attention}1{} additional time",
+        "(Must be a standard planet card)",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_green_credit_card": {
+      "name": "Green Credit Card",
+      "text": [
+        "Go {C:attention}as much{} in debt {C:attention}as you want",
+        "{C:inactive,s:0.8}This will have no unforseen consequences."
+      ],
+      "type": "Joker"
+    },
+    "j_para_card": {
+      "name": "card",
+      "text": [
+        "{C:chips}+#1#{} chip",
+        "{C:inactive,s:0.8}Cards together strong",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_pancake": {
+      "name": "Pancakes",
+      "text": [
+        "Scored {C:attention}Food Jokers{} give {C:mult}+#1#{} Mult",
+        "Lose {C:mult}-#2#{} Mult at end of round",
+        "{C:inactive,s:0.8}\"So you hate waffles?\" No bitch. Dats a",
+        "{C:inactive,s:0.8}whole new sentence. Wtf is you talkin about.",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "j_para_paradox": {
+      "name": "UnusedParadox",
+      "text": [
+        "When leaving shop, create a random",
+        "{C:attention}Joker{} from {B:2,V:1}Paradox's Stupid Ideas{}",
+        "with the {C:dark_edition}Negative{} edition",
+        "{C:inactive,s:0.8}no way thats me. woag",
+        "Art credit to",
+        "{C:planet}@silly_goober_0nthewall{} on {C:spectral}Discord"
+      ],
+      "type": "Joker"
+    },
+    "p_para_foodpack": {
+      "name": "Snack Pack",
+      "text": [
+        "Choose 1 of 3 {C:attention}Food Jokers"
+      ],
+      "type": "Other"
+    },
+    "p_para_creditpack": {
+      "name": "Credit Card",
+      "text": [
+        "Choose 1 {C:attention}Credit Card"
+      ],
+      "type": "Other"
+    },
+    "tag_para_foodtag": {
+      "name": "Safe Room Tag",
+      "text": [
+        "Open a free {C:enhanced}Snack Pack{}"
+      ],
+      "type": "Tag"
+    },
+    "ach_para_deathbypineapple": {
+      "name": "'Snack on some pineapple slices.'",
+      "text": [],
+      "type": "achievement_descriptions"
+    },
+    "ach_para_cardcollector": {
+      "name": "\"Obtain every colorful card.\"\r\n        ",
+      "text": [],
+      "type": "achievement_descriptions"
+    },
+    "c_para_endurance": {
+      "name": "\"Endurance Test\"",
+      "text": [],
+      "type": "challenge_names"
+    },
+    "c_para_easy": {
+      "name": "\"Easy...?\"\r\n        ",
+      "text": [],
+      "type": "challenge_names"
+    },
+    "groupfoodpack": {
+      "name": "\"(You'd like...)\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "groupcreditpack": {
+      "name": "\"Credit Card\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "para_k_reactivated": {
+      "name": "\"Reactivated!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "para_k_upgrade": {
+      "name": "\"Upgrade!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "para_k_active": {
+      "name": "\"Active\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "para_k_inactive": {
+      "name": "\"Inactive\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "para_k_l": {
+      "name": "\"L\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "para_k_snacktime": {
+      "name": "'Snacks time!'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "para_k_transformed": {
+      "name": "\"Transformed!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_para_mythic": {
+      "name": "\"Mythic\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_para_nft": {
+      "name": "\"NFT\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "airplane_a1": {
+      "name": "\"(Currently \"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "airplane_a2": {
+      "name": "\"(Currently \"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "airplane_b1": {
+      "name": "\" free reroll)\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "airplane_b2": {
+      "name": "\" free rerolls)\"\r\n        ",
+      "text": [],
+      "type": "dictionary"
+    }
+  },
+  "atlases": {
+    "Backs": {
+      "path": "Backs.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/paradox-stupid-ideas@unusedparadox/v1.0.1/Backs.png",
+      "resolvedGitHubPath": "assets/1x/Backs.png"
+    },
+    "Blinds": {
+      "path": "Blinds.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/paradox-stupid-ideas@unusedparadox/v1.0.1/Blinds.png",
+      "resolvedGitHubPath": "assets/1x/Blinds.png"
+    },
+    "Boosters": {
+      "path": "Boosters.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/paradox-stupid-ideas@unusedparadox/v1.0.1/Boosters.png",
+      "resolvedGitHubPath": "assets/1x/Boosters.png"
+    },
+    "Jokers": {
+      "path": "Jokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/paradox-stupid-ideas@unusedparadox/v1.0.1/Jokers.png",
+      "resolvedGitHubPath": "assets/1x/Jokers.png"
+    },
+    "Jokers_Soul": {
+      "path": "Jokers_Soul.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/paradox-stupid-ideas@unusedparadox/v1.0.1/Jokers_Soul.png",
+      "resolvedGitHubPath": "assets/1x/Jokers_Soul.png"
+    },
+    "Tags": {
+      "path": "Tags.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/paradox-stupid-ideas@unusedparadox/v1.0.1/Tags.png",
+      "resolvedGitHubPath": "assets/1x/Tags.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Achievement",
+      "key": "deathbypineapple",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'deathbypineapple',\r\n    bypass_all_unlocked = true,\r\n    hidden_name = true,\r\n    hidden_text = false,\r\n    unlock_condition = function(self, args)\r\n        return args.type == 'deathbypineapple'\r\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Achievement",
+      "key": "cardcollector",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'cardcollector',\r\n    bypass_all_unlocked = true,\r\n    hidden_name = true,\r\n    hidden_text = false,\r\n    unlock_condition = function(self, args)\r\n        return args.type == 'cardcollector'\r\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Backs",
+      "atlas": null,
+      "pos": null,
+      "raw": "-- Atlas for Backs\r\n\tkey = 'Backs',\r\n\tpath = 'Backs.png',\r\n\tpx = 71,\r\n\tpy = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Mods",
+      "key": "hundreddeck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"hundreddeck\",\r\n\t    unlocked = true,\r\n\t\tconfig = {extra = {\r\n\t\t\tjoker_slots = 100,\r\n\t\t\tdollars = 100,\r\n\t\t\thands = 100,\r\n\t\t\tdiscards = 100,\r\n\t\t\tconsumable_slots = 100,\r\n\t\t\thand_size = 100,\r\n\t\t\twinning_ante = 100,\r\n\t\t}},\r\n\t\tatlas = 'Backs',\r\n\t\tpos = {x = 0, y = 0},\r\n\t\tloc_vars = function(self,info_queue,card)\r\n\t\t\treturn {vars = {self.config.extra.joker_slots, self.config.extra.dollars, self.config.extra.hands, self.config.extra.discards, self.config.extra.consumable_slots, self.config.extra.hand_size, self.config.extra.winning_ante}}\r\n\t\tend,\r\n\t    apply = function(self, back)\r\n\t\t\tG.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + self.config.extra.joker_slots\r\n\t\t\tG.GAME.starting_params.dollars = G.GAME.starting_params.dollars + self.config.extra.dollars\r\n\t\t\tG.GAME.starting_params.hands = G.GAME.starting_params.hands + self.config.extra.hands\r\n\t\t\tG.GAME.starting_params.discards = G.GAME.starting_params.discards + self.config.extra.discards\r\n\t\t\tG.GAME.starting_params.consumable_slots = G.GAME.starting_params.consumable_slots + self.config.extra.consumable_slots\r\n\t\t\tG.GAME.starting_params.hand_size = G.GAME.starting_params.hand_size + self.config.extra.hand_size\r\n\t\t\tG.GAME.win_ante = G.GAME.win_ante + self.config.extra.winning_ante\r\n\t    end",
+      "config": {
+        "extra": {
+          "joker_slots": 100,
+          "dollars": 100,
+          "hands": 100,
+          "discards": 100,
+          "consumable_slots": 100,
+          "hand_size": 100,
+          "winning_ante": 100
+        }
+      },
+      "ability": {
+        "extra": {
+          "joker_slots": 100,
+          "dollars": 100,
+          "hands": 100,
+          "discards": 100,
+          "consumable_slots": 100,
+          "hand_size": 100,
+          "winning_ante": 100
+        }
+      },
+      "vars": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Back",
+      "key": "bonniedeck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"bonniedeck\",\r\n    unlocked = true,\r\n\tconfig = {extra = {\r\n\t\tfood_jokers = 2\r\n\t}},\r\n\tatlas = 'Backs',\r\n\tpos = {x = 1, y = 0},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {self.config.extra.food_jokers}}\r\n\tend,\r\n    apply = function(self, back)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\tfunc = function()\r\n\t\t\t\tlocal card = SMODS.create_card({\r\n\t\t\t\t\tset = 'Joker',\r\n\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\tkey = 'j_para_bonnie',\r\n\t\t\t\t\tedition = e_base,\r\n\t\t\t\t\tno_edition = true,\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n                card:add_to_deck()\r\n                G.jokers:emplace(card)\r\n\t\t\t\tcard:set_edition(nil, true, true)\r\n\t\t\t\tfor i=1,self.config.extra.food_jokers do\r\n\t\t\t\t\tlocal card2 = SMODS.create_card({\r\n\t\t\t\t\t\tset = \"Food\",\r\n\t\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\t\tkey_append = \"friend inside me\"\r\n\t\t\t\t\t})\r\n                \tcard2:add_to_deck()\r\n                \tG.jokers:emplace(card2)\r\n\t\t\t\tend\r\n                return true\r\n                end\r\n            })\r\n\t\t)\r\n    end",
+      "config": {
+        "extra": {
+          "food_jokers": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "food_jokers": 2
+        }
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Mods",
+      "key": "naneinfdeck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = \"naneinfdeck\",\r\n    unlocked = unlockednaneinf,\r\n\tatlas = 'Backs',\r\n\tpos = {x = 2, y = 0},\r\n\tconfig = {extra = {\r\n\t\twinning_ante = 39\r\n\t}},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {self.config.extra.winning_ante}}\r\n\tend,\r\n    apply = function(self, back)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\tfunc = function()\r\n\t\t\t\tlocal card = SMODS.create_card({\r\n\t\t\t\t\tset = 'Joker',\r\n\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\tkey = 'j_baron',\r\n\t\t\t\t\tedition = e_negative,\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n                card:add_to_deck()\r\n                G.jokers:emplace(card)\r\n\t\t\t\tcard:set_edition({ negative = true })\r\n\t\t\t\tlocal card2 = SMODS.create_card({\r\n\t\t\t\t\tset = 'Joker',\r\n\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\tkey = 'j_mime',\r\n\t\t\t\t\tedition = e_negative,\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n                card2:add_to_deck()\r\n                G.jokers:emplace(card2)\r\n\t\t\t\tcard2:set_edition({ negative = true })\r\n\t\t\t\tfor k, v in pairs(G.playing_cards) do\r\n\t\t\t\t\tv:set_seal(\"Red\", nil, true)\r\n\t\t\t\t\tv:set_ability(G.P_CENTERS[\"m_steel\"])\r\n\t\t\t\t\tSMODS.change_base(v, nil, \"King\")\r\n\t\t\t\tend\r\n\t\t\t\tG.GAME.win_ante = self.config.extra.winning_ante\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n        })\r\n\t\t)\r\n    end,\r\n\tcheck_for_unlock = unlock_condition_naneinf",
+      "config": {
+        "extra": {
+          "winning_ante": 39
+        }
+      },
+      "ability": {
+        "extra": {
+          "winning_ante": 39
+        }
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Back",
+      "key": "yurideck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = \"yurideck\",\r\n\tunlocked = true,\r\n\tatlas = \"Backs\",\r\n\tpos = {x = 3, y = 0},\r\n\tconfig = {extra = {\r\n\t\tjoker_slots = -1,\r\n\t\thands = -1,\r\n\t}},\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn {vars = {self.config.extra.joker_slots, self.config.extra.hands}}\r\n\tend,\r\n\tapply = function(self, back)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\tfunc = function()\r\n\t\t\t\tlocal card = SMODS.create_card({\r\n\t\t\t\t\tset = 'Joker',\r\n\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\tkey = 'j_blueprint',\r\n\t\t\t\t\tedition = e_base,\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n                card:add_to_deck()\r\n                G.jokers:emplace(card)\r\n\t\t\t\tcard:set_edition(nil, true, true)\r\n\t\t\t\tlocal card2 = SMODS.create_card({\r\n\t\t\t\t\tset = 'Joker',\r\n\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\tkey = 'j_brainstorm',\r\n\t\t\t\t\tedition = e_base,\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n                card2:add_to_deck()\r\n                G.jokers:emplace(card2)\r\n\t\t\t\tcard2:set_edition(nil, true, true)\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n        }))\r\n\t\tG.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + self.config.extra.joker_slots\r\n\t\tG.GAME.starting_params.hands = G.GAME.starting_params.hands + self.config.extra.hands\r\n\tend",
+      "config": {
+        "extra": {
+          "joker_slots": -1,
+          "hands": -1
+        }
+      },
+      "ability": {
+        "extra": {
+          "joker_slots": -1,
+          "hands": -1
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Back",
+      "key": "yaoideck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "key = \"yaoideck\",\r\n\tunlocked = true,\r\n\tatlas = \"Backs\",\r\n\tpos = {x = 6, y = 0},\r\n\tconfig = {extra = {\r\n\t\tjoker_slots = -1,\r\n\t\thands = -1,\r\n\t}},\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn {vars = {self.config.extra.joker_slots, self.config.extra.hands}}\r\n\tend,\r\n\tapply = function(self, back)\r\n\t\tG.E_MANAGER:add_event(Event({\r\n\t\t\tfunc = function()\r\n\t\t\t\tlocal card = SMODS.create_card({\r\n\t\t\t\t\tset = 'Joker',\r\n\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\tkey = 'j_madness',\r\n\t\t\t\t\tedition = e_base,\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n                card:add_to_deck()\r\n                G.jokers:emplace(card)\r\n\t\t\t\tcard:set_edition(nil, true, true)\r\n\t\t\t\tlocal card2 = SMODS.create_card({\r\n\t\t\t\t\tset = 'Joker',\r\n\t\t\t\t\tarea = G.jokers,\r\n\t\t\t\t\tkey = 'j_vagabond',\r\n\t\t\t\t\tedition = e_base,\r\n\t\t\t\t\tstickers = {\"eternal\"}\r\n\t\t\t\t})\r\n                card2:add_to_deck()\r\n                G.jokers:emplace(card2)\r\n\t\t\t\tcard2:set_edition(nil, true, true)\r\n\t\t\t\treturn true\r\n\t\t\tend\r\n        }))\r\n\t\tG.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + self.config.extra.joker_slots\r\n\t\tG.GAME.starting_params.hands = G.GAME.starting_params.hands + self.config.extra.hands\r\n\tend",
+      "config": {
+        "extra": {
+          "joker_slots": -1,
+          "hands": -1
+        }
+      },
+      "ability": {
+        "extra": {
+          "joker_slots": -1,
+          "hands": -1
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Back",
+      "key": "artisticdeck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "key = \"artisticdeck\",\r\n    unlocked = false,\r\n\tconfig = {extra = {\r\n\t\tjoker_slots = -5,\r\n\t\thand_size = 10\r\n\t}},\r\n\tatlas = 'Backs',\r\n\tpos = {x = 7, y = 0},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {self.config.extra.joker_slots, self.config.extra.hand_size}}\r\n\tend,\r\n    locked_loc_vars = function(self, info_queue, back)\r\n        local other_name = localize('k_unknown')\r\n        if G.P_CENTERS['b_painted'].unlocked then\r\n            other_name = localize { type = 'name_text', set = 'Back', key = 'b_painted' }\r\n        end\r\n\r\n        return { vars = { other_name } }\r\n    end,\r\n    apply = function(self, back)\r\n\t\tG.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + self.config.extra.joker_slots\r\n\t\tG.GAME.starting_params.hand_size = G.GAME.starting_params.hand_size + self.config.extra.hand_size\r\n    end,\r\n    check_for_unlock = function(self, args)\r\n        return args.type == 'win_deck' and get_deck_win_stake('b_painted') > 7\r\n    end",
+      "config": {
+        "extra": {
+          "joker_slots": -5,
+          "hand_size": 10
+        }
+      },
+      "ability": {
+        "extra": {
+          "joker_slots": -5,
+          "hand_size": 10
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Back",
+      "key": "voiddeck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = \"voiddeck\",\r\n    unlocked = false,\r\n\tconfig = {extra = {\r\n\t\tjoker_slots = 3,\r\n\t\thands = -3\r\n\t}},\r\n\tatlas = 'Backs',\r\n\tpos = {x = 5, y = 0},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {self.config.extra.joker_slots, self.config.extra.hands}}\r\n\tend,\r\n    apply = function(self, back)\r\n\t\tG.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + self.config.extra.joker_slots\r\n\t\tG.GAME.starting_params.hands = G.GAME.starting_params.hands + self.config.extra.hands\r\n    end,\r\n    check_for_unlock = function(self, args)\r\n        return args.type == 'win_deck' and get_deck_win_stake('b_black') > 7\r\n    end,\r\n    locked_loc_vars = function(self, info_queue, back)\r\n        local other_name = localize('k_unknown')\r\n        if G.P_CENTERS['b_black'].unlocked then\r\n            other_name = localize { type = 'name_text', set = 'Back', key = 'b_black' }\r\n        end\r\n\r\n        return { vars = { other_name } }\r\n    end,",
+      "config": {
+        "extra": {
+          "joker_slots": 3,
+          "hands": -3
+        }
+      },
+      "ability": {
+        "extra": {
+          "joker_slots": 3,
+          "hands": -3
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Back",
+      "key": "chasmdeck",
+      "atlas": "Backs",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = \"chasmdeck\",\r\n    unlocked = false,\r\n\tconfig = {extra = {\r\n\t\tjoker_slots = -5,\r\n\t\thands = -3,\r\n\t\thand_size = 16\r\n\t}},\r\n\tatlas = 'Backs',\r\n\tpos = {x = 4, y = 0},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {self.config.extra.joker_slots, self.config.extra.hands, self.config.extra.hand_size}}\r\n\tend,\r\n    locked_loc_vars = function(self, info_queue, back)\r\n        local other_name_a = localize('k_unknown')\r\n\t\tlocal other_name_b = localize('k_unknown')\r\n        if G.P_CENTERS['b_para_voiddeck'].unlocked then\r\n            other_name_a = localize { type = 'name_text', set = 'Back', key = 'b_para_voiddeck' }\r\n        end\r\n        if G.P_CENTERS['b_para_artisticdeck'].unlocked then\r\n            other_name_b = localize { type = 'name_text', set = 'Back', key = 'b_para_artisticdeck' }\r\n        end\r\n        return { vars = { other_name_a, other_name_b } }\r\n    end,\r\n    apply = function(self, back)\r\n\t\tG.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + self.config.extra.joker_slots\r\n\t\tG.GAME.starting_params.hands = G.GAME.starting_params.hands + self.config.extra.hands\r\n\t\tG.GAME.starting_params.hand_size = G.GAME.starting_params.hand_size + self.config.extra.hand_size\r\n    end,\r\n    check_for_unlock = function(self, args)\r\n        return args.type == 'win_deck' and get_deck_win_stake('b_para_voiddeck') > 7 and get_deck_win_stake('b_para_artisticdeck') > 7\r\n    end",
+      "config": {
+        "extra": {
+          "joker_slots": -5,
+          "hands": -3,
+          "hand_size": 16
+        }
+      },
+      "ability": {
+        "extra": {
+          "joker_slots": -5,
+          "hands": -3,
+          "hand_size": 16
+        }
+      },
+      "vars": [
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Blinds",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Blinds',\r\n\tpath = 'Blinds.png',\r\n\tpx = 34,\r\n\tpy = 34,\r\n    atlas_table = 'ANIMATION_ATLAS',\r\n    frames = 21",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "plain",
+      "atlas": "Blinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "-- The Plain\r\n    key = \"plain\",\r\n    dollars = 5,\r\n    mult = 2,\r\n    atlas = \"Blinds\",\r\n    pos = { x = 0, y = 0 },\r\n    boss = { min = 6 },\r\n    boss_colour = HEX(\"cca876\"),\r\n    calculate = function(self, blind, context)\r\n        if not blind.disabled then\r\n            if context.debuff_card and context.debuff_card.area ~= G.jokers and next(SMODS.get_enhancements(context.debuff_card)) then\r\n                return {\r\n                    debuff = true\r\n                }\r\n            end\r\n        end\r\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "singular",
+      "atlas": "Blinds",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "-- The Singular\r\n    key = \"singular\",\r\n    dollars = 5,\r\n    mult = 2,\r\n    atlas = \"Blinds\",\r\n    pos = { x = 0, y = 1 },\r\n    boss = { min = 9 },\r\n    boss_colour = HEX(\"aa3eb0\"),\r\n    calculate = function(self, blind, context)\r\n        if not blind.disabled then\r\n            if context.debuff_card and context.debuff_card.area == G.jokers then\r\n                    debuff_dupes(context.debuff_card, nil)\r\n            elseif context.selling_card then\r\n                for _, joker in ipairs(G.jokers.cards) do\r\n                    joker.ability.para_singular = nil\r\n                    SMODS.debuff_card(joker, false, \"para_singulardebuff\")\r\n                    debuff_dupes(joker, context.card.config.center.key)\r\n                end\r\n            elseif context.card_added then\r\n                for _, joker in ipairs(G.jokers.cards) do\r\n                    joker.ability.para_singular = nil\r\n                    SMODS.debuff_card(joker, false, \"para_singulardebuff\")\r\n                    debuff_dupes(joker, nil)\r\n                end\r\n            end\r\n        end\r\n    end,\r\n    disable = function(self)\r\n        for _, joker in ipairs(G.jokers.cards) do\r\n            joker.ability.para_singular = nil\r\n            SMODS.debuff_card(joker, false, \"para_singulardebuff\")\r\n        end\r\n    end,\r\n    defeat = function(self)\r\n        for _, joker in ipairs(G.jokers.cards) do\r\n            joker.ability.para_singular = nil\r\n            SMODS.debuff_card(joker, false, \"para_singulardebuff\")\r\n        end\r\n    end",
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Boosters",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Boosters\",\r\n\tpath = \"Boosters.png\",\r\n\tpx = 71,\r\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Booster",
+      "key": "creditpack",
+      "atlas": "Boosters",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'creditpack',\r\n\tconfig = {extra = 1, choose = 1},\r\n\tatlas = 'Boosters',\r\n\tpos = { x = 2, y = 0 },\r\n\tcreate_card = function(self, card)\r\n\t\treturn SMODS.create_card({area = G.pack_cards, no_edition = true, key = 'j_credit_card', key_append = \"para_creditpack_card\"})\r\n\tend,\r\n\tweight = 1,\r\n\tcost = 1,\r\n\tgroup_key = 'groupcreditpack'",
+      "config": {
+        "extra": 1,
+        "choose": 1
+      },
+      "ability": {
+        "extra": 1,
+        "choose": 1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Booster",
+      "key": "foodpack",
+      "atlas": "Boosters",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'foodpack',\r\n\tconfig = {extra = 3, choose = 1},\r\n\tatlas = 'Boosters',\r\n\tpos = { x = 1, y = 0 },\r\n\tno_collection = true,\r\n\tcreate_card = function(self, card)\r\n\t\treturn SMODS.create_card({set = \"Food\", area = G.pack_cards, skip_materialize = true, key_append = \"para_foodpack_card\"})\r\n\tend,\r\n\tweight = 0,\r\n\tcost = 0,\r\n\tgroup_key = 'groupfoodpack',\r\n\tin_pool = function(self, args)\r\n\t\treturn false\r\n\tend",
+      "config": {
+        "extra": 3,
+        "choose": 1
+      },
+      "ability": {
+        "extra": 3,
+        "choose": 1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Mods",
+      "key": "endurance",
+      "atlas": null,
+      "pos": null,
+      "raw": "loc_txt = \"Endurance Test\",\r\n        key = 'endurance',\r\n        rules = {\r\n            custom = {\r\n                {id = 'win_ante', value = 1000},\r\n        },\r\n            modifiers = {},\r\n        },\r\n        jokers = {\r\n        },\r\n        restrictions = {\r\n            banned_cards = {},\r\n            banned_tags = {},\r\n            banned_other = {}\r\n        },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Challenge",
+      "key": "easy",
+      "atlas": null,
+      "pos": null,
+      "raw": "loc_txt = \"Easy...?\",\r\n    key = 'easy',\r\n    rules = {\r\n        custom = {\r\n            {id = 'win_ante', value = 2},\r\n    },\r\n        modifiers = {},\r\n    },\r\n    jokers = {\r\n    },\r\n    deck = {cards = {}},\r\n    restrictions = {\r\n        banned_cards = {},\r\n        banned_tags = {},\r\n        banned_other = {}\r\n    },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Jokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Jokers',\r\n\tpath = 'Jokers.png',\r\n\tpx = 71,\r\n\tpy = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Jokers_Soul",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'Jokers_Soul',\r\n\tpath = 'Jokers_Soul.png',\r\n\tpx = 71,\r\n\tpy = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "bluecard",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "-- Blue Card implementation\r\n\tkey = 'bluecard',\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 0, y = 0},\r\n\tconfig = { extra = {\r\n\t\tchip_gain = 10,\r\n\t\tchips = 0\r\n\t}\r\n\t},\r\n\trarity = 1,\r\n\tblueprint_compat = true,\r\n\tcost = 4,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.chip_gain, card.ability.extra.chips}}\r\n\tend,\r\n\tcalculate = function(self,card,context)\r\n\t\tif context.open_booster and not context.blueprint then \r\n\t\t\tcard.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain\r\n\t\t\treturn {\r\n\t\t\t\tmessage = localize{type = 'variable', key = 'a_chips', vars = {to_big(card.ability.extra.chip_gain)}},\r\n\t\t\t\tcolour = G.C.CHIPS\r\n\t\t\t}\r\n\t\telseif context.joker_main then\r\n\t\t\treturn {\r\n\t\t\t\tchips = card.ability.extra.chips\r\n\t\t\t}\r\n\t\tend\r\n\tend,\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tif next(SMODS.find_card(\"j_red_card\", true)) and next(SMODS.find_card(\"j_para_orangecard\", true)) and next(SMODS.find_card(\"j_para_yellowcard\", true)) then\r\n\t\t\tcheck_for_unlock({type = 'cardcollector'})\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "chip_gain": 10,
+          "chips": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "chip_gain": 10,
+          "chips": 0
+        }
+      },
+      "vars": [
+        10,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "orangecard",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "-- Orange Card implementation\r\n\tkey = 'orangecard',\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 1, y = 0},\r\n\tconfig = { extra = {\r\n\t\txmult_gain = 0.25,\r\n\t\txmult = 1,\r\n\t\tis_active = true,\r\n\t}\r\n\t},\r\n\trarity = 2,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tblueprint_compat = true,\r\n\tcost = 6,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\tlocal active_msg = localize(\"para_k_inactive\")\r\n\t\tif card.ability.extra.is_active then\r\n\t\t\tactive_msg = localize(\"para_k_active\")\r\n\t\tend\r\n\t\treturn {vars = {card.ability.extra.xmult_gain, card.ability.extra.xmult, active_msg}}\r\n\tend,\r\n\tcalculate = function(self,card,context)\r\n\t\tif context.skipping_booster and not context.blueprint and card.ability.extra.is_active then -- Booster Pack is skipped, deactivate the Joker and increase the XMult\r\n\t\t\tcard.ability.extra.is_active = false\r\n\t\t\tcard.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain\r\n\t\t\treturn {\r\n\t\t\t\tmessage = localize{type = 'variable', key = 'a_xmult', vars = {to_big(card.ability.extra.xmult)}},\r\n\t\t\t\tcolour = G.C.MULT\r\n\t\t\t}\r\n\t\telseif context.ending_shop then -- Reactivate the Joker\r\n\t\t\tif not card.ability.extra.is_active then\r\n\t\t\t\tcard.ability.extra.is_active = true\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize('para_k_reactivated'),\r\n\t\t\t\t\tcolour = G.C.ATTENTION\r\n\t\t\t\t}\r\n\t\t\tend\r\n\t\telseif context.joker_main then\r\n\t\t\treturn {\r\n\t\t\t\txmult = card.ability.extra.xmult\r\n\t\t\t}\r\n\t\tend\r\n\tend,\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tif next(SMODS.find_card(\"j_red_card\", true)) and next(SMODS.find_card(\"j_para_bluecard\", true)) and next(SMODS.find_card(\"j_para_yellowcard\", true)) then\r\n\t\t\tcheck_for_unlock({type = 'cardcollector'})\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "xmult_gain": 0.25,
+          "xmult": 1,
+          "is_active": true
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult_gain": 0.25,
+          "xmult": 1,
+          "is_active": true
+        }
+      },
+      "vars": [
+        0.25,
+        1,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "yellowcard",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "-- Yellow Card implementation\r\n\tkey = 'yellowcard',\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 2, y = 0},\r\n\tconfig = { extra = {\r\n\t\tmoney = 0,\r\n\t\tmoney_gain = 1\r\n\t}\r\n\t},\r\n\trarity = 2,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tblueprint_compat = false,\r\n\tcost = 6,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.money, card.ability.extra.money_gain}}\r\n\tend,\r\n\tcalculate = function(self,card,context)\r\n\t\tif context.skipping_booster and not context.blueprint then\r\n\t\t\tcard.ability.extra.money = card.ability.extra.money + card.ability.extra.money_gain\r\n\t\t\treturn {\r\n\t\t\t\tmessage = \"+\" .. SMODS.signed_dollars(card.ability.extra.money_gain),\r\n\t\t\t\tcolour = G.C.MONEY\r\n\t\t\t}\r\n\t\tend\r\n\tend,\r\n\tcalc_dollar_bonus = function(self, card) -- Apparently money isn't in the calculate function. Who knew?\r\n\t\tif card.ability.extra.money == 0 then\r\n\t\t\treturn nil\r\n\t\telse\r\n\t\t\treturn card.ability.extra.money\r\n\t\tend\r\n\tend,\r\n\tadd_to_deck = function(self, card, from_debuff)\r\n\t\tif next(SMODS.find_card(\"j_red_card\", true)) and next(SMODS.find_card(\"j_para_orangecard\", true)) and next(SMODS.find_card(\"j_para_bluecard\", true)) then\r\n\t\t\tcheck_for_unlock({type = 'cardcollector'})\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "money": 0,
+          "money_gain": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "money": 0,
+          "money_gain": 1
+        }
+      },
+      "vars": [
+        0,
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "card",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 9,
+        "y": 1
+      },
+      "raw": "-- card implementation\r\n    key = \"card\",\r\n    blueprint_compat = true,\r\n    rarity = 1,\r\n    cost = 1,\r\n\tatlas = 'Jokers',\r\n\tpools = {[\"parajoker\"] = true},\r\n    pos = { x = 9, y = 1 },\r\n\tconfig = {extra = {\r\n\t\tchips = 1,\r\n\t\teeechips = 2,\r\n\t\trequirement = 5\r\n\t}},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.chips}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tlocal supercard = (#SMODS.find_card(\"j_para_card\", false) >= card.ability.extra.requirement) and next(SMODS.find_mod(\"Talisman\"))\r\n\t\tif context.joker_main and not supercard then\r\n\t\t\treturn {\r\n\t\t\t\tchips = card.ability.extra.chips\r\n\t\t\t}\r\n\t\telseif context.joker_main and supercard then\r\n\t\t\treturn {\r\n\t\t\t\teeechips = card.ability.extra.eeechips\r\n\t\t\t}\r\n\t\tend\r\n\tend,\r\n\tin_pool = function(self, args)\r\n\t\treturn true, {allow_duplicates = true}\r\n\tend",
+      "config": {
+        "extra": {
+          "chips": 1,
+          "eeechips": 2,
+          "requirement": 5
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 1,
+          "eeechips": 2,
+          "requirement": 5
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "bonnie",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "-- Why is steammodded so hard I spent so much crabbing time on them\r\n\tkey = 'bonnie',\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 3, y = 0},\r\n\tcost = 5,\r\n\trarity = 2,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tconfig = {extra = {active = false}},\r\n\tblueprint_compat = false,\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\tinfo_queue[#info_queue+1] = {key = 'tag_para_foodtag', set = 'Tag'}\r\n\t\tinfo_queue[#info_queue+1] = G.P_CENTERS.p_para_foodpack\r\n\t\t-- info_queue[#info_queue+1] = {key = 'para_negativesticker', set = 'Other'}\r\n\tend,\r\n\tcalculate = function(self,card,context)\r\n\t\tif context.end_of_round and context.beat_boss and not context.blueprint then\r\n\t\t\tcard.ability.extra.active = true\r\n\t\telseif context.ending_shop and card.ability.extra.active and not context.blueprint then\r\n\t\t\tadd_tag(Tag(\"tag_para_foodtag\"))\r\n\t\t\tcard.ability.extra.active = false\r\n\t\t\treturn {\r\n\t\t\t\tmessage = localize('para_k_snacktime'),\r\n\t\t\t\tcolour = G.C.ATTENTION\r\n\t\t\t}\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "active": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "active": false
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "pineapple",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "-- Pineapple implementation.\r\n\tkey = 'pineapple',\r\n\tconfig = { extra = {\r\n\t\txmult = 3\r\n\t}\r\n\t},\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 4, y = 0},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 1,\r\n\tcost = 2,\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.xmult}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.joker_main then\r\n\t\t\treturn {\r\n\t\t\t\txmult = card.ability.extra.xmult\r\n\t\t\t}\r\n        elseif context.end_of_round and not context.game_over then\r\n\t\t\tG.PROFILES[G.SETTINGS.profile].pineappledeath = true\r\n\t\t\tcheck_for_unlock({type = 'deathbypineapple'})\r\n            G.STATE = G.STATES.GAME_OVER\r\n            G.STATE_COMPLETE = false\r\n        end\r\n\tend",
+      "config": {
+        "extra": {
+          "xmult": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 3
+        }
+      },
+      "vars": [
+        3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cookie",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "-- Cookie implementation\r\n\tkey = 'cookie',\r\n\tconfig = { extra = {\r\n\t\txmult = 2.5,\r\n\t\txmult_loss = 0.25\r\n\t}\r\n\t},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 2,\r\n\tcost = 5,\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 5, y = 0},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.xmult, card.ability.extra.xmult_loss}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.joker_main then\r\n\t\t\treturn {\r\n\t\t\t\txmult = card.ability.extra.xmult\r\n\t\t\t}\r\n\t\telseif context.end_of_round and context.cardarea == G.jokers then\r\n\t\t\tcard.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_loss\r\n\t\t\tif card.ability.extra.xmult <= 1 then\r\n\t\t\t\tpara_consumefood(card)\r\n                return {\r\n                    message = localize('k_eaten_ex'),\r\n                    colour = G.C.ATTENTION\r\n                }\r\n\t\t\telse\r\n                return {\r\n                    message = localize { type = 'variable', key = 'a_xmult_minus', vars = { card.ability.extra.xmult_loss } },\r\n                    colour = G.C.MULT\r\n                }\r\n\t\t\tend\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "xmult": 2.5,
+          "xmult_loss": 0.25
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 2.5,
+          "xmult_loss": 0.25
+        }
+      },
+      "vars": [
+        2.5,
+        0.25
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "plantainchips",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "-- Plantain Chips implementation\r\n\tkey = 'plantainchips',\r\n\tconfig = { extra = {\r\n\t\txchips = 2,\r\n\t\txchips_loss = 0.1\r\n\t}\r\n\t},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 1,\r\n\tcost = 3,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 7, y = 0},\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.xchips, card.ability.extra.xchips_loss}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.joker_main then\r\n\t\t\treturn {\r\n\t\t\t\txchips = card.ability.extra.xchips\r\n\t\t\t}\r\n\t\telseif context.end_of_round and context.cardarea == G.jokers then\r\n\t\t\tcard.ability.extra.xchips = card.ability.extra.xchips - card.ability.extra.xchips_loss\r\n\t\t\tif card.ability.extra.xchips <= 1 then\r\n\t\t\t\tpara_consumefood(card)\r\n                return {\r\n                    message = localize('k_eaten_ex'),\r\n                    colour = G.C.ATTENTION\r\n                }\r\n\t\t\telse\r\n                return {\r\n                    message = localize { type = 'variable', key = 'a_xchips_minus', vars = { card.ability.extra.xchips_loss } },\r\n                    colour = G.C.CHIPS\r\n                }\r\n\t\t\tend\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "xchips": 2,
+          "xchips_loss": 0.1
+        }
+      },
+      "ability": {
+        "extra": {
+          "xchips": 2,
+          "xchips_loss": 0.1
+        }
+      },
+      "vars": [
+        2,
+        0.1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "onigiri",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "-- Onigiri implementation\r\n\tkey = 'onigiri',\r\n\tconfig = { extra = {\r\n\t\thands_left = 5,\r\n\t\tchips = 60,\r\n\t\tmult = 12,\r\n\t\txmult = 1.6,\r\n\t}\r\n\t},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 1,\r\n\tcost = 3,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 6, y = 0},\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.chips, card.ability.extra.mult, card.ability.extra.xmult, card.ability.extra.hands_left}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tlocal effects = {\"chips\", \"mult\", \"xmult\"}\r\n\t\tlocal chosen_effect = effects[math.random(#effects)]\r\n\t\tif context.joker_main then\r\n\t\t\tif chosen_effect == \"chips\" then\r\n\t\t\t\treturn {\r\n\t\t\t\t\tchips = card.ability.extra.chips\r\n\t\t\t\t}\r\n\t\t\telseif chosen_effect == \"mult\" then\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmult = card.ability.extra.mult\r\n\t\t\t\t}\r\n\t\t\telseif chosen_effect == \"xmult\" then\r\n\t\t\t\treturn {\r\n\t\t\t\t\txmult = card.ability.extra.xmult\r\n\t\t\t\t}\r\n\t\t\tend\r\n\t\telseif context.after and not context.blueprint then\r\n\t\t\tcard.ability.extra.hands_left = card.ability.extra.hands_left - 1\r\n\t\t\tif card.ability.extra.hands_left <= 0 then\r\n\t\t\t\tpara_consumefood(card)\r\n                return {\r\n                    message = localize('k_eaten_ex'),\r\n                    colour = G.C.ATTENTION\r\n                }\r\n\t\t\telse\r\n                return {\r\n                    message = card.ability.extra.hands_left .. '',\r\n                    colour = G.C.ATTENTION\r\n                }\r\n\t\t\tend\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "hands_left": 5,
+          "chips": 60,
+          "mult": 12,
+          "xmult": 1.6
+        }
+      },
+      "ability": {
+        "extra": {
+          "hands_left": 5,
+          "chips": 60,
+          "mult": 12,
+          "xmult": 1.6
+        }
+      },
+      "vars": [
+        60,
+        12,
+        1.6,
+        5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "madeline",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 2,
+        "y": 1
+      },
+      "raw": "-- Madeline implementation\r\n\tkey = 'madeline',\r\n\tconfig = { extra = {\r\n\t\tmult = 3,\r\n\t\tcards = 100,\r\n\t}\r\n\t},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 1,\r\n\tcost = 3,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 2, y = 1},\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.mult, card.ability.extra.cards}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.individual and context.cardarea == G.play and card.ability.extra.cards > 0 then\r\n\t\t\tcard.ability.extra.cards = card.ability.extra.cards - 1\r\n\t\t\treturn {\r\n\t\t\t\tmult = card.ability.extra.mult\r\n\t\t\t}\r\n\t\telseif context.after and card.ability.extra.cards <= 0 and not context.blueprint then\r\n\t\t\tpara_consumefood(card)\r\n            return {\r\n                message = localize('k_eaten_ex'),\r\n                colour = G.C.ATTENTION\r\n            }\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "mult": 3,
+          "cards": 100
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 3,
+          "cards": 100
+        }
+      },
+      "vars": [
+        3,
+        100
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "fishhead",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 1,
+        "y": 1
+      },
+      "raw": "-- Fish Head implementation\r\n\tkey = 'fishhead',\r\n\tconfig = { extra = {\r\n\t\tmoney = 20,\r\n\t\tthreshold = 4,\r\n\t}\r\n\t},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 3,\r\n\tcost = 9,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 1, y = 1},\r\n\tblueprint_compat = false,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.money, card.ability.extra.threshold}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.end_of_round and context.cardarea == G.jokers and not context.blueprint then\r\n\t\t\tlocal money_minus = to_big(0) - math.max(0, (to_big(G.GAME.dollars) + (to_big(G.GAME.dollar_buffer) or to_big(0)) - to_big(card.ability.extra.threshold)))\r\n\t\t\tcard.ability.extra.money = to_big(card.ability.extra.money) + to_big(money_minus)\r\n\t\t\tif to_big(card.ability.extra.money) <= to_big(0) then\r\n\t\t\t\tpara_consumefood(card)\r\n                return {\r\n                    message = localize('k_eaten_ex'),\r\n                    colour = G.C.ATTENTION\r\n                }\r\n\t\t\telseif to_big(money_minus) < to_big(0) then\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize({type = \"variable\", key = \"money_loss\", vars = {number_format(to_big(0)-to_big(money_minus))}}),\r\n\t\t\t\t\tcolour = G.C.RED\r\n\t\t\t\t}\r\n\t\t\tend\r\n\t\tend\r\n\tend,\r\n\tcalc_dollar_bonus = function(self, card)\r\n\t\treturn card.ability.extra.money\r\n\tend",
+      "config": {
+        "extra": {
+          "money": 20,
+          "threshold": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "money": 20,
+          "threshold": 4
+        }
+      },
+      "vars": [
+        20,
+        4
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "burntsamosas",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 9,
+        "y": 0
+      },
+      "raw": "-- Burnt Samosas implementation\r\n\tkey = 'burntsamosas',\r\n\tconfig = { extra = {\r\n\t\tchips = 50,\r\n\t\tchip_loss = 2,\r\n\t}\r\n\t},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 9, y = 0},\r\n\trarity = 1,\r\n\tcost = 5,\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.chips, card.ability.extra.chip_loss}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.joker_main then\r\n\t\t\treturn {\r\n\t\t\t\tchips = card.ability.extra.chips\r\n\t\t\t}\r\n\t\telseif context.end_of_round and context.cardarea == G.jokers then\r\n\t\t\tcard.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_loss\r\n\t\t\tif card.ability.extra.chips <= 0 then\r\n\t\t\t\tpara_consumefood(card)\r\n        \t    return {\r\n        \t        message = localize('k_eaten_ex'),\r\n        \t        colour = G.C.ATTENTION\r\n        \t    }\r\n\t\t\telse\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize{type = 'variable', key = 'a_chips_minus', vars = {to_big(card.ability.extra.chip_loss)}},\r\n\t\t\t\t\tcolour = G.C.CHIPS\r\n\t\t\t\t}\r\n\t\t\tend\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "chips": 50,
+          "chip_loss": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 50,
+          "chip_loss": 2
+        }
+      },
+      "vars": [
+        50,
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "palmier",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "-- Palmier implementation\r\n\tkey = 'palmier',\r\n\tconfig = { extra = {\r\n\t\tchips = 150,\r\n\t\tchip_loss = 10,\r\n\t}\r\n\t},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 2,\r\n\tcost = 7,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 0, y = 1},\r\n\tblueprint_compat = false,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.chips, card.ability.extra.chip_loss}}\r\n\tend,\r\n \tcalculate = function(self, card, context)\r\n        if context.individual and context.cardarea == G.play and card.ability.extra.chips > 0 and not context.blueprint then\r\n            context.other_card.ability.perma_bonus = (context.other_card.ability.perma_bonus or 0) + card.ability.extra.chip_loss\r\n\t\t\tcard.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_loss\r\n            return {\r\n                message = localize('k_upgrade_ex'),\r\n                colour = G.C.CHIPS\r\n            }\r\n\t\telseif context.after and card.ability.extra.chips <= 0 and not context.blueprint then\r\n\t\t\tpara_consumefood(card)\r\n            return {\r\n                message = localize('k_eaten_ex'),\r\n                colour = G.C.ATTENTION\r\n            }\r\n\t\telseif context.joker_main and not context.blueprint and card.ability.extra.chips > 0 then\r\n            return {\r\n                chips = card.ability.extra.chips\r\n            }\r\n\t\tend\r\n    end",
+      "config": {
+        "extra": {
+          "chips": 150,
+          "chip_loss": 10
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 150,
+          "chip_loss": 10
+        }
+      },
+      "vars": [
+        150,
+        10
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "malangafritter",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 8,
+        "y": 0
+      },
+      "raw": "-- Malanga Fritter implementation\r\n\tkey = 'malangafritter',\r\n\tconfig = { extra = {\r\n\t\thands = 5\r\n\t}},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\trarity = 3,\r\n\tcost = 7,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 8, y = 0},\r\n\tblueprint_compat = false,\r\n\teternal_compat = false,\r\n\tperishable_compat = false,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.hands}}\r\n\tend,\r\n \tcalculate = function(self, card, context)\r\n        if context.before and not context.blueprint then\r\n\t\t\tif not context.full_hand[1].edition then\r\n\t\t\t\tcontext.full_hand[1]:set_edition('e_polychrome')\r\n\t\t\t\tcard.ability.extra.hands = card.ability.extra.hands - 1\r\n          \t\treturn {\r\n          \t\t    message = localize('para_k_transformed'),\r\n          \t\t    colour = G.C.ATTENTION\r\n          \t\t}\r\n\t\t\tend\r\n\t\telseif context.after and card.ability.extra.hands <= 0 and not context.blueprint then\r\n\t\t\tpara_consumefood(card)\r\n            return {\r\n                message = localize('k_eaten_ex'),\r\n                colour = G.C.ATTENTION\r\n            }\r\n\t\tend\r\n    end",
+      "config": {
+        "extra": {
+          "hands": 5
+        }
+      },
+      "ability": {
+        "extra": {
+          "hands": 5
+        }
+      },
+      "vars": [
+        5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "pancake",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 0,
+        "y": 2
+      },
+      "raw": "-- mmm yummy pancake\r\n\tkey = 'pancake',\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 0, y = 2},\r\n\tcost = 3,\r\n\trarity = 1,\r\n\tconfig = {extra = {\r\n\t\tmult = 15,\r\n\t\tmult_loss = 3\r\n\t}},\r\n\tpools = { [\"Food\"] = true, [\"parajoker\"] = true },\r\n\tblueprint_compat = true,\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn {vars = {card.ability.extra.mult, card.ability.extra.mult_loss}}\r\n\tend,\r\n\tcalculate = function(self,card,context)\r\n\t\tif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\r\n\t\t\tcard.ability.extra.mult = card.ability.extra.mult - card.ability.extra.mult_loss\r\n\t\t\tif card.ability.extra.mult <= 0 then\r\n\t\t\t\tpara_consumefood(card)\r\n           \t\treturn {\r\n           \t\t    message = localize('k_eaten_ex'),\r\n           \t\t    colour = G.C.ATTENTION\r\n           \t\t}\r\n\t\t\telse\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize{type = 'variable', key = 'a_mult_minus', vars = {to_big(card.ability.extra.mult_loss)}},\r\n\t\t\t\t\tcolour = G.C.MULT\r\n\t\t\t\t}\r\n\t\t\tend\r\n\t\telseif context.other_joker and (context.other_joker.config.center.pools or {}).Food then\r\n\t\t\treturn {\r\n\t\t\t\tmult = card.ability.extra.mult\r\n\t\t\t}\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "mult": 15,
+          "mult_loss": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 15,
+          "mult_loss": 3
+        }
+      },
+      "vars": [
+        15,
+        3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "airplane",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 5,
+        "y": 1
+      },
+      "raw": "-- Airplane implementation\r\n\tkey = 'airplane',\r\n\tconfig = { extra = {\r\n\t\trerolls = 1\r\n\t}},\r\n\trarity = 2,\r\n\tcost = 9,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tblueprint_compat = true,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 5, y = 1},\r\n\tloc_vars = function(self,info_queue,card)\r\n        local vouchers = 0\r\n        for k, _ in pairs(G.GAME.used_vouchers) do\r\n            if not next(G.P_CENTERS[k].requires or {}) then\r\n                vouchers = vouchers + 1\r\n            end\r\n        end\r\n\t\tlocal messagea = \"\"\r\n\t\tlocal messageb = \"\"\r\n\t\tif vouchers == 1 then\r\n\t\t\tmessagea = localize(\"airplane_a1\")\r\n\t\t\tmessageb = localize(\"airplane_b1\")\r\n\t\telse\r\n\t\t\tmessagea = localize(\"airplane_a2\")\r\n\t\t\tmessageb = localize(\"airplane_b2\")\r\n\t\tend\r\n\t\treturn {vars = {card.ability.extra.rerolls, card.ability.extra.rerolls * vouchers, messagea, messageb}}\r\n\tend,\r\n \tcalculate = function(self, card, context)\r\n\t\tif context.buying_card and context.card.ability.set == \"Voucher\" and not next(context.card.config.center.requires or {}) then\r\n\t\t\tSMODS.change_free_rerolls(card.ability.extra.rerolls)\r\n\t\tend\r\n    end,\r\n    add_to_deck = function(self, card, from_debuff)\r\n        local vouchers = 0\r\n        for k, _ in pairs(G.GAME.used_vouchers) do\r\n            if not next(G.P_CENTERS[k].requires or {}) then\r\n                vouchers = vouchers + 1\r\n            end\r\n        end\r\n        SMODS.change_free_rerolls(card.ability.extra.rerolls * vouchers)\r\n    end,\r\n    remove_from_deck = function(self, card, from_debuff)\r\n        local vouchers = 0\r\n        for k, _ in pairs(G.GAME.used_vouchers) do\r\n            if not next(G.P_CENTERS[k].requires or {}) then\r\n                vouchers = vouchers + 1\r\n            end\r\n        end\r\n        SMODS.change_free_rerolls(-card.ability.extra.rerolls * vouchers)\r\n    end",
+      "config": {
+        "extra": {
+          "rerolls": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "rerolls": 1
+        }
+      },
+      "vars": [
+        1,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "tower",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 6,
+        "y": 1
+      },
+      "raw": "-- Tower implementation\r\n\tkey = 'tower',\r\n\tconfig = { extra = {\r\n\t\tmoney = 20,\r\n\t\ttriggered = false\r\n\t}},\r\n\trarity = 1,\r\n\tcost = 11,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tblueprint_compat = true,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 6, y = 1},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\tinfo_queue[#info_queue+1] = G.P_CENTERS.j_ring_master\r\n\t\treturn {vars = {card.ability.extra.money}}\r\n\tend,\r\n \tcalculate = function(self, card, context)\r\n        if context.starting_shop then\r\n\t\t\tcard.ability.extra.triggered = false\r\n\t\tend\r\n    end,\r\n\tcalc_dollar_bonus = function(self, card)\r\n\t\tlocal towers = SMODS.find_card(\"j_para_tower\", false)\r\n\t\tlocal give_money = #towers >= 2 -- Warning: spaghetti upcoming. If it ain't broke don't fix it.\r\n\t\tif give_money then\r\n\t\t\tfor i,v in ipairs(towers) do\r\n\t\t\t\tif v.ability.extra.triggered then\r\n\t\t\t\t\tgive_money = false\r\n\t\t\t\t\tbreak\r\n\t\t\t\tend\r\n\t\t\tend\r\n\t\tend\r\n\t\tif give_money then\r\n\t\t\tcard.ability.extra.triggered = true\r\n\t\t\treturn card.ability.extra.money\r\n\t\telse\r\n\t\t\treturn nil\r\n\t\tend\r\n\tend,\r\n\tin_pool = function(self, args)\r\n\t\treturn true, { allow_duplicates = true }\r\n\tend",
+      "config": {
+        "extra": {
+          "money": 20,
+          "triggered": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "money": 20,
+          "triggered": false
+        }
+      },
+      "vars": [
+        20
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "nft",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 3,
+        "y": 1
+      },
+      "raw": "-- NFT Joker implementation\r\n\tkey = 'nft',\r\n\tconfig = { extra = {\r\n\t\tscam = 125,\r\n\t\tmin = 0\r\n\t}\r\n\t},\r\n\tpools = {[\"parajoker\"] = true},\r\n\trarity = \"para_nft\",\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 3, y = 1},\r\n\tcost = 1000,\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.scam, card.ability.extra.min}}\r\n\tend,\r\n\tin_pool = function(self, args)\r\n\t\treturn args and args.source == 'sho'\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.end_of_round and context.cardarea == G.jokers and card.sell_cost > card.ability.extra.min then\r\n\t\t\tcard.ability.extra_value = card.ability.extra_value - card.ability.extra.scam\r\n\t\t\tcard:set_cost()\r\n\t\t\tif card.sell_cost < card.ability.extra.min then\r\n\t\t\t\tcard.sell_cost = card.ability.extra.min\r\n\t\t\t\tcard.ability.extra_value = 0\r\n\t\t\tend\r\n            return {\r\n                message = localize('para_k_l'),\r\n                colour = G.C.ATTENTION\r\n            }\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "scam": 125,
+          "min": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "scam": 125,
+          "min": 0
+        }
+      },
+      "vars": [
+        125,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "deltarunetomorrow",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 4,
+        "y": 1
+      },
+      "raw": "-- Jokerrune implementation\r\n\tkey = 'deltarunetomorrow',\r\n\tconfig = { extra = {\r\n\t\txmult_gain = 1,\r\n\t\txmult = 4\r\n\t}},\r\n\tatlas = 'Jokers',\r\n\tpos = {x = 4, y = 1},\r\n\tcost = 5,\r\n\trarity = 3,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tloc_vars = function(self,info_queue,card)\r\n\t\treturn {vars = {card.ability.extra.xmult_gain, card.ability.extra.xmult}}\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n\t\tif context.joker_main then\r\n\t\t\treturn {\r\n\t\t\t\txmult = card.ability.extra.xmult\r\n\t\t\t}\r\n\t\tend\r\n\tend",
+      "config": {
+        "extra": {
+          "xmult_gain": 1,
+          "xmult": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult_gain": 1,
+          "xmult": 4
+        }
+      },
+      "vars": [
+        1,
+        4
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "green_credit_card",
+      "atlas": "Jokers",
+      "pos": {
+        "x": 8,
+        "y": 1
+      },
+      "raw": "-- Green Credit Card implementation\r\n    key = \"green_credit_card\",\r\n    blueprint_compat = false,\r\n    rarity = \"para_mythic\",\r\n    cost = 10,\r\n\tpools = {[\"parajoker\"] = true},\r\n\tatlas = 'Jokers',\r\n    pos = { x = 8, y = 1 },\r\n\tin_pool = function(self, args)\r\n\t\treturn next(SMODS.find_card(\"j_credit_card\", false)) and to_big(((G.GAME.dollars + (G.GAME.dollar_buffer or 0))) < to_big(0)), { allow_duplicates = false }\r\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "astro",
+      "atlas": "Jokers_Soul",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "-- < • Astro :3c • > implementation\r\n\t\tkey = 'astro',\r\n\t\tpools = {[\"parajoker\"] = true},\r\n\t\tconfig = { extra = {\r\n\t\t\teechips = 1,\r\n\t\t\teechips_gain = 0.1,\r\n\t\t\tnumerator_planet = 1,\r\n\t\t\tdenominator_planet = 3,\r\n\t\t}},\r\n\t\tatlas = 'Jokers_Soul',\r\n\t\tpos = {x = 1, y = 0},\r\n\t\tsoul_pos = {x = 1, y = 1},\r\n\t\tcost = 10,\r\n\t\trarity = \"para_mythic\",\r\n\t\tblueprint_compat = true,\r\n\t\tloc_vars = function(self,info_queue,card)\r\n\t\t\tlocal new_numerator, new_denominator = SMODS.get_probability_vars(card, card.ability.extra.numerator_planet, card.ability.extra.denominator_planet, 'identifier')\r\n\t\t\treturn {vars = {card.ability.extra.eechips, card.ability.extra.eechips_gain, new_numerator, new_denominator}}\r\n\t\tend,\r\n\t\tcalculate = function(self, card, context)\r\n\t\t\tif context.joker_main and context.scoring_name == \"Flush\" then -- Scores the tetrational chips.\r\n\t\t\t\treturn {\r\n\t\t\t\t\teechips = card.ability.extra.eechips\r\n\t\t\t\t}\r\n\t\t\telseif context.before and not context.blueprint then -- Checks for spades to scale the tetrational chips.\r\n\t\t\t\tlocal scaled = false \r\n\t\t\t\tfor _, v in pairs(context.scoring_hand) do\r\n\t\t\t\t\tif v:is_suit(\"Spades\") then\r\n\t\t\t\t\t\tcard.ability.extra.eechips = card.ability.extra.eechips + card.ability.extra.eechips_gain\r\n\t\t\t\t\t\tjuice_card(v)\r\n\t\t\t\t\t\tscaled = true\r\n\t\t\t\t\tend\r\n\t\t\t\tend\r\n\t\t\t\tif scaled then -- Shows the scaling message if tetrational chips were scaled\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tmessage = localize({type = \"variable\", key = \"powpow_chips\", vars = {number_format(to_big(card.ability.extra.eechips))}}),\r\n\t\t\t\t\t\tcolour = G.C.DARK_EDITION,\r\n\t\t\t\t\t\tmessage_card = card\r\n\t\t\t\t\t}\r\n\t\t\t\tend\r\n\t\t\telseif context.using_consumeable and context.consumeable.ability.set == \"Planet\" then -- Check if a planet is used.\r\n\t\t\t\tif SMODS.pseudorandom_probability(card, 'para_astro_planets', card.ability.extra.numerator_planet, card.ability.extra.denominator_planet, 'para_astro_planets') then -- Check the 1 in 3 chance.\r\n\t\t\t\t\treturn {\r\n\t\t\t\t\t\tlevel_up_hand = context.consumeable.ability.hand_type,\r\n\t\t\t\t\t\tlevel_up = true,\r\n\t\t\t\t\t\tmessage = localize('k_level_up_ex'),\r\n\t\t\t\t\t\tcolour = G.C.SECONDARY_SET.Planet\r\n\t\t\t\t\t}\r\n\t\t\t\tend\r\n\t\t\tend\r\n\t\tend,\r\n\t\tin_pool = function(self, args)\r\n\t\t\tlocal spade_count = 0\r\n\t\t\tfor _, v in ipairs(G.playing_cards) do\r\n\t\t\t\tif v:is_suit(\"Spades\") then\r\n\t\t\t\t\tspade_count = spade_count + 1\r\n\t\t\t\tend\r\n\t\t\tend\r\n\t\t\treturn next(SMODS.find_card(\"j_para_card\", true)) and spade_count > 15, { allow_duplicates = false }\r\n\t\tend",
+      "config": {
+        "extra": {
+          "eechips": 1,
+          "eechips_gain": 0.1,
+          "numerator_planet": 1,
+          "denominator_planet": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "eechips": 1,
+          "eechips_gain": 0.1,
+          "numerator_planet": 1,
+          "denominator_planet": 3
+        }
+      },
+      "vars": [
+        1,
+        0.1,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "paradox",
+      "atlas": "Jokers_Soul",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "-- no way thats me\r\n\tkey = 'paradox',\r\n\tatlas = 'Jokers_Soul',\r\n\tpos = {x = 0, y = 0},\r\n\tsoul_pos = {x = 0, y = 1},\r\n\tcost = 10,\r\n\trarity = \"para_mythic\",\r\n\tpools = {[\"parajoker\"] = true},\r\n\tblueprint_compat = true,\r\n\tloc_vars = function(self, info_queue, card)\r\n        return {vars = {colours = {HEX(\"2dcddd\"), HEX(\"262680\")}}}\r\n\tend,\r\n\tcalculate = function(self,card,context)\r\n\t\tif context.ending_shop then\r\n\t\t\tSMODS.add_card({set = \"parajoker\", edition = \"e_negative\", key_append = \"para_paradox_joker\"})\r\n\t\tend\r\n\tend,\r\n\tin_pool = function(self, args)\r\n\t\tlocal creationcount = 0\r\n\t\tlocal ismythic = false\r\n\t\tfor _, v in pairs(G.jokers.cards) do\r\n\t\t\tif (v.config.center.pools or {}).parajoker then\r\n\t\t\t\tcreationcount = creationcount + 1\r\n\t\t\t\tif v.config.center.rarity == \"para_mythic\" then\r\n\t\t\t\t\tismythic = true\r\n\t\t\t\tend\r\n\t\t\tend\r\n\t\tend\r\n\t\treturn ismythic or (creationcount >= 3), { allow_duplicates = false }\r\n\tend",
+      "config": {
+        "allow_duplicates": false
+      },
+      "ability": {
+        "allow_duplicates": false
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Rarity",
+      "key": "mythic",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"mythic\",\r\n\tloc_txt = {},\r\n    badge_colour = HEX(\"440bea\"),\r\n    pools = {\r\n        [\"Joker\"] = true\r\n    },\r\n    default_weight = 0.0005",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Rarity",
+      "key": "nft",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"nft\",\r\n\tloc_txt = {},\r\n    badge_colour = HEX(\"ff3ae1\"),\r\n    pools = {\r\n        [\"Joker\"] = true\r\n    },\r\n    default_weight = 0.025",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Tags",
+      "atlas": null,
+      "pos": null,
+      "raw": "-- Atlas for Tags\n\tkey = \"Tags\",\n\tpath = \"Tags.png\",\n\tpx = 34,\n\tpy = 34,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Tag",
+      "key": "foodtag",
+      "atlas": "Tags",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "atlas = 'Tags',\n\tpos = {x = 0, y = 0},\n\tkey = 'foodtag',\n\tno_collection = true,\n    apply = function(self, tag, context)\n\t\tif context.type == \"new_blind_choice\" then\n            tag:yep('+', G.C.PURPLE,function() \n                local card = Card(G.play.T.x + G.play.T.w/2 - G.CARD_W*1.27/2,\n                G.play.T.y + G.play.T.h/2-G.CARD_H*1.27/2, G.CARD_W*1.27, G.CARD_H*1.27, G.P_CARDS.empty, G.P_CENTERS['p_para_foodpack'], {bypass_discovery_center = true, bypass_discovery_ui = true})\n                card.cost = 0\n                card.from_tag = true\n                G.FUNCS.use_card({config = {ref_table = card}})\n                card:start_materialize()\n                return true\n            end)\n            tag.triggered = true\n            return true\n\t\tend\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue+1] = G.P_CENTERS.p_para_foodpack\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Centers",
+      "key": "Food",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Food\",\r\n\t\tdefault = \"j_reserved_parking\",\r\n\t\tcards = {},\r\n\t\tinject = function(self)\r\n\t\t\tSMODS.ObjectType.inject(self)\r\n\t\t\tinject(self)\r\n\t\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ObjectType",
+      "key": "parajoker",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"parajoker\",\r\n\tdefault = \"j_para_bluecard\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "fakemadness",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"fakemadness\",\r\n\tno_collection = true,\r\n\tin_pool = function(self, args)\r\n\t\treturn false\r\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.0.1"
+}
