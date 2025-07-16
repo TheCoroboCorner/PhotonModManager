@@ -1,0 +1,632 @@
+{
+  "locMap": {
+    "sin_description": {
+      "name": "Sin",
+      "text": [
+        "Permanently doubles all blind",
+        "requirements upon being obtained."
+      ],
+      "type": "Other"
+    }
+  },
+  "atlases": {},
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "virtueblinds",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"virtueblinds\", \n    path = \"virtueblinds.png\", \n    px = 71,\n    py = 95, \n    atlas_table = \"ANIMATION_ATLAS\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "chastity",
+      "atlas": "virtueblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"chastity\",\n    loc_txt = {\n        name = \"Chastity\",\n        text = {\n            \"Pairs and Two Pairs\",\n            \"are unable to be scored\"\n        }\n    },\n    dollars = 8,\n    mult = 4,\n    boss = {\n        min = 4\n    },\n    boss_colour = HEX('9F5786'),\n    -- atlas = \"virtueblinds\",\n    pos = {x = 0, y = 0},\n    hands = {\n        [\"Pair\"] = true,\n        [\"Two Pair\"] = true\n    },\n    set_blind = function(self, reset, silent)\n        G.hand:change_size(-3)\n        self.config.h_popup = parse_card_hover_box {\n            name = \"Virtue\",\n            text = {\n                \"-3 hand size\",\n                \"+1 Joker slot\",\n                \"Awards Lust\"\n\n            }\n        }\n    end,\n    debuff_hand = function(self, cards, hand, handname, check)\n        return self.hands[handname]\n    end,\n    defeat = function(self)\n        G.hand:change_size(3)\n        G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_lust\"})\n        clone:add_to_deck()\n        G.jokers:emplace(clone)\n        \n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "temperance",
+      "atlas": "virtueblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"temperance\",\n    loc_txt = {\n        name = \"Temperance\",\n        text = {\n            \"Blind amount is increased by 25%\",\n            \"for each consumable used this run\",\n            \"(Activates at blind selection)\"\n        }\n    },\n    dollars = 8,\n    mult = 4,\n    boss = {\n        min = 4\n    },\n    boss_colour = HEX('c07b57'),\n    -- atlas = \"virtueblinds\",\n    pos = {x = 0, y = 0},\n    set_blind = function(self, reset, silent)\n        G.hand:change_size(-3)\n        G.GAME.blind.chips = G.GAME.blind.chips + ((G.GAME.blind.chips/4) * G.GAME.consumeable_usage_total.all)\n        G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)\n    end,\n    defeat = function(self)\n        G.hand:change_size(3)\n        G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_gluttony\"})\n        clone:add_to_deck()\n        G.jokers:emplace(clone)\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "charity",
+      "atlas": "virtueblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"charity\",\n    loc_txt = {\n        name = \"Charity\",\n        text = {\n            \"Lose $5 each hand played.\",\n            \"Amount lost increases by $2\",\n            \"every hand for each joker you have.\"\n        }\n    },\n    dollars = 8,\n    mult = 4,\n    boss = {\n        min = 4\n    },\n    config = {\n        extra = {\n            dollars = 5\n        }\n    },\n    boss_colour = HEX('cdce4e'),\n    -- atlas = \"virtueblinds\",\n    pos = {x = 0, y = 0},\n    loc_vars = function(self, info_queue, card)\n        return { vars = {self.config.extra.dollars} }\n    end,\n    set_blind = function(self, reset, silent)\n        G.hand:change_size(-3)\n        G.GAME.bankrupt_at = G.GAME.bankrupt_at - 99999\n    end,\n    press_play = function(self)\n        ease_dollars(-self.config.extra.dollars)\n        self.config.extra.dollars = self.config.extra.dollars + (2 * #G.jokers.cards)\n    end,\n    defeat = function(self)\n        G.hand:change_size(3)\n        G.GAME.bankrupt_at = G.GAME.bankrupt_at + 99999\n        G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_greed\"})\n        clone:add_to_deck()\n        G.jokers:emplace(clone)\n    end,",
+      "config": {
+        "extra": {
+          "dollars": 5
+        }
+      },
+      "ability": {
+        "extra": {
+          "dollars": 5
+        }
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "diligence",
+      "atlas": "virtueblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"diligence\",\n    loc_txt = {\n        name = \"Diligence\",\n        text = {\n            \"Cards are discarded if they\",\n            \"are held in hand for two turns.\",\n        }\n    },\n    dollars = 8,\n    mult = 4,\n    boss = {\n        min = 4\n    },\n    boss_colour = HEX('4c7e9a'),\n    -- atlas = \"virtueblinds\",\n    pos = {x = 0, y = 0},\n    set_blind = function(self, reset, silent)\n        G.hand:change_size(-3)\n    end,\n    press_play = function(self)\n         G.E_MANAGER:add_event(Event({\n            func = function()\n                local any_selected = false\n                for k, v in ipairs(G.hand.cards) do\n                    v.diligenceCounter = (v.diligenceCounter or 0) + 1\n                    if v.diligenceCounter >= 2 then\n                        G.hand.config.highlighted_limit = G.hand.config.highlighted_limit + 99999\n                        G.hand:add_to_highlighted(v, true)\n                        any_selected = true\n                    end\n                end\n                if any_selected then \n                    G.FUNCS.discard_cards_from_highlighted(nil, true) \n                    G.hand.config.highlighted_limit = G.hand.config.highlighted_limit - 99999 \n                end\n                return true\n            end\n        }))\n    end,\n    defeat = function(self)\n        for k, v in ipairs(G.hand.cards) do\n            v.diligenceCounter = 0\n        end\n        for k, v in ipairs(G.discard.cards) do\n            v.diligenceCounter = 0\n        end\n        for k, v in ipairs(G.deck.cards) do\n            v.diligenceCounter = 0\n        end\n        for k, v in ipairs(G.play.cards) do\n            v.diligenceCounter = 0\n        end\n        G.hand:change_size(3)\n        G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_sloth\"})\n        clone:add_to_deck()\n        G.jokers:emplace(clone)\n    end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "kindness",
+      "atlas": "virtueblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"kindness\",\n    loc_txt = {\n        name = \"Kindness\",\n        text = {\n            \"Scored cards lose 50 chips\"\n        }\n    },\n    dollars = 8,\n    mult = 4,\n    boss = {\n        min = 4\n    },\n    boss_colour = HEX('2b7d53'),\n    -- atlas = \"virtueblinds\",\n    pos = {x = 0, y = 0},\n    set_blind = function(self, reset, silent)\n        G.hand:change_size(-3)\n    end,\n    press_play = function(self)\n        for k, v in ipairs(G.hand.cards) do\n            v.ability.perma_chips = v.ability.perma_chips - 50\n        end\n    end,\n    defeat = function(self)\n        G.hand:change_size(3)\n        G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_envy\"})\n        clone:add_to_deck()\n        G.jokers:emplace(clone)\n    end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "patience",
+      "atlas": "virtueblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"patience\",\n    loc_txt = {\n        name = \"Patience\",\n        text = {\n            \"Starts at x8 base\",\n            \"loses 1/8th of it's chips per hand played\"\n        }\n    },\n    dollars = 8,\n    mult = 8,\n    boss = {\n        min = 4\n    },\n    config = {\n        extra = {\n            oneEighth = 0\n        }\n    },\n    boss_colour = HEX('af3233'),\n    -- atlas = \"virtueblinds\",\n    pos = {x = 0, y = 0},\n    set_blind = function(self, reset, silent)\n        G.hand:change_size(-3)\n        self.config.extra.oneEighth = math.ceil(G.GAME.blind.chips/8)\n\n    end,\n    press_play = function(self)\n        G.GAME.blind.chips = G.GAME.blind.chips - self.config.extra.oneEighth\n        G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)\n    end,\n    defeat = function(self)\n        G.hand:change_size(3)\n        G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_wrath\"})\n        clone:add_to_deck()\n        G.jokers:emplace(clone)\n    end,",
+      "config": {
+        "extra": {
+          "oneEighth": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "oneEighth": 0
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "humility",
+      "atlas": "virtueblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"humility\",\n    loc_txt = {\n        name = \"Humility\",\n        text = {\n            \"Can only score up to 2 cards.\",\n            \"x6 base\"\n        }\n    },\n    dollars = 8,\n    mult = 6,\n    boss = {\n        min = 4\n    },\n    config = {\n        extra = {\n            oneEighth = 0\n        }\n    },\n    debuff = {\n        h_size_le = 2\n    },\n    boss_colour = HEX('523b67'),\n    -- atlas = \"virtueblinds\",\n    pos = {x = 0, y = 0},\n    set_blind = function(self, reset, silent)\n        G.hand:change_size(-3)\n    end,\n    defeat = function(self)\n        G.hand:change_size(3)\n        G.jokers.config.card_limit = G.jokers.config.card_limit + 1\n        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_pride\"})\n        clone:add_to_deck()\n        G.jokers:emplace(clone)\n    end,",
+      "config": {
+        "extra": {
+          "oneEighth": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "oneEighth": 0
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "SinJokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"SinJokers\", \n    path = \"CustomJokers.png\", \n    px = 71,\n    py = 95, \n    atlas_table = \"ASSET_ATLAS\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Rarity",
+      "key": "sin",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"sin\",\n    loc_txt = {\n        name = \"Sin\"\n    },\n    badge_colour = HEX(\"800000\")",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "pride",
+      "atlas": "SinJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"pride\",\n    loc_txt = {\n        name = \"Pride\",\n        text = {\n            'Winning a blind in one hand',\n            'grants this joker x4 mult',\n            'Loses x0.25 mult for every card',\n            'scored after the first hand.',\n            '(Can\\'t go lower than x1, currently x#1#)'\n        }\n    },\n    atlas = 'SinJokers',\n    rarity = \"uv_sin\",\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            xmult = 1,\n            xmultIncrement = false\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.xmult} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        G.GAME.starting_params.ante_scaling = (G.GAME.starting_params.ante_scaling or 1)*2\n    end,\n    calculate = function(self, card, context)\n        if context.setting_blind then\n            card.ability.extra.xmultIncrement = false\n        end\n        if context.individual and context.cardarea == G.play then\n            if G.GAME.current_round.hands_played > 0 and card.ability.extra.xmult > 1 then\n                juice_card(card)\n                card.ability.extra.xmult = card.ability.extra.xmult - 0.25\n            end\n        end\n        if context.joker_main then\n            return {\n                xmult = card.ability.extra.xmult\n            }\n        end\n        if context.end_of_round then\n            if G.GAME.current_round.hands_played <= 1 then\n                if not card.ability.extra.xmultIncrement then\n                    juice_card(card)\n                    card.ability.extra.xmult = card.ability.extra.xmult + 4\n                    card.ability.extra.xmultIncrement = true\n                end\n            end\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "xmult": 1,
+          "xmultIncrement": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 1,
+          "xmultIncrement": false
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "greed",
+      "atlas": "SinJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"greed\",\n    loc_txt = {\n        name = \"Greed\",\n        text = {\n            '+1 selection limit',\n            'in booster packs',\n            'Gain $3 on round end',\n            'for each joker held.'\n        }\n    },\n    atlas = 'SinJokers',\n    rarity = \"uv_sin\",\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            dollars = 3,\n            dollarsGained = false\n        }\n    },\n    add_to_deck = function(self, card, from_debuff)\n        G.GAME.starting_params.ante_scaling = (G.GAME.starting_params.ante_scaling or 1)*2\n    end,\n    calculate = function(self, card, context)\n        if context.open_booster then\n            G.GAME.pack_choices = G.GAME.pack_choices + 1\n        end\n        if not context.end_of_round then\n            card.ability.extra.dollarsGained = false\n        end\n        if context.end_of_round then\n            if not card.ability.extra.dollarsGained then\n                card.ability.extra.dollarsGained = true\n                return {\n                    dollars = card.ability.extra.dollars * #G.jokers.cards,\n                    card = card\n                }\n            end\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "dollars": 3,
+          "dollarsGained": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "dollars": 3,
+          "dollarsGained": false
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "wrath",
+      "atlas": "SinJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"wrath\",\n    loc_txt = {\n        name = \"Wrath\",\n        text = {\n            'If you use your final hand',\n            'gain +1 hand (once per round)',\n            'Gains +20 chips and +20 mult each',\n            'time this ability is activated',\n            '(Currently +#2# and +#1#)'\n        }\n    },\n    atlas = 'SinJokers',\n    rarity = \"uv_sin\",\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            mult = 0,\n            chips = 0,\n            helpingHand = false\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.mult, card.ability.extra.chips} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        G.GAME.starting_params.ante_scaling = (G.GAME.starting_params.ante_scaling or 1)*2\n    end,\n    calculate = function(self, card, context)\n        if context.setting_blind then\n            card.ability.extra.helpingHand = false\n        end\n        if context.joker_main then\n            if card.ability.extra.mult > 0 and card.ability.extra.chips > 0 then\n                return {\n                    chips = card.ability.extra.chips,\n                    mult = card.ability.extra.mult\n                }\n            end\n            if G.GAME.current_round.hands_left <= 0 and not card.ability.extra.helpingHand then\n                G.GAME.current_round.hands_left = G.GAME.current_round.hands_left + 1\n                card.ability.extra.chips = card.ability.extra.chips + 20\n                card.ability.extra.mult = card.ability.extra.mult + 20\n                card.ability.extra.helpingHand = true\n            end\n        end\n        if context.end_of_round then\n            if G.GAME.current_round.hands_played <= 0 then\n                if not card.ability.extra.xmultIncrement then\n                    juice_card(card)\n                    card.ability.extra.xmult = card.ability.extra.xmult + 4\n                    card.ability.extra.xmultIncrement = true\n                end\n            end\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "mult": 0,
+          "chips": 0,
+          "helpingHand": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 0,
+          "chips": 0,
+          "helpingHand": false
+        }
+      },
+      "vars": [
+        0,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "envy",
+      "atlas": "SinJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"envy\",\n    loc_txt = {\n        name = \"Envy\",\n        text = {\n            'If this joker has less',\n            'chips than the blind’s score',\n            'it gains 1/8th the',\n            'blind’s score as chips.',\n            '(currently +#1#)'\n        }\n    },\n    atlas = 'SinJokers',\n    rarity = \"uv_sin\",\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            chips = 0,\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.chips} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        G.GAME.starting_params.ante_scaling = (G.GAME.starting_params.ante_scaling or 1)*2\n    end,\n    calculate = function(self, card, context)\n        if context.setting_blind then\n            if card.ability.extra.chips < G.GAME.blind.chips then\n                card.ability.extra.chips = card.ability.extra.chips + (G.GAME.blind.chips/8)\n            end\n        end\n        if context.joker_main then\n            return {\n                chips = card.ability.extra.chips\n            }\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "chips": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 0
+        }
+      },
+      "vars": [
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "lust",
+      "atlas": "SinJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"lust\",\n    loc_txt = {\n        name = \"Lust\",\n        text = {\n            'Gains x1 Mult if two consecutive',\n            'Face cards are scored.',\n            '(currently x#1#)'\n        }\n    },\n    atlas = 'SinJokers',\n    rarity = \"uv_sin\",\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            faceCards = 0,\n            xmult = 1\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.xmult} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        G.GAME.starting_params.ante_scaling = (G.GAME.starting_params.ante_scaling or 1)*2\n    end,\n    calculate = function(self, card, context)\n        if context.individual and context.cardarea == G.play then\n            if context.other_card:is_face() then\n                card.ability.extra.faceCards = card.ability.extra.faceCards + 1\n                if card.ability.extra.faceCards >= 2 then\n                    juice_card(card)\n                    card.ability.extra.xmult = card.ability.extra.xmult + 1\n                    card.ability.extra.faceCards = 0\n                end\n            end\n        end\n        if context.joker_main then\n            return {\n                xmult = card.ability.extra.xmult\n            }\n        end\n        if context.after then\n            card.ability.extra.faceCards = 0\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "faceCards": 0,
+          "xmult": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "faceCards": 0,
+          "xmult": 1
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "gluttony",
+      "atlas": "SinJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"gluttony\",\n    loc_txt = {\n        name = \"Gluttony\",\n        text = {\n            'This joker gains x0.1 mult',\n            'for each consumable held',\n            '(currently: x#1#)',\n            '+1 consumable slot'\n        }\n    },\n    atlas = 'SinJokers',\n    rarity = \"uv_sin\",\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            xchips = 1\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.xchips} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        for k, v in pairs(G.P_BLINDS) do\n            v.mult = v.mult*2 \n        end\n        G.consumeables.config.card_limit = G.consumeables.config.card_limit + 1\n    end,\n    remove_from_deck = function(self, card, from_debuff)\n        G.consumeables.config.card_limit = G.consumeables.config.card_limit - 1\n    end,\n    calculate = function(self, card, context)\n        if context.setting_blind then\n            card.ability.extra.xchips = card.ability.extra.xchips + (0.1 * #G.consumeables.cards)\n        end\n        if context.joker_main then\n            return {\n                xchips = card.ability.extra.xchips\n            }\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "xchips": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "xchips": 1
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "sloth",
+      "atlas": "SinJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"sloth\",\n    loc_txt = {\n        name = \"Sloth\",\n        text = {\n            'Cards that are in hand during scoring',\n            'gain triple their chips as perma mult '\n        }\n    },\n    atlas = 'SinJokers',\n    rarity = \"uv_sin\",\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            rounds = 0,\n            xmult = 1,\n            xmultIncrement = false\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.xmult} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        G.GAME.starting_params.ante_scaling = (G.GAME.starting_params.ante_scaling or 1)*2\n    end,\n    calculate = function(self, card, context)\n        if context.joker_main then\n            for k, v in ipairs(G.hand.cards) do\n                v.ability.perma_mult = v.ability.perma_mult + (v.base.nominal * 3)\n                juice_card(v)\n            end\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "rounds": 0,
+          "xmult": 1,
+          "xmultIncrement": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "rounds": 0,
+          "xmult": 1,
+          "xmultIncrement": false
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "RivalsJokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"RivalsJokers\", \n    path = \"CustomJokers.png\", \n    px = 71,\n    py = 95, \n    atlas_table = \"ASSET_ATLAS\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "loki",
+      "atlas": "RivalsJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"loki\",\n    loc_txt = {\n        name = \"Loki\",\n        text = {\n            'Scores {C:blue}+30{} chips',\n            '{C:inactive}The god of cunning is always more than he seems{}',\n            '{C:inactive}(Marvel Rivals){}'\n        }\n    },\n    atlas = \"RivalsJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            Clones = 0,\n            chips = 30,\n            Cloned = false,\n            CloneMade = false\n        }\n    },\n    calculate = function(self, card, context)\n        if context.setting_blind then\n            card.ability.extra.CloneMade = false\n        end\n        if context.cardarea == G.jokers and context.joker_main then\n            return {\n                chips = card.ability.extra.chips,\n            }\n        end\n        if context.end_of_round and context.individual and not context.blueprint then\n            if not card.ability.extra.Cloned and not card.ability.extra.CloneMade then\n                if (card.ability.extra.Clones or 0) < 2 then\n                    card.ability.extra.CloneMade = true\n                    card.ability.extra.Clones = card.ability.extra.Clones + 1\n                    local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_loki\", edition = \"e_negative\"})\n                    clone.ability.extra.Cloned = true\n                    clone:add_to_deck()\n                    G.jokers:emplace(clone)\n                    SMODS.calculate_effect({\n                        message = \"I have many faces...\",\n                        colour = G.C.GREEN\n                    }, clone)\n                else\n                    if G.jokers.cards[1].config.center.key ~= \"j_uv_loki\" then\n                        card.ability.extra.CloneMade = true\n                        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = G.jokers.cards[1].config.center.key})\n                        clone:add_to_deck()\n                        G.jokers:emplace(clone)\n                        -- remove Loki\n                        SMODS.destroy_cards(card)\n                        SMODS.calculate_effect({\n                            message = \"Your powers are MINE!\",\n                            colour = G.C.GREEN\n                        }, clone)\n                    end\n                end\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "Clones": 0,
+          "chips": 30,
+          "Cloned": false,
+          "CloneMade": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "Clones": 0,
+          "chips": 30,
+          "Cloned": false,
+          "CloneMade": false
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "winter_soldier",
+      "atlas": "RivalsJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"winter_soldier\",\n    loc_txt = {\n        name = \"Winter Soldier\",\n        text = {\n            'Scores {C:red}+3{} mult 3 times',\n            '{C:inactive}Fully Armed.{}',\n            '{C:inactive}(Marvel Rivals){}'\n        }\n    },\n    atlas = \"RivalsJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            mult = 3\n        }\n    },\n    calculate = function(self, card, context)\n        \n    end",
+      "config": {
+        "extra": {
+          "mult": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 3
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "StupendiumJokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"StupendiumJokers\", \n    path = \"CustomJokers.png\", \n    px = 71,\n    py = 95, \n    atlas_table = \"ASSET_ATLAS\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ministry",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"ministry\",\n    loc_txt = {\n        name = \"GLORY TO THE MINISTRY.\",\n        text = {\n            'Gains {C:red}+1{} mult for every high card',\n            'scored and for every card destroyed',\n            'If the scored hand has 2 or more cards',\n            'destroy one at random. {C:inactive}(Currently #1#){}',\n            '{C:inactive}That telephone\\'s not tampered with',\n            '{C:inactive}of course it isn\\'t listening! {}',\n            '{C:inactive}But were it, it prefers the words-{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            mult = 0,\n            MultGained = false\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.mult} }\n    end,\n    calculate = function(self, card, context)\n        if context.before then\n            card.ability.extra.MultGained = false\n        end\n        if context.joker_main then\n                if context.scoring_name == \"High Card\" then\n                    if not card.ability.extra.MultGained then\n                        card.ability.extra.mult = card.ability.extra.mult + 1\n                        card.ability.extra.MultGained = true\n                    end\n                else\n                if #context.scoring_hand > 1 then\n                    local _cards = {}\n                    for _, playing_card in ipairs(G.play.cards) do\n                        _cards[#_cards + 1] = playing_card\n                    end\n                    local selected_card = pseudorandom_element(_cards, pseudoseed('Balalalala'))\n                    SMODS.destroy_cards(selected_card)\n                    if not card.ability.extra.MultGained then\n                        card.ability.extra.mult = card.ability.extra.mult + 1\n                        card.ability.extra.MultGained = true\n                    end\n                end\n            end\n            if card.ability.extra.mult > 0 then\n                return {\n                    mult = card.ability.extra.mult\n                }\n            end\n        end\n        if context.destroy_card then\n            if not card.ability.extra.MultGained then\n                card.ability.extra.mult = card.ability.extra.mult + 1\n                card.ability.extra.MultGained = true\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "mult": 0,
+          "MultGained": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 0,
+          "MultGained": false
+        }
+      },
+      "vars": [
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "house",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"house\",\n    loc_txt = {\n        name = \"The House Always Wins\",\n        text = {\n            'If you aren\\'t in debt,',\n            'scores double your current money as chips',\n            'and half your current money as mult',\n            'but loses 2/5ths of your current money',\n            'Alternates between doubling or halving',\n            'all displayed odds (Alternates after scoring)',\n            '{C:inactive}(Currently: #1#){}',\n            '{C:inactive}Might be safer in the desert,',\n            '{C:inactive}only dust to judge your sins.',\n            '{C:inactive}but those who wager aren\\'t so clever',\n            '{C:inactive}\\'Cus in heaven, well-',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            Odds = \"double\"\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.Odds} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        for k, v in pairs(G.GAME.probabilities) do\n            G.GAME.probabilities[k] = v * 2\n        end\n    end,\n    remove_from_deck = function(self, card, from_debuff)\n        if card.ability.extra.Odds == \"double\" then\n            for k, v in pairs(G.GAME.probabilities) do\n                G.GAME.probabilities[k] = v / 2\n            end\n        elseif card.ability.extra.Odds == \"half\" then\n            for k, v in pairs(G.GAME.probabilities) do\n                G.GAME.probabilities[k] = v * 2\n            end\n        end\n    end,\n    calculate = function(self, card, context)\n        if context.joker_main then\n            if G.GAME.dollars or G.GAME.dollar_buffer then\n                if (G.GAME.dollars or 0) + (G.GAME.dollar_buffer or 0) > 0 then\n                    return {\n                        mult = math.floor(((G.GAME.dollars or 0) + (G.GAME.dollar_buffer or 0)) / 2),\n                        chips = math.floor(((G.GAME.dollars or 0) + (G.GAME.dollar_buffer or 0)) * 2),\n                        dollars = -math.floor(((G.GAME.dollars or 0) + (G.GAME.dollar_buffer or 0)) * 0.4)\n                    }\n                end\n            end\n        end\n        if context.after then\n            if card.ability.extra.Odds == \"double\" then\n                for k, v in pairs(G.GAME.probabilities) do\n                    G.GAME.probabilities[k] = v / 2\n                end\n                for k, v in pairs(G.GAME.probabilities) do\n                    G.GAME.probabilities[k] = v / 2\n                end\n                card.ability.extra.Odds = \"half\"\n            elseif card.ability.extra.Odds == \"half\" then\n                for k, v in pairs(G.GAME.probabilities) do\n                    G.GAME.probabilities[k] = v * 2\n                end\n                for k, v in pairs(G.GAME.probabilities) do\n                    G.GAME.probabilities[k] = v * 2\n                end\n                card.ability.extra.Odds = \"double\"\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "Odds": "double"
+        }
+      },
+      "ability": {
+        "extra": {
+          "Odds": "double"
+        }
+      },
+      "vars": [
+        "double"
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "monica",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"monica\",\n    loc_txt = {\n        name = \"Dear Diary\",\n        text = {\n            'Transforms a random non-club',\n            'card in hand to a Club',\n            'scores mult based on how many',\n            'Clubs are in the deck {C:inactive}(currently: #1#){}',\n            '{C:inactive}MONICA\\'S ALL THAT YOU NEED,\\nMONICA\\'S ALL THAT YOU NEED,\\nMONICA\\'S-{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            mult = 0\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.mult} }\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        card.ability.extra.mult = 0\n        for k, v in pairs(G.playing_cards) do\n            if v:is_suit(\"Clubs\") then\n                card.ability.extra.mult = card.ability.extra.mult + 1\n            end\n        end\n    end,\n    calculate = function(self, card, context)\n        if context.before or context.setting_blind or context.using_consumeable then\n            card.ability.extra.mult = 0\n            for k, v in pairs(G.playing_cards) do\n                if v:is_suit(\"Clubs\") then\n                    card.ability.extra.mult = card.ability.extra.mult + 1\n                end\n            end\n        end\n        if context.before then\n            local _cards = {}\n            for k, v in pairs(G.hand.cards) do\n                if not v:is_suit(\"Clubs\") then\n                    _cards[#_cards + 1] = v\n                end\n            end\n            if #_cards >= 1 then\n                local selectedCard = pseudorandom_element(_cards, pseudoseed(\"MONICA\"))\n                selectedCard:flip()\n                SMODS.change_base(selectedCard, \"Clubs\")\n                selectedCard:flip()\n                card.ability.extra.mult = card.ability.extra.mult + 1\n            end\n        end\n        if context.joker_main then\n            return {\n                mult = card.ability.extra.mult\n            }\n        end\n    end",
+      "config": {
+        "extra": {
+          "mult": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 0
+        }
+      },
+      "vars": [
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "alice1",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"alice1\",\n    loc_txt = {\n        name = \"The Art of Darkness\",\n        text = {\n            'Scoring all spades brings a',\n            'random scored card back to the hand.',\n            'Any played Hearts cards are destroyed.',\n            '{C:inactive}Ever seen a masterpiece get discarded?{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    calculate = function(self, card, context)\n        if context.after then\n            local heart_cards = {} \n            local spade_cards = {}\n            for k, v in pairs(G.play.cards) do  \n                if v:is_suit(\"Hearts\") then\n                    heart_cards[#heart_cards + 1] = v\n                elseif v:is_suit(\"Spades\") then\n                    spade_cards[#spade_cards + 1] = v\n                end\n            end\n            if spade_cards then\n                if #spade_cards == #context.scoring_hand then\n                    local CArd = pseudorandom_element(spade_cards, pseudoseed(\"draw!\"))\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            draw_card(G.discard, G.hand, 90, 'up', nil, CArd, 0, nil, false)\n                            CArd:flip()\n                            return true\n                        end\n                    }))\n                end\n            end\n            if #heart_cards > 0 then\n                SMODS.destroy_cards(heart_cards)\n            end\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "count_to_3",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"count_to_3\",\n    loc_txt = {\n        name = \"Count to 3\",\n        text = {\n            'If played hand contains exactly 3 cards',\n            'Scored Aces and 2s gain random edition but are debuffed',\n            'and scored 4s gain 0.1 xmult for each card debuffed in hand.',\n            'All 3s are debuffed',\n            '{C:inactive}Is this what you\\'ve been waiting for? Say 1, 2, and 4!{}',\n            '{C:inactive}(Stupendium and The Chalkeaters){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    add_to_deck = function(self, card, from_debuff)\n        for k, v in pairs(G.playing_cards) do\n            if v:get_id() == 3 then\n                SMODS.debuff_card(v, true, \"Count to 3\")\n            end\n        end\n    end,\n    remove_from_deck = function(self, card, from_debuff)\n        for k, v in pairs(G.playing_cards) do\n            SMODS.debuff_card(v, false, \"Count to 3\")\n        end\n    end,\n    calculate = function(self, card, context)\n        if context.before or context.setting_blind or context.using_consumeable then\n            for k, v in pairs(G.playing_cards) do\n                if v:get_id() == 3 then\n                    SMODS.debuff_card(v, true, \"Count to 3\")\n                end\n            end\n        end\n        if context.joker_main then\n            for k, v in ipairs(G.play.cards) do\n                if #context.scoring_hand == 3 then\n                    if v:get_id() == 2 or v.base.value == \"Ace\" then\n                        v:flip()\n                        local enhancement = SMODS.poll_enhancement({guaranteed = true})\n                        v:set_ability(enhancement, nil, true)\n                        SMODS.debuff_card(v, true, \"Count to 3\")\n                        v:flip()\n                    elseif v:get_id() == 4 then\n                        local count = 0\n                        for k2, v2 in pairs(G.hand.cards) do\n                            if v2.debuff == true then\n                                count = count + 1\n                            end\n                        end\n                        v.ability.perma_x_mult = (v.ability.perma_x_mult or 0) + (0.1 * count)\n                    end\n                end\n            end\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "just_monkey_business",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"just_monkey_business\",\n    loc_txt = {\n        name = \"Just Monkey Business\",\n        text = {\n            'Gains x0.5 mult when a card is destroyed',\n            '{C:inactive}(Currently: #1#){}',\n            'and gains a random minor permanent',\n            'effect when something is bought',\n            '{C:inactive}Pay your tab at the front desk',\n            '{C:inactive}or death\\'ll be slow.{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            mult = 1\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.mult} }\n    end,\n    calculate = function(self, card, context)\n        if context.joker_main then\n            if card.ability.extra.mult > 1 then\n                return { xmult = card.ability.extra.mult}\n            end\n        end\n        if context.destroying_card then\n            card.ability.extra.mult = card.ability.extra.mult + 0.5\n        end\n        if context.buying_card then\n            local bonus = math.ceil(pseudorandom(\"hi\", 1, 4))\n            if bonus == 1 then\n                card.ability.perma_bonus = (card.ability.perma_bonus or 0) + pseudorandom(\"hi\", 1, 10)\n            elseif bonus == 2 then\n                card.ability.perma_mult = (card.ability.perma_mult or 0) + pseudorandom(\"hi\", 1, 10)\n            elseif bonus == 3 then\n                card.ability.perma_x_chips = (card.ability.perma_x_chips or 0) + pseudorandom(\"hi\", 1, 5)\n            elseif bonus == 4 then\n                card.ability.perma_x_mult = (card.ability.perma_x_mult or 0) + pseudorandom(\"hi\", 1, 5)\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "mult": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 1
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "brb",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"brb\",\n    loc_txt = {\n        name = \"Big Red Button\",\n        text = {\n            'Each hand destroys a random card in deck',\n            '{C:inactive}You know, I\\'ve just realized that this',\n            '{C:inactive}dotted line around the globe is supposed to be the Equator...{}',\n            '{C:inactive}I always thought of it more as a \\'cut here\\'{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    calculate = function(self, card, context)\n        if context.after then\n            if #G.deck.cards > 0 then\n                local _cards = {}\n                for _, playing_card in ipairs(G.deck.cards) do\n                    _cards[#_cards + 1] = playing_card\n                end\n                local selectedCard = pseudorandom_element(_cards, pseudoseed(\"This a creative enough seed for you\"))\n                SMODS.destroy_cards(selectedCard)\n            end\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "fractured_picture",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"fractured_picture\",\n    loc_txt = {\n        name = \"Fractured Picture\",\n        text = {\n            'If a scored card has no seal, enhancement, and edition, give that card a random seal, enhancement, or edition and randomize it\\'s suit',\n            '{C:inactive}You cannot always choose the pictures, but you can choose how they are depicted{}',\n            '{C:inactive}and they will always be hung in your frame of mind.{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    calculate = function(self, card, context)\n        if context.after then\n            for i, scoredCard in ipairs(context.scoring_hand) do\n                if not scoredCard.seal and not scoredCard.edition and not next(SMODS.get_enhancements(scoredCard)) then\n                    local choice = pseudorandom(\"Hi\", 1, 3)\n\n                    if choice == 1 then\n                        \n                    elseif choice == 2 then\n\n                    elseif choice == 3 then\n\n                    end\n                end\n            end\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "carousel",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"carousel\",\n    loc_txt = {\n        name = \"#1#\",\n        text = {\n            'Alternates between scoring +#3# chips',\n            'and #4# mult each card scored',\n            '{C:inactive}#2#{}',\n            '{C:inactive}#5#{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            scoring = \"chips\",\n            roundsIncrement = false,\n            CloneMade = false,\n            rounds = 1,\n            mult = -1,\n            chips = 5,\n            names = {\"A Carousel\", \"A Carousel?\", \"A \\\"Carousel\\\"?\", \"A... \\\"Carousel\\\"\"},\n            lyrics1 = {\"It\\'s up to us all\", \"A teleporting exit door and-\", \"No, forget about the exit\", \"Quit that line of thinking or\"},\n            lyrics2 = {\"to make the merry go round!\", \"WHOA! HAHA! NEVER MIND!\", \"there\\'s so much to enjoy!\", \"else you\\'ll END UP IN THE BASEMENT!\"}\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = {card.ability.extra.names[card.ability.extra.rounds], card.ability.extra.lyrics1[card.ability.extra.rounds], card.ability.extra.chips * card.ability.extra.rounds, card.ability.extra.mult * card.ability.extra.rounds, card.ability.extra.lyrics2[card.ability.extra.rounds]} }\n    end,\n    calculate = function(self, card, context)\n        if context.setting_blind then\n            card.ability.extra.roundsIncrement = false\n            card.ability.extra.CloneMade = false\n        end\n        if context.before then\n            card.ability.extra.scoring = \"chips\"\n        end\n        if context.individual and context.cardarea == G.play then\n            if card.ability.extra.scoring == \"chips\" then\n                card.ability.extra.scoring = \"mult\"\n                return {\n                    chips = card.ability.extra.chips * card.ability.extra.rounds\n                }\n            elseif card.ability.extra.scoring == \"mult\" then\n                card.ability.extra.scoring = \"chips\"\n                return {\n                    mult = card.ability.extra.mult * card.ability.extra.rounds\n                }\n            end\n        end\n        if context.end_of_round then\n            if not card.ability.extra.roundsIncrement then\n                if card.ability.extra.rounds >= 4 then\n                    if not card.ability.extra.CloneMade then\n                        SMODS.destroy_cards(card)\n                        local clone = SMODS.create_card({set = \"Joker\", area = G.jokers, key = \"j_uv_basement\"})\n                        card.ability.extra.CloneMade = true\n                        clone:add_to_deck()\n                        G.jokers:emplace(clone)\n                        SMODS.calculate_effect({\n                            message = \"QUJTVFJBQ1RFRCE=\",\n                            colour = G.C.ORANGE\n                        }, clone)\n                    end\n                end\n                card.ability.extra.rounds = card.ability.extra.rounds + 1\n                card.ability.extra.roundsIncrement = true\n            end\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "basement",
+      "atlas": "StupendiumJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"basement\",\n    loc_txt = {\n        name = \"The Basement.\",\n        text = {\n            'Scores +1 mult for every card in the deck (currently: +#1#)',\n            'Scores +1 chips for every card in the discard (currently: +#2#)',\n            '{C:inactive}(currently: #3#){}',\n            '{C:inactive}HAHAHAHAHAAHAHAHAAAHAAHELPHAHAAAAAHHHAHAHAHAAAHAHHHAHHA{}',\n            '{C:inactive}(Stupendium){}'\n        }\n    },\n    atlas = \"StupendiumJokers\",\n    rarity = 2,\n    cost = 4,\n    blueprint_compat = false,\n    eternal_compat = true,\n    perishable_compat = true,\n    unlocked = true,\n    discovered = false,\n    pos = {x=0, y=0},\n    config = {\n        extra = {\n            mult = 1,\n            chips = 1,\n            xchips = 1,\n            chipsIncrement = false\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        if G.deck ~= nil and G.discard ~= nil then\n            return { vars = {card.ability.extra.mult * (#G.deck.cards or 0), card.ability.extra.chips * (#G.discard.cards or 0), (card.ability.extra.xchips or 0)} }\n        else\n            return { vars = {card.ability.extra.mult * 0, card.ability.extra.chips * 0, (card.ability.extra.xchips or 0)} }\n        end\n    end,\n    calculate = function(self, card, context)\n        if context.before then\n            card.ability.extra.chipsIncrement = false\n        end\n        if context.joker_main then\n            if card.ability.extra.xchips > 1 then\n                return {\n                    mult = card.ability.extra.mult * #G.deck.cards,\n                    chips = card.ability.extra.chips * #G.discard.cards,\n                    xchips = card.ability.extra.xchips\n                }\n            else\n                return {\n                    mult = card.ability.extra.mult * #G.deck.cards,\n                    chips = card.ability.extra.chips * #G.discard.cards\n                }\n            end\n        end\n        if context.destroy_card then\n            if not card.ability.extra.chipsIncrement then\n                card.ability.extra.xchips = card.ability.extra.xchips + 0.1\n                card.ability.extra.chipsIncrement = true\n            end\n        end\n    end,\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "mult": 1,
+          "chips": 1,
+          "xchips": 1,
+          "chipsIncrement": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 1,
+          "chips": 1,
+          "xchips": 1,
+          "chipsIncrement": false
+        }
+      },
+      "vars": [
+        0,
+        0,
+        1
+      ],
+      "infoQueue": []
+    }
+  ],
+  "version": "no-tag"
+}
