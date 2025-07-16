@@ -1,0 +1,37 @@
+{
+  "locMap": {},
+  "atlases": {
+    "modicon": {
+      "path": "icon.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/toomanyjokers@cg-223/no-tag/icon.png",
+      "resolvedGitHubPath": "assets/1x/icon.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Keybind",
+      "key": "openTMJ",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"openTMJ\",\r\n    key_pressed = \"t\",\r\n    action = function(controller)\r\n        controller = G.CONTROLLER\r\n        local reload\r\n        if controller.hovering.target and controller.hovering.target:is(Card) then\r\n            if controller.held_keys.lctrl and not controller.held_keys.lshift then\r\n                local card = controller.hovering.target\r\n                TMJ.thegreatfilter = {\"{key=\"..getCenterKeyFromCard(card)..\",mod}\"}\r\n                reload = true\r\n            elseif not controller.held_keys.lctrl and controller.held_keys.lshift then\r\n                local card = controller.hovering.target\r\n                TMJ.thegreatfilter = {\"{key=\"..getCenterKeyFromCard(card)..\",rarity}\"}\r\n                reload = true\r\n            elseif controller.held_keys.lctrl and controller.held_keys.lshift then\r\n                local card = controller.hovering.target\r\n                TMJ.thegreatfilter = {\"{key=\"..getCenterKeyFromCard(card)..\",mod}\", \"{key=\"..getCenterKeyFromCard(card)..\",rarity}\"}\r\n                reload = true\r\n            end\r\n        end\r\n        TMJ.FUNCS.OPENFROMKEYBIND(reload)\r\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\r\n    path = \"icon.png\",\r\n    px = 34,\r\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "no-tag"
+}
