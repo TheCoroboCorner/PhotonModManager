@@ -485,7 +485,7 @@
       "cg"
     ],
     "description": "Adds a filtering system to the Joker collection.",
-    "favourites": 0,
+    "favourites": 1,
     "allow_redistribution": true,
     "badge_colour": "FFFFFF",
     "published_at": "2025-07-16T07:06:59.119Z",
@@ -494,5 +494,28 @@
       "Quality of Life"
     ],
     "readme": "# Too Many Jokers\r\nAdds a toggleable sidebar displaying your collection, along with a searchbar.\r\n\r\n## Usage\r\nPress T to open TMJ on your left.\r\n\r\nAt the bottom is a text input for searching. Searches are loosely matched against every card. If a card doesn't match your search terms, it won't be displayed.\r\n\r\nYou can use multiple search terms using commas. All provided search terms must match with a card for the card to show. (e.g. `+mult, xmult` will only show jokers that give both xmult and +mult, not any joker that gives either)\r\n\r\n## Advanced uses\r\n\r\nThere are several special search terms, surrounded by braces (`{}`). These allow you to specify more about your search. They MUST come before any normal search terms.\r\n\r\n`{any}`\r\n\r\n{any} specifies that if ANY of the search terms are matched, a card will show up. Using the example above, `{any}, +mult, xmult` will show jokers that give either +mult or xmult.\r\n\r\n`{regex}`\r\n\r\n{regex} specifies that we should use Lua's pattern matcher instead of just a raw search. Keep in mind this is Lua patterns, not actual regex.\r\n\r\nAdditionally, any non-special search term can be prefixed with `!` to specify that you want to negate that search term (so if it IS matched, do not show the card)\r\n\r\nA use of all these is as follows:\r\n\r\n`{any}, {regex}, legendary, cryptid, xmult.*hearts, !joker`\r\n\r\nExplanation: Any joker that is either legendary, is from cryptid (or is the Spectral card Cryptid), gives xmult AND has to do with hearts (assuming the xmult came first), or is not a joker.\r\n\r\nCredits to Dimserene for the idea to create this mod.\r\n"
+  },
+  "UltraViolet@Violet-Tendencies": {
+    "id": "ultraviolet",
+    "name": "UltraViolet",
+    "author": [
+      "Violet"
+    ],
+    "description": "Another assorted jokers mod (because we don't have enough!)\nIncludes Jokers inspired by Stupendium, Marvel Rivals, and organized religion! :3",
+    "favourites": 0,
+    "allow_redistribution": "true",
+    "badge_colour": "521094",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0404a)"
+    ],
+    "published_at": "2025-07-16T07:08:35.455Z",
+    "type": "Mod",
+    "tags": [
+      "Vanilla Plus",
+      "Jokers",
+      "Blinds",
+      "Misc"
+    ],
+    "readme": "A Balatro mod :3\n"
   }
 }
