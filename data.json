@@ -276,7 +276,7 @@
       "BakersDozenBagels"
     ],
     "description": "Some miscellaneous additions.",
-    "favourites": 2,
+    "favourites": 3,
     "badge_colour": "EDD198",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-0330a)",
@@ -303,7 +303,7 @@
       "BakersDozenBagels"
     ],
     "description": "TDD framework for Balatro.",
-    "favourites": 3,
+    "favourites": 7,
     "badge_colour": "EDD198",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-1304a)",
