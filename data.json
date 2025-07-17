@@ -179,7 +179,7 @@
       "nh6574"
     ],
     "description": "Display useful information under Jokers. Controls: Right-click or B - hide/show. Left-click or Up - collapse/expand.",
-    "favourites": 1,
+    "favourites": 4,
     "badge_colour": "",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0301b)"
