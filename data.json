@@ -155,7 +155,7 @@
       "Larswijn"
     ],
     "description": "Adds sleeves as modifier to decks.  See full description in-game by enabling mod or checking `descriptions.Mods.CardSleeves`.",
-    "favourites": 1,
+    "favourites": 3,
     "badge_colour": "0047AA",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-1206c)",
