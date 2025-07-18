@@ -120,7 +120,7 @@
       "Somethingcom515"
     ],
     "description": "Allows seals on Everything also comes with more seals",
-    "favourites": 13,
+    "favourites": 14,
     "badge_colour": "E8463D",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0509b-STEAMODDED)",
@@ -466,7 +466,7 @@
       "CodeRevo"
     ],
     "description": "Adds a lot of random stuff",
-    "favourites": 0,
+    "favourites": 1,
     "allow_redistribution": true,
     "badge_colour": "7E7AFF",
     "dependencies": [
@@ -508,5 +508,27 @@
       "Mechanics"
     ],
     "readme": "\n# Entropy\nA chaotic Balatro mod\n\n[Download CryptLib](https://github.com/SpectralPack/Cryptlib) (Make sure you download via Code > Download zip)\n\nEntropy currently adds:\n\n![image](https://github.com/user-attachments/assets/02d065d5-2c15-4946-a724-bc995c8eee2a)\n![image](https://github.com/user-attachments/assets/3eff5308-0b72-40a3-89af-a710de425d90)\n![image](https://github.com/user-attachments/assets/f20d2145-6a3a-48e1-946c-32b667e2f01c)\n\n## Wheres all the Other Content?\nDue to me wanting to depart from this mod as a Cryptid addon but not wanting the content to go to waste a lot of existing content has been moved into CrossMod territory, where it will only show up if you have Cryptid enabled. This includes entropic Jokers which are based on Exotics\n\n## What about Ascension Power\nAscension Power will stay around even without Cryptid enabled due to how much Entropy content relies on it\nI could rename ascension power to further seperate it from Cryptid however I think this is unnecessary as the mechanics will remain the same\n\n## Contact\nFor enquiries please join the [Entropy Discord](https://discord.gg/beqqy4Bb7m)\n"
+  },
+  "SDM_0-s-Stuff@SDM0": {
+    "id": "sdm0sstuff",
+    "name": "SDM_0's Stuff",
+    "author": [
+      "SDM_0"
+    ],
+    "description": "Content mod that adds new jokers, consumables, vouchers, decks, challenges and bakery goods.",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "c20000",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-0711a)"
+    ],
+    "published_at": "2025-07-18T00:26:48.696Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Misc"
+    ],
+    "readme": "# SDM_0's Stuff\n\nA Balatro mod that adds a whole lot of new content to the game, including jokers, decks, consumables, vouchers, challenges and its own consumable type: Bakery Goods\n\n[Wiki Link](https://balatromods.miraheze.org/wiki/SDM_0%27s_Stuff) (As of 05/07/2025: Not up-to-date, will be removed when it is)\n\n## Installation\nThis mod is available on the [Balatro Mod Manager](https://github.com/skyline69/balatro-mod-manager)\n\n__Manual Installation:__\n- Requires [Steamodded](https://github.com/Steamopollys/Steamodded/) 0323b or more and [Lovely](https://github.com/ethangreen-dev/lovely-injector) 0.7.1\n- Download `SDM_0.s.Stuff.zip` in \"Releases\"\n- Unzip it into `AppData\\Roaming\\Balatro\\Mods` (Create the \"Mods\" folder if it doens't exist)\n- Enjoy!\n\n## Extra mod content\n - [CardSleeves](https://github.com/larswijn/CardSleeves): SDM_0's Stuff deck effect can be used as card sleeves\n - [JokerDisplay](https://github.com/nh6574/JokerDisplay): SDM_0's Stuff jokers have JokerDisplay compatibility\n - [Dimserenes' Modpack](https://github.com/Dimserene/Dimserenes-Modpack): Frontier Deck\n - [Cryptid](https://github.com/SpectralPack/Cryptid): Bakery good for Code cards, T3 vouchers and one achievement\n - [Paperback](https://github.com/Balatro-Paperback/paperback): Food joker additions to its Food pool (same for Cryptid)\n - [More Fluff](https://github.com/notmario/MoreFluff): Colour card related to Bakery goods\n - [Aikoyori's Shenanigans](https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans): Effect for the mod's self-insert legendary\n - [Partner API](https://github.com/Icecanno/Partner-API): A few SDM_0's Stuff jokers exists as partners\n\n## Thanks\n- RattlingSnow for the spectral cards art\n- queen of stupid, FlameThrowerFIM and Jamie for all the art made for various content\n- Dimserene for the space jokers list and for featuring my mod in his modpack\n- N' for the JokerDisplay mod and his help with it\n- Larswijn for the CardSleeves mod and help with the implementations and updates\n- Darthalex2014 and PainKiller for the previous russian translation\n- Mysthaps for creating a good config code that I shamelessly stole\n- The Balatro discord modding community, this mod wouldn't have come to life without their help!\n- The Cryptid mod community (except Jevonn) for considering my mod as a great complimentary mod\n- The Balatro Wiki team for making my mod's page\n- Whoever added my mod in Balatro Mod Manager\n"
   }
 }
