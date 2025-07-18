@@ -482,5 +482,31 @@
       "Misc"
     ],
     "readme": "\n### Latest: Vers 4.2.2:\n\n**Revo's Vault**\n\nCurrently there are 4 New Rarities (Printer, Chaos, Vaulted and Secret), **180+** jokers and a lot more!\n\n ![image](https://github.com/user-attachments/assets/09fa158d-09c6-479a-a829-af173bdbc04f)\n\n\n### **Cross-Mod Content**\n\n----\n\n**[Cryptid](https://github.com/MathIsFun0/Cryptid)**\n\n- 6 Jokers\n- 1 Consumable\n\n**[CardSleeves](https://github.com/larswijn/CardSleeves)**\n\n- 17 Sleeves\n\n**[Rift-Raft](https://github.com/vitellaryjr/RiftRaft)**\n\n- 1 Joker\n- 1 Consumable\n\n**[Reverse Tarots](https://github.com/SkywardTARDIS/balatro_reverse_tarots)**\n\n- 5 Jokers\n- 3 Consumables\n- 2 Enhancements\n\n----\n\n- And more ;)\n\n------\n\n\nyou can reach out to me from discord (revoo_.) for any suggestions or bug reports\n\n\n### Credits\n\n--MilƱMeg4 for great ideas\n\n--BepisFever for button code\n\n"
+  },
+  "Entropy@lord-ruby": {
+    "id": "entr",
+    "name": "Entropy",
+    "author": [
+      "Ruby"
+    ],
+    "description": "A chaotic Balatro mod",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "FE0001",
+    "dependencies": [
+      "Steamodded",
+      "Cryptlib"
+    ],
+    "conflicts": [],
+    "published_at": "2025-07-18T00:19:29.228Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Blinds",
+      "Mechanics"
+    ],
+    "readme": "\n# Entropy\nA chaotic Balatro mod\n\n[Download CryptLib](https://github.com/SpectralPack/Cryptlib) (Make sure you download via Code > Download zip)\n\nEntropy currently adds:\n\n![image](https://github.com/user-attachments/assets/02d065d5-2c15-4946-a724-bc995c8eee2a)\n![image](https://github.com/user-attachments/assets/3eff5308-0b72-40a3-89af-a710de425d90)\n![image](https://github.com/user-attachments/assets/f20d2145-6a3a-48e1-946c-32b667e2f01c)\n\n## Wheres all the Other Content?\nDue to me wanting to depart from this mod as a Cryptid addon but not wanting the content to go to waste a lot of existing content has been moved into CrossMod territory, where it will only show up if you have Cryptid enabled. This includes entropic Jokers which are based on Exotics\n\n## What about Ascension Power\nAscension Power will stay around even without Cryptid enabled due to how much Entropy content relies on it\nI could rename ascension power to further seperate it from Cryptid however I think this is unnecessary as the mechanics will remain the same\n\n## Contact\nFor enquiries please join the [Entropy Discord](https://discord.gg/beqqy4Bb7m)\n"
   }
 }
