@@ -566,5 +566,34 @@
       "Misc"
     ],
     "readme": "# TheFamily - UI tabs to cleanup screen space\nSometimes, mods love add own UI on a screen. But what if there's so much mods so there's no space at all or, even worse, elements stacks on each other?\nThat's exactly what this mod trying to solve!\n\nTheFamily - a lovely mod which designed to provide API for making tabs and easier management of UI in Balatro's game screen.\n\n## How it works\nOther mods can interact with API mod provides to make own tabs which player can use as it will to display/hide certain UIs like counters, menus, buttons, card areas etc.\nAll of them placed in one place and easy accessible in any time.\n\n## WIP\nMod still in early development. Performance issues and bugs can be present. API will be updated/expanded. Mod config will be added too.\n"
+  },
+  "TOGAPackBalatro@TheOneGoofAli": {
+    "id": "TOGAPack",
+    "name": "TOGA's Stuff",
+    "author": [
+      "TheOneGoofAli"
+    ],
+    "description": "If this appears, there was an error initializing the mod. Non-the-less, hi!",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "fd9712",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0711a)"
+    ],
+    "conflicts": [
+      "Talisman (<<2.1.0*~)"
+    ],
+    "published_at": "2025-07-18T00:36:05.853Z",
+    "type": "Mod",
+    "tags": [
+      "SFX",
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Blinds",
+      "Modifiers",
+      "Mechanics"
+    ],
+    "readme": "<p align=\"center\">\n  <img src=\"https://files.catbox.moe/vo9000.png\">\n</p>\n\n# TOGA's Stuff\nA personal timewaster project that is a mod for Balatro.\n\n[Download the latest commit here.](https://github.com/TheOneGoofAli/TOGAPackBalatro/archive/refs/heads/main.zip)\n\nUses Steamodded 1.0.0-BETA and a bit of Lovely patching.\nhttps://github.com/Steamodded/smods\n\nTalisman 2.2.0 (development builds work too) is an optional dependency as of 1.0.2.\nhttps://github.com/MathIsFun0/Talisman\n\nIf Incantation is to be used alongside, please obtain the [forked version](https://github.com/TheOneGoofAli/JensBalatroCollection/tree/main/Incantation) to prevent unintended behaviour by some of the Consumeables of this mod.\n\n_Please use the source code download options for grabbing the mod._ That way, I don't have to remake the 7z archive every single time.\n"
   }
 }
