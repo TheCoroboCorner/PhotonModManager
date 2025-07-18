@@ -87,7 +87,7 @@
       "HarmoniousJoker"
     ],
     "description": "Vanilla+ content mod that adds new jokers, boss blinds, a new consumable type, and more to expand upon the base game. It's time to get silly!",
-    "favourites": 4,
+    "favourites": 2,
     "badge_colour": "f0c87e",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0614a)",
@@ -155,7 +155,7 @@
       "Larswijn"
     ],
     "description": "Adds sleeves as modifier to decks.  See full description in-game by enabling mod or checking `descriptions.Mods.CardSleeves`.",
-    "favourites": 3,
+    "favourites": 1,
     "badge_colour": "0047AA",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-1206c)",
@@ -179,7 +179,7 @@
       "nh6574"
     ],
     "description": "Display useful information under Jokers. Controls: Right-click or B - hide/show. Left-click or Up - collapse/expand.",
-    "favourites": 4,
+    "favourites": 1,
     "badge_colour": "",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0301b)"
@@ -196,7 +196,7 @@
       "nh6574"
     ],
     "description": "Adds modern Yu-Gi-Oh! cards and mechanics.",
-    "favourites": 3,
+    "favourites": 2,
     "badge_colour": "F4A6C7",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0614a)"
@@ -213,7 +213,7 @@
       "kasimeka"
     ],
     "description": "Fully keyboard-driven UX with keybindings for (almost) every game action.",
-    "favourites": 4,
+    "favourites": 3,
     "badge_colour": "ffffff",
     "readme": "",
     "published_at": "2025-06-20T01:22:45.778Z",
@@ -241,7 +241,7 @@
       "Breezebuilder"
     ],
     "description": "Click to dismiss discovery alert icons.",
-    "favourites": 4,
+    "favourites": 3,
     "badge_colour": "cc3c33",
     "readme": "# ![icon](https://github.com/user-attachments/assets/42a37f6d-46ed-4d38-97b4-886da6ef45ca) DismissAlert for Balatro\n\n<p align=\"center\">\n    <img width=\"47%\" alt=\"Main menu example\" src=\"https://github.com/user-attachments/assets/2985bfbc-6f05-4301-b9ea-d608638c039f\"/>\n    &nbsp;\n    <img width=\"47%\" alt=\"In-game menu example\" src=\"https://github.com/user-attachments/assets/0da65e18-5cea-410c-8395-6c0254e167f8\"/>\n</p>\n\nDismissAlert is a mod for [Balatro](https://store.steampowered.com/app/2379780/Balatro/) which allows the discovery alert icons to be dismissed and hidden with a single click.\n\n\n## Installation\n1. Install [Lovely](https://github.com/ethangreen-dev/lovely-injector/releases) by following the [installation instructions here](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation).\n    - On **Windows**, `version.dll` should be in the same folder as `Balatro.exe`\n    - On **macOS**, `liblovely.dylib` should be in the same folder as `Balatro.app`\n\n2. Open the **Mods** folder or create one if it does not exist.\n    - On **Windows** this should be located at `%AppData%/Balatro/Mods`\n    - On **macOS** this should be located at `/Users/$USER/Library/Application Support/Balatro/Mods`\n\n3. **Install DismissAlert** by copying the **DismissAlert** folder **from inside** [DismissAlert.zip](https://github.com/Breezebuilder/DismissAlert/releases) into the **Mods** folder.\n\n\n## Contribute\nHave an idea for a feature? Found a bug?\n[Create an issue here](https://github.com/Breezebuilder/DismissAlert/issues/)\n",
     "published_at": "2025-06-20T02:08:19.097Z",
@@ -255,7 +255,7 @@
       "Aikoyori"
     ],
     "description": "Adds a bunch of stuff I want to add to the game.",
-    "favourites": 7,
+    "favourites": 6,
     "badge_colour": "ff475a",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0530b)",
@@ -276,7 +276,7 @@
       "BakersDozenBagels"
     ],
     "description": "Some miscellaneous additions.",
-    "favourites": 3,
+    "favourites": 2,
     "badge_colour": "EDD198",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-0330a)",
@@ -303,7 +303,7 @@
       "BakersDozenBagels"
     ],
     "description": "TDD framework for Balatro.",
-    "favourites": 7,
+    "favourites": 3,
     "badge_colour": "EDD198",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-1304a)",
@@ -325,7 +325,7 @@
       "Mysthaps"
     ],
     "description": "Face the Fear, Build the Future.",
-    "favourites": 6,
+    "favourites": 4,
     "badge_colour": "FC3A3A",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0614a)"
@@ -368,7 +368,7 @@
       "TheCoroboCorner"
     ],
     "description": "Tries to remaster the experience of the game with new mechanics and quality of life changes",
-    "favourites": 1,
+    "favourites": 0,
     "allow_redistribution": true,
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-1225a)"
@@ -418,7 +418,7 @@
       "ariyi"
     ],
     "description": "Yet another mod that adds whatever the hell I want to Balatro.",
-    "favourites": 2,
+    "favourites": 0,
     "allow_redistribution": true,
     "badge_colour": "4A3570",
     "dependencies": [
@@ -445,7 +445,7 @@
       "pi_cubed"
     ],
     "description": "A collection of vanilla-friendly Jokers made by yours truly. Follow me on bluesky at @picubed.bsky.social!",
-    "favourites": 1,
+    "favourites": 0,
     "allow_redistribution": true,
     "badge_colour": "34CEB1",
     "dependencies": [
@@ -458,5 +458,29 @@
       "Jokers"
     ],
     "readme": "![Mod Logo](https://i.imgur.com/WgRA0cT.png)\nRequires Steamodded 1.0.0~BETA-0530b or newer\n\nList of Jokers (Modded Wiki Page): https://balatromods.miraheze.org/wiki/Pi_cubed's_Jokers/Jokers\n\nDocumentation spreadsheet (Planned content, patch notes, & more info): https://docs.google.com/spreadsheets/d/1s2MFswjKUeVcx3W0Cylmya1ZfFvx2fiQZD42ZThxd5Q/edit?usp=sharing\n\nDiscord discussion thread: https://discord.com/channels/1116389027176787968/1348621804696240201\n\npi_cubed's Jokers is a lightweight mod with minimal lovely patching and hooks. As a result, there should be few crashes due to conflicts with other mods.\n\n## Recommended Mods\n### Partner by baimao  \npi_cubed's Jokers adds 4 new Partners!  \nhttps://github.com/Icecanno/Partner-API  \n\n### Opandora's Box by opan \nA Joker pack I really enjoy with some interesting synergies, and stellar music.  \nhttps://github.com/ohpahn/opandoras-box\n\n### Extra Credit by CampfireCollective & more  \nhttps://github.com/GuilloryCraft/ExtraCredit\n\n### Neato Jokers by NEATO  \nhttps://github.com/neatoqueen/NeatoJokers\n\n### Paperback by PaperMoon, OppositeWolf770, srockw, GitNether, Victin, BBBalatroMod, & more  \nThe Bisexual Flag Joker is compatible with additional suits.  \nhttps://github.com/GitNether/paperback\n\n### Cryptid by MathIsFun_ & many more  \nThere's some hidden content that requires Cryptid. In addition, I've put a big focus on making sure the changing value mechanics and Misprintize behave properly with all Jokers!  \nhttps://github.com/SpectralPack/Cryptid\n\n## Config Options\nA game restart is required for Config options to take effect.\n\n### New Spectral Cards  \nThis option enables or disables the Spectral Cards Commander, Rupture, and Extinction from appearing.\n\n### Preorder Bonus' Hook  \nTurn this option off to rework the Joker's mechanics very slightly to remove its hook that I (very jankily) implemented. This option may be useful if you're experiencing conflicts regarding setting the cost of Booster Packs.\n\n### Custom Sound Effects  \nEnables or disables any custom sound effects I've implemented into the mod. Currently, this affects Rhythmic Joker, Explosher, On-beat, Off-beat, Pot, and Talking Flower.\n"
+  },
+  "Revos-Vault---Balatro-Mod@Cdrvo": {
+    "id": "RevosVault",
+    "name": "Revo's Vault",
+    "author": [
+      "CodeRevo"
+    ],
+    "description": "Adds a lot of random stuff",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "7E7AFF",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-0309c)"
+    ],
+    "published_at": "2025-07-18T00:17:18.563Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Blinds",
+      "Mechanics",
+      "Misc"
+    ],
+    "readme": "\n### Latest: Vers 4.2.2:\n\n**Revo's Vault**\n\nCurrently there are 4 New Rarities (Printer, Chaos, Vaulted and Secret), **180+** jokers and a lot more!\n\n ![image](https://github.com/user-attachments/assets/09fa158d-09c6-479a-a829-af173bdbc04f)\n\n\n### **Cross-Mod Content**\n\n----\n\n**[Cryptid](https://github.com/MathIsFun0/Cryptid)**\n\n- 6 Jokers\n- 1 Consumable\n\n**[CardSleeves](https://github.com/larswijn/CardSleeves)**\n\n- 17 Sleeves\n\n**[Rift-Raft](https://github.com/vitellaryjr/RiftRaft)**\n\n- 1 Joker\n- 1 Consumable\n\n**[Reverse Tarots](https://github.com/SkywardTARDIS/balatro_reverse_tarots)**\n\n- 5 Jokers\n- 3 Consumables\n- 2 Enhancements\n\n----\n\n- And more ;)\n\n------\n\n\nyou can reach out to me from discord (revoo_.) for any suggestions or bug reports\n\n\n### Credits\n\n--MilƱMeg4 for great ideas\n\n--BepisFever for button code\n\n"
   }
 }
