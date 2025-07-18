@@ -1,0 +1,1039 @@
+{
+  "locMap": {
+    "handy": {
+      "name": "",
+      "text": [
+        "Uncheck to disable {C:attention}ALL{} mod features",
+        "{C:handy_secondary}(no restart required){}"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "hide_options_button": {
+      "name": "",
+      "text": [
+        "{C:handy_secondary}Only when Steamodded installed{}"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "debugplus_prevent": {
+      "name": "",
+      "text": [
+        "Require mod {C:attention}DebugPlus{} and enabled",
+        "{C:attention}CTRL for Keybinds{} option to work"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "regular_keybinds": {
+      "name": "",
+      "text": [
+        "Play hand, Discard, hand sorting,",
+        "Reroll shop, Leave shop, Select blind,",
+        "Skip blind, View deck, Run info"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_highlight": {
+      "name": "",
+      "text": [
+        "If key set to {C:chips}#2#{},",
+        "start holding key {C:attention}OUTSIDE{} of cards",
+        "and then hover them to highlight"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_highlight_OUTSIDE": {
+      "name": "",
+      "text": [
+        "For keys other than {C:chips}#2#{},",
+        "start holding keybind while hover",
+        "a card will work as well"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_unhighlight": {
+      "name": "",
+      "text": [
+        "Select cards if first card was not selected.",
+        "Deselect cards if first card was selected."
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "show_deck_preview": {
+      "name": "",
+      "text": [
+        "Hold {C:chips}#1#{} to",
+        "show deck preview"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "deselect_hand": {
+      "name": "",
+      "text": [
+        "Press {C:chips}#1#{} to",
+        "deselect cards in hand"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "insta_cash_out": {
+      "name": "",
+      "text": [
+        "Holding a keybind will trigger it",
+        "as soon as it will be available"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_booster_skip": {
+      "name": "",
+      "text": [
+        "Holding a keybind will trigger it",
+        "as soon as it will be available"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "move_highlight": {
+      "name": "",
+      "text": [
+        "Select card in area and",
+        "then use listed controls"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_buy_or_sell": {
+      "name": "",
+      "text": [
+        "Use {C:chips}#1#{} to",
+        "buy or sell card"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "insta_buy_n_sell": {
+      "name": "",
+      "text": [
+        "Use {C:chips}#1#{} to",
+        "buy card and sell",
+        "immediately after"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "insta_use": {
+      "name": "",
+      "text": [
+        "Use {C:chips}#1#{} to",
+        "use card if possible"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "cryptid_code_use_last_interaction": {
+      "name": "",
+      "text": [
+        "Required mod {C:attention}Cryptid{} to work",
+        " ",
+        "Shortcut for using a code card and selecting",
+        "{C:green}[Input previous value]{} option for:",
+        "{C:spectral}://POINTER{}, {C:green}://VARIABLE{}, {C:green}://CLASS{}, {C:green}://EXPLOIT{}",
+        " ",
+        "Usage determined by {C:attention}#2#{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "not_just_yet_interaction": {
+      "name": "",
+      "text": [
+        "Required mod {C:attention}NotJustYet{} to work"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "speed_multiplier": {
+      "name": "",
+      "text": [
+        "Game speed can be changed in",
+        "range from {C:attention}#4#{} to {C:attention}#5#{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "speed_multiplier_no_hold": {
+      "name": "",
+      "text": [
+        "Decrease amount of",
+        "keybinds needed to use",
+        "#2#"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "insta_highlight_entire_f_hand": {
+      "name": "",
+      "text": [
+        "Select max possible amount of cards",
+        "in hand, from left to right"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "nopeus_interaction": {
+      "name": "",
+      "text": [
+        "Required mod {C:attention}Nopeus{} to work",
+        " ",
+        "{C:mult}Unsafe{} option must be",
+        "enabled in {C:attention}#4#{} tab"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "nopeus_interaction_no_hold": {
+      "name": "",
+      "text": [
+        "Decrease amount of",
+        "keybinds needed to use",
+        "#2#"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "animation_skip": {
+      "name": "",
+      "text": [
+        "5 levels of animation skip are present",
+        " ",
+        "{C:attention}#4#{} - default game behaviour",
+        "{C:attention}#5#{} - removed card texts like {C:attention}Again!{} and {C:chips}+Chips{}",
+        "{C:attention}#6#{} - instant scoring, removed cards wiggling",
+        "{C:attention}#7#{} - removed unnecessary animations, instant cards draw and restart",
+        "{C:mult}#8#{} - game's absolute limit: everything instant",
+        " ",
+        "{C:mult}#8#{} option must be enabled in {C:attention}#9#{} tab"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "animation_skip_no_hold": {
+      "name": "",
+      "text": [
+        "Decrease amount of",
+        "keybinds needed to use",
+        "#2#"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "scoring_hold": {
+      "name": "",
+      "text": [
+        "Useful for shuffling jokers or checking",
+        "a score before end of round on",
+        "high game speed or skipped animations"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "scoring_hold_any_moment": {
+      "name": "",
+      "text": [
+        "Allow #2# to",
+        "pause in any moment of",
+        "scoring animation"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "dangerous_actions": {
+      "name": "",
+      "text": [
+        "Enable unsafe controls. They're",
+        "designed to be speed-first, which",
+        "{C:mult}can cause bugs or crashes!{}"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "immediate_buy_and_sell": {
+      "name": "",
+      "text": [
+        "Hold {C:mult}#3#{}, {C:chips}#4#{},",
+        "and hover cards to sell them immediately"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "immediate_buy_and_sell_queue": {
+      "name": "",
+      "text": [
+        "Instead of selling immediately, {C:mult}[Instant sell]{}",
+        "will put all hovered cards in a list and",
+        "all of them will be sold after keybind release",
+        " ",
+        "Allow more precise cards selection, but slower"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "nopeus_unsafe": {
+      "name": "",
+      "text": [
+        "Required mod {C:attention}Nopeus{} to work",
+        " ",
+        "Even if this unchecked, {C:mult}Unsafe{} option",
+        "can be set normally via game settings"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "speed_multiplier_uncap": {
+      "name": "",
+      "text": [
+        "{C:mult}Drastically hurts performance{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "animation_skip_unsafe": {
+      "name": "",
+      "text": [
+        "Allow increase",
+        "setting to {C:mult}#2#{}"
+      ],
+      "type": "Handy_ConfigCheckbox"
+    },
+    "sell_all_same": {
+      "name": "",
+      "text": [
+        "Hold {C:mult}#3#{}, {C:mult}#4#{},",
+        "and click on card to sell all of their copies"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "sell_all": {
+      "name": "",
+      "text": [
+        "Hold {C:mult}#2#{}, {C:mult}#3#{},",
+        "and click on card to sell {C:attention}ALL{} cards in area"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "card_remove": {
+      "name": "",
+      "text": [
+        "When hold, instead of selling cards {C:attention}or skip tags{} will be {C:attention,E:1}REMOVED{}",
+        " ",
+        "Hold {C:mult}#2#{}, {C:mult}#3#{}, {C:chips}#4#{}",
+        "and hover cards to {C:attention,E:1}REMOVE{} them (queue also applied)",
+        " ",
+        "Hold {C:mult}#2#{}, {C:mult}#3#{}, {C:mult}#5#{}",
+        "and click on card {C:attention}or skip tag{} to {C:attention,E:1}REMOVE{} all of their copies",
+        " ",
+        "Hold {C:mult}#2#{}, {C:mult}#3#{}, {C:mult}#6#{},",
+        "and click on card {C:attention}or skip tag{} to {C:attention,E:1}REMOVE{} {C:attention}ALL{} of them"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_highlight_gamepad": {
+      "name": "",
+      "text": [
+        "Works both for cursor and movement",
+        "via direction buttons"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_highlight_OUTSIDE_gamepad": {
+      "name": "",
+      "text": [
+        "Works both for cursor and movement",
+        "via direction buttons"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "deselect_hand_desktop": {
+      "name": "",
+      "text": [
+        "Replaces vanilla {C:chips}#2#{}",
+        "but works the same and",
+        "can be reassigned to other key",
+        " ",
+        "Uncheck to use vanilla control"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "move_highlight_gamepad": {
+      "name": "",
+      "text": [
+        "{C:mult}Have no effect on gamepad{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_buy_or_sell_desktop": {
+      "name": "",
+      "text": [
+        "Usage determined by {C:attention}#2#{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_buy_or_sell_gamepad": {
+      "name": "",
+      "text": [
+        "Replaces vanilla {C:chips}#3#{}",
+        "but works the same and",
+        "can be reassigned to other key",
+        " ",
+        "Uncheck to use vanilla control"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_buy_n_sell_desktop": {
+      "name": "",
+      "text": [
+        "Usage determined by {C:attention}#2#{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_use_desktop": {
+      "name": "",
+      "text": [
+        "Usage determined by {C:attention}#2#{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "insta_use_gamepad": {
+      "name": "",
+      "text": [
+        "Replaces vanilla {C:chips}#3#{}",
+        "but works the same and",
+        "can be reassigned to other key",
+        " ",
+        "Uncheck to use vanilla control"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "cryptid_code_use_last_interaction_gamepad": {
+      "name": "",
+      "text": [
+        "Required mod {C:attention}Cryptid{} to work",
+        " ",
+        "Shortcut for using a code card and selecting",
+        "{C:green}[Input previous value]{} option for:",
+        "{C:spectral}://POINTER{}, {C:green}://VARIABLE{}, {C:green}://CLASS{}, {C:green}://EXPLOIT{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "immediate_buy_and_sell_queue_gamepad": {
+      "name": "",
+      "text": [
+        "Instead of selling immediately, {C:mult}[Instant sell]{}",
+        "will put all hovered cards in a list and",
+        "all of them will be sold after keybind release",
+        " ",
+        "Allow more precise cards selection, but slower",
+        " ",
+        "{C:attention}Always active on gamepad{}"
+      ],
+      "type": "Handy_ConfigPopup"
+    },
+    "text": {
+      "name": "",
+      "text": [],
+      "type": "Handy_Preset"
+    },
+    "play_hand": {
+      "name": "\"Play hand\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "discard": {
+      "name": "\"Discard\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "toggle_sort": {
+      "name": "\"Toggle sort\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "sort_by_rank": {
+      "name": "\"Sort by rank\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "sort_by_suit": {
+      "name": "\"Sort by suit\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "cash_out": {
+      "name": "\"Cash out\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "not_just_yet_end_round": {
+      "name": "\"NotJustYet: end round\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "skip_booster": {
+      "name": "\"Skip booster pack\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "reroll_shop": {
+      "name": "\"Shop reroll\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "leave_shop": {
+      "name": "\"Leave shop\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "skip_blind": {
+      "name": "\"Skip blind\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "select_blind": {
+      "name": "\"Select blind\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "reroll_boss": {
+      "name": "\"Reroll boss\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "run_info_hands": {
+      "name": "\"Run info: poker hands\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "run_info_blinds": {
+      "name": "\"Run info: blinds\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "view_deck": {
+      "name": "\"View deck\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "deck_preview": {
+      "name": "\"Deck preview\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "quick_highlight": {
+      "name": "\"Fast hand selection\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "quick_buy_or_sell": {
+      "name": "\"Quick buy/sell\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "quick_buy_n_sell": {
+      "name": "\"Quick buy'n'sell\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "quick_use": {
+      "name": "\"Quick use\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "highlight_entire_f_hand": {
+      "name": "\"Highlight entire hand\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "speed_multiplier_multiply": {
+      "name": "\"Speed multiplier: Multiply\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "speed_multiplier_divide": {
+      "name": "\"Speed multiplier: Divide\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "nopeus_interaction_increase": {
+      "name": "\"Nopeus: Increase\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "nopeus_interaction_decrease": {
+      "name": "\"Nopeus: Decrease\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "animation_skip_increase": {
+      "name": "\"Animation skip: Increase\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "animation_skip_decrease": {
+      "name": "\"Animation skip: Decrease\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "move_highlight_one_left": {
+      "name": "\"Move one left\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "move_highlight_one_right": {
+      "name": "\"Move one right\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "move_highlight_move_card": {
+      "name": "\"Move card\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "move_highlight_to_end": {
+      "name": "\"Move to end\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "dangerous_modifier": {
+      "name": "'\"Dangerous\" modifier'",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "dangerous_all_same_modifier": {
+      "name": "'\"All copies\" modifier'",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "dangerous_all_modifier": {
+      "name": "'\"ALL\" modifier'",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "dangerous_remove_modifier": {
+      "name": "'\"REMOVE\" modifier'",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "presets_load_1": {
+      "name": "\"Load preset 1\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "presets_load_2": {
+      "name": "\"Load preset 2\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "presets_load_3": {
+      "name": "\"Load preset 3\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "presets_load_next": {
+      "name": "\"Load next preset\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "misc_open_mod_settings": {
+      "name": "\"Open mod settings\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "misc_crash": {
+      "name": "\"Crash a game\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "misc_save_run": {
+      "name": "\"Save run\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "misc_quick_restart": {
+      "name": "\"Quick restart\"",
+      "text": [],
+      "type": "handy_keybind_labels"
+    },
+    "hand": {
+      "name": "\"Hand\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "round": {
+      "name": "\"Round\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "shop": {
+      "name": "\"Shop\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "blinds": {
+      "name": "\"Blinds\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "menus": {
+      "name": "\"Menus\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "quick_actions": {
+      "name": "\"Quick actions\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "gamespeed": {
+      "name": "\"Game speed\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "animations": {
+      "name": "\"Animations\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "highlight_movement": {
+      "name": "\"Highlight movement\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "shop_and_blinds": {
+      "name": "\"Shop and Blinds\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "gamespeed_and_animations": {
+      "name": "\"Game speed and animations\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "hand_selection": {
+      "name": "\"Hand selection\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "presets": {
+      "name": "\"Presets\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "misc": {
+      "name": "\"Miscellaneous\"",
+      "text": [],
+      "type": "handy_keybind_sections"
+    },
+    "Handy_module_keys_single": {
+      "name": "\"[#1#]\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_module_keys_or": {
+      "name": "\"[#1#] or [#2#]\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_items_in_queue": {
+      "name": "\"[#1# in queue]\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_gamespeed_multiplier": {
+      "name": "\"Game speed multiplier: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_event_queue_retriggers_amount": {
+      "name": "\"Event queue acceleration: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_nopeus_fastforward": {
+      "name": "\"Nopeus fast-forward: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_animation_skip": {
+      "name": "\"Animation skip: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_skip_booster_pack": {
+      "name": "\"Skip booster pack\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_scoring_hold": {
+      "name": "\"Pause scoring animation\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_hand_sorting": {
+      "name": "\"Hand sorting: #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_preset_index": {
+      "name": "\"Preset #1#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_preset_loaded": {
+      "name": "\"Preset #1# [#2#] loaded\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_preset_empty": {
+      "name": "\"Preset #1# [#2#] is empty\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_preset_disabled": {
+      "name": "\"Preset #1# [#2#] is disabled\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_preset_nothing_to_load": {
+      "name": "\"No presets to load\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_overall_guide_button": {
+      "name": "'Each control can be assigned to mouse button",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_overall_guide_gamepad": {
+      "name": "'Each control can be assigned to any gamepad buttons in \"#1#\" tab.'",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_popups_guide": {
+      "name": "\"Hover controls to see more info about them.\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_popups_guide_gamepad": {
+      "name": "\"Move between controls to see more info about them.\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_search_guide": {
+      "name": "'Use \"#1#\" tab for search.'",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_keybinds_guide_desktop": {
+      "name": "\"Click on a button and next inputted key will be assigned. #1# to unbind.\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_keybinds_guide_gamepad": {
+      "name": "\"#2# on a button and next inputted key will be assigned. #1# to unbind.\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_presets_guide": {
+      "name": "\"Preset - set of configs and keybinds which can be applied in any time\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_danger_zone_guide": {
+      "name": "\"*REMOVE card/tag - delete without any checks",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "Handy_default_value": {
+      "name": "\"#1#: default value\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "handy_or": {
+      "name": "\"or\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_premade_presets": {
+      "name": "\"Pre-made presets\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_custom_presets": {
+      "name": "\"Custom presets\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_preset_save": {
+      "name": "\"Save\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_preset_load": {
+      "name": "\"Load\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_preset_clear": {
+      "name": "\"Clear\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "handy_preset_name_placeholder": {
+      "name": "\"Preset name\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_notif_quick": {
+      "name": "\"Quick actions\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_notif_dangerous": {
+      "name": "\"Dangerous actions\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_search_placeholder": {
+      "name": "\"Search...\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_search": {
+      "name": "\"Search\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_clear": {
+      "name": "\"Clear\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_search_no_results": {
+      "name": "'Use keywords like \"more speed\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_quick_use": {
+      "name": "\"Quick use\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_quick_buy_or_sell": {
+      "name": "\"Quick buy or sell\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_quick_buy_n_sell": {
+      "name": "\"Quick buy and immediately sell\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_unsafe_disabled": {
+      "name": "\"Unsafe actions disabled in mod settings\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_unsafe_disabled_by_other_mod": {
+      "name": "\"Unsafe actions disabled by other mod\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_unsafe": {
+      "name": "\"[Unsafe] Bugs can appear!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_insta_remove": {
+      "name": "\"Instant REMOVE\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_insta_sell": {
+      "name": "\"Instant sell\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_remove_all": {
+      "name": "\"REMOVE ALL cards/tags in clicked area\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_sell_all": {
+      "name": "\"Sell ALL cards in clicked area\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_remove_all_same": {
+      "name": "\"REMOVE all copies of clicked card/tag\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_sell_all_same": {
+      "name": "\"Sell all copies of clicked card\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_nopeus_unsafe_disabled": {
+      "name": "\"Unsafe option disabled in mod settings\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_animation_skip_unsafe_disabled": {
+      "name": "\"Unsafe option disabled in mod settings\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_cannot_bind_non_holdable": {
+      "name": "\"Cannot bind mouse wheel here\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_cannot_bind_non_safe": {
+      "name": "\"Cannot bind this button here\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_misc_save_run_start": {
+      "name": "\"Starting run saving...\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_misc_save_run_saving": {
+      "name": "\"Saving a run...\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_misc_save_run_saved": {
+      "name": "\"Run saved\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_handy_notif_misc_save_run_interrupt": {
+      "name": "\"Cannot save run right now\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_info_popups_level_select": {
+      "name": "\"Info popups level\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_keybinds_trigger_mode_select": {
+      "name": "\"Keybinds trigger mode\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_buy_sell_use_mode_select": {
+      "name": "\"Buy/Sell/Use mode\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_handy_device_select": {
+      "name": "\"Input device\"",
+      "text": [],
+      "type": "dictionary"
+    }
+  },
+  "atlases": {},
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n\t\tpath = \"icon.png\",\n\t\tpx = 32,\n\t\tpy = 32,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.5.1e"
+}
