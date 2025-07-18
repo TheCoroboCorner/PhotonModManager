@@ -1,0 +1,1524 @@
+{
+  "locMap": {},
+  "atlases": {
+    "artbox_collectibles": {
+      "path": "crossmod/artbox_collectibles.png",
+      "px": 71,
+      "py": 95,
+      "resolvedGitHubPath": "assets/1x/crossmod/artbox_collectibles.png"
+    },
+    "entr_partners": {
+      "path": "partners.png",
+      "px": 46,
+      "py": 58,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/partners.png",
+      "resolvedGitHubPath": "assets/1x/partners.png"
+    },
+    "exotic_jokers": {
+      "path": "exotic_jokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/exotic_jokers.png",
+      "resolvedGitHubPath": "assets/1x/exotic_jokers.png"
+    },
+    "jokers": {
+      "path": "jokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/jokers.png",
+      "resolvedGitHubPath": "assets/1x/jokers.png"
+    },
+    "consumables": {
+      "path": "other_consumables.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/other_consumables.png",
+      "resolvedGitHubPath": "assets/1x/other_consumables.png"
+    },
+    "enhancements": {
+      "path": "enhancements.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/enhancements.png",
+      "resolvedGitHubPath": "assets/1x/enhancements.png"
+    },
+    "seals": {
+      "path": "seals.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/seals.png",
+      "resolvedGitHubPath": "assets/1x/seals.png"
+    },
+    "gameset": {
+      "path": "entr_gameset.png",
+      "px": 29,
+      "py": 29,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/entr_gameset.png",
+      "resolvedGitHubPath": "assets/1x/entr_gameset.png"
+    },
+    "entr_stickers": {
+      "path": "stickers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/stickers.png",
+      "resolvedGitHubPath": "assets/1x/stickers.png"
+    },
+    "antireal_joker": {
+      "path": "antireal_joker.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/antireal_joker.png",
+      "resolvedGitHubPath": "assets/1x/antireal_joker.png"
+    },
+    "reverse_legendary": {
+      "path": "reverse_legendaries.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/reverse_legendaries.png",
+      "resolvedGitHubPath": "assets/1x/reverse_legendaries.png"
+    },
+    "tags": {
+      "path": "tags.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/tags.png",
+      "resolvedGitHubPath": "assets/1x/tags.png"
+    },
+    "ascendant_tags": {
+      "path": "ascendant_tags.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/ascendant_tags.png",
+      "resolvedGitHubPath": "assets/1x/ascendant_tags.png"
+    },
+    "shiny_tags": {
+      "path": "shiny_tags.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/shiny_tags.png",
+      "resolvedGitHubPath": "assets/1x/shiny_tags.png"
+    },
+    "shiny_asc_tags": {
+      "path": "shiny_ascendant_tags.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/shiny_ascendant_tags.png",
+      "resolvedGitHubPath": "assets/1x/shiny_ascendant_tags.png"
+    },
+    "vouchers": {
+      "path": "vouchers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/vouchers.png",
+      "resolvedGitHubPath": "assets/1x/vouchers.png"
+    },
+    "booster": {
+      "path": "boosters.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/boosters.png",
+      "resolvedGitHubPath": "assets/1x/boosters.png"
+    },
+    "fraud": {
+      "path": "reverse_tarots.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/reverse_tarots.png",
+      "resolvedGitHubPath": "assets/1x/reverse_tarots.png"
+    },
+    "decks": {
+      "path": "decks.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/decks.png",
+      "resolvedGitHubPath": "assets/1x/decks.png"
+    },
+    "crypt_deck": {
+      "path": "crypt_decks.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/crypt_decks.png",
+      "resolvedGitHubPath": "assets/1x/crypt_decks.png"
+    },
+    "sleeves": {
+      "path": "sleeves.png",
+      "px": 73,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/sleeves.png",
+      "resolvedGitHubPath": "assets/1x/sleeves.png"
+    },
+    "blinds": {
+      "path": "blinds.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/blinds.png",
+      "resolvedGitHubPath": "assets/1x/blinds.png"
+    },
+    "ruby_atlas": {
+      "path": "ruby.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/ruby.png",
+      "resolvedGitHubPath": "assets/1x/ruby.png"
+    },
+    "modicon": {
+      "path": "entr_icon.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/entr_icon.png",
+      "resolvedGitHubPath": "assets/1x/entr_icon.png"
+    },
+    "stakes": {
+      "path": "stakes.png",
+      "px": 29,
+      "py": 29,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/stakes.png",
+      "resolvedGitHubPath": "assets/1x/stakes.png"
+    },
+    "xekanos_atlas": {
+      "path": "xekanos.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/xekanos.png",
+      "resolvedGitHubPath": "assets/1x/xekanos.png"
+    },
+    "ee_atlas": {
+      "path": "ee_atlas.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/ee_atlas.png",
+      "resolvedGitHubPath": "assets/1x/ee_atlas.png"
+    },
+    "hc_nilr": {
+      "path": "entr_nilrank_hc.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/entr_nilrank_hc.png",
+      "resolvedGitHubPath": "assets/1x/entr_nilrank_hc.png"
+    },
+    "lc_nilr": {
+      "path": "entr_nilrank_lc.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/entr_nilrank_lc.png",
+      "resolvedGitHubPath": "assets/1x/entr_nilrank_lc.png"
+    },
+    "hc_nils": {
+      "path": "entr_nilsuit_hc.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/entr_nilsuit_hc.png",
+      "resolvedGitHubPath": "assets/1x/entr_nilsuit_hc.png"
+    },
+    "lc_nils": {
+      "path": "entr_nilsuit_lc.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/entr_nilsuit_lc.png",
+      "resolvedGitHubPath": "assets/1x/entr_nilsuit_lc.png"
+    },
+    "entr_achievements": {
+      "path": "achievements.png",
+      "px": 66,
+      "py": 66,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/achievements.png",
+      "resolvedGitHubPath": "assets/1x/achievements.png"
+    },
+    "altblinds": {
+      "path": "alt_blinds.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/alt_blinds.png",
+      "resolvedGitHubPath": "assets/1x/alt_blinds.png"
+    },
+    "altshowdowns": {
+      "path": "alt_showdowns.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/alt_showdowns.png",
+      "resolvedGitHubPath": "assets/1x/alt_showdowns.png"
+    },
+    "placeholder": {
+      "path": "placeholders.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/placeholders.png",
+      "resolvedGitHubPath": "assets/1x/placeholders.png"
+    },
+    "undiscovered": {
+      "path": "undiscovered.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/undiscovered.png",
+      "resolvedGitHubPath": "assets/1x/undiscovered.png"
+    },
+    "rune_indicators": {
+      "path": "rune_indicators.png",
+      "px": 40,
+      "py": 40,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/rune_indicators.png",
+      "resolvedGitHubPath": "assets/1x/rune_indicators.png"
+    },
+    "rune_atlas": {
+      "path": "runes.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/runes.png",
+      "resolvedGitHubPath": "assets/1x/runes.png"
+    },
+    "consumables2": {
+      "path": "second_consumables.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/second_consumables.png",
+      "resolvedGitHubPath": "assets/1x/second_consumables.png"
+    },
+    "cry_banana": {
+      "path": "cry_banana.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/cry_banana.png",
+      "resolvedGitHubPath": "assets/1x/cry_banana.png"
+    },
+    "shiny_ascendant_tags": {
+      "path": "shiny_ascendant_tags.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Entropy@lord-ruby/v1.0.0-alpha4/shiny_ascendant_tags.png",
+      "resolvedGitHubPath": "assets/1x/shiny_ascendant_tags.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "artbox_collectibles",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'artbox_collectibles', \n        path = 'crossmod/artbox_collectibles.png', \n        px = 71, \n        py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "entr_partners",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"entr_partners\",\n        px = 46,\n        py = 58,\n        path = \"partners.png\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Mods",
+      "key": "planetlua",
+      "atlas": null,
+      "pos": {
+        "x": 8,
+        "y": 2
+      },
+      "raw": "name=\"\", key=\"planetlua\",sprite_pos={x=8,y=2}, new_key=\"starlua\", prefix = \"c_cry_\",config = {\n    level = 2,\n    odds = 5\n  },\n  loc_vars = function(self,q,card) \n    local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.odds)\n    return {\n      vars = {\n        numerator,\n        denominator,\n        card.ability.level,\n      }\n    }\n  end,\n  func = function(self,card,area,copier,number)\n    if number and number ~= 1 then\n      Entropy.StarLuaBulk(self,card,area,copier,number)\n    else\n      Entropy.StarLuaSingle(self,card,area,copier)\n    end\n  end,\n  calc = function(self, card, context)\n    if\n      G.GAME.used_vouchers.v_observatory\n      and context.joker_main\n      and (\n        context.scoring_name == card.ability.handname\n      )\n      and pseudorandom(\"starlua\") < 0.25\n    then\n    if not card.ability.immutable then card.ability.immutable = {} end\n      local value = G.P_CENTERS.v_observatory.config.extra\n      return {\n        asc = to_big(value) ^ (card.ability.immutable.overflow_amount or 1),\n      }\n    end\n  end",
+      "config": {
+        "level": 2,
+        "odds": 5
+      },
+      "ability": {
+        "level": 2,
+        "odds": 5
+      },
+      "vars": [
+        null,
+        null,
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Rank",
+      "key": "nilrank",
+      "atlas": "hc_nilr",
+      "pos": null,
+      "raw": "key = 'nilrank',\n    card_key = 'nilrank',\n    pos = {x = 0},\n    nominal = 1,\n    face_nominal = 1,\n    shorthand = \"nil\",\n    hc_atlas = 'hc_nilr',\n    lc_atlas = 'lc_nilr',\n    suit_map = { Hearts = 0, Clubs = 1, Diamonds = 2, Spades = 3, entr_nilsuit = 9999 },\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Suit",
+      "key": "nilsuit",
+      "atlas": "hc_nils",
+      "pos": {
+        "x": 99,
+        "y": 99
+      },
+      "raw": "key = 'nilsuit',\n    card_key = 'nilsuit',\n    shorthand=\"nil\",\n    hc_atlas = 'hc_nils',\n    lc_atlas = 'lc_nils',\n    pos = { y = 0 },\n    ui_pos = {x=99,y=99},\n    in_pool = function(self, args)\n        return false\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "exotic_jokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"exotic_jokers\",\n    path = \"exotic_jokers.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "jokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jokers\",\n    path = \"jokers.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "consumables",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"consumables\",\n    path = \"other_consumables.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "enhancements",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'enhancements', \n    path = 'enhancements.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "seals",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'seals', \n    path = 'seals.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "gameset",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"gameset\",\n\tpath = \"entr_gameset.png\",\n\tpx = 29,\n\tpy = 29,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "entr_stickers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'entr_stickers', \n    path = 'stickers.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "antireal_joker",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'antireal_joker', \n    path = 'antireal_joker.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "reverse_legendary",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'reverse_legendary', \n    path = 'reverse_legendaries.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "tags",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'tags',\n    path = 'tags.png',\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "ascendant_tags",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ascendant_tags',\n    path = 'ascendant_tags.png',\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "shiny_tags",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'shiny_tags',\n    path = 'shiny_tags.png',\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "shiny_asc_tags",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'shiny_asc_tags',\n    path = 'shiny_ascendant_tags.png',\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "vouchers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'vouchers', \n    path = 'vouchers.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "booster",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'booster', \n    path = 'boosters.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "fraud",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'fraud', \n    path = 'reverse_tarots.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "decks",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'decks', \n    path = 'decks.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "crypt_deck",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'crypt_deck', \n    path = 'crypt_decks.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "sleeves",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'sleeves', \n    path = 'sleeves.png', \n    px = 73, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "blinds",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'blinds', \n    path = 'blinds.png', \n    px = 34, \n    py = 34, \n    frames = 21, \n    atlas_table = 'ANIMATION_ATLAS'",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "ruby_atlas",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ruby_atlas', \n    path = 'ruby.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n    path = \"entr_icon.png\",\n    px = 34,\n    py = 34,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "stakes",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'stakes', \n    path = 'stakes.png', \n    px = 29, \n    py = 29",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "xekanos_atlas",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'xekanos_atlas', \n    path = 'xekanos.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "ee_atlas",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ee_atlas', \n    path = 'ee_atlas.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "hc_nilr",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'hc_nilr', path = 'entr_nilrank_hc.png', px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "lc_nilr",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'lc_nilr', path = 'entr_nilrank_lc.png', px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "hc_nils",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'hc_nils', path = 'entr_nilsuit_hc.png', px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "lc_nils",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'lc_nils', path = 'entr_nilsuit_lc.png', px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "entr_achievements",
+      "atlas": null,
+      "pos": null,
+      "raw": "object_type = \"Atlas\",\n\tkey = \"entr_achievements\",\n\tpath = \"achievements.png\",\n\tpx = 66,\n\tpy = 66,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "altblinds",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'altblinds', \n    path = 'alt_blinds.png', \n    px = 34, \n    py = 34, \n    frames = 1, \n    atlas_table = 'ANIMATION_ATLAS'",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "altshowdowns",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'altshowdowns', \n    path = 'alt_showdowns.png', \n    px = 34, \n    py = 34, \n    frames = 1, \n    atlas_table = 'ANIMATION_ATLAS'",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "placeholder",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'placeholder', \n    path = 'placeholders.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "undiscovered",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'undiscovered', \n    path = 'undiscovered.png', \n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "rune_indicators",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'rune_indicators', \n    path = 'rune_indicators.png', \n    px = 40, \n    py = 40",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "rune_atlas",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'rune_atlas', \n    path = 'runes.png',\n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "consumables2",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'consumables2', \n    path = 'second_consumables.png', --placeholder\n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "cry_banana",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'cry_banana', \n    path = 'cry_banana.png', --placeholder\n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "cry_banana",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'cry_banana', \n    path = 'cry_banana.png', --placeholder\n    px = 71, \n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "entr_",
+      "atlas": "entr_consumables",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "object_type = \"Consumable\",\n                order=order,\n                dependencies = {\n                    items = {\n                        \"set_entr_entropic\"\n                    }\n                },\n                key = \"entr_\"..i,\n                set = \"CBlind\",\n                --atlas=\"entr_consumables\",\n                pixel_size = { w = 34, h = 34 },\n                display_size = { w = 68, h = 68 },\n                pos = {x = 0, y = 0},\n                blpos = v.pos,\n                blatlas = v.atlas,\n                config = {\n                    blind = i,\n                    pos = v.pos,\n                    atlas = v.atlas,\n                },\n                weight = 0,\n                no_doe = true,\n                --soul_pos = { x = 5, y = 0},\n                in_pool = function()\n                    return false\n                end,\n                use = function(self, card, area, copier,amt)\n                    local bl = \"Small\"\n                    for i, v in pairs(G.GAME.round_resets.blind_states) do\n                        if v == \"Select\" or v == \"Current\" then bl = i end\n                    end\n                    G.GAME.round_resets.blind_choices[bl] = self.config.blind\n                    if G.blind_select then        \n                        G.blind_select:remove()\n                        G.blind_prompt_box:remove()\n                        G.STATE_COMPLETE = false\n                    else\n                        G.GAME.blind:disable()\n                        G.GAME.blind:set_blind(G.P_BLINDS[self.config.blind])\n                    end\n                end,\n                can_use = function(self, card)\n                    if not G.GAME.round_resets then return false end\n                    if G.STATE ~= G.STATES.BLIND_SELECT and G.STATE ~= G.STATES.SELECTING_HAND then return false end\n                    for i, v in pairs(G.GAME.round_resets.blind_states or {}) do\n                        if v == \"Select\" or (not SMODS.Mods.NotJustYet or (not SMODS.Mods.NotJustYet.can_load and v == \"Current\")) then return true end\n                    end\n                    if (to_big(G.GAME.round_resets.ante) >= to_big(32) and not G.GAME.EEBeaten) or G.GAME.EEBuildup then return false end\n                    return false\n                end,\n                loc_vars = function(self,q,c)\n                    q[#q+1]={set=\"Blind\",key=self.config.blind}\n                end,\n                entr_credits = v.entr_credits,\n                cry_credits = v.cry_credits,\n                set_sprites = function(self, card, front)\n                    card.children.center.sprite_pos = {x=self.blpos.x or 0, y=self.blpos.y or 0}\n                    card.children.center.atlas = G.ANIMATION_ATLAS[self.blatlas] or G.ANIMATION_ATLAS[\"blind_chips\"]\n                    card.children.center:reset()\n                    card.children.center.atlas = G.ANIMATION_ATLAS[self.blatlas] or G.ANIMATION_ATLAS[\"blind_chips\"]\n                end,\n                set_badges = function(self, card, badges)\n                    if v.original_mod then badges[#badges+1] = create_badge(v.original_mod.name, v.original_mod.badge_colour, G.C.WHITE, 1 ) end\n                end,\n                demicoloncompat = true,\n                force_use = function(self, card, area)\n                    self:use(card, area)\n                end,\n                order = (v.order or 0) + (v.mod or {priority = 0}).priority",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sticker",
+      "key": "banana",
+      "atlas": "cry_banana",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "badge_colour = HEX(\"e8c500\"),\n        prefix_config = { key = false },\n        key = \"banana\",\n        atlas = \"cry_banana\",\n        pos = { x = 0, y = 0 },\n        should_apply = false,\n        loc_vars = function(self, info_queue, card)\n            if card.ability.consumeable then\n                return { key = \"cry_banana_consumeable\", vars = { G.GAME.probabilities.normal or 1, 4 } }\n            elseif card.ability.set == \"Voucher\" then\n                return { key = \"cry_banana_voucher\", vars = { G.GAME.probabilities.normal or 1, 12 } }\n            elseif card.ability.set == \"Booster\" then\n                return { key = \"cry_banana_booster\" }\n            else\n                return { vars = { G.GAME.probabilities.normal or 1, 10 } }\n            end\n        end,\n        calculate = function(self, card, context)\n            if\n                context.end_of_round\n                and not context.repetition\n                and not context.playing_card_end_of_round\n                and not context.individual\n            then\n                if card.ability.set == \"Voucher\" then\n                    if pseudorandom(\"byebyevoucher\") < G.GAME.probabilities.normal / G.GAME.cry_voucher_banana_odds then\n                        local area\n                        if G.STATE == G.STATES.HAND_PLAYED then\n                            if not G.redeemed_vouchers_during_hand then\n                                G.redeemed_vouchers_during_hand = CardArea(\n                                    G.play.T.x,\n                                    G.play.T.y,\n                                    G.play.T.w,\n                                    G.play.T.h,\n                                    { type = \"play\", card_limit = 5 }\n                                )\n                            end\n                            area = G.redeemed_vouchers_during_hand\n                        else\n                            area = G.play\n                        end\n    \n                        local _card = copy_card(card)\n                        _card.ability.extra = copy_table(card.ability.extra)\n                        if _card.facing == \"back\" then\n                            _card:flip()\n                        end\n    \n                        _card:start_materialize()\n                        area:emplace(_card)\n                        _card.cost = 0\n                        _card.shop_voucher = false\n                        _card:unredeem()\n                        G.E_MANAGER:add_event(Event({\n                            trigger = \"after\",\n                            delay = 0,\n                            func = function()\n                                _card:start_dissolve()\n                                card:start_dissolve()\n                                return true\n                            end,\n                        }))\n                    end\n                end\n            end\n        end,",
+      "config": {
+        "key": false
+      },
+      "ability": {
+        "key": false
+      },
+      "vars": [
+        1,
+        4
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "Rune",
+      "atlas": null,
+      "pos": null,
+      "raw": "object_type = \"ConsumableType\",\n\tkey = \"Rune\",\n\tprimary_colour = G.C.Entropy.Rune,\n\tsecondary_colour = G.C.Entropy.Rune,\n\tcollection_rows = { 4, 5 },\n\tshop_rate = 0.0,\n\tloc_txt = {},\n\tdefault = \"c_entr_jera\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "UndiscoveredSprite",
+      "key": "Rune",
+      "atlas": "undiscovered",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = \"Rune\",\n\tatlas = \"undiscovered\",\n\tpath = \"undiscovered.png\",\n\tpos = { x = 4, y = 0 },\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "Fraud",
+      "atlas": null,
+      "pos": null,
+      "raw": "object_type = \"ConsumableType\",\n\tkey = \"Fraud\",\n\tprimary_colour = G.C.Entropy.Fraud,\n\tsecondary_colour = HEX(\"a54747\"),\n\tcollection_rows = { 4, 5 },\n\tshop_rate = 0.0,\n\tloc_txt = {},\n\tdefault = \"c_entr_master\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "Star",
+      "atlas": null,
+      "pos": null,
+      "raw": "object_type = \"ConsumableType\",\n\tkey = \"Star\",\n\tprimary_colour = G.C.Entropy.Star,\n\tsecondary_colour = G.C.Entropy.Star,\n\tcollection_rows = { 6, 6 },\n\tshop_rate = 0.0,\n\tloc_txt = {},\n\tdefault = \"c_entr_regulus\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "Omen",
+      "atlas": null,
+      "pos": null,
+      "raw": "object_type = \"ConsumableType\",\n\tkey = \"Omen\",\n\tprimary_colour = G.C.Entropy.Omen,\n\tsecondary_colour = G.C.Entropy.Omen,\n\tcollection_rows = { 4, 5 },\n\tshop_rate = 0.0,\n\tloc_txt = {},\n\tdefault = \"c_entr_changeling\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "UndiscoveredSprite",
+      "key": "Fraud",
+      "atlas": "undiscovered",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"Fraud\",\n\tatlas = \"undiscovered\",\n\tpath = \"undiscovered.png\",\n\tpos = { x = 0, y = 0 },\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "UndiscoveredSprite",
+      "key": "Star",
+      "atlas": "undiscovered",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"Star\",\n\tatlas = \"undiscovered\",\n\tpath = \"undiscovered.png\",\n\tpos = { x = 1, y = 0 },\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "UndiscoveredSprite",
+      "key": "Omen",
+      "atlas": "undiscovered",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = \"Omen\",\n\tatlas = \"undiscovered\",\n\tpath = \"undiscovered.png\",\n\tpos = { x = 2, y = 0 },\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Mods",
+      "key": "Command",
+      "atlas": null,
+      "pos": null,
+      "raw": "object_type = \"ConsumableType\",\n\t\tkey = \"Command\",\n\t\tprimary_colour = G.C.Entropy.Command,\n\t\tsecondary_colour = G.C.Entropy.Command,\n\t\tcollection_rows = { 4, 4 },\n\t\tshop_rate = 0.0,\n\t\tloc_txt = {},\n\t\tdefault = \"c_entr_memory_leak\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "UndiscoveredSprite",
+      "key": "Command",
+      "atlas": "undiscovered",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = \"Command\",\n\t\tatlas = \"undiscovered\",\n\t\tpath = \"undiscovered.png\",\n\t\tpos = { x = 3, y = 0 },\n\t\tpx = 71,\n\t\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "CBlind",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"CBlind\",\n\tprimary_colour = HEX(\"ab3a3e\"),\n\tsecondary_colour = HEX(\"ab3a3e\"),\n\t--collection_rows = { 4, 5 },\n\tshop_rate = 0.0,\n\tdefault = \"c_entr_bl_small\",\n    hidden=true,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ObjectType",
+      "key": "Sunny",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Sunny\",\n\tdefault = \"j_entr_sunny_joker\",\n\tcards = {},\n\tinject = function(self)\n\t\tSMODS.ObjectType.inject(self)\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ObjectType",
+      "key": "Dice",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Dice\",\n\tdefault = \"j_entr_d1\",\n\tcards = {},\n\tinject = function(self)\n\t\tSMODS.ObjectType.inject(self)\n\t\tself:inject_card(G.P_CENTERS.j_oops)\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "inversions",
+      "atlas": "consumables",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = \"inversions\",\n\tatlas = \"consumables\",\n\tpos = { x = 3, y = 0 },\n\tcry_order = -2,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "tags",
+      "atlas": "tags",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"tags\",\n\tatlas = \"tags\",\n\tpos = { x = 0, y = 0 },\n\tcry_order = -1,\n    cry_tag = true,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "blinds",
+      "atlas": "blinds",
+      "pos": {
+        "x": 1,
+        "y": 1
+      },
+      "raw": "key = \"blinds\",\n\tatlas = \"blinds\",\n\tpos = { x = 1, y = 1 },\n    cry_blind = true,\n\tcry_order = 0,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "decks",
+      "atlas": "decks",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = \"decks\",\n\tatlas = \"decks\",\n\tpos = { x = 4, y = 0 },\n\tcry_order = 1,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "misc",
+      "atlas": "enhancements",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"misc\",\n\tatlas = \"enhancements\",\n\tpos = { x = 0, y = 0 },\n\tcry_order = 2,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Mods",
+      "key": "entropics",
+      "atlas": "exotic_jokers",
+      "pos": {
+        "x": 3,
+        "y": 2
+      },
+      "raw": "key = \"entropics\",\n\t\tatlas = \"exotic_jokers\",\n\t\tpos = { x = 3, y = 2 },\n\t\tsoul_pos = { x = 5, y = 2, extra = { x = 4, y = 2 } },\n\t\tcry_order = 3,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "vouchers",
+      "atlas": "vouchers",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = \"vouchers\",\n\tatlas = \"vouchers\",\n\tpos = { x = 2, y = 0 },\n\tcry_order = 4,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "spectrals",
+      "atlas": "consumables",
+      "pos": {
+        "x": 5,
+        "y": 8
+      },
+      "raw": "key = \"spectrals\",\n\tatlas = \"consumables\",\n\tpos = { x = 5, y = 8 },\n\tcry_order = 5,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "misc_jokers",
+      "atlas": "jokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"misc_jokers\",\n\tatlas = \"jokers\",\n\tpos = { x = 0, y = 0 },\n\tcry_order = 6,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "altpath",
+      "atlas": "altblinds",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"altpath\",\n\tatlas = \"altblinds\",\n\tpos = { x = 0, y = 0 },\n\tcry_order = 7,\n\tcry_blind = true,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "dice_jokers",
+      "atlas": "jokers",
+      "pos": {
+        "x": 1,
+        "y": 5
+      },
+      "raw": "key = \"dice_jokers\",\n\tatlas = \"jokers\",\n\tpos = { x = 1, y = 5 },\n\tcry_order = 8,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ContentSet",
+      "key": "runes",
+      "atlas": "rune_atlas",
+      "pos": {
+        "x": 4,
+        "y": 1
+      },
+      "raw": "key = \"runes\",\n\tatlas = \"rune_atlas\",\n\tpos = { x = 4, y = 1 }, --jera\n\tcry_order = 9,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "solar",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"solar\",\n    path=\"solar.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "fractured",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"fractured\",\n    path=\"fractured.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "sunny",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"sunny\",\n    path=\"sunny.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "freaky",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"freaky\",\n    path=\"freaky.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "entr_glitched",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"entr_glitched\",\n\t\tpath=\"entr_glitched.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "neon",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"neon\",\n    path=\"neon.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "lowres",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"lowres\",\n    path=\"lowres.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "kaleidoscopic",
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"kaleidoscopic\",\n    path=\"kaleidoscopic.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "entropic_gradient",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"entropic_gradient\",\n    colours = {\n        G.C.RED,\n        G.C.GOLD,\n        G.C.GREEN,\n        G.C.BLUE,\n        G.C.PURPLE\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "reverse_legendary_gradient",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"reverse_legendary_gradient\",\n    colours = {\n        HEX(\"ff00c4\"),\n        HEX(\"FF00FF\"),\n        HEX(\"FF0000\"),\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "zenith_gradient",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"zenith_gradient\",\n    colours = {\n        HEX(\"a20000\"),\n        HEX(\"a15000\"),\n        HEX(\"a3a101\"),\n        HEX(\"626262\"),\n        HEX(\"416600\"),\n        HEX(\"028041\"),\n        HEX(\"008284\"),\n        HEX(\"005683\"),\n        HEX(\"000056\"),\n        HEX(\"2b0157\"),\n        HEX(\"6a016a\"),\n        HEX(\"77003c\"),\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Rarity",
+      "key": "entropic",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"entropic\",\n    badge_colour = Entropy.entropic_gradient",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Rarity",
+      "key": "reverse_legendary",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"reverse_legendary\",\n    badge_colour = Entropy.reverse_legendary_gradient",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Rarity",
+      "key": "zenith",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"zenith\",\n    badge_colour = Entropy.zenith_gradient",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_zenith",
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"music_zenith\",\n-- \tpath = \"music_zenith.ogg\",\n-- \tselect_music_track = function()\n-- \t\treturn G.GAME.Ruby and 10^300\n-- \tend,\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_entropic",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_entropic\",\n\tpath = \"music_entropic.ogg\",\n\tselect_music_track = function()\n\t\treturn Entropy.config\n        and Entropy.config.entropic_music\n        and #Cryptid.advanced_find_joker(nil, \"entr_entropic\", nil, nil, true) ~= 0 and 10^200\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_red_room",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_red_room\",\n\tpath = \"music_red_room.ogg\",\n\tselect_music_track = function()\n\t\treturn G.GAME.round_resets.blind_states.Red == \"Current\" and 10^5\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_freebird",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_freebird\",\n\tpath = \"music_freebird.ogg\",\n\tselect_music_track = function()\n\t\treturn Entropy.HasJoker(\"j_entr_antireal\") and Entropy.config.freebird and 10^200\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_fall",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_fall\",\n\tpath = \"music_fall.ogg\",\n\tselect_music_track = function()\n\t\treturn (((to_big(G.GAME.round_resets.ante) >= to_big(32) and not G.GAME.EEBeaten) and G.STATE == 1) or G.GAME.EEBuildup) and Entropy.CanEeSpawn() and 10^302\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_entropy_is_endless",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_entropy_is_endless\",\n\tpath = \"music_entropy_is_endless.ogg\",\n\tselect_music_track = function()\n        local blinds = {\n            bl_entr_endless_entropy_phase_one=true,\n            bl_entr_endless_entropy_phase_two=true,\n            bl_entr_endless_entropy_phase_three=true,\n            bl_entr_endless_entropy_phase_four=true\n        }\n\t\treturn (G.GAME.blind and blinds[G.GAME.blind.config.blind.key]) and 10^306\n\tend,",
+      "config": {
+        "bl_entr_endless_entropy_phase_one": true,
+        "bl_entr_endless_entropy_phase_two": true,
+        "bl_entr_endless_entropy_phase_three": true,
+        "bl_entr_endless_entropy_phase_four": true
+      },
+      "ability": {
+        "bl_entr_endless_entropy_phase_one": true,
+        "bl_entr_endless_entropy_phase_two": true,
+        "bl_entr_endless_entropy_phase_three": true,
+        "bl_entr_endless_entropy_phase_four": true
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "e_solar",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"e_solar\",\n\tpath = \"e_solar.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "e_rizz",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"e_rizz\",\n\tpath = \"e_rizz.ogg\",\n\tvolume = 0.7",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "woof1",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"woof1\",\n\tpath = \"woof1.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "woof2",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"woof2\",\n\tpath = \"woof2.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "woof3",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"woof3\",\n\tpath = \"woof3.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "ascendant_tags",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ascendant_tags',\n    path = 'ascendant_tags.png',\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "shiny_ascendant_tags",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'shiny_ascendant_tags',\n    path = 'shiny_ascendant_tags.png',\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Stickers",
+      "key": "ascendant_saint",
+      "atlas": "entr_shiny_ascendant_tags",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "object_type = \"Tag\",\n    dependencies = {\n    \titems = {\n        \t\"set_entr_tags\",\n            \"j_entr_exousia\"\n        }\n    },\n\torder = 10,\n\tshiny_atlas=\"entr_shiny_ascendant_tags\",\n\tkey = \"ascendant_saint\",\n\tatlas = \"ascendant_tags\",\n\tpos = {x=0,y=1},\n\tconfig = { type = \"store_joker_create\" },\n\tin_pool = function() return false end or nil,\n\tloc_vars = function(self, info_queue, tag)\n\tend,\n\tapply = function(self, tag, context)\n\t\tif context.type == \"store_joker_create\" then\n\t\t\tlocal card = create_card(\"Joker\", context.area, nil, \"cry_candy\", nil, nil, nil, \"entr_saint\")\n\t\t\tcreate_shop_card_ui(card, \"Joker\", context.area)\n\t\t\tcard.states.visible = false\n\t\t\ttag:yep(\"+\", G.C.GREEN, function()\n\t\t\t\tcard:start_materialize()\n\t\t\t\tcard.ability.couponed = true\n\t\t\t\tcard:set_edition(Entropy.pseudorandom_element(G.P_CENTER_POOLS.Edition, pseudoseed(\"entr_saint\"),function(e)\n\t\t\t\t\treturn G.GAME.banned_keys[e.key] or e.no_doe\n\t\t\t\tend).key)\n\t\t\t\tcard:set_cost()\n\t\t\t\treturn true\n\t\t\tend)\n\t\t\ttag.triggered = true\n\t\t\treturn card\n\t\tend\n\tend,\n\tshiny_atlas = \"entr_shiny_asc_tags\",",
+      "config": {
+        "type": "store_joker_create"
+      },
+      "ability": {
+        "type": "store_joker_create"
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ObjectType",
+      "key": "Reference",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Reference\",\n            default = \"j_hack\",\n            cards = {},\n            inject = function(self)\n                SMODS.ObjectType.inject(self)\n                for i, v in pairs(references) do\n                    if G.P_CENTERS[v] then self:inject_card(G.P_CENTERS[v]) end\n                end\n                for i, v in pairs(Entropy.References) do\n                    if G.P_CENTERS[v] then self:inject_card(G.P_CENTERS[v]) end\n                end\n            end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ObjectTypes",
+      "key": "BlindTokens",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"BlindTokens\",\n            default = \"c_entr_bl_small\",\n            cards = {},\n            inject = function(self)\n                SMODS.ObjectType.inject(self)\n                for i, v in pairs(Entropy.BlindC) do\n                    if G.P_CENTERS[v] then self:inject_card(G.P_CENTERS[v]) end\n                end\n            end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "Twisted",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Twisted\",\n            default = \"c_entr_memory_leak\",\n            cards = {},\n            inject = function(self)\n                SMODS.ObjectType.inject(self)\n                for i, v in pairs(Entropy.FlipsidePureInversions) do\n                    if G.P_CENTERS[v] then self:inject_card(G.P_CENTERS[v]) end\n                end\n            end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Edition",
+      "key": "tmtrainer_dummy",
+      "atlas": null,
+      "pos": null,
+      "raw": "calculate = function(self, card, context)\n        if card.ability.tm_effect then\n            if Entropy.ContextChecks(self, card, context, card.ability.tm_context, true) then\n                return Entropy.TMTrainerEffects[card.ability.tm_effect](\"tmtrainer_actual_effect\", card.ability.tm_context) or nil\n            end\n        end\n    end,\n    loc_vars = function(self, q, card) \n        if card and card.ability and card.ability.tm_effect then\n            q[#q+1] = {set = \"Other\", key = \"tmtrainer_dummy\", vars = {localize(\"k_\"..card.ability.tm_context), localize(\"k_tmt\"..card.ability.tm_effect)}}\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.0.0-alpha4"
+}
