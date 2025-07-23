@@ -1,0 +1,346 @@
+{
+  "locMap": {
+    "j_jej_cg223": {
+      "name": "cg223",
+      "text": [
+        "Gives {C:chips}+#1#{} Chips for",
+        "each {C:attention}Joker{} in your {C:attention}Collection{}",
+        "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)"
+      ],
+      "type": "Joker"
+    },
+    "j_jej_cleanfreak": {
+      "name": "Clean Freak",
+      "text": [
+        "If all held {C:attention}Jokers{}",
+        "are sorted by {C:red}Rarity{},",
+        "gives {X:mult,C:white}X#1#{} Mult",
+        "{C:inactive}(In ascending order)",
+        "{C:inactive,s:0.7}(Modded rarities are ignored)"
+      ],
+      "type": "Joker"
+    },
+    "j_jej_chart": {
+      "name": "Top Chart",
+      "text": [
+        "Numbered cards give",
+        "{C:mult}+#1#{} Mult when scored"
+      ],
+      "type": "Joker"
+    },
+    "j_jej_calandar": {
+      "name": "Calandar",
+      "text": [
+        "{C:white,X:mult}X#1#{} Mult if ranks",
+        "of scored cards are",
+        "between 1 and 31",
+        "{C:inactive}only numbered cards{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jej_mcdonalds": {
+      "name": "Mcdonalds",
+      "text": [
+        "Gain {C:money}$#1#{} when",
+        "a card is scored, but",
+        "no more than {C:money}$#2#{}",
+        "can be earned at once"
+      ],
+      "type": "Joker"
+    },
+    "j_jej_michelin": {
+      "name": "Michelin 3 Star",
+      "text": [
+        "Lose {C:red}$#1#{} when",
+        "a card is scored, but",
+        "gain {C:money}$#2#{} at",
+        "end of round"
+      ],
+      "type": "Joker"
+    },
+    "j_jej_c4": {
+      "name": "C4",
+      "text": [
+        "{X:black,C:mult}X#1#{} Mult, destroys the",
+        "rightmost played card"
+      ],
+      "type": "Joker"
+    },
+    "j_jej_pizzahut": {
+      "name": "Pizza Hut",
+      "text": [
+        "Gain {C:money}$#1#{} if blind",
+        "is defeated in",
+        "under #2# seconds.",
+        "{C:inactive,s:0.7}remaining: #3#{}"
+      ],
+      "type": "Joker"
+    },
+    "c_jej_shark": {
+      "name": "Shark",
+      "text": [
+        "Gain {C:money}$#1#{}, but",
+        "lose 1 {C:attention}Joker{} slot"
+      ],
+      "type": "Spectral"
+    },
+    "c_jej_investment": {
+      "name": "Investment",
+      "text": [
+        "Lose {C:red}$#1#{}, but",
+        "the next time you",
+        "gain {C:money}dollars{}, earn",
+        "{X:money,C:black}X#2#{} as much",
+        "{C:inactive,s:0.7}stacks........."
+      ],
+      "type": "Spectral"
+    }
+  },
+  "atlases": {
+    "JEJJokers": {
+      "path": "jokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/JustEnoughJokers@cg-223/no-tag/jokers.png",
+      "resolvedGitHubPath": "assets/1x/jokers.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "JEJJokers",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"JEJJokers\",\n    path = \"jokers.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "chart",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"chart\",\n    rarity = 1,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.mult } }\n    end,\n    config = {\n        extra = { mult = 2 }\n    },\n    calculate = function(self, card, context)\n        if context.individual and context.cardarea == G.play then\n            if context.other_card:get_id() >= 2 and context.other_card:get_id() <= 10 then\n                return {\n                    mult = card.ability.extra.mult\n                }\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "mult": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 2
+        }
+      },
+      "vars": [
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "calandar",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"calandar\",\n    rarity = 2,\n    config = {\n        extra = {\n            xmult = 3,\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.xmult } }\n    end,\n    calculate = function(self, card, context)\n        if context.joker_main then\n            local sum = 0\n            for _, v in pairs(context.scoring_hand) do\n                local rank = v:get_id()\n                if rank >= 2 and rank <= 10 then\n                    sum = sum + rank\n                end\n            end\n            if sum >= 1 and sum <= 31 then\n                return {\n                    xmult = card.ability.extra.xmult\n                }\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "xmult": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 3
+        }
+      },
+      "vars": [
+        3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "mcdonalds",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"mcdonalds\",\n    rarity = 2,\n    config = {\n        extra = {\n            dollarslimit = 5,\n            dollars = 2,\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.dollars, card.ability.extra.dollarslimit } }\n    end,\n    calculate = function(self, card, context)\n        if context.individual and context.cardarea == G.play then\n            return {\n                dollars = card.ability.extra.dollars\n            }\n        end\n    end",
+      "config": {
+        "extra": {
+          "dollarslimit": 5,
+          "dollars": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "dollarslimit": 5,
+          "dollars": 2
+        }
+      },
+      "vars": [
+        2,
+        5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "shark",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"shark\",\n    set = \"Spectral\",\n    config = {\n        extra = {\n            dollars = 100,\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.dollars } }\n    end,\n    use = function(self, card, area, copier)\n        ease_dollars(card.ability.extra.dollars)\n        G.jokers.config.card_limit = G.jokers.config.card_limit - 1\n    end,\n    can_use = function(self, card)\n        return true\n    end",
+      "config": {
+        "extra": {
+          "dollars": 100
+        }
+      },
+      "ability": {
+        "extra": {
+          "dollars": 100
+        }
+      },
+      "vars": [
+        100
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "michelin",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"michelin\",\n    rarity = 2,\n    config = {\n        extra = {\n            loss = 1,\n            gain = 10,\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.loss, card.ability.extra.gain } }\n    end,\n    calculate = function(self, card, context)\n        if context.individual and context.cardarea == G.play then\n            return {\n                dollars = -card.ability.extra.loss\n            }\n        end\n        if context.end_of_round and context.cardarea == G.jokers then\n            return {\n                dollars = card.ability.extra.gain\n            }\n        end\n    end",
+      "config": {
+        "extra": {
+          "loss": 1,
+          "gain": 10
+        }
+      },
+      "ability": {
+        "extra": {
+          "loss": 1,
+          "gain": 10
+        }
+      },
+      "vars": [
+        1,
+        10
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "investment",
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"investment\",\n    set = \"Spectral\",\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.dollars, card.ability.extra.mul } }\n    end,\n    config = {\n        extra = {\n            dollars = 3,\n            mul = 1.3,\n        }\n    },\n    use = function(self, card, area, copier)\n        ease_dollars(-card.ability.extra.dollars)\n        if G.GAME.cg_should_double then\n            G.GAME.cg_should_double = G.GAME.cg_should_double * card.ability.extra.mul\n        else\n            G.GAME.cg_should_double = card.ability.extra.mul\n        end\n    end,\n    can_use = function(self, card)\n        return true\n    end",
+      "config": {
+        "extra": {
+          "dollars": 3,
+          "mul": 1.3
+        }
+      },
+      "ability": {
+        "extra": {
+          "dollars": 3,
+          "mul": 1.3
+        }
+      },
+      "vars": [
+        3,
+        1.3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "c4",
+      "atlas": null,
+      "pos": null,
+      "raw": "rarity = 2,\n    key = \"c4\",\n    config = {\n        extra = {\n            xmult = 0.9,\n        }\n    },\n    loc_vars = function (self, info_queue, card)\n        return {vars = {card.ability.extra.xmult}}\n    end,\n    calculate = function (self, card, context)\n        if context.joker_main then\n            return {xmult = card.ability.extra.xmult}\n        elseif context.destroy_card then\n            if context.destroy_card == G.play.cards[#G.play.cards] then\n                return {remove = true}\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "xmult": 0.9
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 0.9
+        }
+      },
+      "vars": [
+        0.9
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "pizzahut",
+      "atlas": null,
+      "pos": null,
+      "raw": "rarity = 1,\n    key = \"pizzahut\",\n    config = {\n        extra = {\n            dollars = 6,\n            time = 20,\n            start_time = nil,\n        }\n    },\n    loc_vars = function (self, info_queue, card)\n        return {vars = {card.ability.extra.dollars, card.ability.extra.time, (card.ability.extra.start_time and (card.ability.extra.time - (love.timer.getTime() - card.ability.extra.start_time))) or \"inactive\"}}\n    end,\n    calculate = function (self, card, context)\n        if context.setting_blind then\n            card.ability.extra.start_time = love.timer.getTime()\n        elseif context.blind_defeated then\n            local diff = love.timer.getTime() - (card.ability.extra.start_time or 0)\n            card.ability.extra.start_time = nil\n            if diff < card.ability.extra.time then\n                return {\n                    dollars = card.ability.extra.dollars\n                }\n            end\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cg223",
+      "atlas": "JEJJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"cg223\",\n    atlas = \"JEJJokers\",\n    pos = {x = 0, y = 0},\n    soul_pos = {x = 1, y = 0},\n    rarity = 4,\n    loc_vars = function(self, info_queue, card)\n        card.ability.extra.chips = card.ability.extra.extra * num_jokers()\n        return { vars = { card.ability.extra.extra, card.ability.extra.chips } }\n    end,\n    config = {\n        extra = {\n            chips = 0,\n            extra = 25,\n        }\n    },\n    calculate = function(self, card, context)\n        if context.joker_main then\n            card.ability.extra.chips = card.ability.extra.extra * num_jokers()\n            return {chips = card.ability.extra.chips}\n        end\n    end",
+      "config": {
+        "extra": {
+          "chips": 0,
+          "extra": 25
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 0,
+          "extra": 25
+        }
+      },
+      "vars": [
+        25,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cleanfreak",
+      "atlas": "JEJJokers",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "atlas = \"JEJJokers\",\n    key = \"cleanfreak\",\n    rarity = 3,\n    pos = {\n        x = 2,\n        y = 0\n    },\n    config = {\n        can_juice_again = true,\n        extra = {\n            xmult = 3,\n        }\n    },\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.xmult } }\n    end,\n    calculate = function(self, card, context)\n        local sortedhook = function()\n            if are_jokers_sorted() then\n                return true\n            else\n                card.ability.can_juice_again = true\n            end\n        end\n        if are_jokers_sorted() and card.ability.can_juice_again then\n            card.ability.can_juice_again = false\n            juice_card_until(card, sortedhook, true)\n        end\n        if context.joker_main then\n            if are_jokers_sorted() then\n                return {\n                    xmult = card.ability.extra.xmult\n                }\n            end\n        end\n    end,",
+      "config": {
+        "can_juice_again": true,
+        "extra": {
+          "xmult": 3
+        }
+      },
+      "ability": {
+        "can_juice_again": true,
+        "extra": {
+          "xmult": 3
+        }
+      },
+      "vars": [
+        3
+      ],
+      "infoQueue": []
+    }
+  ],
+  "version": "no-tag"
+}
