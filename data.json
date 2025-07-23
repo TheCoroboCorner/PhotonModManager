@@ -120,7 +120,7 @@
       "Somethingcom515"
     ],
     "description": "Allows seals on Everything also comes with more seals",
-    "favourites": 14,
+    "favourites": 13,
     "badge_colour": "E8463D",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0509b-STEAMODDED)",
@@ -459,141 +459,23 @@
     ],
     "readme": "![Mod Logo](https://i.imgur.com/WgRA0cT.png)\nRequires Steamodded 1.0.0~BETA-0530b or newer\n\nList of Jokers (Modded Wiki Page): https://balatromods.miraheze.org/wiki/Pi_cubed's_Jokers/Jokers\n\nDocumentation spreadsheet (Planned content, patch notes, & more info): https://docs.google.com/spreadsheets/d/1s2MFswjKUeVcx3W0Cylmya1ZfFvx2fiQZD42ZThxd5Q/edit?usp=sharing\n\nDiscord discussion thread: https://discord.com/channels/1116389027176787968/1348621804696240201\n\npi_cubed's Jokers is a lightweight mod with minimal lovely patching and hooks. As a result, there should be few crashes due to conflicts with other mods.\n\n## Recommended Mods\n### Partner by baimao  \npi_cubed's Jokers adds 4 new Partners!  \nhttps://github.com/Icecanno/Partner-API  \n\n### Opandora's Box by opan \nA Joker pack I really enjoy with some interesting synergies, and stellar music.  \nhttps://github.com/ohpahn/opandoras-box\n\n### Extra Credit by CampfireCollective & more  \nhttps://github.com/GuilloryCraft/ExtraCredit\n\n### Neato Jokers by NEATO  \nhttps://github.com/neatoqueen/NeatoJokers\n\n### Paperback by PaperMoon, OppositeWolf770, srockw, GitNether, Victin, BBBalatroMod, & more  \nThe Bisexual Flag Joker is compatible with additional suits.  \nhttps://github.com/GitNether/paperback\n\n### Cryptid by MathIsFun_ & many more  \nThere's some hidden content that requires Cryptid. In addition, I've put a big focus on making sure the changing value mechanics and Misprintize behave properly with all Jokers!  \nhttps://github.com/SpectralPack/Cryptid\n\n## Config Options\nA game restart is required for Config options to take effect.\n\n### New Spectral Cards  \nThis option enables or disables the Spectral Cards Commander, Rupture, and Extinction from appearing.\n\n### Preorder Bonus' Hook  \nTurn this option off to rework the Joker's mechanics very slightly to remove its hook that I (very jankily) implemented. This option may be useful if you're experiencing conflicts regarding setting the cost of Booster Packs.\n\n### Custom Sound Effects  \nEnables or disables any custom sound effects I've implemented into the mod. Currently, this affects Rhythmic Joker, Explosher, On-beat, Off-beat, Pot, and Talking Flower.\n"
   },
-  "Revos-Vault---Balatro-Mod@Cdrvo": {
-    "id": "RevosVault",
-    "name": "Revo's Vault",
+  "JustEnoughJokers@cg-223": {
+    "id": "justenoughjokers",
+    "name": "Just Enough Jokers",
     "author": [
-      "CodeRevo"
+      "cg"
     ],
-    "description": "Adds a lot of random stuff",
-    "favourites": 1,
+    "description": "Too Many Jokers if it... had jokers",
+    "favourites": 0,
     "allow_redistribution": true,
-    "badge_colour": "7E7AFF",
-    "dependencies": [
-      "Steamodded (>=1.0.0~ALPHA-0309c)"
-    ],
-    "published_at": "2025-07-18T00:17:18.563Z",
+    "badge_colour": "d4c920",
+    "published_at": "2025-07-23T19:02:33.654Z",
     "type": "Mod",
     "tags": [
       "Jokers",
       "Consumables",
-      "Blinds",
-      "Mechanics",
-      "Misc"
+      "Cards"
     ],
-    "readme": "\n### Latest: Vers 4.2.2:\n\n**Revo's Vault**\n\nCurrently there are 4 New Rarities (Printer, Chaos, Vaulted and Secret), **180+** jokers and a lot more!\n\n ![image](https://github.com/user-attachments/assets/09fa158d-09c6-479a-a829-af173bdbc04f)\n\n\n### **Cross-Mod Content**\n\n----\n\n**[Cryptid](https://github.com/MathIsFun0/Cryptid)**\n\n- 6 Jokers\n- 1 Consumable\n\n**[CardSleeves](https://github.com/larswijn/CardSleeves)**\n\n- 17 Sleeves\n\n**[Rift-Raft](https://github.com/vitellaryjr/RiftRaft)**\n\n- 1 Joker\n- 1 Consumable\n\n**[Reverse Tarots](https://github.com/SkywardTARDIS/balatro_reverse_tarots)**\n\n- 5 Jokers\n- 3 Consumables\n- 2 Enhancements\n\n----\n\n- And more ;)\n\n------\n\n\nyou can reach out to me from discord (revoo_.) for any suggestions or bug reports\n\n\n### Credits\n\n--MilƱMeg4 for great ideas\n\n--BepisFever for button code\n\n"
-  },
-  "Entropy@lord-ruby": {
-    "id": "entr",
-    "name": "Entropy",
-    "author": [
-      "Ruby"
-    ],
-    "description": "A chaotic Balatro mod",
-    "favourites": 0,
-    "allow_redistribution": true,
-    "badge_colour": "FE0001",
-    "dependencies": [
-      "Steamodded",
-      "Cryptlib"
-    ],
-    "conflicts": [],
-    "published_at": "2025-07-18T00:19:29.228Z",
-    "type": "Mod",
-    "tags": [
-      "Jokers",
-      "Consumables",
-      "Cards",
-      "Blinds",
-      "Mechanics"
-    ],
-    "readme": "\n# Entropy\nA chaotic Balatro mod\n\n[Download CryptLib](https://github.com/SpectralPack/Cryptlib) (Make sure you download via Code > Download zip)\n\nEntropy currently adds:\n\n![image](https://github.com/user-attachments/assets/02d065d5-2c15-4946-a724-bc995c8eee2a)\n![image](https://github.com/user-attachments/assets/3eff5308-0b72-40a3-89af-a710de425d90)\n![image](https://github.com/user-attachments/assets/f20d2145-6a3a-48e1-946c-32b667e2f01c)\n\n## Wheres all the Other Content?\nDue to me wanting to depart from this mod as a Cryptid addon but not wanting the content to go to waste a lot of existing content has been moved into CrossMod territory, where it will only show up if you have Cryptid enabled. This includes entropic Jokers which are based on Exotics\n\n## What about Ascension Power\nAscension Power will stay around even without Cryptid enabled due to how much Entropy content relies on it\nI could rename ascension power to further seperate it from Cryptid however I think this is unnecessary as the mechanics will remain the same\n\n## Contact\nFor enquiries please join the [Entropy Discord](https://discord.gg/beqqy4Bb7m)\n"
-  },
-  "SDM_0-s-Stuff@SDM0": {
-    "id": "sdm0sstuff",
-    "name": "SDM_0's Stuff",
-    "author": [
-      "SDM_0"
-    ],
-    "description": "Content mod that adds new jokers, consumables, vouchers, decks, challenges and bakery goods.",
-    "favourites": 0,
-    "allow_redistribution": true,
-    "badge_colour": "c20000",
-    "dependencies": [
-      "Steamodded (>=1.0.0~ALPHA-0711a)"
-    ],
-    "published_at": "2025-07-18T00:26:48.696Z",
-    "type": "Mod",
-    "tags": [
-      "Jokers",
-      "Consumables",
-      "Misc"
-    ],
-    "readme": "# SDM_0's Stuff\n\nA Balatro mod that adds a whole lot of new content to the game, including jokers, decks, consumables, vouchers, challenges and its own consumable type: Bakery Goods\n\n[Wiki Link](https://balatromods.miraheze.org/wiki/SDM_0%27s_Stuff) (As of 05/07/2025: Not up-to-date, will be removed when it is)\n\n## Installation\nThis mod is available on the [Balatro Mod Manager](https://github.com/skyline69/balatro-mod-manager)\n\n__Manual Installation:__\n- Requires [Steamodded](https://github.com/Steamopollys/Steamodded/) 0323b or more and [Lovely](https://github.com/ethangreen-dev/lovely-injector) 0.7.1\n- Download `SDM_0.s.Stuff.zip` in \"Releases\"\n- Unzip it into `AppData\\Roaming\\Balatro\\Mods` (Create the \"Mods\" folder if it doens't exist)\n- Enjoy!\n\n## Extra mod content\n - [CardSleeves](https://github.com/larswijn/CardSleeves): SDM_0's Stuff deck effect can be used as card sleeves\n - [JokerDisplay](https://github.com/nh6574/JokerDisplay): SDM_0's Stuff jokers have JokerDisplay compatibility\n - [Dimserenes' Modpack](https://github.com/Dimserene/Dimserenes-Modpack): Frontier Deck\n - [Cryptid](https://github.com/SpectralPack/Cryptid): Bakery good for Code cards, T3 vouchers and one achievement\n - [Paperback](https://github.com/Balatro-Paperback/paperback): Food joker additions to its Food pool (same for Cryptid)\n - [More Fluff](https://github.com/notmario/MoreFluff): Colour card related to Bakery goods\n - [Aikoyori's Shenanigans](https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans): Effect for the mod's self-insert legendary\n - [Partner API](https://github.com/Icecanno/Partner-API): A few SDM_0's Stuff jokers exists as partners\n\n## Thanks\n- RattlingSnow for the spectral cards art\n- queen of stupid, FlameThrowerFIM and Jamie for all the art made for various content\n- Dimserene for the space jokers list and for featuring my mod in his modpack\n- N' for the JokerDisplay mod and his help with it\n- Larswijn for the CardSleeves mod and help with the implementations and updates\n- Darthalex2014 and PainKiller for the previous russian translation\n- Mysthaps for creating a good config code that I shamelessly stole\n- The Balatro discord modding community, this mod wouldn't have come to life without their help!\n- The Cryptid mod community (except Jevonn) for considering my mod as a great complimentary mod\n- The Balatro Wiki team for making my mod's page\n- Whoever added my mod in Balatro Mod Manager\n"
-  },
-  "HandyBalatro@SleepyG11": {
-    "id": "Handy",
-    "name": "Handy",
-    "author": [
-      "SleepyG11"
-    ],
-    "description": "Quality of Life controls & keybinds",
-    "favourites": 0,
-    "allow_redistribution": true,
-    "dependencies": [],
-    "published_at": "2025-07-18T00:29:34.279Z",
-    "type": "Mod",
-    "tags": [
-      "Quality of Life"
-    ],
-    "readme": "<p align=\"center\">\n    <img src=\"https://github.com/user-attachments/assets/128aa4d1-55c5-401c-b144-52f640f512ff\">\n</p>\n\n<p align=\"center\">\n    <b>Handy</b> - a lovely mod which adds new controls and keybinds to the game<br/>designed for faster and easier playing Vanilla and Modded <a href=\"https://store.steampowered.com/app/2379780/Balatro/\" target=\"_blank\">Balatro</a>\n</p>\n\n## Key features\n\n-   **Vanilla-friendly**: no new run required; stability is priority, safe for use in base game and [Multiplayer](https://github.com/Balatro-Multiplayer/BalatroMultiplayer);\n-   **Works without Steamodded**: but included supports for variety of different mods (NotJustYet, Nopeus, Cryptid);\n-   **Fast hand selection**: highlight cards just by hovering them [(showcase)](https://www.youtube.com/watch?v=wPoW-uVKMt0);\n-   **Keybinds for all vanilla buttons and actions**: play, discard, hand sorting, cash out, shop reroll, view deck, *and more*;\n-   **Game speed**: adjust game speed up to x512 in-run;\n-   **Animation skip**: instant scoring and removing unnecessary animations to speedup game even further [(showcase)](https://www.youtube.com/watch?v=CRxGXIhjW3s);\n-   **Quick Buy/Sell/Use**: controls to buy, sell or use cards faster [(showcase)](https://www.youtube.com/watch?v=s1YnNI0W27k);\n-   **Selection movement**: more precise management on large amoung of jokers or consumables [(showcase)](https://www.youtube.com/watch?v=E0wz5qP22CA);\n-   **Full control**: each feature can be disabled/enabled individually, each keybind can be reassigned to any keyboard or mouse button;\n-   **Gamepad support**: most features can be used with gamepad aswell;\n-   **Presets**: save up to 3 mod settings layouts and switch between them in-run to have more freedom with limited amount of buttons;\n\n## Danger zone\n\n> [!CAUTION]\n> This controls designed to be speed-first, which **can cause bugs, crashes or tank performance**!<br/>\n> Also, their usage can lead to accidental cards selling or removing if do it not carefully!<br/>\n> Hovewer, they're really useful for dealing with huge amount of Jokers, Consumables or Skip tags.<br/>\n> Must be enabled separately. Use with caution.\n\n-   **Sell cards in bulk**: all copies or ALL cards at once [(showcase)](https://www.youtube.com/watch?v=mE1R6xTKcaE);\n-   **Removing**: deleting excessive jokers, consumables or __skip tags__;\n-   **Max speed**: uncapped game speed and instant game animations;\n\n> [!NOTE]\n> REMOVE card or skip tag - delete without any checks, effects, triggers or money refunds.\n\n## Installation\n\n1. Install [lovely](https://github.com/ethangreen-dev/lovely-injector) by following instructions in repository page. Make sure your antivirus is not removing it;\n2. Download [latest release](https://github.com/SleepyG11/HandyBalatro/releases/latest) of mod by selecting an archive named `Handy-[version].zip`; \n3. Put `HandyBalatro` folder from archive (NOT `Handy-[version]`) into game's `Mods` folder.<br/> \n   Can be found in `%appdata%/Balatro/Mods`. if `Mods` folder is missing, create it;\n4. Start a game. If all done correctly, new button should appear in options menu;\n5. Configure each feature and keybind as you want. All of them listed in mod settings;\n6. Continue playing! No game restart or new run required.\n\n## Contribute\n\nWant new features to be implemented? Want add mod support? Found a bug?<br/>\n[Create an issue](https://github.com/SleepyG11/HandyBalatro/issues/) or let me know in [Discord mod's thread](https://discord.com/channels/1116389027176787968/1270746376312979456)!\n\n## Special thanks\n\n- Jogla (`@jogla_the_wizard` in Discord) - Spanish localization\n- [Sesebasti](https://github.com/sesebasti) - Spanish (Mexico) localization\n- [Rynnya](https://github.com/Rynnya) (`@Ancowi` in Discord) - testing on gamepad\n- [Aikoyori](https://github.com/Aikoyori) - testing (including MacOS)\n- missingnumber (`@clickonflareblitz` in Discord) - testing on SteamDeck\n- jenwalter666 (`@jenwalter` in Discord) - non-direct support with \"spreading\" a mod for other players\n- and everyone who report bugs, make suggestions, and playing with Handy mod!\n\n## For developers\n\nIf your mod needs to disable Handy's dangerous controls on certain conditions, you can hook check function to do so:\n\n```lua\nif Handy and Handy.is_dangerous_actions_active then\n    local funcRef = Handy.is_dangerous_actions_active\n    function Handy.is_dangerous_actions_active()\n        return funcRef() and not MyMod.only_safe_controls\n    end\nend\n```\n\nSimilar for cases when needed to disable mod entirely:\n\n```lua\nif Handy and Handy.is_mod_active then\n    local funcRef = Handy.is_mod_active\n    function Handy.is_mod_active()\n        return funcRef() and not MyMod.allow_only_vanilla_controls\n    end\nend\n```\n\nAlso, specific feature's config can be overrided:\n\n```lua\nif Handy and Handy.get_module_override then\n    local funcRef = Handy.get_module_override\n    function Handy.get_module_override(module)\n        if module == Handy.cc.speed_multiplier and not MyMod.allow_change_game_speed then\n            return {\n                enabled = false\n            }\n        end\n        return funcRef(module)\n    end\nend\n```\n\nWhen adding new buy or use buttons for jokers/consumables, you can mark them and Handy will use them when [Quick Buy/Sell] or [Quick Use] is called.\nInclude in button config definition field `handy_insta_action` with one of the following values:\n- `sell` for mass-sell features or when [Quick buy/sell] is used (aka Shift is hold); Use for \"Sell\" buttons;\n- `buy_or_sell` when [Quick buy/sell] is used (aka Shift is hold); Use for \"Buy\" buttons;\n- `use` when [Quick use] is used (aka Ctrl is hold); Use for \"Use\" buttons or buttons unique for your cards;\n\n*Only difference between `sell` and `buy_or_sell` is for mass-sell features, since only selling is allowed for it.*\n\nExample:\n```lua\n-- Somewhere inside `G.UIDEF.buy_and_sell_buttons()` hook\n\n{\n    n=G.UIT.R,\n    config={\n        -- ...your button definition\n        button = 'buy_my_card', func = 'can_buy_my_card', handy_insta_action = 'buy_or_sell'\n    },\n    nodes={\n        -- ...\n    }\n},\n```\n"
-  },
-  "TheFamilyBalatro@SleepyG11": {
-    "id": "TheFamily",
-    "name": "TheFamily",
-    "author": [
-      "SleepyG11"
-    ],
-    "description": "UI tabs to cleanup screen space and provide more in-game info",
-    "favourites": 0,
-    "allow_redistribution": true,
-    "badge_colour": "6d4533",
-    "dependencies": [],
-    "published_at": "2025-07-18T00:33:13.136Z",
-    "type": "Mod",
-    "tags": [
-      "Quality of Life",
-      "Misc"
-    ],
-    "readme": "# TheFamily - UI tabs to cleanup screen space\nSometimes, mods love add own UI on a screen. But what if there's so much mods so there's no space at all or, even worse, elements stacks on each other?\nThat's exactly what this mod trying to solve!\n\nTheFamily - a lovely mod which designed to provide API for making tabs and easier management of UI in Balatro's game screen.\n\n## How it works\nOther mods can interact with API mod provides to make own tabs which player can use as it will to display/hide certain UIs like counters, menus, buttons, card areas etc.\nAll of them placed in one place and easy accessible in any time.\n\n## WIP\nMod still in early development. Performance issues and bugs can be present. API will be updated/expanded. Mod config will be added too.\n"
-  },
-  "TOGAPackBalatro@TheOneGoofAli": {
-    "id": "TOGAPack",
-    "name": "TOGA's Stuff",
-    "author": [
-      "TheOneGoofAli"
-    ],
-    "description": "If this appears, there was an error initializing the mod. Non-the-less, hi!",
-    "favourites": 0,
-    "allow_redistribution": true,
-    "badge_colour": "fd9712",
-    "dependencies": [
-      "Steamodded (>=1.0.0~BETA-0711a)"
-    ],
-    "conflicts": [
-      "Talisman (<<2.1.0*~)"
-    ],
-    "published_at": "2025-07-18T00:36:05.853Z",
-    "type": "Mod",
-    "tags": [
-      "SFX",
-      "Jokers",
-      "Consumables",
-      "Cards",
-      "Blinds",
-      "Modifiers",
-      "Mechanics"
-    ],
-    "readme": "<p align=\"center\">\n  <img src=\"https://files.catbox.moe/vo9000.png\">\n</p>\n\n# TOGA's Stuff\nA personal timewaster project that is a mod for Balatro.\n\n[Download the latest commit here.](https://github.com/TheOneGoofAli/TOGAPackBalatro/archive/refs/heads/main.zip)\n\nUses Steamodded 1.0.0-BETA and a bit of Lovely patching.\nhttps://github.com/Steamodded/smods\n\nTalisman 2.2.0 (development builds work too) is an optional dependency as of 1.0.2.\nhttps://github.com/MathIsFun0/Talisman\n\nIf Incantation is to be used alongside, please obtain the [forked version](https://github.com/TheOneGoofAli/JensBalatroCollection/tree/main/Incantation) to prevent unintended behaviour by some of the Consumeables of this mod.\n\n_Please use the source code download options for grabbing the mod._ That way, I don't have to remake the 7z archive every single time.\n"
+    "readme": "# JustEnoughJokers\nToo Many Jokers if it... had jokers\n"
   }
 }
