@@ -1,5 +1,3 @@
-import { version } from "react";
-
 export function compareVersions(a, b)
 {
     const re = /\d+|[A-Za-z]+/g;
