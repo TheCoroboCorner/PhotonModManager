@@ -8,6 +8,9 @@ router.post('/favourite/:key', async (req, res) => {
     const { key } = req.params;
     const userId = req.voteId;
 
+    console.log('[Favourite] Request for:', key);
+    console.log('[Favourite] Vote ID:', userId);
+
     const votes = await readVotes();
     votes[key] = votes[key] || [];
 

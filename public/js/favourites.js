@@ -50,6 +50,22 @@ export class FavouritesManager
             method: 'POST'
         });
 
+        if (!response.ok)
+        {
+            let errorMessage;
+            try
+            {
+                const errorData = await response.json();
+                errorMessage = errorData.error || errorData.message || `Server error: ${response.status}`; 
+            }
+            catch
+            {
+                errorMessage = `Server error: ${response.status} ${response.statusText}`;
+            }
+
+            throw new Error(errorMessage);
+        }
+
         const json = await response.json();
 
         if (json.success)
