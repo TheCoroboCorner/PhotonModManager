@@ -24,9 +24,16 @@ export async function readData()
             throw err;
         }
     }
-    catch
+    catch (err)
     {
-        return {};
+        if (err.code === 'ENOENT')
+        {
+            console.warn('[DataService] data.json not found, creating empty file');
+            await writeData({});
+            return {};
+        }
+        
+        throw err;
     }
 }
 
@@ -42,9 +49,16 @@ export async function readVotes()
         const txt = await fs.readFile(config.paths.votes, 'utf8');
         return JSON.parse(txt);
     }
-    catch
+    catch (err)
     {
-        return {};
+        if (err.code === 'ENOENT')
+        {
+            console.warn('[DataService] votes.json not found, creating empty file');
+            await writeVotes({});
+            return {};
+        }
+
+        throw err;
     }
 }
 

@@ -90,7 +90,7 @@ class WikiPage
 
         this.updateTitle('Loading cards...');
 
-        const url = `/wiki-data/${this.modKey}.json`;
+        const url = `/wiki-data-cache/${this.modKey}.json`;
         console.log('>>> Loading wiki for', this.modKey);
 
         try

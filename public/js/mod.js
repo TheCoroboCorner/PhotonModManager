@@ -82,7 +82,7 @@ class ModDetailPage
         container.appendChild(tagBar);
     }
 
-    createVersionRangeItem()
+    createVersionRangeItem(rawStr, vRange)
     {
         const li = document.createElement('li');
         const modName = rawStr.split(/\s*\(/)[0];
