@@ -9,25 +9,25 @@
   --line-height: 1.8em;
   --font-colour: #B4D0FA;
   --link-colour: #5A8DDB;
-  --background-colour: #112c54;
+  --background-colour: #081427;
   
   /* Navbar */
   --navitems-alignment: center;
   --space-between-navitems: 60px;
   --navbar-margin-bottom: 10px;
-  --nav-bg-colour: #14376B;
+  --nav-bg-colour: #0b1c36;
   
   /* Main Content */
   --content-padding: 25px;
-  --content-bg-colour: #164182;
+  --content-bg-colour: #0c203f;
   
   /* Footer */
   --footer-height: 60px;
-  --footer-bg-colour: #14376B;
+  --footer-bg-colour: #08162b;
   
   /* Container */
   --container-width: 800px;
-  --container-bg-colour: #1A4C96;
+  --container-bg-colour: #0c2447;
   
   /* Row Gap */
   --row-gap: 5px;
@@ -114,7 +114,7 @@ body a {
 }
 
 .click-me {
-  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  background-image: linear-gradient(92.88deg, #232f5c 9.16%, #2a2166 43.89%, #2f1c63 64.72%);
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -139,12 +139,12 @@ body a {
 }
 
 .click-me:hover {
-  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  box-shadow: rgba(38, 30, 99, 0.5) 0 1px 30px;
   transition-duration: .1s;
 }
 
 select {
-  background-color: #5643CC;
+  background-color: #211a50;
   color: var(--font-colour);
 
   border-radius: 8px;
@@ -158,24 +158,24 @@ select:focus {
 }
 
 select option {
-  background-color: #5643CC;
+  background-color: #231b53;
   color: var(--font-colour);
 }
 
 select option:hover {
-  background-color: #5132a8;
+  background-color: #201444;
   color: var(--font-colour);
 }
 
 select option:checked {
-  background-color: #5132a8;
+  background-color: #1e123f;
   color: var(--font-colour);
 }
 
 input[type="text"],
 input[type="url"],
 textarea {
-  background-color: #36288f;
+  background-color: #16103a;
   color: var(--font-colour);
   border: 1px solid #2d1c5e;
   border-radius: 7px;
@@ -247,7 +247,7 @@ textarea:-webkit-autofill:focus {
 }
 
 #checkbox:checked + .switch {
-  background-color: rgb(174, 0, 255);
+  background-color: rgb(86, 0, 126);
   box-shadow: 0px 0px 40px rgba(174, 0, 255, 0.438);
 }
 
@@ -277,7 +277,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .tag-btn:hover {
-  background: rgb(174, 0, 255);
+  background: rgb(95, 0, 139);
   box-shadow: 0px 0px 40px rgba(174, 0, 255, 0.438);
 }
 
@@ -302,7 +302,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .tag-checkbox:checked + .switch {
-  background-color: rgb(174, 0, 255);
+  background-color: rgb(91, 0, 133);
   box-shadow: 0 0 40px rgba(174, 0, 255, 0.438);
 }
 
@@ -312,7 +312,7 @@ textarea:-webkit-autofill:focus {
   justify-content: center;
   padding: 0.5em 1em;
   border-radius: 999px;
-  background: rgba(174, 0, 255, 0.4);
+  background: rgba(95, 0, 139, 0.4);
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -320,12 +320,12 @@ textarea:-webkit-autofill:focus {
 }
 
 .switch input:checked + .label-text {
-  background: rgb(174, 0, 255);
+  background: rgb(89, 0, 131);
   box-shadow: 0 0 10px rgba(174, 0, 255, 0.4);
 }
 
 #detail {
-  background-color: #2d4594;
+  background-color: #101a38;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);

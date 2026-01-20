@@ -1,133 +1,172 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { config } from './config.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const OWNER = process.env.GITHUB_OWNER;
 const REPO  = process.env.GITHUB_REPO;
 const TOKEN = process.env.GITHUB_TOKEN;
-
-const DATA_FILE = path.join(__dirname, 'data.json');
-const VOTES_FILE = path.join(__dirname, 'votes.json');
-const WIKI_LOCAL_DATA_DIR = path.join(__dirname, 'wiki-data');
-
 const API_BASE = 'https://api.github.com';
+
+const githubHeaders = {
+  'Authorization': `token ${TOKEN}`,
+  'Accept': 'application/vnd.github.v3+json'
+};
+
+async function getFileSha(filePath) 
+{
+  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${filePath}`;
+  const resp = await fetch(url, { headers: githubHeaders });
+
+  if (resp.status === 404)
+    return null;
+  if (!resp.ok)
+    throw new Error(`GitHub GET ${filePath} failed: ${resp.status}`);
+
+  const body = await resp.json();
+  return body.sha;
+}
+
+async function uploadFile(filePath, content, message)
+{
+  const base64 = Buffer.from(content, 'utf8').toString('base64');
+  const sha = await getFileSha(filePath);
+  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${filePath}`;
+
+  console.log(`[GitHub Backup] Uploading ${filePath}...`);
+
+  const resp = await fetch(url, {
+    method: 'PUT',
+    headers: githubHeaders,
+    body: JSON.stringify({
+      message,
+      content: base64,
+      sha: sha || undefined
+    })
+  });
+
+  if (!resp.ok)
+  {
+    const err = await resp.text();
+    throw new Error(`GitHub PUT ${filePath} failed (${resp.status}): ${err}`);
+  }
+
+  const data = await resp.json();
+  console.log('[GitHub Backup] Success:', data.content?.html_url);
+  return data;
+}
+
+export async function backupDataJson()
+{
+  const content = await fs.readFile(config.paths.data, 'utf8');
+  const message = `Automated backup of data.json @ ${new Date().toISOString()}`;API_BASE
+
+  try
+  {
+    await uploadFile('data.json', content, message);
+  }
+  catch (err)
+  {
+    console.error('[GitHub Backup] Failed to backup data.json:', err);
+    throw err;
+  }
+}
+
+export async function backupVotesJson()
+{
+  const content = await fs.readFile(config.paths.votes, 'utf8');
+  const message = `Automated backup of votes.json @ ${new Date().toISOString()}`;
+
+  try
+  {
+    await uploadFile('votes.json', content, message);
+  }
+  catch (err)
+  {
+    console.error('[GitHub Backup] Failed to backup votes.json:', err);
+    throw err;
+  }
+}
 
 async function listRemoteVersions(modKey)
 {
   const pathInRepo = `wiki-data-cache/${modKey}`;
   const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${pathInRepo}`;
-  const resp = await fetch(url, { headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }});
+  const resp = await fetch(url, { headers: githubHeaders });
+
+  if (resp.status === 404)
+    return [];
   if (!resp.ok)
-  {
-    if (resp.status === 404)
-      return [];
     throw new Error(`Failed to list remote versions: ${resp.status}`);
-  }
+
   const items = await resp.json();
   return items.filter(i => i.type === 'dir').map(i => i.name);
 }
 
-async function getFileSha() {
-  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/data.json`;
-  const resp = await fetch(url, { headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }});
-  if (resp.status === 404) 
-    return null;
-  if (!resp.ok) 
-    throw new Error(`GitHub GET contents failed: ${resp.status}`);
-  const body = await resp.json();
-  console.log(body.sha);
-  return body.sha;
-}
+async function backupWikiImages(modKey, versionTag)
+{
+  const localDir = path.join(config.paths.wikiData, modKey, versionTag);
 
-async function getVotesSha() {
-  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/votes.json`;
-  const resp = await fetch(url, {
-    headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }
-  });
-  if (resp.status === 404) return null;
-  if (!resp.ok) throw new Error(`GitHub GET votes failed: ${resp.status}`);
-  const body = await resp.json();
-  return body.sha;
-}
+  console.log(`[GitHub Backup] Backing up images from ${localDir}...`);
 
-export async function backupDataJson() {
-  const content = await fs.readFile(DATA_FILE, 'utf8');
-  const base64  = Buffer.from(content, 'utf8').toString('base64');
-  const sha     = await getFileSha();
-
-  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/data.json`;
-  console.log("Fetching data.json...");
-  const resp = await fetch(url, {
-    method: 'PUT',
-    headers: {
-      Authorization: `token ${TOKEN}`,
-      Accept: 'application/vnd.github.v3+json'
-    },
-    body: JSON.stringify({
-      message: `Automated backup of data.json @ ${new Date().toISOString()}`,
-      content: base64,
-      sha: sha || undefined
-    })
-  });
-  console.log("Finishing fetching data.json...")
-  if (!resp.ok) {
-    const err = await resp.text();
-    throw new Error(`GitHub PUT contents failed (${resp.status}): ${err}`);
-  }
-  const data = await resp.json();
-  console.log("Backup commit URL:", data.content && data.content.html_url);
-}
-
-export async function backupVotesJson() {
-  const content = await fs.readFile(VOTES_FILE, 'utf8');
-  const base64 = Buffer.from(content, 'utf8').toString('base64');
-  const sha = await getVotesSha();
-
-  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/votes.json`;
-  console.log("Fetching votes.json...");
-  const resp = await fetch(url, {
-    method: 'PUT',
-    headers: {
-      Authorization: `token ${TOKEN}`,
-      Accept: 'application/vnd.github.v3+json'
-    },
-    body: JSON.stringify({
-      message: `Automated backup of data.json @ ${new Date().toISOString()}`,
-      content: base64,
-      sha: sha || undefined
-    })
-  });
-  console.log("Finishing fetching votes.json...");
-  if (!resp.ok)
+  let files;
+  try
   {
-    const err = await resp.text();
-    throw new Error(`GitHub PUT contents failed (${resp.status}): ${err}`);
+    files = await fs.readdir(localDir);
   }
-  const votes = await resp.json();
-  console.log("Backup commit URL:", votes.content && votes.content.html_url);
+  catch (err)
+  {
+    console.error(`[GitHub Backup] Cannot read directory ${localDir}:`, err);
+  }
+
+  const imageFiles = files.filter(f => f.toLowerCase.endsWith('.png'));
+
+  for (const fileName of imageFiles)
+  {
+    const fullPath = path.join(localDir, fileName);
+    const repoPath = `wiki-data-cache/${modKey}/${versionTag}/${fileName}`;
+
+    try
+    {
+      const buffer = await fs.readFile(fullPath);
+      const base64 = buffer.toString('base64');
+      const sha = await getFileSha(repoPath);
+      const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${repoPath}`;
+
+      console.log(`[GitHub Backup] Uploading ${fileName}...`);
+
+      const resp = await fetch(url, {
+        method: 'PUT',
+        headers: githubHeaders,
+        body: JSON.stringify({
+          message: `Backup image ${fileName} for ${modKey}@${versionTag}`,
+          content: base64,
+          sha: sha || undefined,
+          branch: 'main'
+        })
+      });
+
+      if (!resp.ok)
+      {
+        const err = await resp.text();
+        console.error(`[GitHub Backup] Upload failed for ${fileName} (${resp.status}):`, err);
+      }
+      else console.log(`[Github Backup] Successfully uploaded ${fileName}`);
+    }
+    catch (err)
+    {
+      console.error(`[GitHub Backup] Error uploading ${fileName}:`, err);
+    }
+  }
 }
 
-async function getShaFor(pathInRepo) {
-  const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${pathInRepo}`;
-  const resp = await fetch(url, { headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }});
-  if (resp.status === 404)
-    return null;
-  if (!resp.ok)
-    throw new Error(`GitHub GET ${pathInRepo} failed: ${resp.status} - ${await resp.text()}`);
-
-  const body = await resp.json();
-  return body.sha;
-}
-
-export async function backupMetadata(modKey, versionTag) {
+export async function backupMetadata(modKey, versionTag)
+{
   try
   {
     const existing = await listRemoteVersions(modKey);
     if (existing.includes(versionTag))
     {
-      console.log(`[GitHub Backup] version "${versionTag}" already exists upstream; skipping backup`);
+      console.log(`[GitHub Backup] Version "${versionTag}" already exists upstream; skipping`);
       return;
     }
   }
@@ -136,120 +175,22 @@ export async function backupMetadata(modKey, versionTag) {
     console.warn(`[GitHub Backup] Could not check remote versions for ${modKey}:`, err);
   }
 
-
-  const localMetadataPath = path.join(WIKI_LOCAL_DATA_DIR, modKey, versionTag, 'metadata.json');
+  const localMetadataPath = path.join(config.paths.wikiData, modKey, versionTag, 'metadata.json');
   const repoPath = `wiki-data-cache/${modKey}/${versionTag}/metadata.json`;
-
-  let existingSha;
 
   try
   {
     const content = await fs.readFile(localMetadataPath, 'utf8');
-    const base64 = Buffer.from(content, 'utf8').toString('base64');
-    existingSha = await getShaFor(repoPath);
+    const message = `Backup wiki metadata for ${modKey} v${versionTag} @ ${new Date().toISOString()}`;
 
-    const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${repoPath}`;
-    console.log(`[GitHub Backup] Backing up ${repoPath}...`);
-    const resp = await fetch(url, {
-      method: 'PUT',
-      headers: {
-        Authorization: `token ${TOKEN}`,
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: `Backup wiki metadata for ${modKey} v${versionTag} @ ${new Date().toISOString()}`,
-        content: base64,
-        sha: existingSha || undefined,
-        branch: 'main'
-      })
-    });
+    await uploadFile(repoPath, content, message);
+    console.log('[GitHub Backup] All metadata backed up');
 
-    if (!resp.ok)
-    {
-      const err = await resp.text();
-      throw new Error(`GitHub PUT ${repoPath} failed (${resp.status}): ${err}`);
-    }
-
-    const data = await resp.json();
-    console.log(`[GitHub Backup] Backed up ${repoPath} to commit`, data.content && data.content.html_url);
-
-    try
-    {
-      await backupWikiImages(modKey, versionTag);
-      console.log('[GitHub Backup] All images backed up');
-    }
-    catch (imgErr)
-    {
-      console.error('[GitHub Backup] Image backup failed:', imgErr);
-    }
-  }
-  catch (error)
-  {
-    console.error(`[Github Backup] Failed to backup metadata for ${modKey} v${versionTag}:`, error);
-  }
-}
-
-async function backupWikiImages(modKey, versionTag)
-{
-  const localDir = path.join(__dirname, 'wiki-data', modKey, versionTag);
-
-  console.log(`[BackupImages] Backing up ${localDir}...`);
-
-  let files;
-  try
-  {
-    files = await fs.readdir(localDir);
-    console.log(`[BackupImages] Successfully accessed ${localDir}`);
+    await backupWikiImages(modKey, versionTag);
+    console.log('[GitHub Backup] All images backed up');
   }
   catch (err)
   {
-    console.error(`[BackupImages] Cannot read dir ${localDir}:`, err);
-    return;
-  }
-
-  files = files.filter(f => f.toLowerCase().endsWith('.png'));
-
-  for (const fileName of files)
-  {
-    const repoPath = `wiki-data-cache/${modKey}/${versionTag}/${fileName}`;
-    const fullPath = path.join(localDir, fileName);
-
-    let content, sha;
-    try
-    {
-      content = await fs.readFile(fullPath);
-      sha = await getShaFor(repoPath);
-      console.log(`[BackupImages] Backing up ${fullPath}...`);
-    }
-    catch (err)
-    {
-      console.error(`[BackupImages] Skipping ${fileName}:`, err);
-      continue;
-    }
-
-    const base64 = content.toString('base64');
-    const url = `${API_BASE}/repos/${OWNER}/${REPO}/contents/${repoPath}`;
-    const body = {
-      message: `Backup image ${fileName} for ${modKey}@${versionTag}`,
-      content: base64,
-      sha: sha || undefined,
-      branch: 'main'
-    };
-
-    try
-    {
-      const resp = await fetch(url, { method: 'PUT', headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github/v3+json' }, body: JSON.stringify(body) });
-      if (!resp.ok)
-      {
-        const errText = await resp.text();
-        console.error(`[BackupImages] PUT ${fileName} failed (${resp.status}):`, errText);
-      }
-      else console.log(`[BackupImages] Backed up ${fileName} successfully.`);
-    }
-    catch (err)
-    {
-      console.error(`[BackupImages] Network error backing up ${fileName}:`, err);
-    }
+    console.error(`[GitHub Backup] Failed to backup metadata for ${modKey} v${versionTag}:`, err);
   }
 }
