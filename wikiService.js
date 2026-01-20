@@ -152,7 +152,7 @@ function parseCardConfig(rawText, cardKey)
 
     const fullLuaTable = rawText.slice(brace, block.endIndex + 1);
 
-    console.log(`[DEBUG CONFIG] fullLuaTable for ${card.key}:\n`, fullLuaTable);
+    console.log(`[DEBUG CONFIG] fullLuaTable for ${cardKey}:\n`, fullLuaTable);
 
     try
     {
