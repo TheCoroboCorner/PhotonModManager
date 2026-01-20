@@ -17,6 +17,7 @@ export class FavouritesManager
         catch (err)
         {
             console.error('Error loading favourites:', err);
+            return new Set();
         }
     }
 
