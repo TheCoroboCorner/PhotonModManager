@@ -62,7 +62,7 @@ export async function readVotes()
     }
 }
 
-export async function writeVotes()
+export async function writeVotes(votes)
 {
     await fs.writeFile(config.paths.votes, JSON.stringify(votes, null, 2));
 }
