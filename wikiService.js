@@ -187,7 +187,7 @@ async function fetchAndCacheWikiData(user, repo, modKey, latestTag, versionCache
 
     // Fetch the default branch
     const branch = await fetchDefaultBranch(user, repo);
-    console.log(`[Server] Using branch '${branch}' for ${owner}/${repo}`);
+    console.log(`[Server] Using branch '${branch}' for ${user}/${repo}`);
 
     // Fetch all files from repository
     const allGitHubFiles = await listGitHubFiles(user, repo);
