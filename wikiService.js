@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { config } from './config.js';
 import { pLimit, extractBlockContent } from './utils.js';
-import { fetchRaw, fetchRawBinary, listGitHubFiles, getLatestRelease } from './githubService.js';
+import { fetchRaw, fetchRawBinary, listGitHubFiles, getLatestRelease, fetchDefaultBranch } from './githubService.js';
 import { parseAtlasDefs, parseAllEntities, parseLoc } from './luaParser.js';
 import { parseLocVars } from './locVarsEvaluator.js';
 import { backupMetadata } from './github-backup.js';
@@ -48,14 +48,14 @@ async function tryLoadCache(metadataFile, modKey, latestTag)
     }
 }
 
-async function downloadLuaFiles(user, repo, luaFilesToDownload, versionCacheDir)
+async function downloadLuaFiles(user, repo, branch, luaFilesToDownload, versionCacheDir)
 {
     const luaFileContents = {};
 
     await pLimit(config.concurrency.wikiDataFetch, luaFilesToDownload, async (luaPath) => {
         try
         {
-            const txt = await fetchRaw(user, repo, luaPath);
+            const txt = await fetchRaw(user, repo, luaPath, branch);
             if (txt)
             {
                 const localLuaPath = path.join(versionCacheDir, path.basename(luaPath));
@@ -98,12 +98,12 @@ function resolveAtlasPaths(atlasDefs, allGitHubFiles)
     }
 }
 
-async function downloadAndLinkImages(user, repo, imgFiles, versionCacheDir, modKey, latestTag, atlasDefs, allGitHubFiles)
+async function downloadAndLinkImages(user, repo, branch, imgFiles, versionCacheDir, modKey, latestTag, atlasDefs, allGitHubFiles)
 {
     await pLimit(config.concurrency.wikiDataFetch, imgFiles, async (repoPath) => {
         try
         {
-            const buf = await fetchRawBinary(user, repo, repoPath);
+            const buf = await fetchRawBinary(user, repo, repoPath, branch);
             if (!buf)
             {
                 console.warn(`[Server] Empty buffer for ${repoPath}`);
@@ -185,12 +185,16 @@ async function fetchAndCacheWikiData(user, repo, modKey, latestTag, versionCache
 {
     await fs.mkdir(versionCacheDir, { recursive: true });
 
+    // Fetch the default branch
+    const branch = await fetchDefaultBranch(user, repo);
+    console.log(`[Server] Using branch '${branch}' for ${owner}/${repo}`);
+
     // Fetch all files from repository
     const allGitHubFiles = await listGitHubFiles(user, repo);
 
     // Download and cache Lua files
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
-    const luaFileContents = await downloadLuaFiles(user, repo, luaFilesToDownload, versionCacheDir);
+    const luaFileContents = await downloadLuaFiles(user, repo, branch, luaFilesToDownload, versionCacheDir);
 
     // Parse localization
     const locPathInRepo = findLocalizationFile(luaFilesToDownload);
@@ -214,7 +218,7 @@ async function fetchAndCacheWikiData(user, repo, modKey, latestTag, versionCache
 
     // Download and cache images
     const imgFiles = allGitHubFiles.filter(p => p.toLowerCase().includes('assets/2x/') && p.toLowerCase().endsWith('.png'));
-    await downloadAndLinkImages(user, repo, imgFiles, versionCacheDir, modKey, latestTag, atlasDefs, allGitHubFiles);
+    await downloadAndLinkImages(user, repo, branch, imgFiles, versionCacheDir, modKey, latestTag, atlasDefs, allGitHubFiles);
 
     processCardData(cards, locMap);
 

@@ -26,25 +26,37 @@ export async function fetchReleases(user, repo)
     }));
 }
 
+export async function fetchDefaultBranch(user, repo)
+{
+    const url = `https://raw.githubusercontent.com/${user}/${repo}`;
+    const resp = await fetch(url, { headers: config.github.headers });
+
+    if (!resp.ok)
+        return "main";
+
+    const data = await resp.json();
+    return data.default_branch;
+}
+
 export async function fetchReadme(user, repo)
 {
     const url = `https://raw.githubusercontent.com/${user}/${repo}/main/README.md`;
-    const resp = await fetch(url)
+    const resp = await fetch(url, { headers: config.github.headers });
 
     return resp.ok ? resp.text() : '';
 }
 
-export async function fetchRaw(user, repo, path)
+export async function fetchRaw(user, repo, path, branch)
 {
-    const url = `https://raw.githubusercontent.com/${user}/${repo}/main/${path}`;
+    const url = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
     const resp = await fetch(url, { headers: config.github.headers });
     
     return resp.ok ? resp.text() : '';
 }
 
-export async function fetchRawBinary(user, repo, path)
+export async function fetchRawBinary(user, repo, path, branch)
 {
-    const url = `https://raw.githubusercontent.com/${user}/${repo}/main/${path}`;
+    const url = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
     const resp = await fetch(url, { headers: config.github.headers });
 
     return resp.ok ? resp.arrayBuffer() : null;

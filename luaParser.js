@@ -61,15 +61,26 @@ export function parseAllEntities(txt)
             continue;
 
         const key = unescapeLuaString(keyM[2]);
+
         const atlasM = /atlas\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
         const atlas = atlasM ? unescapeLuaString(atlasM[2]) : null;
 
-        const posM = /pos\s*=\s*{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
-        const pos = posM ? { x: +posM[1], y: +posM[2] } : null;
+        let pos = null;
+        const posM1 = /pos\s*=\s*\{[^}]*x\s*=\s*(\d+)[^}]*y\s*=\s*(\d+)/.exec(body);
+        const posM2 = /pos\s*=\s*\{\s*(\d+)\s*,\s*(\d+)\s*\}/.exec(body);
 
-        out.push({ type, key, atlas, pos, raw: body.trim() });
+        if (posM1)
+            pos = { x: +posM1[1], y: +posM1[2] };
+        else if (posM2)
+            pos = { x: +posM2[1], y: +posM2[2] };
+
+        const nameM = /name\s*=\s*(['"])((?:\\.|(?!\1).)*?)\1/.exec(body);
+        const name = nameM ? unescapeLuaString(nameM[2]) : null;
+
+        out.push({ type, key, name, atlas, pos, raw: body.trim() });
     }
 
+    console.log(`[LuaParser] Parsed ${out.length} entities from Lua`);
     return out;
 }
 
