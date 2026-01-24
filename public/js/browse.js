@@ -152,31 +152,64 @@ class ModBrowser
     createModListItem(mod)
     {
         const li = document.createElement('li');
+        li.className = 'mod-card';
         const { repo, owner } = parseModKey(mod.key);
 
-        // Basic information
-        li.innerHTML = `
-            <a href="mod.html?key=${encodeURIComponent(mod.key)}">
-                <strong>${mod.name ?? 'Unknown'}</strong>
-            </a> by ${formatAuthor(mod.author) ?? 'Unknown'} <br>
-            <div class="favourite-container"></div>
-            Description: ${mod.description ?? 'None'} <br>
-            Published: ${formatDate(mod.published_at) ?? 'Unknown'} <br>
-            Type: ${mod.type ?? 'Unknown'} <br>
-            <a href="https://github.com/${owner}/${repo}" target="_blank">
-                View GitHub page
-            </a>
+        // Card header
+        const header = document.createElement('div');
+        header.className = 'mod-card-header';
+
+        const titleLink = document.createElement('a');
+        titleLink.href = `mod.html?key=${encodeURIComponent(mod.key)}`;
+        titleLink.innerHTML = `<h3 class="mod-card-title">${mod.name ?? 'Unknown'}</h3>`;
+
+        header.appendChild(titleLink);
+        li.appendChild(header);
+
+        // Card author
+        const author = document.createElement('div');
+        author.className = 'mod-card-author';
+        author.textContent = `by ${formatAuthor(mod.author) ?? 'Unknown'}`;
+        li.appendChild(author);
+
+        // Card description
+        const description = document.createElement('p');
+        description.className = 'mod-card-description';
+        description.textContent = mod.description ?? 'No description';
+        li.appendChild(description);
+
+        // Card metadata (published, type)
+        const meta = document.createElement('div');
+        meta.className = 'mod-card-meta';
+        meta.innerHTML = `
+            <span class="mod-card-meta-item">
+                Date: ${formatDate(mod.published_at) ?? 'Unknown'}
+            </span>
+            <span class="mod-card-meta-item">
+                Type: ${mod.type ?? 'Unknown'}
+            </span>
         `;
+        li.appendChild(meta);
 
-        // Favourites
-        const favContainer = li.querySelector('.favourite-container');
+        // Card favourite button
         const favBtn = favouritesManager.createFavouriteButton(mod.key, mod.favourites);
-        favContainer.appendChild(favBtn);
-        favContainer.appendChild(document.createElement('br'));
+        favBtn.style.width = '100%';
+        favBtn.style.marginBottom = '1rem';
+        li.appendChild(favBtn);
 
-        // Tags
+        // Card tags
         const tagBar = this.createTagBar(mod.tags || []);
         li.appendChild(tagBar);
+
+        // GitHub link
+        const githubLink = document.createElement('a');
+        githubLink.href = `https://github.com/${owner}/${repo}`;
+        githubLink.target = '_blank';
+        githubLink.textContent = 'View on GitHub';
+        githubLink.style.display = 'block';
+        githubLink.style.marginTop = '1rem';
+        githubLink.style.fontSize = '0.875rem';
+        li.appendChild(githubLink);
 
         return li;
     }
@@ -187,13 +220,28 @@ class ModBrowser
         if (!ul)
             return;
 
+        ul.className = 'mod-grid';
         ul.innerHTML = '';
+
         const entries = this.getFilteredAndSortedMods();
+
+        if (entries.length === 0)
+        {
+            const emptyMessage = document.createElement('p');
+            emptyMessage.textContent = 'No mods found matching your filters.';
+            emptyMessage.className = 'fade-in';
+            emptyMessage.style.gridColumn = '1 / -1';
+            emptyMessage.style.textAlign = 'center';
+            emptyMessage.style.padding = '2rem';
+            emptyMessage.style.color = '#6b7280';
+            
+            ul.appendChild(emptyMessage);
+            return;
+        }
 
         entries.forEach(mod => {
             const li = this.createModListItem(mod);
             ul.appendChild(li);
-            ul.appendChild(document.createElement('hr'));
         });
     }
 }
