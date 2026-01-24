@@ -1,0 +1,50 @@
+{
+  "locMap": {
+    "ph_health": {
+      "name": "\"But it refused.\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_hold": {
+      "name": "\"Hold\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_swap": {
+      "name": "\"Swap \"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_last": {
+      "name": "\"Play Last\\n   Hand\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_locked": {
+      "name": "\"Locked \"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_unlocked": {
+      "name": "\"Unlocked \"",
+      "text": [],
+      "type": "dictionary"
+    }
+  },
+  "atlases": {},
+  "cards": [
+    {
+      "type": "Joker",
+      "key": "health_object",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"health_object\",\r\n\torder = 0,\r\n\trarity = 1,\r\n\tcost = 0,\r\n\t\r\n\tblueprint_compat = false,\r\n\tperishable_compat = false,\r\n\tno_collection = true,\r\n\tno_doe = true,\r\n\t\r\n\tin_pool = function(self, args)\r\n\t\treturn false\r\n\tend,\r\n\t\r\n\tloc_vars = function(self, info_queue, card) return {} end,\r\n\t\r\n\tcalculate = function(self, card, context)\r\n\t\tlocal current_score = G.GAME.chips\r\n\t\tlocal target_score = G.GAME.blind.chips\r\n\t\t\r\n\t\tlocal percent_decimal_conversion = 100\r\n\t\t\r\n\t\tlocal normal_min_health = 0\r\n\t\tG.GAME.health_min = G.GAME.health_min or normal_min_health\r\n\t\t\r\n\t\tlocal health_as_percentage = G.GAME.health / percent_decimal_conversion\r\n\t\tlocal shield_as_percentage = G.GAME.shield / percent_decimal_conversion\r\n\t\tlocal blind_completion_as_percentage = to_number(current_score / target_score)\r\n\t\tlocal blind_remaining_as_percentage = 1 - blind_completion_as_percentage\r\n\t\t\r\n\t\tif context.end_of_round and not context.game_over and context.main_eval then \r\n\t\t\tif blind_completion_as_percentage >= 1 and G.GAME.current_round.hands_played == 1 then\r\n\t\t\t\tlocal shield_bonus = 5\r\n\t\t\t\tALLOY.ease_shield(shield_bonus)\r\n\t\t\tend\r\n\t\tend\r\n\t\tif context.end_of_round and context.game_over and context.main_eval then\r\n\t\t\tif health_as_percentage + G.GAME.health_min + shield_as_percentage - (G.GAME.health_min or 0) >= blind_remaining_as_percentage then\r\n\t\t\t\tlocal damage = -math.ceil(blind_remaining_as_percentage * percent_decimal_conversion)\r\n\t\t\t\t\r\n\t\t\t\tlocal used_shield = false\r\n\t\t\t\tif G.GAME.shield > G.GAME.shield_min then\r\n\t\t\t\t\tused_shield = true\r\n\t\t\t\t\tlocal delta_shield = clamp(G.GAME.shield_min, G.GAME.shield_max, G.GAME.shield + damage) - G.GAME.shield\r\n\t\t\t\t\t\r\n\t\t\t\t\tALLOY.ease_shield(damage)\r\n\t\t\t\t\tdamage = damage - delta_shield\r\n\t\t\t\tend\r\n\t\t\t\t\r\n\t\t\t\tif damage < 0 then\r\n\t\t\t\t\tALLOY.ease_health(damage, used_shield)\r\n\t\t\t\tend\r\n\t\t\t\t\r\n\t\t\t\tSMODS.calculate_context({ survived_death = true })\r\n\t\t\t\t\r\n\t\t\t\treturn {\r\n\t\t\t\t\tmessage = localize('k_saved_ex'),\r\n\t\t\t\t\tsaved = 'ph_health',\r\n\t\t\t\t\tcolour = G.C.RED\r\n\t\t\t\t}\r\n\t\t\telse\r\n\t\t\t\tG.GAME.health = 0\r\n\t\t\t\t\r\n\t\t\t\tSMODS.calculate_context({ survived_death = false })\r\n\t\t\tend\r\n\t\tend\r\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.0.1"
+}
