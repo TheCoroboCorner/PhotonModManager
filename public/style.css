@@ -507,7 +507,7 @@ textarea:-webkit-autofill:focus {
 
 .mod-card
 {
-  background: white;
+  background: rgb(130, 101, 255);
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -546,7 +546,7 @@ textarea:-webkit-autofill:focus {
 {
   .mod-card
   {
-    background: #1f2937;
+    background: #281f37;
     border-color: #374151;
     color: #f9fafb;
   }
