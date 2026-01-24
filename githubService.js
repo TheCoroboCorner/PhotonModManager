@@ -28,7 +28,7 @@ export async function fetchReleases(user, repo)
 
 export async function fetchDefaultBranch(user, repo)
 {
-    const url = `https://raw.githubusercontent.com/${user}/${repo}`;
+    const url = `https://api.github.com/repos/${user}/${repo}`;
     const resp = await fetch(url, { headers: config.github.headers });
 
     if (!resp.ok)
@@ -38,9 +38,9 @@ export async function fetchDefaultBranch(user, repo)
     return data.default_branch;
 }
 
-export async function fetchReadme(user, repo)
+export async function fetchReadme(user, repo, branch='main')
 {
-    const url = `https://raw.githubusercontent.com/${user}/${repo}/main/README.md`;
+    const url = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/README.md`;
     const resp = await fetch(url, { headers: config.github.headers });
 
     return resp.ok ? resp.text() : '';
