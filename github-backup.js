@@ -118,7 +118,7 @@ async function backupWikiImages(modKey, versionTag)
     console.error(`[GitHub Backup] Cannot read directory ${localDir}:`, err);
   }
 
-  const imageFiles = files.filter(f => f.toLowerCase.endsWith('.png'));
+  const imageFiles = files.filter(f => f.toLowerCase().endsWith('.png'));
 
   for (const fileName of imageFiles)
   {
