@@ -155,7 +155,7 @@
       "Larswijn"
     ],
     "description": "Adds sleeves as modifier to decks.  See full description in-game by enabling mod or checking `descriptions.Mods.CardSleeves`.",
-    "favourites": 1,
+    "favourites": 3,
     "badge_colour": "0047AA",
     "dependencies": [
       "Steamodded (>=1.0.0~ALPHA-1206c)",
@@ -179,7 +179,7 @@
       "nh6574"
     ],
     "description": "Display useful information under Jokers. Controls: Right-click or B - hide/show. Left-click or Up - collapse/expand.",
-    "favourites": 1,
+    "favourites": 4,
     "badge_colour": "",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0301b)"
@@ -477,5 +477,22 @@
       "Cards"
     ],
     "readme": "# JustEnoughJokers\nToo Many Jokers if it... had jokers\n"
+  },
+  "CoroboUtils@TheCoroboCorner": {
+    "id": "CoroboUtils",
+    "name": "CoroboUtils",
+    "author": [
+      "TheCoroboCorner"
+    ],
+    "description": "Just adds a bunch of QoL functions for modding. Shouldn't do anything on its own.",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "git_owner": "TheCoroboCorner",
+    "published_at": "2026-01-24T09:19:20.544Z",
+    "type": "Mod",
+    "tags": [
+      "Misc"
+    ],
+    "readme": ""
   }
 }
