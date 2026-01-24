@@ -196,9 +196,8 @@ async function fetchAndCacheWikiData(user, repo, modKey, latestTag, versionCache
     if (allGitHubFiles.length === 0)
     {
         console.error(`[Server] No files found in repository! Check branch name and permissions.`);
-        throw new Error(`No files found in ${owner}/${repo} on branch ${branch}`);
+        throw new Error(`No files found in ${user}/${repo} on branch ${branch}`);
     }
-
 
     // Download and cache Lua files
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
