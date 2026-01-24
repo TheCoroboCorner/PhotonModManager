@@ -46,7 +46,7 @@ export async function fetchReadme(user, repo)
     return resp.ok ? resp.text() : '';
 }
 
-export async function fetchRaw(user, repo, path, branch)
+export async function fetchRaw(user, repo, path, branch = 'main')
 {
     const url = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
     const resp = await fetch(url, { headers: config.github.headers });
@@ -54,7 +54,7 @@ export async function fetchRaw(user, repo, path, branch)
     return resp.ok ? resp.text() : '';
 }
 
-export async function fetchRawBinary(user, repo, path, branch)
+export async function fetchRawBinary(user, repo, path, branch = 'main')
 {
     const url = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
     const resp = await fetch(url, { headers: config.github.headers });
@@ -62,9 +62,9 @@ export async function fetchRawBinary(user, repo, path, branch)
     return resp.ok ? resp.arrayBuffer() : null;
 }
 
-export async function listGitHubFiles(user, repo, dirPath = '')
+export async function listGitHubFiles(user, repo, dirPath = '', branch = 'main')
 {
-    const url = `https://api.github.com/repos/${user}/${repo}/contents/${dirPath}`;
+    const url = `https://api.github.com/repos/${user}/${repo}/contents/${dirPath}?ref=${branch}`;
     const resp = await fetch(url, { headers: config.github.headers });
     if (!resp.ok)
         return [];
@@ -78,7 +78,7 @@ export async function listGitHubFiles(user, repo, dirPath = '')
             files.push(item.path);
         else if (item.type === 'dir')
         {
-            const subFiles = await listGitHubFiles(user, repo, item.path);
+            const subFiles = await listGitHubFiles(user, repo, item.path, branch);
             files.push(...subFiles);
         }
     }

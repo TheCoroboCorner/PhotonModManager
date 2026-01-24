@@ -190,16 +190,31 @@ async function fetchAndCacheWikiData(user, repo, modKey, latestTag, versionCache
     console.log(`[Server] Using branch '${branch}' for ${user}/${repo}`);
 
     // Fetch all files from repository
-    const allGitHubFiles = await listGitHubFiles(user, repo);
+    const allGitHubFiles = await listGitHubFiles(user, repo, '', branch);
+    console.log(`[Server] Found ${allGitHubFiles.length} total files in repository`);
+
+    if (allGitHubFiles.length === 0)
+    {
+        console.error(`[Server] No files found in repository! Check branch name and permissions.`);
+        throw new Error(`No files found in ${owner}/${repo} on branch ${branch}`);
+    }
+
 
     // Download and cache Lua files
     const luaFilesToDownload = allGitHubFiles.filter(p => p.endsWith('.lua'));
+    console.log(`[Server] Found ${luaFilesToDownload.length} Lua files`);
+
     const luaFileContents = await downloadLuaFiles(user, repo, branch, luaFilesToDownload, versionCacheDir);
 
     // Parse localization
     const locPathInRepo = findLocalizationFile(luaFilesToDownload);
     const locTxt = locPathInRepo ? luaFileContents[locPathInRepo] : '';
+
+    if (!locTxt)
+        console.warn(`[Server] No localization file found or it's empty!`);
+
     const locMap = parseLoc(locTxt);
+    console.log(`[Server] Parsed ${Object.keys(locMap).length} localization entries`);
 
     // Parse atlases and cards
     const atlasDefs = {};
