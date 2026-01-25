@@ -10,7 +10,7 @@
           ">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload - Photon</title>
+    <title>Submit - Photon</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
@@ -21,16 +21,16 @@
       <div id="navbar">
         <ul class="nav">
           <li>
-            <a href="https://photonmodmanager.onrender.com">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/submit">Submit</a>
+            <a href="/submit">Submit</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/browse">Browse</a>
+            <a href="/browse">Browse</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/about">About</a>
+            <a href="/about">About</a>
           </li>
         </ul>
       </div>
@@ -39,91 +39,116 @@
         <div id="content-container" style="flex-grow: 1;">
           <div class="wrapper">
             <h1>
-              Upload a Project
+              Submit Your Mod
             </h1>
-            <br>
-            <p>
-              Submitting a project to the database is rather simple. Simply give the link to your repository below, and the path to the metadata file, and it will be added to the database.
+            <p style="color: var(--text-light); margin-bottom: 2rem;">
+              Share your creation with the Balatro modding community! Simply provide the details to your GitHub repository below and it'll be submitted.
             </p>
-            <p>
-              There is one thing to keep in mind: In your metadata JSON file, you must have an "allow_redistribution" variable set to true. This is to prevent other people from uploading creators' mods without their consent.
-            </p>
+
+            <div style="background: rgba(255, 154, 0, 0.1); border-left: 4px solid #ff9a00; padding: 1rem; border-radius: 8px; margin-bottom: 2rem;">
+              <strong style="color: #ff9a00;">⚠️ Important:</strong>
+              <p style="margin: 0.5rem 0 0 0; color: var(--text-light);">
+                Your metadata JSON file must have an <code style="background: rgba(0, 0, 0, 0.3); padding: 0.2rem 0.4rem; border-radius: 4px;">allow_redistribution</code> variable set to <code style="background: rgba(0, 0, 0, 0.3); padding: 0.2rem 0.4rem; border-radius: 4px;">true</code>. This is done to prevent unauthorized redistribution of your work.
+              </p>
+            </div>
           </div>
+
           <div class="wrapper">
             <form id="gh-form">
-              <fieldset>
-                <legend>Tags</legend>
-                <div class="tag-options">
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Textures">
-                    <span class="label-text">Textures</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="SFX">
-                    <span class="label-text">SFX / Music</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Vanilla Plus">
-                    <span class="label-text">Vanilla Plus</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Jokers">
-                    <span class="label-text">Jokers</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Consumables">
-                    <span class="label-text">Consumables</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Cards">
-                    <span class="label-text">Cards</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Blinds">
-                    <span class="label-text">Blinds</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Modifiers">
-                    <span class="label-text">Modifiers</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Mechanics">
-                    <span class="label-text">Mechanics</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Quality of Life">
-                    <span class="label-text">Quality of Life</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="JokerForge">
-                    <span class="label-text">JokerForge</span>
-                  </label>
-                  <label class="switch">
-                    <input type="checkbox" name="tags" value="Misc">
-                    <span class="label-text">Miscellaneous</span>
-                  </label>
-                </div>
-              </fieldset>
-              <br>
-              <label>
-                GitHub Repo URL:<br>
-                <small>(This is the link to your GitHub repository. Simply click on your GitHub repository list, go to the repository for the mod, and copy the link for it.)</small><br>
-                <input name="repoUrl" type="url" required placeholder="https://github.com/user/repo">
-              </label>
-              <br>
-              <br>
-              <label>
-                JSON Filepath in Repo:<br>
-                <small>(This is the filepath to the file that contains all the metadata for your mod, such as the name, ID, description, dependencies, etc...)</small><br>
-                <input name="jsonPath" type="text" required placeholder="data/info.json">
-              </label>
-              <br>
-              <br>
-              <button class="click-me" type="submit">Submit</button>
-              <br>
-              <br>
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
+                  <span style="font-size: 1.1rem;">GitHub Repository URL</span>
+                </label>
+                <small style="display: block; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
+                  Navigate to your repository on GitHub and copy the URL from your browser's address bar.
+                </small>
+                <input name="repoUrl" type="url" required placeholder="https://github.com/username/repository" style="width: 100%; max-width: 600px;">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
+                  <span style="font-size: 1.1rem;">Metadata JSON Path</span>
+                </label>
+                <small style="display: block; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
+                  The path to your mod's metadata file within your repository (e.g., data/info.json, manifest.json).
+                </small>
+                <input name="jsonPath" type="text" required placeholder="data/mod.json" style="width: 100%; max-width: 600px;">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label style="display: block; margin-bottom: 1rem; font-weight: 600; color: var(--text-white);">
+                  <span style="font-size: 1.1rem;">🏷️ Select Tags</span>
+                </label>
+                <small style="display: block; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">
+                  Choose one or more tags that describe your mod. Click to select/deselect.
+                </small>
+                
+                <fieldset style="border: none; padding: 0; margin: 0;">
+                  <div class="tag-options">
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Textures">
+                      <span class="label-text">Textures</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="SFX">
+                      <span class="label-text">SFX / Music</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Vanilla Plus">
+                      <span class="label-text">Vanilla Plus</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Jokers">
+                      <span class="label-text">Jokers</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Consumables">
+                      <span class="label-text">Consumables</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Cards">
+                      <span class="label-text">Cards</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Blinds">
+                      <span class="label-text">Blinds</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Modifiers">
+                      <span class="label-text">Modifiers</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Mechanics">
+                      <span class="label-text">Mechanics</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Quality of Life">
+                      <span class="label-text">Quality of Life</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="JokerForge">
+                      <span class="label-text">JokerForge</span>
+                    </label>
+                    <label class="switch">
+                      <input type="checkbox" name="tags" value="Misc">
+                      <span class="label-text">Miscellaneous</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div style="text-align: center; padding: 2rem 0;">
+                <button class="click-me" type="submit" style="font-size: 1.1rem; padding: 1.25rem 3rem;">
+                  Submit Mod
+                </button>
+              </div>
+
+              <div style="background: rgba(102, 126, 234, 0.1); padding: 1rem; border-radius: 8px; margin-top: 2rem;">
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary); text-align: center; line-height: 1.6;">
+                  ⚠️ By submitting, you confirm that you have permission to redistribute this mod and that it complies with all applicable licenses.
+                </p>
+              </div>
             </form>
-            <script type="module" src="js/submit.js"></script>
           </div>
         </div>
       </div>
@@ -138,5 +163,6 @@
     </div>
 
     <script type="module" src="js/cookieConsent.js"></script>
+    <script type="module" src="js/submit.js"></script>
   </body>
 </html>

@@ -1,6 +1,59 @@
 import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from './utils.js';
 import { favouritesManager } from './favourites.js';
 
+class ScrollAnimationObserver
+{
+    constructor()
+    {
+        this.observer = null;
+        this.init();
+    }
+
+    init()
+    {
+        const options = {
+            root: null,
+            rootMargin: '0px 0px -100px 0px',
+            threshold: 0.1
+        };
+
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting)
+                {
+                    entry.target.classList.add('visible');
+                    this.observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+    }
+
+    observe(elements)
+    {
+        elements.forEach(element => {
+            this.observer.observe(element);
+        });
+    }
+
+    disconnect()
+    {
+        if (this.observer)
+            this.observer.disconnect();
+    }
+}
+
+let animationObserver = null;
+
+export function initScrollAnimations()
+{
+    if (!animationObserver)
+        animationObserver = new ScrollAnimationObserver();
+
+    const modCards = document.querySelectorAll('.mod-card');
+    if (modCards.length > 0)
+        animationObserver.observe(modCards);
+}
+
 class ModBrowser
 {
     constructor()
@@ -74,7 +127,7 @@ class ModBrowser
     populateTagFilter()
     {
         const tagSelect = document.querySelector('select[name="tag"]');
-        if (!tagSelect)
+        if (!tagSelect || tagSelect.options.length > 1)
             return;
 
         tagSelect.innerHTML = '';
@@ -233,7 +286,7 @@ class ModBrowser
             emptyMessage.style.gridColumn = '1 / -1';
             emptyMessage.style.textAlign = 'center';
             emptyMessage.style.padding = '2rem';
-            emptyMessage.style.color = '#6b7280';
+            emptyMessage.style.color = 'var(--text-secondary)';
             
             ul.appendChild(emptyMessage);
             return;
@@ -243,6 +296,8 @@ class ModBrowser
             const li = this.createModListItem(mod);
             ul.appendChild(li);
         });
+
+        initScrollAnimations();
     }
 }
 

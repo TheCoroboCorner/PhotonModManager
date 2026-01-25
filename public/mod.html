@@ -15,52 +15,87 @@
       <div id="navbar">
         <ul class="nav">
           <li>
-            <a href="https://photonmodmanager.onrender.com">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/submit">Submit</a>
+            <a href="/submit">Submit</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/browse">Browse</a>
+            <a href="/browse">Browse</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/about">About</a>
+            <a href="/about">About</a>
           </li>
         </ul>
       </div>
     
-      <div class="content-wrapper flex alignment">
-        <div id="content-container" style="flex-grow: 1;">
-          <div class="wrapper">
-            <a href="/browse">← Back</a>
-            <br>
-            <h1 id="mod-name">
-              Loading...
-            </h1>
+      <div class="mod-hero">
+        <div class="mod-hero-content">
+          <h1 id="mod-name">Loading...</h1>
+          <p class="mod-hero-author">by <span id="mod-author">...</span></p>
+          <p id="mod-description" style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.95;"></p>
+
+          <div class="mod-hero-actions">
             <div id="mod-favourites-container"></div>
-            <div id="mod-tags-container" class="section">
-              <div id="mod-tags"></div>
-            </div>
-            <br>
-
-            <div class="section">
-                <strong>Author:</strong> <span id="mod-author"></span><br>
-                <strong>Published:</strong> <span id="mod-published"></span><br>
-                <strong>Description:</strong> <p id="mod-description"></p>
-                <p><a id="mod-github" href="#" target="_blank">View on GitHub</a></p>
-                <p><a id="mod-wiki" href="#">View on Photon Wiki</a></p>
-            </div>
-
-            <div class="section">
-              <h2>Dependencies</h2>
-              <ul id="dep-list"></ul>
-            </div>
-
-            <div class="section">
-              <h2>Conflicts</h2>
-              <ul id="conf-list"></ul>
-            </div>
+            <a id="mod-github" href="#" target="_blank" class="click-me">View on GitHub</a>
+            <a id="mod-wiki" href="#" class="click-me">View on Photon Wiki</a>
           </div>
+        </div>
+      </div>
+
+      <div class="mod-stats">
+        <div class="stat-card">
+          <div class="stat-card-icon">❤️</div>
+          <div class="stat-card-value" id="stat-favourites">0</div>
+          <div class="stat-card-label">Favourites</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon">📅</div>
+          <div class="stat-card-value" id="stat-published">0</div>
+          <div class="stat-card-label">Published</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon">🔧</div>
+          <div class="stat-card-value" id="stat-deps">0</div>
+          <div class="stat-card-label">Dependencies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon">⚠️</div>
+          <div class="stat-card-value" id="stat-conflicts">0</div>
+          <div class="stat-card-label">Conflicts</div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-button active" data-tab="overview">Overview</button>
+        <button class="tab-button" data-tab="dependencies">Dependencies</button>
+        <button class="tab-button" data-tab="conflicts">Conflicts</button>
+      </div>
+
+      <div class="tab-content active" id="tab-overview">
+        <div class="section">
+          <h2>Tags</h2>
+          <div id="mod-tags"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-dependencies">
+        <div class="section">
+          <h2>Dependencies</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            This mod requires the following mods in order to function properly:
+          </p>
+          <ul id="dep-list" style="list-style: none; padding: 0;"></ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-conflicts">
+        <div class="section">
+          <h2>Conflicts</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            This mod conflicts with the following mods:
+          </p>
+          <ul id="conf-list" style="list-style: none; padding: 0;"></ul>
         </div>
       </div>
       
@@ -74,5 +109,24 @@
     </div>
 
     <script type="module" src="js/cookieConsent.js"></script>
+    <script type="module" src="js/mod.js"></script>
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            button.classList.add('active');
+            document.getElementById(`tab-${targetTab}`).classList.add('active');
+          });
+        });
+      });
+    </script>
   </body>
 </html>

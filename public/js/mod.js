@@ -30,11 +30,14 @@ class ModDetailPage
         this.renderModDetails();
         this.renderDependencies();
         this.renderConflicts();
+        this.updateStatCards();
     }
 
     showError(message)
     {
-        document.body.textContent = `Error: ${message}`;
+        const hero = document.querySelector('.mod-hero h1');
+        if (hero)
+            hero.textContent = `Error: ${message}`;
     }
 
     setElementText(id, text)
@@ -42,6 +45,13 @@ class ModDetailPage
         const element = document.getElementById(id);
         if (element)
             element.textContent = text;
+    }
+
+    setElementHTML(id, html)
+    {
+        const element = document.getElementById(id);
+        if (element)
+            element.innerHTML = html;
     }
 
     renderFavouriteButton()
@@ -52,6 +62,11 @@ class ModDetailPage
 
         container.innerHTML = '';
         const favBtn = favouritesManager.createFavouriteButton(this.modKey, this.mod.favourites);
+        favBtn.style.width = 'auto';
+
+        const icon = document.createElement('span');
+        icon.textContent = '❤️';
+        favBtn.insertBefore(icon, favBtn.firstChild);
         
         container.appendChild(favBtn);
     }
@@ -85,10 +100,15 @@ class ModDetailPage
     createVersionRangeItem(rawStr, vRange)
     {
         const li = document.createElement('li');
+        li.style.cssText = 'padding: 1rem; margin-bottom: 0.5rem; background: rgba(30, 18, 82, 0.4); border-radius: 8px; border-left: 3px solid var(--accent-blue);';
+
         const modName = rawStr.split(/\s*\(/)[0];
 
         // Get the mod key
         const foundKey = Object.keys(this.allMods).find(k => this.allMods[k].id === modName || this.allMods[k].name === modName);
+
+        const titleContainer = document.createElement('div');
+        titleContainer.style.cssText = 'display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;';
 
         // Create title
         let titleNode;
@@ -97,14 +117,23 @@ class ModDetailPage
             titleNode = document.createElement('a');
             titleNode.href = `/mod.html?key=${encodeURIComponent(foundKey)}`;
             titleNode.textContent = modName;
+            titleNode.style.cssText = 'color: var(--accent-blue); font-weight: 600;';
         }
-        else titleNode = document.createTextNode(modName);
+        else 
+        {
+            titleNode = document.createElement('strong');
+            titleNode.textContent = modName;
+            titleNode.style.color = 'var(--text-primary)';
+        }
 
-        li.appendChild(titleNode);
+        titleContainer.appendChild(titleNode);
+        li.appendChild(titleContainer);
 
         // Version range
-        const rangeText = document.createTextNode(` - versions: ${vRange.toString()}`);
-        li.appendChild(rangeText);
+        const rangeDiv = document.createElement('div');
+        rangeDiv.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem; margin-left: 1.5rem;';
+        rangeDiv.textContent = `Version: ${vRange.toString()}`;
+        li.appendChild(rangeDiv);
 
         return li;
     }
@@ -119,7 +148,10 @@ class ModDetailPage
 
         if (rangeMap.size === 0)
         {
-            ul.innerHTML = '<li><em>None</em></li>';
+            const emptyLi = document.createElement('li');
+            emptyLi.style.cssText = 'padding: 1rem; text-align: center; color: var(--text-secondary);';
+            emptyLi.innerHTML = '<em>None</em>';
+            ul.appendChild(emptyLi);
             return;
         }
 
@@ -142,12 +174,26 @@ class ModDetailPage
         this.renderVersionRangeList(confRanges, 'conf-list');
     }
 
+    updateStatCards()
+    {
+        this.setElementText('stat-favourites', this.mod.favourites || 0);
+
+        const date = new Date(this.mod.published_at);
+        const shortDate = date.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+        this.setElementText('stat-published', shortDate);
+
+        const depCount = Array.isArray(this.mod.dependencies) ? this.mod.dependencies.length : 0;
+        this.setElementText('stat-deps', depCount);
+
+        const confCount = Array.isArray(this.mod.conflicts) ? this.mod.conflicts.length : 0;
+        this.setElementText('stat-conflicts', confCount);
+    }
+
     renderModDetails()
     {
         // Basic information
         this.setElementText('mod-name', this.mod.name);
         this.setElementText('mod-author', formatAuthor(this.mod.author));
-        this.setElementText('mod-published', formatDate(this.mod.published_at));
         this.setElementText('mod-description', this.mod.description);
 
         // Favourites

@@ -14,16 +14,16 @@
       <div id="navbar">
         <ul class="nav">
           <li>
-            <a href="https://photonmodmanager.onrender.com">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/submit">Submit</a>
+            <a href="/submit">Submit</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/browse">Browse</a>
+            <a href="/browse">Browse</a>
           </li>
           <li>
-            <a href="https://photonmodmanager.onrender.com/about">About</a>
+            <a href="/about">About</a>
           </li>
         </ul>
       </div>
@@ -34,54 +34,68 @@
             <h1>
               Browse
             </h1>
-            <p>
-              Here, you may browse various mods, all of which have been uploaded to this database, as well as download them. As this database is still new, the list may be a bit limited, but have faith that it will grow in time.
+            <p style="color: var(--text-light); margin-bottom: 2rem;">
+              Explore the collection of Balatro mods and find your next favourite mod!
             </p>
-            <form method="get">
-              <label>
-                <span>Sort By:       </span>
-                <select name="sortBy">
-                  <option value="published_at"${sortBy==='published_at'?' selected':''}>Date</option>
-                  <option value="favourites"${sortBy==='favourites'?' selected':''}>Favourites</option>
-                </select>
-              </label>
-              <br>
-              <br>
-              <label>
-                <span>Order:        </span>
-                <select name="order">
-                  <option value="asc"${order==='asc'?' selected':''}>Ascending</option>
-                  <option value="desc"${order==='desc'?' selected':''}>Descending</option>
-                </select>
-              </label>
-              <br>
-              <br>
-              <label>
-                <span>Filter By Tag:</span>
-                <select name="tag">
-                  <option value="">All</option>
-                  <option value="Textures">Textures</option>
-                  <option value="SFX">SFX / Music</option>
-                  <option value="Vanilla Plus">Vanilla Plus</option>
-                  <option value="Jokers">Jokers</option>
-                  <option value="Consumables">Consumables</option>
-                  <option value="Cards">Cards</option>
-                  <option value="Blinds">Blinds</option>
-                  <option value="Modifiers">Modifiers</option>
-                  <option value="Mechanics">Mechanics</option>
-                  <option value="Quality of Life">Quality of Life</option>
-                  <option value="Misc">Miscellaneous</option>
-                </select>
-              </label>
-              <br>
-              <br>
-              <button class="click-me" type="submit">Apply</button>
+            <form method="get" style="background: rgba(30, 18, 82, 0.3); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div>
+                  <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
+                    <span style="font-size: 0.9rem;">
+                      Sort By
+                    </span>
+                  </label>
+                  <select name="sortBy" style="width: 100%;">
+                    <option value="published_at">Date Published</option>
+                    <option value="favourites">Most Favourited</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
+                    <span style="font-size: 0.9rem;">Order</span>
+                  </label>
+                  <select name="order" style="width: 100%;">
+                    <option value="desc">Descending</option>
+                    <option value="asc">Ascending</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
+                    <span style="font-size: 0.9rem;">Filter by Tag</span>
+                  </label>
+                  <select name="tag" style="width: 100%;">
+                    <option value="">All Tags</option>
+                    <option value="Textures">Textures</option>
+                    <option value="SFX">SFX / Music</option>
+                    <option value="Vanilla Plus">Vanilla Plus</option>
+                    <option value="Jokers">Jokers</option>
+                    <option value="Consumables">Consumables</option>
+                    <option value="Cards">Cards</option>
+                    <option value="Blinds">Blinds</option>
+                    <option value="Modifiers">Modifiers</option>
+                    <option value="Mechanics">Mechanics</option>
+                    <option value="Quality of Life">Quality of Life</option>
+                    <option value="Misc">Miscellaneous</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="text-align: center; margin-top: 1.5rem;">
+                <button class="click-me" type="submit">
+                  Apply Filters
+                </button>
+              </div>
             </form>
 
-            <p>
-              (Remember to exercise caution with downloading mods from this website, as anyone is allowed to submit mods here. We are not responsible for the contents of the GitHub pages and implore our users to use the same level of caution they would otherwise downloading stuff from the internet.)
-            </p>
+            <div style="background: rgba(255, 154, 0, 0.1); border-left: 4px solid #ff9a00; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+              <p style="margin: 0; color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">
+                Exercise caution when downloading mods. We are not responsible for the contents of GitHub repositories. Always review mod code before installation.
+              </p>
+            </div>
           </div>
+
           <ul id="mod-list"></ul>
         </div>
       </div>
@@ -97,5 +111,10 @@
 
     <script type="module" src="js/cookieConsent.js"></script>
     <script type="module" src="js/browse.js"></script>
+    <script type="module">
+      import { initScrollAnimations } from './js/browse.js';
+
+      document.querySelector('form').addEventListener('submit', () => { setTimeout(() => { initScrollAnimations(); }, 100); });
+    </script>
   </body>
 </html>
