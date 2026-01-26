@@ -64,6 +64,8 @@ class ModBrowser
             sortBy: 'published_at',
             order: 'desc',
             tag: '',
+            author: '',
+            search: '',
             limit: null
         };
     }
@@ -76,6 +78,8 @@ class ModBrowser
         this.extractAllTags();
         this.populateTagFilter();
         this.renderMods();
+        this.setupSearchListener();
+        this.setupClearFilters();
     }
 
     async loadMods()
@@ -97,9 +101,55 @@ class ModBrowser
         this.params.sortBy = params.get('sortBy') || 'published_at';
         this.params.order = params.get('order') || 'desc';
         this.params.tag = params.get('tag') || '';
+        this.params.author = params.get('author') || '';
+        this.params.search = params.get('search') || '';
 
         const isIndex = window.location.pathname === '/' || window.location.pathname === '/index.html';
         this.params.limit = isIndex ? 5 : null;
+    }
+
+    updateActiveFilters()
+    {
+        const container = document.getElementById('active-filters');
+        const tagsContainer = document.getElementById('filter-tags');
+
+        if (!container || !tagsContainer)
+            return;
+
+        const filters = [];
+
+        if (this.params.tag)
+            filters.push({ type: 'Tag', value: this.params.tag, param: 'tag' });
+        if (this.params.author)
+            filters.push({ type: 'Author', value: this.params.author, param: 'author' });
+        if (this.params.search)
+            filters.push({ type: 'Search', value: this.params.search, param: 'search' });
+
+        if (filters.length === 0)
+        {
+            container.style.display = 'none';
+            return;
+        }
+
+        container.style.display = 'block';
+        tagsContainer.innerHTML = '';
+
+        filters.forEach(filter => {
+            const tag = document.createElement('span');
+            tag.style.cssText = 'display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.75rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50px; font-size: 0.875rem; color: white; font-weight: 600;';
+            tag.innerHTML = `
+                ${filter.type}: ${filter.value}
+                <button type="button" style="background: none; border: none; color: white; cursor: pointer; font-size: 1.1rem; padding: 0; margin: 0; line-height: 1;">&times;</button>
+            `;
+
+            tag.querySelector('button').addEventListener('click', () => {
+                const params = getUrlParams();
+                params.delete(filter.param);
+                window.location.search = params.toString();
+            });
+
+            tagsContainer.appendChild(tag);
+        });
     }
 
     updateUIControls()
@@ -107,6 +157,8 @@ class ModBrowser
         const sortSelect = document.querySelector('select[name="sortBy"]');
         const orderSelect = document.querySelector('select[name="order"]');
         const tagSelect = document.querySelector('select[name="tag"]');
+        const authorInput = document.getElementById('author-filter');
+        const searchInput = document.getElementById('search-input');
 
         if (sortSelect)
             sortSelect.value = this.params.sortBy;
@@ -114,6 +166,12 @@ class ModBrowser
             orderSelect.value = this.params.order;
         if (tagSelect)
             tagSelect.value = this.params.tag;
+        if (authorInput)
+            authorInput.value = this.params.author;
+        if (searchInput)
+            searchInput.value = this.params.search;
+
+        this.updateActiveFilters();
     }
 
     extractAllTags()
@@ -161,6 +219,31 @@ class ModBrowser
         // Filter by tag
         if (this.params.tag)
             entries = entries.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(this.params.tag));
+
+        // Filter by author
+        if (this.params.author)
+        {
+            entries = entries.filter(mod => {
+                const authors = Array.isArray(mod.author) ? mod.author : [mod.author];
+                return authors.some(a => String(a).toLowerCase() === this.params.author.toLowerCase());
+            });
+        }
+
+        // Filter by search
+        if (this.params.search)
+        {
+            const searchLower = this.params.search.toLowerCase();
+
+            entries = entries.filter(mod => {
+                const nameMatch = (mod.name || '').toLowerCase().includes(searchLower);
+                const descMatch = (mod.description || '').toLowerCase().includes(searchLower);
+
+                const authors = Array.isArray(mod.author) ? mod.author : [mod.author];
+                const authorMatch = authors.some(a => String(a).toLowerCase().includes(searchLower));
+
+                return nameMatch || descMatch || authorMatch;
+            });
+        }
 
         // Sort
         entries.sort((a, b) => {
@@ -222,7 +305,37 @@ class ModBrowser
         // Card author
         const author = document.createElement('div');
         author.className = 'mod-card-author';
-        author.textContent = `by ${formatAuthor(mod.author) ?? 'Unknown'}`;
+        author.style.cursor = 'pointer';
+        author.style.transition = 'color 0.2s';
+        author.innerHTML = `by <span class="author-link" data-author="${formatAuthor(mod.author) ?? 'Unknown'}">${formatAuthor(mod.author) ?? 'Unknown'}</span>`;
+        
+        const authorLink = author.querySelector('.author-link');
+        if (authorLink)
+        {
+            authorLink.style.color = 'var(--accent-blue)';
+            authorLink.style.textDecoration = 'underline';
+            authorLink.style.cursor = 'pointer';
+
+            authorLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const authorName = authorLink.dataset.author;
+                const params = getUrlParams();
+                params.set('author', authorName);
+
+                window.location.search = params.toString();
+            });
+
+            authorLink.addEventListener('mouseenter', () => {
+                authorLink.style.opacity = '0.8';
+            });
+
+            authorLink.addEventListener('mouseleave', () => {
+                authorLink.style.opacity = '1';
+            });
+        }
+
         li.appendChild(author);
 
         // Card description
@@ -250,6 +363,9 @@ class ModBrowser
         favBtn.style.marginBottom = '1rem';
         li.appendChild(favBtn);
 
+        favBtn.addEventListener('mouseenter', () => li.classList.add('force-hover'));
+        favBtn.addEventListener('mouseleave', () => li.classList.remove('force-hover'));
+
         // Card tags
         const tagBar = this.createTagBar(mod.tags || []);
         li.appendChild(tagBar);
@@ -263,7 +379,7 @@ class ModBrowser
         detailsLink.href = `mod.html?key=${encodeURIComponent(mod.key)}`;
         detailsLink.className = 'mod-card-link';
         detailsLink.innerHTML = 'Details';
-        detailsLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: white; transition: all 0.2s;';
+        detailsLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s;';
         linksContainer.appendChild(detailsLink);
 
         // GitHub link
@@ -319,6 +435,51 @@ class ModBrowser
         });
 
         initScrollAnimations();
+
+        setTimeout(() => {
+            const cards = ul.querySelectorAll('.mod-card');
+            cards.forEach((card, index) => {
+                if (index < 3)
+                    card.classList.add('visible');
+            });
+        }, 50);
+    }
+
+    setupSearchListener()
+    {
+        const searchInput = document.getElementById('search-input');
+        if (!searchInput)
+            return;
+
+        let timeout;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                const params = getUrlParams();
+                if (e.target.value)
+                    params.set('search', e.target.value);
+                else
+                    params.delete('search');
+
+                window.location.search = params.toString();
+            }, 500);
+        });
+    }
+
+    setupClearFilters()
+    {
+        const clearBtn = document.getElementById('clear-filters');
+        if (!clearBtn)
+            return;
+
+        clearBtn.addEventListener('click', () => {
+            const params = getUrlParams();
+            params.delete('tag');
+            params.delete('author');
+            params.delete('search');
+
+            window.location.search = params.toString();
+        });
     }
 }
 

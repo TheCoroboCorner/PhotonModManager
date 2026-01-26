@@ -629,6 +629,55 @@ textarea:hover:not(:focus)
   transform: scaleX(1);
 }
 
+.mod-card.force-hover
+{
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%), var(--bg-card);
+}
+
+.mod-card.force-hover::before
+{
+  transform: scaleX(1);
+}
+
+.mod-card-link
+{
+  position: relative;
+  overflow: hidden;
+}
+
+.mod-card-link *
+{
+  position: relative;
+  z-index: 1;
+}
+
+.mod-card-link::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.mod-card-link:hover::before
+{
+  opacity: 1;
+}
+
+.mod-card-link:active
+{
+  transform: translateY(0) scale(0.98);
+}
+
 .mod-card-link:hover
 {
   transform: translateY(-2px);

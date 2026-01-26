@@ -17,15 +17,50 @@ async function findMetadataFile(user, repo, branch)
         'data/metadata.json',
     ];
 
-    for (const path of commonPaths)
+    async function isValidMetadata(path)
     {
         try
         {
-            await getFileContents(user, repo, path, branch);
-            console.log(`Found metadata at ${path}`);
+            const fileData = await getFileContents(user, repo, path, branch);
+            const raw = Buffer.from(fileData.content, fileData.encoding).toString('utf8');
+
+            let data;
+            try
+            {
+                data = JSON.parse(raw);
+            }
+            catch
+            {
+                console.log(`[Auto-detect] ${path} is not a valid JSON file`);
+                return false;
+            }
+
+            const hasId = 'id' in data;
+            const hasName = 'name' in data;
+            const hasAuthor = 'author' in data;
+
+            if (hasId && hasName && hasAuthor)
+            {
+                console.log(`[Auto-detect] ${path} contains valid metadata (id: ${data.id}, name: ${data.name}, author: ${data.author})`);
+                return true;
+            }
+
+            console.log(`[Auto-detect] ${path} missing required fields (has id: ${hasId}, has name: ${hasName}, has author: ${hasAuthor})`);
+            return false;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    for (const path of commonPaths)
+    {
+        if (await isValidMetadata(path))
+        {
+            console.log(`[Auto-detect] Found metadata at common path: ${path}`);
             return path;
         }
-        catch {}
     }
 
     try
@@ -33,10 +68,15 @@ async function findMetadataFile(user, repo, branch)
         const allFiles = await listGitHubFiles(user, repo, '', branch);
         const jsonFiles = allFiles.filter(f => f.endsWith('.json'));
 
-        if (jsonFiles.length > 0)
+        console.log(`[Auto-detect] Found ${jsonFiles.length} JSON files to check`);
+
+        for (const path of jsonFiles)
         {
-            console.log(`Found JSON file: ${jsonFiles[0]}`);
-            return jsonFiles[0];
+            if (await isValidMetadata(path))
+            {
+                console.log(`[Auto-detect] Found valid metadata at: ${path}`);
+                return path;
+            }
         }
     }
     catch (err)
@@ -44,6 +84,7 @@ async function findMetadataFile(user, repo, branch)
         console.error('Error searching for metadata:', err);
     }
 
+    console.log('[Auto-detect] No valid metadata file found');
     return null;
 }
 
