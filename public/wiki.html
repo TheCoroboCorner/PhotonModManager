@@ -10,33 +10,144 @@
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
 
     <style>
-        #sidebar {
-            width: 240px;
-            overflow-y: auto;
-            border-right: 1px solid #352552;
+      .wiki-layout 
+      {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+        padding: 2rem;
+        min-height: 60vh;
+      }
+
+      .wiki-sidebar 
+      {
+        background: rgba(30, 18, 82, 0.3);
+        border-radius: 12px;
+        padding: 1.5rem;
+        height: fit-content;
+        position: sticky;
+        top: 80px;
+      }
+
+      .wiki-sidebar h2 
+      {
+        margin: 0 0 1rem 0;
+        font-size: 1.25rem;
+        color: var(--text-white);
+      }
+
+      .wiki-main 
+      {
+        background: rgba(30, 18, 82, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        min-height: 400px;
+      }
+
+      #card-select 
+      {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #1e1252 0%, #261b53 100%);
+        border: 2px solid rgba(102, 126, 234, 0.3);
+        border-radius: 8px;
+        color: var(--text-primary);
+        font-size: 1rem;
+      }
+
+      #card-select:focus 
+      {
+        outline: none;
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+      }
+
+      .card-display 
+      {
+        animation: fadeInScale 0.4s ease;
+      }
+
+      .card-header 
+      {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+      }
+
+      #sprite 
+      {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(102, 126, 234, 0.3);
+        image-rendering: pixelated;
+        background-repeat: no-repeat;
+      }
+
+      #card-title 
+      {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      #loc-text 
+      {
+        background: rgba(30, 18, 82, 0.4);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-blue);
+        line-height: 1.8;
+        white-space: pre-wrap;
+      }
+
+      .empty-state 
+      {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--text-secondary);
+      }
+
+      .empty-state-icon 
+      {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+      }
+
+      @media (max-width: 968px) 
+      {
+        .wiki-layout 
+        {
+          grid-template-columns: 1fr;
         }
-        #detail {
-            flex: 1;
-            padding: 1em;
-            overflow-y: auto;
+
+        .wiki-sidebar 
+        {
+          position: static;
         }
-        .card-section {
-            margin: 0;
-            padding: .5em;
-            font-weight: bold;
+      }
+
+      @keyframes fadeInScale 
+      {
+        from 
+        {
+          opacity: 0;
+          transform: scale(0.95);
         }
-        #sprite {
-            margin: 1em 0;
-            background-repeat: no-repeat;
+        to 
+        {
+          opacity: 1;
+          transform: scale(1);
         }
-        #loc-text {
-            white-space: pre-wrap;
-        }
-        pre {
-            background: #111;
-            padding: 1em;
-            overflow-x: auto;
-        }
+      }
     </style>
   </head>
   <body>
@@ -58,30 +169,37 @@
         </ul>
       </div>
     
-      <div class="content-wrapper flex alignment">
+      <div class="content-wrapper">
         <div id="content-container" style="flex-grow: 1;">
-          <h1 id="photon" style="padding: 0 2rem">Photon Wiki</h1>
-          <h3 id="mod-name" style="padding: 0 2rem"></h3>
-          <div class="detail-wrapper" id="detail">
-            <h1 id="card-title">Select a Card</h1>
-            <div id="sprite"></div>
-            <p id="loc-text"></p>
-            <pre id="raw-def"></pre>
+          <div class="wrapper" style="border-bottom: 1px solid rgba(102, 126, 234, 0.2);">
+            <h1 id="photon" style="margin: 0 0 0.5rem 0;">Photon Wiki</h1>
+            <h3 id="mod-name" style="margin: 0; color: var(--text-secondary); font-weight: 500;"></h3>
           </div>
-          <div id="sidebar" class="wrapper">
-            <h2 style="padding: .5em; margin: 0">Cards</h2>
-          <!---->
-            <select id="card-select" style="width: 100%; padding: .5em; margin: .5em 0">
-              <option value="" disabled selected>-- Select a Card --</option>
-            </select>
-          <!---->
-          <!--
-            <div id="card-list"></div>
-          -->
+
+          <div class="wiki-layout">
+            <div class="wiki-sidebar">
+              <h2>Select Card</h2>
+              <select id="card-select">
+                <option value="" disabled selected>-- Choose a Card --</option>
+              </select>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">
+                Browse through all cards and objects added by this mod.
+              </p>
+            </div>
+
+            <div class="wiki-main">
+              <div id="detail">
+                <div class="empty-state">
+                  <div class="empty-state-icon">🎴</div>
+                  <h2 style="color: var(--text-primary); margin-bottom: 0.5rem;">Select a Card</h2>
+                  <p>Choose a card from the dropdown to view its details</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
+
       <div id="footer">
         <div class="footer-wrapper">
           <p>
@@ -91,6 +209,9 @@
       </div>
     </div>
 
+    <script type="module" src="js/toast.js"></script>
+    <script type="module" src="js/confetti.js"></script>
+    <script type="module" src="js/pageTransitions.js"></script>
     <script type="module" src="js/wiki.js"></script>
   </body>
 </html>

@@ -62,7 +62,8 @@ class ModDetailPage
 
         container.innerHTML = '';
         const favBtn = favouritesManager.createFavouriteButton(this.modKey, this.mod.favourites);
-        favBtn.style.width = 'auto';
+        
+        favBtn.style.cssText = 'width: auto; height: 64px; padding: 1rem 2rem; font-size: 1rem;';
 
         const icon = document.createElement('span');
         icon.textContent = '❤️';
