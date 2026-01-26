@@ -453,8 +453,11 @@ class ModBrowser
         searchInput.addEventListener('input', (e) => {
             clearTimeout(timeout);
             timeout = setTimeout(() => {
+                if (searchInput !== document.activeElement || searchInput.isContentEditable)
+                    return;
+
                 const params = getUrlParams();
-                if (e.target.value && searchInput !== document.activeElement)
+                if (e.target.value)
                     params.set('search', e.target.value);
                 else
                     params.delete('search');
