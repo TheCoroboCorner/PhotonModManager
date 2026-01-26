@@ -1,0 +1,138 @@
+{
+  "locMap": {
+    "JokerDisplay": {
+      "name": "JokerDisplay",
+      "text": [
+        "Displays useful information under Jokers",
+        " ",
+        "{C:attention}Controls:{}",
+        "{C:blue}Right-click or B:{} hide/show",
+        "{C:blue}Left-click or Up:{} collapse/expand",
+        " ",
+        "Special Thanks to {C:green}Eremel{} and {C:green}OppositeWolf770{}",
+        " ",
+        "Russian localization by: {C:green}WholeHorse{}",
+        "French localization by: {C:green}SDM_0{}",
+        "Portuguese localization by: {C:green}naumazeredo{}",
+        "Italian localization by: {C:green}fleshness{}",
+        "German localization by: {C:green}GunnableScum{}",
+        "Traditional Chinese localization by: {C:green}wilfredlam0418{}",
+        "Dutch localization by: {C:green}Soulsphere{}",
+        "Simplified Chinese localization by: {C:green}ChromaPIE",
+        "Japanese localization by: {C:green}koukichi_kkc"
+      ],
+      "type": "Mod"
+    },
+    "jdis_enabled": {
+      "name": "\"Enabled\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_hide_by_default": {
+      "name": "\"Hide by default\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_hide_empty": {
+      "name": "\"Hide empty\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_shift_to_hide": {
+      "name": "\"Shift + Right Click to hide\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_joker_count": {
+      "name": "\"Show Joker slot count over displays\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_disable_collapse": {
+      "name": "\"Disable collapsing\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_disable_perishable": {
+      "name": "\"Disable Perishable\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_disable_rental": {
+      "name": "\"Disable Rental\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_modifiers": {
+      "name": "\"Modifiers\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_reminders": {
+      "name": "\"Reminders\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_extras": {
+      "name": "\"Extras\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_default_display": {
+      "name": "\"Default\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_small_display": {
+      "name": "\"Collapsed\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_active": {
+      "name": "\"Active!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_inactive": {
+      "name": "\"Inactive\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_all_suits": {
+      "name": "\"All Suits\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_author": {
+      "name": "\"Author\"\n\t\t",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jdis_odds": {
+      "name": "\"#1# in #2#\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "jdis_rank_of_suit": {
+      "name": "\"#1# of #2#\"\n\t\t",
+      "text": [],
+      "type": "v_dictionary"
+    }
+  },
+  "atlases": {},
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n    path = \"icon.png\",\n    px = 32,\n    py = 32",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.9.1"
+}
