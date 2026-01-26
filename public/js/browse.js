@@ -78,6 +78,13 @@ class ModBrowser
         this.extractAllTags();
         this.populateTagFilter();
         this.renderMods();
+
+        window.addEventListener('popstate', () => {
+            this.extractUrlParams();
+            this.updateUIControls();
+            this.renderMods();
+        });
+
         this.setupSearchListener();
         this.setupClearFilters();
     }
@@ -142,11 +149,7 @@ class ModBrowser
                 <button type="button" style="background: none; border: none; color: white; cursor: pointer; font-size: 1.1rem; padding: 0; margin: 0; line-height: 1;">&times;</button>
             `;
 
-            tag.querySelector('button').addEventListener('click', () => {
-                const params = getUrlParams();
-                params.delete(filter.param);
-                window.location.search = params.toString();
-            });
+            tag.querySelector('button').addEventListener('click', () => this.updateParams(params => params.delete(filter.param)));
 
             tagsContainer.appendChild(tag);
         });
@@ -275,11 +278,7 @@ class ModBrowser
             btn.type = 'button';
             btn.textContent = tag;
             btn.className = 'tag-btn';
-            btn.addEventListener('click', () => {
-                const params = getUrlParams();
-                params.set('tag', tag);
-                window.location.search = params.toString();
-            });
+            btn.addEventListener('click', () => this.updateParams(params => params.set('tag', tag)));
 
             tagBar.appendChild(btn);
         });
@@ -323,10 +322,7 @@ class ModBrowser
                 e.stopPropagation();
 
                 const authorName = authorLink.dataset.author;
-                const params = getUrlParams();
-                params.set('author', authorName);
-
-                window.location.search = params.toString();
+                this.updateParams(params => params.set('author', authorName));
             });
 
             authorLink.addEventListener('mouseenter', () => {
@@ -443,6 +439,18 @@ class ModBrowser
         initScrollAnimations();
     }
 
+    updateParams(mutator)
+    {
+        const params = getUrlParams();
+        mutator(params);
+
+        history.replaceState(null, '', '?' + params.toString());
+
+        this.extractUrlParams();
+        this.updateUIControls();
+        this.renderMods();
+    }
+
     setupSearchListener()
     {
         const searchInput = document.getElementById('search-input');
@@ -450,20 +458,18 @@ class ModBrowser
             return;
 
         let timeout;
-        searchInput.addEventListener('input', (e) => {
+
+        searchInput.addEventListener('input', () => {
             clearTimeout(timeout);
+
             timeout = setTimeout(() => {
-                if ((searchInput !== document.activeElement) || searchInput.isContentEditable)
-                    return;
-
-                const params = getUrlParams();
-                if (e.target.value)
-                    params.set('search', e.target.value);
-                else
-                    params.delete('search');
-
-                window.location.search = params.toString();
-            }, 500);
+                this.updateParams(params => {
+                    if (searchInput.value)
+                        params.set('search', searchInput.value);
+                    else
+                        params.delete('search');
+                });
+            }, 300);
         });
     }
 
@@ -474,12 +480,11 @@ class ModBrowser
             return;
 
         clearBtn.addEventListener('click', () => {
-            const params = getUrlParams();
-            params.delete('tag');
-            params.delete('author');
-            params.delete('search');
-
-            window.location.search = params.toString();
+            this.updateParams(params => {
+                params.delete('tag');
+                params.delete('author');
+                params.delete('search');
+            });
         });
     }
 }
