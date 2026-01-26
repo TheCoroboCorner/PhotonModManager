@@ -59,7 +59,7 @@
 
             <form method="get" style="background: rgba(30, 18, 82, 0.3); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
               <input type="hidden" name="author" id="author-filter" value="">
-              
+
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
                 <div>
                   <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
@@ -69,6 +69,7 @@
                   </label>
                   <select name="sortBy" style="width: 100%;">
                     <option value="published_at">Date Published</option>
+                    <option value="updated_at">Recently Updated</option>
                     <option value="favourites">Most Favourited</option>
                   </select>
                 </div>
@@ -132,6 +133,7 @@
     </div>
 
     <script type="module" src="js/toast.js"></script>
+    <script type="module" src="js/keyboard.js"></script>
     <script type="module" src="js/confetti.js"></script>
     <script type="module" src="js/pageTransitions.js"></script>
     <script type="module" src="js/cookieConsent.js"></script>

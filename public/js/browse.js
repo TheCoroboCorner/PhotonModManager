@@ -250,8 +250,10 @@ class ModBrowser
             let diff;
             if (this.params.sortBy === 'favourites')
                 diff = b.favourites - a.favourites;
+            else if (this.params.sortBy === 'updated_at')
+                diff = Date.parse(b.updated_at) - Date.parse(a.updated_at);
             else
-                diff = Date.parse(b.published_at) - Date.parse(a.published_at);
+                diff = Date.parse(b.published_at) - Date.parse(a.published_at)
 
             return this.params.order === 'asc' ? -diff : diff;
         });
@@ -434,15 +436,11 @@ class ModBrowser
             ul.appendChild(li);
         });
 
-        initScrollAnimations();
+        const cards = ul.querySelectorAll('.mod-card');
+        if (cards.length > 0)
+            cards[0].classList.add('visible');
 
-        setTimeout(() => {
-            const cards = ul.querySelectorAll('.mod-card');
-            cards.forEach((card, index) => {
-                if (index === 0)
-                    card.classList.add('visible');
-            });
-        }, 50);
+        initScrollAnimations();
     }
 
     setupSearchListener()

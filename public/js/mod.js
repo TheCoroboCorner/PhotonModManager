@@ -27,10 +27,12 @@ class ModDetailPage
             return;
         }
 
+        this.trackView();
         this.renderModDetails();
         this.renderDependencies();
         this.renderConflicts();
         this.updateStatCards();
+        this.renderRelatedMods();
     }
 
     showError(message)
@@ -52,6 +54,18 @@ class ModDetailPage
         const element = document.getElementById(id);
         if (element)
             element.innerHTML = html;
+    }
+
+    async trackView()
+    {
+        try
+        {
+            await fetch(`/analytics/view/${encodeURIComponent(this.modKey)}`, { method: 'POST' });
+        }
+        catch (err)
+        {
+            console.error('Failed to track view:', err);
+        }
     }
 
     renderFavouriteButton()
@@ -238,6 +252,104 @@ class ModDetailPage
 
         const confCount = Array.isArray(this.mod.conflicts) ? this.mod.conflicts.length : 0;
         this.setElementText('stat-conflicts', confCount);
+
+        const views = this.mod.analytics?.views || 0;
+        this.setElementText('stat-views', views);
+    }
+
+    findRelatedMods(limit = 5)
+    {
+        const currentTags = this.mod.tags || [];
+        const currentAuthor = Array.isArray(this.mod.author) ? this.mod.author : [this.mod.author];
+
+        const scored = Object.entries(this.allMods).filter(([key]) => key !== this.modKey).map(([key, mod]) => {
+            let score = 0;
+
+            const sameAuthorBonus = 10;
+            const sameTagBonus = 3;
+            const dependencyBonus = 5;
+
+            const modAuthor = Array.isArray(mod.author) ? mod.author : [mod.author];
+            if (currentAuthor.some(a => modAuthor.includes(a)))
+                score += sameAuthorBonus;
+
+            const modTags = mod.tags || [];
+            const sharedTags = currentTags.filter(tag => modTags.includes(tag));
+            score += sharedTags.length * sameTagBonus;
+
+            if (Array.isArray(this.mod.dependencies))
+            {
+                const depIds = this.mod.dependencies.map(d => {
+                    if (typeof d === 'string')
+                        return d.split(/\s*\(/)[0];
+
+                    return d.key;
+                });
+
+                if (depIds.includes(mod.id))
+                    score += dependencyBonus;
+            }
+
+            return { key, mod, score };
+        }).filter(item => item.score > 0).sort((a, b) => b.score - a.score).slice(0, limit);
+
+        return scored.map(item => ({ ...item.mod, key: item.key }));
+    }
+
+    createRelatedModCard(mod)
+    {
+        const card = document.createElement('div');
+        card.style.cssText = 'background: rgba(30, 18, 82, 0.4); padding: 1rem; border-radius: 8px; border: 1px solid rgba(102, 126, 234, 0.2); transition: all 0.2s; cursor: pointer;';
+
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-4px)';
+            card.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+            card.style.boxShadow = '0 8px 20px rgba(102, 126, 234, 0.3)';
+        });
+
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.borderColor = 'rgba(102, 126, 234, 0.2)';
+            card.style.boxShadow = 'none';
+        });
+
+        card.addEventListener('click', () => {
+            window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`;
+        });
+
+        card.innerHTML = `
+            <h4 style="margin: 0 0 0.5rem 0; color: var(--text-white); font-size: 1rem;">${mod.name}</h4>
+            <p style="margin: 0 0 0.5rem 0; font-size: 0.875rem; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                ${mod.description || 'No description'}
+            </p>
+            <div style="display: flex; gap: 0.5rem; align-items: center; font-size: 0.75rem; color: var(--text-secondary);">
+                <span>❤️ ${mod.favourites || 0}</span>
+                ${mod.tags ? `<span>•</span><span>🏷️ ${mod.tags.length}</span>` : ''}
+            </div>
+        `;
+
+        return card;
+    }
+
+    renderRelatedMods()
+    {
+        const container = document.getElementById('related-mods-grid');
+        if (!container)
+            return;
+
+        container.innerHTML = '';
+
+        const related = this.findRelatedMods(5);
+        if (related.length === 0)
+        {
+            container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">No related mods found.</p>';
+            return;
+        }
+
+        related.forEach(mod => {
+            const card = this.createRelatedModCard(mod);
+            container.appendChild(card);
+        });
     }
 
     renderModDetails()

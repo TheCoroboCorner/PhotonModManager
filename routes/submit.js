@@ -88,6 +88,28 @@ async function findMetadataFile(user, repo, branch)
     return null;
 }
 
+async function getLatestCommitDate(user, repo)
+{
+    try
+    {
+        const url = `https://api.github.com/repos/${user}/${repo}/commits?per_page=1`;
+        const response = await fetch(url, { headers: config.github.headers });
+
+        if (!response.ok)
+            return null;
+
+        const commits = await response.json();
+        if (commits.length > 0)
+            return commits[0].commit.committer.date;
+    }
+    catch (err)
+    {
+        console.error('Error fetching commit date:', err);
+    }
+
+    return null;
+}
+
 router.post('/submit', async (req, res) => {
     try
     {
@@ -127,6 +149,9 @@ router.post('/submit', async (req, res) => {
         entry.published_at = new Date().toISOString();
         entry.type = "Mod";
         entry.tags = tagArray;
+        
+        const latestCommit = await getLatestCommitDate(user, repo);
+        entry.updated_at = latestCommit || entry.published_at;
 
         data[key] = entry;
         await writeData(data);

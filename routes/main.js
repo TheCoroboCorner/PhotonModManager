@@ -1,8 +1,35 @@
 import express from 'express';
 import path from 'path';
 import { config } from '../config.js';
+import { readData, writeData } from '../dataService.js';
 
 const router = express.Router();
+
+router.post('/analytics/view/:key', async (req, res) => {
+    try
+    {
+        const { key } = req.params;
+        const data = await readData();
+
+        if (!data[key])
+            return res.status(404).json({ error: 'Mod not found' });
+
+        if (!data[key].analytics)
+            data[key].analytics = { views: 0, lastViewed: null };
+
+        data[key].analytics.views++;
+        data[key].analytics.lastViewed = new Date().toISOString();
+
+        await writeData(data);
+
+        res.json({ success: true, views: data[key].analytics.views });
+    }
+    catch (err)
+    {
+        console.error('Analytics error:', err);
+        res.status(500).json({ error: 'Failed to track view' });
+    }
+});
 
 router.get('/', (req, res) => {
     res.send(`
