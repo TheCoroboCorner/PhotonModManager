@@ -454,7 +454,7 @@ class ModBrowser
             clearTimeout(timeout);
             timeout = setTimeout(() => {
                 const params = getUrlParams();
-                if (e.target.value)
+                if (e.target.value && searchInput !== document.activeElement)
                     params.set('search', e.target.value);
                 else
                     params.delete('search');
