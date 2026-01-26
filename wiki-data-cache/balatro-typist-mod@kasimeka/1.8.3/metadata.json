@@ -1,0 +1,27 @@
+{
+  "locMap": {},
+  "atlases": {
+    "modicon": {
+      "path": "avatar.png",
+      "px": 0,
+      "py": 0,
+      "localPath": "/wiki-data/balatro-typist-mod@kasimeka/1.8.3/avatar.png",
+      "resolvedGitHubPath": "assets/1x/avatar.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\", path = \"avatar.png\", px = 34, py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "1.8.3"
+}
