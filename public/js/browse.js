@@ -439,7 +439,7 @@ class ModBrowser
         setTimeout(() => {
             const cards = ul.querySelectorAll('.mod-card');
             cards.forEach((card, index) => {
-                if (index < 3)
+                if (index === 0)
                     card.classList.add('visible');
             });
         }, 50);
