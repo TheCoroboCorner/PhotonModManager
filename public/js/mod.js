@@ -98,6 +98,56 @@ class ModDetailPage
         container.appendChild(tagBar);
     }
 
+    renderOverview()
+    {
+        const overviewTab = document.getElementById('tab-overview');
+        if (!overviewTab)
+            return;
+
+        let overviewContent = overviewTab.querySelector('.overview-content');
+        if (!overviewContent)
+        {
+            overviewContent = document.createElement('div');
+            overviewContent.className = 'overview-content';
+            overviewTab.appendChild(overviewContent);
+        }
+
+        let html = '';
+
+        if (this.mod.version || this.mod.target_version)
+        {
+            html += '<div class="overview-section" style="margin-bottom: 2rem;">';
+            html += '<h3 style="color: var(--text-white); margin-bottom: 1rem;">Version Information</h3>';
+            html += '<div style="background: rgba(30, 18, 82, 0.4); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent-blue);">';
+            
+            if (this.mod.version)
+                html += `<p><strong>Current Version:</strong> ${this.mod.version}</p>`;
+            
+            if (this.mod.target_version)
+                html += `<p><strong>Target Game Version:</strong> ${this.mod.target_version}</p>`;
+            
+            html += '</div></div>';
+        }
+
+        if (this.mod.readme)
+        {
+            html += '<div class="overview-section">';
+            html += '<h3 style="color: var(--text-white); margin-bottom: 1rem;">README</h3>';
+            html += '<div style="background: rgba(30, 18, 82, 0.4); padding: 1.5rem; border-radius: 8px; line-height: 1.8; max-height: 500px; overflow-y: auto;">';
+            
+            let readmeHtml = this.mod.readme
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>')
+                .replace(/^/, '<p>')
+                .replace(/$/, '</p>');
+            
+            html += readmeHtml;
+            html += '</div></div>';
+        }
+
+        overviewContent.innerHTML = html;
+    }
+
     createVersionRangeItem(rawStr, vRange)
     {
         const li = document.createElement('li');
@@ -202,6 +252,9 @@ class ModDetailPage
 
         // Tags
         this.renderTags();
+
+        // README
+        this.renderOverview();
 
         // Links
         const { repo, owner } = parseModKey(this.modKey);

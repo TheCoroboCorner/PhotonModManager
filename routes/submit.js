@@ -1,10 +1,51 @@
 import express from 'express';
 import { readData, writeData } from '../dataService.js';
-import { getRepoInfo, getFileContents, fetchReadme } from '../githubService.js';
+import { getRepoInfo, getFileContents, fetchReadme, listGitHubFiles } from '../githubService.js';
 import { buildEntry, parseGitHubUrlComponents } from '../modEntryBuilder.js';
 import { backupDataJson } from '../github-backup.js';
 
 const router = express.Router();
+
+async function findMetadataFile(user, repo, branch)
+{
+    const commonPaths = [
+        'manifest.json',
+        'info.json',
+        'data/info.json',
+        `${repo}.json`,
+        'metadata.json',
+        'data/metadata.json',
+    ];
+
+    for (const path of commonPaths)
+    {
+        try
+        {
+            await getFileContents(user, repo, path, branch);
+            console.log(`Found metadata at ${path}`);
+            return path;
+        }
+        catch {}
+    }
+
+    try
+    {
+        const allFiles = await listGitHubFiles(user, repo, '', branch);
+        const jsonFiles = allFiles.filter(f => f.endsWith('.json'));
+
+        if (jsonFiles.length > 0)
+        {
+            console.log(`Found JSON file: ${jsonFiles[0]}`);
+            return jsonFiles[0];
+        }
+    }
+    catch (err)
+    {
+        console.error('Error searching for metadata:', err);
+    }
+
+    return null;
+}
 
 router.post('/submit', async (req, res) => {
     try
@@ -24,6 +65,17 @@ router.post('/submit', async (req, res) => {
         // Fetch the repository info and contents
         const repoInfo = await getRepoInfo(user, repo);
         const { default_branch } = repoInfo;
+
+        if (!jsonPath || jsonPath.trim() === '')
+        {
+            console.log('No jsonPath provided, auto-searching...');
+
+            jsonPath = await findMetadataFile(user, repo, branch);
+            if (!jsonPath)
+                return res.status(400).json({ error: 'Could not find metadata file. Please specify the path manually.' });
+
+            console.log(`Auto-found metadata at: ${jsonPath}`);
+        }
 
         const fileData = await getFileContents(user, repo, filePath, default_branch);
         const raw = Buffer.from(fileData.content, fileData.encoding).toString('utf8');

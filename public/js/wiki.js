@@ -250,15 +250,49 @@ class WikiPage
     {
         const card = this.filteredCards[idx];
         if (!card)
+        {
+            console.warn('Card not found at index:', idx);
             return;
+        }
 
         console.log('CARD:', card);
 
-        this.renderCardLocalization(card);
-        this.renderCardSprite(card);
+        const loc = this.renderCardLocalization(card);
+        const sprite = this.renderCardSprite(card);
 
-        if (this.elements.rawDef)
-            this.elements.rawDef.style.display = 'none';
+        let html = '<div class="card-display">';
+        html += '<div class="card-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">';
+
+        if (sprite)
+        {
+            html += `
+                <div id="sprite" style="
+                    width: ${sprite.width}px;
+                    height: ${sprite.height}px;
+                    background-image: ${sprite.backgroundImage};
+                    background-position: ${sprite.backgroundPosition};
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                    border: 2px solid rgba(102, 126, 234, 0.3);
+                    image-rendering: pixelated;
+                    background-repeat: no-repeat;
+                "></div>
+            `;
+        }
+        
+        html += `<h1 id="card-title" style="margin: 0; font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">${loc.name}</h1>`;
+        html += '</div>';
+
+        html += `<div id="loc-text" style="background: rgba(30, 18, 82, 0.4); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-blue); line-height: 1.8; white-space: pre-wrap;">${loc.text}</div>`;
+        html += '</div>';
+
+        if (this.elements.detail)
+        {
+            this.elements.detail.innerHTML = html;
+            console.log('Card rendered successfully');
+        }
+        else
+            console.error('Detail element not found!');
     }
 
     setupEventListeners()

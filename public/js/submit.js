@@ -80,7 +80,7 @@ class SubmitForm
             confetti.celebrate(3000, 200);
             toast.success('Your mod submitted successfully! Come see your creation!')
 
-            setTimeout(() => { window.location.href = '/browse'; }, 2000);
+            setTimeout(() => { window.location.href = `/mod.html?key=${encodeURIComponent(result.key)}`; }, 2000);
         }
         catch (err)
         {

@@ -13,8 +13,8 @@ class ScrollAnimationObserver
     {
         const options = {
             root: null,
-            rootMargin: '0px 0px -100px 0px',
-            threshold: 0.05
+            rootMargin: '200px 0px 0px 0px',
+            threshold: 0
         };
 
         this.observer = new IntersectionObserver((entries) => {
@@ -254,15 +254,36 @@ class ModBrowser
         const tagBar = this.createTagBar(mod.tags || []);
         li.appendChild(tagBar);
 
+        // Links
+        const linksContainer = document.createElement('div');
+        linksContainer.style.cssText = 'display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;';
+
+        // Details link
+        const detailsLink = document.createElement('a');
+        detailsLink.href = `mod.html?key=${encodeURIComponent(mod.key)}`;
+        detailsLink.className = 'mod-card-link';
+        detailsLink.innerHTML = 'Details';
+        detailsLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: white; transition: all 0.2s;';
+        linksContainer.appendChild(detailsLink);
+
         // GitHub link
         const githubLink = document.createElement('a');
         githubLink.href = `https://github.com/${owner}/${repo}`;
         githubLink.target = '_blank';
-        githubLink.textContent = 'View on GitHub';
-        githubLink.style.display = 'block';
-        githubLink.style.marginTop = '1rem';
-        githubLink.style.fontSize = '0.875rem';
-        li.appendChild(githubLink);
+        githubLink.className = 'mod-card-link';
+        githubLink.innerHTML = 'GitHub';
+        githubLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s;';
+        linksContainer.appendChild(githubLink);
+
+        // Wiki link
+        const wikiLink = document.createElement('a');
+        wikiLink.href = `/wiki?mod=${mod.key}`;
+        wikiLink.className = 'mod-card-link';
+        wikiLink.innerHTML = 'Wiki';
+        wikiLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s;';
+        linksContainer.appendChild(wikiLink);
+
+        li.appendChild(linksContainer);
 
         return li;
     }
