@@ -614,7 +614,7 @@
       "cg"
     ],
     "description": "Adds a filtering system to the Joker collection.",
-    "favourites": 0,
+    "favourites": 1,
     "allow_redistribution": true,
     "badge_colour": "FFFFFF",
     "dependencies": [
