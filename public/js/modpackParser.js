@@ -51,8 +51,7 @@ export class ModpackParser
             `# Tags: ${(metadata.tags || []).join(', ')}`,
             `# Created: ${new Date().toISOString()}`,
             `#`,
-            `# Format: Each line is "base64(modKey) base64(version)"`,
-            `# This ensures special characters and spaces are handled correctly`,
+            `# Format: Each line is "base64(modKey) base64(version)".`,
             '',
             ...mods.map(mod => {
                 const encodedKey = this.toBase64(mod.key);
