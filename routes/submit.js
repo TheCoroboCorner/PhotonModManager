@@ -3,6 +3,7 @@ import { readData, writeData } from '../dataService.js';
 import { getRepoInfo, getFileContents, fetchReadme, listGitHubFiles } from '../githubService.js';
 import { buildEntry, parseGitHubUrlComponents } from '../modEntryBuilder.js';
 import { backupDataJson } from '../github-backup.js';
+import { config } from '../config.js';
 
 const router = express.Router();
 
@@ -133,7 +134,7 @@ router.post('/submit', async (req, res) => {
         {
             console.log('No jsonPath provided, auto-searching...');
 
-            jsonPath = await findMetadataFile(user, repo, branch);
+            jsonPath = await findMetadataFile(user, repo, default_branch);
             if (!jsonPath)
                 return res.status(400).json({ error: 'Could not find metadata file. Please specify the path manually.' });
 
