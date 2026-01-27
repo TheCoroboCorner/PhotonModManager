@@ -484,7 +484,11 @@
       "Consumables",
       "Cards"
     ],
-    "readme": "# JustEnoughJokers\nToo Many Jokers if it... had jokers\n"
+    "readme": "# JustEnoughJokers\nToo Many Jokers if it... had jokers\n",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-01-27T10:40:10.831Z"
+    }
   },
   "CoroboUtils@TheCoroboCorner": {
     "id": "CoroboUtils",
