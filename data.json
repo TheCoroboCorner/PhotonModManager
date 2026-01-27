@@ -498,5 +498,101 @@
       "Misc"
     ],
     "readme": ""
+  },
+  "bloated_1_modpack": {
+    "id": "bloated_1_modpack",
+    "name": "Bloated 1",
+    "author": "frostice482",
+    "description": "All* the Photon mods.",
+    "type": "Modpack",
+    "tags": [
+      "Complete"
+    ],
+    "published_at": "2026-01-27T10:00:48.280Z",
+    "updated_at": "2026-01-27T10:00:48.280Z",
+    "favourites": 0,
+    "mods": [
+      {
+        "key": "JoJoMod@TheCoroboCorner",
+        "version": "latest"
+      },
+      {
+        "key": "Maximus@the-Astra",
+        "version": "latest"
+      },
+      {
+        "key": "grab-bag@thefaketh30ne",
+        "version": "latest"
+      },
+      {
+        "key": "Lucky-Rabbit@Trif3ctal",
+        "version": "latest"
+      },
+      {
+        "key": "Ortalab@Eremel",
+        "version": "latest"
+      },
+      {
+        "key": "SealsOnJokers@Somethingcom515",
+        "version": "latest"
+      },
+      {
+        "key": "SuperFine@energykid",
+        "version": "latest"
+      },
+      {
+        "key": "CardSleeves@larswijn",
+        "version": "latest"
+      },
+      {
+        "key": "JokerDisplay@nh6574",
+        "version": "latest"
+      },
+      {
+        "key": "JoyousSpring@nh6574",
+        "version": "latest"
+      },
+      {
+        "key": "SystemClock@Breezebuilder",
+        "version": "latest"
+      },
+      {
+        "key": "DismissAlert@Breezebuilder",
+        "version": "latest"
+      },
+      {
+        "key": "Balatro-Aikoyoris-Shenanigans@Aikoyori",
+        "version": "latest"
+      },
+      {
+        "key": "LobotomyCorp@Mysthaps",
+        "version": "latest"
+      },
+      {
+        "key": "Balatro-Dream-BBQ-Mod@Noodlemire",
+        "version": "latest"
+      },
+      {
+        "key": "Tangents@Clickseee",
+        "version": "latest"
+      },
+      {
+        "key": "Alloy@TheCoroboCorner",
+        "version": "latest"
+      },
+      {
+        "key": "PayasTerribleAdditions@hayaunderscore",
+        "version": "latest"
+      },
+      {
+        "key": "pi_cubeds_jokers@pi-cubed-cat",
+        "version": "latest"
+      },
+      {
+        "key": "JustEnoughJokers@cg-223",
+        "version": "latest"
+      }
+    ],
+    "modCount": 20
   }
 }
