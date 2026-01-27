@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Modpack - Photon</title>
+        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="navbar">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/submit">Submit</a>
+                    </li>
+                    <li>
+                        <a href="/browse">Browse</a>
+                    </li>
+                    <li>
+                        <a href="/modpack">Modpacks</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="content-wrapper flex alignment">
+                <div id="content-container" style="flex-grow: 1;">
+                    <div class="wrapper">
+                        <h1>Create Modpack</h1>
+                            <p style="color: var(--text-light); margin-bottom: 2rem;">
+                                Bundle mods together with automatic dependency resolution.
+                            </p>
+
+                        <div class="step-section">
+                            <h2>Select Mods</h2>
+                            <input type="text" id="mod-search" placeholder="Search mods..." style="width: 100%; margin-bottom: 1rem;">
+                            
+                            <div id="mod-list" style="max-height: 400px; overflow-y: auto; border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 8px; padding: 1rem;"></div>
+                        </div>
+
+                        <div class="step-section" style="margin-top: 2rem;">
+                            <h2>Dependencies & Conflicts</h2>
+                            <button id="resolve-btn" class="click-me" style="margin-bottom: 1rem;">Resolve Dependencies</button>
+                            
+                            <div id="dependency-result" style="display: none;">
+                                <div id="resolved-deps" style="margin-bottom: 1rem;"></div>
+                                <div id="conflicts-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="step-section" style="margin-top: 2rem;">
+                        <h2>Modpack Information</h2>
+                        
+                        <label style="display: block; margin-bottom: 1rem;">
+                            <strong>Name:</strong><br>
+                            <input type="text" id="pack-name" placeholder="My Awesome Modpack" style="width: 100%;" required>
+                        </label>
+
+                        <label style="display: block; margin-bottom: 1rem;">
+                            <strong>Author:</strong><br>
+                            <input type="text" id="pack-author" placeholder="Your Name" style="width: 100%;">
+                        </label>
+
+                        <label style="display: block; margin-bottom: 1rem;">
+                            <strong>Description:</strong><br>
+                            <textarea id="pack-description" placeholder="What does this modpack do?" style="width: 100%; height: 100px;"></textarea>
+                        </label>
+
+                        <label style="display: block; margin-bottom: 1rem;">
+                            <strong>Tags:</strong><br>
+                            <div class="tag-options" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.5rem; margin-top: 0.5rem;">
+                            <label class="switch">
+                                <input type="checkbox" name="pack-tags" value="Gameplay">
+                                <span class="label-text">Gameplay</span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" name="pack-tags" value="Visual">
+                                <span class="label-text">Visual</span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" name="pack-tags" value="Quality of Life">
+                                <span class="label-text">Quality of Life</span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" name="pack-tags" value="Overhaul">
+                                <span class="label-text">Overhaul</span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" name="pack-tags" value="Lightweight">
+                                <span class="label-text">Lightweight</span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" name="pack-tags" value="Complete">
+                                <span class="label-text">Complete</span>
+                            </label>
+                            </div>
+                        </label>
+                        </div>
+
+                        <div class="step-section" style="margin-top: 2rem;">
+                        <h2>Export or Upload</h2>
+                        
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button id="download-btn" class="click-me">
+                                Download Modpack
+                            </button>
+                            <button id="upload-btn" class="click-me">
+                                Upload to Photon
+                            </button>
+                        </div>
+
+                        <div class="step-section" style="margin-top: 2rem;">
+                            <h2>Or Import Existing Modpack</h2>
+
+                            <label style="display: block; margin-bottom: 1rem;">
+                                <strong>Upload .modpack file:</strong><br>
+                                <input type="file" id="modpack-file" accept=".modpack,.txt" style="margin-top: 0.5rem;">
+                            </label>
+
+                            <div id="import-result" style="display: none; margin-top: 1rem;"></div>
+                        </div>
+
+                        <div id="preview-section" style="margin-top: 1rem; display: none;">
+                            <h3>Preview:</h3>
+                            <pre id="preview-text" style="background: rgba(30, 18, 82, 0.4); padding: 1rem; border-radius: 8px; overflow-x: auto; max-height: 300px;"></pre>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="footer-wrapper">
+                    <p>A website meant to manage mods from Balatro by LocalThunk. We do not claim to own Balatro in any way.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script type="module" src="js/toast.js"></script>
+        <script type="module" src="js/keyboard.js"></script>
+        <script type="module" src="js/confetti.js"></script>
+        <script type="module" src="js/pageTransitions.js"></script>
+        <script type="module" src="js/modpack.js"></script>
+    </body>
+</html>

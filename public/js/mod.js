@@ -1,6 +1,7 @@
 import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from './utils.js';
 import { favouritesManager } from './favourites.js';
 import { collectVersionRanges } from './version.js';
+import { ModpackParser } from './modpackParser.js';
 
 class ModDetailPage
 {
@@ -112,6 +113,34 @@ class ModDetailPage
         container.appendChild(tagBar);
     }
 
+    downloadModpackFile()
+    {
+        if (!this.mod.mods || this.mod.mods.length === 0)
+        {
+            toast.error('There aren\'t any mods in this modpack!');
+            return;
+        }
+
+        const metadata = {
+            name: this.mod.name,
+            author: Array.isArray(this.mod.author) ? this.mod.author.join(', ') : this.mod.author,
+            description: this.mod.description || '',
+            tags: this.mod.tags || []
+        };
+
+        const fileContent = ModpackParser.createModpackFile(metadata, this.mod.mods);
+
+        const blob = new Blob([fileContent], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${this.mod.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.modpack`;
+        a.click();
+        URL.revokeObjectURL(url);
+
+        toast.success('Modpack file downloaded!');
+    }
+
     renderOverview()
     {
         const overviewTab = document.getElementById('tab-overview');
@@ -127,6 +156,27 @@ class ModDetailPage
         }
 
         let html = '';
+
+        if (this.mod.type === 'Modpack' && Array.isArray(this.mod.mods))
+        {
+            html += '<div class="overview-section" style="margin-bottom: 2rem;">';
+            html += '<h3 style="color: var(--text-white); margin-bottom: 1rem;">Modpack Contents</h3>';
+            html += '<div style="background: rgba(30, 18, 82, 0.4); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent-blue);">';
+            html += `<p><strong>Total Mods:</strong> ${this.mod.mods.length}</p>`;
+            html += '<ul style="margin: 0.5rem 0; padding-left: 1.5rem;">';
+            
+            this.mod.mods.forEach(mod => {
+                const modData = this.allMods[mod.key];
+                const name = modData?.name || mod.key;
+                html += `<li>${name} <small style="color: var(--text-secondary);">(${mod.version})</small></li>`;
+            });
+            
+            html += '</ul>';
+            
+            html += `<button id="download-modpack-btn" class="click-me" style="margin-top: 1rem; padding: 0.75rem 1.5rem; height: auto; width: 100%;">Download Modpack File</button>`;
+            
+            html += '</div></div>';
+        }
 
         if (this.mod.version || this.mod.target_version)
         {
@@ -160,6 +210,13 @@ class ModDetailPage
         }
 
         overviewContent.innerHTML = html;
+
+        if (this.mod.type === 'Modpack')
+        {
+            const downloadBtn = document.getElementById('download-modpack-btn');
+            if (downloadBtn)
+                downloadBtn.addEventListener('click', () => this.downloadModpackFile());
+        }
     }
 
     createVersionRangeItem(rawStr, vRange)

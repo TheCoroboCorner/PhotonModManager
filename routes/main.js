@@ -1,7 +1,8 @@
 import express from 'express';
 import path from 'path';
 import { config } from '../config.js';
-import { readData, writeData } from '../dataService.js';
+import { readData, writeData, readVotes, writeVotes } from '../dataService.js';
+import { backupDataJson, backupVotesJson } from '../github-backup.js';
 
 const router = express.Router();
 
@@ -21,6 +22,8 @@ router.post('/analytics/view/:key', async (req, res) => {
         data[key].analytics.lastViewed = new Date().toISOString();
 
         await writeData(data);
+
+        backupDataJson().catch(console.error);
 
         res.json({ success: true, views: data[key].analytics.views });
     }

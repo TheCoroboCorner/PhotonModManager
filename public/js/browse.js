@@ -1,16 +1,13 @@
 import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from './utils.js';
 import { favouritesManager } from './favourites.js';
 
-class ScrollAnimationObserver
-{
-    constructor()
-    {
+class ScrollAnimationObserver {
+    constructor() {
         this.observer = null;
         this.init();
     }
 
-    init()
-    {
+    init() {
         const options = {
             root: null,
             rootMargin: '200px 0px 0px 0px',
@@ -19,8 +16,7 @@ class ScrollAnimationObserver
 
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting)
-                {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     this.observer.unobserve(entry.target);
                 }
@@ -28,30 +24,30 @@ class ScrollAnimationObserver
         }, options);
     }
 
-    observe(elements)
-    {
+    observe(elements) {
         elements.forEach(element => {
             this.observer.observe(element);
         });
     }
 
-    disconnect()
-    {
-        if (this.observer)
+    disconnect() {
+        if (this.observer) {
             this.observer.disconnect();
+        }
     }
 }
 
 let animationObserver = null;
 
-export function initScrollAnimations()
-{
-    if (!animationObserver)
+export function initScrollAnimations() {
+    if (!animationObserver) {
         animationObserver = new ScrollAnimationObserver();
-
+    }
+    
     const modCards = document.querySelectorAll('.mod-card');
-    if (modCards.length > 0)
+    if (modCards.length > 0) {
         animationObserver.observe(modCards);
+    }
 }
 
 class ModBrowser
@@ -60,12 +56,14 @@ class ModBrowser
     {
         this.mods = [];
         this.allTags = new Set();
+        this.filteredMods = [];
         this.params = {
-            sortBy: 'published_at',
+            sortBy: 'views',
             order: 'desc',
             tag: '',
             author: '',
             search: '',
+            type: 'mods',
             limit: null
         };
     }
@@ -77,16 +75,8 @@ class ModBrowser
         this.updateUIControls();
         this.extractAllTags();
         this.populateTagFilter();
-        this.renderMods();
-
-        window.addEventListener('popstate', () => {
-            this.extractUrlParams();
-            this.updateUIControls();
-            this.renderMods();
-        });
-
-        this.setupSearchListener();
-        this.setupClearFilters();
+        this.applyFilters();
+        this.setupEventListeners();
     }
 
     async loadMods()
@@ -105,54 +95,36 @@ class ModBrowser
     extractUrlParams()
     {
         const params = getUrlParams();
-        this.params.sortBy = params.get('sortBy') || 'published_at';
+        this.params.sortBy = params.get('sortBy') || 'views';
         this.params.order = params.get('order') || 'desc';
         this.params.tag = params.get('tag') || '';
         this.params.author = params.get('author') || '';
         this.params.search = params.get('search') || '';
+        this.params.type = params.get('type') || 'mods';
 
         const isIndex = window.location.pathname === '/' || window.location.pathname === '/index.html';
         this.params.limit = isIndex ? 5 : null;
     }
 
-    updateActiveFilters()
+    updateURLParams()
     {
-        const container = document.getElementById('active-filters');
-        const tagsContainer = document.getElementById('filter-tags');
+        const params = new URLSearchParams();
+        
+        if (this.params.sortBy !== 'views') 
+            params.set('sortBy', this.params.sortBy);
+        if (this.params.order !== 'desc') 
+            params.set('order', this.params.order);
+        if (this.params.tag) 
+            params.set('tag', this.params.tag);
+        if (this.params.author) 
+            params.set('author', this.params.author);
+        if (this.params.search) 
+            params.set('search', this.params.search);
+        if (this.params.type !== 'mods') 
+            params.set('type', this.params.type);
 
-        if (!container || !tagsContainer)
-            return;
-
-        const filters = [];
-
-        if (this.params.tag)
-            filters.push({ type: 'Tag', value: this.params.tag, param: 'tag' });
-        if (this.params.author)
-            filters.push({ type: 'Author', value: this.params.author, param: 'author' });
-        if (this.params.search)
-            filters.push({ type: 'Search', value: this.params.search, param: 'search' });
-
-        if (filters.length === 0)
-        {
-            container.style.display = 'none';
-            return;
-        }
-
-        container.style.display = 'block';
-        tagsContainer.innerHTML = '';
-
-        filters.forEach(filter => {
-            const tag = document.createElement('span');
-            tag.style.cssText = 'display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.75rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50px; font-size: 0.875rem; color: white; font-weight: 600;';
-            tag.innerHTML = `
-                ${filter.type}: ${filter.value}
-                <button type="button" style="background: none; border: none; color: white; cursor: pointer; font-size: 1.1rem; padding: 0; margin: 0; line-height: 1;">&times;</button>
-            `;
-
-            tag.querySelector('button').addEventListener('click', () => this.updateParams(params => params.delete(filter.param)));
-
-            tagsContainer.appendChild(tag);
-        });
+        const newURL = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+        window.history.replaceState({}, '', newURL);
     }
 
     updateUIControls()
@@ -160,21 +132,70 @@ class ModBrowser
         const sortSelect = document.querySelector('select[name="sortBy"]');
         const orderSelect = document.querySelector('select[name="order"]');
         const tagSelect = document.querySelector('select[name="tag"]');
+        const typeSelect = document.querySelector('select[name="type"]');
         const authorInput = document.getElementById('author-filter');
         const searchInput = document.getElementById('search-input');
 
-        if (sortSelect)
+        if (sortSelect) 
             sortSelect.value = this.params.sortBy;
-        if (orderSelect)
+        if (orderSelect) 
             orderSelect.value = this.params.order;
-        if (tagSelect)
+        if (tagSelect) 
             tagSelect.value = this.params.tag;
-        if (authorInput)
+        if (typeSelect) 
+            typeSelect.value = this.params.type;
+        if (authorInput) 
             authorInput.value = this.params.author;
-        if (searchInput)
+        if (searchInput) 
             searchInput.value = this.params.search;
-
+        
         this.updateActiveFilters();
+    }
+
+    updateActiveFilters()
+    {
+        const container = document.getElementById('active-filters');
+        const tagsContainer = document.getElementById('filter-tags');
+        
+        if (!container || !tagsContainer) 
+            return;
+        
+        const filters = [];
+        
+        if (this.params.tag) 
+            filters.push({ type: 'Tag', value: this.params.tag, param: 'tag' });
+        if (this.params.author) 
+            filters.push({ type: 'Author', value: this.params.author, param: 'author' });
+        if (this.params.search) 
+            filters.push({ type: 'Search', value: this.params.search, param: 'search' });
+        if (this.params.type !== 'mods') 
+            filters.push({ type: 'Type', value: this.params.type, param: 'type' });
+        
+        if (filters.length === 0) 
+        {
+            container.style.display = 'none';
+            return;
+        }
+        
+        container.style.display = 'block';
+        tagsContainer.innerHTML = '';
+        
+        filters.forEach(filter => {
+            const tag = document.createElement('span');
+            tag.style.cssText = 'display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.75rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50px; font-size: 0.875rem; color: white; font-weight: 600;';
+            tag.innerHTML = `
+                ${filter.type}: ${filter.value}
+                <button type="button" style="background: none; border: none; color: white; cursor: pointer; font-size: 1.1rem; padding: 0; margin: 0; line-height: 1;">&times;</button>
+            `;
+            
+            tag.querySelector('button').addEventListener('click', () => {
+                this.params[filter.param] = filter.param === 'type' ? 'mods' : '';
+
+                this.applyFilters();
+            });
+            
+            tagsContainer.appendChild(tag);
+        });
     }
 
     extractAllTags()
@@ -188,84 +209,80 @@ class ModBrowser
     populateTagFilter()
     {
         const tagSelect = document.querySelector('select[name="tag"]');
-        if (!tagSelect || tagSelect.options.length > 1)
+        if (!tagSelect) 
             return;
 
-        tagSelect.innerHTML = '';
-
-        // Add 'All' option
-        const defaultOpt = document.createElement('option');
-        defaultOpt.value = '';
-        defaultOpt.textContent = 'All';
-        if (!this.params.tag)
-            defaultOpt.selected = true;
+        if (tagSelect.options.length <= 1) 
+        {
+            tagSelect.innerHTML = '<option value="">All Tags</option>';
+            
+            Array.from(this.allTags).sort().forEach(tag => {
+                const opt = document.createElement('option');
+                opt.value = tag;
+                opt.textContent = tag;
+                tagSelect.appendChild(opt);
+            });
+        }
         
-        tagSelect.appendChild(defaultOpt);
-
-        // Add tag options
-        Array.from(this.allTags).sort().forEach(tag => {
-            const opt = document.createElement('option');
-            opt.value = tag;
-            opt.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
-
-            if (tag === this.params.tag)
-                opt.selected = true;
-
-            tagSelect.appendChild(opt);
-        });
+        tagSelect.value = this.params.tag;
     }
 
-    getFilteredAndSortedMods()
+    applyFilters()
     {
+        this.updateUIControls();
+        this.updateURLParams();
+        
         let entries = Object.entries(this.mods).map(([key, mod]) => ({ key, ...mod }));
 
-        // Filter by tag
+        if (this.params.type === 'mods')
+            entries = entries.filter(mod => mod.type === 'Mod');
+        else if (this.params.type === 'modpacks')
+            entries = entries.filter(mod => mod.type === 'Modpack');
+
         if (this.params.tag)
             entries = entries.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(this.params.tag));
-
-        // Filter by author
-        if (this.params.author)
+        
+        if (this.params.author) 
         {
             entries = entries.filter(mod => {
                 const authors = Array.isArray(mod.author) ? mod.author : [mod.author];
                 return authors.some(a => String(a).toLowerCase() === this.params.author.toLowerCase());
             });
         }
-
-        // Filter by search
-        if (this.params.search)
+        
+        if (this.params.search) 
         {
             const searchLower = this.params.search.toLowerCase();
-
             entries = entries.filter(mod => {
                 const nameMatch = (mod.name || '').toLowerCase().includes(searchLower);
                 const descMatch = (mod.description || '').toLowerCase().includes(searchLower);
-
-                const authors = Array.isArray(mod.author) ? mod.author : [mod.author];
-                const authorMatch = authors.some(a => String(a).toLowerCase().includes(searchLower));
-
+                const authorMatch = Array.isArray(mod.author) 
+                    ? mod.author.some(a => String(a).toLowerCase().includes(searchLower))
+                    : String(mod.author || '').toLowerCase().includes(searchLower);
+                
                 return nameMatch || descMatch || authorMatch;
             });
         }
 
-        // Sort
         entries.sort((a, b) => {
             let diff;
             if (this.params.sortBy === 'favourites')
-                diff = b.favourites - a.favourites;
+                diff = (b.favourites || 0) - (a.favourites || 0);
+            else if (this.params.sortBy === 'views')
+                diff = (b.analytics?.views || 0) - (a.analytics?.views || 0);
             else if (this.params.sortBy === 'updated_at')
-                diff = Date.parse(b.updated_at) - Date.parse(a.updated_at);
+                diff = Date.parse(b.updated_at || b.published_at) - Date.parse(a.updated_at || a.published_at);
             else
-                diff = Date.parse(b.published_at) - Date.parse(a.published_at)
+                diff = Date.parse(b.published_at) - Date.parse(a.published_at);
 
             return this.params.order === 'asc' ? -diff : diff;
         });
 
-        // Apply the mod display limit
         if (this.params.limit)
             entries = entries.slice(0, this.params.limit);
 
-        return entries;
+        this.filteredMods = entries;
+        this.renderMods();
     }
 
     createTagBar(tags)
@@ -278,7 +295,11 @@ class ModBrowser
             btn.type = 'button';
             btn.textContent = tag;
             btn.className = 'tag-btn';
-            btn.addEventListener('click', () => this.updateParams(params => params.set('tag', tag)));
+            btn.addEventListener('click', () => {
+                this.params.tag = tag;
+
+                this.applyFilters();
+            });
 
             tagBar.appendChild(btn);
         });
@@ -292,110 +313,104 @@ class ModBrowser
         li.className = 'mod-card';
         const { repo, owner } = parseModKey(mod.key);
 
-        // Card header
         const header = document.createElement('div');
         header.className = 'mod-card-header';
 
         const titleLink = document.createElement('a');
         titleLink.href = `mod.html?key=${encodeURIComponent(mod.key)}`;
-        titleLink.innerHTML = `<h3 class="mod-card-title">${mod.name ?? 'Unknown'}</h3>`;
+        
+        const badge = mod.type === 'Modpack' ? '<span style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 0.5rem;">MODPACK</span>' : '';
+        
+        titleLink.innerHTML = `<h3 class="mod-card-title">${mod.name ?? 'Unknown'}${badge}</h3>`;
 
         header.appendChild(titleLink);
         li.appendChild(header);
 
-        // Card author
         const author = document.createElement('div');
         author.className = 'mod-card-author';
         author.style.cursor = 'pointer';
-        author.style.transition = 'color 0.2s';
         author.innerHTML = `by <span class="author-link" data-author="${formatAuthor(mod.author) ?? 'Unknown'}">${formatAuthor(mod.author) ?? 'Unknown'}</span>`;
-        
-        const authorLink = author.querySelector('.author-link');
-        if (authorLink)
-        {
-            authorLink.style.color = 'var(--accent-blue)';
-            authorLink.style.textDecoration = 'underline';
-            authorLink.style.cursor = 'pointer';
 
+        const authorLink = author.querySelector('.author-link');
+        if (authorLink) 
+        {
+            authorLink.style.cssText = 'color: var(--accent-blue); text-decoration: underline; cursor: pointer;';
+            
             authorLink.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                this.params.author = authorLink.dataset.author;
 
-                const authorName = authorLink.dataset.author;
-                this.updateParams(params => params.set('author', authorName));
-            });
-
-            authorLink.addEventListener('mouseenter', () => {
-                authorLink.style.opacity = '0.8';
-            });
-
-            authorLink.addEventListener('mouseleave', () => {
-                authorLink.style.opacity = '1';
+                this.applyFilters();
             });
         }
 
         li.appendChild(author);
 
-        // Card description
         const description = document.createElement('p');
         description.className = 'mod-card-description';
         description.textContent = mod.description ?? 'No description';
         li.appendChild(description);
 
-        // Card metadata (published, type)
         const meta = document.createElement('div');
         meta.className = 'mod-card-meta';
-        meta.innerHTML = `
-            <span class="mod-card-meta-item">
-                Date: ${formatDate(mod.published_at) ?? 'Unknown'}
-            </span>
-            <span class="mod-card-meta-item">
-                Type: ${mod.type ?? 'Unknown'}
-            </span>
-        `;
+        
+        if (mod.type === 'Modpack') 
+        {
+            meta.innerHTML = `
+                <span class="mod-card-meta-item">📦 ${mod.modCount || mod.mods?.length || 0} mods</span>
+                <span class="mod-card-meta-item">📅 ${formatDate(mod.published_at) ?? 'Unknown'}</span>
+            `;
+        } 
+        else 
+        {
+            meta.innerHTML = `
+                <span class="mod-card-meta-item">📅 ${formatDate(mod.published_at) ?? 'Unknown'}</span>
+                <span class="mod-card-meta-item">👁️ ${mod.analytics?.views || 0} views</span>
+            `;
+        }
+        
         li.appendChild(meta);
 
-        // Card favourite button
         const favBtn = favouritesManager.createFavouriteButton(mod.key, mod.favourites);
         favBtn.style.width = '100%';
         favBtn.style.marginBottom = '1rem';
-        li.appendChild(favBtn);
-
+        
         favBtn.addEventListener('mouseenter', () => li.classList.add('force-hover'));
         favBtn.addEventListener('mouseleave', () => li.classList.remove('force-hover'));
+        
+        li.appendChild(favBtn);
 
-        // Card tags
         const tagBar = this.createTagBar(mod.tags || []);
         li.appendChild(tagBar);
 
-        // Links
         const linksContainer = document.createElement('div');
         linksContainer.style.cssText = 'display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;';
 
-        // Details link
         const detailsLink = document.createElement('a');
         detailsLink.href = `mod.html?key=${encodeURIComponent(mod.key)}`;
         detailsLink.className = 'mod-card-link';
         detailsLink.innerHTML = 'Details';
-        detailsLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s;';
+        detailsLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s; position: relative; overflow: hidden;';
         linksContainer.appendChild(detailsLink);
 
-        // GitHub link
-        const githubLink = document.createElement('a');
-        githubLink.href = `https://github.com/${owner}/${repo}`;
-        githubLink.target = '_blank';
-        githubLink.className = 'mod-card-link';
-        githubLink.innerHTML = 'GitHub';
-        githubLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s;';
-        linksContainer.appendChild(githubLink);
+        if (mod.type !== 'Modpack') 
+        {
+            const githubLink = document.createElement('a');
+            githubLink.href = `https://github.com/${owner}/${repo}`;
+            githubLink.target = '_blank';
+            githubLink.className = 'mod-card-link';
+            githubLink.innerHTML = 'GitHub';
+            githubLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s; position: relative; overflow: hidden;';
+            linksContainer.appendChild(githubLink);
 
-        // Wiki link
-        const wikiLink = document.createElement('a');
-        wikiLink.href = `/wiki?mod=${mod.key}`;
-        wikiLink.className = 'mod-card-link';
-        wikiLink.innerHTML = 'Wiki';
-        wikiLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s;';
-        linksContainer.appendChild(wikiLink);
+            const wikiLink = document.createElement('a');
+            wikiLink.href = `/wiki?mod=${mod.key}`;
+            wikiLink.className = 'mod-card-link';
+            wikiLink.innerHTML = 'Wiki';
+            wikiLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s; position: relative; overflow: hidden;';
+            linksContainer.appendChild(wikiLink);
+        }
 
         li.appendChild(linksContainer);
 
@@ -405,18 +420,15 @@ class ModBrowser
     renderMods()
     {
         const ul = document.getElementById('mod-list');
-        if (!ul)
-            return;
+        if (!ul) return;
 
         ul.className = 'mod-grid';
         ul.innerHTML = '';
 
-        const entries = this.getFilteredAndSortedMods();
-
-        if (entries.length === 0)
+        if (this.filteredMods.length === 0) 
         {
             const emptyMessage = document.createElement('p');
-            emptyMessage.textContent = 'No mods found matching your filters.';
+            emptyMessage.textContent = 'No items found matching your filters.';
             emptyMessage.className = 'fade-in';
             emptyMessage.style.gridColumn = '1 / -1';
             emptyMessage.style.textAlign = 'center';
@@ -427,7 +439,7 @@ class ModBrowser
             return;
         }
 
-        entries.forEach(mod => {
+        this.filteredMods.forEach(mod => {
             const li = this.createModListItem(mod);
             ul.appendChild(li);
         });
@@ -439,53 +451,79 @@ class ModBrowser
         initScrollAnimations();
     }
 
-    updateParams(mutator)
-    {
-        const params = getUrlParams();
-        mutator(params);
-
-        history.replaceState(null, '', '?' + params.toString());
-
-        this.extractUrlParams();
-        this.updateUIControls();
-        this.renderMods();
-    }
-
-    setupSearchListener()
+    setupEventListeners()
     {
         const searchInput = document.getElementById('search-input');
-        if (!searchInput)
-            return;
+        if (searchInput) 
+        {
+            let timeout;
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    this.params.search = e.target.value;
 
-        let timeout;
-
-        searchInput.addEventListener('input', () => {
-            clearTimeout(timeout);
-
-            timeout = setTimeout(() => {
-                this.updateParams(params => {
-                    if (searchInput.value)
-                        params.set('search', searchInput.value);
-                    else
-                        params.delete('search');
-                });
-            }, 300);
-        });
-    }
-
-    setupClearFilters()
-    {
-        const clearBtn = document.getElementById('clear-filters');
-        if (!clearBtn)
-            return;
-
-        clearBtn.addEventListener('click', () => {
-            this.updateParams(params => {
-                params.delete('tag');
-                params.delete('author');
-                params.delete('search');
+                    this.applyFilters();
+                }, 500);
             });
-        });
+        }
+
+        const sortSelect = document.querySelector('select[name="sortBy"]');
+        const orderSelect = document.querySelector('select[name="order"]');
+        const tagSelect = document.querySelector('select[name="tag"]');
+        const typeSelect = document.querySelector('select[name="type"]');
+
+        if (sortSelect)
+        {
+            sortSelect.addEventListener('change', (e) => {
+                this.params.sortBy = e.target.value;
+
+                this.applyFilters();
+            });
+        }
+
+        if (orderSelect) 
+        {
+            orderSelect.addEventListener('change', (e) => {
+                this.params.order = e.target.value;
+
+                this.applyFilters();
+            });
+        }
+
+        if (tagSelect) 
+        {
+            tagSelect.addEventListener('change', (e) => {
+                this.params.tag = e.target.value;
+
+                this.applyFilters();
+            });
+        }
+
+        if (typeSelect) 
+        {
+            typeSelect.addEventListener('change', (e) => {
+                this.params.type = e.target.value;
+
+                this.applyFilters();
+            });
+        }
+
+        const clearBtn = document.getElementById('clear-filters');
+        if (clearBtn) 
+        {
+            clearBtn.addEventListener('click', () => 
+            {
+                this.params.tag = '';
+                this.params.author = '';
+                this.params.search = '';
+                this.params.type = 'mods';
+                
+                if (searchInput) 
+                    searchInput.value = '';
+                
+                this.applyFilters();
+            });
+        }
     }
 }
 
