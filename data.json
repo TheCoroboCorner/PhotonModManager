@@ -593,6 +593,10 @@
         "version": "latest"
       }
     ],
-    "modCount": 20
+    "modCount": 20,
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-01-27T10:04:33.756Z"
+    }
   }
 }
