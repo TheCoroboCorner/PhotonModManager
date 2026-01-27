@@ -52,7 +52,7 @@ router.get('/browse', (req, res) => {
     res.sendFile(path.join(config.paths.public, 'browse.html'));
 });
 
-router.get('/browse', (req, res) => {
+router.get('/modpack', (req, res) => {
     res.sendFile(path.join(config.paths.public, 'modpack.html'));
 });
 
