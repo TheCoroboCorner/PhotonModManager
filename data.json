@@ -84,11 +84,7 @@
     "dependencies": [],
     "readme": "# Grab Bag\nGrab Bag is a Balatro mod that currently adds: \n- 46 (+8) Jokers\n- 3 Tarots\n- 1 Spectral\n- 3 Enhancements \n- 15 Boss Blinds\n- 5 Showdown Boss Blinds\n- and 4 Decks.\n\nThe content in this mod is supposed to feel vanilla, and I created this new content to be largely in line with the rules and design philosophy that localthunk follows when making Jokers and other content. \n\n## Jokers\nAs of the latest update, this mod contains 21 Common, 15 Uncommon, and 10 Rare Jokers.\n### Common\n- Bad Trip\n- Bait\n- Bullseye\n- Counterfeit Joker\n- Coupon\n- Dunce\n- Gasoline\n- Hadal Zone\n- Jackpot\n- Morose Joker\n- Patience\n- Postage Stamp\n- Qubits\n- Receipt\n- Revolution 9\n- Sketchy Joker\n- Torchlight\n- Waterfall\n- Wild Joker\n- Hot Potato\n- Polariser\n  \n### Uncommon\n- Another Brick\n- Bank Teller\n- Boing Ball\n- Calculator\n- Candle\n- Cheque Stub\n- Double Gulp\n- First Strike\n- Honeycomb\n- Impostor\n- Knight\n- Lover's Locket\n- Wax Joker\n- Wheel of Misfortune\n- Yellow Pages\n  \n### Rare\n- Apparition\n- D20\n- Double King\n- Forest Fire\n- Golden Cookie\n- Lobster Claw\n- Pentagram\n- Retro Joker\n- Silver Hammer\n- The Moon's Oceans\n\n## Enhancements\nAs of the latest update, this mod contains 2 new enhancements.\n- River (and The River Tarot)\n- Wooden (and The Life Tarot)\n\n## Shattered Jokers\nJokers can be shattered into more powerful Shattered jokers with the Shatter consumable, which may show up in Arcana and Spectral Packs.\n### Shatterable Jokers\n- Obelisk\n- Flower Pot\n- Fibonacci\n- Polariser\n- Rough Gem\n- Splash\n- Joker\n- Invisible Joker\n\n## Decks\nThere are 4 decks in the latest update of the mod.\n- Gem Deck\n- Mathematical Deck\n- Negative Deck\n- Tech Deck\n",
     "published_at": "2025-06-19T16:08:16.556Z",
-    "type": "Mod",
-    "analytics": {
-      "views": 2,
-      "lastViewed": "2026-01-27T11:47:09.173Z"
-    }
+    "type": "Mod"
   },
   "Lucky-Rabbit@Trif3ctal": {
     "id": "LuckyRabbit",
@@ -132,7 +128,7 @@
       "Somethingcom515"
     ],
     "description": "Allows seals on Everything also comes with more seals",
-    "favourites": 13,
+    "favourites": 15,
     "badge_colour": "E8463D",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0509b-STEAMODDED)",
@@ -636,8 +632,8 @@
     "updated_at": "2026-01-27T10:41:35.689Z",
     "readme": "# Too Many Jokers\r\nAdds a toggleable sidebar displaying your collection, along with a searchbar.\r\n\r\n## Usage\r\nPress T to open TMJ on your left.\r\n\r\nAt the bottom is a text input for searching. Searches are loosely matched against every card. If a card doesn't match your search terms, it won't be displayed.\r\n\r\nYou can use multiple search terms using commas. All provided search terms must match with a card for the card to show. (e.g. `+mult, xmult` will only show jokers that give both xmult and +mult, not any joker that gives either)\r\n\r\n## Advanced uses\r\n\r\nThere are several special search terms, surrounded by braces (`{}`). These allow you to specify more about your search. They MUST come before any normal search terms.\r\n\r\n## `{any}`\r\n\r\n{any} specifies that if ANY of the search terms are matched, a card will show up. Using the example above, `{any}, +mult, xmult` will show jokers that give either +mult or xmult.\r\n\r\n## `{regex}`\r\n\r\n{regex} specifies that we should use Lua's pattern matcher instead of just a raw search. Keep in mind this is Lua patterns, not actual regex.\r\n\r\n## `{edition:modprefix_editionkey}`\r\n\r\n{edition} will apply the specified edition to all cards in TMJ. This is useful for mod developers making shaders that want to see how their shader looks on various (or specific) jokers.\r\n\r\n## `{ace:<lua code here>}`\r\n\r\n{ace} will run the lua code as the block of a function (or just a single expression e.g. `center.pools.Kitties`, or in the case of a full function body `if center.pools.Kitties then return true end`) given the argument of `center`. If it returns `false`, `nil`, or errors (which will be caught), then the center passed into the function will not show in TMJ.\r\n\r\nIt is okay for the function given to error, it will be treated as if the function returned false.\r\n\r\nThis is helpful for... uh.... uhm.... idk but it's cool right?\r\n\r\n## `!`\r\nAny non-special search term can be prefixed with `!` to specify that you want to negate that search term (so if it IS matched, do not show the card)\r\n\r\nCredits to Dimserene for the idea to create this mod.\r\n\r\n",
     "analytics": {
-      "views": 5,
-      "lastViewed": "2026-01-27T11:35:48.428Z"
+      "views": 4,
+      "lastViewed": "2026-01-27T11:12:15.092Z"
     }
   }
 }
