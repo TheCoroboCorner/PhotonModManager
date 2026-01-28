@@ -1,0 +1,1836 @@
+{
+  "locMap": {
+    "c_med_vscode": {
+      "name": "VSCode",
+      "text": [
+        "Choose one of ",
+        "{C:attention}any interface{}",
+        "{C:attention}card to spawn",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Spectral"
+    },
+    "c_med_chrome": {
+      "name": "Chrome",
+      "text": [
+        "TBD."
+      ],
+      "type": "Interface"
+    },
+    "e_med_reflective": {
+      "name": "Reflective",
+      "text": [
+        "{X:attention,C:white}X#1#{} Jank"
+      ],
+      "type": "Edition"
+    },
+    "v_med_fashion": {
+      "name": "Fashion",
+      "text": [
+        "Cards with",
+        "{C:attention}fusion suits{} are",
+        "allowed to be spawned",
+        "naturally"
+      ],
+      "type": "Voucher"
+    },
+    "v_med_vogue": {
+      "name": "Vogue",
+      "text": [
+        "Cards with",
+        "{C:attention}fusion enhancements{} and",
+        "{C:attention}fusion seals{} are",
+        "allowed to be spawned",
+        "naturally"
+      ],
+      "type": "Voucher"
+    },
+    "v_med_dilettante": {
+      "name": "The Dilettante",
+      "text": [
+        "You can now {C:attention}injog",
+        "{C:attention}1{} more card"
+      ],
+      "type": "Voucher"
+    },
+    "v_med_gambler": {
+      "name": "The Gambler",
+      "text": [
+        "You can now {C:attention}injog",
+        "{C:attention}1{} more card"
+      ],
+      "type": "Voucher"
+    },
+    "undiscovered": {
+      "name": "Locked Milestone",
+      "text": [
+        "You have yet to",
+        "{C:attention}achieve{} this Milestone."
+      ],
+      "type": "Milestones"
+    },
+    "mile_med_cassette_death": {
+      "name": "Massive Headache",
+      "text": [
+        "What was that?!",
+        "{C:inactive}(End a run with {C:attention,T:j_med_cassette}Cassette{C:inactive} in deck)"
+      ],
+      "type": "Milestones"
+    },
+    "mile_med_cheat": {
+      "name": "Cheat",
+      "text": [
+        "Did I see what I think I saw?",
+        "{C:inactive}(Play an {C:attention}injogged{C:inactive} card)"
+      ],
+      "type": "Milestones"
+    },
+    "mile_med_test": {
+      "name": "Test",
+      "text": [
+        "This Milestone Is For",
+        "{C:attention}Testing{} Perposes."
+      ],
+      "type": "Milestones"
+    },
+    "mile_med_test_other": {
+      "name": "Test 2",
+      "text": [
+        "This Milestone Is For",
+        "{C:attention}Testing{} Perposes."
+      ],
+      "type": "Milestones"
+    },
+    "m_med_plus_four": {
+      "name": "Wild +4 Card",
+      "text": [
+        "This card counts as",
+        "{C:attention}all suits{}",
+        "Draw {C:attention}#1#{} cards when",
+        "This card is played",
+        "No rank, Always scored"
+      ],
+      "type": "Enhanced"
+    },
+    "med_orange_seal": {
+      "name": "Orange Seal",
+      "text": [
+        "{C:attention}+#1#{} Jank",
+        "while held in hand"
+      ],
+      "type": "Other"
+    },
+    "med_taupe_seal": {
+      "name": "Taupe Seal",
+      "text": [
+        "If this is the only",
+        "played card,",
+        "{C:attention}create{} an",
+        "{C:attention}Interface{} card"
+      ],
+      "type": "Other"
+    },
+    "undiscovered_interface": {
+      "name": "Not Discovered",
+      "text": [
+        "Purchase or use this",
+        "card in an",
+        "unseeded run to",
+        "learn what it does"
+      ],
+      "type": "Other"
+    },
+    "fusion_enhancements": {
+      "name": "Fusion Enhancements",
+      "text": [
+        "{C:attention}Enhancements {}created",
+        "by {C:attention}merging{}",
+        "2 or more enhancements"
+      ],
+      "type": "Other"
+    },
+    "fusion_seals": {
+      "name": "Fusion Seals",
+      "text": [
+        "{C:attention}Seals {}created",
+        "by {C:attention}merging{}",
+        "2 or more seals"
+      ],
+      "type": "Other"
+    },
+    "fusion_suits": {
+      "name": "Fusion Suits",
+      "text": [
+        "{C:attention}Suits {}created",
+        "by {C:attention}merging{}",
+        "2 or more suits"
+      ],
+      "type": "Other"
+    },
+    "average": {
+      "name": "Averaging Suits",
+      "text": [
+        "Set all suits",
+        "of all cards ",
+        "being {C:attention}averaged{}",
+        "to the {C:attention}fusion{} of",
+        "them"
+      ],
+      "type": "Other"
+    },
+    "decapitated_jank": {
+      "name": "Decapitated Operator",
+      "text": [
+        "Score = {C:mult}Mult{} x min({C:chips}Chips{}, {C:attention}Jank{})"
+      ],
+      "type": "Other"
+    },
+    "improved_jank": {
+      "name": "Improved Operator",
+      "text": [
+        "Score = {C:mult}Mult{} x ({C:chips}Chips{} + {C:attention}Jank{})"
+      ],
+      "type": "Other"
+    },
+    "injogged_cards": {
+      "name": "Injogged Cards",
+      "text": [
+        "Injogged cards are",
+        "{C:attention}drawn first{}",
+        "{C:attention}Right click{} to injog"
+      ],
+      "type": "Other"
+    },
+    "high_valued_cards": {
+      "name": "High-Valued Cards",
+      "text": [
+        "{C:attention}Aces{}, {C:attention}Kings{},",
+        "{C:attention}Queens{} and {C:attention}Jacks{}"
+      ],
+      "type": "Other"
+    },
+    "low_valued_cards": {
+      "name": "Low-Valued Cards",
+      "text": [
+        "{C:attention}2s{}, {C:attention}3s{},",
+        "{C:attention}4s{} and {C:attention}5s{}"
+      ],
+      "type": "Other"
+    },
+    "defect_none": {
+      "name": "None",
+      "text": [
+        "Passive: No Effect",
+        "On Evoke: No Effect"
+      ],
+      "type": "Other"
+    },
+    "defect_dark": {
+      "name": "Dark",
+      "text": [
+        "Passive: On the",
+        "{C:attention}last hand of blind{},",
+        "{C:red}+6(Amount of total hands) {C:red}mult{}",
+        "On Evoke: {C:red}+2 Discards{}",
+        "for the round"
+      ],
+      "type": "Other"
+    },
+    "defect_lightning": {
+      "name": "Lightning",
+      "text": [
+        "Passive: {C:red}+10 Mult",
+        "On Evoke: {C:gold}+$10"
+      ],
+      "type": "Other"
+    },
+    "defect_plasma": {
+      "name": "Plasma",
+      "text": [
+        "Passive: {C:blue}+1 Hand{}",
+        "for the round",
+        "On Evoke: {C:blue}+2 Hands{}",
+        "for the round"
+      ],
+      "type": "Other"
+    },
+    "defect_channeling": {
+      "name": "Channeling",
+      "text": [
+        "If there is a",
+        "{C:attention}None{} orb,",
+        "replace it with a ",
+        "{C:attention}random orb{}"
+      ],
+      "type": "Other"
+    },
+    "defect_evoking": {
+      "name": "Evoking",
+      "text": [
+        "If there aren't",
+        "any {C:attention}None{} orbs,",
+        "{C:attention}replace{} a random orb",
+        "with another and",
+        "trigger it's {C:attention}evoke{} effect"
+      ],
+      "type": "Other"
+    },
+    "j_med_defect": {
+      "name": "The Defect",
+      "text": [
+        "At the start of blind,",
+        "{C:attention}Channel{} or {C:attention}Evoke{} an orb"
+      ],
+      "type": "Joker"
+    },
+    "j_med_penrose_triangle": {
+      "name": "Penrose Triangle",
+      "text": [
+        "Treat all {C:attention}previous",
+        "{C:mult}mult{} {C:attention}operations",
+        "in {C:attention}scoring hand{}",
+        "as a {C:attention}additive function{},",
+        "then apply it to {C:chips}chips",
+        "and divide it by {C:dark_edition}#1#"
+      ],
+      "type": "Joker"
+    },
+    "j_med_ionization": {
+      "name": "Ionization",
+      "text": [
+        "Enhance the first {C:attention}#1#",
+        "in played hand",
+        "to a {C:attention}#3#",
+        "{C:attention}Convert{} the first two",
+        "played cards with a",
+        "rank difference of {C:attention}#2#{}",
+        "than {C:attention}#1#{} to {C:attention}#1#s{}"
+      ],
+      "type": "Joker"
+    },
+    "j_med_cardshark": {
+      "name": "Card Shark",
+      "text": [
+        "You can now {C:attention}injog",
+        "{C:attention}#1#{} more cards"
+      ],
+      "type": "Joker"
+    },
+    "j_med_nofdix": {
+      "name": "Nøf Dix",
+      "text": [
+        "Each scored {C:attention}enhanced",
+        "card gives {C:med_currency,f:med_currency}_2{}",
+        "card gives {X:attention,C:white}X#1#{} Jank"
+      ],
+      "type": "Joker"
+    },
+    "j_med_elixir": {
+      "name": "Elixir",
+      "text": [
+        "When {C:attention}merging{} in the {C:green}LAB{},",
+        "{C:attention}merge this card{} with any",
+        "other card to add",
+        "an {C:dark_edition}edition{} to it"
+      ],
+      "type": "Joker"
+    },
+    "j_med_blue": {
+      "name": "Blue",
+      "text": [
+        "{X:chips,C:white}X#1#{} Chips",
+        "{C:inactive}The worst joker",
+        "{C:inactive}in this mod"
+      ],
+      "type": "Joker"
+    },
+    "j_med_kevin_haas": {
+      "name": "Kevin Haas",
+      "text": [
+        "{C:green}#1# in #2#{} Chance to",
+        "permanantly {C:blue}+#3# Hand#4#{} ",
+        "at the {C:attention}start of round",
+        "{C:inactive}Having Fun?"
+      ],
+      "type": "Joker"
+    },
+    "j_med_branching_tree": {
+      "name": "Commit Tree",
+      "text": [
+        "If this run is not {C:attention}Seeded{},",
+        "Return {C:attention}1 10^#1#ths{} of",
+        "the seed of the run",
+        "in {C:attention}Base 36{} as {V:1}Jank"
+      ],
+      "type": "Joker"
+    },
+    "j_med_milestone": {
+      "name": "Milestone",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult,",
+        "lose {X:mult,C:white}X#2#{} Mult times",
+        "the total amount of",
+        "{C:attention}milestones not unlocked{},",
+        "divided by the total",
+        "amount of milestones {C:inactive}(#3#/#4#)",
+        "{C:attention}at the end of round{}"
+      ],
+      "type": "Joker"
+    },
+    "j_med_sunrise": {
+      "name": "Sunrise",
+      "text": [
+        "On the {C:attention}first #1# hands{}",
+        "of round, {C:attention}upgrade{}",
+        "played hands"
+      ],
+      "type": "Joker"
+    },
+    "j_med_achts": {
+      "name": "A Coin Has Two Sides",
+      "text": [
+        "{C:attention}Flip a coin{} when",
+        "{C:attention}selecting blind{},",
+        "{B:1,C:white}Increment{} the default value",
+        "of {V:1}Jank{} by {C:attention}#2#{} if landed on {C:attention}Tails,{}",
+        "{V:1}+#3# {}Jank if",
+        "landed on {C:attention}Heads{}",
+        "{C:inactive}(Currently: {C:attention}#1#{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_med_cassette": {
+      "name": "Cassette",
+      "text": [
+        "When you {C:attention}lose{},",
+        "go back to when",
+        "this Joker was {C:attention}bought{},",
+        "and {C:attention}change something{}..."
+      ],
+      "type": "Joker"
+    },
+    "j_med_chiptunetracker": {
+      "name": "Chiptune Tracker",
+      "text": [
+        "{V:1}+#1# {}Jank"
+      ],
+      "type": "Joker"
+    },
+    "j_med_chemicalequation": {
+      "name": "Chemical Equation",
+      "text": [
+        "When {C:attention}entering a blind{},",
+        "{C:green}#1# in #2# {}Chance to",
+        "{B:1,C:white}Decapitate{} the current jank operator",
+        "Else, {B:1,C:white}Improve{} the current jank operator"
+      ],
+      "type": "Joker"
+    },
+    "j_med_muddywater": {
+      "name": "Muddy Water",
+      "text": [
+        "If {C:attention}played{} hand contains only 2 cards",
+        "and their {C:attention}suits{} are both",
+        "{C:attention}different{} and not {C:attention}fusion{} suits,",
+        "{X:green,C:white}Average{} the 2 suits"
+      ],
+      "type": "Joker"
+    },
+    "j_med_rigor_1": {
+      "name": "Rigor",
+      "text": [
+        "{C:attention}Disprove{} the following",
+        "{C:attention}conjecture{} to win {C:attention}a reward!{}",
+        "{C:attention}Disprove{} the {C:attention}conjecture{} ",
+        "by playing a counterexample",
+        "{C:inactive,s:0.7}(Changes conjecture when the current one is solved)",
+        "Current Conjecture:",
+        "The {C:attention}Square Root{} of",
+        "a natural number is always",
+        "smaller than the original number",
+        "Reward:{C:gold} +#1#$"
+      ],
+      "type": "Joker"
+    },
+    "j_med_rigor_2": {
+      "name": "Rigor",
+      "text": [
+        "{C:attention}Disprove{} the following",
+        "{C:attention}conjecture{} to win {C:attention}a reward!{}",
+        "{C:attention}Disprove{} the {C:attention}conjecture{} ",
+        "by playing a counterexample",
+        "{C:inactive,s:0.7}(Changes conjecture when the current one is solved)",
+        "Current Conjecture:",
+        "If a is a natural number,",
+        "and b is a natural number,",
+        "then a - b is a natural number",
+        "Reward: {X:mult,C:white}X#2#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_med_rigor_3": {
+      "name": "Rigor",
+      "text": [
+        "{C:attention}Disprove{} the following",
+        "{C:attention}conjecture{} to win {C:attention}a reward!{}",
+        "{C:attention}Disprove{} the {C:attention}conjecture{} ",
+        "by playing a counterexample",
+        "{C:inactive,s:0.7}(Changes conjecture when the current one is solved)",
+        "Current Conjecture:",
+        "For any natural number a and b,",
+        "a raised to the bth power is always",
+        "different than the product of a and b",
+        "Reward: +{C:chips} #3# {}Chips"
+      ],
+      "type": "Joker"
+    },
+    "j_med_rigor_4": {
+      "name": "Rigor",
+      "text": [
+        "{C:attention}Disprove{} the following",
+        "{C:attention}conjecture{} to win {C:attention}a reward!{}",
+        "{C:attention}Disprove{} the {C:attention}conjecture{} ",
+        "by playing a counterexample",
+        "{C:inactive,s:0.7}(Changes conjecture when the current one is solved)",
+        "Current Conjecture:",
+        "If a is a natural number,",
+        "then the square root of a",
+        "must not be a natural number",
+        "Reward: + {C:mult}#4#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "med_reflective": {
+      "name": "\"Reflective\"",
+      "text": [],
+      "type": "labels"
+    },
+    "k_defect_evoked": {
+      "name": "\"Evoked!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_defect_channeled": {
+      "name": "\"Channeled!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_destroyed": {
+      "name": "\"Destroyed!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_blue1": {
+      "name": "\"X\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_blue2": {
+      "name": "\" Chips\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_config_lab": {
+      "name": "\"Lab\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_config_test": {
+      "name": "\"Test\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_config_test2": {
+      "name": "\"Test2\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_config_custom_music": {
+      "name": "\"Enable custom music\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_config_animatedjokers": {
+      "name": "\"Animate certain jokers\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_config_shop_adjacent_events": {
+      "name": "\"Shop Adjacent Events:\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_config_general": {
+      "name": "\"General:\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_hand": {
+      "name": "\"Hand\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_plural": {
+      "name": "\"s\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_interface_cards": {
+      "name": "'Interface Cards'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_interface": {
+      "name": "'Interface'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_list_of_milestones": {
+      "name": "\"List of Milestones:\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_seeded": {
+      "name": "\"Seeded!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_incremented": {
+      "name": "\"Incremented!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_converted": {
+      "name": "\"Converted!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_enhanced": {
+      "name": "\"Enhanced!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_coins_heads": {
+      "name": "\"Heads!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_coins_tails": {
+      "name": "\"Tails!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_coins_heads_display": {
+      "name": "\"Heads\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_coins_tails_display": {
+      "name": "\"Tails\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_solved": {
+      "name": "\"Solved!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_event": {
+      "name": "\"Blind event: \"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_prf_applied": {
+      "name": "\"Func Applied!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jdisplay_incdefjank": {
+      "name": "\"Inc. Def. Jank by \"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jdisplay_jank": {
+      "name": "\"Jank\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_improved": {
+      "name": "\"Improved!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_decapitated": {
+      "name": "\"Decapitated...\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_averaged": {
+      "name": "\"Averaged!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_drawn": {
+      "name": "\"Drawn!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ui_labtext": {
+      "name": "\"Merge your items!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ui_lab_indication_temp": {
+      "name": "\"This is the lab but i havent made anything yet so this is used as an indication\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ui_lab_merge": {
+      "name": "\"Merge\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ui_lab_recipes": {
+      "name": "\"Recipes\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ui_lab_button_merge": {
+      "name": "\"MERGE\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ui_lab_button_next": {
+      "name": "\"NEXT\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ui_lab_button_take": {
+      "name": "\"TAKE\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "med_spears": {
+      "name": "\"Spears\"\n        ",
+      "text": [],
+      "type": "suits_plural"
+    }
+  },
+  "atlases": {
+    "medium_jokers": {
+      "path": "jokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/jokers.png",
+      "resolvedGitHubPath": "assets/1x/jokers.png"
+    },
+    "mediumjokers_conjecture": {
+      "path": "conjecture.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/conjecture.png",
+      "resolvedGitHubPath": "assets/1x/conjecture.png"
+    },
+    "medium_interfaces": {
+      "path": "interface.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/interface.png",
+      "resolvedGitHubPath": "assets/1x/interface.png"
+    },
+    "medium_enhancements": {
+      "path": "enhancements.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/enhancements.png",
+      "resolvedGitHubPath": "assets/1x/enhancements.png"
+    },
+    "modicon": {
+      "path": "modicon.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/modicon.png",
+      "resolvedGitHubPath": "assets/1x/modicon.png"
+    },
+    "lab_sign": {
+      "path": "labsign.png",
+      "px": 113,
+      "py": 57,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/labsign.png",
+      "resolvedGitHubPath": "assets/1x/labsign.png"
+    },
+    "medium_seals": {
+      "path": "seals.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/seals.png",
+      "resolvedGitHubPath": "assets/1x/seals.png"
+    },
+    "medium_Revo": {
+      "path": "revosvault_crossmod.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/revosvault_crossmod.png",
+      "resolvedGitHubPath": "assets/1x/revosvault_crossmod.png"
+    },
+    "medium_fusionsuits": {
+      "path": "fusionsuits.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/fusionsuits.png",
+      "resolvedGitHubPath": "assets/1x/fusionsuits.png"
+    },
+    "medium_fusionsuitsui": {
+      "path": "fusionsuitsui.png",
+      "px": 18,
+      "py": 18,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/fusionsuitsui.png",
+      "resolvedGitHubPath": "assets/1x/fusionsuitsui.png"
+    },
+    "lab_ui_stuff": {
+      "path": "lab_ui_stuff.png",
+      "px": 20,
+      "py": 20,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/lab_ui_stuff.png",
+      "resolvedGitHubPath": "assets/1x/lab_ui_stuff.png"
+    },
+    "medium_vouchers": {
+      "path": "vouchers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Medium@Goldofleaves/no-tag/vouchers.png",
+      "resolvedGitHubPath": "assets/1x/vouchers.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Joker",
+      "key": "achts",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = \"achts\",\n\trarity = 2,\n\tconfig = {\n\t\textra = {\n            currentroll = 0, -- 0: tails, 1: heads\n            incrementval = 1,\n            plusjankval = 12,\n            jokerdisplayval = \"Fuck\"\n\t\t},\n\t},\n\tpos = {x=0,y=1},\n    soul_pos = {x=3,y=0},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars = {\n            getdisplay(hpt.currentroll),\n            hpt.incrementval,\n            hpt.plusjankval,\n            colours = {G.C.ORANGE}\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n\t\tlocal hpt = card.ability.extra\n        if hpt.jokerdisplayval == \"Fuck\" then\n            hpt.jokerdisplayval = getdisplay(hpt.currentroll)\n        end\n        if context.setting_blind then\n            hpt.currentroll = math.floor(pseudorandom(\"fuck\", 0, 2))\n            if hpt.currentroll == 2 then\n                hpt.currentroll = 1\n            end\n            hpt.jokerdisplayval = getdisplay(hpt.currentroll)\n            return {message = getdisplay2(hpt.currentroll)}\n        end\n        local table = {\n            [0] = function ()\n                return {ijank = hpt.incrementval}\n            end,\n            [1] = function ()\n                return {jank = hpt.plusjankval}\n            end\n        }\n        if context.joker_main then\n            return table[hpt.currentroll]()\n        end\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "chemicalequation",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"chemicalequation\",\n\trarity = 2,\n\tconfig = {\n\t\textra = {\n            odds = 4\n\t\t},\n\t},\n    remove_from_deck = function (self, card, from_debuff)\n        set_current_jank_operator(\"med_jank\")\n    end,\n\tpos = {x=1,y=0},\n\tatlas = \"medium_jokers\",\n\tloc_vars = function(self, info_queue, card)\n        info_queue[#info_queue+1] = { set = \"Other\", key = \"decapitated_jank\" } \n        info_queue[#info_queue+1] = { set = \"Other\", key = \"improved_jank\" } \n\t\tlocal hpt = card.ability.extra\n        local numerator, denominator = SMODS.get_probability_vars(card, 1, hpt.odds, \"med_chemequation\")\n\t\tlocal vars = {\n            numerator,\n            denominator,\n            colours = {G.C.ORANGE}\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tcalculate = function(self, card, context)\n        if context.setting_blind then\n            if SMODS.pseudorandom_probability(card, \"med_chemequation\", 1, card.ability.extra.odds) then\n                set_current_jank_operator(\"med_jank_decapitated\")\n                return {\n                    message = localize('k_decapitated')\n                }\n            else\n                set_current_jank_operator(\"med_jank_improved\")\n                return {\n                    message = localize('k_improved')\n                }\n            end\n        end\n\tend",
+      "config": {
+        "extra": {
+          "odds": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "odds": 4
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_jokers",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_jokers\", path = \"jokers.png\", px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "chiptunetracker",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"chiptunetracker\",\n\trarity = 2,\n\tconfig = {\n\t\textra = {\n\t\t\tjank = 20\n\t\t},\n\t},\n\tpos = {x=0,y=0},\n\tatlas = \"medium_jokers\",\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars = {\n            hpt.jank,\n            colours = {G.C.ORANGE}\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tcalculate = function(self, card, context)\n        if context.joker_main then\n            return {jank = card.ability.extra.jank}\n        end\n\tend",
+      "config": {
+        "extra": {
+          "jank": 20
+        }
+      },
+      "ability": {
+        "extra": {
+          "jank": 20
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "muddywater",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 6,
+        "y": 3
+      },
+      "raw": "key = \"muddywater\",\n\trarity = 2,\n    loc_vars = function (self, info_queue, card)\n        info_queue[#info_queue+1] = { set = \"Other\", key = \"fusion_suits\" } \n        info_queue[#info_queue+1] = { set = \"Other\", key = \"average\" } \n        \n    end,\n\tpos = {x=6,y=3},\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n        if context.before then\n            if #context.full_hand == 2 then\n                local a = (context.full_hand[1]:is_suit(\"Diamonds\") and context.full_hand[2]:is_suit(\"Spades\")) or (context.full_hand[2]:is_suit(\"Diamonds\") and context.full_hand[1]:is_suit(\"Spades\")) and not (context.full_hand[2]:is_suit(\"med_spears\") or context.full_hand[1]:is_suit(\"med_spears\"))\n                -- print(a)\n                if a then\n                    for i = 1, 2 do\n                    \n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    context.full_hand[i]:flip()\n                    play_sound('card1', percent)\n                    context.full_hand[i]:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n\n            delay(0.1)\n\n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    assert(SMODS.change_base(context.full_hand[i], \"med_spears\"))\n                    return true\n                end\n            }))\n\n            delay(0.1)\n            \n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    context.full_hand[i]:flip()\n                    play_sound('tarot2', percent, 0.6)\n                    context.full_hand[i]:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n\n                    end\n                    return { message = localize(\"k_averaged\") }\n                end\n            end\n        end\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "mediumjokers_conjecture",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"mediumjokers_conjecture\", path = \"conjecture.png\", px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "rigor",
+      "name": null,
+      "atlas": "mediumjokers_conjecture",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"rigor\",\n\trarity = 3,\n\tconfig = {\n\t\textra = {\n\t\t\tcurrentconjecture = 1,\n            money = 25,\n            xmult = 4,\n            chips = 100,\n            mult = 25,\n            jdisplay = \"sqrt(n) < n\"\n\t\t},\n\t},\n\tpos = {x=0,y=0},\n\tatlas = \"mediumjokers_conjecture\",\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n\t\tlocal key, vars, ret\n\t\tkey = (self.key .. \"_\" .. hpt.currentconjecture)\n\t\tvars = {\n            hpt.money,\n            hpt.xmult,\n            hpt.chips,\n            hpt.mult\n\t\t}\n\t\treturn { key = key, vars = vars }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tlocal hpt = card.ability.extra\n        local jdisplay_list = {\n            \"sqrt(n) < n\",\n            \"a - b > 0\",\n            \"a^b ~= ab\",\n            \"n^1/2mod1~=0\",\n        }\n        local list_of_rewards = {\n            function() return { dollars = hpt.money} end,\n            function() return { xmult = hpt.xmult } end,\n            function() return { chips = hpt.chips } end,\n            function() return { mult = hpt.mult } end,\n        }\n        local solved = false\n        if context.individual and context.cardarea == G.play then\n            if hpt.currentconjecture == 1 then -- sqrt of num is smaller than itself\n                local bool = false\n                if #context.full_hand == 1 then -- if scored hand is of 1 card\n                    if context.full_hand[1]:get_id() == 14 then -- if scored card is an ace\n                        bool = true\n                    end\n                end\n                if bool then\n                    solved = true\n                end\n            elseif hpt.currentconjecture == 2 then -- a - b is a natural number\n                local bool = false\n                if #context.full_hand == 2 then\n                    if context.full_hand[1]:get_id() < context.full_hand[2]:get_id() then\n                        bool = true\n                    end\n                end\n                if bool then\n                    solved = true\n                end\n            elseif hpt.currentconjecture == 3 then -- a ^ b ~= ab\n                local bool = false\n                if #context.full_hand == 2 then\n                    if (context.full_hand[1]:get_id() ^ context.full_hand[2]:get_id() == context.full_hand[1]:get_id() * context.full_hand[2]:get_id()) or context.full_hand[2]:get_id() == 14 then\n                        bool = true\n                    end\n                end\n                if bool then\n                    solved = true\n                end\n            else\n                local bool = false\n                if #context.full_hand == 1 then -- sqrt(n) mod 1 ~= 0\n                    if (context.full_hand[1]:get_id() == 14) or (context.full_hand[1]:get_id() == 4) or (context.full_hand[1]:get_id() == 9) then\n                        bool = true\n                    end\n                end\n                if bool then\n                    solved = true\n                end\n            end\n        end\n        if solved then\n            card_eval_status_text(card, 'extra', nil, nil, nil,\n\t\t\t\t\t\t{ message = localize('k_solved')})\n            local g = hpt.currentconjecture\n            hpt.currentconjecture = uniquerandom(hpt.currentconjecture)\n\t\t    card.children.center:set_sprite_pos { x = hpt.currentconjecture - 1, y = 0 }\n            hpt.jdisplay = jdisplay_list[hpt.currentconjecture]\n            solved = false\n            return list_of_rewards[g]()\n        end\n\tend",
+      "config": {
+        "extra": {
+          "currentconjecture": 1,
+          "money": 25,
+          "xmult": 4,
+          "chips": 100,
+          "mult": 25,
+          "jdisplay": "sqrt(n) < n"
+        }
+      },
+      "ability": {
+        "extra": {
+          "currentconjecture": 1,
+          "money": 25,
+          "xmult": 4,
+          "chips": 100,
+          "mult": 25,
+          "jdisplay": "sqrt(n) < n"
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_interfaces",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_interfaces\", path = \"interface.png\", px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "Interface",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Interface\",\n\tcollection_rows = { 6, 6 },\n\tprimary_colour = HEX(\"b609f1\"),\n\tsecondary_colour = HEX(\"b609f1\"),\n\tshop_rate = 0.3,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "vscode",
+      "name": null,
+      "atlas": "medium_interfaces",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"vscode\",\n\tset = \"Spectral\",\n\tatlas = \"medium_interfaces\",\n\tpos = {\n\t\tx = 1,\n\t\ty = 0\n\t},\n\tconfig = {\n\t\textra = {\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\tend,\n\tcan_use = function(self, card)\n\tend,\n\tuse = function(self, card, area, copier)\n\tend,",
+      "config": {
+        "extra": {}
+      },
+      "ability": {
+        "extra": {}
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "chrome",
+      "name": null,
+      "atlas": "medium_interfaces",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"chrome\",\n\tset = \"Interface\",\n\tatlas = \"medium_interfaces\",\n\tpos = {\n\t\tx = 0,\n\t\ty = 0\n\t},\n\tconfig = {\n\t\textra = {\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\tend,\n\tcan_use = function(self, card)\n\tend,\n\tuse = function(self, card, area, copier)\n\tend,",
+      "config": {
+        "extra": {}
+      },
+      "ability": {
+        "extra": {}
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_enhancements",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_enhancements\", path = \"enhancements.png\", px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Enhancement",
+      "key": "plus_four",
+      "name": null,
+      "atlas": "medium_enhancements",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "-- wild ^ 2\n    key = 'plus_four',\n    atlas = \"medium_enhancements\",\n    pos = { x = 0, y = 0 },\n    config = { bonus = 10, extra = { drawn_cards = 4} },\n    replace_base_card = true,\n    no_rank = true,\n    no_suit = true,\n    always_scores = true,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.drawn_cards } }\n    end,\n    calculate = function(self, card, context)\n        if context.main_scoring and context.cardarea == G.play then\n            SMODS.draw_cards(card.ability.extra.drawn_cards)\n            return {message = localize(\"k_drawn\")}\n        end\n    end,\n    in_pool = function (self, args)\n        if G.GAME.modifiers.fusion_enhancements_spawn then\n            return true\n        end\n        return false\n    end",
+      "config": {
+        "bonus": 10,
+        "extra": {
+          "drawn_cards": 4
+        }
+      },
+      "ability": {
+        "bonus": 10,
+        "extra": {
+          "drawn_cards": 4
+        }
+      },
+      "vars": [
+        4
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "blue",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 3,
+        "y": 2
+      },
+      "raw": "key = \"blue\",\n\trarity = 1,\n\tpos = {x = 3, y = 2},\n\tconfig = {\n\t\textra = {\n            xchips = 1\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars = {\n            hpt.xchips\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n\t\tlocal hpt = card.ability.extra\n        if context.joker_main then\n            return {xchips = hpt.xchips, message = localize(\"k_blue1\")..hpt.xchips..localize(\"k_blue2\"), colour = G.C.CHIPS, sound = \"xchips\"}\n        end\n\tend",
+      "config": {
+        "extra": {
+          "xchips": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "xchips": 1
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "branching_tree",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "key = \"branching_tree\",\n\trarity = 2,\n\tpos = {x = 7, y = 0},\n\tconfig = {\n\t\textra = {\n            scalingfactor = 1e-8\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n        local jank = math.log(1/hpt.scalingfactor, 10)\n\t\tlocal vars = {\n            jank,\n            colours = {G.C.ORANGE}\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n\t\tlocal hpt = card.ability.extra\n        if context.joker_main then\n            if not G.GAME.seeded then\n            return {jank = math.floor(hpt.scalingfactor * tonumber(G.GAME.pseudorandom.seed,36))}\n            else\n                return {message = localize(\"k_seeded\"), colour = G.C.RED}\n            end\n        end\n\tend",
+      "config": {
+        "extra": {
+          "scalingfactor": 1e-8
+        }
+      },
+      "ability": {
+        "extra": {
+          "scalingfactor": 1e-8
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cardshark",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 6,
+        "y": 2
+      },
+      "raw": "key = \"cardshark\",\n\trarity = 3,\n\tpos = {x=6,y=2},\n\tatlas = \"medium_jokers\",\n\tconfig = {\n\t\textra = {\n\t\t\tadditional = 3\n\t\t}\n\t},\n\tadd_to_deck = function (self, card, from_debuff)\n\t\tG.GAME.max_injogged_cards = G.GAME.max_injogged_cards + card.ability.extra.additional\n\tend,\n\tremove_from_deck = function (self, card, from_debuff)\n\t\tG.GAME.max_injogged_cards = G.GAME.max_injogged_cards - card.ability.extra.additional\n\tend,\n\tloc_vars = function(self, info_queue, card)\n        info_queue[#info_queue+1] = { set = \"Other\", key = \"injogged_cards\" }\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars = {\n\t\t\thpt.additional\n\t\t}\n\t\treturn { vars = vars }\n\tend,",
+      "config": {
+        "extra": {
+          "additional": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "additional": 3
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cassette",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = \"cassette\",\n\trarity = 3,\n\tin_pool = function(self, args)\n    return not args or args.source ~= \"jud\"\n    end,\n\tpos = {x=4,y=0},\n\tatlas = \"medium_jokers\",\n\tadd_to_deck = function (self, card, from_debuff)\n\t\tif not from_debuff then\n            if G.STAGE == G.STAGES.RUN then\n                if not (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.PLANET_PACK or G.STATE ==\n                    G.STATES.SPECTRAL_PACK or G.STATE == G.STATES.STANDARD_PACK or G.STATE == G.STATES.BUFFOON_PACK or\n                    G.STATE == G.STATES.SMODS_BOOSTER_OPENED) then\n                    save_run()\n                end\n                compress_and_save(G.SETTINGS.profile .. '/cassette_save.jkr', G.ARGS.save_run)\n\t\t\tend\n\t\tend\n\tend,\n\tcalculate = function(self, card, context)\n        if context.end_of_round and context.game_over and context.main_eval then\n\t\t\tMEDIUM.cassettetimer = 25\n\t\t\tMEDIUM.cassetterevived = true\n\t\tend\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "defect",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 2,
+        "y": 4
+      },
+      "raw": "key = \"defect\",\n\trarity = 3,\n\tconfig = {\n        extra = {\n            orbs = {\n                0, 0, 0\n            },\n            speed = 1\n        }\n\t},\n    add_to_deck = function (self, card, from_debuff)\n        card.ability.extra.speed = 0.5 + pseudorandom(\"defspeed\") \n    end,\n\tpos = {x=2,y=4},\n    soul_pos = {x=3,y=4},\n\tloc_vars = function(self, info_queue, card)\n        info_queue[#info_queue+1] = {\n                set = \"Other\",\n                key = \"defect_channeling\"\n            }\n        info_queue[#info_queue+1] = {\n                set = \"Other\",\n                key = \"defect_evoking\"\n            }\n        local registry_list = {}\n        for i = 1, 3 do\n            if not registry_list[get_orb_from_index(card.ability.extra.orbs[i])] then\n                info_queue[#info_queue+1] = {\n                    set = \"Other\",\n                    key = \"defect_\"..get_orb_from_index(card.ability.extra.orbs[i])\n                }\n                registry_list[get_orb_from_index(card.ability.extra.orbs[i])] = true\n            end\n        end\n\tend,\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n        local hpt = card.ability.extra\n        local orb_evoke_funcs = {\n            none = function ()\n                \n            end,\n            dark = function ()\n                ease_discard(2)\n            end,\n            lightning = function ()\n                ease_dollars(10)\n            end,\n            plasma = function ()\n                ease_hands_played(2)\n            end,\n        }\n        local orb_funcs = {\n            none = function (self, card, context)\n                local hpt = card.ability.extra\n                \n            end,\n            dark = function (self, card, context)\n                local hpt = card.ability.extra\n                if context.joker_main then\n                    if G.GAME.current_round.hands_left < 1 then\n                        return {mult = 6 * G.GAME.round_resets.hands}\n                    end\n                end\n            end,\n            lightning = function (self, card, context)\n                local hpt = card.ability.extra\n                if context.joker_main then\n                    return {mult = 10}\n                end\n            end,\n            plasma = function (self, card, context)\n                local hpt = card.ability.extra\n                if context.setting_blind then\n                    ease_hands_played(1)\n                end\n            end,\n        }\n        if context.setting_blind then\n            local changed = false\n            for k, v in ipairs(hpt.orbs) do\n                if v == 0 and not changed then\n                    local c = pseudorandom(\"pingas\", 1, 3)\n                    local old_v = v\n                    hpt.orbs[k] = c\n                    changed = true\n                    card_eval_status_text(card, 'extra', nil, nil, nil,\n                    { message = localize('k_defect_channeled')})\n                end\n            end\n            if not changed then\n                local c = pseudorandom(\"pingas\", 1, 3)\n                local old_v = hpt.orbs[c]\n                hpt.orbs[c] = pseudorandom(\"pingas\", 1, 3)\n                local effect = get_orb_from_index(old_v)\n                orb_evoke_funcs[effect]()\n                card_eval_status_text(card, 'extra', nil, nil, nil,\n                { message = localize('k_defect_evoked')})\n            end\n        end\n        for k, v in ipairs(hpt.orbs) do\n            local effect = get_orb_from_index(v)\n            SMODS.calculate_effect(orb_funcs[effect](self, card, context) or {}, card)\n        end\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "defect_orbs",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'defect_orbs',\n    path = 'defect_orbs.png',\n    px = 20,\n    py = 20",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "defect_ring",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'defect_ring',\n    path = 'defect_ring.png',\n    px = 100,\n    py = 100",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "defect_ring",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'defect_ring',\n        order = -25,\n        func = function(card, layer)\n            if card.config.center.key == \"j_med_defect\" and (card.config.center.discovered or card.bypass_discovery_center) then\n                local _xOffset = (71 - 100) / 2 / 30 + 4/60\n                local _yOffset = (95 - 100) / 2 / 30\n                MEDIUM.defect_vars.defect_ring = MEDIUM.defect_vars.defect_ring or\n                Sprite(card.T.x + 0, card.T.y + 0, 100, 100, G.ASSET_ATLAS[\"med_defect_ring\"], { x = 0, y = 0 })\n                MEDIUM.defect_vars.defect_ring.role.draw_major = card\n                MEDIUM.defect_vars.defect_ring:draw_shader('dissolve', 0, nil, nil, card.children.center, 0,\n                    0, _xOffset, 0.1 + 0.03 + _yOffset, nil, 0.6)\n                MEDIUM.defect_vars.defect_ring:draw_shader('dissolve', nil, nil, nil, card.children.center,\n                    0, 0, _xOffset, _yOffset)\n            end\n        end,",
+      "config": {
+        "x": 0,
+        "y": 0
+      },
+      "ability": {
+        "x": 0,
+        "y": 0
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "defect_orbs",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'defect_orbs',\n        order = 10,\n        func = function(card, layer)\n            if card.config.center.key == \"j_med_defect\" and (card.config.center.discovered or card.bypass_discovery_center) then\n                for i = 1, 3 do\n                    local _xOffset = 71 / 2 / 2 / 30 + math.cos((G.TIMERS.REAL * card.ability.extra.speed + tau/3 * i)) * r/60 + 3/60\n                    local _yOffset = 95 / 2 / 2 / 30 + math.sin((G.TIMERS.REAL * card.ability.extra.speed + tau/3 * i)) * r/60 + 10/60\n                    MEDIUM.defect_vars[\"defect_orbs\"..i] = MEDIUM.defect_vars[\"defect_orbs\"..i] or\n                    Sprite(card.T.x + 0, card.T.y + 0, 20, 20, G.ASSET_ATLAS[\"med_defect_orbs\"], { x = card.ability.extra.orbs[i] or 0, y = 0 })\n                    MEDIUM.defect_vars[\"defect_orbs\"..i]:set_sprite_pos({ x = card.ability.extra.orbs[i] or 0, y = 0 })\n                    MEDIUM.defect_vars[\"defect_orbs\"..i].role.draw_major = card\n                    MEDIUM.defect_vars[\"defect_orbs\"..i]:draw_shader('dissolve', 0, nil, nil, card.children.center, 0,\n                        0, _xOffset, 0.1 + 0.03 + _yOffset, nil, 0.6)\n                    MEDIUM.defect_vars[\"defect_orbs\"..i]:draw_shader('dissolve', nil, nil, nil, card.children.center,\n                        0, 0, _xOffset, _yOffset)\n                end\n            end\n        end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "elixir",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 4,
+        "y": 2
+      },
+      "raw": "key = \"elixir\",\n\trarity = 2,\n\tpos = {x=4,y=2},\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ionization",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 2,
+        "y": 2
+      },
+      "raw": "key = \"ionization\",\n\trarity = 3,\n\tconfig = {\n\t\textra = {\n\t\t\trank = 8,\n            difference = 1,\n            enhancement = \"m_bonus\",\n\t\t},\n\t},\n\tpos = {x=2,y=2},\n\tatlas = \"medium_jokers\",\n\tloc_vars = function(self, info_queue, card)\n        info_queue[#info_queue+1] = G.P_CENTERS[card.ability.extra.enhancement]\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars\n\t\tvars = {\n            hpt.rank,\n            hpt.difference,\n            G.P_CENTERS[hpt.enhancement].label,\n\t\t}\n\t\treturn {vars = vars }\n\tend,\n\tcalculate = function(self, card, context)\n        if context.after then\n            card.fucckkkkkk = nil\n        end\n            local function isadjacentto(rank, difference, inputrank)\n                if (rank + difference) == inputrank then\n                    return true\n                elseif (rank - difference) == inputrank then\n                    return true\n                end\n                return false\n            end\n\t\tlocal hpt = card.ability.extra\n        if context.individual and context.cardarea == G.play and not card.fucckkkkkk then\n            card.fucckkkkkk = true\n            local bool = true\n            local counter = 2\n            for index, carde in ipairs(context.full_hand) do\n                if carde:get_id() == hpt.rank and bool then\n                    \n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    carde:flip()\n                    play_sound('card1', percent)\n                    carde:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n\n            delay(0.1)\n\n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    carde:set_ability(hpt.enhancement)\n                    return true\n                end\n            }))\n\n            delay(0.1)\n            \n            card_eval_status_text(card, 'extra', nil, percent, nil, {message = localize(\"k_enhanced\"), colour = G.C.IMPORTANT})\n            \n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    carde:flip()\n                    play_sound('tarot2', percent, 0.6)\n                    carde:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n            \n                    bool = false\n                end\n                if isadjacentto(hpt.rank, hpt.difference, carde:get_id()) and counter >= 1 then\n                    \n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    carde:flip()\n                    play_sound('card1', percent)\n                    carde:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n\n            delay(0.1)\n\n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    assert(SMODS.modify_rank(carde, hpt.rank - carde:get_id()))\n                    return true\n                end\n            }))\n            \n            delay(0.1)\n\n            card_eval_status_text(card, 'extra', nil, percent, nil, {message = localize(\"k_converted\"), colour = G.C.IMPORTANT})\n\n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.15,\n                func = function()\n                    carde:flip()\n                    play_sound('tarot2', percent, 0.6)\n                    carde:juice_up(0.3, 0.3)\n                    return true\n                end\n            }))\n                    counter = counter - 1\n                end\n            end\n        end\n\tend",
+      "config": {
+        "extra": {
+          "rank": 8,
+          "difference": 1,
+          "enhancement": "m_bonus"
+        }
+      },
+      "ability": {
+        "extra": {
+          "rank": 8,
+          "difference": 1,
+          "enhancement": "m_bonus"
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "kevin_haas",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 7,
+        "y": 1
+      },
+      "raw": "key = \"kevin_haas\",\n\trarity = 4,\n    cost = 20,\n\tconfig = {\n\t\textra = {\n            odds = 2,\n            hand_amount = 1\n\t\t},\n\t},\n\tpos = {x=7,y=1},\n\tatlas = \"medium_jokers\",\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n        local numerator, denominator = SMODS.get_probability_vars(card, 1, hpt.odds, \"med_kevin\")\n\t\tlocal vars = {\n            numerator,\n            denominator,\n            hpt.hand_amount,\n\t\t\t(hpt.hand_amount > 1 and localize(\"k_plural\") or \"\"),\n            colours = {G.C.ORANGE}\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tcalculate = function(self, card, context)\n        if context.setting_blind then\n            if SMODS.pseudorandom_probability(card, \"med_kevin\", 1, card.ability.extra.odds) then\n\t\t\t\tG.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.hand_amount\n\t\t\t\tease_hands_played(card.ability.extra.hand_amount)\n                return {\n                    message = \"+\"..card.ability.extra.hand_amount..\" \"..localize(\"k_hand\")..(card.ability.extra.hand_amount > 1 and localize(\"k_plural\") or \"\")\n                }\n            end\n        end\n\tend",
+      "config": {
+        "extra": {
+          "odds": 2,
+          "hand_amount": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "odds": 2,
+          "hand_amount": 1
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "milestone",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 6,
+        "y": 1
+      },
+      "raw": "key = \"milestone\",\n\trarity = 2,\n\tconfig = {\n\t\textra = {\n            initmult = 2,\n            decmult = 0.2\n\t\t},\n\t},\n\tpos = {x=6,y=1},\n\tatlas = \"medium_jokers\",\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n        local amount = 0\n        local counter = 0\n        for k, v in pairs(MEDIUM.milestones) do\n            if not v.unlocked then\n                counter = counter + 1\n            end\n            amount = amount + 1\n        end\n\t\tlocal vars = {\n            hpt.initmult,\n            hpt.decmult,\n            counter,\n            amount\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tlocal hpt = card.ability.extra\n        local amount = 0\n        local counter = 0\n        for k, v in pairs(MEDIUM.milestones) do\n            if not v.unlocked then\n                counter = counter + 1\n            end\n            amount = amount + 1\n        end\n        if context.joker_main then\n            return {xmult = hpt.initmult}\n        end\n        if context.setting_blind then\n            hpt.fuck = true\n        end\n        if context.end_of_round and hpt.fuck then\n            hpt.fuck = nil\n            hpt.initmult = hpt.initmult - hpt.decmult * counter/amount\n            if hpt.initmult <= 1 then\n                card:start_dissolve(nil, true)\n                card_eval_status_text(card ,\"extra\", nil, nil, nil, {message = localize(\"k_destroyed\")})\n            else\n                card_eval_status_text(card ,\"extra\", nil, nil, nil, {message = \"-\"..hpt.decmult * counter/amount})\n            end\n        end\n\tend",
+      "config": {
+        "extra": {
+          "initmult": 2,
+          "decmult": 0.2
+        }
+      },
+      "ability": {
+        "extra": {
+          "initmult": 2,
+          "decmult": 0.2
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "nofdix",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 5,
+        "y": 2
+      },
+      "raw": "key = \"nofdix\",\n\trarity = 3,\n\tpos = {x=5,y=2},\n\tconfig = {\n\t\textra = {\n            xjank = 1.5\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars = {\n            hpt.xjank,\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n        if context.individual and context.cardarea == G.play and\n            next(SMODS.get_enhancements(context.other_card)) then\n            return {\n                xjank = card.ability.extra.xjank\n            }\n        end\n\tend",
+      "config": {
+        "extra": {
+          "xjank": 1.5
+        }
+      },
+      "ability": {
+        "extra": {
+          "xjank": 1.5
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scoring_Parameters",
+      "key": "penrose_triangle",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 0,
+        "y": 4
+      },
+      "raw": "key = \"penrose_triangle\",\n\trarity = 3,\n\tpos = {x=0,y=4},\n\tconfig = {\n\t\textra = {\n            multval = 3\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars = {\n            hpt.multval,\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n\t\tlocal hpt = card.ability.extra\n        if context.joker_main then\n            local chips = MEDIUM.penrose_triangle_func(hand_chips)/hpt.multval\n            local modify = math.ceil(chips - hand_chips)\n            return {\n                chips = modify,\n                message = localize(\"k_prf_applied\")\n            }\n        end\n\tend",
+      "config": {
+        "extra": {
+          "multval": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "multval": 3
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "sunrise",
+      "name": null,
+      "atlas": "medium_jokers",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = \"sunrise\",\n\trarity = 3,\n\tpos = {x=5,y=0},\n\tconfig = {\n\t\textra = {\n\t\t\thands = 2,\n\t\t\ttemp_hands_var = 2\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal hpt = card.ability.extra\n\t\tlocal vars = {\n            hpt.hands,\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n\tatlas = \"medium_jokers\",\n\tcalculate = function(self, card, context)\n\t\tlocal hpt = card.ability.extra\n        if context.setting_blind then\n\t\t\thpt.temp_hands_var = hpt.hands\n\t\tend\n\t\tif context.before and hpt.temp_hands_var > 0 then\n\t\t\thpt.temp_hands_var = hpt.temp_hands_var - 1\n            return {\n                level_up = true,\n                message = localize('k_level_up_ex')\n            }\n        end\n\tend",
+      "config": {
+        "extra": {
+          "hands": 2,
+          "temp_hands_var": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "hands": 2,
+          "temp_hands_var": 2
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "backdrop",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'backdrop', -- internally as med_backdrop. How unfortunate!\n    path = 'backdrop.png',\n    px = 613,\n    py = 346,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "milestones",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'milestones', -- internally as med_milestones. How unfortunate!\n    path = 'milestones.png',\n    px = 20,\n    py = 20,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n\tpath = \"modicon.png\",\n\tpx = 34,\n\tpy = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "lab_sign",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"lab_sign\",\n  path = \"labsign.png\",\n  px = 113,py = 57,\n  frames = 4, atlas_table = 'ANIMATION_ATLAS'",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Font",
+      "key": "currency",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"currency\", -- oh NO\n  path = \"currency.ttf\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "currency",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'currency',\n    colours = {G.C.RED, G.C.ORANGE, HEX(\"d5d645\"), G.C.GREEN, G.C.BLUE, G.C.PURPLE, HEX(\"d64ac3\")},\n    cycle = 5",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_seals",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_seals\", path = \"seals.png\", px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Seal",
+      "key": "orange",
+      "name": null,
+      "atlas": "medium_seals",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "-- gold + red\n    key = 'orange',\n    atlas = 'medium_seals',\n    pos = { x = 0, y = 0 },\n    config = { extra = { jank = 10 } },\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal vars = {\n            card.ability.seal.extra.jank\n\t\t}\n\t\treturn { vars = vars }\n\tend,\n    in_pool = function (self, args)\n        if G.GAME.modifiers.fusion_enhancements_spawn then\n            return true\n        end\n        return false\n    end,\n    badge_colour = copy_table(G.C.ORANGE),\n    calculate = function(self, card, context)\n        if context.main_scoring and context.cardarea == G.hand and not context.end_of_round then\n            return {jank = card.ability.seal.extra.jank} \n        end\n    end,",
+      "config": {
+        "extra": {
+          "jank": 10
+        }
+      },
+      "ability": {
+        "extra": {
+          "jank": 10
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Seal",
+      "key": "taupe",
+      "name": null,
+      "atlas": "medium_seals",
+      "pos": {
+        "x": 1,
+        "y": 1
+      },
+      "raw": "-- gold + purple\n    key = 'taupe',\n    atlas = 'medium_seals',\n    pos = { x = 1, y = 1 },\n    in_pool = function (self, args)\n        if G.GAME.modifiers.fusion_enhancements_spawn then\n            return true\n        end\n        return false\n    end,\n    badge_colour = HEX(\"b4ac8b\"),\n    calculate = function(self, card, context)\n        if context.main_scoring and context.cardarea == G.play and not context.end_of_round then\n            if #context.full_hand == 1 then\n            G.E_MANAGER:add_event(Event({\n                trigger = 'before',\n                delay = 0.0,\n                func = function()\n                    SMODS.add_card({ set = 'Interface' })\n                    G.GAME.consumeable_buffer = 0\n                    return true\n                end\n            }))\n            end\n        end\n    end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_Revo's Vault_crossmod",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_Revo's Vault_crossmod\", path = \"revosvault_crossmod.png\", px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ae_printer",
+      "name": "AE Printer",
+      "atlas": "medium_Revo's Vault_crossmod",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"ae_printer\",\n\trarity = \"crv_p\",\n\tpos = {x = 0, y = 0},\n\tatlas = \"medium_Revo's Vault_crossmod\",\n    loc_txt = {\n        name = \"AE Printer\",\n        text = {\n            \"Print a card with\",\n            \"a {C:attention}fusion{} suit\",\n            \"when {C:attention}first hand is drawn{}\"\n        }\n    },\n\tcalculate = function (self, card, context)\n        local pool_of_fusions = {\"med_spears\"}\n        if context.first_hand_drawn then\n            local _card = SMODS.create_card { set = \"Base\", suit = pseudorandom_element(pool_of_fusions, \"med_revo_ae\"), area = G.discard }\n            G.playing_card = (G.playing_card and G.playing_card + 1) or 1\n            _card.playing_card = G.playing_card\n            table.insert(G.playing_cards, _card)\n            G.E_MANAGER:add_event(Event({\n                func = function()\n                    G.hand:emplace(_card)\n                    _card:start_materialize()\n                    G.GAME.blind:debuff_card(_card)\n                    G.hand:sort()\n                    if context.blueprint_card then\n                        context.blueprint_card:juice_up()\n                    else\n                        card:juice_up()\n                    end\n                    SMODS.calculate_context({ playing_card_added = true, cards = { _card } })\n                    save_run()\n                    return true\n                end\n            }))\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "poison",
+      "name": "Poison",
+      "atlas": "medium_Revo's Vault_crossmod",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = \"poison\",\n\trarity = \"crv_va\",\n\tpos = {x = 0, y = 1},\n\tatlas = \"medium_Revo's Vault_crossmod\",\n    config = {\n\t\textra = {\n            gmult = 2,\n            xmult = 1\n\t\t},\n    },\n    loc_txt = {\n        name = \"Poison\",\n        text = {\n            \"{X:mult,C:white}X#2#{} Mult,\",\n            \"In the {C:green}LAB{},\",\n            \"{C:attention}Destroy{} cards used in\",\n            \"{C:attention}fusion{}, and gain\",\n            \"{X:mult,C:white}X#1#{} Mult.\"\n        }\n    },\n    loc_vars = function (self, info_queue, card)\n        return {vars = {card.ability.extra.gmult, card.ability.extra.xmult}}\n    end,\n\tcalculate = function (self, card, context)\n        if context.joker_main then\n            return {xmult = card.ability.extra.xmult}\n        end\n    end",
+      "config": {
+        "extra": {
+          "gmult": 2,
+          "xmult": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "gmult": 2,
+          "xmult": 1
+        }
+      },
+      "vars": [
+        2,
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "reflective",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"reflective\",\n    path = \"reflective.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Edition",
+      "key": "reflective",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"reflective\",\n    shader = \"reflective\",\n    config = { extra = { jank = 3 } },\n    weight = 3,\n    extra_cost = 5,\n    loc_vars = function (self, info_queue, card)\n        return { vars = { card.ability.extra.jank } }\n    end,\n    calculate = function (self, card, context)\n        if context.joker_main then\n            return {xjank = card.ability.extra.jank}\n        end\n    end",
+      "config": {
+        "extra": {
+          "jank": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "jank": 3
+        }
+      },
+      "vars": [
+        3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "sfx_pjank",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"sfx_pjank\",\n    path = \"sfx_pjank.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "sfx_xjank",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"sfx_xjank\",\n    path = \"sfx_xjank.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "sfx_ijank",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"sfx_ijank\",\n    path = \"sfx_ijank.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scoring_Parameter",
+      "key": "jank",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'jank',\n  default_value = G.GAME and G.GAME.jankvalue or 0,\n  colour = G.C.ORANGE,\n  calculation_keys = {'jank', 'xjank'},\n    calc_effect = function(self, effect, scored_card, key, amount, from_edition)\n\t\tif not SMODS.Calculation_Controls.chips then return end\n\t    if key == 'jank' and amount then\n\t        if effect.card and effect.card ~= scored_card then juice_card(effect.card) end\n\t        self:modify(amount)\n\t        card_eval_status_text(scored_card, 'extra', nil, percent, nil,\n\t            {sound = \"med_sfx_pjank\", message = localize{type = 'variable', key = amount > 0 and 'a_chips' or 'a_chips_minus', vars = {amount}}, colour = self.colour})\n\t        return true\n        end\n        if key == 'xjank' and amount then\n            if effect.card and effect.card ~= scored_card then juice_card(effect.card) end\n            self:modify(self.current * (amount - 1))\n            card_eval_status_text(scored_card, 'extra', nil, percent, nil,\n                {sound = \"med_sfx_xjank\", message = localize{type = 'variable', key = amount > 0 and 'a_chips' or 'a_chips_minus', vars = {'X'..amount}}, colour = self.colour})\n            return true\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scoring_Parameters",
+      "key": "jank",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jank\",\n    func = function(self, chips, mult, flames)\n\t    return chips * fuck(mult, SMODS.get_scoring_parameter(self.mod.prefix..'_jank', flames))\n\tend,\n    parameters = {'chips', 'mult', SMODS.current_mod.prefix..'_jank'},\n    replace_ui = function(self)\n        local scale = 0.3\n\t\treturn\n\t\t{n=G.UIT.R, config={align = \"cm\", minh = 1, padding = 0.1}, nodes={\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_chips'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'chips',\n\t\t\t\t\ttext = 'chip_text',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n\t\t\tSMODS.GUI.operator(scale*0.75),\n            {n=G.UIT.C, config={align = \"cm\", id = 'hand_operator_container'}, nodes={\n                {n=G.UIT.T, config={text = \"max(\", scale = scale * 2 * 0.75, colour = G.C.WHITE, shadow = true}},\n            }},\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_mult'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'mult',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_med_jank'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'med_jank',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n            {n=G.UIT.C, config={align = \"cm\", id = 'hand_operator_container'}, nodes={\n                {n=G.UIT.T, config={text = \")\", scale = scale * 2 * 0.75, colour = G.C.WHITE, shadow = true}},\n            }},\n\t\t}}\n\tend",
+      "config": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "ability": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scoring_Calculation",
+      "key": "jank_improved",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jank_improved\",\n    func = function(self, chips, mult, flames)\n\t    return chips * (mult + SMODS.get_scoring_parameter(self.mod.prefix..'_jank', flames))\n\tend,\n    parameters = {'chips', 'mult', SMODS.current_mod.prefix..'_jank'},\n    replace_ui = function(self)\n        local scale = 0.3\n\t\treturn\n\t\t{n=G.UIT.R, config={align = \"cm\", minh = 1, padding = 0.1}, nodes={\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_chips'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'chips',\n\t\t\t\t\ttext = 'chip_text',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n\t\t\tSMODS.GUI.operator(scale*0.75),\n            {n=G.UIT.C, config={align = \"cm\", id = 'hand_operator_container'}, nodes={\n                {n=G.UIT.T, config={text = \"(\", scale = scale * 2 * 0.75, colour = G.C.WHITE, shadow = true}},\n            }},\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_mult'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'mult',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n            {n=G.UIT.C, config={align = \"cm\", id = 'hand_operator_container'}, nodes={\n                {n=G.UIT.T, config={text = \"+\", scale = scale * 2 * 0.75, colour = G.C.BLUE, shadow = true}},\n            }},\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_med_jank'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'med_jank',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n            {n=G.UIT.C, config={align = \"cm\", id = 'hand_operator_container'}, nodes={\n                {n=G.UIT.T, config={text = \")\", scale = scale * 2 * 0.75, colour = G.C.WHITE, shadow = true}},\n            }},\n\t\t}}\n\tend",
+      "config": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "ability": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scoring_Calculation",
+      "key": "jank_decapitated",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jank_decapitated\",\n    func = function(self, chips, mult, flames)\n\t    return chips * fucks(mult, SMODS.get_scoring_parameter(self.mod.prefix..'_jank', flames))\n\tend,\n    parameters = {'chips', 'mult', SMODS.current_mod.prefix..'_jank'},\n    replace_ui = function(self)\n        local scale = 0.3\n\t\treturn\n\t\t{n=G.UIT.R, config={align = \"cm\", minh = 1, padding = 0.1}, nodes={\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_chips'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'chips',\n\t\t\t\t\ttext = 'chip_text',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n\t\t\tSMODS.GUI.operator(scale*0.75),\n            {n=G.UIT.C, config={align = \"cm\", id = 'hand_operator_container'}, nodes={\n                {n=G.UIT.T, config={text = \"min(\", scale = scale * 2 * 0.75, colour = G.C.WHITE, shadow = true}},\n            }},\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_mult'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'mult',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n\t\t\t{n=G.UIT.C, config={align = 'cm', id = 'hand_med_jank'}, nodes = {\n\t\t\t\tSMODS.GUI.score_container({\n\t\t\t\t\ttype = 'med_jank',\n\t\t\t\t\talign = 'cm',\n\t\t\t\t\tw = 1,\n\t\t\t\t\tscale = scale\n\t\t\t\t})\n\t\t\t}},\n            {n=G.UIT.C, config={align = \"cm\", id = 'hand_operator_container'}, nodes={\n                {n=G.UIT.T, config={text = \")\", scale = scale * 2 * 0.75, colour = G.C.WHITE, shadow = true}},\n            }},\n\t\t}}\n\tend",
+      "config": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "ability": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "sfx_milestone",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"sfx_milestone\",\n    path = \"sfx_milestone.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "test_mile",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'test_mile',\n    path = 'temp_milestone.png',\n    px = 20,\n    py = 20,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_fusionsuits",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_fusionsuits\",\n    path = \"fusionsuits.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_fusionsuitsui",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_fusionsuitsui\",\n    path = \"fusionsuitsui.png\",\n    px = 18,\n    py = 18",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Suit",
+      "key": "spears",
+      "name": null,
+      "atlas": "medium_fusionsuits",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "-- diamonds + spades\n    key = \"spears\",\n    card_key = \"SPEARS\",\n    lc_atlas = \"medium_fusionsuits\",\n    hc_atlas = \"medium_fusionsuits\",\n    hc_ui_atlas = 'medium_fusionsuitsui',\n    lc_ui_atlas = 'medium_fusionsuitsui',\n    lc_colour = HEX(\"6b4c2d\"),\n    hc_colour = HEX(\"6b4c2d\"),\n    pos = {\n        y = 0\n    },\n    ui_pos = {\n        x = 0,\n        y = 0\n    },\n    in_pool = function(self, args)\n        if G.GAME.modifiers.fusion_suits_spawn then\n            return true\n        end\n        return false\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "sfx_injog",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"sfx_injog\",\n    path = \"sfx_injog.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "lab_ui_stuff",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"lab_ui_stuff\",\n\tpath = \"lab_ui_stuff.png\",\n\tpx = 20,\n\tpy = 20",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "medium_vouchers",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"medium_vouchers\", path = \"vouchers.png\", px = 71, py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Voucher",
+      "key": "fashion",
+      "name": null,
+      "atlas": "medium_vouchers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'fashion',\n\tatlas = \"medium_vouchers\",\n\tpos = { x = 0, y = 0 },\n    loc_vars = function (self, info_queue, card)\n        info_queue[#info_queue+1] = { set = \"Other\", key = \"fusion_suits\" } \n\tend,\n\tredeem = function(self, voucher)\n\t\tG.GAME.modifiers.fusion_suits_spawn = true\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Voucher",
+      "key": "vogue",
+      "name": null,
+      "atlas": "medium_vouchers",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'vogue',\n\tatlas = \"medium_vouchers\",\n\tpos = { x = 1, y = 0 },\n\trequires = {\n\t\t'v_med_fasion'\n\t},\n    loc_vars = function (self, info_queue, card)\n        info_queue[#info_queue+1] = { set = \"Other\", key = \"fusion_enhancements\" } \n        info_queue[#info_queue+1] = { set = \"Other\", key = \"fusion_seals\" } \n\tend,\n\tredeem = function(self, voucher)\n\t\tG.GAME.modifiers.fusion_enhancements_spawn = true\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Voucher",
+      "key": "dilettante",
+      "name": null,
+      "atlas": "medium_vouchers",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = 'dilettante',\n\tatlas = \"medium_vouchers\",\n\tpos = { x = 0, y = 1 },\n    loc_vars = function (self, info_queue, card)\n        info_queue[#info_queue+1] = { set = \"Other\", key = \"injogged_cards\" } \n\tend,\n\tredeem = function(self, voucher)\n\t\tG.GAME.max_injogged_cards = G.GAME.max_injogged_cards + 1\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Voucher",
+      "key": "gambler",
+      "name": null,
+      "atlas": "medium_vouchers",
+      "pos": {
+        "x": 1,
+        "y": 1
+      },
+      "raw": "key = 'gambler',\n\tatlas = \"medium_vouchers\",\n\tpos = { x = 1, y = 1 },\n    loc_vars = function (self, info_queue, card)\n        info_queue[#info_queue+1] = { set = \"Other\", key = \"injogged_cards\" } \n\tend,\n\trequires = {\n\t\t'v_med_dillettante'\n\t},\n\tredeem = function(self, voucher)\n\t\tG.GAME.max_injogged_cards = G.GAME.max_injogged_cards + 1\n\tend",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "no-tag"
+}
