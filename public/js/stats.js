@@ -41,14 +41,14 @@ class StatsPage
 
         const totalViews = Object.values(this.data).reduce((sum, mod) => sum + (mod.analytics?.views || 0), 0);
         const totalDownloads = Object.values(this.data).reduce((sum, mod) => sum + (mod.analytics?.downloads || 0), 0);
-        const totalFavorites = Object.values(this.data).reduce((sum, mod) => sum + (mod.favourites || 0), 0);
+        const totalFavourites = Object.values(this.data).reduce((sum, mod) => sum + (mod.favourites || 0), 0);
 
         const stats = [
             { label: 'Total Mods', value: mods.length, icon: '📦' },
             { label: 'Modpacks', value: modpacks.length, icon: '🎁' },
             { label: 'Total Views', value: totalViews.toLocaleString(), icon: '👁️' },
             { label: 'Total Downloads', value: totalDownloads.toLocaleString(), icon: '📥' },
-            { label: 'Total Favorites', value: totalFavorites.toLocaleString(), icon: '❤️' }
+            { label: 'Total Favourites', value: totalFavourites.toLocaleString(), icon: '❤️' }
         ];
 
         stats.forEach(stat => {
@@ -91,14 +91,38 @@ class StatsPage
             });
         });
 
-        const topAuthors = Object.entries(authorStats).sort((a, b) => b[1].mods - a[1].mods).slice(0, 10);
+        const topAuthors = Object.entries(authorStats).sort((a, b) => {
+            const viewScore = 0.3;
+            const downloadScore = 0.5;
+            const favouriteScore = 0.2;
+            const modScore = 0.7;
+
+            const aScoreFromViews = viewScore * a[1].views;
+            const aScoreFromDownloads = downloadScore * a[1].downloads;
+            const aScoreFromFavourites = favouriteScore * a[1].favourites;
+            const aScoreFromMods = modScore * a[1].mods;
+
+            const bScoreFromViews = viewScore * b[1].views;
+            const bScoreFromDownloads = downloadScore * b[1].downloads;
+            const bScoreFromFavourites = favouriteScore * b[1].favourites;
+            const bScoreFromMods = modScore * b[1].mods;
+
+            const viewDiff = bScoreFromViews - aScoreFromViews;
+            const downloadDiff = bScoreFromDownloads - aScoreFromDownloads;
+            const favouriteDiff = bScoreFromFavourites - aScoreFromFavourites;
+            const modDiff = bScoreFromMods - aScoreFromMods;
+
+            const totalDiff = viewDiff + downloadDiff + favouriteDiff + modDiff;
+            
+            return totalDiff;
+        }).slice(0, 10);
 
         container.innerHTML = topAuthors.map(([author, stats], index) => `
             <div style="background: rgba(30, 18, 82, 0.4); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem;">
                 <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent-blue); min-width: 40px;">#${index + 1}</div>
                 <div style="flex: 1;">
                     <strong>${author}</strong><br>
-                    <small style="color: var(--text-secondary);">${stats.mods} mods · ${stats.downloads} downloads · ${stats.favorites} favorites</small>
+                    <small style="color: var(--text-secondary);">${stats.mods} mods · ${stats.downloads} downloads · ${stats.favourites} favourites</small>
                 </div>
             </div>
         `).join('');
@@ -155,7 +179,7 @@ class StatsPage
                 <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent-blue); min-width: 40px;">#${index + 1}</div>
                 <div style="flex: 1;">
                     <a href="/mod.html?key=${encodeURIComponent(mod.key)}" style="color: var(--text-white); text-decoration: none; font-weight: 600;">${mod.name}</a><br>
-                    <small style="color: var(--text-secondary);">${mod.analytics?.downloads || 0} downloads · ${mod.analytics?.views || 0} views · ${mod.favourites || 0} favorites</small>
+                    <small style="color: var(--text-secondary);">${mod.analytics?.downloads || 0} downloads · ${mod.analytics?.views || 0} views · ${mod.favourites || 0} favourites</small>
                 </div>
             </div>
         `).join('');
