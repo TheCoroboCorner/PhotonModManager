@@ -1328,8 +1328,8 @@ body
   .nav
   {
     flex-wrap: wrap;
-    gap: var(--space-md);
-    padding: var(--space-md);
+    gap: var(--space-sm);
+    padding: var(--space-sm);
   }
 
   .mod-hero h1

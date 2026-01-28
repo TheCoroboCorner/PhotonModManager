@@ -64,6 +64,14 @@ router.get('/wiki', (req, res) => {
     res.sendFile(path.join(config.paths.public, 'wiki.html'));
 });
 
+router.get('/trending', (req, res) => {
+    res.sendFile(path.join(config.paths.public, 'trending.html'));
+});
+
+router.get('/stats', (req, res) => {
+    res.sendFile(path.join(config.paths.public, 'stats.html'));
+});
+
 router.get('/data', (req, res) => {
     res.sendFile(config.paths.data);
 });
