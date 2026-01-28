@@ -92,19 +92,19 @@ class StatsPage
         });
 
         const topAuthors = Object.entries(authorStats).sort((a, b) => {
-            const viewScore = 0.3;
+            const viewScore = 0.35;
             const downloadScore = 0.7;
-            const favouriteScore = 0.45;
-            const modScore = 1.0;
+            const favouriteScore = 0.55;
+            const modScore = 0.4;
 
-            const aScoreFromViews = viewScore * a[1].views;
-            const aScoreFromDownloads = downloadScore * a[1].downloads;
-            const aScoreFromFavourites = favouriteScore * a[1].favourites;
+            const aScoreFromViews = viewScore * a[1].views / a[1].mods;
+            const aScoreFromDownloads = downloadScore * a[1].downloads / a[1].mods;
+            const aScoreFromFavourites = favouriteScore * a[1].favourites / a[1].mods;
             const aScoreFromMods = modScore * a[1].mods;
 
-            const bScoreFromViews = viewScore * b[1].views;
-            const bScoreFromDownloads = downloadScore * b[1].downloads;
-            const bScoreFromFavourites = favouriteScore * b[1].favourites;
+            const bScoreFromViews = viewScore * b[1].views / b[1].mods;
+            const bScoreFromDownloads = downloadScore * b[1].downloads / b[1].mods;
+            const bScoreFromFavourites = favouriteScore * b[1].favourites / b[1].mods;
             const bScoreFromMods = modScore * b[1].mods;
 
             const viewDiff = bScoreFromViews - aScoreFromViews;
