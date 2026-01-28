@@ -34,6 +34,7 @@ class ModDetailPage
         this.renderConflicts();
         this.updateStatCards();
         this.renderRelatedMods();
+        this.updateMetaTags();
     }
 
     showError(message)
@@ -435,6 +436,38 @@ class ModDetailPage
 
         if (wikiLink)
             wikiLink.href = `/wiki?mod=${this.modKey}`;
+    }
+
+    setMeta(name, content)
+    {
+        let meta = document.querySelector(`meta[name="${name}"]`) || document.querySelector(`meta[property="${name}"]`);
+        if (!meta)
+        {
+            meta = document.createElement('meta');
+            if (name.startsWith('og:') || name.startsWith('twitter:'))
+                meta.setAttribute('property', name);
+            else
+                meta.setAttribute('name', name);
+
+            document.head.appendChild(meta);
+        }
+
+        meta.setAttribute('content', content);
+    }
+
+    updateMetaTags()
+    {
+        if (!this.mod)
+            return;
+
+        document.title = `${this.mod.name} - Photon`;
+
+        this.setMeta('description', this.mod.description || 'An unnamed yet typical Balatro mod');
+        this.setMeta('og:title', `${this.mod.name} - Photon Mod Manager`);
+        this.setMeta('og:description', this.mod.description || 'An undescribed yet typical Balatro mod description.');
+        this.setMeta('og:url', window.location.href);
+        this.setMeta('twitter:title', `${this.mod.name} - Photon`);
+        this.setMeta('twitter:description', this.mod.description || 'An undescribed yet typical Balatro mod description.');
     }
 
     extractModKey()

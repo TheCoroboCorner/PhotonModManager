@@ -1,5 +1,6 @@
 import { fetchJson, getUrlParams } from './utils.js';
 import { formatMarkup, replaceVariables } from './formatter.js';
+import { toast } from './toast.js';
 
 class WikiPage
 {
@@ -17,12 +18,11 @@ class WikiPage
 
     async init()
     {
-        this.setupElements();
         this.extractModKey();
-
         if (!this.modKey)
         {
             this.showError('No mod specified');
+            toast.error('No mod specified in URL');
             return;
         }
 
@@ -39,32 +39,45 @@ class WikiPage
 
         if (this.filteredCards.length > 0)
             this.showCard(0);
+        else
+            this.showEmptyState();
     }
 
     updateTitle(text)
     {
-        if (this.elements.photon)
-            this.elements.photon.textContent = text;
+        const photonEl = document.getElementById('photon');
+        if (photonEl)
+            photonEl.textContent = text;
     }
 
     showError(message)
     {
-        if (this.elements.detail)
-            this.elements.detail.textContent = message;
+        const detailEl = document.getElementById('detail');
+        if (detailEl)
+        {
+            detailEl.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">❌</div>
+                    <h2 style="color: var(--text-primary); margin-bottom: 0.5rem;">Error</h2>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
     }
 
-    setupElements()
+    showEmptyState()
     {
-        this.elements = {
-            modTitle: document.getElementById('mod-name'),
-            detail: document.getElementById('detail'),
-            photon: document.getElementById('photon'),
-            select: document.getElementById('card-select'),
-            sprite: document.getElementById('sprite'),
-            title: document.getElementById('card-title'),
-            locText: document.getElementById('loc-text'),
-            rawDef: document.getElementById('raw-def')
-        };
+        const detailEl = document.getElementById('detail');
+        if (detailEl)
+        {
+            detailEl.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">📭</div>
+                    <h2 style="color: var(--text-primary); margin-bottom: 0.5rem;">No Cards Found</h2>
+                    <p>This mod doesn't have any documented cards yet.</p>
+                </div>
+            `;
+        }
     }
 
     extractModKey()
@@ -72,23 +85,34 @@ class WikiPage
         const params = getUrlParams();
         this.modKey = params.get('mod');
 
-        if (this.modKey && this.elements.modTitle)
+        if (this.modKey)
         {
-            const [repo] = this.modKey.split('@');
-            this.elements.modTitle.textContent = repo;
+            const modNameEl = document.getElementById('mod-name');
+            if (modNameEl)
+            {
+                const [repo] = this.modKey.split('@');
+                modNameEl.textContent = repo;
+            }
         }
     }
 
     async loadWikiData()
     {
-        if (!this.elements.detail)
+        const detailEl = document.getElementById('detail');
+        if (!detailEl)
         {
             console.error('Detail element not found');
-            alert('UI element missing');
+            toast.error('UI element missing');
             return;
         }
 
-        this.updateTitle('Loading cards...');
+        this.updateTitle('Loading...');
+        detailEl.innerHTML = `
+            <div class="loading-container">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Loading wiki data...</p>
+            </div>
+        `;
 
         const url = `/wiki-data/${this.modKey}.json`;
         console.log('>>> Loading wiki for', this.modKey);
@@ -96,12 +120,13 @@ class WikiPage
         try
         {
             this.wikiData = await fetchJson(url);
-            console.log('[Client] Received wiki data from server');
+            console.log('[Wiki] Received wiki data:', this.wikiData);
         }
         catch (err)
         {
-            console.error('[Client] Error fetching wiki data:', err);
+            console.error('[Wiki] Error fetching wiki data:', err);
             this.showError('Could not load wiki data from server');
+            toast.error('Failed to load wiki data');
         }
     }
 
@@ -110,6 +135,11 @@ class WikiPage
         this.locMap = this.wikiData.locMap || {};
         this.atlases = this.wikiData.atlases || {};
         this.cards = this.wikiData.cards || [];
+
+        console.log('[Wiki] Processed data:');
+        console.log('   - Loc entries:', Object.keys(this.locMap).length);
+        console.log('   - Atlases:', Object.keys(this.atlases).length);
+        console.log('   - Cards:', this.cards.length);
     }
 
     buildLocalizationMaps()
@@ -135,18 +165,17 @@ class WikiPage
         this.filteredCards = this.cards.filter(card => {
             const hasLoc = this.validSuffixes.has(card.key);
             if (!hasLoc)
-                console.warn('Dropping card', card.key, 'due to no loc entry');
+                console.warn('[Wiki] Dropping card', card.key, '- no loc entry');
 
             return hasLoc;
         });
 
-        console.log('Filtered cards:', this.filteredCards);
+        console.log('[Wiki] Filtered cards:', this.filteredCards.length, 'of', this.cards.length);
     }
 
     getCardDisplayName(card)
     {
         let displayName = this.locMap[card.key]?.name;
-
         if (!displayName)
         {
             const fullKey = this.suffixToKeyMap.get(card.key);
@@ -167,10 +196,14 @@ class WikiPage
 
     populateCardSelector()
     {
-        if (!this.elements.select)
+        const selectEl = document.getElementById('card-select');
+        if (!selectEl)
+        {
+            console.error('[Wiki] Card select element not found!');
             return;
+        }
 
-        this.elements.select.innerHTML = '';
+        selectEl.innerHTML = '<option value="" disabled selected>-- Choose a Card --</option>';
 
         const groups = this.groupCardsByType();
 
@@ -183,16 +216,34 @@ class WikiPage
                 const option = document.createElement('option');
                 option.value = idx;
                 option.textContent = this.getCardDisplayName(card);
-                
+
                 optgroup.appendChild(option);
             });
 
-            this.elements.select.appendChild(optgroup);
+            selectEl.appendChild(optgroup);
         }
+
+        console.log('[Wiki] Populated selector with', Object.keys(groups).length, 'groups');
     }
 
-    renderCardLocalization(card)
+    showCard(idx)
     {
+        const card = this.filteredCards[idx];
+        if (!card)
+        {
+            console.warn('[Wiki] Card not found at index', idx);
+            return;
+        }
+
+        console.log('[Wiki] Showing card:', card.key);
+
+        const detailEl = document.getElementById('detail');
+        if (!detailEl)
+        {
+            console.error('[Wiki] Detail element not found!');
+            return;
+        }
+
         let locEntry = this.locMap[card.key];
         if (!locEntry)
         {
@@ -201,115 +252,91 @@ class WikiPage
                 locEntry = this.locMap[fullKey];
         }
 
-        if (locEntry && this.elements.title && this.elements.locText)
+        let cardName = card.key;
+        let cardText = '<em style="color: var(--text-secondary);">Localization entry not found.</em>';
+
+        if (locEntry)
         {
-            this.elements.title.innerHTML = formatMarkup(locEntry.name);
+            cardName = formatMarkup(locEntry.name);
 
             const processedLines = locEntry.text.map(line => replaceVariables(line, card.vars || []));
-
-            this.elements.locText.innerHTML = processedLines.map(line => formatMarkup(line)).join('<br>');
+            cardText = processedLines.map(line => formatMarkup(line)).join('<br>');
         }
-        else
-        {
-            if (this.elements.title)
-                this.elements.title.textContent = card.key;
-            if (this.elements.locText)
-                this.elements.locText.innerHTML = '<i>Localization entry not found.</i>';
-        }
-    }
-
-    renderCardSprite(card)
-    {
-        if (!this.elements.sprite)
-            return;
-
-        if (!card.atlas || !card.pos || !this.atlases[card.atlas])
-        {
-            this.elements.sprite.style.display = 'none';
-            return;
-        }
-
-        const atlas = this.atlases[card.atlas];
-        console.log('   atlas key:', card.atlas);
-        console.log('   atlasDef:', atlas);
-
-        if (!atlas.localPath)
-        {
-            this.elements.sprite.style.display = 'none';
-            return;
-        }
-
-        this.elements.sprite.style.display = 'block';
-        this.elements.sprite.style.width = `${atlas.px * 2}px`;
-        this.elements.sprite.style.height = `${atlas.py * 2}px`;
-        this.elements.sprite.style.backgroundImage = `url(${atlas.localPath})`;
-        this.elements.sprite.style.backgroundPosition = `-${card.pos.x * atlas.px * 2}px -${card.pos.y * atlas.py * 2}px`;
-    }
-
-    showCard(idx)
-    {
-        const card = this.filteredCards[idx];
-        if (!card)
-        {
-            console.warn('Card not found at index:', idx);
-            return;
-        }
-
-        console.log('CARD:', card);
-
-        const loc = this.renderCardLocalization(card);
-        const sprite = this.renderCardSprite(card);
 
         let html = '<div class="card-display">';
+
         html += '<div class="card-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">';
-
-        if (sprite)
-        {
-            html += `
-                <div id="sprite" style="
-                    width: ${sprite.width}px;
-                    height: ${sprite.height}px;
-                    background-image: ${sprite.backgroundImage};
-                    background-position: ${sprite.backgroundPosition};
-                    border-radius: 8px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-                    border: 2px solid rgba(102, 126, 234, 0.3);
-                    image-rendering: pixelated;
-                    background-repeat: no-repeat;
-                "></div>
-            `;
-        }
         
-        html += `<h1 id="card-title" style="margin: 0; font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">${loc.name}</h1>`;
-        html += '</div>';
-
-        html += `<div id="loc-text" style="background: rgba(30, 18, 82, 0.4); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-blue); line-height: 1.8; white-space: pre-wrap;">${loc.text}</div>`;
-        html += '</div>';
-
-        if (this.elements.detail)
+        if (card.atlas && card.pos && this.atlases[card.atlas])
         {
-            this.elements.detail.innerHTML = html;
-            console.log('Card rendered successfully');
+            const atlas = this.atlases[card.atlas];
+            console.log('[Wiki] Atlas for', card.key, ':', atlas);
+            
+            if (atlas.localPath)
+            {
+                const width = atlas.px * 2;
+                const height = atlas.py * 2;
+                const bgImage = `url(${atlas.localPath})`;
+                const bgPos = `-${card.pos.x * atlas.px * 2}px -${card.pos.y * atlas.py * 2}px`;
+                
+                html += `
+                    <div style="
+                        width: ${width}px;
+                        height: ${height}px;
+                        background-image: ${bgImage};
+                        background-position: ${bgPos};
+                        background-repeat: no-repeat;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                        border: 2px solid rgba(102, 126, 234, 0.3);
+                        image-rendering: pixelated;
+                    "></div>
+                `;
+            }
+            else
+            {
+                console.warn('[Wiki] No localPath for atlas:', card.atlas);
+            }
         }
         else
-            console.error('Detail element not found!');
+        {
+            console.warn('[Wiki] No sprite data for card:', card.key);
+        }
+
+        html += `<h1 style="margin: 0; font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">${cardName}</h1>`;
+        html += '</div>';
+
+        html += `<div style="background: rgba(30, 18, 82, 0.4); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-blue); line-height: 1.8; white-space: pre-wrap;">${cardText}</div>`;
+        
+        html += '</div>';
+
+        detailEl.innerHTML = html;
+        console.log('[Wiki] Card rendered successfully');
     }
 
     setupEventListeners()
     {
-        if (!this.elements.select)
+        const selectEl = document.getElementById('card-select');
+        if (!selectEl)
+        {
+            console.error('[Wiki] Card select not found for event listener');
             return;
+        }
 
-        this.elements.select.addEventListener('change', () => {
-            const idx = parseInt(this.elements.select.value, 10);
+        selectEl.addEventListener('change', (e) => {
+            const idx = parseInt(e.target.value, 10);
+            console.log('[Wiki] Select changed to index:', idx);
 
-            if (!isNaN(idx))
+            if (!isNaN(idx) && idx >= 0)
                 this.showCard(idx);
         });
+
+        console.log('[Wiki] Event listeners set up');
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('[Wiki] Initializing...');
     const wikiPage = new WikiPage();
     wikiPage.init();
 });

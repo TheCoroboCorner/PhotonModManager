@@ -7,6 +7,8 @@ import submitRoutes from './routes/submit.js';
 import favouriteRoutes from './routes/favourite.js';
 import wikiRoutes from './routes/wiki.js';
 import modpackRoutes from './routes/modpack.js';
+import analyticsRoutes from './routes/analytics.js';
+import apiRoutes from './routes/api.js';
 
 const app = express();
 
@@ -23,6 +25,8 @@ app.use('/', submitRoutes);
 app.use('/', favouriteRoutes);
 app.use('/', wikiRoutes);
 app.use('/', modpackRoutes);
+app.use('/', analyticsRoutes);
+app.use('/', apiRoutes);
 
 app.listen(config.port, () => console.log(`Listening on port ${config.port}`));
 

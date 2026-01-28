@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Photon</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="navbar">
+        <ul class="nav">
+          <li>
+            <a href="/">Home</a>
+        </li>
+          <li>
+            <a href="/submit">Submit</a>
+        </li>
+          <li>
+            <a href="/browse">Browse</a>
+        </li>
+          <li>
+            <a href="/trending">Trending</a>
+        </li>
+          <li>
+            <a href="/stats">Stats</a>
+        </li>
+          <li>
+            <a href="/about">About</a>
+        </li>
+        </ul>
+      </div>
+    
+      <div class="content-wrapper flex alignment">
+        <div id="content-container" style="flex-grow: 1;">
+          <div class="wrapper">
+            <h1>Photon Statistics</h1>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">
+              Insights into the Photon modding community.
+            </p>
+
+            <div id="overview-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;"></div>
+
+            <div style="margin-bottom: 2rem;">
+              <h2>Top Authors</h2>
+              <div id="top-authors"></div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <h2>Popular Tags</h2>
+              <div id="popular-tags"></div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <h2>Most Downloaded</h2>
+              <div id="most-downloaded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">
+        <div class="footer-wrapper">
+          <p>A website meant to manage mods from Balatro by LocalThunk. We do not claim to own Balatro in any way.</p>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="js/toast.js"></script>
+    <script type="module" src="js/pageTransitions.js"></script>
+    <script type="module" src="js/stats.js"></script>
+  </body>
+</html>

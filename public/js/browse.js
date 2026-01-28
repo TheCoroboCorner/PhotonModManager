@@ -399,6 +399,18 @@ class ModBrowser
             const githubLink = document.createElement('a');
             githubLink.href = `https://github.com/${owner}/${repo}`;
             githubLink.target = '_blank';
+
+            githubLink.addEventListener('click', async () => {
+                try
+                {
+                    await fetch(`/analytics/download/${encodeURIComponent(mod.key)}`, { method: 'POST' });
+                }
+                catch (err)
+                {
+                    console.error('Failed to track download:', err);
+                }
+            });
+
             githubLink.className = 'mod-card-link';
             githubLink.innerHTML = 'GitHub';
             githubLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s; position: relative; overflow: hidden;';
