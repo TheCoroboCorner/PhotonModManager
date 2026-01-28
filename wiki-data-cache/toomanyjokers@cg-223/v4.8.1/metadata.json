@@ -1,0 +1,68 @@
+{
+  "locMap": {
+    "tmj_this_mods_cards": {
+      "name": "",
+      "text": [
+        "{C:green}Click{} to show",
+        "cards from {C:attention}#1#",
+        "{s:0.7,C:green}Shift+Click{s:0.7} to visit mod config"
+      ],
+      "type": "Other"
+    }
+  },
+  "atlases": {
+    "modicon": {
+      "path": "icon.png",
+      "px": 0,
+      "py": 0,
+      "localPath": "/wiki-data/toomanyjokers@cg-223/v4.8.1/icon.png",
+      "resolvedGitHubPath": "assets/1x/icon.png"
+    },
+    "pinned": {
+      "path": "pinned.png",
+      "px": 0,
+      "py": 0,
+      "localPath": "/wiki-data/toomanyjokers@cg-223/v4.8.1/pinned.png",
+      "resolvedGitHubPath": "assets/1x/pinned.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\r\n    path = \"icon.png\",\r\n    px = 34,\r\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "pinned",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"pinned\",\r\n    path = \"pinned.png\",\r\n    px = 71,\r\n    py = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sticker",
+      "key": "pinned",
+      "name": "Pinned",
+      "atlas": "pinned",
+      "pos": null,
+      "raw": "key = \"pinned\",\r\n    atlas = \"pinned\",\r\n    default_compat = false,\r\n    badge_colour = HEX 'fda200',\r\n    rate = 0,\r\n    needs_enable_flag = true,\r\n    should_apply = false, --i REALLY dont want this affecting normal gameplay\r\n    no_collection = true,\r\n    loc_txt = {\r\n        name = \"Pinned\",\r\n        text = {\r\n            \"Ctrl+click to unpin\"\r\n        }\r\n    },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v4.8.1"
+}
