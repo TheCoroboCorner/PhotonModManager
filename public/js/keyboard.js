@@ -139,7 +139,7 @@ class KeyboardShortcuts
             });
 
             this.register('arrowup', () => {
-                cards = document.querySelectorAll('.mod-card');
+                const cards = document.querySelectorAll('.mod-card');
                 if (cards.length === 0) return;
 
                 selectedCard = Math.max(selectedCard - 1, 0);

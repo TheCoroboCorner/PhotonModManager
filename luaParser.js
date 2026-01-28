@@ -10,8 +10,8 @@ export function parseAtlasDefs(txt)
     txt.replace(/SMODS\.Atlas\s*{([\s\S]*?)}/g, (_, body) => {
         const key = /key\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
         const path = /path\s*=\s*['"]([^'"]+)['"]/.exec(body)?.[1];
-        const px = +(/px\s*=\s*(d\+)/.exec(body)?.[1] || 0);
-        const py = +(/py\s*=\s*(d\+)/.exec(body)?.[1] || 0);
+        const px = +(/px\s*=\s*(\d+)/.exec(body)?.[1] || 0);
+        const py = +(/py\s*=\s*(\d+)/.exec(body)?.[1] || 0);
 
         if (key && path)
             out[key] = { path, px, py };

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - Photon</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+      .endpoint {
+        background: rgba(30, 18, 82, 0.4);
+        border-left: 4px solid var(--accent-blue);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+      }
+
+      .endpoint-method {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 0.875rem;
+        margin-right: 0.5rem;
+      }
+
+      .method-get {
+        background: linear-gradient(135deg, #4BC292 0%, #56A887 100%);
+        color: white;
+      }
+
+      .method-post {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .endpoint-path {
+        font-family: 'Courier New', monospace;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      .params-table {
+        width: 100%;
+        margin-top: 1rem;
+        border-collapse: collapse;
+      }
+
+      .params-table th {
+        text-align: left;
+        padding: 0.5rem;
+        background: rgba(102, 126, 234, 0.2);
+        border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+      }
+
+      .params-table td {
+        padding: 0.5rem;
+        border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+      }
+
+      .param-name {
+        font-family: 'Courier New', monospace;
+        color: var(--accent-blue);
+        font-weight: 600;
+      }
+
+      .response-example {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-top: 1rem;
+      }
+
+      .response-example pre {
+        margin: 0;
+        color: var(--text-light);
+        font-family: 'Courier New', monospace;
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .try-it {
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .try-it:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(240, 147, 251, 0.4);
+      }
+    </style>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comprehensive API documentation for Photon Mod Manager. Access Balatro mods programmatically.">
+    <meta name="keywords" content="balatro, mods, api, documentation, rest api">
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="navbar">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/submit">Submit</a></li>
+          <li><a href="/browse">Browse</a></li>
+          <li><a href="/modpack">Modpacks</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+    
+      <div class="content-wrapper flex alignment">
+        <div id="content-container" style="flex-grow: 1;">
+          <div class="wrapper">
+            <h1>API Documentation</h1>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">
+              With this documentation, you get to learn how to access Photon's RESTful API. For convenience, all endpoints do return JSON responses, so keep that in mind.
+            </p>
+
+            <div style="background: rgba(102, 126, 234, 0.1); border-left: 4px solid var(--accent-blue); padding: 1rem; border-radius: 8px; margin-bottom: 2rem;">
+              <strong>Base URL:</strong> <code style="background: rgba(0, 0, 0, 0.3); padding: 0.2rem 0.4rem; border-radius: 4px;">https://photonmodmanager.onrender.com</code><br>
+              <strong>Version:</strong> 1.0.0<br>
+              <strong>Rate Limit:</strong> No rate limit currently
+            </div>
+
+            <h2>Endpoints</h2>
+
+            <div class="endpoint">
+              <div style="margin-bottom: 1rem;">
+                <span class="endpoint-method method-get">GET</span>
+                <span class="endpoint-path">/api</span>
+              </div>
+              <p style="color: var(--text-light); margin-bottom: 1rem;">
+                This command gets the API version, the current endpoints, the rate limit, and a link to this documentation. In a way, this is a sort of "help" command.
+              </p>
+              <div class="response-example">
+                <pre>{
+                    "version": "1.0.0",
+                    "endpoints": {
+                        "/api/mods": "Get all mods",
+                        "/api/mods/:key": "Get specific mod",
+                        "/api/search?q=...": "Search mods",
+                        "/api/tags": "Get all tags",
+                        "/api/authors": "Get all authors"
+                    },
+                    "rateLimit": "No rate limit currently",
+                    "docs": "https://photonmodmanager.onrender.com/api"
+                    }</pre>
+              </div>
+              <button class="try-it" onclick="tryEndpoint('/api')">Try it!</button>
+            </div>
+
+            <div class="endpoint">
+              <div style="margin-bottom: 1rem;">
+                <span class="endpoint-method method-get">GET</span>
+                <span class="endpoint-path">/api/mods</span>
+              </div>
+              <p style="color: var(--text-light); margin-bottom: 1rem;">
+                This gets a list of all of the mods currently in the database, as well as all relevant information to the mods, such as analytics.
+              </p>
+
+              <h4 style="margin-top: 1rem;">Query Parameters</h4>
+              <table class="params-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="param-name">type</span></td>
+                    <td>string</td>
+                    <td>Filter by type: <code>mods</code>, <code>modpacks</code>, or <code>all</code> (default: all)</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="response-example">
+                <pre>{
+                "success": true,
+                "count": 42,
+                "mods": [
+                    {
+                    "key": "ExampleMod@ModAuthor",
+                    "name": "Example Mod",
+                    "author": "ModAuthor",
+                    "description": "An example mod description",
+                    "type": "Mod",
+                    "tags": ["Jokers", "Gameplay"],
+                    "favourites": 15,
+                    "published_at": "2025-01-15T10:30:00.000Z",
+                    "updated_at": "2025-01-20T14:45:00.000Z",
+                    "analytics": {
+                        "views": 234,
+                        "downloads": 87
+                    }
+                    }
+                ]
+                }</pre>
+              </div>
+              <button class="try-it" onclick="tryEndpoint('/api/mods?type=mods')">Try it!</button>
+            </div>
+
+            <div class="endpoint">
+              <div style="margin-bottom: 1rem;">
+                <span class="endpoint-method method-get">GET</span>
+                <span class="endpoint-path">/api/mods/:key</span>
+              </div>
+              <p style="color: var(--text-light); margin-bottom: 1rem;">
+                This gets the details for a specific mod, specified by its key. Similar to the command above, it also gets all relevant information.
+              </p>
+
+              <h4 style="margin-top: 1rem;">Path Parameters</h4>
+              <table class="params-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="param-name">key</span></td>
+                    <td>string</td>
+                    <td>The mod key in format <code>RepoName@GitHubUser</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="response-example">
+                <pre>{
+                "success": true,
+                "mod": {
+                    "key": "ExampleMod@ModAuthor",
+                    "name": "Example Mod",
+                    "author": "ModAuthor",
+                    "description": "An example mod description",
+                    "type": "Mod",
+                    "tags": ["Jokers", "Gameplay"],
+                    "dependencies": ["Steamodded@Steamodded"],
+                    "conflicts": [],
+                    "version": "1.0.0",
+                    "favourites": 15,
+                    "published_at": "2025-01-15T10:30:00.000Z"
+                }
+                }</pre>
+              </div>
+              <button class="try-it" onclick="alert('Replace :key with an actual mod key like ExampleMod@ModAuthor')">Example</button>
+            </div>
+
+            <div class="endpoint">
+              <div style="margin-bottom: 1rem;">
+                <span class="endpoint-method method-get">GET</span>
+                <span class="endpoint-path">/api/search</span>
+              </div>
+              <p style="color: var(--text-light); margin-bottom: 1rem;">
+                This uses Photon's search algorithm to search for mods by name, description, or author.
+              </p>
+
+              <h4 style="margin-top: 1rem;">Query Parameters</h4>
+              <table class="params-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="param-name">q</span></td>
+                    <td>string</td>
+                    <td><strong>Required.</strong> Search query string</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="response-example">
+                <pre>{
+                "success": true,
+                "query": "joker",
+                "count": 8,
+                "results": [
+                    {
+                    "key": "JokerMod@Author",
+                    "name": "Amazing Jokers",
+                    "description": "Adds 20 new jokers",
+                    "author": "Author",
+                    "favourites": 23
+                    }
+                ]
+                }</pre>
+              </div>
+              <button class="try-it" onclick="tryEndpoint('/api/search?q=joker')">Try it!</button>
+            </div>
+
+            <div class="endpoint">
+              <div style="margin-bottom: 1rem;">
+                <span class="endpoint-method method-get">GET</span>
+                <span class="endpoint-path">/api/tags</span>
+              </div>
+              <p style="color: var(--text-light); margin-bottom: 1rem;">
+                This gets all available tags currently in the system, getting their usage counts as well.
+              </p>
+
+              <div class="response-example">
+                <pre>{
+                "success": true,
+                "tags": [
+                    { "tag": "Jokers", "count": 15 },
+                    { "tag": "Textures", "count": 8 },
+                    { "tag": "Quality of Life", "count": 12 }
+                ]
+                }</pre>
+              </div>
+              <button class="try-it" onclick="tryEndpoint('/api/tags')">Try it!</button>
+            </div>
+
+            <div class="endpoint">
+              <div style="margin-bottom: 1rem;">
+                <span class="endpoint-method method-get">GET</span>
+                <span class="endpoint-path">/api/authors</span>
+              </div>
+              <p style="color: var(--text-light); margin-bottom: 1rem;">
+                This gets all of the mod authors currently in the system, getting their usage counts as well.
+              </p>
+
+              <div class="response-example">
+                <pre>{
+                "success": true,
+                "authors": [
+                    { "author": "ModAuthor", "modCount": 3 },
+                    { "author": "AnotherAuthor", "modCount": 5 }
+                ]
+                }</pre>
+              </div>
+              <button class="try-it" onclick="tryEndpoint('/api/authors')">Try it!</button>
+            </div>
+
+            <h2 style="margin-top: 3rem;">Raw Data Access</h2>
+            <div class="endpoint">
+              <div style="margin-bottom: 1rem;">
+                <span class="endpoint-method method-get">GET</span>
+                <span class="endpoint-path">/data</span>
+              </div>
+              <p style="color: var(--text-light); margin-bottom: 1rem;">
+                All of the relevant data for the mods is stored in this subdomain. It is all stored as a JSON file, and it is the same source the other endpoints fetch from when gathering information about mods.
+              </p>
+              <div style="background: rgba(255, 154, 0, 0.1); border-left: 4px solid #ff9a00; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                <strong>⚠️ Note:</strong> This endpoint returns the entire database and may be large. Consider using the filtered API endpoints above for better performance.
+              </div>
+              <button class="try-it" onclick="tryEndpoint('/data')">Try it!</button>
+            </div>
+
+            <h2 style="margin-top: 3rem;">Error Responses</h2>
+            <p style="color: var(--text-light); margin-bottom: 1rem;">
+              All error responses follow this format:
+            </p>
+            <div class="response-example">
+              <pre>{
+  "success": false,
+  "error": "Error message describing what went wrong"
+}</pre>
+            </div>
+
+            <h4 style="margin-top: 1.5rem;">Common Error Codes</h4>
+            <table class="params-table">
+              <thead>
+                <tr>
+                  <th>Status Code</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>400</strong></td>
+                  <td>Bad Request - Missing or invalid parameters</td>
+                </tr>
+                <tr>
+                  <td><strong>404</strong></td>
+                  <td>Not Found - Resource doesn't exist</td>
+                </tr>
+                <tr>
+                  <td><strong>500</strong></td>
+                  <td>Internal Server Error - Something went wrong on our end</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 style="margin-top: 3rem;">Usage Examples</h2>
+
+            <h3>JavaScript (Fetch API)</h3>
+            <div class="response-example">
+              <pre>// Get all mods
+fetch('https://photonmodmanager.onrender.com/api/mods')
+  .then(response => response.json())
+  .then(data => console.log(data.mods));
+
+// Search for mods
+fetch('https://photonmodmanager.onrender.com/api/search?q=joker')
+  .then(response => response.json())
+  .then(data => console.log(data.results));</pre>
+            </div>
+
+            <h3>Python (requests)</h3>
+            <div class="response-example">
+              <pre>import requests
+
+# Get all mods
+response = requests.get('https://photonmodmanager.onrender.com/api/mods')
+mods = response.json()['mods']
+
+# Get specific mod
+mod_key = 'ExampleMod@ModAuthor'
+response = requests.get(f'https://photonmodmanager.onrender.com/api/mods/{mod_key}')
+mod = response.json()['mod']</pre>
+            </div>
+
+            <h3>cURL</h3>
+            <div class="response-example">
+              <pre># Get all tags
+curl https://photonmodmanager.onrender.com/api/tags
+
+# Search mods
+curl "https://photonmodmanager.onrender.com/api/search?q=joker"</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      <div id="footer">
+        <div class="footer-wrapper">
+          <p>A website meant to manage mods from Balatro by LocalThunk. We do not claim to own Balatro in any way.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function tryEndpoint(endpoint) {
+        const fullUrl = window.location.origin + endpoint;
+        window.open(fullUrl, '_blank');
+      }
+    </script>
+    <script type="module" src="js/pageTransitions.js"></script>
+  </body>
+</html>

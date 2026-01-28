@@ -118,7 +118,8 @@ async function downloadAndLinkImages(user, repo, branch, imgFiles, versionCacheD
 
             for (const key of Object.keys(atlasDefs))
             {
-                if (atlasDefs[key].path.toLowerCase() === fileName.toLowerCase())
+                const atlasFileName = atlasDefs[key].path.split('/').pop().toLowerCase();
+                if (atlasFileName === fileName.toLowerCase())
                 {
                     atlasDefs[key].localPath = `/wiki-data/${modKey}/${latestTag}/${encodeURIComponent(fileName)}`;
                     atlasDefs[key].resolvedGitHubPath = repoPath;
