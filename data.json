@@ -509,7 +509,11 @@
     "tags": [
       "Misc"
     ],
-    "readme": ""
+    "readme": "",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-01-28T11:25:29.556Z"
+    }
   },
   "bloated_1_modpack": {
     "id": "bloated_1_modpack",
