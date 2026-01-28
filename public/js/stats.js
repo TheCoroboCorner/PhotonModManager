@@ -92,10 +92,10 @@ class StatsPage
         });
 
         const topAuthors = Object.entries(authorStats).sort((a, b) => {
-            const viewScore = 0.35;
-            const downloadScore = 0.7;
+            const viewScore = 0.4;
+            const downloadScore = 0.75;
             const favouriteScore = 0.55;
-            const modScore = 0.4;
+            const modScore = 0.65;
 
             const aScoreFromViews = viewScore * a[1].views / a[1].mods;
             const aScoreFromDownloads = downloadScore * a[1].downloads / a[1].mods;
