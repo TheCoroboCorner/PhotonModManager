@@ -639,5 +639,31 @@
       "views": 6,
       "lastViewed": "2026-01-28T11:27:42.407Z"
     }
+  },
+  "Medium@Goldofleaves": {
+    "id": "Medium",
+    "name": "Medium",
+    "author": [
+      "Goldenleaf",
+      "[prefix]Autumn"
+    ],
+    "description": "TBD.",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "8465ec",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0711a)"
+    ],
+    "published_at": "2026-01-28T13:40:23.424Z",
+    "type": "Mod",
+    "tags": [
+      "Vanilla Plus",
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Mechanics"
+    ],
+    "updated_at": "2026-01-28T13:40:14Z",
+    "readme": "read me\n"
   }
 }
