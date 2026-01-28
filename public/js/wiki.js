@@ -274,22 +274,24 @@ class WikiPage
             
             if (atlas.localPath)
             {
-                const width = atlas.px * 2;
-                const height = atlas.py * 2;
-                const bgImage = `url(${atlas.localPath})`;
-                const bgPos = `-${card.pos.x * atlas.px * 2}px -${card.pos.y * atlas.py * 2}px`;
-                
+                const spriteWidth = atlas.px * 2;
+                const spriteHeight = atlas.py * 2;
+
+                const offsetX = card.pos.x * spriteWidth;
+                const offsetY = card.pos.y * spriteHeight;
+
                 html += `
                     <div style="
-                        width: ${width}px;
-                        height: ${height}px;
-                        background-image: ${bgImage};
-                        background-position: ${bgPos};
+                        width: ${spriteWidth}px;
+                        height: ${spriteHeight}px;
+                        background-image: url(${atlas.localPath});
+                        background-position: -${offsetX}px -${offsetY}px;
                         background-repeat: no-repeat;
                         border-radius: 8px;
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
                         border: 2px solid rgba(102, 126, 234, 0.3);
                         image-rendering: pixelated;
+                        overflow: hidden;
                     "></div>
                 `;
             }

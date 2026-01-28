@@ -1328,7 +1328,7 @@ body
   .nav
   {
     flex-wrap: wrap;
-    gap: var(--space-md);
+    gap: var(--space-xs);
     padding: var(--space-md);
   }
 

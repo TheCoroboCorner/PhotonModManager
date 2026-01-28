@@ -28,10 +28,12 @@ class ModDetailPage
             return;
         }
 
+        await this.loadReleases();
         this.trackView();
         this.renderModDetails();
         this.renderDependencies();
         this.renderConflicts();
+        this.renderVersionHistory();
         this.updateStatCards();
         this.renderRelatedMods();
         this.updateMetaTags();
@@ -68,6 +70,86 @@ class ModDetailPage
         {
             console.error('Failed to track view:', err);
         }
+    }
+
+    async loadReleases()
+    {
+        try
+        {
+            const { repo, owner } = parseModKey(this.modKey);
+            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases`);
+
+            if (response.ok)
+            {
+                this.releases = await response.json();
+                console.log(`[ModDetail] Loaded ${this.releases.length} releases`);
+            }
+        }
+        catch (err)
+        {
+            console.error('Failed to load releases:', err);
+            this.releases = [];
+        }
+    }
+
+    renderVersionHistory()
+    {
+        const container = document.getElementById('version-history-list');
+        if (!container)
+            return;
+
+        if (this.releases.length === 0)
+        {
+            container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 2rem;">No release history available</p>';
+            return;
+        }
+
+        container.innerHTML = '';
+
+        this.releases.forEach((release, index) => {
+            const item = document.createElement('div');
+            item.style.cssText = 'background: rgba(30, 18, 82, 0.4); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-blue);';
+            
+            const isLatest = index === 0;
+            const badge = isLatest ? '<span style="background: linear-gradient(135deg, #4BC292 0%, #56A887 100%); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; color: white; margin-left: 0.5rem; font-weight: 700;">LATEST</span>' : '';
+            
+            item.innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <h4 style="margin: 0; color: var(--text-white);">${release.tag_name}${badge}</h4>
+                    <span style="color: var(--text-secondary); font-size: 0.875rem;">${formatDate(release.published_at)}</span>
+                </div>
+                ${release.name ? `<p style="margin: 0.5rem 0; color: var(--text-light); font-weight: 600;">${release.name}</p>` : ''}
+                ${release.body ? `<div style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">${this.renderMarkdown(release.body)}</div>` : ''}
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.875rem; color: var(--text-secondary);">
+                    ${release.assets && release.assets.length > 0 ? `<span>📦 ${release.assets.length} asset${release.assets.length > 1 ? 's' : ''}</span>` : ''}
+                    ${release.prerelease ? '<span style="color: var(--accent-purple);">⚠️ Pre-release</span>' : ''}
+                </div>
+            `;
+
+            container.appendChild(item);
+        });
+    }
+
+    renderMarkdown(markdown)
+    {
+        if (!markdown)
+            return;
+
+        return markdown
+            // Headers
+            .replace(/^### (.*$)/gim, '<h4 style="margin: 0.5rem 0;">$1</h4>')
+            .replace(/^## (.*$)/gim, '<h3 style="margin: 0.5rem 0;">$1</h3>')
+            .replace(/^# (.*$)/gim, '<h2 style="margin: 0.5rem 0;">$1</h2>')
+            // Bold
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            // Italic
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            // Code
+            .replace(/`(.*?)`/g, '<code style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.4rem; border-radius: 4px;">$1</code>')
+            // Links
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color: var(--accent-blue);">$1</a>')
+            // Line breaks
+            .replace(/\n/g, '<br>');
     }
 
     renderFavouriteButton()
@@ -200,13 +282,7 @@ class ModDetailPage
             html += '<h3 style="color: var(--text-white); margin-bottom: 1rem;">README</h3>';
             html += '<div style="background: rgba(30, 18, 82, 0.4); padding: 1.5rem; border-radius: 8px; line-height: 1.8; max-height: 500px; overflow-y: auto;">';
             
-            let readmeHtml = this.mod.readme
-                .replace(/\n\n/g, '</p><p>')
-                .replace(/\n/g, '<br>')
-                .replace(/^/, '<p>')
-                .replace(/$/, '</p>');
-            
-            html += readmeHtml;
+            html += this.renderMarkdown(this.mod.readme);
             html += '</div></div>';
         }
 
@@ -313,6 +389,9 @@ class ModDetailPage
 
         const views = this.mod.analytics?.views || 0;
         this.setElementText('stat-views', views);
+
+        const downloads = this.mod.analytics?.downloads || 0;
+        this.setElementText('stat-downloads', downloads);
     }
 
     findRelatedMods(limit = 5)

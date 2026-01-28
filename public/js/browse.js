@@ -270,6 +270,8 @@ class ModBrowser
                 diff = (b.favourites || 0) - (a.favourites || 0);
             else if (this.params.sortBy === 'views')
                 diff = (b.analytics?.views || 0) - (a.analytics?.views || 0);
+            else if (this.params.sortBy === 'downloads')
+                diff = (b.analytics?.downloads || 0) - (a.analytics?.downloads || 0);
             else if (this.params.sortBy === 'updated_at')
                 diff = Date.parse(b.updated_at || b.published_at) - Date.parse(a.updated_at || a.published_at);
             else
@@ -367,6 +369,7 @@ class ModBrowser
             meta.innerHTML = `
                 <span class="mod-card-meta-item">📅 ${formatDate(mod.published_at) ?? 'Unknown'}</span>
                 <span class="mod-card-meta-item">👁️ ${mod.analytics?.views || 0} views</span>
+                <span class="mod-card-meta-item">📥 ${mod.analytics?.downloads || 0} downloads</span>
             `;
         }
         
