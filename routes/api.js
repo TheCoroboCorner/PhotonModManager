@@ -25,7 +25,7 @@ router.get('/api/mods', async (req, res) => {
         const data = await readData();
         const type = req.query.type; // e.g. mods / modpacks / all / whatever else I end up implementing
 
-        let filtered = Object.entries(data).map(([KeyboardEvent, mod]) => ({ key, ...mod }));
+        let filtered = Object.entries(data).map(([key, mod]) => ({ key, ...mod }));
 
         if (type === 'mods')
             filtered = filtered.filter(m => m.type === 'Mod');
