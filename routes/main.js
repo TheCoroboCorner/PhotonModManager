@@ -72,7 +72,7 @@ router.get('/stats', (req, res) => {
     res.sendFile(path.join(config.paths.public, 'stats.html'));
 });
 
-router.get('/api', (req, res) => {
+router.get('/api.html', (req, res) => {
     res.sendFile(path.join(config.paths.public, 'api.html'));
 });
 

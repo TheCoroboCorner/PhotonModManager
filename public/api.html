@@ -142,17 +142,17 @@
               </p>
               <div class="response-example">
                 <pre>{
-                    "version": "1.0.0",
-                    "endpoints": {
-                        "/api/mods": "Get all mods",
-                        "/api/mods/:key": "Get specific mod",
-                        "/api/search?q=...": "Search mods",
-                        "/api/tags": "Get all tags",
-                        "/api/authors": "Get all authors"
-                    },
-                    "rateLimit": "No rate limit currently",
-                    "docs": "https://photonmodmanager.onrender.com/api"
-                    }</pre>
+    "version": "1.0.0",
+    "endpoints": {
+        "/api/mods": "Get all mods",
+        "/api/mods/:key": "Get specific mod",
+        "/api/search?q=...": "Search mods",
+        "/api/tags": "Get all tags",
+        "/api/authors": "Get all authors"
+    },
+    "rateLimit": "No rate limit currently",
+    "docs": "https://photonmodmanager.onrender.com/api.html"
+}</pre>
               </div>
               <button class="try-it" onclick="tryEndpoint('/api')">Try it!</button>
             </div>
@@ -186,26 +186,26 @@
 
               <div class="response-example">
                 <pre>{
-                "success": true,
-                "count": 42,
-                "mods": [
-                    {
-                    "key": "ExampleMod@ModAuthor",
-                    "name": "Example Mod",
-                    "author": "ModAuthor",
-                    "description": "An example mod description",
-                    "type": "Mod",
-                    "tags": ["Jokers", "Gameplay"],
-                    "favourites": 15,
-                    "published_at": "2025-01-15T10:30:00.000Z",
-                    "updated_at": "2025-01-20T14:45:00.000Z",
-                    "analytics": {
-                        "views": 234,
-                        "downloads": 87
-                    }
-                    }
-                ]
-                }</pre>
+"success": true,
+"count": 42,
+"mods": [
+    {
+    "key": "ExampleMod@ModAuthor",
+    "name": "Example Mod",
+    "author": "ModAuthor",
+    "description": "An example mod description",
+    "type": "Mod",
+    "tags": ["Jokers", "Gameplay"],
+    "favourites": 15,
+    "published_at": "2025-01-15T10:30:00.000Z",
+    "updated_at": "2025-01-20T14:45:00.000Z",
+    "analytics": {
+        "views": 234,
+        "downloads": 87
+    }
+    }
+]
+}</pre>
               </div>
               <button class="try-it" onclick="tryEndpoint('/api/mods?type=mods')">Try it!</button>
             </div>
@@ -239,23 +239,23 @@
 
               <div class="response-example">
                 <pre>{
-                "success": true,
-                "mod": {
-                    "key": "ExampleMod@ModAuthor",
-                    "name": "Example Mod",
-                    "author": "ModAuthor",
-                    "description": "An example mod description",
-                    "type": "Mod",
-                    "tags": ["Jokers", "Gameplay"],
-                    "dependencies": ["Steamodded@Steamodded"],
-                    "conflicts": [],
-                    "version": "1.0.0",
-                    "favourites": 15,
-                    "published_at": "2025-01-15T10:30:00.000Z"
-                }
-                }</pre>
+"success": true,
+"mod": {
+    "key": "ExampleMod@ModAuthor",
+    "name": "Example Mod",
+    "author": "ModAuthor",
+    "description": "An example mod description",
+    "type": "Mod",
+    "tags": ["Jokers", "Gameplay"],
+    "dependencies": ["Steamodded@Steamodded"],
+    "conflicts": [],
+    "version": "1.0.0",
+    "favourites": 15,
+    "published_at": "2025-01-15T10:30:00.000Z"
+}
+}</pre>
               </div>
-              <button class="try-it" onclick="alert('Replace :key with an actual mod key like ExampleMod@ModAuthor')">Example</button>
+              <button class="try-it" onclick="tryEndpoint('/api/mods/CoroboUtils@TheCoroboCorner')">Example</button>
             </div>
 
             <div class="endpoint">
@@ -287,19 +287,19 @@
 
               <div class="response-example">
                 <pre>{
-                "success": true,
-                "query": "joker",
-                "count": 8,
-                "results": [
-                    {
-                    "key": "JokerMod@Author",
-                    "name": "Amazing Jokers",
-                    "description": "Adds 20 new jokers",
-                    "author": "Author",
-                    "favourites": 23
-                    }
-                ]
-                }</pre>
+"success": true,
+"query": "joker",
+"count": 8,
+"results": [
+    {
+    "key": "JokerMod@Author",
+    "name": "Amazing Jokers",
+    "description": "Adds 20 new jokers",
+    "author": "Author",
+    "favourites": 23
+    }
+]
+}</pre>
               </div>
               <button class="try-it" onclick="tryEndpoint('/api/search?q=joker')">Try it!</button>
             </div>
@@ -315,13 +315,13 @@
 
               <div class="response-example">
                 <pre>{
-                "success": true,
-                "tags": [
-                    { "tag": "Jokers", "count": 15 },
-                    { "tag": "Textures", "count": 8 },
-                    { "tag": "Quality of Life", "count": 12 }
-                ]
-                }</pre>
+"success": true,
+"tags": [
+    { "tag": "Jokers", "count": 15 },
+    { "tag": "Textures", "count": 8 },
+    { "tag": "Quality of Life", "count": 12 }
+]
+}</pre>
               </div>
               <button class="try-it" onclick="tryEndpoint('/api/tags')">Try it!</button>
             </div>
@@ -337,12 +337,12 @@
 
               <div class="response-example">
                 <pre>{
-                "success": true,
-                "authors": [
-                    { "author": "ModAuthor", "modCount": 3 },
-                    { "author": "AnotherAuthor", "modCount": 5 }
-                ]
-                }</pre>
+"success": true,
+"authors": [
+    { "author": "ModAuthor", "modCount": 3 },
+    { "author": "AnotherAuthor", "modCount": 5 }
+]
+}</pre>
               </div>
               <button class="try-it" onclick="tryEndpoint('/api/authors')">Try it!</button>
             </div>
