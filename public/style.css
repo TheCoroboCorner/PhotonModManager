@@ -163,7 +163,7 @@ a:hover
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-sm);
   padding: var(--space-lg);
   margin: 0;
 }
