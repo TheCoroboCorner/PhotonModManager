@@ -326,9 +326,9 @@ class ModBrowser
             overflow: hidden;
         `;
 
-        if (entry.images && entry.images.length > 0) 
+        if (mod.images && mod.images.length > 0) 
         {
-            const thumbnail = entry.images.find(img => img.isThumbnail);
+            const thumbnail = mod.images.find(img => img.isThumbnail);
             if (thumbnail) 
             {
                 const thumbnailDiv = document.createElement('div');
@@ -367,7 +367,7 @@ class ModBrowser
                 thumbnailDiv.appendChild(thumbnailInner);
                 li.appendChild(thumbnailDiv);
                 
-                console.log('[Browse] Added thumbnail for', entry.key, ':', thumbnail.path);
+                console.log('[Browse] Added thumbnail for', mod.key, ':', thumbnail.path);
             }
         }
 
@@ -376,19 +376,19 @@ class ModBrowser
 
         // Title
         const title = document.createElement('h3');
-        title.textContent = entry.name;
+        title.textContent = mod.name;
         title.style.cssText = 'margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--text-white);';
         content.appendChild(title);
 
         // Author
         const author = document.createElement('div');
-        author.textContent = `by ${Array.isArray(entry.author) ? entry.author.join(', ') : entry.author}`;
+        author.textContent = `by ${Array.isArray(mod.author) ? mod.author.join(', ') : mod.author}`;
         author.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 0.75rem;';
         content.appendChild(author);
 
         // Description
         const desc = document.createElement('p');
-        desc.textContent = entry.description || 'No description provided';
+        desc.textContent = mod.description || 'No description provided';
         desc.style.cssText = 'color: var(--text-light); margin-bottom: 1rem; line-height: 1.6;';
         content.appendChild(desc);
 
@@ -397,26 +397,26 @@ class ModBrowser
         meta.style.cssText = 'display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; font-size: 0.875rem; color: var(--text-secondary);';
         
         // Favorites
-        if (entry.favourites) 
+        if (mod.favourites) 
         {
             const favSpan = document.createElement('span');
-            favSpan.textContent = `❤️ ${entry.favourites}`;
+            favSpan.textContent = `❤️ ${mod.favourites}`;
             meta.appendChild(favSpan);
         }
 
         // Downloads
-        if (entry.analytics && entry.analytics.downloads) 
+        if (mod.analytics && mod.analytics.downloads) 
         {
             const dlSpan = document.createElement('span');
-            dlSpan.textContent = `⬇️ ${entry.analytics.downloads}`;
+            dlSpan.textContent = `⬇️ ${mod.analytics.downloads}`;
             meta.appendChild(dlSpan);
         }
 
         // Tags
-        if (entry.tags && entry.tags.length > 0) 
+        if (mod.tags && mod.tags.length > 0) 
         {
             const tagsSpan = document.createElement('span');
-            tagsSpan.textContent = `🏷️ ${entry.tags.length}`;
+            tagsSpan.textContent = `🏷️ ${mod.tags.length}`;
             meta.appendChild(tagsSpan);
         }
 
@@ -425,7 +425,7 @@ class ModBrowser
 
         // Click to view mod
         li.style.cursor = 'pointer';
-        li.addEventListener('click', () => window.location.href = `/mod.html?key=${encodeURIComponent(entry.key)}`);
+        li.addEventListener('click', () => window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`);
 
         // Hover effect
         li.addEventListener('mouseenter', () => {
