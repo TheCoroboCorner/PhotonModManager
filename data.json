@@ -922,7 +922,100 @@
     "published_at": "2025-07-12T06:50:03.962Z",
     "type": "Mod",
     "tags": [],
-    "readme": ""
+    "readme": "",
+    "versionHistory": [
+      {
+        "tag": "0.99.2-alpha",
+        "name": "0.99.2",
+        "body": "Mostly a bugfix release related to latest SMODS.\r\n\r\n# Changes\r\n- New sprites and/or some mechanic changes for some things\r\n  - Ice and Frozen cards\r\n  - Haru Urara\r\n  - Kitasan Black\r\n    - Added WIP support card-like animation (disabled by default)\r\n  - Sakura Bakushin O\r\n  - Spirit Ploy\r\n  - Yomiel\r\n  - Mind\r\n  - Adigail\r\n  - Across The World\r\n- New vouchers\r\n  - Deck Builder & Is This Your Card?\r\n  - Expanded Storage & Advanced Hangar\r\n- New Jokers, fully completing the 105 joker roster for 1.0\r\n  - WINDY SUMMER\r\n  - A Jimbo Like Me\r\n- Easier way to cross mod with PTA via a dedicated file (`pta.lua`) that this mod loads\r\n- Updated JoyousSpring and `MISSINGNO.`.\r\n\r\n# Fixes\r\n- Downpour no longer OHKOs\r\n- Stray `info_queue` titles no longer appear\r\n- Banner related things interfering with the Jukebox and Mechanic/Wild DOS prompts\r\n- Blueprint compatibility for specific jokers\r\n- Fix Mimic Card effect not working properly\r\n- Fix Vash not preventing anything\r\n- Fix Aww! No Retriggers not doing anything\r\n- Fix Balance related jokers and enhancements *reducing* mult and chips\r\n- Force chips and mult (ex. Nostalgic Phil) not working\r\n- Paya's permanent exponential mult not working\r\n\r\n# Removed\r\n- Removed Prosopagnosia\r\n  - `qrankloader.lua` has been left behind for reference, however is no longer used.\r\n\r\n**Full Changelog**: https://github.com/hayaunderscore/PayasTerribleAdditions/compare/0.99.1-alpha...0.99.2-alpha",
+        "publishedAt": "2025-08-29T02:13:38Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.99.2-alpha",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.99.1-alpha",
+        "name": "0.99.1",
+        "body": "That's right. A tentative prerelease.\r\nNot entirely representative of 1.0 as a whole.\r\n\r\nRequires EXPLICITLY [smods beta 0822d](https://github.com/Steamodded/smods/archive/2801ca3c15c2b1f7b92d283ba182c97f78633d61.zip).\r\n\r\n# Changes\r\n\r\n- Way too many to count.\r\n- Figure it out ;)\r\n\r\n## From the last alpha\r\n\r\n- Fixed yet another stupid bug",
+        "publishedAt": "2025-08-24T03:21:01Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.99.1-alpha",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.99.0-alpha",
+        "name": "0.99.0",
+        "body": "That's right. A tentative prerelease.\r\nNot entirely representative of 1.0 as a whole.\r\n\r\nRequires EXPLICITLY [smods beta 0822d](https://github.com/Steamodded/smods/archive/2801ca3c15c2b1f7b92d283ba182c97f78633d61.zip).\r\n\r\n# Changes\r\n\r\n- Way too many to count.\r\n- Figure it out ;)",
+        "publishedAt": "2025-08-24T03:06:32Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.99.0-alpha",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.3.1",
+        "name": "0.3.1 - Demicolon and bugfixes",
+        "body": "whoops.\r\n\r\n- Add Demicolon support for most Jokers\r\n- Fix Deviant Memory forgetting when reloading a run",
+        "publishedAt": "2025-05-05T03:40:53Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.3.0",
+        "name": "0.3.0 - FULL STEAM AHEAD",
+        "body": "A whole heap of new additions in this update!\r\n\r\n- DOS Cards! Bought with pyroxenes.\r\n- 5 new Ahead Jokers!\r\n- Yet ANOTHER new rarity, with 4 jokers!\r\n- Ahead rarity now more rarer than ever.....",
+        "publishedAt": "2025-05-05T02:40:00Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.3.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.2.0",
+        "name": "0.2.0: Pyroxene Update",
+        "body": "- Adds Pyroxenes! Indicated by the yen symbol as an additional currency.\r\n\t- Doesn't do anything. Yet.\r\n- A whole heap of new Jokers to complete 5 for each rarity!\r\n- Removed Charred Joker because it sucks\r\n- Numerous other bug fixes and improvements",
+        "publishedAt": "2025-04-28T08:06:01Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.2.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.1.1",
+        "name": "0.1.1",
+        "body": "Small update.\r\n- Adds 2 new Ahead Jokers\r\n- Adds 2 new (glitchy) vouchers\r\n- Hopefully fully get rid of Cryptid dependency\r\n- Challenges!\r\n- 2 new Tags!\r\n- Updates Joyous Spring",
+        "publishedAt": "2025-04-25T06:09:03Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.1.0",
+        "name": "0.1.0",
+        "body": "there is a lot more content in this one. very",
+        "publishedAt": "2025-04-23T07:59:38Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.0.1",
+        "name": "0.0.1",
+        "body": "First (proper) release!\r\n\r\nAdds the following jokers:\r\n- Phil (& Shirt)\r\n- Good 'n Evil\r\n- Ten 10s\r\n- Daily Newspaper\r\n- Multiplier\r\n- Adult Card\r\n- Arona (placeholder card graphic)\r\n- Plana (placeholder card graphic)\r\n- Charred Joker\r\n- Photocopier\r\n- Reistorm\r\n\r\nAND a new boss blind: The Nether....",
+        "publishedAt": "2025-04-12T07:06:07Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-29T06:32:01.077Z"
   },
   "pi_cubeds_jokers@pi-cubed-cat": {
     "id": "picubedsjokers",
