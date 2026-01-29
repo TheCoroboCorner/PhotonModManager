@@ -43,7 +43,7 @@ export async function getVersionHistory(modKey, forceRefresh = false)
             name: release.name || release.tag_name,
             body: release.body || '',
             publishedAt: release.published_at,
-            htmlUrl: release.htmlUrl,
+            htmlUrl: release.html_url,
             assets: release.assets.map(asset => ({
                 name: asset.name,
                 size: asset.size,
