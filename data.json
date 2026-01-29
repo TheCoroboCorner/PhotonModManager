@@ -1264,6 +1264,41 @@
       "Misc"
     ],
     "updated_at": "2026-01-24T14:37:35Z",
-    "readme": ""
+    "readme": "",
+    "versionHistory": [
+      {
+        "tag": "v1.1.0",
+        "name": "New: Conversion Systems, Event Manager",
+        "body": "This version has two new additions: conversion systems and an event manager.\r\n\r\nWith the conversion system, you can set up unit-exchange systems that have arbitrary units/axes and numeric values. This can be used for things such as currency conversion. That is, if your mod adds a set of currencies that have some sort of an exchange rate, you can implement that exchange rate in this system and avoid all of the trouble that comes with doing that.\r\n\r\nWith the event manager, you no longer need to create dummy CardAreas and dummy Jokers just to be able to activate functions in a specific context; you can just set up an event and let the event manager handle it all. In addition, it supports prioritization, as well as single-use/persistent events, so it should have maximum versatility in the areas it's needed.\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/CoroboUtils/compare/v1.0.0...v1.1.0",
+        "publishedAt": "2026-01-24T14:40:49Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/CoroboUtils/releases/tag/v1.1.0",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 13630,
+            "downloadUrl": "https://github.com/TheCoroboCorner/CoroboUtils/releases/download/v1.1.0/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "Initial Release",
+        "body": "There are four main functions/systems provided in this release:\r\n\r\n1. You can create aliases for functions and variables. You simply register an alias in the system with `CUTIL.alias`, then you can either access the aliased function directly with `CUTIL.aliases`, or you can use `CUTIL.resolve_alias` to fetch it in a safer manner.\r\n2. There is a variable/modifier system. Instead of having to register all your game variables directly in G.GAME, you can now just call `CUTIL.add_variable` and it will sort out everything for you. Similarly, for when you want to modify the variable, you can now just call `CUTIL.add_modifier`, targeting the specific variable and modifying it however you wish.\r\n3. You can work with numeric field extensions -- that is, take for example you wanted to work with the complex numbers. You can then use `CUTIL.FieldExtension.wrap({1, 0, 1}), as that defines x such that 1 + 0x + 1x^2 = 0, which is exactly how i works in the complex numbers.\r\n4. Tweening and Bezier curves have been added. You can either construct a curve explicitly with `CUTIL.Tween.make_bezier` or `CUTIL.Tween.create`, or you can use one of the provided presets. This can be used to make things a lot smoother.\r\n\r\nIn addition to this, various miscellaneous functions have been added and documentation is provided in the code.",
+        "publishedAt": "2026-01-14T14:20:49Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/CoroboUtils/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 7728,
+            "downloadUrl": "https://github.com/TheCoroboCorner/CoroboUtils/releases/download/v1.0.0/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-29T12:06:08.005Z"
   }
 }
