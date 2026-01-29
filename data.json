@@ -463,7 +463,230 @@
     "analytics": {
       "views": 1,
       "lastViewed": "2026-01-28T17:00:28.535Z"
-    }
+    },
+    "versionHistory": [
+      {
+        "tag": "v0.8.5.4",
+        "name": "0.8.5.4 - Reasoning",
+        "body": "## What's Changed\r\nThis update requires [SMODS~BETA-0827b or higher](https://github.com/Steamodded/smods/releases/latest)\r\n\r\nv0.8.5.4:\r\n* Fix crash when calculating excavations at end of run\r\n\r\nv0.8.5.3:\r\n* Fixes to Spright Jet and Trouble Sunny\r\n* Fixes cardarea styling in newer SMODS.\r\n\r\nv0.8.5.2:\r\n* Fixed Harr's activation condition check\r\n* Fixed Spright Sprind's crash\r\n\r\nv0.8.5:\r\n* Small fixes\r\n* Updated French localization\r\n\r\nv0.8.4.3:\r\n* Added JokerDisplay support for Fortune Ladies and Free Agents\r\n\r\nv0.8.4.2:\r\n* Some tooltips have been added or rewritten\r\n\r\nv0.8.4.1:\r\n* Cardian Synchros and Fortune Lady Every can be summoned without space\r\n* Fix Super Koi Koi not working with Telescope\r\n* Fix cards that add to the Extra Deck when used as material counting the summoned cards when checking for room\r\n\r\nv0.8.4:\r\n* Added Linkslayer @ Ignister, Linkslayer and Code Igniter\r\n* Added alt arts (check config) and updated some cards that were using scans\r\n* Added text when trying to summon an extra deck joker without space\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n# Recommended mods:\r\n## Mods with native support:\r\n* [JokerDisplay](https://github.com/nh6574/JokerDisplay) - Adds information under Jokers so you don't have to hover them. This mod adds native support.\r\n* [TheFamily](https://github.com/SleepyG11/TheFamilyBalatro) - Adds extra tabs to the side to save space on the screen. This mod adds native support (might add exclusive features in the future so it's recommended)\r\n* [CardSleeves](https://github.com/larswijn/CardSleeves) - Adds sleeves to decks for extra effects. This mod adds some.\r\n* [Handy](https://github.com/SleepyG11/HandyBalatro) - Adds QoL controls to the game. This mods supports some features natively.\r\n* [Unjankify](https://github.com/blazingulag/Unjankify) - Fixes some issues when playing with multiple mods like cardarea overlap. Includes JoyousSpring support.\r\n\r\n## Other mods:\r\n* [Galdur](https://github.com/Eremel/Galdur) - Nicer deck selection (Highly Recommended)\r\n* [Glue](https://github.com/icyethics/Glue-For-Modpacks) - Utility to change shop slots, joker and consumable slots and rates\r\n* [Cartomancer](https://github.com/stupxd/Cartomancer) - Includes functionalities to help in runs with lots of cards either in the Joker area or Deck, alongside other QoL features\r\n* [Overflow](https://github.com/lord-ruby/Overflow) - Stacks consumables\r\n* [Banner](https://github.com/SylviBlossom/Banner) - Ban objects from appearing in a run\r\n* [Better Tags](https://github.com/WaffleDevs/BetterTags) - Stacks Tags\r\n* [DebugPlus](https://github.com/WilsontheWolf/DebugPlus) - Debug/Cheating tools. Useful even if you're not a developer to bypass crashes or give yourself some items to test",
+        "publishedAt": "2025-09-10T23:23:42Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.8.5.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.8.3.1",
+        "name": "0.8.3.1 - Reasoning",
+        "body": "## What's Changed\r\nThis update requires [SMODS~BETA-0827b or higher](https://github.com/Steamodded/smods/releases/latest)\r\n\r\n* Elfuria's last effect now works\r\n* Vanilla cards can not longer create field spells\r\n* Custom tooltips for negative cards in custom areas\r\n* Other fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-08-27T20:46:46Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.8.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.8.2.8",
+        "name": "0.8.2.8 - Reasoning",
+        "body": "## What's Changed\r\nv0.8.2:\r\n* Add TMJ compat by @cg-223 in https://github.com/nh6574/JoyousSpring/pull/14\r\n* Simplified Chinese translation by @Alophrine \r\n\r\nv0.8.1:\r\n* Updated FR translation by @Keraloon in https://github.com/nh6574/JoyousSpring/pull/12\r\n\r\nv0.8.0\r\n* Implemented some new archetypes with exciting new themes!\r\n  * Adamancipator: Adds gambling!\r\n  * Flower Cardian: Adds gambling!\r\n  * Fortune Lady/Fairy: Adds gambling!\r\n  * Virtual World: Adds xenophobia!\r\n  * ... and 18 more Free Agents that support the themes of \"gambling\" and \"xenophobia\"!\r\n* A bunch of changes, nerfs, buffs and fixes\r\n* Yes, yes, I know: getting cards is hard with 400 Jokers. Next update will address that.\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-07-23T23:59:23Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.8.2.8",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.7.3.1",
+        "name": "0.7.3.1 - Book of Lunar Eclipse",
+        "body": "## What's Changed\r\n* A bunch of nerfs, some buffs, but most importantly many fixes all of which I'm too sick at the time of writing to remember. Still no JokerDisplay update.\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-06-16T13:01:22Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.7.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.7.2",
+        "name": "0.7.2 - Book of Lunar Eclipse",
+        "body": "## What's Changed\r\n* adding localization/fr.lua by @Keraloon in https://github.com/nh6574/JoyousSpring/pull/8\r\n\r\n## New Contributors\r\n* @Keraloon made their first contribution in https://github.com/nh6574/JoyousSpring/pull/8\r\n\r\n**Full Changelog**: https://github.com/nh6574/JoyousSpring/compare/v0.7.1.1...v0.7.2\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki) (You will need the dev version 0410b for now)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-06-03T21:14:04Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.7.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.7.1.1",
+        "name": "0.7.1.1 - Book of Lunar Eclipse",
+        "body": "Join the [Discord](https://discord.gg/Ac5FKpQCRV) for sneak peeks!\r\n\r\n## What's Changed since 0.6\r\n* Implemented:\r\n    * Labrynth\r\n    * Subterror\r\n    * Eldlich\r\n    * @/Ignister\r\n    * Solfachord\r\n    * Witchcrafter\r\n    * Paleozoic\r\n    * Shaddoll\r\n    * Invoked\r\n    * Danger!\r\n    * and 73 more Free Agents!\r\n* Some more config options\r\n* Some other changes to existing content\r\n* A lot of fixes\r\n\r\n(Better effect messages and proper JokerDisplay support are planned for later)\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki) (You will need the dev version 0410b for now)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-04-19T14:18:37Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.7.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.5.8",
+        "name": "v0.6.5.8",
+        "body": "Join the [Discord](https://discord.gg/Ac5FKpQCRV) for sneak peeks!\r\n\r\n## What's Changed\r\nv0.6.5.8: Error if Lovely is not loaded properly\r\nv0.6.5.7: Fix cards not drawn face down during blinds\r\nv0.6.5.6: Fix Field Spells\r\nv0.6.5.5: Cards that send to the graveyard work properly\r\n\r\n* Implemented Field Spells for Live Twin, Dogmatika, Mekk-Knight, Ghoti and PSY-Frame\r\n* Some fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-03-08T20:47:36Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.6.5.8",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.4.2",
+        "name": "v0.6.4.2",
+        "body": "## What's Changed\r\n* Some effect changes\r\n* Booster Art by IcyEthics <3\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-03-07T19:57:22Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.6.4.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.3.1",
+        "name": "v0.6.3.1",
+        "body": "## What's Changed\r\nv0.6.3.1:\r\n* Fix summons\r\n\r\nv0.6.3:\r\n* New tooltips and related cards view (press \"D\")\r\n* Fixes\r\n\r\nv0.6.1:\r\n* Burning Abyss that trigger when destroyed also trigger on sell (might change later)\r\n\r\nv0.6.0\r\n* Implemented: Burning Abyss\r\n* Implemented: Banishment area display (inside Graveyard menu)\r\n* Other bugfixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-03-04T19:31:21Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.6.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.5.4",
+        "name": "v0.5.5.4",
+        "body": "## What's Changed\r\nv0.5.5.4\r\n* Bugfixes\r\n\r\nv0.5.5.1\r\n* Fix Deep Beyond's summoning conditions\r\n\r\nv0.5.5\r\n* Implemented booster packs\r\n* There's an option in the config to add an extra booster pack from the mod to the shop\r\n* Some bug fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-28T23:55:10Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.5.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.4",
+        "name": "v0.5.4",
+        "body": "## What's Changed\r\n* Implemented some challenges\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-27T22:28:28Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.3",
+        "name": "v0.5.3",
+        "body": "## What's Changed\r\nv0.5.3:\r\n* Ghoti too strong\r\n* Bug fixes\r\n\r\nv0.5.2:\r\n* Bug fixes\r\n\r\nv0.5.1:\r\n* Config option to disable all other types of Jokers. This is just a temporary hack while I work on better ways to get the cards :)\r\n\r\nv0.5.0:\r\n* Implemented: Mekk-Knight, who act on cards played in the same \"column\" as them\r\n* Implemented: Generaider - use the field spell to tribute Tokens and summon powerful Jokers\r\n* Implemented: Ghoti - the banish mechanics can keep cards off your inventory during the shop so you have more space\r\n* Implemented: PSY-Frame - A Psychic soldier that rides into battle against the Security Forces on currents of lightning, using an autonomic amplifier called \"PSY-Frame\"\r\n* Implemented: Runick, who use Tarot cards to fusion summon and can replenish them quickly at the cost of the cards in your deck\r\n* Also many bug fixes and slight ability tweaks\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-25T21:41:18Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.2.1",
+        "name": "v0.5.2",
+        "body": "## What's Changed\r\nv0.5.2:\r\n* Bug fixes\r\n\r\nv0.5.1:\r\n* Config option to disable all other types of Jokers. This is just a temporary hack while I work on better ways to get the cards :)\r\n\r\nv0.5.0:\r\n* Implemented: Mekk-Knight, who act on cards played in the same \"column\" as them\r\n* Implemented: Generaider - use the field spell to tribute Tokens and summon powerful Jokers\r\n* Implemented: Ghoti - the banish mechanics can keep cards off your inventory during the shop so you have more space\r\n* Implemented: PSY-Frame - A Psychic soldier that rides into battle against the Security Forces on currents of lightning, using an autonomic amplifier called \"PSY-Frame\"\r\n* Implemented: Runick, who use Tarot cards to fusion summon and can replenish them quickly at the cost of the cards in your deck\r\n* Also many bug fixes and slight ability tweaks\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-22T18:45:47Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.2.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.1.5",
+        "name": "v0.5.1",
+        "body": "## What's Changed\r\nv0.5.1:\r\n* Config option to disable all other types of Jokers. This is just a temporary hack while I work on better ways to get the cards :)\r\n\r\nv0.5.0:\r\n* Implemented: Mekk-Knight, who act on cards played in the same \"column\" as them\r\n* Implemented: Generaider - use the field spell to tribute Tokens and summon powerful Jokers\r\n* Implemented: Ghoti - the banish mechanics can keep cards off your inventory during the shop so you have more space\r\n* Implemented: PSY-Frame - A Psychic soldier that rides into battle against the Security Forces on currents of lightning, using an autonomic amplifier called \"PSY-Frame\"\r\n* Implemented: Runick, who use Tarot cards to fusion summon and can replenish them quickly at the cost of the cards in your deck\r\n* Also many bug fixes and slight ability tweaks\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-20T16:07:54Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.1.5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.0",
+        "name": "v0.5.0",
+        "body": "## What's Changed\r\n* Implemented: Mekk-Knight, who act on cards played in the same \"column\" as them\r\n* Implemented: Generaider - use the field spell to tribute Tokens and summon powerful Jokers\r\n* Implemented: Ghoti - the banish mechanics can keep cards off your inventory during the shop so you have more space\r\n* Implemented: PSY-Frame - A Psychic soldier that rides into battle against the Security Forces on currents of lightning, using an autonomic amplifier called \"PSY-Frame\"\r\n* Implemented: Runick, who use Tarot cards to fusion summon and can replenish them quickly at the cost of the cards in your deck\r\n* Also many bug fixes and slight ability tweaks\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-20T00:05:56Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.2",
+        "name": "v0.4.2",
+        "body": "## What's Changed\r\n* Fix: Fixed some lag spikes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-15T00:46:16Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.4.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.1",
+        "name": "v0.4.1",
+        "body": "## What's Changed\r\n* Implemented: Glossary under mod's menu\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-14T18:50:42Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.4.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.0.1",
+        "name": "v0.4.0",
+        "body": "## What's Changed\r\n* Implemented: Garura, Wings of Resonant Life\r\n* Implemented: Apollousa, Bow of the Goddess\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-14T14:48:34Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.4.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.3.1",
+        "name": "v0.3.1",
+        "body": "## What's Changed\r\n* Changed: Ghost Ogre now scales even if another Ghost Ogre destroyed the cards\r\n* Changed: GY and Extra Deck are hidden by default until a card is added\r\n* Changed: Nicer mod description and additions screen\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-13T15:11:08Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.3.0",
+        "name": "v0.3.0",
+        "body": "## What's Changed\r\n* Implemented: Inspector Boarder, Archfiend Eccentrick, Sauravis, the Ancient and Ascended\r\n* Implemented: Pendulum monsters, can be used as both a Joker and a Consumable\r\n* Changed: Ritual monsters must now be summoned from the shop instead of bought\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-13T00:11:56Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.3.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.2.0",
+        "name": "v0.2.0",
+        "body": "## What's Changed\r\n* Implemented: Spright\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-11T22:15:27Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.2.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.1.0",
+        "name": "0.1.0",
+        "body": "## What's Changed\r\n* Initial release\r\n* Implemented: Dragonmaid, Live☆Twin, Dogmatika and the Ghost Girls\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-09T23:59:25Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-29T05:19:30.727Z"
   },
   "balatro-typist-mod@kasimeka": {
     "id": "typist",
