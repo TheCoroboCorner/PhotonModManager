@@ -278,16 +278,16 @@ class WikiPage
                 const spriteHeight = atlas.py * 2;
 
                 const cardsUsingAtlas = this.cards.filter(c => c.atlas === card.atlas && c.pos);
-                let maxX = card.pos.x;
-                let maxY = card.pos.y;
 
-                cardsUsingAtlas.forEach(c => {
-                    if (c.pos.x > maxX)
-                        maxX = c.pos.x;
+                const minX = Math.min(...cardsUsingAtlas.map(c => c.pos.x));
+                const minY = Math.min(...cardsUsingAtlas.map(c => c.pos.y));
+                const isOneIndexed = minX === 1 && minY === 1;
 
-                    if (c.pos.y > maxY)
-                        maxY = c.pos.y;
-                });
+                const posX = isOneIndexed ? card.pos.x - 1 : card.pos.x;
+                const posY = isOneIndexed ? card.pos.y - 1 : card.pos.y;
+
+                let maxX = Math.max(...cardsUsingAtlas.map(c => isOneIndexed ? c.pos.x - 1 : c.pos.x));
+                let maxY = Math.max(...cardsUsingAtlas.map(c => isOneIndexed ? c.pos.y - 1 : c.pos.y));
 
                 const gridColumns = maxX + 1;
                 const gridRows = maxY + 1;
@@ -295,15 +295,17 @@ class WikiPage
                 const sheetWidth = gridColumns * spriteWidth;
                 const sheetHeight = gridRows * spriteHeight;
 
-                const offsetX = card.pos.x * spriteWidth;
-                const offsetY = card.pos.y * spriteHeight;
+                const offsetX = posX * spriteWidth;
+                const offsetY = posY * spriteHeight;
 
                 console.log('[Wiki] Sprite details:', {
+                    card: card.key,
                     spriteSize: `${spriteWidth}x${spriteHeight}`,
                     sheetSize: `${sheetWidth}x${sheetHeight}`,
                     grid: `${gridColumns}x${gridRows}`,
-                    position: `${card.pos.x},${card.pos.y}`,
-                    offset: `${offsetX},${offsetY}`
+                    position: `${posX},${posY}`,
+                    offset: `${offsetX},${offsetY}`,
+                    oneIndexed: isOneIndexed
                 });
                 
                 html += `

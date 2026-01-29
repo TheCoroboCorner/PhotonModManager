@@ -313,6 +313,23 @@ class ModBrowser
     {
         const li = document.createElement('li');
         li.className = 'mod-card';
+        li.dataset.key = mod.key;
+
+        const thumbnail = entry.images?.find(img => img.isThumbnail);
+        const thumbnailStyle = thumbnail ? `background: linear-gradient(90deg, rgba(30, 18, 82, 1) 0%, rgba(30, 18, 82, 0.7) 50%, rgba(30, 18, 82, 0) 100%), url('${thumbnail.path}') right center / cover no-repeat;` : '';
+
+        li.style.cssText = `
+            position: relative;
+            background: rgba(30, 18, 82, 0.6);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            ${thumbnailStyle}
+        `;
+
         const { repo, owner } = parseModKey(mod.key);
 
         const header = document.createElement('div');

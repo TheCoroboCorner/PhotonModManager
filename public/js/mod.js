@@ -92,6 +92,86 @@ class ModDetailPage
         }
     }
 
+    renderImageGallery()
+    {
+        const container = document.getElementById('image-gallery-container');
+        if (!container)
+            return;
+
+        const images = this.mod.images || [];
+
+        if (images.length === 0)
+        {
+            container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 2rem;">No images available for this mod</p>';
+            return;
+        }
+
+        container.innerHTML = '';
+
+        const gallery = document.createElement('div');
+        gallery.className = 'image-gallery';
+        gallery.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;';
+
+        images.forEach((image, index) => {
+            const item = document.createElement('div');
+            item.className = 'image-gallery-item';
+            item.style.cssText = 'position: relative; cursor: pointer; border-radius: 8px; overflow: hidden; aspect-ratio: 16 / 9; transition: transform 0.2s; border: 2px solid rgba(102, 126, 234, 0.2);';
+            
+            if (image.isThumbnail)
+            {
+                item.style.borderColor = 'var(--accent-blue)';
+                item.style.boxShadow = '0 0 20px rgba(102, 126, 234, 0.5)';
+            }
+
+            item.innerHTML = `
+                <img src="${image.path}" alt="${image.originalName || 'Mod screenshot'}" style="width: 100%; height: 100%; object-fit: cover;">
+                ${image.isThumbnail ? '<div style="position: absolute; top: 0.5rem; right: 0.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;">⭐ Thumbnail</div>' : ''}
+            `;
+
+            item.addEventListener('mouseenter', () => item.style.transform = 'scale(1.05)');
+
+            item.addEventListener('mouseleave', () => item.style.transform = 'scale(1)');
+
+            item.addEventListener('click', () => this.openLightbox(image.path));
+
+            gallery.appendChild(item);
+        });
+
+        container.appendChild(gallery);
+    }
+
+    openLightbox(imagePath)
+    {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); display: flex; align-items: center; justify-content: center; z-index: 2000; animation: fadeIn 0.2s;';
+
+        lightbox.innerHTML = `
+            <img src="${imagePath}" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px;">
+            <button style="position: absolute; top: 2rem; right: 2rem; background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 2rem; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; transition: background 0.2s; line-height: 1;">&times;</button>
+        `;
+
+        const closeBtn = lightbox.querySelector('button');
+        closeBtn.addEventListener('mouseenter', () => closeBtn.style.background = 'rgba(255, 255, 255, 0.3)');
+
+        closeBtn.addEventListener('mouseleave', () => closeBtn.style.background = 'rgba(255, 255, 255, 0.2)');
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.animation = 'fadeOut 0.2s';
+            setTimeout(() => lightbox.remove(), 200);
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox)
+            {
+                lightbox.style.animation = 'fadeOut 0.2s';
+                setTimeout(() => lightbox.remove(), 200);
+            }
+        });
+
+        document.body.appendChild(lightbox);
+    }
+
     renderVersionHistory()
     {
         const container = document.getElementById('version-history-list');
@@ -115,8 +195,11 @@ class ModDetailPage
             const badge = isLatest ? '<span style="background: linear-gradient(135deg, #4BC292 0%, #56A887 100%); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; color: white; margin-left: 0.5rem; font-weight: 700;">LATEST</span>' : '';
             
             const releaseBody = release.body || '';
-            const needsCollapse = releaseBody.split('\n').length > 5;
-            const collapsedBody = needsCollapse ? releaseBody.split('\n').slice(0, 5).join('\n') + '...' : releaseBody;
+            const lines = releaseBody.split('\n');
+            const needsCollapse = lines.length > 5;
+            const collapsedBody = needsCollapse ? lines.slice(0, 5).join('\n') + '\n...' : releaseBody;
+
+            const releaseId = `release-${index}`;
             
             item.innerHTML = `
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
@@ -125,14 +208,14 @@ class ModDetailPage
                 </div>
                 ${release.name && release.name !== release.tag ? `<p style="margin: 0.5rem 0; color: var(--text-light); font-weight: 600;">${release.name}</p>` : ''}
                 ${releaseBody ? `
-                    <div class="release-body" style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; overflow: hidden; transition: max-height 0.3s ease;">
-                        <div class="release-text">${this.renderMarkdown(needsCollapse ? collapsedBody : releaseBody)}</div>
-                        ${needsCollapse ? `
-                            <button class="read-more-btn" style="background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 0.875rem; margin-top: 0.5rem; padding: 0; text-decoration: underline;">
-                                Read more
-                            </button>
-                        ` : ''}
+                    <div id="${releaseId}" class="release-body" style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; max-height: ${needsCollapse ? '150px' : 'none'}; overflow: hidden; transition: max-height 0.3s ease;">
+                        ${this.renderMarkdown(needsCollapse ? collapsedBody : releaseBody)}
                     </div>
+                    ${needsCollapse ? `
+                        <button class="read-more-btn" data-target="${releaseId}" style="background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 0.875rem; margin-top: 0.5rem; padding: 0; text-decoration: underline; transition: color 0.2s;">
+                            Read more ▼
+                        </button>
+                    ` : ''}
                 ` : ''}
                 <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
                     <a href="${release.htmlUrl}" target="_blank" class="click-me" style="padding: 0.5rem 1rem; height: auto; font-size: 0.875rem; text-decoration: none;">
@@ -143,20 +226,35 @@ class ModDetailPage
                 </div>
             `;
 
+            container.appendChild(item);
+
             if (needsCollapse)
             {
                 const btn = item.querySelector('.read-more-btn');
-                const textDiv = item.querySelector('.release-text');
+                const bodyDiv = document.getElementById(releaseId);
                 let isExpanded = false;
 
                 btn.addEventListener('click', () => {
                     isExpanded = !isExpanded;
-                    textDiv.innerHTML = this.renderMarkdown(isExpanded ? releaseBody : collapsedBody);
-                    btn.textContent = isExpanded ? 'Read less' : 'Read more';
+                    
+                    if (isExpanded)
+                    {
+                        bodyDiv.style.maxHeight = 'none';
+                        bodyDiv.innerHTML = this.renderMarkdown(releaseBody);
+                        btn.innerHTML = 'Read less ▲';
+                    }
+                    else
+                    {
+                        bodyDiv.style.maxHeight = '150px';
+                        bodyDiv.innerHTML = this.renderMarkdown(collapsedBody);
+                        btn.innerHTML = 'Read more ▼';
+                    }
                 });
-            }
 
-            container.appendChild(item);
+                btn.addEventListener('mouseenter', () => btn.style.color = 'var(--accent-purple)');
+
+                btn.addEventListener('mouseleave', () => btn.style.color = 'var(--accent-blue)');
+            }
         });
     }
 

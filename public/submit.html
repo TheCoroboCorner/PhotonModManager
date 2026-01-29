@@ -16,6 +16,27 @@
          This makes it easier to make new pages for your site. -->
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
 
+    <style>
+      @keyframes fadeIn 
+      {
+        from 
+        { 
+          opacity: 0; 
+          transform: scale(0.9); 
+        }
+        to 
+        { 
+          opacity: 1; 
+          transform: scale(1); 
+        }
+      }
+
+      .image-preview-item 
+      {
+        animation: fadeIn 0.3s ease;
+      }
+    </style>
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Browse and download Balatro mods. Photon Mod Manager - Your hub for Balatro modding.">
     <meta name="keywords" content="balatro, mods, modding, balatro mods, card game, roguelike">
@@ -169,12 +190,27 @@
                 </fieldset>
               </div>
 
-              <div>
-                <label>
-                  <span>Images (Optional - up to 10)</span>
+              <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
+                    <span style="font-size: 0.9rem;">Images (Optional - up to 10)</span>
                 </label>
-                <input type="file" id="image-upload" accept="image/*" multiple style="width: 100%; padding: 0.875rem 1rem; background: linear-gradient(135deg, #1e1252 0%, #261b53 100%); border: 2px solid transparent; border-radius: 8px; color: var(--text-primary);">
-                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">Upload screenshots or images of your mod. Select which image to use as thumbnail.</p>
+                
+                <div class="file-upload-wrapper" style="position: relative;">
+                  <input type="file" id="image-upload" accept="image/*" multiple style="display: none;">
+                  <button type="button" id="upload-trigger" class="click-me" style="width: 100%; padding: 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border: 2px dashed rgba(102, 126, 234, 0.5); cursor: pointer; transition: all 0.3s;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="17 8 12 3 7 8"></polyline>
+                      <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <span style="font-size: 1rem; font-weight: 600;">Click to upload or drag & drop</span>
+                    <span style="font-size: 0.875rem; color: var(--text-secondary);">PNG, JPG, GIF, WebP (max 5MB each)</span>
+                  </button>
+                </div>
+                  
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                  Upload screenshots of your mod. Click any image to set it as the thumbnail.
+                </p>
                   
                 <div id="image-preview" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem;"></div>
               </div>
@@ -232,42 +268,104 @@
       });
 
       const imageUpload = document.getElementById('image-upload');
+      const uploadTrigger = document.getElementById('upload-trigger');
       const imagePreview = document.getElementById('image-preview');
       let selectedThumbnail = 0;
+      let uploadedFiles = [];
+
+      uploadTrigger.addEventListener('click', () => imageUpload.click());
+
+      uploadTrigger.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          uploadTrigger.style.borderColor = 'var(--accent-blue)';
+          uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+      });
+
+      uploadTrigger.addEventListener('dragleave', () => {
+          uploadTrigger.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+          uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)';
+      });
+
+      uploadTrigger.addEventListener('drop', (e) => {
+          e.preventDefault();
+          uploadTrigger.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+          uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)';
+          
+          const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+          if (files.length > 0)
+          {
+              imageUpload.files = e.dataTransfer.files;
+              handleFiles(files);
+          }
+      });
 
       imageUpload.addEventListener('change', (e) => {
-        imagePreview.innerHTML = '';
-        const files = Array.from(e.target.files);
-
-        files.forEach((file, index) => {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                const div = document.createElement('div');
-                div.style.cssText = 'position: relative; cursor: pointer; border-radius: 8px; overflow: hidden; border: 3px solid transparent; transition: all 0.2s;';
-                
-                div.innerHTML = `
-                    <img src="${e.target.result}" style="width: 100%; height: 150px; object-fit: cover;">
-                    <div style="position: absolute; top: 0.5rem; right: 0.5rem; background: rgba(0,0,0,0.7); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">
-                        ${index === selectedThumbnail ? '⭐ Thumbnail' : 'Set as thumbnail'}
-                    </div>
-                `;
-
-                div.addEventListener('click', () => {
-                    selectedThumbnail = index;
-                    document.querySelectorAll('#image-preview > div').forEach((d, i) => {
-                        d.style.borderColor = i === index ? 'var(--accent-blue)' : 'transparent';
-                        d.querySelector('div').textContent = i === index ? '⭐ Thumbnail' : 'Set as thumbnail';
-                    });
-                });
-
-                if (index === 0)
-                    div.style.borderColor = 'var(--accent-blue)';
-
-                imagePreview.appendChild(div);
-            };
-            reader.readAsDataURL(file);
-        });
+          const files = Array.from(e.target.files);
+          handleFiles(files);
       });
+
+      function handleFiles(files)
+      {
+          imagePreview.innerHTML = '';
+          uploadedFiles = files;
+
+          files.forEach((file, index) => {
+              const reader = new FileReader();
+              reader.onload = (e) => {
+                  const div = document.createElement('div');
+                  div.className = 'image-preview-item';
+                  div.style.cssText = 'position: relative; cursor: pointer; border-radius: 8px; overflow: hidden; border: 3px solid transparent; transition: all 0.3s;';
+                  
+                  div.innerHTML = `
+                      <img src="${e.target.result}" style="width: 100%; height: 150px; object-fit: cover;">
+                      <div class="thumbnail-badge" style="position: absolute; top: 0.5rem; right: 0.5rem; background: ${index === selectedThumbnail ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : 'rgba(0,0,0,0.7)'}; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; color: white; transition: all 0.3s;">
+                          ${index === selectedThumbnail ? '⭐ Thumbnail' : 'Set as thumbnail'}
+                      </div>
+                  `;
+
+                  div.addEventListener('click', () => {
+                      selectedThumbnail = index;
+                      updateThumbnailUI();
+                  });
+
+                  div.addEventListener('mouseenter', () => {
+                      if (index !== selectedThumbnail)
+                          div.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+                  });
+
+                  div.addEventListener('mouseleave', () => {
+                      if (index !== selectedThumbnail)
+                          div.style.borderColor = 'transparent';
+                  });
+
+                  if (index === 0)
+                      div.style.borderColor = 'var(--accent-blue)';
+
+                  imagePreview.appendChild(div);
+              };
+              reader.readAsDataURL(file);
+          });
+      }
+
+      function updateThumbnailUI()
+      {
+          const items = imagePreview.querySelectorAll('.image-preview-item');
+          items.forEach((item, i) => {
+              const badge = item.querySelector('.thumbnail-badge');
+              if (i === selectedThumbnail)
+              {
+                  item.style.borderColor = 'var(--accent-blue)';
+                  badge.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                  badge.textContent = '⭐ Thumbnail';
+              }
+              else
+              {
+                  item.style.borderColor = 'transparent';
+                  badge.style.background = 'rgba(0,0,0,0.7)';
+                  badge.textContent = 'Set as thumbnail';
+              }
+          });
+      }
     </script>
   </body>
 </html>
