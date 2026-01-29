@@ -1015,7 +1015,11 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-01-29T06:32:01.077Z"
+    "versionHistoryLastCheck": "2026-01-29T06:32:01.077Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-01-29T06:32:01.150Z"
+    }
   },
   "pi_cubeds_jokers@pi-cubed-cat": {
     "id": "picubedsjokers",
