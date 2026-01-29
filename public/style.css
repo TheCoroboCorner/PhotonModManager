@@ -1036,7 +1036,7 @@ textarea:hover:not(:focus)
 
 .release-body.expanded
 {
-  max-height: 2000px;
+  max-height: none;
 }
 
 .read-more-btn
