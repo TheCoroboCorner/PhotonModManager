@@ -647,117 +647,6 @@
       "views": 13,
       "lastViewed": "2026-01-29T03:01:33.697Z"
     },
-    "versionHistory": [
-      {
-        "tag": "v4.8.1",
-        "name": "v4.8.1",
-        "body": "Notable changes:\r\n- Dragged cards in TMJ now display overtop the UI\r\n- `{edition:<modprefix_key>}` added as a special command to apply a certain edition to all cards in TMJ\r\n- `{ace:<lua code>}` added as a special command to return `true` if a card should be included in the search result, given a `center` as an argument. An error being thrown or anything other than `true` being returned means that center will not be shown in TMJ\r\n- Fix banner compatibility (thanks to ejwu)\r\n- Add config option to disable automatically focusing the TMJ textbox when you type\r\n- Add config option to show ALL cards in TMJ, regardless of whether they are no_collection\r\n- Fix a small issue where G.TMJTAGS wasn't set to nil\r\n- Support trackpads better by not reloading TMJ when you haven't scrolled enough to make a difference in the cards being shown\r\n- Add config option to increase/decrease the sensitivity of your scrolling\r\n- (v4.8.1) Fix configs not saving sometimes\r\n\r\n**Full Changelog**: https://github.com/cg-223/toomanyjokers/compare/v4.7.3...v4.8.1",
-        "publishedAt": "2025-12-25T19:35:16Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.7.3",
-        "name": "v4.7.3",
-        "body": "Notable changes:\r\n- Compatibility fixes\r\n\r\n\r\nNOTE: There's a bug in this release where TMJ doesn't work unless you have [DebugPlus](https://github.com/WilsontheWolf/DebugPlus) installed. If you want to use TMJ without debugplus, use the latest commit instead of this release.",
-        "publishedAt": "2025-11-02T16:47:59Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.7.2",
-        "name": "v4.7.2",
-        "body": "- New method of resolving set names, now uses localized names instead of keys\r\n- Compatibility with Handy\r\n- Changed to MIT License (from no license at all)\r\n- Now has a proper steamodded dependency, instead of just crashing when TMJ is opened on an unsupported version\r\n- Cards in TMJ no longer \"jiggle\"\r\n- Shift-clicking special mod tags in TMJ now takes you to that mods config\r\n- Config handler updated\r\n- New config to show all mod tags in TMJ, including those with no found objects\r\n- Fix error caused by centers that don't have a set\r\n\r\n**Code Changes**: https://github.com/cg-223/toomanyjokers/compare/4.6.1...v4.7.1",
-        "publishedAt": "2025-09-03T22:44:10Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "4.6.1",
-        "name": "4.6.1",
-        "body": "Notable changes:\r\n- New bar to the right of TMJ: You can click on mod tags to view all the items from that mod\r\n- Scrolling can now be done via arrow keys (you must enable this in your config)\r\n- - If you hold lctrl (or rctrl) while pressing an arrow key, a full page will be scrolled (regardless of the full-page config option)\r\n- - Holding the arrow keys will allow you to scroll faster\r\n- TMJ now properly overlays on top of things like card areas.\r\n- When you close TMJ, the search will be reset when it is reopened.\r\n\r\n**Code Changes**: https://github.com/cg-223/toomanyjokers/compare/v4.5.2...4.6.1",
-        "publishedAt": "2025-08-28T10:48:48Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.5.2",
-        "name": "v4.5.2",
-        "body": "Notable changes:\r\n- You can now automatically create the first joker that appears for a given search by holding ctrl when you press enter to finalize a search. This will also close TMJ after creating the joker. You can disable this behavior in the TMJ mod settings. This feature is only enabled when debug mode is on (usually done by installing DebugPlus)\r\n- If the close-on-escape config option is enabled, TMJ will not automatically close when you press T (only when you press escape). This means you can press T to autofocus the search bar and begin typing a search that starts with T\r\n- The textbox will no longer autofocus when you press a number key. This means that you can perform certain actions (e.g. using the debug 1/2/3 keys to unlock/discover/spawn a card) without causing the textbox to become focused.\r\n",
-        "publishedAt": "2025-08-19T11:32:36Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.4.1",
-        "name": "v4.4.1",
-        "body": "Notable changes:\r\n- Duplicates no longer appear for cards that are in multiple pools\r\n- Potentially fix a bug causing a crash in the normal collection",
-        "publishedAt": "2025-08-17T21:06:11Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.3.3",
-        "name": "v4.3.3",
-        "body": "Notable changes:\r\n- Fix a crossmod crash when TMJ is opened",
-        "publishedAt": "2025-08-16T22:13:08Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.3.2",
-        "name": "v4.3.2",
-        "body": "Notable changes\r\n- Pinned sticker no longer appears in collection",
-        "publishedAt": "2025-08-16T21:14:22Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.3.1",
-        "name": "v4.3.1",
-        "body": "Notable changes:\r\n- You can now type '0' in the search bar and configs",
-        "publishedAt": "2025-08-15T21:34:12Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.3.0",
-        "name": "v4.3.0",
-        "body": "Notable changes:\r\n- Make the game launch",
-        "publishedAt": "2025-08-14T18:48:02Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.1.0",
-        "name": "v4.1.0",
-        "body": "Notable changes:\r\n- Config option to close TMJ when esc is pressed\r\n- Config option to scroll TMJ by a full page at a time instead of one row at a time\r\n- Visual indicator for pinned cards\r\n- Several bug fixes",
-        "publishedAt": "2025-08-14T08:26:22Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v4.0.0",
-        "name": "v4.0.0",
-        "body": "Notable changes:\r\n- Mod has been rewritten from the ground up, with very few bits of code copied from v3\r\n- Support for features added by other mods has been moved to an API and is no longer done by me, mod devs that add features of centers  check api.md to see how to implement support.\r\n- You can no longer scroll out of bounds upwards\r\n- Config has been improved, now uses three labeled text inputs instead of one text input and an option cycle\r\n- Search bar is no longer automatically selected based on a config option, instead it will auto select if you begin typing as the UI is open. Exclusions are in place for the T key (to close the UI) and special keys like control, alt, shift\r\n- Better performance, so TMJ should be much faster with thousands of jokers (as the name would suggest)\r\n- Code in general is much cleaner, so future improvements will be much easier",
-        "publishedAt": "2025-08-11T23:53:27Z",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      }
-    ],
-    "versionHistoryLastCheck": "2026-01-29T03:01:33.397Z"
   },
   "Medium@Goldofleaves": {
     "id": "Medium",
@@ -788,7 +677,5 @@
       "views": 5,
       "lastViewed": "2026-01-29T03:03:26.423Z"
     },
-    "versionHistory": [],
-    "versionHistoryLastCheck": "2026-01-29T03:03:26.339Z"
   }
 }
