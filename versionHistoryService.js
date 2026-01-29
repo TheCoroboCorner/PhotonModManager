@@ -1,7 +1,6 @@
 import { readData, writeData } from './dataService.js';
 import { backupDataJson } from './github-backup.js';
 import { config } from './config.js';
-import { version } from 'react';
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
