@@ -943,7 +943,310 @@
       "Vanilla Plus",
       "Jokers"
     ],
-    "readme": "![Mod Logo](https://i.imgur.com/WgRA0cT.png)\nRequires Steamodded 1.0.0~BETA-0530b or newer\n\nList of Jokers (Modded Wiki Page): https://balatromods.miraheze.org/wiki/Pi_cubed's_Jokers/Jokers\n\nDocumentation spreadsheet (Planned content, patch notes, & more info): https://docs.google.com/spreadsheets/d/1s2MFswjKUeVcx3W0Cylmya1ZfFvx2fiQZD42ZThxd5Q/edit?usp=sharing\n\nDiscord discussion thread: https://discord.com/channels/1116389027176787968/1348621804696240201\n\npi_cubed's Jokers is a lightweight mod with minimal lovely patching and hooks. As a result, there should be few crashes due to conflicts with other mods.\n\n## Recommended Mods\n### Partner by baimao  \npi_cubed's Jokers adds 4 new Partners!  \nhttps://github.com/Icecanno/Partner-API  \n\n### Opandora's Box by opan \nA Joker pack I really enjoy with some interesting synergies, and stellar music.  \nhttps://github.com/ohpahn/opandoras-box\n\n### Extra Credit by CampfireCollective & more  \nhttps://github.com/GuilloryCraft/ExtraCredit\n\n### Neato Jokers by NEATO  \nhttps://github.com/neatoqueen/NeatoJokers\n\n### Paperback by PaperMoon, OppositeWolf770, srockw, GitNether, Victin, BBBalatroMod, & more  \nThe Bisexual Flag Joker is compatible with additional suits.  \nhttps://github.com/GitNether/paperback\n\n### Cryptid by MathIsFun_ & many more  \nThere's some hidden content that requires Cryptid. In addition, I've put a big focus on making sure the changing value mechanics and Misprintize behave properly with all Jokers!  \nhttps://github.com/SpectralPack/Cryptid\n\n## Config Options\nA game restart is required for Config options to take effect.\n\n### New Spectral Cards  \nThis option enables or disables the Spectral Cards Commander, Rupture, and Extinction from appearing.\n\n### Preorder Bonus' Hook  \nTurn this option off to rework the Joker's mechanics very slightly to remove its hook that I (very jankily) implemented. This option may be useful if you're experiencing conflicts regarding setting the cost of Booster Packs.\n\n### Custom Sound Effects  \nEnables or disables any custom sound effects I've implemented into the mod. Currently, this affects Rhythmic Joker, Explosher, On-beat, Off-beat, Pot, and Talking Flower.\n"
+    "readme": "![Mod Logo](https://i.imgur.com/WgRA0cT.png)\nRequires Steamodded 1.0.0~BETA-0530b or newer\n\nList of Jokers (Modded Wiki Page): https://balatromods.miraheze.org/wiki/Pi_cubed's_Jokers/Jokers\n\nDocumentation spreadsheet (Planned content, patch notes, & more info): https://docs.google.com/spreadsheets/d/1s2MFswjKUeVcx3W0Cylmya1ZfFvx2fiQZD42ZThxd5Q/edit?usp=sharing\n\nDiscord discussion thread: https://discord.com/channels/1116389027176787968/1348621804696240201\n\npi_cubed's Jokers is a lightweight mod with minimal lovely patching and hooks. As a result, there should be few crashes due to conflicts with other mods.\n\n## Recommended Mods\n### Partner by baimao  \npi_cubed's Jokers adds 4 new Partners!  \nhttps://github.com/Icecanno/Partner-API  \n\n### Opandora's Box by opan \nA Joker pack I really enjoy with some interesting synergies, and stellar music.  \nhttps://github.com/ohpahn/opandoras-box\n\n### Extra Credit by CampfireCollective & more  \nhttps://github.com/GuilloryCraft/ExtraCredit\n\n### Neato Jokers by NEATO  \nhttps://github.com/neatoqueen/NeatoJokers\n\n### Paperback by PaperMoon, OppositeWolf770, srockw, GitNether, Victin, BBBalatroMod, & more  \nThe Bisexual Flag Joker is compatible with additional suits.  \nhttps://github.com/GitNether/paperback\n\n### Cryptid by MathIsFun_ & many more  \nThere's some hidden content that requires Cryptid. In addition, I've put a big focus on making sure the changing value mechanics and Misprintize behave properly with all Jokers!  \nhttps://github.com/SpectralPack/Cryptid\n\n## Config Options\nA game restart is required for Config options to take effect.\n\n### New Spectral Cards  \nThis option enables or disables the Spectral Cards Commander, Rupture, and Extinction from appearing.\n\n### Preorder Bonus' Hook  \nTurn this option off to rework the Joker's mechanics very slightly to remove its hook that I (very jankily) implemented. This option may be useful if you're experiencing conflicts regarding setting the cost of Booster Packs.\n\n### Custom Sound Effects  \nEnables or disables any custom sound effects I've implemented into the mod. Currently, this affects Rhythmic Joker, Explosher, On-beat, Off-beat, Pot, and Talking Flower.\n",
+    "versionHistory": [
+      {
+        "tag": "v2.2.2b",
+        "name": "2.2.2",
+        "body": "Changes:\r\n- Hide 'n Seek gives +$6 -> +$8\r\n- Hide 'n Seek now has correct spelling (previously Hide n' Seek)\r\n- Ambigram now also can swap 2s and 5s\r\n- Ambigram costs $5 -> $6\r\n- Stonemason is Uncommon -> Rare\r\n- On-beat and Off-beat localisation tweaked (\"card\" -> \"cards\")\r\n- Together Now! from Qualatro is compatible with the Balatro Theme Custom Remix achievement\r\n- Custom sound effects config option no longer says it requires a restart\r\n- pi_cubed's Jokers now has a license\r\n- (2.2.2b) fixed Roof (partner) to not crash whilst the Talisman mod is active",
+        "publishedAt": "2026-01-05T07:18:11Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v2.2.2b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v2.2.1b",
+        "name": "2.2.1",
+        "body": "Changes:\r\n- Super Gluttonous Joker is no longer blueprint compatible\r\n- Night Vision fixed to properly be Blueprint compatible (copies money gain, does not copy flipping)\r\n- Shrapnel upgrades cards by +2 -> +1 Mult\r\n- Wahoo World gives +4 Mult and +20 Chips -> +4 Mult or +30 Chips\r\n- Prime 7 activates on every hand -> one time per round\r\n- FastPass costs $7 -> $8\r\n- Panic Fire costs $6 -> $5\r\n- Rupture fixed to not crash if no jokers are held\r\n- All In and Frosting descriptions tweaked very slightly\r\n- Order Sector no longer uses a double-line name to prevent crossmod problems\r\n- Fixed the stonelike infoqueue to work with the Collage modpack\r\n- (2.2.1a) Fixed the stonelike infoqueue to work if mods make enhancements \"unavailable\"",
+        "publishedAt": "2025-11-13T05:33:51Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v2.2.1b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v2.2.0a",
+        "name": "2.2.0",
+        "body": "Changes:\r\n- Added 10 new jokers (8 common, 2 rare)\r\n- Added 1 new crossmod Joker for Paperback\r\n- **SMODS version bump from 0711a to 0827c** (makes visible on booster pack descriptions when Illusion of Choice modifies number of booster pack choices) \r\n  - If there is interest in backporting to 0711a, it is a relatively simple fix\r\n- Updated card art for Super Wrathful Joker, Super Greedy Joker, Super Gluttonous Joker, and Super Lusty Joker\r\n- Updated mod icon to match the updated Ace Comedian card art\r\n- Weighted Die now says \"Yep!\" when using a The Wheel of Fortune card\r\n- Panic Fire plays a sound when it becomes active\r\n- Fixed Jokers that activate on stone cards to be less likely to crash the game when checking\r\n- Fixed Siphon to no longer \"upgrade\" itself when selling itself\r\n- Fixed Extra Limb to count consumables created during played hand as part of held consumables\r\n- Config options are now also saved in config.lua",
+        "publishedAt": "2025-11-08T06:13:32Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v2.2.0a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v2.1.6",
+        "name": "2.1.6",
+        "body": "Changes:\r\n- Ambigram fixed to be able to be used on controllers\r\n- Ambigram fixed to properly flip cards back face up from left to right rather than selection order\r\n- Molten Joker, Chisel, Stonemason, Mount Joker, and Chicken Joker! now also work with other modded Enhancements that make cards rankless & suitless\r\n- Advanced Skipping fixed to properly be blueprint compatible\r\n- Advanced Skipping fixed to be able to make Orbital Tags\r\n- Spectral Joker reworked: create a free Mega Spectral Pack after boss blind is defeated\r\n- Chisel reworked: affected card has its enhancement changed (randomised) rather than removed\r\n- Victim Card fixed to properly scale even when no cards are drawn to hand\r\n- Descriptions for the double-up effect of Sleeves will now describe the effect from adding the sleeve rather than the combined effect of the deck and sleeve, to be consistent with other mods\r\n- Jokers created by Super Greedy Joker and Chicken Joker! are flipped face down initially whilst they're unable to activate",
+        "publishedAt": "2025-10-26T10:42:40Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v2.1.6",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v2.1.5e",
+        "name": "2.1.5",
+        "body": "Changes:\r\n- Updated Card art for the Eye Patch, Currency Exchange, Black Joker, Landslide, Ace Comedian, Round-a-bout, All In, and Talking Flower\r\n- Improved visual and/or sound design for Chisel, Prime 7, Black Joker, Landslide, Inkjet Printer, Commander, and Currency Exchange\r\n- Blueberry Pie now changes its appearance based on its number of rounds remaining\r\n- Fixed Blueberry Pie to properly display whether the Joker to the right is compatible, rather than the left-most Joker\r\n- Blueberry Pie fixed to destroy itself and give a message at the same time even if multiple Jokers are owned\r\n- Round-a-bout is no longer Perishable compatible (and thereby also no longer Contractual compatible)\r\n- On-beat fixed to no longer appear if Off-beat is already owned (assuming no Showman)\r\n- Fixed Off the Hook to no longer crash in Boss Blinds that discard cards forcibly (eg. The Hook)\r\n- Fixed an achievement related to Off the Hook to be able to be obtained in Boss Blinds that discard cards forcibly (eg. The Hook)\r\n- Removed an unnecessary global variable in Off the Hook\r\n- Fixed Laser Printer to not say \"Error!\" whilst not actually becoming disabled\r\n- Copy (Partner) now says \"Error!\" when becoming disabled\r\n- Fixed Talking Flower to be able to be selected from a Booster Pack even if Joker slots are full\r\n- Fixed ISJOTC to no longer incorrectly round Chips or Mult if the Joker has an edition that activates before the Joker itself does (this fix is currently hard-coded and only affects the vanilla editions Foil and Holographic)\r\n- Slightly tweaked the descriptions of Chisel and Prime 7\r\n- (2.1.5a) The \"Hand type-affecting Jokers\" config option is no longer forcefully enabled if the Paperback mod is installed   \r\n- (2.1.5b) Sprinkler description tweaked\r\n- (2.1.5b) Sprinkler will no longer update on every calculation\r\n- (2.1.5d) Sprinkler fixed to always follow the vanilla order of suits when dealing with ties or fallbacks (for realsies, thanks @english5040!)\r\n\r\n![New Art](https://i.imgur.com/t14v9KC.png)",
+        "publishedAt": "2025-10-12T11:13:07Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v2.1.5e",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v2.1.4",
+        "name": "2.1.4 (balance patch, +1 important fix)",
+        "body": "Hey, uh, why did I very discretely increment the main version number? Well, there was one (1) mod manager that thought my BETA releases were more recent than the post-beta releases due to it ignoring the \"beta\" in the releases' tags.  \r\n\r\nChanges:\r\n- Runner-up costs $6 -> $5\r\n- Tyre Dumpyard costs $5 -> $4\r\n- Ox Plow gives $7 -> $8 when activated\r\n- Weighted Die costs $5 -> $4\r\n- Super Wrathful Joker only activates if played hand has 4 scored cards or less\r\n- Pot gives X4 -> X3 Mult\r\n- Forgery gives half -> a quarter of chips as Mult\r\n- Forgery costs $6 -> $7\r\n- Missing Finger gives X4 Mult -> X3 Mult\r\n- Missing Finger costs $7 -> $9\r\n- Hierarchy gives X2 -> X1.5 Mult\r\n- Satanist costs $5 -> $6\r\n- The Cube gives $ equal to rank -> half rank\r\n- Fixed Sprinkler to no longer crash if a suit has no cards remaining in the deck",
+        "publishedAt": "2025-10-04T03:48:37Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v2.1.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.3",
+        "name": "1.1.3",
+        "body": "Changes:\r\n- Added [CardPronouns](https://github.com/real-niacat/CardPronouns) compat for all Jokers! Your favourite pi_cubed's Jokers' Jokers now have canon genders and preferred pronouns!\r\n- Sprinkler fixed to no longer switch chosen suit when bought if there is a tie amongst the most common suit (in addition, Sprinkler fallback suit changed to Clubs)\r\n- Landslide activation animation tweaked\r\n- Fixed cards remaining to appear rankless after having been removed of their Stone enhancement that was applied by Landslide\r\n- Forgery fixed to no longer attempt to destroy a card that another copy of Forgery has already destroyed\r\n- Forgery fixed to not activate if no (valid) cards are remaining in the deck\r\n- Fixed an issue where the number of cards selected can for a moment exceed the selection limit - if a Missing Finger is obtained whilst more cards are selected than the new selection limit, all cards are now deselected",
+        "publishedAt": "2025-10-02T05:08:31Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2",
+        "name": "1.1.2",
+        "body": "Changes:\r\n- Added 1 new tag\r\n- Added 1 new sticker\r\n- Added 1 new deck\r\n- Added CardSleeves support for all decks\r\n- Boomerang costs $6 -> $4\r\n- Rejuvenation Deck and Nostalgic Rejuvination Deck Challenge Deck now have cleaner \"+1 Joker Slot\" UI (code copied from Ortalab)\r\n- Fixed Rejuvenation Deck giving Joker slots too early if the Deck is selected on consecutive runs\r\n- Tweaked Rejuvenation Deck description\r\n- Fixed Joker in a Nutshell to be able to count the lines of descriptions with multiboxes\r\n- Ambigram UI Button fixed to now be able to coexist with the sell button\r\n- When Ambigram is used, cards will now be changed in order from left to right rather than the order of selection\r\n- Ambigram can no longer be \"used\" if no 6s or 9s are selected\r\n- Ambigram fixed to no longer change the base rank of Stone cards\r\n- Rupture fixed to no longer destroy eternal Jokers that do not explicitly have the Eternal sticker (i.e. modded Eternal-likes)\r\n- Tweaked Encore description",
+        "publishedAt": "2025-09-29T13:18:36Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.1",
+        "name": "1.1.1",
+        "body": "Changes:\r\n- Tweaked Incomplete Survey description\r\n- Blueberry Pie added to \"Food\" pool\r\n- Fixed Monkey See, Monkey Do being able to select the same rank twice",
+        "publishedAt": "2025-09-21T10:05:50Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0a",
+        "name": "1.1.0",
+        "body": "Changes:\r\n- Added 5 new jokers\r\n  - 1 Common\r\n  - 4 Uncommon\r\n- Added 1 new deck\r\n- Joker Circuit now gives a special \"version\" of Speed Tag that activates immediately after being obtained, and also wait to activate if it would give $0\r\n- Joker Circuit costs $6 -> $4\r\n- All In retriggers played cards 2 additional times, and retriggers held cards and Jokers 1 additional time\r\n- Various jokers will no longer upgrade multiple times at once due to being retriggered by All In or other joker retriggerers\r\n- Some Jokers now have multiple description boxes to better communicate having multiple effects (Stonemason, All In, Extra Limb, Polyrhythm, Off the Hook, and Round-a-bout)\r\n- Fixed the Nostalgic Rejuvination Deck Challenge to properly add Joker slots and replace the first Buffoon pack with a Mega Celestial Pack\r\n- Ambigram UI button is now on the joker rather than the playing cards, to prevent glitches and also a conflict with Ortalab\r\n- Tweaked description of Jokin' Hood and Stonemason\r\n- Jokin' Hood's synergy with Hypercalculia (Ortalab) has been removed due to the latter being overhauled",
+        "publishedAt": "2025-09-18T12:29:28Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.0a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1",
+        "name": "1.0.1",
+        "body": "Changes:\r\n- Updated card art for Pear Tree, Fusion Magic, Polyrhythm, Mount Joker, and Acorn Tree\r\n- Fixed Jokers from the Balatro Hevven mod to be compatible with an achievement",
+        "publishedAt": "2025-08-25T11:56:38Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0c",
+        "name": "1.0.0",
+        "body": "it's out of beta now, because there isn't really much more content i plan to add. i still have a few more ambitious ideas, and i plan to sporadically add cross-mod stuff when i feel like it. do expect bugs though.\r\n\r\nChanges:\r\n- wave 5 content!\r\n  - 15 new Jokers (6 common, 4 uncommon, 4 rare, and 1 legendary)\r\n  - 9 new Achievements\r\n  - 1 new crossmod joker for Cryptid\r\n  - 2 new crossmod jokers for Þhe Autumn Circus\r\n- Panic Fire has been reworked: requires 3 cards to become Active, but can be made Active after first play or discard\r\n- Round-a-bout scaling is +12 Mult -> +X0.25 Mult\r\n- Explosher costs $4 -> $5\r\n- Shrapnel activation animation made faster\r\n- Slight tweak to the description of On-beat and Off-beat (played cards -> scoring cards)\r\n- Added Yawning Cat to \"Cat\" (Yahimod) pool\r\n- Fixed Forgery not giving the correct amount of mult when destroying a Stone card\r\n- Fixed Landslide and Mount Joker to work with the Talisman mod\r\n- Landslide now has a new animation\r\n- Removed the legacy \"Spectrum\" version of Bisexual Flag",
+        "publishedAt": "2025-08-10T10:21:06Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.0.0c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.7-beta",
+        "name": "1.3.7~BETA (balance patch!)",
+        "body": "Changes:\r\n- Off the Hook gives +2 Hands after Blind is selected and is Blueprint Compatible\r\n  - Gives hands like Burglar to allow selling the Joker during Blind being viable\r\n- Night Vision gives +$2 -> +$1 per flipped card\r\n- Night Vision costs $6 -> $7\r\n- All In retriggers cards 2 -> 1 additional time(s)\r\n- Acorn Tree costs $5 -> $6\r\n- Acorn Tree is Common -> Uncommon\r\n-  Ox Plow has been reworked: gives $7 at end of round if most played poker hand wasn't played that round\r\n- Ox Plow costs $6 -> $4\r\n- Golden Pancakes has been reworked: played cards give $1 when scored\r\n- Golden Pancakes is Common -> Uncommon\r\n- Mount Joker uses most played poker hand -> most levelled poker hand\r\n- Mount Joker costs $5 -> $4\r\n- Wee Mini costs $3 -> $2\r\n- Explosher affects 3 -> 5 cards\r\n- Hidden Gem costs $8 -> $9\r\n- Spectral Joker costs $9 -> $8\r\n- Fusion Magic costs $7 -> $8\r\n  - These prices should be more appropriate for these relatively similar Jokers. Hidden Gem has a higher price due to its deckfixing potential\r\n- My Epic Deck also starts with an extra $6\r\n  - This change provides an actual benefit to using this deck\r\n- Wonderful Deck starts with a Foil editioned Talking Flower\r\n  - This change makes the deck more useful",
+        "publishedAt": "2025-07-31T13:57:35Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.7-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.6b-beta",
+        "name": "1.3.6~BETA",
+        "body": "Changes:\r\n- Completely overhauled file structure - the bulk of the mod's code is no longer in the main file\r\n  - This was done in an effort to make the code more legible and future-proof\r\n- Mod badge changed from \"pi_cubed's Jokers\" to \"pi^3's jokers\"\r\n- Added a config option to enable or disable Jokers that directly change what poker hands your hand contains, to prevent conflicts with mods\r\n  - This currently affects **Mount Joker**, **Wee Mini**, and **Round-a-bout**\r\n  - This config option is forced disabled if Paperback is installed, as there is a major conflict after the addition of the Apostles rank\r\n- Bisexual Flag's code has been rewritten to allow any 4 suits (not just vanilla) to activate it. (It will also have a hidden check for Straight Spectrum as a fallback)\r\n  - This should also allow for previously unsupported suits to work with this Joker\r\n- Removed the \"Spectrum\" version of Bisexual Flag\r\n- Preorder Bonus code rewrite to simplify the hook (it is now a patch.)\r\n- Removed the Preorder Bonus config option and the \"hookless\" version of Preorder Bonus\r\n- Fixed Preorder Bonus' loc_vars when viewing its description on the Covetous Deck with Galdur\r\n- Simplified the \"checking rank\" code for Black Joker and Forgery\r\n- Fixed Night Vision not rewarding money",
+        "publishedAt": "2025-07-29T13:40:22Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.6b-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.5-beta",
+        "name": "1.3.5~BETA",
+        "body": "Changes:\r\n- Reworked Ambigram again: 6s and 9s can swap ranks anytime (adds a button when the card is selected to swap the rank)\r\n- Changed the appearance of Eye Patch's list of played poker hands in its description\r\n- Fixed Translucent Joker's juice_up animation\r\n- Added an indication when Rejuvenation Deck adds a Joker slot (though for now it looks off)\r\n- Inkjet Printer, Laser Printer, and Copy (Partner) now use a different sound effect when self-destructing or becoming disabled\r\n- Laser Printer fixed disabled graphic not being placed when reentering a run\r\n- Laser Printer fixed incorrect asset after becoming disabled",
+        "publishedAt": "2025-07-28T12:41:05Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.5-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.4a-beta",
+        "name": "1.3.4~BETA",
+        "body": "Changes:\r\n- Added a new cross-mod Joker: Inkjet Printer Printer (requires Revo's Vault)\r\n- Updated card art for It Says \"Joker\" on the Ceiling, D2, Molten Joker, Chisel, Ambigram, Explosher, Pi, Yawning Cat, and Night Vision\r\n- Updated Covetous Deck card art",
+        "publishedAt": "2025-07-24T13:35:47Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.4a-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.3a-beta",
+        "name": "1.3.3~BETA",
+        "body": "Changes:\r\n- Pi rework: editioned cards have a 1 in 3 chance to give Xpi Mult\r\n- Lowball Draw rework: earn $1 per 2 or 7 drawn\r\n- Lowball Draw costs $3 -> $6\r\n- Shopping Trolley gives +5 -> +10 hand size, is Common -> Uncommon, and costs $3 -> $4\r\n- Shopping Trolley fixed probability to activate being incorrectly low\r\n- Rejuvenation Deck rework: start with only 3 Joker slots, +1 Slot every other Boss Blind defeated\r\n- Added the Nostalgic Rejuvination Deck Challenge Deck\r\n- Removed a debug print",
+        "publishedAt": "2025-07-22T13:10:40Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.3a-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.2-beta",
+        "name": "1.3.2~BETA",
+        "body": "VERY IMPORTANT NOTE: Due to the probability changes, Steamodded **[1.0.0-beta-0711a](https://github.com/Steamodded/smods/releases/tag/1.0.0-beta-0711a)** or later is now required!\r\n\r\nChanges:\r\n- Changed probability stuff for new smods update - new version required\r\n- Laser Printer now displays correct probabilities if values are changed\r\n- Snake Eyes now checks for all ability.extra variables to see if they contain \"odds\" within the name\r\n- Rupture can now be used regardless of if consumables slots are full\r\n- Playing the Rejuvenation Deck gives the 1st shop a guaranteed Mega Celestial Pack rather than a Buffoon Pack\r\n- Rejuvenation Deck starts with $8\r\n- Reordered new decks in order of which is recommended to play first\r\n- Round-a-bout has been reworked: gains +12 Mult if played hand contains a Wrap-around Straight\r\n- Round-a-bout is Common -> Uncommon and costs $3 -> $6\r\n- On-beat, Off-beat, and Translucent Joker now have a tooltip or their tooltip has been adjusted\r\n- Talking Flower now is no longer guaranteed to speak if multiple copies are present - individual probability is inversely proportional to number of copies\r\n- Talking Flower animation tweaked, will be less fast at higher game speeds",
+        "publishedAt": "2025-07-18T11:49:57Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.2-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.1a-beta",
+        "name": "1.3.1~BETA",
+        "body": "IMPORTANT NOTE: For this release and all previous releases, requires Steamodded 1.0.0~BETA-0530b or newer, and older than Steamodded 1.0.0-beta-0711a\r\nChanges:\r\n- Rejuvination Deck -> Rejuvenation Deck (the deck will remain spelled incorrectly in its key)\r\n- New decks now have hover tooltips\r\n- Tweaked Bisexual Flag's animation - tarots are created one at a time instead of all at once\r\n- Bisexual Flag is now able to have its values changed\r\n- Black Joker blueprint compatibility fixed\r\n- Chicken Joker fixed to require certain cards in scoring hand to activate\r\n- Talking Flower fixed to properly be able to be aquired even if Joker slots are full",
+        "publishedAt": "2025-07-15T14:00:50Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.1a-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.0d-beta",
+        "name": "1.3.0~BETA",
+        "body": "Changes:\r\n- Added 15 new Jokers (5 Common, 7 Uncommon, 3 Rare)\r\n- Added 2 new Spectral cards\r\n- Added 5 new Decks\r\n- On-beat and Off-beat now have alternate appearances that rarely appear after swapping\r\n- Added JokerDisplay support to 26 Jokers\r\n- Commander (Spectral card) now has an in_pool condition: at least 1 consumable must be held\r\n- All In now has an in_pool condition: Ante must be >=2\r\n- Snake Eyes has less cases where it incorrectly gives a message\r\n- Black Joker will now use its looser success condition if its cap value is altered\r\n- Mount Joker now registers poker hands within the chosen poker hand (supports vanilla, Bunco, Paperback, Six Suits, and Cryptid) and is no longer a patch\r\n- Probabilities no longer use G.SEED as a pseudoseed - probabilities are less likely to change after leaving and reentering the run",
+        "publishedAt": "2025-07-10T05:23:34Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.3.0d-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.3-beta",
+        "name": "1.2.3~BETA",
+        "body": "Changes:\r\n- Mrs. Jankman and Jolly tags now properly require their respective mods to appear\r\n- Refine fixed to upgrade cards properly",
+        "publishedAt": "2025-07-07T13:32:41Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.2.3-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.2-beta",
+        "name": "1.2.2~BETA",
+        "body": "Changes:\r\n- Added 1 new Legendary Joker that requires Cryptid and More Fluff\r\n- Added 2 new Tags that require Cryptid\r\n- Extra Pockets fixed to cause less issues if its values are changed\r\n- Super Wrathful Joker and Ambigram fixed to no longer cause affected cards to become debuffed by The Pillar",
+        "publishedAt": "2025-06-28T06:58:22Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.2.2-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.1-beta",
+        "name": "1.2.1~BETA",
+        "body": "Changes:\r\n- Preorder Bonus and Bisexual Flag are now less likely to become undiscovered due to changing keys\r\n- Added support for Partner 1.0.2c\r\n- Polymelia now gives the correct amount of chips if upgraded\r\n- Polymelia properly gives additional Consumable slots as of Partner 1.0.2c (the value won't display properly until a calculate has occurred)\r\n- Polymelia message location changed to now be on Consumables rather than itself",
+        "publishedAt": "2025-06-15T07:03:35Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.2.1-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.0b-beta",
+        "name": "1.2.0~BETA",
+        "body": "Changes:\r\n- Added 15 New Jokers (8 Common, 4 Uncommon, 2 Rare, 1 Legendary)\r\n- Added 4 New Partners for the Partner mod\r\n- Super Wrathful Joker now gives a message when activating\r\n- Super Greedy Joker now gives a message when activating\r\n- Preorder Bonus and Bisexual Flag are now less likely to crash due to changing keys",
+        "publishedAt": "2025-06-10T05:38:08Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.2.0b-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.7-beta",
+        "name": "1.1.7~BETA",
+        "body": "Changes:\r\n- Landslide localization fixed to properly say \"Tumble!\" when activated\r\n- Black Joker gives +$13 -> $7\r\n- Advanced Skipping changed to only upgrade if tags added is less than current Ante\r\n- Pi card art updated\r\n- Black Joker card art updated\r\n\r\nThis version is the most stable and bug-free version of the mod, as of writing.",
+        "publishedAt": "2025-05-26T06:22:13Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.7-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.6-beta",
+        "name": "1.1.6~BETA",
+        "body": "Changes:\r\n- Black Joker has been completely reworked: if sum of first played or discarded cards' rank was 21, earn $13\r\n- Black Joker costs $6 -> $5\r\n- Black Joker is now Blueprint compatible\r\n- For Black Joker's sum rank, Aces count as 1 -> 11, but sum rank can be reduced by 10 per Ace played (such that sum rank is at or below 21)\r\n- For Black Joker's sum rank, if Unstable is present and at least 1 decimal rank (or ???) is played, requirement is 20 < x < 22\r\n- Ambigram has been reworked: if this Joker is the left-most: played (not just scoring!) 6s become 9s, if this Joker is the right-most: played 9s become 6s\r\n- Ambigram costs $6 -> $5\r\n- Ooo! Shiny! is Rare -> Uncommon\r\n- Ooo! Shiny! gives $8 -> $7 when Polychrome cards are scored\r\n- Ooo! Shiny! costs $8 -> $7\r\n- Rhythmic Joker gives +10 -> +12 Mult when scored\r\n- Rhythic Joker costs $4 -> $5\r\n- Apartment Complex costs $6 -> $7\r\n- Apartment Complex in_pool condition changed to require either a Flush House, or two Flushes and two Full Houses\r\n- Cards flipped by Echolocation and Incomplete Survey no longer stay flipped face down whilst scoring\r\n- All In considers cards that get flipped back face up due to being played as \"face down\" cards\r\n- Word Search fixed to now properly fallback to Aces if a valid card with a rank cannot be found\r\n- Word Search fixed to be less likely to be stuck on a chosen rank\r\n- Word Search now works properly with UnStable ranks\r\n- Word Search costs $5 -> $4",
+        "publishedAt": "2025-05-24T10:49:17Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.6-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.5-beta",
+        "name": "1.1.5~BETA",
+        "body": "Added Latin American Spanish (Español (México)) localization! (Thanks **franderman123**!)",
+        "publishedAt": "2025-05-16T14:35:41Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.5-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.4-beta",
+        "name": "1.1.4~BETA",
+        "body": "Changes:\r\n- Black Joker and Pear Tree now work properly with modded rankless enhancements\r\n- Added proper support for UnStable's new ranks with Black Joker\r\n- Bisexual Flag's (non-Spectral version) \"Pride!\" message is now compatible with localizations\r\n- Upgraded Joker now triggers on quantum-enhanced Lucky Cards cards (eg. Extra Credit's Lucky 7)\r\n- Jokin' Hood now recognises Hypercalculia from Ortalab (prioritises it over Paredolia)",
+        "publishedAt": "2025-05-13T14:42:31Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.4-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.3a-beta",
+        "name": "1.1.3~BETA (fixed)",
+        "body": "- Implemented greater localization support\r\n- Bisexual Flag can also activate if played hand contains a Spectrum Straight with mods that invoke the Spectrum framework, and description will change appropriately\r\n- This version of Bisexual flag has a completely different key. Attempting to return to a run with different mods will likely result in crashes.\r\n- Bisexual Flag no longer causes crashes if a played Wild card attempts to be counted as a Spade card\r\n- The hookless version of Preorder Bonus has a completely different key. Attempting to return to a run with a changed config will likely result in crashes.\r\n- Added Water Bottle and Golden Pancakes to \"Food\" pool\r\n- Added Snake Eyes, Shopping Trolley, and Arrogant Joker to \"Meme\" pool\r\n- Extra Pockets no longer can have its values modified to be a decimal (tries to round up)\r\n- Preorder Bonus (hook config enabled) properly applies new values if they are modified\r\n- It Says \"Joker\" on the Ceiling now able to have its ceiling values modified\r\n- It Says \"Joker\" on the Ceiling key changed (ceiling_joker -> itsaysjokerontheceiling)\r\n- Word Search card art adjusted slightly (J's and R's are more consistent)\r\n- Fusion Magic description added \"(Must have room)\", and altered slightly\r\n- Molten Joker, Chisel, Ooo! Shiny!, Stonemason, and Apartment Complex now use in_pool for their enhancement/edition/poker hand gates, rather than a lovely patch\r\n- Black Joker rewards money properly when its values are modified",
+        "publishedAt": "2025-05-11T08:02:05Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.3a-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2-beta",
+        "name": "1.1.2~BETA (Balance Patch)",
+        "body": "Changes:\r\n(+) Ooo! Shiny! works with Polychrome Jokers\r\n( -) Ooo! Shiny! rewards $10 -> $8 when activated\r\n(+) Explosher chooses a suit that isn't found among all suits held in hand if possible\r\n(+) Explosher costs $5 -> $4\r\n(+) Ace Comedian also affects 8s\r\n( •) For Black Joker's sum rank, Aces count as 1 -> 11\r\n( -) Black Joker earnings is halved (rounded up)\r\n( •) Ambigram affects only unenhanced cards\r\n( -) Advanced Skipping can be perishable\r\n(+) Advanced Skipping is Blueprint compatible\r\n( -) 7 8 9 gives X0.5 Mult -> X0.3 Mult per scored 9\r\n( -) Apartment Complex gives +X1 -> +X0.75 when upgraded\r\n( -) Apartment Complex is Uncommon -> Rare\r\n(+) D2 gives +15 -> +20 Mult\r\n( -) Word Search gives +2 -> +1 Mult\r\n( -) Siphon ugrades by +20 -> +8 Chips\r\n( -) Water Bottle upgrades by +30 Chips -> +15 Chips\r\n( •) Extra Limb gives +10 Chips -> +6 Mult per held consumable\r\n(+) Chisel costs $5 -> $4\r\n(+) Landslide costs $6 -> $5\r\n( -) Snake Eyes costs $4 -> $6\r\n( -) Hidden Gem is Uncommon -> Rare",
+        "publishedAt": "2025-04-29T13:31:08Z",
+        "htmlUrl": "https://github.com/pi-cubed-cat/pi_cubeds_jokers/releases/tag/v1.1.2-beta",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-29T06:31:54.612Z"
   },
   "JustEnoughJokers@cg-223": {
     "id": "justenoughjokers",
