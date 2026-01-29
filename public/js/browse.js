@@ -326,9 +326,9 @@ class ModBrowser
             overflow: hidden;
         `;
 
-        if (entry.images && entry.images.length > 0)
+        if (mod.images && mod.images.length > 0)
         {
-            const thumbnail = entry.images.find(img => img.isThumbnail);
+            const thumbnail = mod.images.find(img => img.isThumbnail);
             if (thumbnail)
             {
                 baseStyle += `

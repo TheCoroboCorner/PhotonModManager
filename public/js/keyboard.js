@@ -22,7 +22,7 @@ class KeyboardShortcuts
             handler
         };
 
-        const comboKey = this.comboKey(combo);
+        const comboKey = this.getComboKey(combo);
         this.shortcuts.set(comboKey, combo);
     }
 
