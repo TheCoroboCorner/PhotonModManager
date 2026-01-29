@@ -188,7 +188,6 @@ class ModDetailPage
 
         this.releases.forEach((release, index) => {
             const item = document.createElement('div');
-            item.className = 'version-item';
             item.style.cssText = 'background: rgba(30, 18, 82, 0.4); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-blue);';
             
             const isLatest = index === 0;
@@ -197,8 +196,7 @@ class ModDetailPage
             const releaseBody = release.body || '';
             const lines = releaseBody.split('\n');
             const needsCollapse = lines.length > 5;
-            const collapsedBody = needsCollapse ? lines.slice(0, 5).join('\n') + '\n...' : releaseBody;
-
+            
             const releaseId = `release-${index}`;
             
             item.innerHTML = `
@@ -208,12 +206,12 @@ class ModDetailPage
                 </div>
                 ${release.name && release.name !== release.tag ? `<p style="margin: 0.5rem 0; color: var(--text-light); font-weight: 600;">${release.name}</p>` : ''}
                 ${releaseBody ? `
-                    <div id="${releaseId}" class="release-body" style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; max-height: ${needsCollapse ? '150px' : 'none'}; overflow: hidden; transition: max-height 0.3s ease;">
-                        ${this.renderMarkdown(needsCollapse ? collapsedBody : releaseBody)}
+                    <div id="${releaseId}" class="release-body collapsed" style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">
+                        ${this.renderMarkdown(releaseBody)}
                     </div>
                     ${needsCollapse ? `
-                        <button class="read-more-btn" data-target="${releaseId}" style="background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 0.875rem; margin-top: 0.5rem; padding: 0; text-decoration: underline; transition: color 0.2s;">
-                            Read more ▼
+                        <button class="read-more-btn" data-target="${releaseId}">
+                            Read more
                         </button>
                     ` : ''}
                 ` : ''}
@@ -237,27 +235,19 @@ class ModDetailPage
                 btn.addEventListener('click', () => {
                     isExpanded = !isExpanded;
                     
+                    const collapsedHeight = 8 * 1.6 * 16; // 8rem
+
                     if (isExpanded)
                     {
-                        bodyDiv.classList.remove('collapsed');
-                        bodyDiv.classList.add('expanded', 'expanding');
-                        bodyDiv.innerHTML = this.renderMarkdown(releaseBody);
-                        btn.classList.add('expanded');
+                        bodyDiv.style.maxHeight = bodyDiv.scrollHeight + 'px';
                         btn.textContent = 'Read less';
                     }
                     else
                     {
-                        bodyDiv.classList.remove('expanded');
-                        bodyDiv.classList.add('collapsed');
-                        bodyDiv.innerHTML = this.renderMarkdown(collapsedBody);
-                        btn.classList.remove('expanded');
+                        bodyDiv.style.maxHeight = collapsedHeight + 'px';
                         btn.textContent = 'Read more';
                     }
                 });
-
-                btn.addEventListener('mouseenter', () => btn.style.color = 'var(--accent-purple)');
-
-                btn.addEventListener('mouseleave', () => btn.style.color = 'var(--accent-blue)');
             }
         });
     }
