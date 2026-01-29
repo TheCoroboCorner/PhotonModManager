@@ -1258,7 +1258,7 @@
     "favourites": 0,
     "allow_redistribution": true,
     "git_owner": "TheCoroboCorner",
-    "published_at": "2026-01-29T12:06:04.943Z",
+    "published_at": "2026-01-29T10:41:10.557Z",
     "type": "Mod",
     "tags": [
       "Misc"
@@ -1299,10 +1299,10 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-01-29T12:06:08.005Z",
+    "versionHistoryLastCheck": "2026-01-29T10:41:13.770Z",
     "analytics": {
-      "views": 1,
-      "lastViewed": "2026-01-29T12:06:08.293Z"
+      "views": 2,
+      "lastViewed": "2026-01-29T10:41:42.380Z"
     }
   }
 }
