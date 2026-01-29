@@ -315,10 +315,7 @@ class ModBrowser
         li.className = 'mod-card';
         li.dataset.key = mod.key;
 
-        const thumbnail = entry.images?.find(img => img.isThumbnail);
-        const thumbnailStyle = thumbnail ? `background: linear-gradient(90deg, rgba(30, 18, 82, 1) 0%, rgba(30, 18, 82, 0.7) 50%, rgba(30, 18, 82, 0) 100%), url('${thumbnail.path}') right center / cover no-repeat;` : '';
-
-        li.style.cssText = `
+        let baseStyle = `
             position: relative;
             background: rgba(30, 18, 82, 0.6);
             padding: 1.5rem;
@@ -327,8 +324,21 @@ class ModBrowser
             transition: all 0.3s;
             margin-bottom: 1rem;
             overflow: hidden;
-            ${thumbnailStyle}
         `;
+
+        if (entry.images && entry.images.length > 0)
+        {
+            const thumbnail = entry.images.find(img => img.isThumbnail);
+            if (thumbnail)
+            {
+                baseStyle += `
+                    background: linear-gradient(90deg, rgba(30, 18, 82, 1) 0%, rgba(30, 18, 82, 0.7) 50%, rgba(30, 18, 82, 0) 100%), 
+                                url('${thumbnail.path}') right center / cover no-repeat;
+                `;
+            }
+        }
+
+        li.style.cssText = baseStyle;
 
         const { repo, owner } = parseModKey(mod.key);
 

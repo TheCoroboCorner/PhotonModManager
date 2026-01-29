@@ -239,15 +239,19 @@ class ModDetailPage
                     
                     if (isExpanded)
                     {
-                        bodyDiv.style.maxHeight = 'none';
+                        bodyDiv.classList.remove('collapsed');
+                        bodyDiv.classList.add('expanded', 'expanding');
                         bodyDiv.innerHTML = this.renderMarkdown(releaseBody);
-                        btn.innerHTML = 'Read less ▲';
+                        btn.classList.add('expanded');
+                        btn.textContent = 'Read less';
                     }
                     else
                     {
-                        bodyDiv.style.maxHeight = '150px';
+                        bodyDiv.classList.remove('expanded');
+                        bodyDiv.classList.add('collapsed');
                         bodyDiv.innerHTML = this.renderMarkdown(collapsedBody);
-                        btn.innerHTML = 'Read more ▼';
+                        btn.classList.remove('expanded');
+                        btn.textContent = 'Read more';
                     }
                 });
 

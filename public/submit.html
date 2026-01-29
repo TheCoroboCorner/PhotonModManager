@@ -35,6 +35,27 @@
       {
         animation: fadeIn 0.3s ease;
       }
+
+      .remove-image-btn 
+      {
+        transition: all 0.2s ease;
+      }
+
+      .remove-image-btn:hover 
+      {
+        background: rgba(255, 59, 48, 0.9) !important;
+        transform: scale(1.1);
+      }
+
+      .thumbnail-toggle-btn 
+      {
+        transition: all 0.2s ease;
+      }
+
+      .thumbnail-toggle-btn:hover 
+      {
+        transform: scale(1.1);
+      }
     </style>
 
     <!-- SEO Meta Tags -->
@@ -192,7 +213,7 @@
 
               <div style="margin-bottom: 1.5rem;">
                 <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-white);">
-                    <span style="font-size: 0.9rem;">Images (Optional - up to 10)</span>
+                  <span style="font-size: 0.9rem;">Images (Optional - up to 10)</span>
                 </label>
                 
                 <div class="file-upload-wrapper" style="position: relative;">
@@ -203,15 +224,15 @@
                       <polyline points="17 8 12 3 7 8"></polyline>
                       <line x1="12" y1="3" x2="12" y2="15"></line>
                     </svg>
-                    <span style="font-size: 1rem; font-weight: 600;">Click to upload or drag & drop</span>
+                    <span style="font-size: 1rem; font-weight: 600;">Click to add images or drag & drop</span>
                     <span style="font-size: 0.875rem; color: var(--text-secondary);">PNG, JPG, GIF, WebP (max 5MB each)</span>
                   </button>
                 </div>
-                  
+                
                 <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">
-                  Upload screenshots of your mod. Click any image to set it as the thumbnail.
+                  Upload screenshots of your mod. Click the star icon on any image to set it as the thumbnail (optional).
                 </p>
-                  
+                
                 <div id="image-preview" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem;"></div>
               </div>
 
@@ -270,101 +291,188 @@
       const imageUpload = document.getElementById('image-upload');
       const uploadTrigger = document.getElementById('upload-trigger');
       const imagePreview = document.getElementById('image-preview');
-      let selectedThumbnail = 0;
-      let uploadedFiles = [];
+      let uploadedImages = []; // Array to store image data
+      let thumbnailIndex = null; // null means no thumbnail selected
 
       uploadTrigger.addEventListener('click', () => imageUpload.click());
 
       uploadTrigger.addEventListener('dragover', (e) => {
-          e.preventDefault();
-          uploadTrigger.style.borderColor = 'var(--accent-blue)';
-          uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+        e.preventDefault();
+        uploadTrigger.style.borderColor = 'var(--accent-blue)';
+        uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
       });
 
       uploadTrigger.addEventListener('dragleave', () => {
-          uploadTrigger.style.borderColor = 'rgba(102, 126, 234, 0.5)';
-          uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)';
+        uploadTrigger.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+        uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)';
       });
 
       uploadTrigger.addEventListener('drop', (e) => {
-          e.preventDefault();
-          uploadTrigger.style.borderColor = 'rgba(102, 126, 234, 0.5)';
-          uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)';
+        e.preventDefault();
+        uploadTrigger.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+        uploadTrigger.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)';
           
-          const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
-          if (files.length > 0)
-          {
-              imageUpload.files = e.dataTransfer.files;
-              handleFiles(files);
-          }
+        const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+        if (files.length > 0)
+        {
+          addImages(files);
+        }
       });
 
       imageUpload.addEventListener('change', (e) => {
-          const files = Array.from(e.target.files);
-          handleFiles(files);
+        const files = Array.from(e.target.files);
+        addImages(files);
+        e.target.value = '';
       });
 
-      function handleFiles(files)
+      function addImages(files)
       {
-          imagePreview.innerHTML = '';
-          uploadedFiles = files;
+        if (uploadedImages.length + files.length > 10)
+        {
+          alert(`You can only upload up to 10 images. Currently have ${uploadedImages.length}.`);
+          return;
+        }
 
-          files.forEach((file, index) => {
-              const reader = new FileReader();
-              reader.onload = (e) => {
-                  const div = document.createElement('div');
-                  div.className = 'image-preview-item';
-                  div.style.cssText = 'position: relative; cursor: pointer; border-radius: 8px; overflow: hidden; border: 3px solid transparent; transition: all 0.3s;';
-                  
-                  div.innerHTML = `
-                      <img src="${e.target.result}" style="width: 100%; height: 150px; object-fit: cover;">
-                      <div class="thumbnail-badge" style="position: absolute; top: 0.5rem; right: 0.5rem; background: ${index === selectedThumbnail ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : 'rgba(0,0,0,0.7)'}; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; color: white; transition: all 0.3s;">
-                          ${index === selectedThumbnail ? '⭐ Thumbnail' : 'Set as thumbnail'}
-                      </div>
-                  `;
-
-                  div.addEventListener('click', () => {
-                      selectedThumbnail = index;
-                      updateThumbnailUI();
-                  });
-
-                  div.addEventListener('mouseenter', () => {
-                      if (index !== selectedThumbnail)
-                          div.style.borderColor = 'rgba(102, 126, 234, 0.5)';
-                  });
-
-                  div.addEventListener('mouseleave', () => {
-                      if (index !== selectedThumbnail)
-                          div.style.borderColor = 'transparent';
-                  });
-
-                  if (index === 0)
-                      div.style.borderColor = 'var(--accent-blue)';
-
-                  imagePreview.appendChild(div);
-              };
-              reader.readAsDataURL(file);
-          });
+        files.forEach(file => {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const imageData = {
+              file: file,
+              dataUrl: e.target.result,
+              id: Date.now() + Math.random() // Unique ID
+            };
+            
+            uploadedImages.push(imageData);
+            renderImages();
+          };
+          reader.readAsDataURL(file);
+        });
       }
 
-      function updateThumbnailUI()
+      function removeImage(id)
       {
-          const items = imagePreview.querySelectorAll('.image-preview-item');
-          items.forEach((item, i) => {
-              const badge = item.querySelector('.thumbnail-badge');
-              if (i === selectedThumbnail)
-              {
-                  item.style.borderColor = 'var(--accent-blue)';
-                  badge.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                  badge.textContent = '⭐ Thumbnail';
-              }
-              else
-              {
-                  item.style.borderColor = 'transparent';
-                  badge.style.background = 'rgba(0,0,0,0.7)';
-                  badge.textContent = 'Set as thumbnail';
-              }
+        const index = uploadedImages.findIndex(img => img.id === id);
+        if (index === -1) 
+          return;
+
+        if (thumbnailIndex === index)
+          thumbnailIndex = null;
+        else if (thumbnailIndex !== null && index < thumbnailIndex)
+          thumbnailIndex--;
+
+        uploadedImages.splice(index, 1);
+        renderImages();
+      }
+
+      function toggleThumbnail(index)
+      {
+        if (thumbnailIndex === index)
+          thumbnailIndex = null;
+        else
+          thumbnailIndex = index;
+        renderImages();
+      }
+
+      function renderImages()
+      {
+        imagePreview.innerHTML = '';
+
+        if (uploadedImages.length === 0)
+          return;
+
+        uploadedImages.forEach((imageData, index) => {
+          const div = document.createElement('div');
+          div.className = 'image-preview-item';
+          div.style.cssText = `
+            position: relative; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            border: 3px solid ${thumbnailIndex === index ? 'var(--accent-blue)' : 'transparent'};
+            transition: all 0.3s;
+          `;
+            
+          const isThumbnail = thumbnailIndex === index;
+              
+          div.innerHTML = `
+          <img src="${imageData.dataUrl}" style="width: 100%; height: 150px; object-fit: cover;">
+          
+          <button type="button" class="remove-image-btn" style="
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            background: rgba(255, 59, 48, 0.8);
+            border: none;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          ">×</button>
+          
+          <button type="button" class="thumbnail-toggle-btn" style="
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: ${isThumbnail ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : 'rgba(0, 0, 0, 0.7)'};
+            border: none;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          ">${isThumbnail ? '⭐ Thumbnail' : '☆ Set thumbnail'}</button>
+          
+          <div style="
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            color: white;
+          ">
+            ${imageData.file.name.length > 20 ? imageData.file.name.substring(0, 20) + '...' : imageData.file.name}
+          </div>
+        `;
+
+        const removeBtn = div.querySelector('.remove-image-btn');
+        const thumbnailBtn = div.querySelector('.thumbnail-toggle-btn');
+
+        removeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          removeImage(imageData.id);
+        });
+
+        thumbnailBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleThumbnail(index);
+        });
+
+        div.addEventListener('mouseenter', () => {
+          if (thumbnailIndex !== index)
+            div.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+        });
+
+        div.addEventListener('mouseleave', () => {
+          if (thumbnailIndex !== index)
+            div.style.borderColor = 'transparent';
           });
+
+          imagePreview.appendChild(div);
+        });
+
+        if (uploadedImages.length > 0)
+          uploadTrigger.querySelector('span:first-of-type').textContent = `Add more images (${uploadedImages.length}/10)`;
+        else
+          uploadTrigger.querySelector('span:first-of-type').textContent = 'Click to add images or drag & drop';
       }
     </script>
   </body>
