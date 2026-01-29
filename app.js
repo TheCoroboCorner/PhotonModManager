@@ -9,6 +9,7 @@ import wikiRoutes from './routes/wiki.js';
 import modpackRoutes from './routes/modpack.js';
 import analyticsRoutes from './routes/analytics.js';
 import apiRoutes from './routes/api.js';
+import imageUploadRouter from './routes/imageUpload.js';
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use('/', wikiRoutes);
 app.use('/', modpackRoutes);
 app.use('/', analyticsRoutes);
 app.use('/', apiRoutes);
+app.use('/', imageUploadRouter)
 
 app.listen(config.port, () => console.log(`Listening on port ${config.port}`));
 

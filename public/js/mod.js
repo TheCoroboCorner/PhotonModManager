@@ -216,13 +216,16 @@ class ModDetailPage
                     ` : ''}
                 ` : ''}
                 <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-                    <a href="${release.htmlUrl}" target="_blank" class="click-me" style="padding: 0.5rem 1rem; height: auto; font-size: 0.875rem; text-decoration: none;">
+                    <a href="${release.htmlUrl}" target="_blank" class="click-me mod-download" style="padding: 0.5rem 1rem; height: auto; font-size: 0.875rem; text-decoration: none;">
                         View on GitHub
                     </a>
                     ${release.assets && release.assets.length > 0 ? `<span style="font-size: 0.875rem; color: var(--text-secondary);">📦 ${release.assets.length} asset${release.assets.length > 1 ? 's' : ''}</span>` : ''}
                     ${release.prerelease ? '<span style="color: var(--accent-purple); font-size: 0.875rem;">⚠️ Pre-release</span>' : ''}
                 </div>
             `;
+
+            const download = item.querySelector('.mod-download');
+            download.addEventListener('click', async (e) => fetch(`/analytics/download/${encodeURIComponent(this.modKey)}`, { method: 'POST', keepalive: true }));
 
             container.appendChild(item);
 
@@ -340,6 +343,7 @@ class ModDetailPage
         const a = document.createElement('a');
         a.href = url;
         a.download = `${this.mod.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.modpack`;
+        a.addEventListener('click', async (e) => fetch(`/analytics/download/${encodeURIComponent(this.modKey)}`, { method: 'POST', keepalive: true }));
         a.click();
         URL.revokeObjectURL(url);
 
@@ -630,6 +634,8 @@ class ModDetailPage
         // Links
         const { repo, owner } = parseModKey(this.modKey);
         const githubLink = document.getElementById('mod-github');
+        githubLink.addEventListener('click', async (e) => fetch(`/analytics/download/${encodeURIComponent(this.modKey)}`, { method: 'POST', keepalive: true }));
+
         const wikiLink = document.getElementById('mod-wiki');
 
         if (githubLink)

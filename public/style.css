@@ -1419,6 +1419,15 @@ body
 
 @media (max-width: 768px)
 {
+  #trending-list h3,
+  #trending-list a
+  {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
   .nav
   {
     flex-wrap: wrap;

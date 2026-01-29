@@ -315,7 +315,7 @@ class ModBrowser
         li.className = 'mod-card';
         li.dataset.key = mod.key;
 
-        let baseStyle = `
+        li.style.cssText = `
             position: relative;
             background: rgba(30, 18, 82, 0.6);
             padding: 1.5rem;
@@ -326,135 +326,119 @@ class ModBrowser
             overflow: hidden;
         `;
 
-        if (mod.images && mod.images.length > 0)
+        if (entry.images && entry.images.length > 0) 
         {
-            const thumbnail = mod.images.find(img => img.isThumbnail);
-            if (thumbnail)
+            const thumbnail = entry.images.find(img => img.isThumbnail);
+            if (thumbnail) 
             {
-                baseStyle += `
-                    background: linear-gradient(90deg, rgba(30, 18, 82, 1) 0%, rgba(30, 18, 82, 0.7) 50%, rgba(30, 18, 82, 0) 100%), 
-                                url('${thumbnail.path}') right center / cover no-repeat;
+                const thumbnailDiv = document.createElement('div');
+                thumbnailDiv.className = 'mod-card-thumbnail';
+                thumbnailDiv.style.cssText = `
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 40%;
+                    pointer-events: none;
+                    z-index: 0;
                 `;
+                
+                const thumbnailInner = document.createElement('div');
+                thumbnailInner.style.cssText = `
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: url('${thumbnail.path}');
+                    background-size: cover;
+                    background-position: center right;
+                    background-repeat: no-repeat;
+                    mask-image: 
+                        linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%),
+                        linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%);
+                    mask-composite: multiply;
+                    -webkit-mask-image: 
+                        linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%),
+                        linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%);
+                    -webkit-mask-composite: source-in;
+                `;
+                
+                thumbnailDiv.appendChild(thumbnailInner);
+                li.appendChild(thumbnailDiv);
+                
+                console.log('[Browse] Added thumbnail for', entry.key, ':', thumbnail.path);
             }
         }
 
-        li.style.cssText = baseStyle;
+        const content = document.createElement('div');
+        content.style.cssText = 'position: relative; z-index: 1;';
 
-        const { repo, owner } = parseModKey(mod.key);
+        // Title
+        const title = document.createElement('h3');
+        title.textContent = entry.name;
+        title.style.cssText = 'margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--text-white);';
+        content.appendChild(title);
 
-        const header = document.createElement('div');
-        header.className = 'mod-card-header';
-
-        const titleLink = document.createElement('a');
-        titleLink.href = `mod.html?key=${encodeURIComponent(mod.key)}`;
-        
-        const badge = mod.type === 'Modpack' ? '<span style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 0.5rem;">MODPACK</span>' : '';
-        
-        titleLink.innerHTML = `<h3 class="mod-card-title">${mod.name ?? 'Unknown'}${badge}</h3>`;
-
-        header.appendChild(titleLink);
-        li.appendChild(header);
-
+        // Author
         const author = document.createElement('div');
-        author.className = 'mod-card-author';
-        author.style.cursor = 'pointer';
-        author.innerHTML = `by <span class="author-link" data-author="${formatAuthor(mod.author) ?? 'Unknown'}">${formatAuthor(mod.author) ?? 'Unknown'}</span>`;
+        author.textContent = `by ${Array.isArray(entry.author) ? entry.author.join(', ') : entry.author}`;
+        author.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 0.75rem;';
+        content.appendChild(author);
 
-        const authorLink = author.querySelector('.author-link');
-        if (authorLink) 
-        {
-            authorLink.style.cssText = 'color: var(--accent-blue); text-decoration: underline; cursor: pointer;';
-            
-            authorLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                this.params.author = authorLink.dataset.author;
+        // Description
+        const desc = document.createElement('p');
+        desc.textContent = entry.description || 'No description provided';
+        desc.style.cssText = 'color: var(--text-light); margin-bottom: 1rem; line-height: 1.6;';
+        content.appendChild(desc);
 
-                this.applyFilters();
-            });
-        }
-
-        li.appendChild(author);
-
-        const description = document.createElement('p');
-        description.className = 'mod-card-description';
-        description.textContent = mod.description ?? 'No description';
-        li.appendChild(description);
-
+        // Meta info (tags, stats, etc.)
         const meta = document.createElement('div');
-        meta.className = 'mod-card-meta';
+        meta.style.cssText = 'display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; font-size: 0.875rem; color: var(--text-secondary);';
         
-        if (mod.type === 'Modpack') 
+        // Favorites
+        if (entry.favourites) 
         {
-            meta.innerHTML = `
-                <span class="mod-card-meta-item">📦 ${mod.modCount || mod.mods?.length || 0} mods</span>
-                <span class="mod-card-meta-item">📅 ${formatDate(mod.published_at) ?? 'Unknown'}</span>
-            `;
-        } 
-        else 
-        {
-            meta.innerHTML = `
-                <span class="mod-card-meta-item">📅 ${formatDate(mod.published_at) ?? 'Unknown'}</span>
-                <span class="mod-card-meta-item">👁️ ${mod.analytics?.views || 0} views</span>
-                <span class="mod-card-meta-item">📥 ${mod.analytics?.downloads || 0} downloads</span>
-            `;
-        }
-        
-        li.appendChild(meta);
-
-        const favBtn = favouritesManager.createFavouriteButton(mod.key, mod.favourites);
-        favBtn.style.width = '100%';
-        favBtn.style.marginBottom = '1rem';
-        
-        favBtn.addEventListener('mouseenter', () => li.classList.add('force-hover'));
-        favBtn.addEventListener('mouseleave', () => li.classList.remove('force-hover'));
-        
-        li.appendChild(favBtn);
-
-        const tagBar = this.createTagBar(mod.tags || []);
-        li.appendChild(tagBar);
-
-        const linksContainer = document.createElement('div');
-        linksContainer.style.cssText = 'display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;';
-
-        const detailsLink = document.createElement('a');
-        detailsLink.href = `mod.html?key=${encodeURIComponent(mod.key)}`;
-        detailsLink.className = 'mod-card-link';
-        detailsLink.innerHTML = 'Details';
-        detailsLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s; position: relative; overflow: hidden;';
-        linksContainer.appendChild(detailsLink);
-
-        if (mod.type !== 'Modpack') 
-        {
-            const githubLink = document.createElement('a');
-            githubLink.href = `https://github.com/${owner}/${repo}`;
-            githubLink.target = '_blank';
-
-            githubLink.addEventListener('click', async () => {
-                try
-                {
-                    await fetch(`/analytics/download/${encodeURIComponent(mod.key)}`, { method: 'POST' });
-                }
-                catch (err)
-                {
-                    console.error('Failed to track download:', err);
-                }
-            });
-
-            githubLink.className = 'mod-card-link';
-            githubLink.innerHTML = 'GitHub';
-            githubLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s; position: relative; overflow: hidden;';
-            linksContainer.appendChild(githubLink);
-
-            const wikiLink = document.createElement('a');
-            wikiLink.href = `/wiki?mod=${mod.key}`;
-            wikiLink.className = 'mod-card-link';
-            wikiLink.innerHTML = 'Wiki';
-            wikiLink.style.cssText = 'flex: 1; min-width: 100px; text-align: center; padding: 0.5rem 1rem; background: rgba(102, 126, 234, 0.2); border: 1px solid rgba(102, 126, 234, 0.5); border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); transition: all 0.2s; position: relative; overflow: hidden;';
-            linksContainer.appendChild(wikiLink);
+            const favSpan = document.createElement('span');
+            favSpan.textContent = `❤️ ${entry.favourites}`;
+            meta.appendChild(favSpan);
         }
 
-        li.appendChild(linksContainer);
+        // Downloads
+        if (entry.analytics && entry.analytics.downloads) 
+        {
+            const dlSpan = document.createElement('span');
+            dlSpan.textContent = `⬇️ ${entry.analytics.downloads}`;
+            meta.appendChild(dlSpan);
+        }
+
+        // Tags
+        if (entry.tags && entry.tags.length > 0) 
+        {
+            const tagsSpan = document.createElement('span');
+            tagsSpan.textContent = `🏷️ ${entry.tags.length}`;
+            meta.appendChild(tagsSpan);
+        }
+
+        content.appendChild(meta);
+        li.appendChild(content);
+
+        // Click to view mod
+        li.style.cursor = 'pointer';
+        li.addEventListener('click', () => window.location.href = `/mod.html?key=${encodeURIComponent(entry.key)}`);
+
+        // Hover effect
+        li.addEventListener('mouseenter', () => {
+            li.style.transform = 'translateY(-4px)';
+            li.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+            li.style.boxShadow = '0 8px 20px rgba(102, 126, 234, 0.3)';
+        });
+
+        li.addEventListener('mouseleave', () => {
+            li.style.transform = 'translateY(0)';
+            li.style.borderColor = 'rgba(102, 126, 234, 0.2)';
+            li.style.boxShadow = 'none';
+        });
 
         return li;
     }
