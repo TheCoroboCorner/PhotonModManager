@@ -27,6 +27,11 @@
     <body>
         <div id="main-container">
             <div id="navbar">
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav">
                     <li>
                         <a href="/">Home</a>
@@ -169,5 +174,26 @@
         <script type="module" src="js/confetti.js"></script>
         <script type="module" src="js/pageTransitions.js"></script>
         <script type="module" src="js/modpack.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const hamburger = document.querySelector('.hamburger');
+                const nav = document.querySelector('.nav');
+
+                if (hamburger)
+                {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                    });
+                });
+                }
+            });
+        </script>
     </body>
 </html>

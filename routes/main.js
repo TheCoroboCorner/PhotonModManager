@@ -3,8 +3,26 @@ import path from 'path';
 import { config } from '../config.js';
 import { readData, writeData, readVotes, writeVotes } from '../dataService.js';
 import { backupDataJson, backupVotesJson } from '../github-backup.js';
+import { getVersionHistory } from '../versionHistoryService.js';
 
 const router = express.Router();
+
+router.get('/api/version-history/:key', async (req, res) => {
+    try
+    {
+        const { key } = req.params;
+        const forceRefresh = req.query.refresh === 'true';
+
+        const versionHistory = await getVersionHistory(key, forceRefresh);
+
+        res.json({ success: true, versionHistory });
+    }
+    catch (err)
+    {
+        console.error('Version history error:', err);
+        res.status(500).json({ success: false, error: err.message });
+    }
+});
 
 router.post('/analytics/view/:key', async (req, res) => {
     try

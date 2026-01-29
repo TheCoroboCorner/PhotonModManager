@@ -277,14 +277,41 @@ class WikiPage
                 const spriteWidth = atlas.px * 2;
                 const spriteHeight = atlas.py * 2;
 
+                const cardsUsingAtlas = this.cards.filter(c => c.atlas === card.atlas && c.pos);
+                let maxX = card.pos.x;
+                let maxY = card.pos.y;
+
+                cardsUsingAtlas.forEach(c => {
+                    if (c.pos.x > maxX)
+                        maxX = c.pos.x;
+
+                    if (c.pos.y > maxY)
+                        maxY = c.pos.y;
+                });
+
+                const gridColumns = maxX + 1;
+                const gridRows = maxY + 1;
+
+                const sheetWidth = gridColumns * spriteWidth;
+                const sheetHeight = gridRows * spriteHeight;
+
                 const offsetX = card.pos.x * spriteWidth;
                 const offsetY = card.pos.y * spriteHeight;
 
+                console.log('[Wiki] Sprite details:', {
+                    spriteSize: `${spriteWidth}x${spriteHeight}`,
+                    sheetSize: `${sheetWidth}x${sheetHeight}`,
+                    grid: `${gridColumns}x${gridRows}`,
+                    position: `${card.pos.x},${card.pos.y}`,
+                    offset: `${offsetX},${offsetY}`
+                });
+                
                 html += `
                     <div style="
                         width: ${spriteWidth}px;
                         height: ${spriteHeight}px;
                         background-image: url(${atlas.localPath});
+                        background-size: ${sheetWidth}px ${sheetHeight}px;
                         background-position: -${offsetX}px -${offsetY}px;
                         background-repeat: no-repeat;
                         border-radius: 8px;
@@ -295,15 +322,9 @@ class WikiPage
                     "></div>
                 `;
             }
-            else
-            {
-                console.warn('[Wiki] No localPath for atlas:', card.atlas);
-            }
+            else console.warn('[Wiki] No localPath for atlas:', card.atlas);
         }
-        else
-        {
-            console.warn('[Wiki] No sprite data for card:', card.key);
-        }
+        else console.warn('[Wiki] No sprite data for card:', card.key);
 
         html += `<h1 style="margin: 0; font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">${cardName}</h1>`;
         html += '</div>';

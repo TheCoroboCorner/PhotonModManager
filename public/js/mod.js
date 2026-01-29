@@ -76,13 +76,13 @@ class ModDetailPage
     {
         try
         {
-            const { repo, owner } = parseModKey(this.modKey);
-            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases`);
-
+            const response = await fetch(`/api/version-history/${encodeURIComponent(this.modKey)}`);
+        
             if (response.ok)
             {
-                this.releases = await response.json();
-                console.log(`[ModDetail] Loaded ${this.releases.length} releases`);
+                const data = await response.json();
+                this.releases = data.versionHistory || [];
+                console.log(`[ModDetail] Loaded ${this.releases.length} releases from cache`);
             }
         }
         catch (err)
@@ -108,23 +108,53 @@ class ModDetailPage
 
         this.releases.forEach((release, index) => {
             const item = document.createElement('div');
+            item.className = 'version-item';
             item.style.cssText = 'background: rgba(30, 18, 82, 0.4); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-blue);';
             
             const isLatest = index === 0;
             const badge = isLatest ? '<span style="background: linear-gradient(135deg, #4BC292 0%, #56A887 100%); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; color: white; margin-left: 0.5rem; font-weight: 700;">LATEST</span>' : '';
             
+            const releaseBody = release.body || '';
+            const needsCollapse = releaseBody.split('\n').length > 5;
+            const collapsedBody = needsCollapse ? releaseBody.split('\n').slice(0, 5).join('\n') + '...' : releaseBody;
+            
             item.innerHTML = `
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <h4 style="margin: 0; color: var(--text-white);">${release.tag_name}${badge}</h4>
-                    <span style="color: var(--text-secondary); font-size: 0.875rem;">${formatDate(release.published_at)}</span>
+                    <h4 style="margin: 0; color: var(--text-white);">${release.tag}${badge}</h4>
+                    <span style="color: var(--text-secondary); font-size: 0.875rem;">${formatDate(release.publishedAt)}</span>
                 </div>
-                ${release.name ? `<p style="margin: 0.5rem 0; color: var(--text-light); font-weight: 600;">${release.name}</p>` : ''}
-                ${release.body ? `<div style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">${this.renderMarkdown(release.body)}</div>` : ''}
-                <div style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.875rem; color: var(--text-secondary);">
-                    ${release.assets && release.assets.length > 0 ? `<span>📦 ${release.assets.length} asset${release.assets.length > 1 ? 's' : ''}</span>` : ''}
-                    ${release.prerelease ? '<span style="color: var(--accent-purple);">⚠️ Pre-release</span>' : ''}
+                ${release.name && release.name !== release.tag ? `<p style="margin: 0.5rem 0; color: var(--text-light); font-weight: 600;">${release.name}</p>` : ''}
+                ${releaseBody ? `
+                    <div class="release-body" style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div class="release-text">${this.renderMarkdown(needsCollapse ? collapsedBody : releaseBody)}</div>
+                        ${needsCollapse ? `
+                            <button class="read-more-btn" style="background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 0.875rem; margin-top: 0.5rem; padding: 0; text-decoration: underline;">
+                                Read more
+                            </button>
+                        ` : ''}
+                    </div>
+                ` : ''}
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                    <a href="${release.htmlUrl}" target="_blank" class="click-me" style="padding: 0.5rem 1rem; height: auto; font-size: 0.875rem; text-decoration: none;">
+                        View on GitHub
+                    </a>
+                    ${release.assets && release.assets.length > 0 ? `<span style="font-size: 0.875rem; color: var(--text-secondary);">📦 ${release.assets.length} asset${release.assets.length > 1 ? 's' : ''}</span>` : ''}
+                    ${release.prerelease ? '<span style="color: var(--accent-purple); font-size: 0.875rem;">⚠️ Pre-release</span>' : ''}
                 </div>
             `;
+
+            if (needsCollapse)
+            {
+                const btn = item.querySelector('.read-more-btn');
+                const textDiv = item.querySelector('.release-text');
+                let isExpanded = false;
+
+                btn.addEventListener('click', () => {
+                    isExpanded = !isExpanded;
+                    textDiv.innerHTML = this.renderMarkdown(isExpanded ? releaseBody : collapsedBody);
+                    btn.textContent = isExpanded ? 'Read less' : 'Read more';
+                });
+            }
 
             container.appendChild(item);
         });
