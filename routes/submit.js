@@ -114,7 +114,7 @@ async function getLatestCommitDate(user, repo)
 router.post('/submit', async (req, res) => {
     try
     {
-        const { repoUrl, jsonPath, tags } = req.body;
+        let { repoUrl, jsonPath, tags } = req.body;
         const tagArray = Array.isArray(tags) ? tags : (tags ? [tags] : []);
 
         // Parse the URL

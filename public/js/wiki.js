@@ -312,7 +312,10 @@ class WikiPage
                     <div style="
                         width: ${spriteWidth}px;
                         height: ${spriteHeight}px;
+                        min-height: ${spriteHeight}px;
+                        max-height: ${spriteHeight}px;
                         flex-shrink: 0;
+                        display: block;
                         background-image: url(${atlas.localPath});
                         background-size: ${sheetWidth}px ${sheetHeight}px;
                         background-position: -${offsetX}px -${offsetY}px;

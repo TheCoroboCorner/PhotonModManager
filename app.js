@@ -11,25 +11,44 @@ import analyticsRoutes from './routes/analytics.js';
 import apiRoutes from './routes/api.js';
 import imageUploadRouter from './routes/imageUpload.js';
 
+import { restoreDataOnStartup } from './dataRestoreService.js';
+
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(config.paths.public));
-app.use('/wiki-data', express.static(config.paths.wikiData, { maxAge: '1d', immutable: true }));
+async function startServer()
+{
+    try
+    {
+        app.use(express.urlencoded({ extended: true }));
+        app.use(express.json());
+        app.use(express.static(config.paths.public));
+        app.use('/wiki-data', express.static(config.paths.wikiData, { maxAge: '1d', immutable: true }));
 
-app.use(cookieMiddleware);
-app.use(securityHeadersMiddleware);
+        app.use(cookieMiddleware);
+        app.use(securityHeadersMiddleware);
 
-app.use('/', mainRoutes);
-app.use('/', submitRoutes);
-app.use('/', favouriteRoutes);
-app.use('/', wikiRoutes);
-app.use('/', modpackRoutes);
-app.use('/', analyticsRoutes);
-app.use('/', apiRoutes);
-app.use('/', imageUploadRouter)
+        console.log('[Server] Restoring data from backup...');
+        await restoreDataOnStartup();
+        console.log('[Server] Data restoration complete!');
 
-app.listen(config.port, () => console.log(`Listening on port ${config.port}`));
+        app.use('/', mainRoutes);
+        app.use('/', submitRoutes);
+        app.use('/', favouriteRoutes);
+        app.use('/', wikiRoutes);
+        app.use('/', modpackRoutes);
+        app.use('/', analyticsRoutes);
+        app.use('/', apiRoutes);
+        app.use('/', imageUploadRouter)
+
+        app.listen(config.port, () => console.log(`Listening on port ${config.port}`));
+    }
+    catch (err)
+    {
+        console.error('A critical error has occurred:', err);
+        process.exit(1);
+    }
+}
+
+startServer();
 
 export default app;
