@@ -1321,6 +1321,23 @@
       "Jokers"
     ],
     "updated_at": "2026-01-30T03:36:08Z",
-    "readme": "# JimboAnd\nJimbo&amp;! is a silly little crossover Balatro mod, where every content pack is going to be whatever media I've got on my mind\nAs of now, the only available content pack is \"Jimbo & Azuma\", which contains 10 Yotsuba/Azumanga themed Jokers. I hate doing art.\n<img width=\"934\" height=\"508\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a27aff38-c9c8-4712-a4f8-4ffa1fe42931\" />\n"
+    "readme": "# JimboAnd\nJimbo&amp;! is a silly little crossover Balatro mod, where every content pack is going to be whatever media I've got on my mind\nAs of now, the only available content pack is \"Jimbo & Azuma\", which contains 10 Yotsuba/Azumanga themed Jokers. I hate doing art.\n<img width=\"934\" height=\"508\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a27aff38-c9c8-4712-a4f8-4ffa1fe42931\" />\n",
+    "versionHistory": [
+      {
+        "tag": "0.1.0",
+        "name": "Jimbo & Azuma!",
+        "body": "The first content pack! Yotsuba/Azumanga themed.\r\n-10 Jokers ya",
+        "publishedAt": "2026-01-29T17:41:06Z",
+        "htmlUrl": "https://github.com/Evgast/JimboAnd/releases/tag/0.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-30T11:13:59.825Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-01-30T11:13:59.898Z"
+    }
   }
 }
