@@ -1,0 +1,430 @@
+{
+  "locMap": {
+    "j_jand_yotsuba": {
+      "name": "Yotsuba",
+      "text": [
+        "{C:green}+#1#{} to {C:green}probability numerators{}",
+        "for every {C:attention}4{} in scoring hand",
+        "{C:inactive}(Resets after the hand is scored){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_jumbo": {
+      "name": "Jumbo",
+      "text": [
+        "{C:attention}Shop{} contains an additional",
+        "{C:attention}Jumbo Booster Pack{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_yomi": {
+      "name": "Yomi",
+      "text": [
+        "Values of {C:attention}Food Jokers{}",
+        "can't be affected"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_tomo": {
+      "name": "Tomo",
+      "text": [
+        "Tomo will {C:mult}NOT{} be moved",
+        "Gains {C:mult}+#2#{} Mult per {C:blue}Hand{} played",
+        "and moves to the right {C:attention}Joker{} slot",
+        "Moves to the left {C:attention}Joker{} slot on {C:mult}Discard{}",
+        "{C:inactive}(Currently: {C:mult}+#1#{} {C:inactive}Mult)",
+        "{C:inactive}(Tomo starts at the {C:attention}leftmost{} {C:inactive}slot)"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_chichi": {
+      "name": "Chiyo-chichi",
+      "text": [
+        "{C:green}#3# in #4#{} chance to",
+        "immediately {C:mult}destroy{} scoring {C:hearts}#5#",
+        "and gain {C:white,X:mult}X#2#{} Mult",
+        "{C:inactive}(Currently: {C:white,X:mult}X#1#{} {C:inactive}Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_danbo": {
+      "name": "Danbo",
+      "text": [
+        "On {C:green}use{}, copy ability",
+        "of {C:attention}Joker{} to the right",
+        "Can copy only one {C:attention}Joker{} per run",
+        "Values of the {C:attention}copied{} ability",
+        "won't be affected"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_danbo_used": {
+      "name": "Danbo",
+      "text": [
+        "Currently copying:",
+        "{C:attention}#1#",
+        "Can copy only one {C:attention}Joker{} per run",
+        "Values of the {C:attention}copied{} ability",
+        "won't be affected"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_cat": {
+      "name": "Kamineko",
+      "text": [
+        "If played hand contains a {C:attention}#2#{}",
+        "{C:mult}destroys{} scoring cards of the {C:attention}Highest Rank{}",
+        "and gains their {C:chips}Chip Values{}",
+        "{C:inactive}(Currently: {C:chips}+#1#{} {C:inactive}Chips)"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_milk": {
+      "name": "Milk",
+      "text": [
+        "{C:chips}+#1#{} Chips",
+        "{C:chips}#2#{} Chips when changing slots"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_osaka": {
+      "name": "Ayumu \"Osaka\" Kasuga",
+      "text": [
+        "After playing {C:blue}#3#{} hands,",
+        "each of higher {C:attention}rank{} than previous,",
+        "Gains {C:mult}#2#{} Mult",
+        "{C:inactive}(Currently: {C:mult}#1#{C:inactive})",
+        "{C:inactive}(Hands remaining: #4#)",
+        "{C:inactive}(Previous hand: #5#)"
+      ],
+      "type": "Joker"
+    },
+    "j_jand_andagi": {
+      "name": "Sata Andagi",
+      "text": [
+        "{C:chips}+#1# Chips{}",
+        "{C:mult}Self destructs{} and {C:attention}Copies{} itself",
+        "when selecting a {C:attention}Blind{}",
+        "{C:green}#2# in #3#{} chance to {C:mult}not copy{}",
+        "{C:inactive}(Each copy has a higher chance)"
+      ],
+      "type": "Joker"
+    }
+  },
+  "atlases": {
+    "jimband": {
+      "path": "jimband.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/JimboAnd@Evgast/0.1.1/jimband.png",
+      "resolvedGitHubPath": "assets/1x/jimband.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Joker",
+      "key": "yotsuba",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'yotsuba',\r\n\trarity = 2,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 0, y = 0 },\r\n\tcost = 5,\r\n\tblueprint_compat = false,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tconfig = { extra = { numerator = 0, numerator_gain = 1 } },\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn { vars = { card.ability.extra.numerator_gain } }\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if context.mod_probability then\r\n            return {\r\n                numerator = context.numerator + card.ability.extra.numerator\r\n            }\r\n        end\r\n        if context.scoring_hand and context.before then\r\n            for k, v in pairs(context.scoring_hand) do\r\n                if v:get_id() == 4 then\r\n                    card.ability.extra.numerator = card.ability.extra.numerator + card.ability.extra.numerator_gain\r\n                end\r\n            end\r\n        end\r\n        if context.after then\r\n            G.E_MANAGER:add_event(Event({\r\n            func = function() \r\n                card.ability.extra.numerator = 0\r\n                return true \r\n            end\r\n            }))\r\n        end\r\n    end",
+      "config": {
+        "extra": {
+          "numerator": 0,
+          "numerator_gain": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "numerator": 0,
+          "numerator_gain": 1
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "jumbo",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'jumbo',\r\n\trarity = 1,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 1, y = 0 },\r\n\tcost = 4,\r\n\tblueprint_compat = true,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tconfig = { extra = { numerator = 0, numerator_gain = 1 } },\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn { vars = { card.ability.extra.numerator_gain } }\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if context.starting_shop then\r\n            local boost = SMODS.create_card{set = \"Booster\"}\r\n            local boost_to_create = {}\r\n            boost.states.visible = false\r\n            for k, v in pairs(G.P_CENTER_POOLS[\"Booster\"]) do\r\n                if v.kind == boost.config.center.kind then\r\n                    local booster_key = v.key\r\n                    local find_jumbo = string.find(booster_key, \"jumbo\")\r\n                    if find_jumbo then\r\n                        boost_to_create[#boost_to_create+1] = v.key\r\n                    end\r\n                end\r\n            end\r\n            boost:remove()\r\n            SMODS.add_booster_to_shop(pseudorandom_element(boost_to_create, \"boost\"))\r\n        end\r\n    end",
+      "config": {
+        "extra": {
+          "numerator": 0,
+          "numerator_gain": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "numerator": 0,
+          "numerator_gain": 1
+        }
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "yomi",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'yomi',\r\n\trarity = 2,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 2, y = 0 },\r\n\tcost = 4,\r\n\tblueprint_compat = false,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "tomo",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = 'tomo',\r\n\trarity = 2,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 3, y = 0 },\r\n\tcost = 4,\r\n\tblueprint_compat = true,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tconfig = { extra = { mult = 0, mult_gain = 2, tomo_slot = 1 } },\r\n\tloc_vars = function(self, info_queue, card)\r\n\t\treturn { vars = { card.ability.extra.mult, card.ability.extra.mult_gain} }\r\n\tend,\r\n    update = function(self, card, dt)\r\n        local my_pos = nil\r\n        if card.area == G.jokers then\r\n        for i = 1, #G.jokers.cards do\r\n            if G.jokers.cards[i] == card then\r\n                my_pos = i\r\n            end\r\n        end\r\n        if G.jokers.cards[card.ability.extra.tomo_slot] ~= G.jokers.cards[my_pos] then\r\n            G.jokers.cards[card.ability.extra.tomo_slot], G.jokers.cards[my_pos] = G.jokers.cards[my_pos], G.jokers.cards[card.ability.extra.tomo_slot]\r\n        end\r\n        end\r\n    end,\r\n\tcalculate = function(self, card, context)\r\n        if not context.blueprint then\r\n            card.states.drag.can = false\r\n            local my_pos = nil\r\n            for i = 1, #G.jokers.cards do\r\n                if G.jokers.cards[i] == card then\r\n                    my_pos = i\r\n                end\r\n            end\r\n            if context.before and not context.blueprint then\r\n                G.E_MANAGER:add_event(Event({\r\n                func = function() \r\n                    if G.jokers.cards[#G.jokers.cards] ~= card then\r\n                        card.ability.extra.tomo_slot = my_pos+1\r\n                    end\r\n                    return true \r\n                end\r\n                }))\r\n                SMODS.scale_card(card, {\r\n                    ref_table = card.ability.extra,\r\n                    ref_value = \"mult\",\r\n                    scalar_value = \"mult_gain\",\r\n                    scaling_message = {\r\n                        message = \"+\"..card.ability.extra.mult_gain,\r\n                        colour = G.C.MULT\r\n                    }\r\n                })\r\n                return true \r\n            end\r\n            if context.pre_discard and not context.blueprint then\r\n                if G.jokers.cards[1] ~= card then\r\n                    card.ability.extra.tomo_slot = my_pos-1\r\n                end\r\n            end\r\n        end\r\n        if context.joker_main then\r\n            return {\r\n                mult = card.ability.extra.mult\r\n            }\r\n        end\r\n    end",
+      "config": {
+        "extra": {
+          "mult": 0,
+          "mult_gain": 2,
+          "tomo_slot": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 0,
+          "mult_gain": 2,
+          "tomo_slot": 1
+        }
+      },
+      "vars": [
+        0,
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "chichi",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = 'chichi',\r\n\trarity = 3,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 4, y = 0 },\r\n\tcost = 7,\r\n\tblueprint_compat = true,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tconfig = { extra = { xmult = 1, xmult_gain = 0.25, odds = 4, suit = \"Hearts\" } },\r\n\tloc_vars = function(self, info_queue, card)\r\n        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'chichi')\r\n\t\treturn { vars = { card.ability.extra.xmult, card.ability.extra.xmult_gain, numerator, denominator, card.ability.extra.suit} }\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) and SMODS.pseudorandom_probability(card, 'chichi', 1, card.ability.extra.odds) and not context.blueprint then\r\n            SMODS.destroy_cards(context.other_card)\r\n            SMODS.scale_card(card, {\r\n\t            ref_table = card.ability.extra,\r\n                ref_value = \"xmult\",\r\n\t            scalar_value = \"xmult_gain\",\r\n                scaling_message = {\r\n\t                message = \"X\"..card.ability.extra.xmult_gain,\r\n\t                colour = G.C.MULT\r\n                }\r\n            })\r\n        end\r\n        if context.joker_main then\r\n            return {\r\n                xmult = card.ability.extra.xmult\r\n            }\r\n        end\r\n    end",
+      "config": {
+        "extra": {
+          "xmult": 1,
+          "xmult_gain": 0.25,
+          "odds": 4,
+          "suit": "Hearts"
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 1,
+          "xmult_gain": 0.25,
+          "odds": 4,
+          "suit": "Hearts"
+        }
+      },
+      "vars": [
+        1,
+        0.25,
+        null,
+        null,
+        "Hearts"
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "danbo",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = 'danbo',\r\n\trarity = 3,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 5, y = 0 },\r\n\tcost = 7,\r\n\tblueprint_compat = false,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tconfig = { extra = { to_copy = nil, } },\r\n\tloc_vars = function(self, info_queue, card)\r\n        if card.area and card.area == G.jokers then\r\n            local other_joker\r\n            for i = 1, #G.jokers.cards do\r\n                if G.jokers.cards[i] == card then other_joker = G.jokers.cards[i + 1] end\r\n            end\r\n            local compatible = other_joker and other_joker ~= card and other_joker.config.center.blueprint_compat\r\n            local main_end = {\r\n                {\r\n                    n = G.UIT.C,\r\n                    config = { align = \"bm\", minh = 0.4 },\r\n                    nodes = {\r\n                        {\r\n                            n = G.UIT.C,\r\n                            config = { ref_table = card, align = \"m\", colour = compatible and mix_colours(G.C.GREEN, G.C.JOKER_GREY, 0.8) or mix_colours(G.C.RED, G.C.JOKER_GREY, 0.8), r = 0.05, padding = 0.06 },\r\n                            nodes = {\r\n                                { n = G.UIT.T, config = { text = ' ' .. localize('k_' .. (compatible and 'compatible' or 'incompatible')) .. ' ', colour = G.C.UI.TEXT_LIGHT, scale = 0.32 * 0.8 } },\r\n                            }\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n            if not card.ability.extra.to_copy then\r\n\t\t        return { main_end = main_end }\r\n            else\r\n                return { key = \"j_jand_danbo_used\", vars = { localize{set = \"Joker\", key = G.danbo.cards[card.ability.extra.to_copy].config.center.key, type = \"name_text\" } } }   \r\n            end\r\n        end\r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if card.ability.extra.to_copy then\r\n            return SMODS.blueprint_effect(card, G.danbo.cards[card.ability.extra.to_copy], context)\r\n        end\r\n    end,\r\n    use = function (self, card)\r\n        local other_joker\r\n        for i = 1, #G.jokers.cards do\r\n            if G.jokers.cards[i] == card then other_joker = G.jokers.cards[i + 1] end\r\n        end\r\n        local copy = copy_card(other_joker)\r\n        copy.states.visible = true\r\n        copy.states.visible = false\r\n        G.danbo:emplace(copy)\r\n        card.ability.extra.to_copy = #G.danbo.cards\r\n        copy.danbo = card.ability.extra.to_copy\r\n    end,\r\n    can_use = function (self, card)\r\n        local other_joker\r\n        for i = 1, #G.jokers.cards do\r\n            if G.jokers.cards[i] == card then other_joker = G.jokers.cards[i + 1] end\r\n        end\r\n        local compatible = other_joker and other_joker ~= card and other_joker.config.center.blueprint_compat\r\n        if compatible then\r\n            return true\r\n        end\r\n    end,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cat",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "key = 'cat',\r\n\trarity = 2,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 6, y = 0 },\r\n\tcost = 5,\r\n\tblueprint_compat = true,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tconfig = { extra = { chips = 0, chips_gain = 0, highest_rank = 0, ready = false } },\r\n\tloc_vars = function(self, info_queue, card)\r\n        return { vars = { card.ability.extra.chips, localize(\"Straight\", 'poker_hands') } } \r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if not context.blueprint then\r\n            if context.before then\r\n                if next(context.poker_hands[\"Straight\"]) then\r\n                    card.ability.ready = true\r\n                else\r\n                    card.ability.ready = false\r\n                end\r\n                card.ability.highest_rank = 0\r\n            end\r\n            if card.ability.ready == true and context.other_card and context.individual and context.cardarea == G.play and context.other_card:get_id() > card.ability.highest_rank then\r\n                card.ability.highest_rank = context.other_card:get_id()\r\n            end\r\n        end\r\n        if context.joker_main and context.scoring_hand then\r\n            if not context.blueprint then\r\n                for k, v in pairs(context.scoring_hand) do\r\n                    if v:get_id() == card.ability.highest_rank then\r\n                        card.ability.extra.chips_gain = v:get_chip_bonus()\r\n                        SMODS.destroy_cards(v)\r\n                        SMODS.scale_card(card, {\r\n                            ref_table = card.ability.extra,\r\n                            ref_value = \"chips\",\r\n                            scalar_value = \"chips_gain\",\r\n                            scaling_message = {\r\n                                message = \"+\"..card.ability.extra.chips_gain,\r\n                                colour = G.C.CHIPS\r\n                            }\r\n                        })\r\n                    end\r\n                end\r\n            end\r\n        return {\r\n            chips = card.ability.extra.chips\r\n        }\r\n        end\r\n    end",
+      "config": {
+        "extra": {
+          "chips": 0,
+          "chips_gain": 0,
+          "highest_rank": 0,
+          "ready": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 0,
+          "chips_gain": 0,
+          "highest_rank": 0,
+          "ready": false
+        }
+      },
+      "vars": [
+        0,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "milk",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "key = 'milk',\r\n\trarity = 1,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 7, y = 0 },\r\n\tcost = 5,\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = true,\r\n    pools = {\r\n        [\"Food\"] = true\r\n    },\r\n\tconfig = { extra = { chips = 100, chips_loss = -10, milk_slot = nil } },\r\n\tloc_vars = function(self, info_queue, card)\r\n        return { vars = { card.ability.extra.chips, card.ability.extra.chips_loss } } \r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if context.joker_main then\r\n            return {\r\n                chips = card.ability.extra.chips\r\n            }\r\n        end\r\n        if context.jimband_joker_align and not context.blueprint then\r\n            for i = 1, (#G.jokers.cards) do\r\n                if G.jokers.cards[i] == card and i ~= card.ability.extra.milk_slot then\r\n                    card.ability.extra.milk_slot = i\r\n                    SMODS.scale_card(card, {\r\n\t                    ref_table = card.ability.extra,\r\n                        ref_value = \"chips\",\r\n\t                    scalar_value = \"chips_loss\",\r\n                        scaling_message = {\r\n\t                        message = \"\"..card.ability.extra.chips_loss,\r\n\t                        colour = G.C.CHIPS\r\n                        }\r\n                    })\r\n                end\r\n            end\r\n        end\r\n        if card.ability.extra.chips <= 0 and not context.blueprint then\r\n            card:start_dissolve()\r\n        end\r\n    end,\r\n    add_to_deck = function(self, card, from_debuff) \r\n        card.ability.extra.milk_slot = #G.jokers.cards + 1\r\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "osaka",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 8,
+        "y": 0
+      },
+      "raw": "key = 'osaka',\r\n\trarity = 2,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 8, y = 0 },\r\n\tcost = 5,\r\n\tblueprint_compat = true,\r\n\teternal_compat = true,\r\n\tperishable_compat = true,\r\n\tconfig = { extra = { mult = 0, mult_gain = 8, to_play = 3, remaining = 3, why = nil, lhp = \"None\" } },\r\n\tloc_vars = function(self, info_queue, card)\r\n        return { vars = { card.ability.extra.mult, card.ability.extra.mult_gain, card.ability.extra.to_play, card.ability.extra.remaining, card.ability.extra.lhp } } \r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if G.GAME.last_hand_played then\r\n            card.ability.extra.lhp = G.GAME.last_hand_played\r\n        end\r\n        if context.press_play and G.GAME.last_hand_played then\r\n            card.ability.extra.why = G.GAME.last_hand_played\r\n        end\r\n        if context.before and context.scoring_name and not context.blueprint then\r\n            if card.ability.extra.why then\r\n                if (G.GAME.hands[context.scoring_name].order < G.GAME.hands[card.ability.extra.why].order) or not card.ability.extra.why then\r\n                    card.ability.extra.remaining = card.ability.extra.remaining - 1\r\n                    if card.ability.extra.remaining <= 0 then\r\n                        card.ability.extra.remaining = 3\r\n                        SMODS.scale_card(card, {\r\n                            ref_table = card.ability.extra,\r\n                            ref_value = \"mult\",\r\n                            scalar_value = \"mult_gain\",\r\n                            scaling_message = {\r\n                                message = \"+\"..card.ability.extra.mult_gain,\r\n                                colour = G.C.MULT\r\n                            }\r\n                        })\r\n                    end\r\n                end\r\n                if (G.GAME.hands[context.scoring_name].order >= G.GAME.hands[card.ability.extra.why].order) and not context.blueprint then\r\n                    card.ability.extra.remaining = 2\r\n                    return {\r\n                        message = \"Ah...\"\r\n                    }\r\n                end\r\n            else\r\n                card.ability.extra.remaining = card.ability.extra.remaining - 1\r\n            end\r\n        end\r\n        if context.joker_main then\r\n            return {\r\n                mult = card.ability.extra.mult\r\n            }\r\n        end\r\n    end,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "sata",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"sata\",\r\n    path = \"sata-andagi.mp3\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "andagi",
+      "name": null,
+      "atlas": "jimband",
+      "pos": {
+        "x": 9,
+        "y": 0
+      },
+      "raw": "key = 'andagi',\r\n\trarity = 1,\r\n\tatlas = 'jimband',\r\n\tpos = { x = 9, y = 0 },\r\n\tcost = 5,\r\n\tblueprint_compat = true,\r\n\teternal_compat = false,\r\n\tperishable_compat = true,\r\n    pools = {\r\n        [\"Food\"] = true\r\n    },\r\n\tconfig = { extra = { chips = 50, odds = 5, odds_loss = -1 } },\r\n\tloc_vars = function(self, info_queue, card)\r\n        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'andagi')\r\n        return { vars = { card.ability.extra.chips, numerator, denominator } } \r\n\tend,\r\n\tcalculate = function(self, card, context)\r\n        if context.joker_main then\r\n            return {\r\n                chips = card.ability.extra.chips\r\n            }\r\n        end\r\n        if context.setting_blind and not context.blueprint then\r\n            G.E_MANAGER:add_event(Event({\r\n            trigger = \"after\", \r\n            delay = 0.1, \r\n            func = function()\r\n                card:start_dissolve()\r\n                if not SMODS.pseudorandom_probability(card, 'andagi', 1, card.ability.extra.odds) and not (G.jokers.config.card_limit <= #G.jokers.cards) then\r\n                    local again = copy_card(card)\r\n                    G.jokers:emplace(again)\r\n                    SMODS.scale_card(again, {\r\n                    ref_table = again.ability.extra,\r\n                    ref_value = \"odds\",\r\n                    scalar_value = \"odds_loss\",\r\n                    scaling_message = {\r\n                        message = \"Sata Andagi!\",\r\n                        colour = G.C.FILTER\r\n                    }\r\n                    })\r\n                end\r\n                return true \r\n            end\r\n            }))\r\n        end\r\n    end,\r\n    add_to_deck= function(self, card, from_debuff) \r\n        play_sound(\"jand_sata\")\r\n    end",
+      "config": {
+        "extra": {
+          "chips": 50,
+          "odds": 5,
+          "odds_loss": -1
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 50,
+          "odds": 5,
+          "odds_loss": -1
+        }
+      },
+      "vars": [
+        50,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "new_use",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'new_use',\r\n\torder = -30,\r\n\tfunc = function(self)\r\n\t\tif self.children.danbo_button then\r\n            if self.highlighted then\r\n                self.children.danbo_button:draw() \r\n            else\r\n                self.children.danbo_button:remove() \r\n                self.children.danbo_button = nil\r\n            end\r\n        end\r\n       if self.children.danbo_button then\r\n            if self.highlighted then\r\n                self.children.danbo_button:draw() \r\n            else\r\n                self.children.danbo_button:remove() \r\n                self.children.danbo_button = nil\r\n            end\r\n        end\r\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "jimband",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jimband\",\r\n\tpath = \"jimband.png\",\r\n\tpx = 71,\r\n\tpy = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ObjectTypes",
+      "key": "Food",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Food\",\r\n    \tdefault = \"j_ice_cream\",\r\n    \tcards = {\r\n        \tj_gros_michel = true,\r\n        \tj_egg = true,\r\n        \tj_ice_cream = true,\r\n        \tj_cavendish = true,\r\n        \tj_turtle_bean = true,\r\n        \tj_diet_cola = true,\r\n        \tj_popcorn = true,\r\n        \tj_ramen = true,\r\n        \tj_selzer = true,\r\n    },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "0.1.1"
+}
