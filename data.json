@@ -2233,5 +2233,25 @@
       "views": 2,
       "lastViewed": "2026-01-31T17:01:42.384Z"
     }
+  },
+  "Cryptlib@SpectralPack": {
+    "id": "Cryptlib",
+    "name": "Cryptlib",
+    "author": [
+      "The Cryptid discord"
+    ],
+    "description": "A library mod for all the functions that Cryptid has to offer",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "708b91",
+    "dependencies": [],
+    "conflicts": [],
+    "published_at": "2026-01-31T17:02:43.372Z",
+    "type": "Mod",
+    "tags": [
+      "Misc"
+    ],
+    "updated_at": "2026-01-31T17:02:19Z",
+    "readme": "# CryptLib\nCryptLib is a mod that provides helper functionality otherwise only accesible by depending on Cryptid\nThis includes:\n* Gameset config and disabling arbitrary content (opt-in)\n* Value Manipulation\n* Forcetrigging including Vanilla support\n* Pluralisation for card descriptions\n* Talisman independant ^mult & ^chips if Talisman isnt present\n* Function definitions for to_big, to_number and lenient_bignum incase Talisman isnt present\n* Various other utility functions\n"
   }
 }
