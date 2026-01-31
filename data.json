@@ -2045,6 +2045,189 @@
         "size": 105667,
         "isThumbnail": false
       }
-    ]
+    ],
+    "versionHistory": [
+      {
+        "tag": "v1.2b",
+        "name": "v1.2",
+        "body": "## What's Changed\r\n* bring dev up to standard, (please make prs on dev branch please) by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/83\r\n* epitachyno cost fix by @crabus72 in https://github.com/lord-ruby/Entropy/pull/88\r\n* Avoid implicit type conversion in shader by @mleaf233 in https://github.com/lord-ruby/Entropy/pull/90\r\n* fix info_queue. shader code optimization by @mleaf233 in https://github.com/lord-ruby/Entropy/pull/94\r\n* my dream journal crossmod by @soulware1 in https://github.com/lord-ruby/Entropy/pull/95\r\n* world's worst pull request award by @soulware1 in https://github.com/lord-ruby/Entropy/pull/96\r\n* 15 new Jokers\r\n* 1 New Deck\r\n* 2 New Vouchers\r\n* Many reworks and resprites\r\n\r\n## New Contributors\r\n* @mleaf233 made their first contribution in https://github.com/lord-ruby/Entropy/pull/90\r\n* @soulware1 made their first contribution in https://github.com/lord-ruby/Entropy/pull/95\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.1.0...v1.2",
+        "publishedAt": "2026-01-08T12:07:28Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.2b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0",
+        "name": "v1.1.0",
+        "body": "## What's Changed\r\n* mirror Scalae/Double Scale PR changes on Anaptyxi by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/57\r\n* Dev by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/58\r\n* Update config.lua by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/59\r\n* better checks for echo by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/60\r\n* fix some stuff by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/61\r\n* Implement Crossmod Fraud cards with Bunco by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/64\r\n* Add perma-bonuses for ascension power by @borb43 in https://github.com/lord-ruby/Entropy/pull/66\r\n* Hot Potato Crossmod  - Inverse aura cards by @LFMoth in https://github.com/lord-ruby/Entropy/pull/67\r\n* pronouns fix by @crabus72 in https://github.com/lord-ruby/Entropy/pull/69\r\n* SpectrumAPI Compat: Star Cards for Spectrum Hands (also merge bunco frauds into dev branch) by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/70\r\n* Actually Re-implement bunco crossmod frauds into dev branch by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/71\r\n* G.GAMe by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/72\r\n* update uibox shader patch by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/74\r\n* fix typo in Entropy.HigherCardRank + minor shader code fixes by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/75\r\n* Added 50 new Jokers, Many resprites, 2 New Consumables by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/77\r\n\r\n## New Contributors\r\n* @InvalidOS made their first contribution in https://github.com/lord-ruby/Entropy/pull/57\r\n* @f-raZ0R made their first contribution in https://github.com/lord-ruby/Entropy/pull/64\r\n* @borb43 made their first contribution in https://github.com/lord-ruby/Entropy/pull/66\r\n* @LFMoth made their first contribution in https://github.com/lord-ruby/Entropy/pull/67\r\n* @crabus72 made their first contribution in https://github.com/lord-ruby/Entropy/pull/69\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0...v1.1.0",
+        "publishedAt": "2025-11-10T00:58:17Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0b",
+        "name": "v1.0.0b",
+        "body": "## What's Changed\r\n* mirror Scalae/Double Scale PR changes on Anaptyxi by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/57\r\n* Fix Card Back Crash by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/58\r\n* Music for Twisted Packs\r\n\r\n## New Contributors\r\n* @InvalidOS made their first contribution in https://github.com/lord-ruby/Entropy/pull/57\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0...v1.0.0b",
+        "publishedAt": "2025-09-08T19:30:33Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0",
+        "body": "## What's Changed\r\n* Add Choco Egg sprite by @cassknows in https://github.com/lord-ruby/Entropy/pull/12\r\n* Hotfix hotfix by @wingedcatgirl in https://github.com/lord-ruby/Entropy/pull/13\r\n* fix atlas crash for destiny spectral card by @triple6lexi in https://github.com/lord-ruby/Entropy/pull/14\r\n* Fix rendering issue with Aikoyori's Shenanigans' font config by @hayaunderscore in https://github.com/lord-ruby/Entropy/pull/15\r\n* Add files via upload by @cassknows in https://github.com/lord-ruby/Entropy/pull/16\r\n* Assign Handy actions to new sell/use buttons by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/18\r\n* Fix 2x otherconsumeables atlas by @WhoNeedsAUsrName in https://github.com/lord-ruby/Entropy/pull/25\r\n* Fix 'The Saint' not preventing Gateway from nuking jokers by @AnnieTheEagle in https://github.com/lord-ruby/Entropy/pull/26\r\n* Updated TheFamily compat by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/29\r\n* fix bignum ante crash w/ talisman by @real-niacat in https://github.com/lord-ruby/Entropy/pull/32\r\n* solve the worlds biggest problem by @real-niacat in https://github.com/lord-ruby/Entropy/pull/33\r\n* fix ascpow dagger also stabbing your balatro by @real-niacat in https://github.com/lord-ruby/Entropy/pull/34\r\n* Merge Visual Changes from Dev by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/39\r\n* prevent repetitions in packs on twisted deck by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/41\r\n* Fix runes & omega display by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/42\r\n* fix menger sponge triggerin too often by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/43\r\n* endurance actually debuffs by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/44\r\n* ward actually debuffs by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/45\r\n* anaptxi fix for new smods features by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/48\r\n* back crash related fix by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/50\r\n* add curse config by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/54\r\n\r\n## New Contributors\r\n* @wingedcatgirl made their first contribution in https://github.com/lord-ruby/Entropy/pull/13\r\n* @triple6lexi made their first contribution in https://github.com/lord-ruby/Entropy/pull/14\r\n* @hayaunderscore made their first contribution in https://github.com/lord-ruby/Entropy/pull/15\r\n* @SleepyG11 made their first contribution in https://github.com/lord-ruby/Entropy/pull/18\r\n* @WhoNeedsAUsrName made their first contribution in https://github.com/lord-ruby/Entropy/pull/25\r\n* @AnnieTheEagle made their first contribution in https://github.com/lord-ruby/Entropy/pull/26\r\n* @real-niacat made their first contribution in https://github.com/lord-ruby/Entropy/pull/32\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v0.4.1...v1.0.0",
+        "publishedAt": "2025-08-26T23:56:16Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0-alpha5",
+        "name": "v1.0.0~Alpha 5",
+        "body": "## What's Changed\r\n* Updated TheFamily compat by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/29\r\n* fix bignum ante crash w/ talisman by @real-niacat in https://github.com/lord-ruby/Entropy/pull/32\r\n\r\n## New Contributors\r\n* @real-niacat made their first contribution in https://github.com/lord-ruby/Entropy/pull/32\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0-alpha4...v1.0.0-alpha5",
+        "publishedAt": "2025-07-30T16:18:58Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0-alpha4",
+        "name": "v1.0.0~Alpha 4",
+        "body": "## What's Changed\r\n* Finish Fraud Card Sprites\r\n* Start adding Runes\r\n* Add some new Jokers\r\n* Update to new SMODS apis\r\n\r\n## New Contributors\r\n* @WhoNeedsAUsrName made their first contribution in https://github.com/lord-ruby/Entropy/pull/25\r\n* @AnnieTheEagle made their first contribution in https://github.com/lord-ruby/Entropy/pull/26\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0-alpha3...v1.0.0-alpha4",
+        "publishedAt": "2025-07-14T13:05:21Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0-alpha3",
+        "name": "v1.0.0~Alpha 3",
+        "body": "Fix various things",
+        "publishedAt": "2025-06-16T16:32:43Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0-alpha2b",
+        "name": "v1.0.0-alpha-2b",
+        "body": "Fix a typo that caused a crash",
+        "publishedAt": "2025-06-11T20:24:43Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha2b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0-alpha2",
+        "name": "v1.0.01~Alpha 2",
+        "body": "## What's Changed\r\n* Add Choco Egg sprite by @cassknows in https://github.com/lord-ruby/Entropy/pull/12\r\n* Hotfix hotfix by @wingedcatgirl in https://github.com/lord-ruby/Entropy/pull/13\r\n* fix atlas crash for destiny spectral card by @triple6lexi in https://github.com/lord-ruby/Entropy/pull/14\r\n* Fix rendering issue with Aikoyori's Shenanigans' font config by @hayaunderscore in https://github.com/lord-ruby/Entropy/pull/15\r\n* Add files via upload by @cassknows in https://github.com/lord-ruby/Entropy/pull/16\r\n* Assign Handy actions to new sell/use buttons by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/18\r\n* Implement all fraud cards with some sprites missing\r\n* Add purity\r\n* Add null\r\n* Various bugfixes\r\n## New Contributors\r\n* @wingedcatgirl made their first contribution in https://github.com/lord-ruby/Entropy/pull/13\r\n* @triple6lexi made their first contribution in https://github.com/lord-ruby/Entropy/pull/14\r\n* @hayaunderscore made their first contribution in https://github.com/lord-ruby/Entropy/pull/15\r\n* @SleepyG11 made their first contribution in https://github.com/lord-ruby/Entropy/pull/18\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/V1.0.0-alpha...v1.0.0-alpha2",
+        "publishedAt": "2025-06-11T19:58:43Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "V1.0.0-alpha",
+        "name": "Entropy v1.0.0~alpha",
+        "body": "rewrite release hopefully with no bugs this time",
+        "publishedAt": "2025-05-08T23:19:56Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/V1.0.0-alpha",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.1",
+        "name": "Entropy v0.4.1",
+        "body": "Add The Joker in yellow alongside various bug fixes",
+        "publishedAt": "2025-05-04T14:50:37Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4d",
+        "name": "Entropy v0.4d",
+        "body": "",
+        "publishedAt": "2025-05-01T01:40:14Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4d",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4",
+        "name": "Entropy v0.4",
+        "body": "",
+        "publishedAt": "2025-04-30T17:12:30Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4c",
+        "name": "Entropy v0.4c",
+        "body": "Hotfix for various bugs and crashes",
+        "publishedAt": "2025-04-30T22:56:31Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4b",
+        "name": "Entropy v0.4b",
+        "body": "a small hotfix related to dekatria",
+        "publishedAt": "2025-04-30T18:45:34Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.3",
+        "name": "Entropy v0.3",
+        "body": "Reverse spectrals update",
+        "publishedAt": "2025-04-20T13:37:46Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.2",
+        "name": "Entropy v0.2",
+        "body": "reverse planets update",
+        "publishedAt": "2025-04-09T16:18:28Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.2b",
+        "name": "Entropy v0.2b",
+        "body": "fix a few crashes related to reverse planet cards",
+        "publishedAt": "2025-04-09T16:27:01Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.2b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-31T17:00:33.083Z"
   }
 }
