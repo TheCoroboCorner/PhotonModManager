@@ -313,7 +313,490 @@
     "analytics": {
       "views": 1,
       "lastViewed": "2026-01-27T10:38:32.696Z"
-    }
+    },
+    "versionHistory": [
+      {
+        "tag": "v1.3.0-PRERELEASE.3",
+        "name": "v1.3.0-PRERELEASE-3",
+        "body": "# Changes\r\n- Added better Horoscope Tag effect visibility\r\n- Clarified Golden Rings description a bit\r\n- Added Dummy Deck\r\n- Made Scarred Deck visible by default\r\n- Added JokerDisplay for Adrenaline and Apophenia (currently too lazy to do more than that)\r\n\r\n# Fixes\r\n- Fixed a bunch of Conspiracy cards showing nil values\r\n\r\n## Installation\r\nUnzip the `Maximus-dev.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2026-01-30T06:04:33Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.3.0-PRERELEASE.3",
+        "assets": [
+          {
+            "name": "Maximus-dev.zip",
+            "size": 2639648,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.3.0-PRERELEASE.3/Maximus-dev.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.0-PRERELEASE.2",
+        "name": "v1.3.0-PRERELEASE-2",
+        "body": "# Changes\r\n- Reworked Conveyor Belt\r\n  - Now excludes score given by the card\r\n  - No longer reaches \"Infinity\" values with Talisman\r\n- Gemini's hand upgrade method was updated to use the new SMODS.upgrade_poker_hands function\r\n- Under Construction now takes up 2 Joker Slots instead of decreasing slot limit by one while in hand\r\n\r\n# Fixes\r\n- Fixed Refrigerator checks causing crashes sometimes\r\n\r\n## Installation\r\nUnzip the `Maximus-dev.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2026-01-10T05:15:13Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.3.0-PRERELEASE.2",
+        "assets": [
+          {
+            "name": "Maximus-dev.zip",
+            "size": 2635276,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.3.0-PRERELEASE.2/Maximus-dev.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.0-PRERELEASE.1",
+        "name": "v1.3.0-PRERELEASE-1",
+        "body": "This is a pre-release version of Maximus 1.3.0, which contains numerous balance changes and new features, but may be in an unfinished state. Feel free to try it out!\r\n\r\n## Installation\r\nUnzip the `Maximus-dev.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-12-31T04:49:29Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.3.0-PRERELEASE.1",
+        "assets": [
+          {
+            "name": "Maximus-dev.zip",
+            "size": 2635421,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.3.0-PRERELEASE.1/Maximus-dev.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.6",
+        "name": "v1.2.6",
+        "body": "## Fixes\r\n- Fix Honorable Joker destroying itself when created by Judgement\r\n- Fix Microwave and Leftovers causing crashes due to half-assed checks\r\n- Fix Abyss destroying itself instead of a chosen card (also change method of pseudorandom usages)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-12-31T01:05:44Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.6",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660497,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.6/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.5",
+        "name": "v1.2.5",
+        "body": "## Fixes\r\n- Light Show and The Prince should no longer crash when trying to spawn while attempting to look at cards in the deck\r\n\r\n## Changes\r\n- Maximus now depends on the newest SMODS version (BETA-1221a). As such, most changes in this version are compatibility related and should have no impact on functionality\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-12-21T03:08:54Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.5",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660456,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.5/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.4c",
+        "name": "v1.2.4c",
+        "body": "## Fixes\r\n- Fixed Nuke Deck crashing\r\n- Fixed blueprint cards copying 4D Joker on the Speedrun challenge ending the run when sold\r\n- Hopefully made Little Brother a bit more clear\r\n\r\n## 1.2.4b Changes\r\n- Fixed Nuke Sleeve crashing\r\n\r\n## 1.2.4c Changes\r\n- Fixed Microwave being very broken due to old check method\r\n- Fixed Taurus and Gemini crashing on Doppelganger use when progress is at 0\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-11-21T03:35:15Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.4c",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660894,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.4c/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.3c",
+        "name": "v1.2.3c",
+        "body": "## Fixes\r\n- Fixed a number of Black Seal related issues\r\n\r\n## 1.2.3b Changes\r\n- Fixed bad pool checks for Microwave and Refrigerator\r\n\r\n## 1.2.3c Changes\r\n- New SMODS compat (removed like 3 patches)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-09-23T01:10:22Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.3c",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660715,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.3c/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.2b",
+        "name": "v1.2.2b",
+        "body": "## Additions\r\n- Localization support for Simplified Chinese (Thank you @MomoiAiriMMJ!!)\r\n\r\n## Fixes\r\n- Fixed a crash related to Hamill and JokerDisplay\r\n- Fixed Hammer and Chisel should_hide_front hook not returning, causing weird visuals\r\n- Fixed Conveyor Belt causing persistent chips-mult scoring visuals\r\n- Fixed Hype Man no triggering\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-09-02T01:58:57Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.2b",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2689253,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.2b/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.1",
+        "name": "v1.2.1",
+        "body": "## Additions\r\n- 4 new Challenges (Feast Fit for a King, Coexist, Speedrun, and Greedy Bastard)\r\n- A ton of winning/losing Quips\r\n- Maximus now properly provides OneTooManyAPI\r\n\r\n## Changes\r\n- Changed all scaling methods to use SMODS' new method. Allows for cross-mod compatibility for features like Group Chat and Soil Joker\r\n- Changed Nuclear deck from using custom code to the new SMODS Operator API. Allows for less conflicts with Nuclear Deck specifically (aka you can now use Nuke Deck with Cryptid)\r\n- Spider Joker is no longer affected by chance modifiers\r\n- Changed many challenges to use new challenge calculation methods for better reliability\r\n- Changed some Horoscope tags to trigger using global mod calculate methods for better reliability\r\n- Secret Society is no longer hardcoded and will change based on the highest and lowest ranks available\r\n- Achievements can now be unlocked on Unlock All profiles\r\n\r\n## Fixes\r\n- Fixed Bones Jr being able to spawn as eternal\r\n- Fixed a ton of Black Seal related issues\r\n- Fixed Detective not flipping cards\r\n- Fixed eggsplosion patch\r\n- Fixed Aeon not having an info card for Footprint\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-08-27T01:09:02Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.1",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2668545,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.1/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.7",
+        "name": "v1.1.7",
+        "body": "## Changes\r\n- All Maximus achievements can be acquired on Unlock All profiles\r\n- Aquarius' goal has been reduced from 10 to 6\r\n- Scorpio can no longer appear as the first Horoscope card on the Zodiac Killer challenge\r\n- PNGoker has been changed from Uncommon to Rare\r\n- Reference credits have been moved to the card description from the credits badge\r\n- Galaxy Brain's effect is handled in a much more consistent way\r\n\r\n## Fixes\r\n- Fixed emplaced Horoscope cards showing up as undiscovered\r\n- Fixed Nomai credits not appearing\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-08-05T19:30:40Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.7",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2663365,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.7/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.6",
+        "name": "v1.1.6",
+        "body": "## Changes\r\n- Sixth Finger Sleeve and Celestial Deity no longer rely on patches\r\n- Removed 3xCredits support in favor of built-in credits system based on Cryptid's\r\n- Added a few hover tooltips to some challenges\r\n- The Prince now checks for polychrome face cards in hand to be in pool\r\n- Some credits now include reference sources\r\n- Some description clarifications\r\n\r\n## Fixes\r\n- Fix Zodiac Killer pools not resetting when restarting the challenge\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-08-03T22:43:40Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.6",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2662694,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.6/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.4",
+        "name": "v1.1.4",
+        "body": "## Changes\r\n- Optimized 4D Joker's update hook\r\n- Did a cleanup pass on some older Jokers\r\n- Fortune Cookie no longer wastes rolls if the Consumables area is full\r\n\r\n## Fixes\r\n- Fixed Jackpot showing the nil values\r\n- Fixed Star Tag showing the incorrect card quantities for the Mega Horoscope Pack it provides\r\n- Fixed Slippery Slope crashing from trying to index a nil poker hand\r\n- Fixed Hypeman not using its custom trigger sound\r\n- Fixed Pessimistic Joker causing crashes due to incorrect context index\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-29T23:27:28Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.4",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2678489,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.4/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.3",
+        "name": "v1.1.3",
+        "body": "## Changes\r\n- Nirvana Deck now rounds down to the nearest whole number\r\n- Moon Landing should now be unaffected by patch conflicts\r\n- Horoscope cards now work properly with the Negative edition \r\n\r\n## Fixes\r\n- Fixed a crash caused by Mega Horoscope Pack's in_pool check\r\n- Fixed some cards showing nil values due to an error fetching probability values\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-28T01:04:10Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.3",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2678437,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.3/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2",
+        "name": "v1.1.2",
+        "body": "## Changes\r\n- Update Super handtypes to utilize more modern SMODS functions\r\n- Better internal card value consistency across card objects\r\n- Fixed a typo involving Sixth Finger\r\n- Added a sound when clicking the Maximus logo\r\n- Simplified the implementation of cards with non-standard dimensions\r\n- Better handling of banning some tag-reliant jokers while on Professional Deck\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-20T19:52:35Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.2",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2678366,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.2/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.1",
+        "name": "v1.1.1",
+        "body": "## Fixes\r\n- Black Seal no longer always affirms eternal check when present\r\n- Fixed Pessimistic joker not working due to old variable names\r\n- Added extra check to James to prevent edge case of performing calculations on the main menu\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-12T22:16:55Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.1",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2677679,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.1/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0",
+        "name": "v1.1.0",
+        "body": "## Additions\r\n- Destiny Deck\r\n- CardSleeves support for every Maximus Deck (including the new Destiny Deck)\r\n- TheFamily support\r\n- JokerDisplay support\r\n- 2 new Jokers (Boar Bank, Spider Joker)\r\n- 1 new Challenge (Despite Everything)\r\n- 1 new Achievement (Right Behind You...)\r\n- 1 new Enhancement (Footprint)\r\n- 1 new Tarot Card (Aeon)\r\n\r\n## Fixes\r\n- Pizza can no longer be Perishable\r\n- Bear now has the correct credits\r\n- Generated Horoscope Cards no longer appear as undiscovered\r\n- Improved Star Tag functionality\r\n- Fixed Maximus planet cards crashing with Cryptid\r\n- Changed Conveyor Belt timings so the values it adds do not get overwritten\r\n- Fixed Maximus jokers in the cashout list that change cashout value in unique ways appearing incorrectly\r\n- Changed Screaming Joker's check to be more robust\r\n\r\n## Changes\r\n- Abyss Angel gain nerfed from X0.5 to X0.25\r\n- Six Card planet cards no longer rely on deck to be in pool\r\n- Cheat and Rule are now mutually exclusive per run\r\n- Multiple Scale Tags will now be used every shop\r\n- Complete rewrite for Hammer and Chisel rendering\r\n- Changed all probability rolls to use new SMODS standardized functions\r\n- Pessimistic Joker now works with cards from mods using new probability standards\r\n- Black Seal now utilizes SMODS.is_eternal\r\n- Gave Coupon events an overhaul\r\n- A number of minor technical changes and improvements\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-12T01:23:03Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.0",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2677645,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.0/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.6",
+        "name": "v1.0.6",
+        "body": "## Fixes\r\n- Made The Flame and Winged Dragon of Ra much less buggy\r\n- Fixed Cancri's Exoplanet badge being the wrong color\r\n- Fixed Soyjoke scaling from jokers becoming undebuffed\r\n- Fixed multiple \"Modifiers\" atlases being defined\r\n- Fixed Gutbuster causing crashes when copied (like with Ankh)\r\n- Fixed Taurus Level Up message persisting after Doppelganger being used\r\n\r\n## Changes\r\n- Much better handling of High Dive\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-22T18:26:09Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.6",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2576100,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.6/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.5",
+        "name": "v1.0.5",
+        "body": "## Additions\r\n- Auto-update checker (Thank you Corobo!)\r\n\r\n## Fixes\r\n- Fix a few inconsistencies with The Spring\r\n- Made Horoscopes way more stable\r\n- (Hopefully) made Severed Floor implementation more reliable\r\n\r\n## Changes\r\n- Gave Blackjack and Piggy Bank formatting makeovers\r\n- Buffed Caterpillar lineage by reducing goal values\r\n- Nerfed under-21 Blackjack gain\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-17T22:40:12Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.5",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2576262,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.5/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4",
+        "name": "v1.0.4",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! This mod is not required, but is recommended!\r\n\r\n## Fixes\r\n- Fix Gutbuster edge case where it tries to destroy a nonexistant card\r\n- Fixed some Blueprint oversights\r\n- Fix Hurdle edge case where it tries to debuff a nonexistant card\r\n- Fix Spare Tire assuming failed prob passes a card\r\n- Fix Jackpot triggering prob failure with no sevens\r\n- Fix Apocalypse Achievement being broken\r\n- Fix Zombie causing a hard crash when turning its target\r\n\r\n## Changes\r\n- Removed needless loc_colours lovely patch\r\n- Changed Who's Laughing Now achievement description\r\n- Made Occam's Razor functionality much more clear\r\n- Made Zombie \"Turned\" text a localization parameter\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-14T01:45:05Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.4",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2574088,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.4/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.3",
+        "name": "v1.0.3",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! This mod is not required, but is recommended!\r\n\r\n## Fixes\r\n- Fixed incorrect Virgo reset\r\n- Fixed Secret Society effect persisting across runs\r\n- Fixed Hammer and Chisel not drawing card fronts when most editions are applied to card\r\n\r\n## Changes\r\n- Made custom global variables and contexts more identifiably unique to Maximus (sorry cross-mod compatibility friends)\r\n- Changed Coupon functionality to trigger via context\r\n- Changed dependent SMODS version to be equal to the most recent stable version\r\n- Moved Maximus color implementation off of patching to storing locally\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-13T00:08:48Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.3",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2573713,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.3/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.2",
+        "name": "v1.0.2",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! Please ensure you install this mod too!!\r\n\r\n## Fixes\r\n- Fixed Breadsticks Scales trying to add to a null value\r\n- Fixed Ra not triggering destroyed card contexts\r\n- Fixed Flame causing crashes\r\n- Fixed Abandoned Deck having Face Cards\r\n\r\n## Changes\r\n- Improved Nuclear Deck implementation\r\n- Some Horoscope Cards now award Tags for better visibility of the effect\r\n- Nerfed Gemini by lowering level upgrade by 1 (now 2 levels for each hand)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-11T18:41:11Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.2",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2573229,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.2/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1",
+        "name": "v1.0.1",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! Please ensure you install this mod too!!\r\n\r\n## Fixes\r\n- Fixed Stardust Crusaders Challenge crashing when viewing restrictions\r\n- Fixed Welder/Prospector triggering at the wrong times, potentially causing multiple triggers\r\n- Fixed a few cards crashing due to flawed Blueprint implementation\r\n- Fixed Cleaner causing crashes on sell\r\n\r\n## Changes\r\n- Changed Minimalist's code organization in an attempt to fix a crash I could not recreate\r\n- Changed some formatting for some card descriptions\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-10T15:16:30Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.1",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2568314,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.1/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0",
+        "body": "# 1.0 IS FINALLY HERE!!! \r\n## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! Please ensure you install this mod too!!\r\n\r\n## Additions\r\nDue to the sheer number of additions this update adds, I will instead list what the mod as a whole adds\r\n- 150 Jokers\r\n- 6 Decks\r\n- 15 Achievements\r\n- 12 Horoscope Cards\r\n- 3 Spectral Cards\r\n- 11 Planet Cards\r\n- 10 Boss Blinds\r\n- 15 Challenges\r\n- 8 Vouchers\r\n- AND MORE!!!\r\n\r\n## Fixes\r\n- Space Race caused crashes\r\n- Green Joker does not scale\r\n- Ophiucus does not have buttons when appearing in Spectral Packs\r\n\r\n## Changes\r\nMany Maximus Jokers have been tweaked during this time to help with balance, be they values or rarity. There are too many to list here, so feel free to find out for yourself\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-09T18:54:58Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2568277,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.0/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.1-beta",
+        "name": "v0.6.1-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.1.0 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Fixes\r\n- Fixed glass cards always breaking\r\n- A few minor refactors\r\n- Fixed Zombie/Bootleg continued run crash (Finally!!!!)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-03-28T00:14:11Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.6.1-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1945786,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.6.1-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.0-beta",
+        "name": "v0.6.0-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.1.0 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n- Added new Jokers: PNGoker, King's Rook, Slifer the Sky Dragon, Hippie, Cheat Day, Employee, Letter of Recommendation, and Slippery Slope\r\n- Added new Spectrals: Doppelganger and Ophiucus\r\n- Added new Vouchers: Multitask and Workaholic\r\n- Added Horoscope toggle config option\r\n\r\n## Changes\r\n- Updated art to fit with vanilla standards\r\n\r\n## Fixes\r\n- Fixed DMIID infinitely triggering\r\n- Fixed custom handtypes displaying improperly with Impractical Joker\r\n- Fixed Hypeman triggering on pack and shop cards\r\n- Fixed crashes caused by missing dependencies\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-03-26T05:26:13Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.6.0-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1946299,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.6.0-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.0-beta",
+        "name": "v0.5.0-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.0.2 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n- Added High Dive Joker\r\n- Added proper config menu\r\n- Added Experimental Features option in config. This enables features that will be fully implemented later but are not quite finished (mostly from a card art perspective)\r\n- Added All's Fair in Love and War challenge\r\n\r\n## Changes\r\n- Buffed and reworked a few challenges \r\n- Change Matador to only work during boss blinds (why was this not a thing?)\r\n- Simplified stop sign implementation for vanilla jokers\r\n- Reworked Coronation (At long last!!!)\r\n\r\n## Fixes\r\n- Fixed Streaker giving values of the opposite type\r\n- Fixed Pessimistic Joker causing crashes on missed Lucky Cards\r\n- Fixed Salt Circle causing crashes\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-03-06T01:56:02Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.5.0-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1864274,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.5.0-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.4-beta",
+        "name": "v0.4.4-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.0.2 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Changes\r\n- Added progress trackers to some Horoscope cards\r\n- Changed Food Joker definition to have cross-mod compatibility (Thank you sup3p!)\r\n\r\n## Fixes\r\n- Fixed Fortune Cookie prob not dropping below 9\r\n- Fixed Sagittarius showing fail text for every discarded card\r\n- Fixed Old Man Jimbo description\r\n- Fixed incorrect Combo Breaker mult\r\n- Fixed Clown Car crash\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-23T05:55:19Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.4-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1811137,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.4-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.3-beta",
+        "name": "v0.4.3-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.0.2 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Changes\r\n- Restructured and refortmatted codebase for better organization\r\n- Talisman compatibility (Talisman is now a dependency due to this)\r\n\r\n## Fixes\r\n- Thought Experiment no longer crashes\r\n- Fortune Cookie no longer crashes\r\n- Leftovers can no longer spawn as eternal\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-21T23:15:58Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.3-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1811592,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.3-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.2-beta",
+        "name": "v0.4.2-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 FEATURES!!! PLEASE UPDATE LOVELY BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n### Challenges\r\n- Down the Drain\r\n- Thought Experiment\r\n\r\n## Changes\r\n- Banned Capricorn and Aquarius in Pay to Win and Let's Go Gambling\r\n- Also banned Pisces in Pay to Win\r\n- Reworked Scorpio and Sagittarius\r\n- Slightly retuned Taurus\r\n- Changed Nuclear Deck to reduce Joker Slots to 1\r\n- Made Sixth Finger deck description a bit more clear\r\n- So much internal polishing\r\n\r\n## Fixes\r\n- Fixed Yorick scaling function\r\n- Fixed crash from Glass Cannon and Horoscope interaction\r\n- Fixed some 1x Sprite Sheets\r\n- Fixed Fortune Cookie crash due to wrong variable usage\r\n- Fixed crash caused by created new profile\r\n- Fixed Leftovers eternal compat\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-19T07:55:49Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.2-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1725321,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.2-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.1-beta",
+        "name": "v0.4.1-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 FEATURES!!! PLEASE UPDATE LOVELY BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n### Challenges\r\n- Pay to Win\r\n- Zodiac Killer\r\n\r\n## Changes\r\n- 6 Card Hand Types now rely on highlight limit instead of deck\r\n- Upped Grinder minimum ante from 1 to 3\r\n\r\n## Fixes\r\n- Fixed Egg scaling function causing crashes\r\n- Fixed Taurus not dissolving on completion\r\n- Fixed Horoscope CardArea not enforcing its limit\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-17T05:28:41Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.1-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1734275,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.1-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-31T16:52:11.775Z"
   },
   "grab-bag@thefaketh30ne": {
     "id": "GrabBag",
