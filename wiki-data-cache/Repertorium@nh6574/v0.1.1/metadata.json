@@ -1,0 +1,880 @@
+{
+  "locMap": {
+    "Repertorium": {
+      "name": "N's Repertorium",
+      "text": [
+        "mod where I put what I can't in {C:joy_mod}JoyousSpring"
+      ],
+      "type": "Mod"
+    },
+    "j_repertorium_erika": {
+      "name": "Erika Saionji",
+      "text": [
+        "Scored {V:1}#1#{} in played hand",
+        "give {C:mult}+#2#{} Mult",
+        "{C:inactive}(Suit changes each round){}",
+        "If another Joker makes",
+        "a played card give score,",
+        "change this Joker's Mult by",
+        "{C:mult}+#3#{} if it's a {V:1}#4#{}",
+        "{C:mult}-#3#{} otherwise {C:inactive}(min. +1)"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_joe": {
+      "name": "For the Sake of Tomorrow #4#",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "{C:mult}-#2#{} per hand played",
+        "If Mult is {C:mult}0{},",
+        "gives {X:mult,C:white}X#3#{} Mult and resets"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_tengoku": {
+      "name": "",
+      "text": [
+        "Applies one of these effects randomly for each played card,",
+        "alternating between {C:blue}Angelic{} and {C:red}Devilish{}",
+        "{C:inactive}(Currently {V:1}#8#{C:inactive})",
+        "{C:blue}Angelic",
+        "Counts for scoring and gives {C:chips}+#4#{} Chips {C:inactive,s:0.85}(#1#% chance)",
+        "{C:attention}Enhances{} the card into a random enhancement {C:inactive,s:0.85}(#2#% chance)",
+        "Copies the card and adds it to played hand",
+        "but doesn't apply an effect to it {C:inactive,s:0.85}(#3#% chance)",
+        "{C:red}Devilish",
+        "Doesn't count for scoring but gives {C:mult}+#5#{} Mult {C:inactive,s:0.85}(#1#% chance)",
+        "Destroys card and gives {X:mult,C:white}X#6#{} Mult {C:inactive,s:0.85}(#2#% chance)",
+        "Removes any {C:attention}modifications{} on the card and, if it did,",
+        "the played card permanently gains {X:mult,C:white}X#7#{} Mult {C:inactive,s:0.85}(#3#% chance)"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_tengoku_alt": {
+      "name": "",
+      "text": [
+        "Applies one of these effects randomly for each played card,",
+        "alternating between {C:blue}Angelic{} and {C:red}Devilish{}",
+        "{C:inactive}(Currently {V:1}#8#{C:inactive})",
+        "{C:blue}Angelic",
+        "Puts {C:attention}#4#{} {C:blue}Angelic{} Counters on the card {C:inactive,s:0.85}(#1#% chance)",
+        "{C:attention}Enhances{} the card into a random enhancement {C:inactive,s:0.85}(#2#% chance)",
+        "Copies the card and adds it to played hand",
+        "but doesn't apply an effect to it {C:inactive,s:0.85}(#3#% chance)",
+        "{C:red}Devilish",
+        "Puts {C:attention}#5#{} {C:red}Devilish{} Counters on the card {C:inactive,s:0.85}(#1#% chance)",
+        "Destroys card and gives {X:mult,C:white}X#6#{} Mult {C:inactive,s:0.85}(#2#% chance)",
+        "Removes any {C:attention}modifications{} on the card and, if it did,",
+        "the played card permanently gains {X:mult,C:white}X#7#{} Mult {C:inactive,s:0.85}(#3#% chance)"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_dirtypair": {
+      "name": "Lovely Angels",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult for each {C:attention}Pair{}",
+        "contained in scoring hand",
+        "{C:green}#2# in #3#{} chance to destroy",
+        "each contained {C:attention}Pair{}"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_keion": {
+      "name": "",
+      "text": [
+        "Puts {C:attention}#1#{} {C:blue}Angelic{} Counters",
+        "on the first played card of each suit",
+        "scored this round"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_keion_alt": {
+      "name": "",
+      "text": [
+        "Puts {C:attention}#1#{} {C:blue}Angelic{} Counters",
+        "on the first card of each suit",
+        "played this round when scored",
+        "Gains {X:chips,C:white}X#2#{} Chips",
+        "when the effect is applied to the",
+        "{C:attention}5{}th suit of the round",
+        "{C:inactive}(Currently {X:chips,C:white}X#3#{}{C:inactive} Chips)"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_keion_locked": {
+      "name": "",
+      "text": [
+        "Available after installing",
+        "{C:attention}Balatro Goes Kino{}"
+      ],
+      "type": "Joker"
+    },
+    "j_repertorium_amanojaku": {
+      "name": "",
+      "text": [
+        "{C:attention}Blinds{} become {C:red}impossible{} to beat",
+        "When {C:attention}Blind{} is selected,",
+        "gains a random {C:attention}cheat item{}",
+        "{C:inactive,s:0.9}(Resets when {C:attention,s:0.9}Boss Blind{C:inactive,s:0.9} is defeated){}"
+      ],
+      "type": "Joker"
+    },
+    "counter_repertorium_angelic": {
+      "name": "Angelic Counter",
+      "text": [
+        "Gives {C:chips}+50{} Chips",
+        "and counts for scoring",
+        "{C:inactive}(Caps at 5){}"
+      ],
+      "type": "Counter"
+    },
+    "counter_repertorium_devilish": {
+      "name": "Devilish Counter",
+      "text": [
+        "Gives {C:mult}+5{} Mult",
+        "but doesn't count for scoring",
+        "{C:inactive}(Caps at 5){}"
+      ],
+      "type": "Counter"
+    },
+    "repertorium_cheat_item": {
+      "name": "Cheat Items",
+      "text": [
+        "Fulfill any of the conditions listed",
+        "in any item to win the Blind",
+        "Each Joker can only hold one of each kind"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_orb": {
+      "name": "Bloodthirsty Yin-Yang Orb",
+      "text": [
+        "Get below {C:attention}#1#{} score to win",
+        "after using all hands and",
+        "playing only {C:attention}#2#",
+        "{s:0.5} ",
+        "{C:green}#3# in #4#{} chance to obtain",
+        "this item when skipping a {C:attention}Blind{}"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_camera": {
+      "name": "Tengu's Toy Camera",
+      "text": [
+        "Play a hand containing specific cards to win",
+        "{s:0.85,C:attention}#2#",
+        "{s:0.85,C:attention}#3#",
+        "{s:0.85,C:attention}#4#",
+        "{s:0.85,C:attention}#5#",
+        "{s:0.85,C:attention}#6#",
+        "{s:0.5} ",
+        "{C:red}+#1#{} Discard"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_umbrella": {
+      "name": "Gap Folding Umbrella",
+      "text": [
+        "Play hands containing {C:attention}Straight Flushes{}",
+        "with every rank in your deck to win",
+        "{s:0.5} ",
+        "All {C:attention}Flushes{} and {C:attention}Straights{}",
+        "can be made with 4 cards",
+        "and allows {C:attention}Straights{} to be made",
+        "with gaps of 1 rank and wrap around"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_mallet": {
+      "name": "A Miracle Mallet Replica",
+      "text": [
+        "Get within {C:attention}#1#%{} of {C:attention}#2#{} to win",
+        "{s:0.5} ",
+        "{C:money}+$#3#{} when a Joker scores Chips or Mult"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_jizo": {
+      "name": "Substitute Jizo",
+      "text": [
+        "Prevents Death.",
+        "{C:inactive}(One time use) (#1#/1)",
+        " ",
+        "Can't be obtained unless",
+        "the Joker holds an item"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_doll": {
+      "name": "Cursed Decoy Doll",
+      "text": [
+        "Play {C:attention}#3#{} cards of rank {C:attention}#4#{}",
+        "and {C:attention}#1#{} {C:attention}#2#{} to win",
+        "{C:inactive}(#6#/#3# rank, #5#/#1# suit){}",
+        "{s:0.5} ",
+        "{C:attention}+#7#{} hand selection limit"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_bomb": {
+      "name": "Four-Foot Magic Bomb",
+      "text": [
+        "Balances Chips and Mult",
+        "Beat {C:attention}#1#{} score to win",
+        "by playing only {C:attention}#2#",
+        "{s:0.5} ",
+        "Can't be obtained unless",
+        "the Joker holds an item"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_lantern": {
+      "name": "Ghastly Send-Off Lantern",
+      "text": [
+        "Play a {V:1}#1#{}, a {V:2}#2#{}",
+        "and a {V:3}#3#{} to win",
+        "{s:0.5} ",
+        "{C:attention}+#4#{} hand size"
+      ],
+      "type": "Other"
+    },
+    "repertorium_cheat_fabric": {
+      "name": "Nimble Fabric",
+      "text": [
+        "Poker Hand conditions are swapped randomly",
+        "{C:inactive}(Contained hands behave normally)",
+        "Play 3 {C:attention}#1#{} to win {C:inactive}(#3# left){}",
+        "{s:0.5} ",
+        "{C:blue}+#2#{} Hand"
+      ],
+      "type": "Other"
+    },
+    "k_repertorium_discord": {
+      "name": "\"(JoyousSpring's) Discord\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_github": {
+      "name": "\"Github\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_cross": {
+      "name": "\"Cross Counter!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_angelic": {
+      "name": "\"Angelic\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_devilish": {
+      "name": "\"Devilish\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_dead": {
+      "name": "\"Dead!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_alive": {
+      "name": "\"Alive!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_death": {
+      "name": "\"Death!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_birth": {
+      "name": "\"Birth!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_hell": {
+      "name": "\"Hell!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_heaven": {
+      "name": "\"Heaven!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_oops": {
+      "name": "\"Oops!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_impossible": {
+      "name": "\"Impossible\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_any": {
+      "name": "\"Any\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_get": {
+      "name": "\"Get!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_jizo_saved": {
+      "name": "\"Substituted by the Jizo\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_orb_win": {
+      "name": "\"Evaded Blind with Bloodthirsty Yin-Yang Orb\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_camera_win": {
+      "name": "\"Captured Blind with Tengu's Toy Camera\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_umbrella_win": {
+      "name": "\"Breached the gap with the Gap Folding Umbrella\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_mallet_win": {
+      "name": "\"Reduced the Blind with the Miracle Mallet replica\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_doll_win": {
+      "name": "\"Confused the Blind using the Cursed Decoy Doll\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_bomb_win": {
+      "name": "\"Demolished the Blind using the Four-Foot Magic Bomb\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_lantern_win": {
+      "name": "\"Passed through the Blind with the Ghastly Send-Off Lantern\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_fabric_win": {
+      "name": "\"Hid from the Blind using the Nimble Fabric\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_repertorium_none_win": {
+      "name": "\"Refused to lose to the Blind\"",
+      "text": [],
+      "type": "dictionary"
+    }
+  },
+  "atlases": {
+    "001erika": {
+      "path": "001erika.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/001erika.png",
+      "resolvedGitHubPath": "assets/1x/001erika.png"
+    },
+    "001erika_soul": {
+      "path": "001erika_soul.png",
+      "px": 111,
+      "py": 135,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/001erika_soul.png",
+      "resolvedGitHubPath": "assets/1x/001erika_soul.png"
+    },
+    "002joe": {
+      "path": "002joe.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/002joe.png",
+      "resolvedGitHubPath": "assets/1x/002joe.png"
+    },
+    "003tengoku": {
+      "path": "003tengoku.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/003tengoku.png",
+      "resolvedGitHubPath": "assets/1x/003tengoku.png"
+    },
+    "004dirtypair": {
+      "path": "004dirtypair.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/004dirtypair.png",
+      "resolvedGitHubPath": "assets/1x/004dirtypair.png"
+    },
+    "005keion": {
+      "path": "005keion.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/005keion.png",
+      "resolvedGitHubPath": "assets/1x/005keion.png"
+    },
+    "006amanojaku": {
+      "path": "006amanojaku.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/006amanojaku.png",
+      "resolvedGitHubPath": "assets/1x/006amanojaku.png"
+    },
+    "006amanojaku_cheats": {
+      "path": "006cheats.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/006cheats.png",
+      "resolvedGitHubPath": "assets/1x/006cheats.png"
+    },
+    "counters": {
+      "path": "counters.png",
+      "px": 73,
+      "py": 97,
+      "localPath": "/wiki-data/Repertorium@nh6574/v0.1.1/counters.png",
+      "resolvedGitHubPath": "assets/1x/counters.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "001erika",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"001erika\",\n    path = \"001erika.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "001erika_soul",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"001erika_soul\",\n    path = \"001erika_soul.png\",\n    px = 111,\n    py = 135",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_hoehoe",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_hoehoe\",\n    path = \"hoehoe.ogg\",\n    sync = false,\n    pitch = 1,\n    select_music_track = function()\n        return G.STAGE == G.STAGES.RUN and G.GAME.repertorium_hoehoe and math.huge or false\n    end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "erika",
+      "name": null,
+      "atlas": "001erika",
+      "pos": null,
+      "raw": "key = \"erika\",\n    atlas = \"001erika\",\n    discovered = true,\n    blueprint_compat = true,\n    rarity = 2,\n    cost = 6,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { localize(card.ability.extra.suit, \"suits_plural\"), card.ability.extra.mult, card.ability.extra.mult_mod, localize(card.ability.extra.suit, \"suits_singular\"), colours = { G.C.SUITS[card.ability.extra.suit] } } }\n    end,\n    config = {\n        extra = {\n            mult = 1,\n            mult_mod = 1,\n            suit = 'Diamonds'\n        }\n    },\n    calculate = function(self, card, context)\n        if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) then\n            return {\n                mult = card.ability.extra.mult\n            }\n        end\n        if not context.blueprint then\n            if context.post_trigger and context.other_card ~= card and context.other_card.ability.set == \"Joker\" and\n                context.other_context.individual and context.other_ret.jokers then\n                for _, key in ipairs(calc_keys) do\n                    local is_hyper = key:sub(1, 1):lower() == \"e\" or key:sub(1, 2):lower() == \"hy\"\n                    local is_x = key:sub(1, 1):lower() == \"x\"\n                    if context.other_ret.jokers[key] and (is_hyper or\n                            to_big(context.other_ret.jokers[key]) > to_big(is_x and 1 or 0)) then\n                        if context.other_context.other_card:is_suit(card.ability.extra.suit) then\n                            card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod\n                            return {\n                                message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_mod } },\n                                colour = G.C.MULT,\n                                message_card = card\n                            }\n                        else\n                            local prev_mult = card.ability.extra.mult\n                            card.ability.extra.mult = math.max(1, card.ability.extra.mult - card.ability.extra.mult_mod)\n                            if prev_mult > card.ability.extra.mult then\n                                return {\n                                    message = localize { type = 'variable', key = 'a_mult_minus', vars = { card.ability.extra.mult_mod } },\n                                    colour = G.C.MULT,\n                                    message_card = card\n                                }\n                            end\n                        end\n                    end\n                end\n            end\n            if context.end_of_round and context.game_over == false and context.main_eval then\n                card.ability.extra.suit = 'Diamonds'\n                local valid_cards = {}\n                for _, playing_card in ipairs(G.playing_cards) do\n                    if not SMODS.has_no_suit(playing_card) then\n                        valid_cards[#valid_cards + 1] = playing_card\n                    end\n                end\n                local pcard = pseudorandom_element(valid_cards,\n                    'j_repertorium_erika' .. G.GAME.round_resets.ante)\n                if pcard then\n                    card.ability.extra.suit = pcard.base.suit\n                end\n            end\n        end\n    end,\n    set_ability = function(self, card, initial, delay_sprites)\n        card.ability.extra.suit = 'Diamonds'\n        if G.playing_cards then\n            local valid_cards = {}\n            for _, playing_card in ipairs(G.playing_cards) do\n                if not SMODS.has_no_suit(playing_card) then\n                    valid_cards[#valid_cards + 1] = playing_card\n                end\n            end\n            local pcard = pseudorandom_element(valid_cards,\n                'j_repertorium_erika' .. G.GAME.round_resets.ante)\n            if pcard then\n                card.ability.extra.suit = pcard.base.suit\n            end\n        end\n    end,\n    joker_display_def = function(JokerDisplay)\n        ---@type JDJokerDefinition\n        return {\n            text = {\n                { text = \"+\", },\n                { ref_table = \"card.ability.extra\", ref_value = \"mult\", retrigger_type = \"mult\" },\n            },\n            text_config = { colour = G.C.MULT },\n            reminder_text = {\n                { text = \"(\" },\n                { ref_table = \"card.joker_display_values\", ref_value = \"suit\", colour = G.C.FILTER },\n                { text = \")\" },\n            },\n            calc_function = function(card)\n                local count = 0\n                local text, _, scoring_hand = JokerDisplay.evaluate_hand()\n                if text ~= 'Unknown' then\n                    for _, scoring_card in pairs(scoring_hand) do\n                        if scoring_card:is_suit(card.ability.extra.suit) then\n                            count = count +\n                                JokerDisplay.calculate_card_triggers(scoring_card, scoring_hand)\n                        end\n                    end\n                end\n                card.joker_display_values.mult = card.ability.extra.mult * count\n                card.joker_display_values.suit = localize(card.ability.extra.suit, 'suits_plural')\n            end,\n            style_function = function(card, text, reminder_text, extra)\n                if reminder_text and reminder_text.children[2] then\n                    reminder_text.children[2].config.colour = lighten(G.C.SUITS[card.ability.extra.suit], 0.35)\n                end\n                return false\n            end\n        }\n    end",
+      "config": {
+        "extra": {
+          "mult": 1,
+          "mult_mod": 1,
+          "suit": "Diamonds"
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 1,
+          "mult_mod": 1,
+          "suit": "Diamonds"
+        }
+      },
+      "vars": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "repertorium_erika",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'repertorium_erika',\n    order = 50,\n    func = function(card)\n        if card.config.center.key == \"j_repertorium_erika\" then\n            if not G.repertorium_erika_light then\n                G.repertorium_erika_light = Sprite(0, 0, G.CARD_W, G.CARD_H,\n                    G.ASSET_ATLAS[\"repertorium_001erika_soul\"], { x = 2, y = 0 })\n            end\n            if not G.repertorium_erika_soul then\n                G.repertorium_erika_soul = Sprite(0, 0, G.CARD_W, G.CARD_H,\n                    G.ASSET_ATLAS[\"repertorium_001erika_soul\"], { x = 0, y = 0 })\n            end\n\n            if not G.GAME.repertorium_hoehoe then\n                G.repertorium_erika_soul.current_frame = 1\n                G.repertorium_erika_soul.current_pattern = 1\n                G.repertorium_erika_soul.next_time = 0\n                G.repertorium_erika_soul.total_frames = 0\n                G.repertorium_erika_soul.frame_tick = 0\n                G.repertorium_erika_soul.next_frame = 0\n                card.children.center:set_sprite_pos(erika_bg.regular)\n                G.repertorium_erika_soul:set_sprite_pos({ x = math.floor(G.TIMERS.REAL * 7) % 2, y = 0 })\n                G.repertorium_erika_soul:set_sprite_pos({ x = math.floor(G.TIMERS.REAL * 7) % 2, y = 0 })\n            else\n                if not G.repertorium_erika_soul.current_frame or not G.repertorium_erika_soul.next_time then\n                    G.repertorium_erika_soul.current_frame = 1\n                    G.repertorium_erika_soul.current_pattern = 1\n                    G.repertorium_erika_soul.next_time = 0\n                    G.repertorium_erika_soul.total_frames = 0\n                    G.repertorium_erika_soul.current_bg = \"empty\"\n                    G.repertorium_erika_soul.frame_tick = 0\n                    G.repertorium_erika_soul.next_frame = G.TIMERS.REAL\n                end\n                if not G.repertorium_lyrics_box then\n                    G.repertorium_erika_lyrics_eng = \"\"\n                    G.repertorium_erika_lyrics_jp = \"\"\n                    G.repertorium_lyrics_box = UIBox {\n                        definition = {\n                            n = G.UIT.ROOT,\n                            config = { align = 'cm', colour = HEX(\"000000\"), minw = 8, minh = 1, padding = 0.1 },\n                            nodes = {\n                                {\n                                    n = G.UIT.C,\n                                    config = { align = \"tl\" },\n                                    nodes = {\n                                        {\n                                            n = G.UIT.R,\n                                            config = { align = \"tl\" },\n                                            nodes = {\n                                                {\n                                                    n = G.UIT.O,\n                                                    config = {\n                                                        object = DynaText {\n                                                            string = { { ref_table = G, ref_value = \"repertorium_erika_lyrics_eng\" } },\n                                                            scale = 0.4,\n                                                            colours = { HEX(\"FFFFFF\") },\n                                                        },\n                                                    }\n                                                },\n                                            }\n                                        },\n                                        {\n                                            n = G.UIT.R,\n                                            config = { align = \"tl\" },\n                                            nodes = {\n                                                {\n                                                    n = G.UIT.B,\n                                                    config = { h = 0.5, w = 3 }\n                                                },\n                                            }\n                                        },\n                                    },\n                                },\n                                {\n                                    n = G.UIT.C,\n                                    config = { align = \"br\" },\n                                    nodes = {\n                                        {\n                                            n = G.UIT.R,\n                                            config = { align = \"br\" },\n                                            nodes = {\n                                                {\n                                                    n = G.UIT.B,\n                                                    config = { h = 0.5, w = 3 }\n                                                },\n                                            }\n                                        },\n                                        {\n                                            n = G.UIT.R,\n                                            config = { align = \"br\" },\n                                            nodes = {\n                                                {\n                                                    n = G.UIT.O,\n                                                    config = {\n                                                        object = DynaText {\n                                                            string = { { ref_table = G, ref_value = \"repertorium_erika_lyrics_jp\" } },\n                                                            scale = 0.4,\n                                                            colours = { HEX(\"FFFFFF\") },\n                                                            font = G.FONTS[5]\n                                                        },\n                                                    }\n                                                },\n                                            }\n                                        },\n                                    },\n                                },\n                            }\n                        },\n                        config = { align = 'cmi', offset = { x = 0, y = 2 }, major = G.jokers, bond = 'Weak', instance_type = \"CARD\" }\n                    }\n                end\n                play_animation(G.repertorium_erika_soul)\n                if not G.repertorium_erika_soul.hide_light and G.repertorium_erika_soul.current_bg == \"empty\" then\n                    G.repertorium_erika_light.role.draw_major = card\n                    G.repertorium_erika_light:draw_shader('dissolve', nil, nil, nil,\n                        card.children.center, 0, 0, -0.6, -0.3)\n                end\n            end\n\n            G.repertorium_erika_soul.role.draw_major = card\n            G.repertorium_erika_soul:draw_shader('dissolve', nil, nil, nil, card.children.center, 0, 0, -0.6, -0.3)\n        end\n    end,\n    conditions = { vortex = false, facing = 'front' },",
+      "config": {
+        "x": 2,
+        "y": 0
+      },
+      "ability": {
+        "x": 2,
+        "y": 0
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "JimboQuip",
+      "key": "erika_win",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"erika_win\",\n    type = 'win',\n    filter = function(self, type)\n        if next(SMODS.find_card('j_repertorium_erika')) then\n            return true, { weight = 10 }\n        end\n    end,\n    extra = {\n        center = \"j_repertorium_erika\"\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "002joe",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"002joe\",\n    path = \"002joe.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "joe",
+      "name": null,
+      "atlas": "002joe",
+      "pos": null,
+      "raw": "key = \"joe\",\n    atlas = \"002joe\",\n    discovered = true,\n    blueprint_compat = true,\n    rarity = 1,\n    cost = 4,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.mult, card.ability.extra.mult_mod, card.ability.extra.xmult, \"#3\" } }\n    end,\n    config = {\n        extra = {\n            mult = 20,\n            mult_mod = 4,\n            xmult = 4\n        }\n    },\n    calculate = function(self, card, context)\n        if context.joker_main then\n            if card.ability.extra.mult <= 0 then\n                return {\n                    xmult = card.ability.extra.xmult,\n                    message = localize(\"k_repertorium_cross\"),\n                    colour = G.C.RED\n                }\n            end\n            return {\n                mult = card.ability.extra.mult\n            }\n        end\n        if context.after and not context.blueprint then\n            if card.ability.extra.mult <= 0 then\n                card.ability.extra.mult = 20\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({ x = 0, y = 0 })\n                        return true\n                    end\n                }))\n                return {\n                    message = localize('k_reset'),\n                    colour = G.C.RED\n                }\n            end\n            card.ability.extra.mult = card.ability.extra.mult - card.ability.extra.mult_mod\n            if card.ability.extra.mult <= 0 then\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        card.children.center:set_sprite_pos({ x = 1, y = 0 })\n                        return true\n                    end\n                }))\n            end\n            return {\n                message = localize { type = 'variable', key = 'a_mult_minus', vars = { card.ability.extra.mult_mod } },\n                colour = G.C.RED\n            }\n        end\n    end,\n    set_ability = function(self, card, initial, delay_sprites)\n        if card.ability.extra.mult == 0 then\n            card.children.center:set_sprite_pos({ x = 1, y = 0 })\n        end\n    end,\n    joker_display_def = function(JokerDisplay)\n        ---@type JDJokerDefinition\n        return {\n            text = {\n                {\n                    border_nodes = {\n                        { ref_table = \"card.joker_display_values\", ref_value = \"x_symbol\" },\n                        { ref_table = \"card.joker_display_values\", ref_value = \"x_mult\",  retrigger_type = \"exp\" },\n                    }\n                },\n                { ref_table = \"card.joker_display_values\", ref_value = \"plus_symbol\", colour = G.C.MULT },\n                { ref_table = \"card.joker_display_values\", ref_value = \"mult\",        retrigger_type = \"mult\", colour = G.C.MULT }\n            },\n            calc_function = function(card)\n                local in_play = not not next(G.play.cards)\n                card.joker_display_values.x_symbol = in_play and card.joker_display_values.x_symbol or\n                    (card.ability.extra.mult <= 0 and 'X' or '')\n                card.joker_display_values.x_mult = in_play and card.joker_display_values.x_mult or\n                    (card.ability.extra.mult <= 0 and card.ability.extra.xmult or '')\n                card.joker_display_values.plus_symbol = in_play and card.joker_display_values.plus_symbol or\n                    (card.ability.extra.mult > 0 and '+' or '')\n                card.joker_display_values.mult = in_play and card.joker_display_values.mult or\n                    (card.ability.extra.mult > 0 and card.ability.extra.mult or '')\n            end,\n            style_function = function(card, text, reminder_text, extra)\n                if text and text.children[1] then\n                    local in_play = not not next(G.play.cards)\n                    text.children[1].config.colour = in_play and text.children[1].config.colour or\n                        (card.ability.extra.mult <= 0 and G.C.MULT or G.C.CLEAR)\n                end\n                return false\n            end\n        }\n    end",
+      "config": {
+        "extra": {
+          "mult": 20,
+          "mult_mod": 4,
+          "xmult": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 20,
+          "mult_mod": 4,
+          "xmult": 4
+        }
+      },
+      "vars": [
+        20,
+        4,
+        4,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "003tengoku",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"003tengoku\",\n    path = \"003tengoku.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "tengoku_",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"tengoku_\" .. key,\n        path = \"tengoku/\" .. key .. \".ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "tengoku",
+      "name": null,
+      "atlas": "003tengoku",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = \"tengoku\",\n    atlas = \"003tengoku\",\n    soul_pos = { x = 0, y = 1 },\n    discovered = true,\n    rarity = 2,\n    cost = 7,\n    loc_vars = function(self, info_queue, card)\n        local kino_loaded = not not (Blockbuster or {}).Counters\n        return {\n            vars = {\n                card.ability.extra.chance_1 * 100,\n                card.ability.extra.chance_2 * 100,\n                card.ability.extra.chance_3 * 100,\n                not kino_loaded and card.ability.extra.chips or card.ability.extra.counters,\n                not kino_loaded and\n                card.ability.extra.mult or card.ability.extra.counters,\n                card.ability.extra.xmult,\n                card.ability.extra.perma_xmult,\n                card.ability.extra.angelic and localize(\"k_repertorium_angelic\") or\n                localize(\"k_repertorium_devilish\"),\n                colours = { card.ability.extra.angelic and G.C.BLUE or G.C.RED }\n            },\n            key = kino_loaded and \"j_repertorium_tengoku_alt\" or nil\n        }\n    end,\n    config = {\n        extra = {\n            chance_1 = 0.8,\n            chance_2 = 0.15,\n            chance_3 = 0.05,\n            chips = 50,\n            mult = 5,\n            xmult = 1.25,\n            perma_xmult = 0.1,\n            counters = 2,\n            angelic = true\n        }\n    },\n    calculate = function(self, card, context)\n        if context.press_play then\n            local kino_loaded = not not (Blockbuster or {}).Counters\n            local copied_cards = {}\n            for _, pcard in ipairs(G.hand.highlighted) do\n                pcard.repertorium_tengoku_effect = pcard.repertorium_tengoku_effect or {}\n                card.repertorium_tengoku_count = #pcard.repertorium_tengoku_effect + 1\n\n                local poll = pseudorandom(card.config.center.key)\n                if poll <= card.ability.extra.chance_3 then\n                    pcard.repertorium_tengoku_effect[card.repertorium_tengoku_count] = card.ability.extra.angelic and\n                        \"heaven\" or \"hell\"\n                elseif poll <= card.ability.extra.chance_2 then\n                    pcard.repertorium_tengoku_effect[card.repertorium_tengoku_count] = card.ability.extra.angelic and\n                        \"birth\" or \"death\"\n                else\n                    pcard.repertorium_tengoku_effect[card.repertorium_tengoku_count] = card.ability.extra.angelic and\n                        \"alive\" or \"dead\"\n                    if kino_loaded then\n                        pcard:bb_counter_apply(\n                            pcard.repertorium_tengoku_effect[card.repertorium_tengoku_count] == \"alive\" and\n                            \"counter_repertorium_angelic\" or \"counter_repertorium_devilish\", card.ability.extra.counters)\n                    end\n                end\n                card.ability.extra.angelic = not card.ability.extra.angelic\n\n                if pcard.repertorium_tengoku_effect[card.repertorium_tengoku_count] == \"heaven\" then\n                    G.playing_card = (G.playing_card and G.playing_card + 1) or 1\n                    local copy_card = copy_card(pcard, nil, nil, G.playing_card)\n                    copy_card:add_to_deck()\n                    G.deck.config.card_limit = G.deck.config.card_limit + 1\n                    table.insert(G.playing_cards, copy_card)\n                    G.hand:emplace(copy_card)\n                    copy_card.states.visible = nil\n                    table.insert(copied_cards, copy_card)\n\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            copy_card:start_materialize()\n                            return true\n                        end\n                    }))\n                end\n            end\n\n            if #copied_cards > 0 then\n                for i, pcard in ipairs(copied_cards) do\n                    if pcard:is_face() then inc_career_stat('c_face_cards_played', 1) end\n                    pcard.base.times_played = pcard.base.times_played + 1\n                    pcard.ability.played_this_ante = true\n                    G.GAME.round_scores.cards_played.amt = G.GAME.round_scores.cards_played.amt + 1\n                    draw_card(G.hand, G.play, i * 100 / #copied_cards, 'up', nil, pcard)\n                end\n                G.E_MANAGER:add_event(Event({\n                    func = function()\n                        SMODS.calculate_context({ playing_card_added = true, cards = copied_cards })\n                        return true\n                    end\n                }))\n            end\n        end\n\n        if context.before and context.main_eval and not context.blueprint then\n            for _, pcard in ipairs(context.full_hand) do\n                local tengoku_effect = (pcard.repertorium_tengoku_effect or {})[card.repertorium_tengoku_count]\n                if tengoku_effect == \"birth\" then\n                    pcard:set_ability(SMODS.poll_enhancement { guaranteed = true }, nil, true)\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            pcard:juice_up()\n                            return true\n                        end\n                    }))\n                end\n                if tengoku_effect == \"hell\" and pcard.ability.set == \"Enhanced\" then\n                    pcard:set_ability(\"c_base\", nil, true)\n                    pcard.ability.perma_xmult = (pcard.ability.perma_xmult or 1) + card.ability.extra.perma_xmult\n                    G.E_MANAGER:add_event(Event({\n                        func = function()\n                            pcard:juice_up()\n                            return true\n                        end\n                    }))\n                end\n            end\n        end\n\n        if context.modify_scoring_hand and (context.other_card.repertorium_tengoku_effect or {})[card.repertorium_tengoku_count] and not (Blockbuster or {}).Counters then\n            local tengoku_effect = context.other_card.repertorium_tengoku_effect[card.repertorium_tengoku_count]\n            return {\n                add_to_hand = tengoku_effect == \"alive\" or nil,\n                remove_from_hand = tengoku_effect == \"dead\" or nil,\n            }\n        end\n\n        if context.individual and (context.cardarea == G.play or context.cardarea == \"unscored\") and\n            (context.other_card.repertorium_tengoku_effect or {})[card.repertorium_tengoku_count] then\n            local kino_loaded = not not (Blockbuster or {}).Counters\n            local tengoku_effect = context.other_card.repertorium_tengoku_effect[card.repertorium_tengoku_count]\n            change_sprite(card, tengoku_effect)\n            return {\n                message = localize('k_repertorium_' .. tengoku_effect),\n                colour = pos[tengoku_effect].y == 0 and G.C.BLUE or G.C.RED,\n                message_card = card,\n                sound = \"repertorium_tengoku_\" .. tengoku_effect,\n                extra = {\n                    chips = not kino_loaded and tengoku_effect == \"alive\" and\n                        card.ability.extra.chips or nil,\n                    mult = not kino_loaded and tengoku_effect == \"dead\" and\n                        card.ability.extra.mult or nil,\n                    xmult = tengoku_effect == \"death\" and card.ability.extra.xmult or nil,\n                },\n            }\n        end\n\n        if context.destroy_card and (context.cardarea == G.play or context.cardarea == \"unscored\") and\n            (context.destroy_card.repertorium_tengoku_effect or {})[card.repertorium_tengoku_count] == \"death\" then\n            return {\n                remove = true\n            }\n        end\n\n        if context.after then\n            card.repertorium_tengoku_count = nil\n            for _, pcard in ipairs(context.full_hand) do\n                pcard.repertorium_tengoku_effect = nil\n            end\n        end\n    end,\n    joker_display_def = function(JokerDisplay)\n        ---@type JDJokerDefinition\n        return {\n            reminder_text = {\n                { text = \"(\" },\n                { ref_table = \"card.joker_display_values\", ref_value = \"angelic\", colour = G.C.BLUE },\n                { text = \")\" },\n            },\n            calc_function = function(card)\n                card.joker_display_values.angelic = card.ability.extra.angelic and localize(\"k_repertorium_angelic\") or\n                    localize(\"k_repertorium_devilish\")\n            end,\n            style_function = function(card, text, reminder_text, extra)\n                if reminder_text and reminder_text.children[2] then\n                    reminder_text.children[2].config.colour = card.ability.extra.angelic and G.C.BLUE or G.C.RED\n                end\n                return false\n            end\n        }\n    end",
+      "config": {
+        "extra": {
+          "chance_1": 0.8,
+          "chance_2": 0.15,
+          "chance_3": 0.05,
+          "chips": 50,
+          "mult": 5,
+          "xmult": 1.25,
+          "perma_xmult": 0.1,
+          "counters": 2,
+          "angelic": true
+        }
+      },
+      "ability": {
+        "extra": {
+          "chance_1": 0.8,
+          "chance_2": 0.15,
+          "chance_3": 0.05,
+          "chips": 50,
+          "mult": 5,
+          "xmult": 1.25,
+          "perma_xmult": 0.1,
+          "counters": 2,
+          "angelic": true
+        }
+      },
+      "vars": [
+        80,
+        15,
+        5,
+        50,
+        2,
+        1.25,
+        0.1,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "004dirtypair",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"004dirtypair\",\n    path = \"004dirtypair.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "dirtypair",
+      "name": null,
+      "atlas": "004dirtypair",
+      "pos": null,
+      "raw": "key = \"dirtypair\",\n    discovered = true,\n    atlas = \"004dirtypair\",\n    rarity = 3,\n    cost = 7,\n    loc_vars = function(self, info_queue, card)\n        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, self.key)\n        return { vars = { card.ability.extra.xmult, numerator, denominator } }\n    end,\n    config = {\n        extra = {\n            xmult = 2,\n            odds = 2\n        }\n    },\n    calculate = function(self, card, context)\n        if context.joker_main and next(context.poker_hands[\"Pair\"]) then\n            for _, pair in ipairs(context.poker_hands[\"Pair\"]) do\n                if SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds) then\n                    for _, pcard in ipairs(pair) do\n                        pcard.repertorium_dirtypair = true\n                    end\n                end\n            end\n\n            return {\n                xmult = card.ability.extra.xmult ^ #context.poker_hands[\"Pair\"]\n            }\n        end\n\n        if context.destroy_card and context.cardarea == G.play and context.destroy_card.repertorium_dirtypair then\n            context.destroy_card.repertorium_dirtypair = nil\n            return {\n                remove = true,\n                message = localize(\"k_repertorium_oops\"),\n                message_card = card\n            }\n        end\n    end,\n    joker_display_def = function(JokerDisplay)\n        ---@type JDJokerDefinition\n        return {\n            text = {\n                {\n                    border_nodes = {\n                        { text = \"X\" },\n                        { ref_table = \"card.joker_display_values\", ref_value = \"x_mult\", retrigger_type = \"exp\" },\n                    }\n                },\n            },\n            reminder_text = {\n                { text = \"(\" },\n                { ref_table = \"card.joker_display_values\", ref_value = \"hand\", colour = G.C.FILTER },\n                { text = \")\" },\n            },\n            calc_function = function(card)\n                local x_mult = 1\n                local _, poker_hands, _ = JokerDisplay.evaluate_hand()\n                if poker_hands[\"Pair\"] and next(poker_hands[\"Pair\"]) then\n                    x_mult = card.ability.extra.xmult ^ #poker_hands[\"Pair\"]\n                end\n                card.joker_display_values.x_mult = x_mult\n                card.joker_display_values.hand = localize(\"Pair\", 'poker_hands')\n            end\n        }\n    end",
+      "config": {
+        "extra": {
+          "xmult": 2,
+          "odds": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 2,
+          "odds": 2
+        }
+      },
+      "vars": [
+        2,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "005keion",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"005keion\",\n    path = \"005keion.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "keion",
+      "name": null,
+      "atlas": "005keion",
+      "pos": null,
+      "raw": "key = \"keion\",\n    atlas = \"005keion\",\n    discovered = true,\n    rarity = 2,\n    cost = 5,\n    loc_vars = function(self, info_queue, card)\n        local kino_loaded = not not next(SMODS.find_mod(\"kino\"))\n        return {\n            vars = { card.ability.extra.counters, card.ability.extra.xchips, card.ability.extra.current_xchips },\n            key = (not kino_loaded and \"j_repertorium_keion_locked\") or\n                (#SMODS.Suit.obj_buffer >= 5 and \"j_repertorium_keion_alt\") or nil\n        }\n    end,\n    generate_ui = (Kino or {}).generate_info_ui,\n    kino_joker = {\n        id = 120811,\n        budget = 0,\n        box_office = 21434003,\n        release_date = \"2011-03-12\",\n        runtime = 110,\n        country_of_origin = \"JP\",\n        original_language = \"jp\",\n        critic_score = 0,\n        audience_score = 7.9,\n        cast = {},\n    },\n    pools, k_genre = { \"Animation\", \"Comedy\", \"Musical\" },\n    config = {\n        extra = {\n            counters = 5,\n            xchips = 0.5,\n            current_xchips_non = 1,\n            suits = {}\n        }\n    },\n    calculate = function(self, card, context)\n        if context.before then\n            for _, pcard in ipairs(context.scoring_hand) do\n                if not card.ability.extra.suits[pcard.base.suit] then\n                    pcard:bb_counter_apply(\"counter_repertorium_angelic\", card.ability.extra.counters)\n                    card.ability.extra.suits[pcard.base.suit] = true\n                    card.ability.extra.suits[1] = (card.ability.extra.suits[1] or 0) + 1\n                end\n            end\n\n            if (card.ability.extra.suits[1] or 0) >= 5 then\n                card.ability.extra.current_xchips_non = card.ability.extra.current_xchips_non +\n                    card.ability.extra.xchips\n            end\n        end\n        if context.joker_main and card.ability.extra.current_xchips_non > 1 then\n            return {\n                xchips = card.ability.extra.current_xchips_non\n            }\n        end\n        if context.end_of_round and context.game_over == false and context.main_eval then\n            card.ability.extra.suits = {}\n        end\n    end,\n    remove_from_deck = function(self, card, from_debuff)\n        card.ability.extra.suits = {}\n    end,\n    in_pool = function(self, args)\n        return not not next(SMODS.find_mod(\"kino\"))\n    end",
+      "config": {
+        "extra": {
+          "counters": 5,
+          "xchips": 0.5,
+          "current_xchips_non": 1,
+          "suits": {}
+        }
+      },
+      "ability": {
+        "extra": {
+          "counters": 5,
+          "xchips": 0.5,
+          "current_xchips_non": 1,
+          "suits": {}
+        }
+      },
+      "vars": [
+        5,
+        0.5,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "006amanojaku",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"006amanojaku\",\n    path = \"006amanojaku.png\",\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "006amanojaku_cheats",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"006amanojaku_cheats\",\n    path = \"006cheats.png\",\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "amanojaku",
+      "name": null,
+      "atlas": "006amanojaku",
+      "pos": null,
+      "raw": "key = \"amanojaku\",\n    atlas = \"006amanojaku\",\n    discovered = true,\n    rarity = 4,\n    cost = 10,\n    loc_vars = function(self, info_queue, card)\n        info_queue[#info_queue + 1] = { set = \"Other\", key = \"repertorium_cheat_item\" }\n        local orb_numerator, orb_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.orb_odds, self.key)\n        local cards_loc = {}\n        local chosen_cards = G.GAME.repertorium_amanojaku_cards or\n            {\n                { rank = \"any\", suit = \"any\", rank_amount = 5, suit_amount = 5 },\n                { rank = \"any\", suit = \"any\" },\n                { rank = \"any\", suit = \"any\" },\n                { rank = \"any\", suit = \"any\" },\n                { rank = \"any\", suit = \"any\" },\n            }\n        for i, card_info in ipairs(chosen_cards) do\n            cards_loc[i] = {}\n            cards_loc[i].rank = localize(\n                card_info.rank ~= \"any\" and card_info.rank or \"k_repertorium_any\",\n                card_info.rank ~= \"any\" and \"ranks\" or nil)\n            cards_loc[i].suit = localize(\n                card_info.suit ~= \"any\" and card_info.suit or \"k_repertorium_any\",\n                card_info.suit ~= \"any\" and \"suits_plural\" or nil)\n            cards_loc[i].card = localize { type = 'raw_descriptions', key = 'playing_card', set = 'Other', vars = { cards_loc[i].rank, cards_loc[i].suit } }\n                [1]\n        end\n        local poker_hands = G.GAME.repertorium_amanojaku_poker_hands or\n            { \"High Card\", \"High Card\", \"High Card\", played = { 0, 0, 0 } }\n\n        local vars = {\n            orb = { card.ability.extra.score, localize(poker_hands[1], \"poker_hands\"), orb_numerator, orb_denominator },\n            camera = { card.ability.extra.camera_discards, cards_loc[1].card, cards_loc[2].card, cards_loc[3].card, cards_loc[4].card, cards_loc[5].card, },\n            umbrella = {},\n            mallet = { card.ability.extra.mallet_score * 100, card.ability.extra.score, card.ability.extra.mallet_money },\n            jizo = { card.ability.extra.jizo_used and 0 or 1 },\n            doll = { chosen_cards[1].suit_amount, cards_loc[1].suit, chosen_cards[1].rank_amount, cards_loc[1].rank, card.ability.extra.count.suit, card.ability.extra.count.rank, card.ability.extra.doll_selection },\n            bomb = { card.ability.extra.score * 3, localize(poker_hands[1], \"poker_hands\") },\n            lantern = { localize(poker_hands[1], \"poker_hands\"), localize(poker_hands[2], \"poker_hands\"), localize(poker_hands[3], \"poker_hands\"), card.ability.extra.lantern_h_size, colours = { poker_hands.played[1] > 0 and G.C.UI.TEXT_INACTIVE or G.C.FILTER, poker_hands.played[2] > 0 and G.C.UI.TEXT_INACTIVE or G.C.FILTER, poker_hands.played[3] > 0 and G.C.UI.TEXT_INACTIVE or G.C.FILTER, } },\n            fabric = { localize(poker_hands[2], \"poker_hands\"), card.ability.extra.fabric_hands, 3 - poker_hands.played[2] }\n        }\n        for _, item in ipairs(card.ability.extra.items) do\n            info_queue[#info_queue + 1] = {\n                set = \"Other\",\n                key = \"repertorium_cheat_\" .. item,\n                vars = vars[item],\n                main_end =\n                    item == \"camera\" and camera_main_end or nil\n            }\n        end\n    end,\n    update = function(self, card, dt)\n        if G.jokers and card.area == G.jokers and not card.debuff then\n            G.GAME.blind.chip_text = localize(\"k_repertorium_impossible\")\n        end\n    end,\n    config = {\n        extra = {\n            items = {},\n            orb_odds = 2,\n            camera_discards = 1,\n            mallet_score = 0.1,\n            mallet_money = 5,\n            jizo_used = false,\n            doll_selection = 1,\n            lantern_h_size = 1,\n            fabric_hands = 1,\n            count = { rank = 0, suit = 0 },\n            score = 300,\n        }\n    },\n    calculate = function(self, card, context)\n        if context.setting_blind then\n            return amanojaku_setup(card, context)\n        end\n\n        if context.final_scoring_step and card.ability.extra.items[\"bomb\"] then\n            return {\n                balance = true\n            }\n        end\n\n        if context.evaluate_poker_hand and card.ability.extra.items[\"fabric\"] and (G.GAME.repertorium_amanojaku_conditions or {})[context.scoring_name] then\n            return {\n                replace_scoring_name = G.GAME.repertorium_amanojaku_conditions[context.scoring_name]\n            }\n        end\n\n        if context.post_trigger and context.other_card ~= card and context.other_card.ability.set == \"Joker\" and context.other_ret.jokers and card.ability.extra.items[\"mallet\"] then\n            for _, key in ipairs(calc_keys) do\n                local is_hyper = key:sub(1, 1):lower() == \"e\" or key:sub(1, 2):lower() == \"hy\"\n                local is_x = key:sub(1, 1):lower() == \"x\"\n                if context.other_ret.jokers[key] and (is_hyper or\n                        to_big(context.other_ret.jokers[key]) > to_big(is_x and 1 or 0)) then\n                    return {\n                        dollars = card.ability.extra.mallet_money,\n                        message_card = card\n                    }\n                end\n            end\n        end\n\n        if context.skip_blind and not card.ability.extra.items[\"orb\"] and SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.orb_odds) then\n            card.ability.extra.items[#card.ability.extra.items + 1] = \"orb\"\n            card.ability.extra.items[\"orb\"] = true\n            return {\n                message = localize(\"k_repertorium_get\")\n            }\n        end\n\n        if context.end_of_round and context.game_over and card.ability.extra.items[\"jizo\"] and not card.ability.extra.jizo_used then\n            card.ability.extra.jizo_used = true\n            return {\n                saved = \"k_repertorium_jizo_saved\"\n            }\n        end\n\n        local win = false\n        local win_item\n\n        if context.before then\n            if context.scoring_name ~= G.GAME.repertorium_amanojaku_poker_hands[1] then\n                card.ability.extra.played_only = false\n            end\n            if card.ability.extra.items[\"camera\"] and #context.full_hand >= 5 then\n                local check_hand = { false, false, false, false, false }\n\n                for i, req in ipairs(G.GAME.repertorium_amanojaku_cards) do\n                    if req.rank == \"any\" or req.suit == \"any\" then\n                        check_hand[i] = true\n                    end\n                end\n                for _, pcard in ipairs(context.full_hand) do\n                    if not SMODS.has_no_suit(pcard) and not SMODS.has_no_rank(pcard) then\n                        for i, req in ipairs(G.GAME.repertorium_amanojaku_cards) do\n                            if not check_hand[i] and req.rank == pcard.base.value and pcard:is_suit(req.suit) then\n                                check_hand[i] = true\n                                break\n                            end\n                        end\n                    else\n                        break\n                    end\n                end\n                win = true\n                win_item = \"camera\"\n                for _, bool in ipairs(check_hand) do\n                    if not bool then\n                        win = false\n                        win_item = nil\n                        break\n                    end\n                end\n            end\n\n            if not win and card.ability.extra.items[\"umbrella\"] and next(context.poker_hands[\"Straight Flush\"]) then\n                if not next(G.GAME.repertorium_amanojaku_ranks) then\n                    win = true\n                    win_item = \"umbrella\"\n                else\n                    for _, pcard in ipairs(context.scoring_hand) do\n                        G.GAME.repertorium_amanojaku_ranks[pcard.base.value] = true\n                    end\n                    win = true\n                    win_item = \"umbrella\"\n                    for _, req in pairs(G.GAME.repertorium_amanojaku_ranks) do\n                        if not req then\n                            win = false\n                            win_item = nil\n                            break\n                        end\n                    end\n                end\n            end\n\n            if not win and card.ability.extra.items[\"doll\"] then\n                if G.GAME.repertorium_amanojaku_cards[1].rank == \"any\" or\n                    G.GAME.repertorium_amanojaku_cards[1].suit == \"any\" then\n                    card.ability.extra.count.rank = card.ability.extra.count.rank + #context.full_hand\n                    card.ability.extra.count.suit = card.ability.extra.count.suit + #context.full_hand\n                else\n                    for _, pcard in ipairs(context.full_hand) do\n                        if not SMODS.has_no_rank(pcard) and pcard.base.value == G.GAME.repertorium_amanojaku_cards[1].rank then\n                            card.ability.extra.count.rank = card.ability.extra.count.rank + 1\n                        end\n                        if pcard:is_suit(G.GAME.repertorium_amanojaku_cards[1].suit) then\n                            card.ability.extra.count.suit = card.ability.extra.count.suit + 1\n                        end\n                    end\n                end\n                if card.ability.extra.count.suit >= G.GAME.repertorium_amanojaku_cards[1].suit_amount and card.ability.extra.count.rank >= G.GAME.repertorium_amanojaku_cards[1].rank_amount then\n                    win = true\n                    win_item = \"doll\"\n                end\n            end\n            if not win and (card.ability.extra.items[\"lantern\"] or card.ability.extra.items[\"fabric\"]) then\n                for i, hand in ipairs(G.GAME.repertorium_amanojaku_poker_hands) do\n                    if hand == context.scoring_name then\n                        G.GAME.repertorium_amanojaku_poker_hands.played[i] = G.GAME.repertorium_amanojaku_poker_hands\n                            .played[i] + 1\n                    end\n                end\n                if card.ability.extra.items[\"lantern\"] then\n                    win = true\n                    win_item = \"lantern\"\n                    for _, req in ipairs(G.GAME.repertorium_amanojaku_poker_hands.played) do\n                        if req == 0 then\n                            win = false\n                            win_item = nil\n                            break\n                        end\n                    end\n                end\n                if not win and card.ability.extra.items[\"fabric\"] and G.GAME.repertorium_amanojaku_poker_hands.played[2] >= 3 then\n                    win = true\n                    win_item = \"fabric\"\n                end\n            end\n        end\n\n        if context.after then\n            if card.ability.extra.items[\"mallet\"] and G.GAME.chips >= to_big(card.ability.extra.score - card.ability.extra.score * card.ability.extra.mallet_score) and G.GAME.chips <= to_big(card.ability.extra.score + card.ability.extra.score * card.ability.extra.mallet_score) then\n                win = true\n                win_item = \"mallet\"\n            end\n\n            if not win and card.ability.extra.items[\"bomb\"] and card.ability.extra.played_only then\n                G.E_MANAGER:add_event(Event({\n                    blocking = false,\n                    func = function()\n                        if G.STATE == G.STATES.SELECTING_HAND and G.GAME.chips >= to_big(card.ability.extra.score * 3) then\n                            card.ability.extra.win = \"k_repertorium_bomb_win\"\n                            G.STATE = G.STATES.HAND_PLAYED\n                            G.STATE_COMPLETE = true\n                            end_round()\n                            return true\n                        end\n                        if G.STATE == G.STATES.ROUND_EVAL then\n                            return true\n                        end\n                    end\n                }))\n            end\n        end\n\n        if win then\n            card.ability.extra.win = \"k_repertorium_\" .. (win_item or \"none\") .. \"_win\"\n            G.E_MANAGER:add_event(Event({\n                blocking = false,\n                func = function()\n                    if G.STATE == G.STATES.SELECTING_HAND then\n                        G.STATE = G.STATES.HAND_PLAYED\n                        G.STATE_COMPLETE = true\n                        end_round()\n                        return true\n                    end\n                    if G.STATE == G.STATES.ROUND_EVAL then\n                        return true\n                    end\n                end\n            }))\n        end\n    end,\n    add_to_deck = function(self, card, from_debuff)\n        if card.ability.extra.items[\"doll\"] then\n            SMODS.change_play_limit(1)\n            SMODS.change_discard_limit(1)\n        end\n        if card.ability.extra.items[\"lantern\"] then\n            G.hand:change_size(1)\n        end\n    end,\n    remove_from_deck = function(self, card, from_debuff)\n        if G.GAME.chips - G.GAME.blind.chips >= to_big(0) then\n            G.STATE = G.STATES.NEW_ROUND\n            G.STATE_COMPLETE = false\n        end\n        G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)\n        card.ability.extra.win = nil\n        if card.ability.extra.items[\"doll\"] then\n            SMODS.change_play_limit(-1)\n            SMODS.change_discard_limit(-1)\n        end\n        if card.ability.extra.items[\"lantern\"] then\n            G.hand:change_size(-1)\n        end\n    end",
+      "config": {
+        "extra": {
+          "items": {},
+          "orb_odds": 2,
+          "camera_discards": 1,
+          "mallet_score": 0.1,
+          "mallet_money": 5,
+          "jizo_used": false,
+          "doll_selection": 1,
+          "lantern_h_size": 1,
+          "fabric_hands": 1,
+          "count": {
+            "rank": 0,
+            "suit": 0
+          },
+          "score": 300
+        }
+      },
+      "ability": {
+        "extra": {
+          "items": {},
+          "orb_odds": 2,
+          "camera_discards": 1,
+          "mallet_score": 0.1,
+          "mallet_money": 5,
+          "jizo_used": false,
+          "doll_selection": 1,
+          "lantern_h_size": 1,
+          "fabric_hands": 1,
+          "count": {
+            "rank": 0,
+            "suit": 0
+          },
+          "score": 300
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "repertorium_amanojaku",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'repertorium_amanojaku',\n    order = 50,\n    func = function(card)\n        if card.config.center.key == \"j_repertorium_amanojaku\" then\n            if not G.repertorium_shared_cheats then\n                local init_sprite = function(pos)\n                    return Sprite(0, 0, G.CARD_W, G.CARD_H,\n                        G.ASSET_ATLAS[\"repertorium_006amanojaku_cheats\"], pos)\n                end\n                G.repertorium_shared_cheats = {\n                    orb = init_sprite({ x = 0, y = 0 }),\n                    camera = init_sprite({ x = 2, y = 2 }),\n                    umbrella = init_sprite({ x = 0, y = 1 }),\n                    mallet = init_sprite({ x = 2, y = 1 }),\n                    jizo = init_sprite({ x = 1, y = 2 }),\n                    doll = init_sprite({ x = 1, y = 0 }),\n                    bomb = init_sprite({ x = 2, y = 0 }),\n                    lantern = init_sprite({ x = 1, y = 1 }),\n                    fabric = init_sprite({ x = 0, y = 2 })\n                }\n            end\n            local i = 0\n            for _, item in ipairs(card.ability.extra.items) do\n                G.repertorium_shared_cheats[item].role.draw_major = card\n                G.repertorium_shared_cheats[item]:draw_shader('dissolve', nil, nil, nil, card.children.center,\n                    0, 0, -0.3 + 0.9 * (i % 3), -0.3 + 0.9 * math.floor(i / 3))\n                i = i + 1\n            end\n        end\n    end,\n    conditions = { vortex = false, facing = 'front' },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "repertorium_amanojaku_cards",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'repertorium_amanojaku_cards',\n    order = 50,\n    func = function(card)\n        if G.GAME.blind and G.GAME.blind.in_blind and (card.ability.set == \"Default\" or card.ability.set == \"Enhanced\") and not SMODS.has_no_rank(card) and G.GAME.repertorium_amanojaku_ranks and next(G.GAME.repertorium_amanojaku_ranks) and G.GAME.repertorium_amanojaku_cards then\n            if not G.repertorium_shared_cheats then\n                local init_sprite = function(pos)\n                    return Sprite(0, 0, G.CARD_W, G.CARD_H,\n                        G.ASSET_ATLAS[\"repertorium_006amanojaku_cheats\"], pos)\n                end\n                G.repertorium_shared_cheats = {\n                    orb = init_sprite({ x = 0, y = 0 }),\n                    camera = init_sprite({ x = 2, y = 2 }),\n                    umbrella = init_sprite({ x = 0, y = 1 }),\n                    mallet = init_sprite({ x = 2, y = 1 }),\n                    jizo = init_sprite({ x = 1, y = 2 }),\n                    doll = init_sprite({ x = 1, y = 0 }),\n                    bomb = init_sprite({ x = 2, y = 0 }),\n                    lantern = init_sprite({ x = 1, y = 1 }),\n                    fabric = init_sprite({ x = 0, y = 2 })\n                }\n            end\n            local has_umbrella = false\n            local has_camera = false\n            for _, joker in ipairs(SMODS.find_card(\"j_repertorium_amanojaku\")) do\n                if joker.ability.extra.items[\"umbrella\"] then\n                    has_umbrella = true\n                end\n                if joker.ability.extra.items[\"camera\"] then\n                    has_camera = true\n                end\n            end\n            if has_umbrella and not G.GAME.repertorium_amanojaku_ranks[card.base.value] then\n                G.repertorium_shared_cheats[\"umbrella\"].role.draw_major = card\n                G.repertorium_shared_cheats[\"umbrella\"]:draw_shader('dissolve', nil, nil, nil, card.children.center,\n                    0, 0, -card.T.w * 0.2, card.T.h * 0.6)\n            end\n            if has_camera and not SMODS.has_no_suit(card) then\n                local is_target = false\n                for _, req in ipairs(G.GAME.repertorium_amanojaku_cards) do\n                    if req.rank == \"any\" or req.suit == \"any\" or\n                        (req.rank == card.base.value and card:is_suit(req.suit)) then\n                        is_target = true\n                        break\n                    end\n                end\n                if is_target then\n                    G.repertorium_shared_cheats[\"camera\"].role.draw_major = card\n                    G.repertorium_shared_cheats[\"camera\"]:draw_shader('dissolve', nil, nil, nil, card.children.center,\n                        0, 0, card.T.w * 0.2, card.T.h * 0.6)\n                end\n            end\n        end\n    end,\n    conditions = { vortex = false, facing = 'front' },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "JimboQuip",
+      "key": "amanojaku_loss",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"amanojaku_loss\",\n    type = 'loss',\n    filter = function(self, type)\n        if next(SMODS.find_card('j_repertorium_amanojaku')) then\n            return true, { weight = 999999999 }\n        end\n    end,\n    extra = {\n        center = \"j_repertorium_amanojaku\"\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "JimboQuip",
+      "key": "amanojaku_win",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"amanojaku_win\",\n    type = 'win',\n    filter = function(self, type)\n        if next(SMODS.find_card('j_repertorium_amanojaku')) then\n            return true, { weight = 999999999 }\n        end\n    end,\n    extra = {\n        center = \"j_repertorium_amanojaku\"\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n    path = \"modicon.png\",\n    px = 34,\n    py = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "counters",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"counters\",\n        path = \"counters.png\",\n        px = 73,\n        py = 97",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v0.1.1"
+}
