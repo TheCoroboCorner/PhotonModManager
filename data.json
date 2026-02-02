@@ -1445,7 +1445,310 @@
       "Blinds",
       "Mechanics"
     ],
-    "readme": "<h1 align=\"center\">Lobotomy Corporation</h1>\n<h4 align=\"center\"><i>Face the Fear, Build the Future.</i></h4>\n\n<p align=\"center\"><img src=\"assets/LobotomyCorporationLogo.png\" style=\"width:30%\" /></p>\n\n<h5 align=\"center\"><i>\nGreetings, Manager. \nI see that you've been slacking off while playing a few rounds of cards during our work hours. \nI am unfamiliar with playing cards myself, but I am able to modify this little game of yours so that you can still have \"fun\" while still generating precious energy to meet the daily quota. \nThis may hinder your playing experience, but I am sure you will do just fine.</i></h5>\n\n# Notice\n**Lobotomy Corporation** is about discovery and experiment with different Abnormalities. \nIt is recommended to play with **Lobotomy Corporation** by itself on your first playthrough, regardless of this mod's cross-mod content.\nThe **Discover All** functionality does not discover Abnormalities from this mod, since it can be overwhelming for new players with the amount of text each Abnormality has.\n\n# Features\n## Abnormalities, as Jokers\nEach added Abnormality have different Observation Levels that unlock more of their Information. \nThis is based on the amount of rounds played with that Abnormality in your Joker slots.\n\n## Abnormalities, as Boss Blinds\nSome Abnormalities are able to ***breach***. \nIn addition, some breaching Abnormalities can change the upcoming fights to be an Abnormality as a Boss Blind. \nThese blinds are very hard to take down, make sure you're well-prepared before tackling on these challenges.\n\n## Extraction Pack\nTo help with discovering Abnormalities, a new **Booster Pack** type is added. \nThis pack allows you to pick one of three Abnormalities to add to your Joker slots.\n\n## Ordeals\nDuring the run, **Ordeals** can replace some blinds. These blinds are generally more difficult to take down compared to the other blinds, \nwith **Dawn Ordeals** being the easiest, and **Midnight Ordeals** being much a lot tougher to overcome.\n\n## Challenges\nIn some Challenges, Ordeals are guaranteed to appear. In others, you might be fighting **[[[INFORMATION REDACTED]]]**. \nGood luck, Manager. You will need it.\n\n<details>\n    <summary><b>Lobotomy Corporation Spoilers</b></summary>\n    There are challenges that mirror the Sephirah Meltdowns experienced in the main game. \n    It is recommended that they should be experienced in the actual game before attempting them here.\n</details><br>\n\n# Requirements\nRequires the latest version of **Steamodded** 1.0.0-ALPHA.  \nInstructions can be found [here](https://github.com/Steamodded/smods/wiki).\n\n# Installation\nHead to the mod's *[Releases](https://github.com/Mysthaps/LobotomyCorp/releases/latest)* page and download the latest version.  \nYou can also *clone* this repository, however, some things may break. \nMake sure that the mod folder is not nested (your folder is **not** ``Mods\\LobotomyCorp\\LobotomyCorp\\...`` or similar). \n \nPlease check the mod's configurations after installation. \n\n# Credits\n### **[Lobotomy Corporation](https://store.steampowered.com/app/568220/Lobotomy_Corporation__Monster_Management_Simulation/)**\n### **[Library of Ruina](https://store.steampowered.com/app/1256670/Library_Of_Ruina/)**\n### **[Limbus Company](https://store.steampowered.com/app/1973530/Limbus_Company/)** \n\nAll music used are listed in the ``music.txt`` file, found [here](https://github.com/Mysthaps/LobotomyCorp/blob/main/music.txt).\nOther credits can be found in the **Credits** tab in the mod's menu"
+    "readme": "<h1 align=\"center\">Lobotomy Corporation</h1>\n<h4 align=\"center\"><i>Face the Fear, Build the Future.</i></h4>\n\n<p align=\"center\"><img src=\"assets/LobotomyCorporationLogo.png\" style=\"width:30%\" /></p>\n\n<h5 align=\"center\"><i>\nGreetings, Manager. \nI see that you've been slacking off while playing a few rounds of cards during our work hours. \nI am unfamiliar with playing cards myself, but I am able to modify this little game of yours so that you can still have \"fun\" while still generating precious energy to meet the daily quota. \nThis may hinder your playing experience, but I am sure you will do just fine.</i></h5>\n\n# Notice\n**Lobotomy Corporation** is about discovery and experiment with different Abnormalities. \nIt is recommended to play with **Lobotomy Corporation** by itself on your first playthrough, regardless of this mod's cross-mod content.\nThe **Discover All** functionality does not discover Abnormalities from this mod, since it can be overwhelming for new players with the amount of text each Abnormality has.\n\n# Features\n## Abnormalities, as Jokers\nEach added Abnormality have different Observation Levels that unlock more of their Information. \nThis is based on the amount of rounds played with that Abnormality in your Joker slots.\n\n## Abnormalities, as Boss Blinds\nSome Abnormalities are able to ***breach***. \nIn addition, some breaching Abnormalities can change the upcoming fights to be an Abnormality as a Boss Blind. \nThese blinds are very hard to take down, make sure you're well-prepared before tackling on these challenges.\n\n## Extraction Pack\nTo help with discovering Abnormalities, a new **Booster Pack** type is added. \nThis pack allows you to pick one of three Abnormalities to add to your Joker slots.\n\n## Ordeals\nDuring the run, **Ordeals** can replace some blinds. These blinds are generally more difficult to take down compared to the other blinds, \nwith **Dawn Ordeals** being the easiest, and **Midnight Ordeals** being much a lot tougher to overcome.\n\n## Challenges\nIn some Challenges, Ordeals are guaranteed to appear. In others, you might be fighting **[[[INFORMATION REDACTED]]]**. \nGood luck, Manager. You will need it.\n\n<details>\n    <summary><b>Lobotomy Corporation Spoilers</b></summary>\n    There are challenges that mirror the Sephirah Meltdowns experienced in the main game. \n    It is recommended that they should be experienced in the actual game before attempting them here.\n</details><br>\n\n# Requirements\nRequires the latest version of **Steamodded** 1.0.0-ALPHA.  \nInstructions can be found [here](https://github.com/Steamodded/smods/wiki).\n\n# Installation\nHead to the mod's *[Releases](https://github.com/Mysthaps/LobotomyCorp/releases/latest)* page and download the latest version.  \nYou can also *clone* this repository, however, some things may break. \nMake sure that the mod folder is not nested (your folder is **not** ``Mods\\LobotomyCorp\\LobotomyCorp\\...`` or similar). \n \nPlease check the mod's configurations after installation. \n\n# Credits\n### **[Lobotomy Corporation](https://store.steampowered.com/app/568220/Lobotomy_Corporation__Monster_Management_Simulation/)**\n### **[Library of Ruina](https://store.steampowered.com/app/1256670/Library_Of_Ruina/)**\n### **[Limbus Company](https://store.steampowered.com/app/1973530/Limbus_Company/)** \n\nAll music used are listed in the ``music.txt`` file, found [here](https://github.com/Mysthaps/LobotomyCorp/blob/main/music.txt).\nOther credits can be found in the **Credits** tab in the mod's menu",
+    "versionHistory": [
+      {
+        "tag": "1.4.0d",
+        "name": "1.4.0d",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~BETA-1016c``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog Summary\r\n## 1.4.0d\r\n- Balance change: 1.76 MHz now favors lower values\r\n- Fixed Firebird crashing with Talisman, again\r\n- Fixed Spider Bud not updating first discard after beating a Boss Blind (thanks @wingedcatgirl!)\r\n- Fixed a typo making Little Red Riding Hooded Mercenary crash when hovered\r\n- Fixed a crash when a destroyed card gets debuffed\r\n- Fixed modifier sprites showing when card is faced down\r\n- Fixed Abnormality Screen Text and Lyrics acting strangely when the game is paused or when GasHarpoon changes phases\r\n- Fixed Shield for GasHarpoon not working\r\n- Tried fixing The Servant of Wrath crashing when hovered\r\n- Minor changes for Mobile (thanks @a2639443196!)\r\n## 1.4.0c\r\n- Fixed crash with Big and Will be Bad Wolf\r\n- Fixed Firebird crashing with Talisman\r\n## 1.4.0b\r\n- Fixed a crash when Apocalypse Bird calculates score\r\n- Fixed the background not changing for Apocalypse Bird's early phases\r\n## 1.4.0\r\n### New Content\r\n- Added 2 new Abnormality Blinds: Hatred, Hermit\r\n- Added Chinese localization by @a2639443196 \r\n### Balance Changes\r\n- Updated sticker compatibility\r\n- Plague Doctor: Cost $4 > $6\r\n- Laetitia: No longer compatible with Blueprint\r\n- The Firebird: Money threshold $3 > $5\r\n### Bug Fixes & Improvements\r\n- Added flavor text and made the Boss Blind automatically reroll when an Abnormality breaches, and the Abnormality Blind is available\r\n- Updated the descriptions of several Abnormalities\r\n- Removed conflict with the \"3xCredits\" mod\r\n- Fixed several Abnormalities displaying extra scoring messages\r\n\r\nThe full changelog can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-09-01T16:15:00Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.4.0d",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.3.1c",
+        "name": "1.3.1c",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~BETA-0626b``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog Summary\r\n## 1.3.1c\r\n- Fixed undiscovered Abnormalities showing as NULL when losing the run to them\r\n- Actually fixed crashing when attempting to create an unloaded Abnormality (for real this time)\r\n## 1.3.1b\r\n- Hysteria is now red\r\n- Actually fixed crashing when attempting to create an unloaded Abnormality\r\n- Fixed crash when Abnormalities are debuffed\r\n- Fixed crash with an older version of Handy\r\n## 1.3.1\r\n### New Content\r\n- Added a new Abnormality: The King of Greed\r\n### Balance Changes\r\n- Magical Girls breach when sold\r\n### Bug Fixes & Improvements\r\n- Modified Magical Girls to only show their tooltip after Observation Level 1\r\n- Fixed some Abnormalities showing their Observation Level 3 effect early\r\n- Fixed Rudolta of the Sleigh crashing when attempting to create an unloaded Abnormality\r\n\r\nThe full changelog can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-07-08T05:02:36Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.3.1c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.3.0d",
+        "name": "1.3.0d",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~BETA-0626b``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog Summary\r\n## 1.3.0d\r\n- Fixed Void Dream crashing when Handy is not installed\r\n- Fixed Meat Lantern softlocking when using an affected consumable\r\n## 1.3.0c\r\n- Fixed Abnormality descriptions visible while undiscovered in the shop\r\n## 1.3.0b\r\n- Void Dream giving money mid-hand no longer affects jokers like Bootstraps and Bull\r\n- Fixed crash with Fragment of the Universe\r\n- (hopefully) Fixed crash when reloading game while on Dawn Ordeals and Noon Ordeals\r\n## 1.3.0\r\n### New Content\r\n- Added 4 new Abnormalities: Meat Lantern, 1.76 MHz, Shelter from the 27th of March, Sign of Roses, Dreaming Electric Sheep\r\n- Refreshed Abnormality card UI\r\n### Balance Changes\r\n- Spider Bud reworked\r\n- CENSORED Mult +40 > +30, counts itself as a CENSORED Joker\r\n- The Price of Silence removed Amplified, cost $7 > $8\r\n- The Firebird dollars threshold $5 > $3, XMult per dollar lost X0.15 > X0.2\r\n- Happy Teddy Bear no longer shows last played hand\r\n### Bug Fixes & Improvements\r\n- Changed Red Eyes achievement, removed Red Eyes (Open) achievement\r\n- Fixed crashes relating to Information challenge and CENSORED Abnormality\r\n- Added lyrics to a specific Showdown Blind\r\n\r\nThe full changelog can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-07-06T09:25:56Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.3.0d",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.2.0c",
+        "name": "1.2.0c",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~BETA-0324b``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog Summary\r\n## 1.2.0c\r\n- Fixed crash when buying Big and Will be Bad Wolf with Little Red Riding Hooded Mercenary present\r\n- Fixed crash when a mod is installed that overrides a specific patch\r\n## 1.2.0b\r\n- Fixed a specific boss crashing\r\n## 1.2.0\r\n### New Content\r\n- Added 4 new Abnormalities: Queen Bee, Void Dream, Skin Prophecy, The Jolliest Jester\r\n### Balance Changes\r\n- The Mountain of Smiling Bodies: Starting Chips scaling +3 > +2\r\n### Bug Fixes & Improvements\r\n- Updated the configuration menu\r\n- Added activate conditions to [Active Ability] descriptions and modified the display color\r\n- Updated Happy Teddy Bear's Observation Level 1's description\r\n- Changed some Abnormalities' descriptions to include [Active Ability] text in earlier Observation Levels\r\n- Fixed errors related to Giant Tree Sap and Fairy Festival\r\n\r\nThe full changelog can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-04-20T08:19:13Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.2.0c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.1.1",
+        "name": "1.1.1",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~BETA-0324b``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog Summary\r\n## 1.1.1\r\n### New Content\r\n- Added a new Abnormality: Giant Tree Sap\r\n### Bug Fixes & Improvements\r\n- Fixed a crash when Forsaken Murderer is used on a hand without any scoring cards\r\n- Fixed a crash on a specific Boss Blind when Talisman is installed\r\n\r\nThe full changelog can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-04-02T07:46:06Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.1.0",
+        "name": "1.1.0~TOTHESEA",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~BETA-0324b``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog Summary\r\n## 1.1.0~TOTHESEA\r\n### New Content\r\n- Added 3 new Abnormalities: Big and Will be Bad Wolf, Forsaken Murderer, The Firebird\r\n- Added 5 new Achievements: CENSORED, Crimson Scar, Cobalt Scar, Regret, Feather of Honor\r\n- Added another new ?????? ?????\r\n### Balance Changes\r\nChanges were made to CENSORED, Fragment of the Universe, Child of the Galaxy, Judgement Bird, One Sin and Hundred of Good Deeds, and Express Train to Hell.\r\n### Bug Fixes & Improvements\r\n- Optimized a specific boss' cutscenes file and reduced file size\r\n- Fixed crashes with the following Abnormalities: Big Bird, CENSORED, Fairy Festival, Child of the Galaxy, Spider Bud\r\n\r\nThe full changelog can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-03-28T15:24:13Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.3b",
+        "name": "1.0.3b",
+        "body": "# Changelog Summary\r\n## 1.0.3b\r\n- Fixed Express Train to Hell's Active Ability not working\r\n- Attempted to fix a crash relating to ``sound_conditionals.lua``\r\n## 1.0.3\r\n### New Content\r\n- Added a new Abnormality: Little Red Riding Hooded Mercenary\r\n### Balance Changes\r\n- Express Train to Hell: \r\n  - Reduced money gain per light\r\n  - After use, [Active Ability] now disabled until hand is played\r\n- Judgement Bird: XMult per Sin X0.05 > X0.1\r\n- Changes made to a Challenge Boss Blind\r\n### Bug Fixes & Improvements\r\n- Removed some restrictions from Control, Information, Training, Safety and Central Command challenges\r\n- Added some restricted cards to challenges\r\n- Reworked a rule in Central Command challenge\r\n- Fixed a crash when activating You Must Be Happy, then destroying cards with Jokers\r\n- Fixed Green Dawn crashing with Talisman installed\r\n\r\nThe full changelog can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-02-10T15:15:52Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.0.3b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.2b",
+        "name": "1.0.2b",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~ALPHA-1314d``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog\r\n## 1.0.2b\r\n- Fixed Fragment of the Universe's Observation Level 1 description\r\n## 1.0.2\r\n### New Content\r\n- Added a new Abnormality: **Fragment of the Universe**\r\n- Added 8 new achievements\r\n### Bug Fixes & Improvements\r\n- Fixed Laetitia crashing when duplicating cards\r\n- Fixed Scorched Girl using incorrect undiscovered quote\r\n- Fixed Judgement Bird using incorrect subject number in the description\r\n- Fixed Opened Can of WellCheer's JokerDisplay\r\n- Updated music priority in relation to other music-changing mods\r\n\r\nThe full changelog from version ``1.0.0-pre2`` up until this version (excluding 1.0.2b) can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-02-02T07:40:20Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.0.2b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.1",
+        "name": "1.0.1",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~ALPHA-1314d``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog\r\n## Balance Changes\r\n### Crimson Dawn: \r\n- Blind Size X0.8 > X1\r\n- Hands required 2 > 4\r\n## Bug Fixes & Improvements\r\n- Added a new passive to Green Ordeals\r\n- Fixed Crimson Noon and Crimson Dusk resulting in a Game Over when beating Crimson Dawn but not having enough chips to beat the former blinds\r\n...and some other fixes, see the full changelog.\r\n\r\nThe full changelog from version ``1.0.0-pre2`` up until this version can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-01-27T16:09:33Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.0",
+        "name": "1.0.0",
+        "body": "# Please make sure your **Steamodded** version is at least ``1.0.0~ALPHA-1314d``!\r\n(The last four numbers correspond to the release date of the Steamodded version. If your version's number is lower, please update.)\r\n\r\n# Changelog\r\nThe full changelog from version ``1.0.0-pre2`` up until this version can be found here:\r\nhttps://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing\r\n\r\n# Installation\r\nInstall **Steamodded** here: https://github.com/Steamodded/smods/wiki\r\nThen, download the mod by pressing the **Source code (zip)** button below.\r\n",
+        "publishedAt": "2025-01-22T09:23:22Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.0.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.0-pre4",
+        "name": "1.0.0-pre4 [old-calc]",
+        "body": "- Bumped required Steamodded version, now requires **1.0.0~ALPHA-1221a**\r\n- Removed debug code that made a boss appear every Ante\r\n- Sped up music files, which means less space taken\r\n- Added ``no_collection`` to the following blinds: Dawn Ordeal, Noon Ordeal, Dusk Ordeal, Midnight Ordeal (the base versions with white sprites), smaller versions of a specific boss blind and a Challenge-exclusive boss blind\r\n- ...hey, who left this mirror here?",
+        "publishedAt": "2024-12-22T15:55:26Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.0.0-pre4",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "1.0.0-pre3",
+        "name": "1.0.0-pre3",
+        "body": "- **Judgement Bird**: No longer takes away 1 hand\r\n- A specific Boss Blind:\r\n  - A passive no longer destroys cards\r\n  - Now displays the activated passive when selecting a hand that would be debuffed\r\n- **Punishing Bird**'s alert can now be removed\r\n- Fixed crash when selecting **Disciplinary**\r\n- Fixed challenge names not showing\r\n- Fixed crash on several boss blinds",
+        "publishedAt": "2024-12-19T06:26:44Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.0.0-pre3",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "1.0.0-pre2",
+        "name": "1.0.0-pre2",
+        "body": "Changes: https://docs.google.com/document/d/1eHInr9F44KQo7p8mbNmKRjMfPOJ6sG6sJOsDXip-UEE/edit?usp=sharing",
+        "publishedAt": "2024-12-15T09:53:38Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/1.0.0-pre2",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "0.9.0-pre1b",
+        "name": "0.9.0-pre1b",
+        "body": "- Added **Enable Lobcorp Themes in Normal Gameplay** config\r\n- Fixed a crash when viewing **Information**'s restrictions with Cryptid's Misc. disabled and Code Cards enabled\r\n- Fixed a crash when viewing Abnormalities in Collection after enabling Discover All",
+        "publishedAt": "2024-09-18T12:02:56Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.9.0-pre1b",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "0.9.0-pre1",
+        "name": "0.9.0-pre1",
+        "body": "- Added two Abnormalities: **Fairy Festival**, **Big Bird**\r\n- Added an E.G.O Gift: **TT2 Protocol**\r\n  - This E.G.O Gift can only appear in a challenge, and decks other than Deck of Equibilirium if Cryptid is enabled\r\n- Added **Information**, **Training**, **Safety**, **Central Command** and **Discipline** challenges\r\n  - **Central Command** and **Discipline** unlock requirement: Beat 3 of 4 challenges: **Control**, **Information**, **Training**, or **Safety**\r\n- Updated how **Crimson Ordeals** are handled\r\n- Updated how **Achievements** are handled\r\n- Updated the priority in which music is played (ex. \"Second Warning\" from **Midnight Ordeals** will no longer play in specific challenges)\r\n- **Crimson Noon** and **Crimson Dawn** when spawned by **Crimson Dusk** are now also considered bosses (for effects such as Cryptid's **;//**)\r\n- Some effects can now activate even when the relevant Abnormality is debuffed\r\n- Some effects can now be retriggered via Joker Retrigger (ex. Cryptid's **Canvas**)\r\n  - Affected Abnormalities: **CENSORED**, **Child of the Galaxy**, **Funeral of the Dead Butterflies**, **Laetitia**, **Mountain of Smiling Bodies**, **Old Faith and Promise**, **Old Lady**, **Scarecrow Searching for Wisdom**\r\n- Cards affected by **CENSORED** now keep the [CENSORED] UIBox, even when **CENSORED** is sold or debuffed\r\n- **Today's Shy Look** no longer repeat faces, and face randomization is no longer seed dependant\r\n- **All-Around Helper**: XMult gain **X1.25** > **X1.4**\r\n- **Laetitia**: Cost **$7** > **$8**\r\n- **WhiteNight**: Discovery threshold **[6]** > **[3]**\r\n- Fixed card badges\r\n- Fixed **Crimson Ordeals** not changing phases properly when the save is reloaded\r\n- Fixed **Crimson Dawn** activating again even after selling a Joker\r\n- Fixed **We Can Change Anything** being able to skip **Crimson Noon** and **Crimson Dusk**\r\n- Fixed a crash with Challenges crashing when playing with Cryptid\r\n- Bumped required Steamodded version (``1.0.0~ALPHA-0909a``)",
+        "publishedAt": "2024-09-11T16:22:51Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.9.0-pre1",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "0.8.2",
+        "name": "0.8.2",
+        "body": "- Added 2 new Abnormalities: **Child of the Galaxy**, **CENSORED**\r\n- Added flavor text to a boss blind\r\n- Updated code for Steamodded's updated Sound API\r\n- Updated debuff code for **Dawn Crimson** and another boss blind\r\n- Updated attention text (**Plague Doctor**, **The Price of Silence**, Ordeal announcements) to be more optimized\r\n- All **Noon Ordeals** are no longer considered **Boss Blinds** (guh)\r\n- **Dawn Crimson**: Now always triggers after the second hand\r\n- **Noon Violet**:\r\n  - Base **X1.75** > **X1.5**\r\n  - Hands penalty threshold **30%** > **20%**\r\n  - Now scales by **X0.2** per consumable slot\r\n- **Midnight Violet**:\r\n  - Base **X3** > **X2**\r\n  - Hands penalty threshold **40%** > **30%**\r\n  - Now scales by **X1** per Joker slot, minus 3\r\n- **Theresia**: chips per hand **7** > **6**\r\n- Fixed **Laetitia** and **The Queen of Hatred**'s joker display\r\n- Fixed a crash with playing sound",
+        "publishedAt": "2024-08-05T16:31:17Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.8.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.8.1",
+        "name": "0.8.1 - Configurations",
+        "body": "# 0.8.1 Changelog\r\n- Added mod configs\r\n- Made all sound effects slightly quieter\r\n- **Dusk Ordeals** are now considered **Boss Blinds** again\r\n- All Challenges: Also banned **Boss Tag** and **Luchador**\r\n- **Laetitia**: No longer permanently debuffs cards when it is debuffed\r\n- **Nameless Fetus**:\r\n  - All copies now share the same hand type\r\n  - Now benefits from cards destroyed by other effects such as **Sixth Sense**\r\n- **The Heart of Aspiration**: Starting XMult **X1** > **X0** (before x2.5 > x4 > x5.5..., now x1.5 > x3 > x4.5...)\r\n- **The Mountain of Smiling Bodies**:\r\n  - Now gains Chips and Mult before hand is scored\r\n  - Multiple copies now all gain Chips and Mult\r\n  - Now benefits from cards destroyed by other effects such as **Sixth Sense**\r\n- **The Price of Silence**: \r\n  - Now also resets time on discard\r\n  - Discovery thresholds **[2/5/7]** > **[2/4/6]**\r\n- **WhiteNight**: Discovery thresholds **[?/8]** > **[?/6]**\r\n- Fixed **The Lady Facing the Wall**'s joker display\r\n- Added quality 4 items",
+        "publishedAt": "2024-07-26T07:12:26Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.8.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.8.0",
+        "name": "0.8.0",
+        "body": "- Added 2 new Abnormalities: **The Heart of Aspiration**, **Scarecrow Searching for Wisdom**\r\n- Added 1 new Consumable: **Wisdom** [E.G.O Gift]\r\n- Added compatibility with **[JokerDisplay](https://github.com/nh6574/JokerDisplay)**\r\n- Abno icons now take more space in their art\r\n- Abno descriptions now have a blank line between effects\r\n- Added sound effect to **Funeral of the Dead Butterflies**\r\n- Reworded **Old Faith and Promise**, now allows **Negative** to be rolled\r\n- Changed wording on **Nameless Fetus**\r\n- **We Can Change Anything**: Discovery thresholds [**2/4/6**] > [**2/3/5**]\r\n- **Scorched Girl**: Blind Size reduction **30%** > **20%**\r\n- **Today's Shy Look**: Chips [**40/20/5/-20/-40**] > [**30/15/5/-15/-30**]\r\n- **The Lady Facing the Wall**: Min retriggers **1** > **2**\r\n- **The Servant of Wrath**: Abnormality code changed **0-01-00** > **0-01-??**\r\n- **Control** (challenge):\r\n  - Consumable flipping is now after Ante 3\r\n  - Jokers flipping is now after Ante 6\r\n- Fixed **We Can Change Anything** setting hands to 0 every round\r\n- Fixed **Old Lady** reducing Mult from undebuffing Jokers",
+        "publishedAt": "2024-07-20T06:20:31Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.8.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.7.1",
+        "name": "0.7.1",
+        "body": "- Added 2 new Abnormalities: **Old Faith and Promise**, **Funeral of the Dead Butterflies**\r\n- **Dawn Ordeals** and **Noon Ordeals** are no longer considered bosses (for effects like **Rocket**)\r\n- Banned **Director's Cut** and **Retcon** from all Challenges\r\n- Fix Jokers automatically shuffling past Ante 3",
+        "publishedAt": "2024-07-09T05:00:14Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.7.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.7.0",
+        "name": "0.7.0 - Ordeals Update",
+        "body": "- Added **14** new Ordeals (Blinds)\r\n  - In normal games, Ordeals have a **1/8** chance to replace a blind:\r\n    - **Dawn** on Ante **2** Small Blind\r\n    - **Noon** on Ante **4** Big Blind\r\n    - **Dusk** on Ante **6** Boss Blind\r\n    - **Midnight** on Ante **8** Boss Blind\r\n    - Repeats after Ante **8**\r\n  - Some challenges can guarantee Ordeals\r\n- Added 2 new Challenges: **Increased Ordeals** and **Control** (unlocked automatically)\r\n- Overrode base Steamodded code so Challenges with an unlock condition will still be locked after using **Unlock All**\r\n- Changed **Extraction Pack** to use Steamodded's Booster Pack API\r\n- Slightly reduced **Extraction Pack** spawn rate\r\n- **Nameless Fetus**: Now shows chosen hand before observation\r\n- <details>\r\n    <summary><b>Spoilers Zone</b></summary>\r\n    Fixed <b>Dark Days</b> blind size decrease not applying on Ante 0 when using Hieroglyph on Ante 1\r\n</details>\r\n\r\n# Make sure your Steamodded version is ``1.0.0-ALPHA-0706a-STEAMODDED`` or later when updating!",
+        "publishedAt": "2024-07-07T04:33:52Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.7.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.6.1d",
+        "name": "0.6.1d",
+        "body": "0.6.1b - 0.6.1d\r\n- Fixed modifiers sprites\r\n- Fixed **Scorched Girl** and **Theresia** not undebuffing cards when removed\r\n- Fixed blinds starting as discovered",
+        "publishedAt": "2024-06-28T08:43:17Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.6.1d",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.6.1",
+        "name": "0.6.1",
+        "body": "- Fixed typo in **All-Around Helper**'s description\r\n- Fixed **All-Around Helper** giving Mult instead of Xmult\r\n- **All-Around Helper** no longer shows the message at X1 Mult\r\n- Increase time before text disappears for **Plague Doctor**",
+        "publishedAt": "2024-06-28T03:23:41Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.6.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.6.0",
+        "name": "0.6.0",
+        "body": "- Added 2 new abnormalities\r\n- Card modifiers now have sprites\r\n- Card modifiers are now kept when the card changes Enhancements\r\n- A specific Challenge: discards **4** > **3**\r\n- **The Queen of Hatred**, **The Servant of Wrath**: breach penalty **X2** > **X1.5**\r\n- **Happy Teddy Bear**: upgrades **2** > **1**\r\n- **Nameless Fetus**: penalty **X0.1** > **X0.5**\r\n- **We Can Change Anything**: rarity **Uncommon** > **Common**\r\n- **You're Bald...**: can no longer appear in shop, only in Extraction Packs\r\n- **Bless Order** is now first card instead of last card\r\n- Fixed **We Can Change Anything** activating outside of Joker slots\r\n- Fixed **Today's Shy Look** not showing the face sprite without Cryptid installed\r\n- ``lovely.toml`` is now split into multiple files in ``lovely``",
+        "publishedAt": "2024-06-27T12:52:48Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.6.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.5.4",
+        "name": "0.5.4",
+        "body": "- **You're Bald...**: Cost **$2** > **$1**\r\n- Added a new **Challenge**\r\n- A specific Boss Blind:\r\n  - Updated to Steamodded's latest commit\r\n  - Can no longer go under the Blind Size cap\r\n  - Specific cards are no longer destroyed when going past the Blind Size cap\r\n- Game Over screen now shows the Abnormalities' name if they caused the Game Over\r\n\r\n## Make sure your Steamodded version is ``1.0.0-ALPHA-0624a-STEAMODDED`` or later when updating!",
+        "publishedAt": "2024-06-24T13:34:09Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.5.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.5.3",
+        "name": "0.5.3",
+        "body": "- Modified base game behavior so Game Over occurs at below 0 hands instead of 1\r\n- Added a new Abnormality\r\n- **We Can Change Anything**: \r\n  - Hands loss **0.01** > **0.02**, loss increase **0.01** > **0.02**\r\n  - Now gives a Game Over at below 0 hands instead of 1\r\n  - Now displays test when upgraded\r\n- **The Lady Facing the Wall**: Max retriggers **4** > **5**\r\n- Reduced volume for some sound effects",
+        "publishedAt": "2024-06-23T15:14:47Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.5.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.5.2c",
+        "name": "0.5.2c",
+        "body": "- Fixed crash for blinds that flips cards\r\n- Fixed **The Queen of Hatred** compatibility with Talisman",
+        "publishedAt": "2024-06-22T06:33:48Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.5.2c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.5.2",
+        "name": "0.5.2",
+        "body": "- Added **Nameless Fetus** and **The Lady Gazing the Wall** (ideas by Twilight & Sunset)\r\n- Fixed **Today's Shy Look** crashing\r\n- Removed sorting from **Servant of Wrath**",
+        "publishedAt": "2024-06-22T02:55:56Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.5.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.5.1",
+        "name": "0.5.1",
+        "body": "- Fixed **Today's Shy Look** layering",
+        "publishedAt": "2024-06-21T02:56:46Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.5.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.5.0",
+        "name": "0.5.0",
+        "body": "- Added 2 new Abnormalities: **The Servant of Wrath** and **Today's Shy Look**\r\n- Added sticker compatibility to some Abnormalities\r\n- Added risk level to all Abnormalities\r\n- Debug Mode: **[2] Discover** can be used to discover Abnormalities immediately\r\n- Collections: Abnormalities' UI boxes now appear at the bottom if they're in the middle row (other Jokers are not affected)\r\n- Moved all ``loc_txt`` to ``localization/default.lua``\r\n- **We Can Change Anything**: starting score **20** > **5**, starting hand loss and hand loss gain **0.02** > **0.01**, interval **15**s > **10**s, no longer disables self\r\n- **Old Lady**: starting Mult **5** > **0**, Mult penalty **20** > **10**",
+        "publishedAt": "2024-06-20T16:03:01Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.5.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.4.4b",
+        "name": "0.4.4b",
+        "body": "- Fixed a \"bug\"\r\n\r\n\r\n# Download\r\nPlease select \"**Source code** (zip)\" below.",
+        "publishedAt": "2024-06-14T00:48:47Z",
+        "htmlUrl": "https://github.com/Mysthaps/LobotomyCorp/releases/tag/0.4.4b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-02T07:21:06.979Z"
   },
   "Balatro-Dream-BBQ-Mod@Noodlemire": {
     "id": "DreamBBQ",
@@ -2392,281 +2695,6 @@
     ],
     "updated_at": "2026-01-31T16:48:25Z",
     "readme": "# N's Repertorium - Balatro Mod\n\nAdds stuff.\n\nBetter enjoyed with [Blockbuster: Counters](https://github.com/icyethics/Blockbuster-Counters). Also features [Balatro Goes Kino](https://github.com/icyethics/Kino) crossmod.\n\n## Installation\n\n1. Install [Steamodded](https://github.com/Steamopollys/Steamodded) [(version >1.0.0)](https://github.com/Steamodded/smods/wiki)\n2. Download the [latest release](https://github.com/nh6574/JoyousSpring/releases)\n3. Extract the zip file into its own folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\n\n## Contact\n\nIf you have any issues feel free to contact me on [Bluesky](https://bsky.app/profile/nh6574.com) or [on the official Balatro Discord as nh6574](https://discord.com/invite/balatro)\n\nAnd here's my [ko-fi link](https://ko-fi.com/nh6574) if you feel especially grateful.\n\nAlso check out my Quality of Life mod [JokerDisplay](https://github.com/nh6574/JokerDisplay)!\nor my Yu-Gi-Oh! mod [JoyousSpring](https://github.com/nh6574/JoyousSpring)!\n",
-    "images": [
-      {
-        "path": "/wiki-data/Repertorium@nh6574/images/1769878110698-371127692.png",
-        "filename": "1769878110698-371127692.png",
-        "originalName": "icon.png",
-        "size": 1543,
-        "isThumbnail": false
-      }
-    ],
-    "versionHistory": [
-      {
-        "tag": "v0.1.1",
-        "name": "0.1.1",
-        "body": "## What's Changed\r\nThis release requires [SMODS~BETA-0827c or higher](https://github.com/Steamodded/smods/releases/latest)\r\n* Initial release\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous Repertorium files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\nBetter enjoyed with [Blockbuster: Counters](https://github.com/icyethics/Blockbuster-Counters). \r\nAlso features [Balatro Goes Kino](https://github.com/icyethics/Kino) crossmod.",
-        "publishedAt": "2025-09-07T20:12:17Z",
-        "htmlUrl": "https://github.com/nh6574/Repertorium/releases/tag/v0.1.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      }
-    ],
-    "versionHistoryLastCheck": "2026-02-02T06:14:44.674Z",
-    "analytics": {
-      "views": 2,
-      "lastViewed": "2026-02-02T06:14:44.762Z"
-    }
-  },
-  "Entropy@lord-ruby": {
-    "id": "entr",
-    "name": "Entropy",
-    "author": [
-      "Ruby",
-      "The Entropy Discord"
-    ],
-    "description": "A Chaotic Balatro mod focused on Inverted Consumables and expanding on Vanilla mechanics in various other ways. Generally Vanilla adjacent but not exactly Vanilla+",
-    "favourites": 1,
-    "allow_redistribution": true,
-    "badge_colour": "FE0001",
-    "dependencies": [
-      "Steamodded (>=1.0.0~BETA-01224a)",
-      "Cryptlib"
-    ],
-    "conflicts": [],
-    "published_at": "2026-01-31T17:00:29.739Z",
-    "type": "Mod",
-    "tags": [
-      "Textures",
-      "SFX",
-      "Jokers",
-      "Consumables",
-      "Cards",
-      "Blinds",
-      "Modifiers",
-      "Mechanics"
-    ],
-    "updated_at": "2026-01-11T00:45:01Z",
-    "readme": "\n# Entropy\nA Chaotic Balatro mod focused on Inverted Consumables and expanding on Vanilla mechanics in various other ways\nGenerally Vanilla adjacent but not exactly Vanilla+\n\n[Download CryptLib](https://github.com/SpectralPack/Cryptlib)\n\nEntropy currently adds:\n\n<img width=\"793\" height=\"609\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d9dbbeb0-843d-4039-9708-da7cdc822835\" />\n<img width=\"574\" height=\"344\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2365bf1c-eebb-4c1a-9c1a-d69a7281b567\" />\n<img width=\"357\" height=\"114\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d9fae1fd-79b3-4ffb-9d66-f8720248c11f\" />\n\n## Contact\nFor enquiries please join the [Entropy Discord](https://discord.gg/beqqy4Bb7m)\n",
-    "images": [
-      {
-        "path": "/wiki-data/Entropy@lord-ruby/images/1769878830304-52863340.png",
-        "filename": "1769878830304-52863340.png",
-        "originalName": "thumbnail.png",
-        "size": 105667,
-        "isThumbnail": false
-      }
-    ],
-    "versionHistory": [
-      {
-        "tag": "v1.2b",
-        "name": "v1.2",
-        "body": "## What's Changed\r\n* bring dev up to standard, (please make prs on dev branch please) by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/83\r\n* epitachyno cost fix by @crabus72 in https://github.com/lord-ruby/Entropy/pull/88\r\n* Avoid implicit type conversion in shader by @mleaf233 in https://github.com/lord-ruby/Entropy/pull/90\r\n* fix info_queue. shader code optimization by @mleaf233 in https://github.com/lord-ruby/Entropy/pull/94\r\n* my dream journal crossmod by @soulware1 in https://github.com/lord-ruby/Entropy/pull/95\r\n* world's worst pull request award by @soulware1 in https://github.com/lord-ruby/Entropy/pull/96\r\n* 15 new Jokers\r\n* 1 New Deck\r\n* 2 New Vouchers\r\n* Many reworks and resprites\r\n\r\n## New Contributors\r\n* @mleaf233 made their first contribution in https://github.com/lord-ruby/Entropy/pull/90\r\n* @soulware1 made their first contribution in https://github.com/lord-ruby/Entropy/pull/95\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.1.0...v1.2",
-        "publishedAt": "2026-01-08T12:07:28Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.2b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.1.0",
-        "name": "v1.1.0",
-        "body": "## What's Changed\r\n* mirror Scalae/Double Scale PR changes on Anaptyxi by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/57\r\n* Dev by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/58\r\n* Update config.lua by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/59\r\n* better checks for echo by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/60\r\n* fix some stuff by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/61\r\n* Implement Crossmod Fraud cards with Bunco by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/64\r\n* Add perma-bonuses for ascension power by @borb43 in https://github.com/lord-ruby/Entropy/pull/66\r\n* Hot Potato Crossmod  - Inverse aura cards by @LFMoth in https://github.com/lord-ruby/Entropy/pull/67\r\n* pronouns fix by @crabus72 in https://github.com/lord-ruby/Entropy/pull/69\r\n* SpectrumAPI Compat: Star Cards for Spectrum Hands (also merge bunco frauds into dev branch) by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/70\r\n* Actually Re-implement bunco crossmod frauds into dev branch by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/71\r\n* G.GAMe by @f-raZ0R in https://github.com/lord-ruby/Entropy/pull/72\r\n* update uibox shader patch by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/74\r\n* fix typo in Entropy.HigherCardRank + minor shader code fixes by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/75\r\n* Added 50 new Jokers, Many resprites, 2 New Consumables by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/77\r\n\r\n## New Contributors\r\n* @InvalidOS made their first contribution in https://github.com/lord-ruby/Entropy/pull/57\r\n* @f-raZ0R made their first contribution in https://github.com/lord-ruby/Entropy/pull/64\r\n* @borb43 made their first contribution in https://github.com/lord-ruby/Entropy/pull/66\r\n* @LFMoth made their first contribution in https://github.com/lord-ruby/Entropy/pull/67\r\n* @crabus72 made their first contribution in https://github.com/lord-ruby/Entropy/pull/69\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0...v1.1.0",
-        "publishedAt": "2025-11-10T00:58:17Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.1.0",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.0.0b",
-        "name": "v1.0.0b",
-        "body": "## What's Changed\r\n* mirror Scalae/Double Scale PR changes on Anaptyxi by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/57\r\n* Fix Card Back Crash by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/58\r\n* Music for Twisted Packs\r\n\r\n## New Contributors\r\n* @InvalidOS made their first contribution in https://github.com/lord-ruby/Entropy/pull/57\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0...v1.0.0b",
-        "publishedAt": "2025-09-08T19:30:33Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.0.0",
-        "name": "v1.0.0",
-        "body": "## What's Changed\r\n* Add Choco Egg sprite by @cassknows in https://github.com/lord-ruby/Entropy/pull/12\r\n* Hotfix hotfix by @wingedcatgirl in https://github.com/lord-ruby/Entropy/pull/13\r\n* fix atlas crash for destiny spectral card by @triple6lexi in https://github.com/lord-ruby/Entropy/pull/14\r\n* Fix rendering issue with Aikoyori's Shenanigans' font config by @hayaunderscore in https://github.com/lord-ruby/Entropy/pull/15\r\n* Add files via upload by @cassknows in https://github.com/lord-ruby/Entropy/pull/16\r\n* Assign Handy actions to new sell/use buttons by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/18\r\n* Fix 2x otherconsumeables atlas by @WhoNeedsAUsrName in https://github.com/lord-ruby/Entropy/pull/25\r\n* Fix 'The Saint' not preventing Gateway from nuking jokers by @AnnieTheEagle in https://github.com/lord-ruby/Entropy/pull/26\r\n* Updated TheFamily compat by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/29\r\n* fix bignum ante crash w/ talisman by @real-niacat in https://github.com/lord-ruby/Entropy/pull/32\r\n* solve the worlds biggest problem by @real-niacat in https://github.com/lord-ruby/Entropy/pull/33\r\n* fix ascpow dagger also stabbing your balatro by @real-niacat in https://github.com/lord-ruby/Entropy/pull/34\r\n* Merge Visual Changes from Dev by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/39\r\n* prevent repetitions in packs on twisted deck by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/41\r\n* Fix runes & omega display by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/42\r\n* fix menger sponge triggerin too often by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/43\r\n* endurance actually debuffs by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/44\r\n* ward actually debuffs by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/45\r\n* anaptxi fix for new smods features by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/48\r\n* back crash related fix by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/50\r\n* add curse config by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/54\r\n\r\n## New Contributors\r\n* @wingedcatgirl made their first contribution in https://github.com/lord-ruby/Entropy/pull/13\r\n* @triple6lexi made their first contribution in https://github.com/lord-ruby/Entropy/pull/14\r\n* @hayaunderscore made their first contribution in https://github.com/lord-ruby/Entropy/pull/15\r\n* @SleepyG11 made their first contribution in https://github.com/lord-ruby/Entropy/pull/18\r\n* @WhoNeedsAUsrName made their first contribution in https://github.com/lord-ruby/Entropy/pull/25\r\n* @AnnieTheEagle made their first contribution in https://github.com/lord-ruby/Entropy/pull/26\r\n* @real-niacat made their first contribution in https://github.com/lord-ruby/Entropy/pull/32\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v0.4.1...v1.0.0",
-        "publishedAt": "2025-08-26T23:56:16Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.0.0-alpha5",
-        "name": "v1.0.0~Alpha 5",
-        "body": "## What's Changed\r\n* Updated TheFamily compat by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/29\r\n* fix bignum ante crash w/ talisman by @real-niacat in https://github.com/lord-ruby/Entropy/pull/32\r\n\r\n## New Contributors\r\n* @real-niacat made their first contribution in https://github.com/lord-ruby/Entropy/pull/32\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0-alpha4...v1.0.0-alpha5",
-        "publishedAt": "2025-07-30T16:18:58Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha5",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.0.0-alpha4",
-        "name": "v1.0.0~Alpha 4",
-        "body": "## What's Changed\r\n* Finish Fraud Card Sprites\r\n* Start adding Runes\r\n* Add some new Jokers\r\n* Update to new SMODS apis\r\n\r\n## New Contributors\r\n* @WhoNeedsAUsrName made their first contribution in https://github.com/lord-ruby/Entropy/pull/25\r\n* @AnnieTheEagle made their first contribution in https://github.com/lord-ruby/Entropy/pull/26\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.0.0-alpha3...v1.0.0-alpha4",
-        "publishedAt": "2025-07-14T13:05:21Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha4",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.0.0-alpha3",
-        "name": "v1.0.0~Alpha 3",
-        "body": "Fix various things",
-        "publishedAt": "2025-06-16T16:32:43Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha3",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.0.0-alpha2b",
-        "name": "v1.0.0-alpha-2b",
-        "body": "Fix a typo that caused a crash",
-        "publishedAt": "2025-06-11T20:24:43Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha2b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.0.0-alpha2",
-        "name": "v1.0.01~Alpha 2",
-        "body": "## What's Changed\r\n* Add Choco Egg sprite by @cassknows in https://github.com/lord-ruby/Entropy/pull/12\r\n* Hotfix hotfix by @wingedcatgirl in https://github.com/lord-ruby/Entropy/pull/13\r\n* fix atlas crash for destiny spectral card by @triple6lexi in https://github.com/lord-ruby/Entropy/pull/14\r\n* Fix rendering issue with Aikoyori's Shenanigans' font config by @hayaunderscore in https://github.com/lord-ruby/Entropy/pull/15\r\n* Add files via upload by @cassknows in https://github.com/lord-ruby/Entropy/pull/16\r\n* Assign Handy actions to new sell/use buttons by @SleepyG11 in https://github.com/lord-ruby/Entropy/pull/18\r\n* Implement all fraud cards with some sprites missing\r\n* Add purity\r\n* Add null\r\n* Various bugfixes\r\n## New Contributors\r\n* @wingedcatgirl made their first contribution in https://github.com/lord-ruby/Entropy/pull/13\r\n* @triple6lexi made their first contribution in https://github.com/lord-ruby/Entropy/pull/14\r\n* @hayaunderscore made their first contribution in https://github.com/lord-ruby/Entropy/pull/15\r\n* @SleepyG11 made their first contribution in https://github.com/lord-ruby/Entropy/pull/18\r\n\r\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/V1.0.0-alpha...v1.0.0-alpha2",
-        "publishedAt": "2025-06-11T19:58:43Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.0.0-alpha2",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "V1.0.0-alpha",
-        "name": "Entropy v1.0.0~alpha",
-        "body": "rewrite release hopefully with no bugs this time",
-        "publishedAt": "2025-05-08T23:19:56Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/V1.0.0-alpha",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.4.1",
-        "name": "Entropy v0.4.1",
-        "body": "Add The Joker in yellow alongside various bug fixes",
-        "publishedAt": "2025-05-04T14:50:37Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.4d",
-        "name": "Entropy v0.4d",
-        "body": "",
-        "publishedAt": "2025-05-01T01:40:14Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4d",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.4",
-        "name": "Entropy v0.4",
-        "body": "",
-        "publishedAt": "2025-04-30T17:12:30Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.4c",
-        "name": "Entropy v0.4c",
-        "body": "Hotfix for various bugs and crashes",
-        "publishedAt": "2025-04-30T22:56:31Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4c",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.4b",
-        "name": "Entropy v0.4b",
-        "body": "a small hotfix related to dekatria",
-        "publishedAt": "2025-04-30T18:45:34Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.4b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.3",
-        "name": "Entropy v0.3",
-        "body": "Reverse spectrals update",
-        "publishedAt": "2025-04-20T13:37:46Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.3",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.2",
-        "name": "Entropy v0.2",
-        "body": "reverse planets update",
-        "publishedAt": "2025-04-09T16:18:28Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.2",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v0.2b",
-        "name": "Entropy v0.2b",
-        "body": "fix a few crashes related to reverse planet cards",
-        "publishedAt": "2025-04-09T16:27:01Z",
-        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v0.2b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      }
-    ],
-    "versionHistoryLastCheck": "2026-02-02T06:07:43.746Z",
-    "analytics": {
-      "views": 7,
-      "lastViewed": "2026-02-02T06:19:42.914Z",
-      "downloads": 1,
-      "lastDownloaded": "2026-01-31T17:06:12.352Z"
-    }
-  },
-  "Cryptlib@SpectralPack": {
-    "id": "Cryptlib",
-    "name": "Cryptlib",
-    "author": [
-      "The Cryptid discord"
-    ],
-    "description": "A library mod for all the functions that Cryptid has to offer",
-    "favourites": 0,
-    "allow_redistribution": true,
-    "badge_colour": "708b91",
-    "dependencies": [],
-    "conflicts": [],
-    "published_at": "2026-01-31T17:02:43.372Z",
-    "type": "Mod",
-    "tags": [
-      "Misc"
-    ],
-    "updated_at": "2026-01-31T17:02:19Z",
-    "readme": "# CryptLib\nCryptLib is a mod that provides helper functionality otherwise only accesible by depending on Cryptid\nThis includes:\n* Gameset config and disabling arbitrary content (opt-in)\n* Value Manipulation\n* Forcetrigging including Vanilla support\n* Pluralisation for card descriptions\n* Talisman independant ^mult & ^chips if Talisman isnt present\n* Function definitions for to_big, to_number and lenient_bignum incase Talisman isnt present\n* Various other utility functions\n",
     "images": [
       {
         "path": "/wiki-data/Repertorium@nh6574/images/1769878110698-371127692.png",
