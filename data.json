@@ -2666,9 +2666,7 @@
       "Misc"
     ],
     "updated_at": "2026-01-31T17:02:19Z",
-    "readme": "# CryptLib\nCryptLib is a mod that provides helper functionality otherwise only accesible by depending on Cryptid\nThis includes:\n* Gameset config and disabling arbitrary content (opt-in)\n* Value Manipulation\n* Forcetrigging including Vanilla support\n* Pluralisation for card descriptions\n* Talisman independant ^mult & ^chips if Talisman isnt present\n* Function definitions for to_big, to_number and lenient_bignum incase Talisman isnt present\n* Various other utility functions\n"
-  }
-} issues feel free to contact me on [Bluesky](https://bsky.app/profile/nh6574.com) or [on the official Balatro Discord as nh6574](https://discord.com/invite/balatro)\n\nAnd here's my [ko-fi link](https://ko-fi.com/nh6574) if you feel especially grateful.\n\nAlso check out my Quality of Life mod [JokerDisplay](https://github.com/nh6574/JokerDisplay)!\nor my Yu-Gi-Oh! mod [JoyousSpring](https://github.com/nh6574/JoyousSpring)!\n",
+    "readme": "# CryptLib\nCryptLib is a mod that provides helper functionality otherwise only accesible by depending on Cryptid\nThis includes:\n* Gameset config and disabling arbitrary content (opt-in)\n* Value Manipulation\n* Forcetrigging including Vanilla support\n* Pluralisation for card descriptions\n* Talisman independant ^mult & ^chips if Talisman isnt present\n* Function definitions for to_big, to_number and lenient_bignum incase Talisman isnt present\n* Various other utility functions\n",
     "images": [
       {
         "path": "/wiki-data/Repertorium@nh6574/images/1769878110698-371127692.png",
