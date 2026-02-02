@@ -2737,7 +2737,9 @@
     "analytics": {
       "views": 1,
       "lastViewed": "2026-01-27T10:40:10.831Z"
-    }
+    },
+    "versionHistory": [],
+    "versionHistoryLastCheck": "2026-02-02T07:29:03.341Z"
   },
   "bloated_1_modpack": {
     "id": "bloated_1_modpack",
