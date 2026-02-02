@@ -2253,6 +2253,16 @@
     "readme": "# JimboAnd\nJimbo&amp;! is a silly little crossover Balatro mod, where every content pack is going to be whatever media I've got on my mind\nAs of now, the only available content pack is \"Jimbo & Azuma\", which contains 10 Yotsuba/Azumanga themed Jokers. I hate doing art.\n<img width=\"934\" height=\"508\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a27aff38-c9c8-4712-a4f8-4ffa1fe42931\" />\n",
     "versionHistory": [
       {
+        "tag": "0.1.1",
+        "name": "Jimbo made an oopsie",
+        "body": "-Jumbo can be dragged... Can't believe Tomo taught him to be undraggable\r\n-Tweaked Osaka\r\n-Localization thing",
+        "publishedAt": "2026-01-31T04:02:09Z",
+        "htmlUrl": "https://github.com/Evgast/JimboAnd/releases/tag/0.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
         "tag": "0.1.0",
         "name": "Jimbo & Azuma!",
         "body": "The first content pack! Yotsuba/Azumanga themed.\r\n-10 Jokers ya",
@@ -2263,7 +2273,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-01-30T03:36:38.346Z",
+    "versionHistoryLastCheck": "2026-02-02T06:07:19.132Z",
     "analytics": {
       "views": 3,
       "lastViewed": "2026-01-30T17:45:27.470Z"
