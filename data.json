@@ -1043,7 +1043,418 @@
     "readme": "# ![icon](assets/1x/icon.png) CardSleeves\nA Steamodded+lovely Balatro Mod that adds Sleeves.\n\n![Balatro_Card_Sleeves](Balatro_Card_Sleeves.png)\n\n# Requirements\nRequires `steamodded >= 1.0.0~ALPHA-1206c` - [link](https://github.com/Steamodded/smods/wiki).\n\nRequires `Lovely >= 0.6.0` - [link](https://github.com/ethangreen-dev/lovely-injector). This should already be installed as part of steamodded's installation process.\n\n# Installation\nGet the latest stable version from the [Releases](https://github.com/larswijn/CardSleeves/releases/latest), then download and extract the zip.\nOr use `git clone` for the latest development code, which is more up-to-date, but might be unstable.\n\nMake sure to put the `CardSleeves` folder in the `Mods` directory, and that it is not nested.\n\n# Features\nSleeves are run modifiers similar to decks. Any deck and sleeve can be combined.\n\nCardSleeves adds 15 Sleeves by default, some of which have an unique and different effect when paired with their corresponding deck:\n| Sleeve           | Base effect                                            | Unique effect                                                          |\n|------------------|--------------------------------------------------------|------------------------------------------------------------------------|\n| Red Sleeve       | +1 discard                                             | +1 discard, -1 hand                                                    |\n| Blue Sleeve      | +1 hand                                                | +1 hand, -1 discard                                                    |\n| Yellow Sleeve    | +$10                                                   | Seed Money Voucher                                                     |\n| Green Sleeve     | +$1 per remaining hand/discard                         | Can go up to -$2 in debt for every hand and discard                    |\n| Black Sleeve     | +1 joker slot, -1 hand                                 | +1 joker slot, -1 discard                                              |\n| Magic Sleeve     | Crystal Ball Voucher, 2 Fools                          | Omen Globe Voucher                                                     |\n| Nebula Sleeve    | Telescope Voucher, -1 consumable slot                  | Observatory Voucher                                                    |\n| Ghost Sleeve     | Spectral cards appear in shop, Hex card                | Spectrals appear more often in shop, Spectral pack size increases by 2 |\n| Abandoned Sleeve | No Face Cards in starting deck                         | Face Cards never appear                                                |\n| Checkered Sleeve | 26 Spades and 26 Hearts in starting deck               | Only Spades and Hearts appear                                          |\n| Zodiac Sleeve    | Tarot Merchant, Planet Merchant and Overstock Vouchers | Arcana/Celestial pack size increases by 2                              |\n| Painted Sleeve   | +2 hand size, -1 joker slot                            | +1 card selection limit, -1 joker slot                                 |\n| Anaglyph Sleeve  | Double Tag after each Boss Blind                       | Double Tag after each Small/Big Blind                                  |\n| Plasma Sleeve    | Balance chips/mult, X2 base Blind size                 | Balance prices in shop                                                 |\n| Erratic Sleeve   | All ranks/suits in starting deck are randomized        | Starting Hands/Discards/Dollars/Joker slots are randomized between 3-6 |\n\nOther mods have the ability to add their own Sleeves! Some of these mods include:\n+ [Cryptid](https://github.com/MathIsFun0/Cryptid)\n+ [Familiar](https://github.com/RattlingSnow353/Familiar)\n+ [SDM_0's Stuff](https://github.com/SDM0/SDM_0-s-Stuff)\n+ [MoreFluff](https://github.com/notmario/MoreFluff)\n+ [Reverie](https://github.com/dvrp0/reverie)\n+ [Pokermon](https://github.com/InertSteak/Pokermon)\n+ [Buffoonery](https://github.com/pinkmaggit-hub/Buffoonery)\n+ [Balatro Drafting](https://github.com/spire-winder/Balatro-Draft)\n+ [Themed Jokers](https://github.com/cerloCasa/Themed-Jokers)\n+ [Jimbo's Pack](https://github.com/art-muncher/Jimbo-s-Pack)\n+ And more!\n\nCardSleeves also has support for [Galdur](https://github.com/Eremel/Galdur)'s improved new run menu!\n\n# API (for mod developers)\nAny other mod can create new sleeves. See [the wiki](https://github.com/larswijn/CardSleeves/wiki) for more information.\n\n# Credits\nBig thanks to Sable for the original idea and the original art, all the cool people who helped translate, and the amazing balatro modding community for helping out with the lua code.\n\nAny suggestions, improvements or bugs are welcome and can be submitted through Github's Issues, or on the Balatro Discord [Thread](https://discord.com/channels/1116389027176787968/1279246553931976714).\n",
     "published_at": "2025-06-20T00:23:42.053Z",
     "type": "Mod",
-    "tags": []
+    "tags": [],
+    "versionHistory": [
+      {
+        "tag": "v1.8.0",
+        "name": "V1.8.0",
+        "body": "* For other mods devs (also see [API changes](https://github.com/larswijn/CardSleeves/wiki/Sleeves-API-Changes)):\r\n  * Deprecated `shop_final_pass` context for sleeves. As far I'm aware, no mod actually used this context.\r\n  * Refactored `Sleeve:calculate` behind the scenes to use `SMODS.get_card_areas`.\r\n* Mod compatibility for users:\r\n  * Bumped minimum SMODS version to 1.0.0~ALPHA-1424a (feb 2025). You should already have this.\r\n* Localization:\r\n  * 🇩🇪 German by @onichama.",
+        "publishedAt": "2025-06-28T23:22:48Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.8.0",
+        "assets": [
+          {
+            "name": "CardSleeves-1.8.0.zip",
+            "size": 498831,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.8.0/CardSleeves-1.8.0.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.8",
+        "name": "V1.7.8",
+        "body": "* Bug fixes:\r\n  * Fixes compat with recent [SMODS#582 deck preview pages](https://github.com/Steamodded/smods/pull/582) in beta-0525b or later",
+        "publishedAt": "2025-05-28T22:10:49Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.8",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.8.zip",
+            "size": 496796,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.8/CardSleeves-1.7.8.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.7",
+        "name": "V1.7.7",
+        "body": "* New changes in v1.7.7:\r\n  * Added 🇷🇺 Russian localization by @EnderDrag0n and Astryder in #15 \r\n* Changes since v1.7.6:\r\n  * Fixed the `modify_scoring_hand` context for other mod devs (requires SMODS 0521 or later)",
+        "publishedAt": "2025-05-17T00:36:48Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.7",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.7.zip",
+            "size": 496466,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.7/CardSleeves-1.7.7.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.5",
+        "name": "V1.7.5",
+        "body": "- Localization:\r\n  - Added 🇵🇱 Polish by avandemortell2137\r\n",
+        "publishedAt": "2025-05-01T01:21:54Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.5",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.5.zip",
+            "size": 493807,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.5/CardSleeves-1.7.5.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.4",
+        "name": "V1.7.4",
+        "body": "+ Bugfixes:\r\n  + Fixes #13 (Gold Stake sticker visual issues)\r\n  + Yellow sleeve now has the actual word \"voucher\" in its description\r\n+ Localization:\r\n  + Updates to zh_CN\r\n+ Future-proofing:\r\n  + Hopefully take https://github.com/Steamodded/smods/pull/626 into account",
+        "publishedAt": "2025-04-23T19:11:57Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.4",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.4.zip",
+            "size": 491658,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.4/CardSleeves-1.7.4.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.3",
+        "name": "V1.7.3",
+        "body": "+ Added a new option for the config that visually stacks/compress the deck when cardsleeves is installed:\r\n  + Always stack [default]\r\n    + Always stacks the deck closer together.\r\n  + When using sleeve\r\n    + Stack the deck only when using a sleeve.\r\n    + This is the new option, as requested by @fiiibee.\r\n  + Never stack\r\n    + Does not stack the cards. This could result in the sleeve being stretched, and cards visually being outside the sleeve.\r\n    + Not recommended.",
+        "publishedAt": "2025-04-13T23:05:39Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.3",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.3.zip",
+            "size": 490995,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.3/CardSleeves-1.7.3.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.2",
+        "name": "V1.7.2",
+        "body": "* Hopefully fixed sleeves getting confused about the current deck when opening the new run menu while already in a run",
+        "publishedAt": "2025-04-05T05:12:46Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.2",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.2.zip",
+            "size": 490541,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.2/CardSleeves-1.7.2.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.1",
+        "name": "V1.7.1",
+        "body": "* For other mods devs:\r\n  * Sleeves now properly handle returning from the `destroy_card` context\r\n  * Removed `Sleeve:get_name()`, since it did not respect `loc_vars` key change. As far I'm aware, no mod actually used this function\r\n* Mod compatibility:\r\n  * If you are using [VietnameseBalatro](https://github.com/HuyTheKiller/VietnameseBalatro), please update it to avoid conflicts\r\n  * If you are using [SauKhongHuDecks](https://github.com/HuyTheKiller/SauKhongHuDecks), please update it to avoid conflicts\r\n  * If you are using [MoreFluff](https://github.com/notmario/MoreFluff), please update it to avoid conflicts\r\n* Localization:\r\n  * Vietnamese by @HuyTheKiller",
+        "publishedAt": "2025-03-13T15:39:43Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.1",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.1.zip",
+            "size": 489988,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.1/CardSleeves-1.7.1.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.9",
+        "name": "V1.6.9",
+        "body": "- Fixed green sleeve description (effect remains unchanged)",
+        "publishedAt": "2025-03-10T13:35:01Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.9",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.9.zip",
+            "size": 487400,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.9/CardSleeves-1.6.9.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.8",
+        "name": "V1.6.8",
+        "body": "* For other mods devs:\r\n  * Sleeves can now retrigger jokers, similar to steamodded's [1.0.0~BETA-0309b](https://github.com/Steamodded/smods/commit/41bd70adc3fe4664de0cbedd9489583535114494) version letting decks retrigger jokers\r\n* Localization:\r\n  * Green sleeve now has the exact same phrasing as green deck",
+        "publishedAt": "2025-03-09T18:26:51Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.8",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.8.zip",
+            "size": 487403,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.8/CardSleeves-1.6.8.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.7",
+        "name": "V1.6.7",
+        "body": "* New changes in v1.6.7:\r\n  * Other mods' collection -> other -> sleeves should now have better visible description pop-ups\r\n* Bug fixes since v1.6.6:\r\n  * Fixed a bug when using Galdur, it was possible for sleeves to think you were running a different deck\r\n* Bug fixes since v1.6.5:\r\n  * Fix stacked nebula deck + sleeve effect",
+        "publishedAt": "2025-03-05T15:30:40Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.7",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.7.zip",
+            "size": 487655,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.7/CardSleeves-1.6.7.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.4",
+        "name": "V1.6.4",
+        "body": "* For other mods devs (also see [API changes](https://github.com/larswijn/CardSleeves/wiki/Sleeves-API-Changes)):\r\n  * `Sleeve:get_name` has been deprecated. Use `Sleeve:generate_ui` instead. \r\n  * `:apply` now takes a `sleeve` argument (currently same as self). This should not require any code changes currently.\r\n* Content:\r\n  * Added red deck+sleeve unique effects\r\n  * Added blue deck+sleeve unique effects\r\n  * Added yellow deck+sleeve unique effects\r\n  * Added painted deck+sleeve unique effects\r\n* Bug fixes:\r\n  * Automatically unlock sleeves without needing to win a run first\r\n  * Sleeve sprite no longer gets stretched when moving around the top card of the deck\r\n  * No more error messages in collection\r\n  * Hopefully no more `attempt to index G.GAME.viewed_back` crashes\r\n* Localization:\r\n  * Added traditional Chinese (thanks to Mr Clover)",
+        "publishedAt": "2025-02-25T14:53:13Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.4",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.4.zip",
+            "size": 487258,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.4/CardSleeves-1.6.4.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.3",
+        "name": "V1.6.3",
+        "body": "* New in v1.6.3:\r\n  * Fixed sleeve description pop-up location in game over -> new run menu\r\n  * Fixed crash when using Cryptid's refactor branch\r\n* Since v1.6.1 and v1.6.2:\r\n  * Updated mod description when mod is unloaded\r\n  * Internal changes to use metadata json file by @therealbenpai in #10 \r\n  * Safety checks in `check_for_unlock` as reported in #9 ",
+        "publishedAt": "2025-02-11T13:45:18Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.3",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.3.zip",
+            "size": 482405,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.3/CardSleeves-1.6.3.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.0",
+        "name": "V1.6.0",
+        "body": "* API-relevant changes for other mod developers:\r\n  * If you use unlock conditions for sleeves, and it's the default \"win on X deck with Y stake\", you should change from stake index to stake key. See [this page](<https://github.com/larswijn/CardSleeves/wiki/Sleeves-API-Changes#v160>) for more information.\r\n  * Sleeves now support `:calculate`. No worries if your sleeve still uses `:trigger_effect`, as I'll probably support it as long as steamodded is too.\r\n* General changes:\r\n  * Sleeves will now show up in other mods' Additions -> Other, as suggested by @dimserene \r\n  * Plasma deck + plasma sleeve now has a neat little animation for balancing the prices in the shop!\r\n  * The in-game mod description now uses localization for some fancy effects and better readability\r\n  * Changed CardSleeves priority `-1` -> `-10` for compatability with Gemstones\r\n  * Bumped min steamodded version to `1.0.0~ALPHA-1206c`, and set min lovely version to `0.6.0`\r\n* Localization:\r\n  * Portuguese (BR) by @pinkmaggit-hub in #6, appreciate it!\r\n* Bugfixes:\r\n  * Plasma deck + plasma sleeve no longer balances the score twice (visual bug only)",
+        "publishedAt": "2025-01-29T06:02:04Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.0",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.6.0.zip",
+            "size": 481706,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.0/CardSleeves-v1.6.0.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.5",
+        "name": "V1.5.5",
+        "body": "- Steamodded compatibility change for vouchers loading (see #7) (steamodded version 1321c or higher)\r\n- For other mod developers: finally removed `get_current_deck_name`",
+        "publishedAt": "2025-01-23T16:54:09Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.5",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.5.zip",
+            "size": 476903,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.5/CardSleeves-v1.5.5.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.4",
+        "name": "V1.5.4",
+        "body": "* Bugfix: playing cards from other mods should now work properly when using the abandoned deck + sleeve combo",
+        "publishedAt": "2025-01-21T11:20:08Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.4",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.4.zip",
+            "size": 476975,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.4/CardSleeves-v1.5.4.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.3",
+        "name": "V1.5.3",
+        "body": "- Bug fixes:\r\n  - (Galdur only) Last run button no longer changes its sleeve when selecting one without starting a run\r\n- Localization: \r\n  - Changed some hard-coded strings to use localization instead\r\n- UI: \r\n  - Better alignment of sleeve select with stake select in new run menu\r\n  - Sleeve info in deck select and run info should look a bit nicer",
+        "publishedAt": "2025-01-13T16:43:05Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.3",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.3.zip",
+            "size": 477990,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.3/CardSleeves-v1.5.3.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.2",
+        "name": "V1.5.2",
+        "body": "- Fixed possible crash when switching between selecting sleeves <-> selecting deck (galdur only)\r\n- Fixed possible crash when highlighting locked sleeves on a brand new profile",
+        "publishedAt": "2025-01-11T23:00:27Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.2",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.2.zip",
+            "size": 89963,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.2/CardSleeves-v1.5.2.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.1",
+        "name": "V1.5.1",
+        "body": "+ Compatibility with the latest version of steamodded ALPHA-1306a, also known as \"better-calc 2.0\".",
+        "publishedAt": "2025-01-06T14:43:52Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.0",
+        "name": "V1.5.0",
+        "body": "+ Sprite-sheet changes (for other mod developers):\r\n  + Sleeve sprites should be changed to have a 1px border on both sides to prevent sprite bleeding\r\n+ General fixes:\r\n  + Fixed sleeve sprite bleeding (no more weird green edge flicker)\r\n+ Galdur-related changes:\r\n  + Added controller support\r\n  + Fixed bug where it was possible to bypass the unique effect check\r\n  + Fixed memory leak when switching between sleeve pages\r\n  + Fixed tooltips from appearing on locked sleeves by @jumbocarrot0 \r\n  + Fixed unlock description of locked sleeves to properly use \"???\" when it includes an unknown deck to the player by @jumbocarrot0 \r\n\r\nBig thanks to @jumbocarrot0 for helping out with most of these changes!",
+        "publishedAt": "2025-01-02T00:40:25Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.8",
+        "name": "V1.4.8",
+        "body": "- Fix mod incompatibility (Cryptid+Galdur) editioned decks issue (only with lovely 0.6.0 or later)",
+        "publishedAt": "2024-12-07T15:23:19Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.8",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.7",
+        "name": "V1.4.7",
+        "body": "+ Localization! Big thanks to all the people that helped me translate text into other languages!\r\n  + Chinese by Mr Clover\r\n  + Spanish by Batolol\r\n  + French by Miser\r\n+ Added incompatibility with 2 month (before 13 Sep 2024) or older versions of grim<=0.9.5 due to it breaking sleeve unlocks",
+        "publishedAt": "2024-11-13T19:17:18Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.7",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.6",
+        "name": "V1.4.6",
+        "body": "+ Fix suit icon issue with recent version of steamodded (ALPHA-1028b or later)\r\n+ Fix Cryptid misprint deck compatibility issue (only with lovely 0.6.0 or later)",
+        "publishedAt": "2024-11-02T02:46:13Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.6",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.5",
+        "name": "V1.4.5",
+        "body": "- If you were using Galdur, make sure to update it to [v1.1.4](https://github.com/Eremel/Galdur/releases/latest)!\r\n- Fix crash in config menu if user did not have Galdur installed\r\n- Fixed sleeves vibrating on selection",
+        "publishedAt": "2024-10-07T22:38:34Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.4",
+        "name": "V1.4.4",
+        "body": "+ Fix regression with plasma sleeve's unique effect",
+        "publishedAt": "2024-10-03T01:48:06Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.3",
+        "name": "V1.4.3",
+        "body": "+ Added a config option for where to show sleeve information (name + description), with 4 options:\r\n  + Only in deck view  [default]\r\n    + No space for sleeve sprite/mod badges\r\n    + Also condenses the suit counter from 2x2 to 4x1 for space\r\n  + Only in run info\r\n    + Still has sleeve sprite/mod badges\r\n  + Show in both\r\n    + Sleeve info shows up in either menu for the best of both worlds\r\n  + Hide sleeve info\r\n    + Hides it in both menus for the minimalists\r\n\r\n+ Fix issue with the random sleeve button when having both locked and modded sleeves\r\n",
+        "publishedAt": "2024-09-29T16:22:05Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.2",
+        "name": "V1.4.2",
+        "body": "+ Fix HouseRules incompatibility issue",
+        "publishedAt": "2024-09-28T23:16:33Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.1",
+        "name": "V1.4.1",
+        "body": "+ API-relevant changes (for developers):\r\n  + DEPRECATION: use `CardSleeves.Sleeve.get_current_deck_key()` now for deck comparisons instead of `CardSleeves.Sleeve.get_current_deck_name()`\r\n  + Sleeves can now be locked (using `unlocked`, `unlock_condition`, and optionally `check_for_unlock`, `locked_loc_vars`)\r\n  + Challenges now support the `sleeve` argument (if that's something someone wants?) - still in a beta version and might have issues/bugs\r\n\r\n+ Content changes:\r\n  + Sleeves are now in the collection and the CardSleeves additions tab! Find them under collection/additions -> other -> sleeves\r\n  + Sleeves now have stickers to show the highest stake you've won with them!\r\n  + Sleeves now have badges to show which mod(s) they're from!\r\n  + Base-game sleeves are now locked by default, and get unlocked by winning on their corresponding deck and a minimum stake\r\n  + Added mod config option to ignore all sleeve unlock conditions. Also added a description to all config options.\r\n\r\n+ Multiple bug fixes\r\n  + Sleeves no longer get applied in challenges that do not define a sleeve\r\n  + Sleeve badges now respect Steamodded no badges config option\r\n  + Sleeve alignment now looks better when adjust deck alignment config is disabled\r\n  + Galdur: Last run's sleeve now persists through restarting the game",
+        "publishedAt": "2024-09-28T14:20:25Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.10",
+        "name": "V1.3.10",
+        "body": "+ Fix issue with Galdur's random sleeve button not properly loading the sleeve",
+        "publishedAt": "2024-09-22T14:10:35Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.3.10",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.9",
+        "name": "V1.3.9",
+        "body": "+ Fix `:snap_to` error\r\n+ Fix Nebula sleeve unique description (visual bug only)",
+        "publishedAt": "2024-09-19T14:49:48Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.3.9",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-02T07:28:48.894Z"
   },
   "JokerDisplay@nh6574": {
     "id": "JokerDisplay",
@@ -1060,382 +1471,7 @@
     "readme": "# JokerDisplay for Balatro\n\nBalatro mod that displays information such as modifiers or relevant hands, ranks or suits under Jokers.\n\n## Installation\n\n1. Install [Steamodded](https://github.com/Steamopollys/Steamodded) [(version >1.0.0)](https://github.com/Steamodded/smods/wiki)\n2. Download the [latest release](https://github.com/nh6574/JokerDisplay/releases)\n3. Extract the zip file into its own folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\n\n## Usage\n\n* Right-click the display or a Joker to hide/unhide displays (or use the back button on your controller over a Joker). This will disable all calculations for that joker (in case of crashes).\n* Left-click the display to collapse/expand extra rows of text. (or use the up button on your controller over a Joker).\n* Go to Mods > JokerDisplay > Config for more options.\n\nFeel free to [open an issue](https://github.com/nh6574/JokerDisplay/issues) for suggestions or bug reports.\n\n## Screenshots\n\n<img src=\"examples/example_1.png\" alt=\"Example 1\" width=\"500\">\n<img src=\"examples/example_2.png\" alt=\"Example 2\" width=\"500\">\n<img src=\"examples/example_3.png\" alt=\"Example 3\" width=\"500\">\n<img src=\"examples/example_4.png\" alt=\"Example 4\" width=\"500\">\n\n## Mod Support\n\nThis mod only supports vanilla jokers but you can add support for it in your own mod by defining how the display should look.\n\nCheck out the [wiki](https://github.com/nh6574/JokerDisplay/wiki) for API documentation.\n\n| Mods with JokerDisplay support |  |\n|---|---|\n| [Aikoyori's Shenanigans](https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans) | [Baladrone](https://github.com/fantasygone/Baladrone) |\n| [BalatroOlympus](https://github.com/lshtech/BalatroOlympus) | [Balatro Multiplayer](https://github.com/Balatro-Multiplayer/BalatroMultiplayer) | \n| [Betmma Jokers](https://github.com/betmma/my_balatro_mods) | [Bird Jokers](https://github.com/JustinBanzon/Bird-Jokers) |\n| [Boss Jokers](https://github.com/KilledByLava/BossJokers) | [Bunco](https://github.com/Firch/Bunco) |\n| [Cryptid](https://github.com/MathIsFun0/Cryptid) | [D6-Jokers](https://github.com/GauntletGames-2086/D6-Jokers) |\n| [Diceylatro](https://nriomoder.itch.io/diceylatro) | [Emporium](https://github.com/krokshut/Emporium) |\n| [Friends Vs. Balatro](https://github.com/rae-vyn/FriendsVsBalatro/tree/main) | [Inscrybed Jokers](https://github.com/LunaAstraCassiopeia/LunasBalatroMods) |\n| [Jank Jonklers](https://github.com/spikeof2010/JankJonklers) | [Joker Evolution](https://github.com/SDM0/Joker-Evolution) | \n| [JamMod](https://github.com/WilsontheWolf/JamMod) | [Lobotomy Corporation](https://github.com/Mysthaps/LobotomyCorp) | \n| [Pampa Joker Pack](https://github.com/lshtech/balatro-pampa-joker-pack) | [Redux Arcanum](https://github.com/jumbocarrot0/Redux-Arcanum) |\n| [Reverie](https://github.com/dvrp0/reverie/tree/main) | [Revo's Vault](https://github.com/Cdrvo/Revos-Vault---Balatro-Mod/tree/main) |\n| [SDM_0's Stuff](https://github.com/SDM0/SDM_0-s-Stuff/) | [Snow-s-Mods](https://github.com/RattlingSnow353/Snow-s-Mods) |\n| [SpicyJokers](https://github.com/RitchieDimaria/SpicyJokers) | [The World Ends With Jimbo](https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo) |\n| [Valkyrie](https://github.com/dainekoichi/Valkyrie-BalatroMod) |  |\n\n## Contributing\n\nThis mod will probably not get any new features after 1.8, so please feel free to fork or do PRs if you feel like you can improve on this or fix any issues!\n\nAlso I would appreciate if people contact me when there are updates to the game or Steamodded that break any features or add content.\n\n### Acknowledgements\n\nSpecial thanks to Eremel and OppositeWolf770 for the help!\n\nAnd thank you to WholeHorse for the Russian localization and SDM0 for the French localization!\n\n## Contact\n\nIf you have any issues feel free to contact me on [Twitter](https://nh6574.com/), [Bluesky](https://bsky.app/profile/nh6574.com) or Discord as nh6574\n\nAnd here's my [ko-fi link](https://ko-fi.com/nh6574) if you feel especially grateful.\n",
     "published_at": "2025-06-20T00:29:26.971Z",
     "type": "Mod",
-    "tags": [],
-    "versionHistory": [
-      {
-        "tag": "v1.9.3",
-        "name": "v1.9.3",
-        "body": "## What's Changed\r\n1.9.3: Zip loading supported (bumps dependency to lovely 0.9)\r\n\r\nJokerDisplay has dropped the SMODS dependency and can now be used just by installing Lovely.\r\n\r\nFor most people this will change nothing but if you want to play vanilla without any SMODS modifications or you can't use SMODS on your system then now you can use JokerDisplay!\r\n\r\nLower versions of SMODS are still a conflict because I can't be bothered to fix issues for all versions :)\r\n\r\nPlease open an issue if you find any problems because of this change!\r\n\r\n### Installation\r\n* Install/update [Lovely](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.9.1...v1.9.0",
-        "publishedAt": "2026-01-17T21:07:25Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.9.3",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.9.1",
-        "name": "v1.8.9.1",
-        "body": "## What's Changed\r\n* fix crash when going from game over -> main menu by @MrToph in https://github.com/nh6574/JokerDisplay/pull/68\r\n* Standardize Joker Active/Inactive Status by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/70\r\n* Red warning colour on Turtle Bean and Dutch translation fixes by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/71\r\n* Fix crash in style override when Blueprint-like jokers copy uninitialized cards by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/72\r\n* Add red warning color to seltzer count when only 1 hand remains (similar to bean) by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/73\r\n* Standardize suit-based joker reminder text by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/74\r\n\r\n## New Contributors\r\n* @MrToph made their first contribution in https://github.com/nh6574/JokerDisplay/pull/68\r\n* @DimitrovNoversey made their first contribution in https://github.com/nh6574/JokerDisplay/pull/70\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.8.5...v1.8.9.1",
-        "publishedAt": "2026-01-04T14:56:41Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.9.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.8.5",
-        "name": "v1.8.8.5",
-        "body": "## What's Changed\r\n\r\nv1.8.8.5:\r\n* Fix crash with [Amulet](https://github.com/frostice482/amulet/)\r\n\r\nv1.8.8.4: \r\n* Cards that retrigger playing cards don't assume playing cards are in scoring hand anymore\r\n\r\n* Added support for ref_table in colours\r\n* Changed priority because the Hot Potato devs hate me specifically\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2025-10-18T20:56:55Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.8.5",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.7.4",
-        "name": "v1.8.7.4",
-        "body": "## What's Changed\r\n\r\n- 1.8.7.4: Japanese localization by koukichi_kkc\r\n- 1.8.7.3: Fix crash when there are non-playing card objects in G.play\r\n- 1.8.7.2: Fix display for consumables/other cards in display areas\r\n- 1.8.7.1: Fix nil display counter on older SMODS versions\r\n* Option to display joker slot count over displays\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.4.2...v1.8.5",
-        "publishedAt": "2025-08-28T19:27:18Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.7.4",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.6",
-        "name": "v1.8.6",
-        "body": "## What's Changed\r\n\r\n* Perma-repetition support\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.4.2...v1.8.5",
-        "publishedAt": "2025-08-09T14:33:00Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.6",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.5.2",
-        "name": "v1.8.5.2",
-        "body": "## What's Changed\r\nv.1.8.5.2\r\n* Simplified Chinese localization by @ChromaPIE\r\n\r\nv.1.8.5.1\r\n* Fix crash\r\n* Deprecate `scoring_function` in favor of `context.modify_scoring_hand`\r\n\r\nv1.8.5\r\n* Updated to use new probability functions\r\n* Some fixes \r\n* German localization | Help for #43 by @GunnableScum in https://github.com/nh6574/JokerDisplay/pull/60\r\n* traditional chinese localization by @Wilfredlam0418 in https://github.com/nh6574/JokerDisplay/pull/62\r\n* Dutch localization by Soulsphere\r\n\r\n## New Contributors\r\n* @GunnableScum made their first contribution in https://github.com/nh6574/JokerDisplay/pull/60\r\n* @Wilfredlam0418 made their first contribution in https://github.com/nh6574/JokerDisplay/pull/62\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.4.2...v1.8.5",
-        "publishedAt": "2025-07-11T21:27:45Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.5.2",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.4.2",
-        "name": "v1.8.4.3",
-        "body": "## What's Changed\r\n* Fixes\r\n* pt_BR localization by @naumazeredo in https://github.com/nh6574/JokerDisplay/pull/52\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.3.1...v1.8.4",
-        "publishedAt": "2025-02-09T23:55:45Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.4.2",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.1",
-        "name": "v1.8.1",
-        "body": "## What's Changed\r\n* You can now define a joker_display_def function when making a Joker to give it a definition\r\n\r\n```lua\r\nSMODS.Joker{\r\n    -- Your code\r\n   joker_display_def = function(JokerDisplay)\r\n        return {\r\n            text = {\r\n                { text = \"+\" },\r\n                { ref_table = \"card.joker_display_values\", ref_value = \"mult\", retrigger_type = \"mult\" }\r\n            },\r\n            text_config = { colour = G.C.MULT },\r\n            calc_function = function(card)\r\n                card.joker_display_values.mult = G.GAME and G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.tarot or 0\r\n            end,\r\n            mod_function = function(card, mod_joker)\r\n                return {\r\n                    mult = mod_joker.ability.extra.mult * JokerDisplay.calculate_joker_triggers(mod_joker) or nil)\r\n                }\r\n            end\r\n        }\r\n    end\r\n}\r\n```\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2025-02-08T15:19:41Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.8.0",
-        "name": "v1.8.0",
-        "body": "## What's Changed\r\n* Add support for custom Editions\r\n* You can now collapse the display with D-pad Up on a controller\r\n* Now empty displays are hidden by default (can still be changed in the config menu)\r\n* Supernova now displays the correct mult when selecting a hand (times played + 1)\r\n* Changed to the new Steamodded metadata format. This breaks compatibility with older versions. (Minimum version required is set to the last version with old_calc for compatibility with Cryptid and other mods)\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2025-01-22T19:34:25Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.0",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.7.4.1",
-        "name": "v1.7.4",
-        "body": "## What's Changed\r\n* Fix Seeing Double\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2025-01-15T04:31:11Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.4.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.7.3",
-        "name": "v1.7.3",
-        "body": "## What's Changed\r\n* Added french translation by @SDM0 in https://github.com/nh6574/JokerDisplay/pull/46\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2025-01-14T13:27:58Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.3",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.7.2",
-        "name": "v1.7.2",
-        "body": "## What's Changed\r\n* Add ru localization by @WholeHorse in https://github.com/nh6574/JokerDisplay/pull/45\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2025-01-07T17:34:32Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.2",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.7.1.2",
-        "name": "v1.7.1.2",
-        "body": "### What's Changed\r\nv1.7.1.2:\r\n* Bug fixes\r\n\r\nv1.7.0:\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-10-15T13:28:00Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.1.2",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.7.1.1",
-        "name": "v1.7.1.1",
-        "body": "### What's Changed\r\nv1.7.1.1:\r\n* Bug fixes\r\n\r\nv1.7.0:\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-09-06T00:51:04Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.1.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.7.1",
-        "name": "v1.7.1",
-        "body": "### What's Changed\r\nv1.7.1:\r\n* Bug fixes\r\n\r\nv1.7.0:\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-08-21T13:26:31Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.7.0.1",
-        "name": "v1.7.0.1",
-        "body": "### What's Changed\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-08-18T14:32:37Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.0.1",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.6.5",
-        "name": "v1.6.5",
-        "body": "### What's Changed\r\n* New Replace global definition to replace all displays at once\r\n* Added proper number formatting\r\n* Other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-08-17T17:20:31Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.5",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.6.4",
-        "name": "v1.6.4",
-        "body": "### What's Changed\r\n* There's now a more strict Steamodded version check, please make sure to use the latest version of Steamodded.\r\n* Matador now checks if the hand activates the boss blind!\r\n* API Changes:\r\n  * JokerDisplay.find_joker_or_copy now uses the Joker's key\r\n  * JokerDisplay.sort_cards returns the cards sorted from leftmost to rightmost (there are also individual leftmost card and rightmost card functions)\r\n  * JokerDisplay.evaluate_hand can now be called without arguments and it will return a precalculated hand. Please use this instead of the older method to evaluate a hand if possible.\r\n  * You can now specify a scoring_function in your Joker definition to add cards to the scoring hand (like Splash in vanilla)\r\n  * JokerDisplay.triggers_blind tells you if a hand triggers a blind\r\n  * To add more blinds to the above function, you need to add a new definition inside JokerDisplay.Blind_Definitions with your blind key and a trigger_function.\r\n* Other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-08-07T01:15:40Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.4",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.6.3",
-        "name": "v1.6.3",
-        "body": "### What's Changed\r\nNOTE: Please make sure to use the latest version of Steamodded.\r\n* Display now updates continuously instead of having to wait for an action.\r\n* If it detects too much slowdown with a lot of Jokers (20+) the displays will deactivate themselves.\r\n* Small fixes\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-08-03T21:18:21Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.3",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 20195,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.3/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.6.2",
-        "name": "v1.6.2",
-        "body": "### What's Changed\r\nNOTE: This update uses a new Steamodded feature, please update to the latest version.\r\nv1.6.2:\r\n* Add options to disable collapsing, and perishable and rental displays.\r\n* retrigger_function and mod_function now have the joker that's triggering them as the last argument\r\n* Fix Mr. Bones crash when using Talisman (Cryptid)\r\n\r\nv1.6.1:\r\n* Added a \"hide display by default\" option to the settings.\r\n* Dropped Steamodded 0.9.8 support.\r\n\r\nv1.6.0:\r\n* Add config menu by @Eremel in https://github.com/nh6574/JokerDisplay/pull/38\r\n* You can now choose what rows of the display are active from the menu.\r\n* You can select to hide all displays with no information (useful if playing with many unsupported mods).\r\n* Now you can disable displays individually by right-clicking (disabling all is now in the settings menu).\r\n* Now if a display is disabled it doesn't perform any calculations which may help for debugging issues.\r\n* Fixes retriggers working for cards in hand when they shouldn't.\r\n* Fixes reminder_text_config not doing anything.\r\n* Fixes an issue where it would call evaluate_hand on vouchers with Cryptid.\r\n* Blueprint/Brainstorm now properly display if they're incompatible or they're copying something debuffed.\r\n* Mod icon.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-25T20:17:55Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.2",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 19980,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.2/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.6.1",
-        "name": "v1.6.1",
-        "body": "### What's Changed\r\nNOTE: This update uses a new Steamodded feature, please update to the latest version.\r\nv1.6.1:\r\n* Added a \"hide display by default\" option to the settings.\r\n* Dropped Steamodded 0.9.8 support.\r\n\r\nv1.6.0:\r\n* Add config menu by @Eremel in https://github.com/nh6574/JokerDisplay/pull/38\r\n* You can now choose what rows of the display are active from the menu.\r\n* You can select to hide all displays with no information (useful if playing with many unsupported mods).\r\n* Now you can disable displays individually by right-clicking (disabling all is now in the settings menu).\r\n* Now if a display is disabled it doesn't perform any calculations which may help for debugging issues.\r\n* Fixes retriggers working for cards in hand when they shouldn't.\r\n* Fixes reminder_text_config not doing anything.\r\n* Fixes an issue where it would call evaluate_hand on vouchers with Cryptid.\r\n* Blueprint/Brainstorm now properly display if they're incompatible or they're copying something debuffed.\r\n* Mod icon.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-21T13:34:26Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.1",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 19636,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.1/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.6.0",
-        "name": "v1.6.0",
-        "body": "### What's Changed\r\n* Add config menu by @Eremel in https://github.com/nh6574/JokerDisplay/pull/38\r\n* You can now choose what rows of the display are active from the menu.\r\n* You can select to hide all displays with no information (useful if playing with many unsupported mods).\r\n* Now you can disable displays individually by right-clicking (disabling all is now in the settings menu).\r\n* Now if a display is disabled it doesn't perform any calculations which may help for debugging issues.\r\n* Fixes retriggers working for cards in hand when they shouldn't.\r\n* Fixes reminder_text_config not doing anything.\r\n* Fixes an issue where it would call evaluate_hand on vouchers with Cryptid.\r\n* Blueprint/Brainstorm now properly display if they're incompatible or they're copying something debuffed.\r\n* Mod icon.\r\n* (HOTFIX) Fixed Steamodded 0.9.8 compatibility. It will be dropped moving forward.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-20T23:17:44Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.0",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 19780,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.0/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.5.2",
-        "name": "v1.5.2",
-        "body": "### What's Changed\r\n* Added config options for future menu\r\n* Fixes Blueprint/Brainstorm slowing down the game\r\n* Fixes localization\r\n* Fixes Raised Fist + retriggers\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-16T23:22:54Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.5.2",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 16119,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.5.2/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.5.1",
-        "name": "v1.5.1",
-        "body": "### What's Changed\r\nv1.5.1:\r\n* Blueprint/Brainstorm now change depending on the card they're copying :)\r\n\r\nv1.5.0:\r\nVisual changes and additions:\r\n* Extra modifiers and odds now display on top of the description\r\n* Some (very small) UI improvements\r\n* Clicking on a display now hides all extra modifiers and odds. There will be a customization option in the future.\r\n* Discard Jokers check if there's any discard left\r\n* Loyalty Card now displays (somewhat) properly\r\n\r\nBugfixes:\r\n* Fixes Blueprint/Brainstorm crashing the game\r\n\r\nAPI:\r\n* Added the ability to add extra lines on top with the API using the field \"extra\"\r\n* Renamed \"line_1\" to \"text\" and \"line_2\" to \"reminder_text\". (\"line_1\" and \"line_2\" still work for compatibility)\r\n* Changed the default parameters of \"reminder_text\" to colour = G.C.UI.TEXT_INACTIVE and scale = 0.3\r\n* Added a field to the API to change default values for each section (\"text_config\", \"reminder_text_config\" and \"extra_config\")\r\n* Added mod_function to API for Jokers that modify other Jokers (like Baseball Card)\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-14T22:00:05Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.5.1",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 15518,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.5.1/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.5.0",
-        "name": "v1.5.0",
-        "body": "### What's Changed\r\n\r\nVisual changes and additions:\r\n* Extra modifiers and odds now display on top of the description\r\n* Some (very small) UI improvements\r\n* Clicking on a display now hides all extra modifiers and odds. There will be a customization option in the future.\r\n* Discard Jokers check if there's any discard left\r\n* Loyalty Card now displays (somewhat) properly\r\n\r\nBugfixes:\r\n* Fixes Blueprint/Brainstorm crashing the game\r\n\r\nAPI:\r\n* Added the ability to add extra lines on top with the API using the field \"extra\"\r\n* Renamed \"line_1\" to \"text\" and \"line_2\" to \"reminder_text\". (\"line_1\" and \"line_2\" still work for compatibility)\r\n* Changed the default parameters of \"reminder_text\" to colour = G.C.UI.TEXT_INACTIVE and scale = 0.3\r\n* Added a field to the API to change default values for each section (\"text_config\", \"reminder_text_config\" and \"extra_config\")\r\n* Added mod_function to API for Jokers that modify other Jokers (like Baseball Card)\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-14T20:18:14Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.5.0",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 15276,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.5.0/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.4.1",
-        "name": "v1.4.1",
-        "body": "### What's Changed\r\n* You can now additionally hide the displays by right-cling on a display.\r\n* You can now hide the second row (reminder text) of the display by left-clicking it.\r\n* This updates makes the display no longer click-throughable, which might be an issue during Blind selection (but mitigated by the above change)\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-05T18:53:47Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.4.1",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 16105,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.4.1/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.4.0",
-        "name": "v1.4.0",
-        "body": "### What's Changed\r\n* Changed how a lot of Joker information is displayed for added consistency and to fix display issues with editions.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-04T23:31:12Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.4.0",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 14987,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.4.0/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.3.5",
-        "name": "v1.3.5",
-        "body": "### What's Changed\r\n* You can now right-click on a Joker (or press the back button on a controller) to hide all displays.\r\n* Added a retrigger function to definitions for better custom Joker support.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-04T20:00:08Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.3.5",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 14971,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.3.5/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.3.4",
-        "name": "v1.3.4",
-        "body": "### What's Changed\r\n* Fix Constellation\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-07-01T23:08:06Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.3.4",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 14425,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.3.4/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "v1.3.3",
-        "name": "v1.3.3",
-        "body": "### What's Changed\r\n* Fix rental counter crashing the game again\r\n* Fix Baseball mult not displaying on debuffed jokers (#23)\r\n* Fix Misprint\r\n* Changed \"custom_node\" field in display definitions to a less generic \"dynatext\" field\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into your Balatro mods folder (%appdata%\\Balatro\\Mods)",
-        "publishedAt": "2024-06-28T19:46:04Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.3.3",
-        "assets": [
-          {
-            "name": "JokerDisplay.zip",
-            "size": 14114,
-            "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.3.3/JokerDisplay.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      }
-    ],
-    "versionHistoryLastCheck": "2026-02-02T07:28:47.797Z"
+    "tags": []
   },
   "JoyousSpring@nh6574": {
     "id": "JoyousSpring",
@@ -1744,310 +1780,7 @@
     "readme": "# Aikoyori's Shenanigans\r\nA Balatro mod that adds things I want to add.\r\n\r\n> [!IMPORTANT]\r\n> If you are specifically told to \"download from main\" by me then click [this](https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/archive/refs/heads/main.zip) link\r\n\r\nMod Discord is [here](https://discord.gg/JVg8Bynm7k)!\r\n\r\nWords from the English Words Repo : https://github.com/dwyl/english-words\r\nFiltered using the Profanity List here : https://github.com/dsojevic/profanity-list\r\nUsed MathParser from https://github.com/ByteXenon/MathParser.lua\r\n\r\nMaxwell's Notebook sprite by larantula_l on Discord\r\n\r\nArt in guestJokerArts.png is copyrighted by and belong to their respective owners and I was given permission to use these.\r\n\r\nAssets (Music/Sounds/Graphics/etc.) unless stated otherwise are licensed under CC-BY-NC-SA 4.0, Code is licensed under GPL v3",
     "published_at": "2025-06-20T02:57:51.876Z",
     "type": "Mod",
-    "tags": [],
-    "versionHistory": [
-      {
-        "tag": "0.2.0-alpha-260202a",
-        "name": "0.2.0-alpha-260202a",
-        "body": "fixed periwinkle pinecone seal debuff still working when it should not work anymore",
-        "publishedAt": "2026-02-01T21:08:41Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260202a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-260131a",
-        "name": "0.2.0-alpha-260131a",
-        "body": "## Fix Picker crashing the game the update\r\n- That is it",
-        "publishedAt": "2026-01-31T09:00:09Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260131a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-260130b",
-        "name": "0.2.0-alpha-260130b",
-        "body": "## Maintenance again\r\n- Changed [Use Ethically] to something else (bye)\r\n- Fix patch conflict with Redux Arcanum\r\n- Fix Ascended Hand not working with Pure Hands\r\n- Fix Voucher redeeming crash",
-        "publishedAt": "2026-01-29T21:01:22Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260130b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-260122a",
-        "name": "0.2.0-alpha-260122a",
-        "body": "## January Maintenance Release\r\n## Additions\r\n- 3 jon-YAKITORY. x Ichimaru Jokers\r\n<img width=\"842\" height=\"291\" alt=\"image\" src=\"https://github.com/user-attachments/assets/96df7a49-3e8e-47bd-b8c1-e74fe45beb95\" />\r\n\r\n## Bug Fixes\r\n\r\n- Fix Zap Cards not working as intended\r\n- Fix Blindside Compatibility\r\n- Fix The Bent not drawing hands when playing non-targeted Hand\r\n- Fix TOGA's Stuff Cross Mod crashing on hover without discover\r\n- Fix Tribal not giving Microscopium, ever\r\n- Potential fix for Cryptid Sliced Edition Deck crash",
-        "publishedAt": "2026-01-21T21:48:38Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260122a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-260109b",
-        "name": "0.2.0-alpha-260109b",
-        "body": "## Maintenance Release\r\n- Fix patch failing with Entropy\r\n- Fix some Cryptid functionality not working",
-        "publishedAt": "2026-01-09T02:37:41Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260109b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-260107a",
-        "name": "0.2.0-alpha-260107a",
-        "body": "## Aikoyori's Shenanigans is 1 year old!\r\nThis is a maintenance release with some new experimental content. \r\n## Warning\r\nThis release has made a breaking change to Alphabet cards' internal IDs so you WILL have to rediscover them again. Be Warned.\r\n\r\n## Additions\r\n- Experimental: New Hand Types (with no Planet Cards for now)\r\n## Fixes\r\n- Fix some localization errors & move everything to localization files\r\n- Fix The Stomata triggering in non played hands\r\n- Fix Skip Animations making score not change at all when + or xscore is triggered\r\n- Fix Crash with Intrusive Thoughts when trying to start a new run on Absurd",
-        "publishedAt": "2026-01-06T17:21:11Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260107a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-260104b",
-        "name": "0.2.0-alpha-260104b",
-        "body": "## Happy New Year!\r\n\r\n[Aikoyori's Shenanigans is very nearing its 1st anniversary!](https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/commit/465f97946bb9bda4494186e2dff5e38c6f25633c) Thank you everyone for being here with me. After this update, I will hopefully be on hiatus from modding Balatro to (or at least try to) focus on my degree. I'll likely still respond to inquiries and PRs but that means there will not be major content update for the time being. I will still try to push out maintenance fixes in case Steamodded breaks anything but don't expect it to be fast. After this long hiatus, I will be back making major content update again. There may be a chance I make small additions or changes but no guarantees.\r\n\r\nTL;DR hiatus from modding so I can get degree\r\n\r\n(has it already been a year since I created the mod? holy shit)\r\n\r\n## Additions \r\n- 1 Sleeve for Inversion Deck\r\n## Fixes\r\n- Sleeves Menu Crashing (cc @mleaf233)\r\n- Potential fix for #45 (?????)",
-        "publishedAt": "2026-01-04T09:40:52Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260104b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251222f",
-        "name": "0.2.0-alpha-251222f",
-        "body": "- Fix Solitaire Crashing",
-        "publishedAt": "2025-12-22T14:40:40Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251222f",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251222e",
-        "name": "0.2.0-alpha-251222e",
-        "body": "- Fix Nature Multiplying after\r\n- Fix Neuro not working",
-        "publishedAt": "2025-12-22T14:15:01Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251222e",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251222d",
-        "name": "0.2.0-alpha-251222d",
-        "body": "## Happy Early Christmas!\r\nAs per usual I don't celebrate this holiday but I figured to do some update for the mod, Happy Holidays from the Aikoyori's Shenanigans team (just me)!\r\n\r\n## Additions\r\n- 2 New Jokers \r\n<img width=\"351\" height=\"261\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9e55b417-844a-47a9-a608-91f71fc60d52\" />\r\n\r\n- 6 New Replicant Cards\r\n<img width=\"689\" height=\"654\" alt=\"SMODS_Dev_20251222-132144\" src=\"https://github.com/user-attachments/assets/65ba780f-5a46-4d4c-a08b-7019c331f7f6\" />\r\n\r\n- 1 new Edition \r\n<img width=\"250\" height=\"459\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e5511d2f-23f0-4805-b91b-36d26a0284ee\" />\r\n\r\n- 10 new Boss Blinds (throwback to when my mod had cruel bosses)\r\n\r\n<img width=\"578\" height=\"232\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0784b3e0-4b57-4eb6-81b6-8a5a422e5cb9\" />\r\n\r\n<img width=\"562\" height=\"210\" alt=\"SMODS_Dev_20251222-132230\" src=\"https://github.com/user-attachments/assets/9d9332de-f774-4fd8-b713-23e8c9ce9361\" />\r\n\r\n<img width=\"459\" height=\"158\" alt=\"image\" src=\"https://github.com/user-attachments/assets/534ab075-7715-43ef-9126-b0b0cd7dab73\" />\r\n\r\n- 1 new Enhancement\r\n\r\n<img width=\"274\" height=\"412\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8541d03f-0d60-48e0-a20a-39c3aa4e0166\" />\r\n\r\n## Changes\r\n- Major rework on Expert & Master Blinds. They are less cruel but they appear much earlier (as early as 7 for Expert & 8, replacing Showdown, for Master)\r\n- Bumped SMODS requirement to 1.0.0~BETA-1221a\r\n\r\n## Fixes\r\n- +Score now triggers at the correct time instead of activating after everything else scores (finally)\r\n- Other Miscellaneous fixes I might have forgotten to name\r\n",
-        "publishedAt": "2025-12-22T06:32:12Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251222d",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251215a",
-        "name": "0.2.0-alpha-251215a",
-        "body": "- The Picker gets an animation\r\n- Uses SMODS.smart_level_up function (thanks @TheOneGoofAli)\r\n- Fix Patching crashing\r\n- Fix Entropy compat (sorry guyse)",
-        "publishedAt": "2025-12-14T20:19:39Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251215a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251211b",
-        "name": "0.2.0-alpha-251211b",
-        "body": "This is a follow-up release for 0.2.0-alpha-251210b\r\n\r\n# Additions\r\n- 1 new Achievement I forgot to code last release\r\n- Word Checker! Check it out in the Run Info Tab!\r\n\r\n# Changes\r\n- Rebalances Chips and Mult for Word Hands yet again",
-        "publishedAt": "2025-12-10T19:53:49Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251211b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251210b",
-        "name": "0.2.0-alpha-251210b",
-        "body": "Hello! It's now December. The mod will turn 1 year old in January. Here are the changes in 0.2.0-alpha-251210b\r\n\r\n# Additions\r\n- A few new achievements :D\r\n- Qualatro crossmod ability for Aikoyori\r\n\r\n# Changes\r\n- Furina now actually costsd $30 (wtf genshin mentioned)\r\n- Word Hands Chips & Mult are now rebalanced to make shorter words give way less and to have Mult be more than Chips\r\n- Consequently Scrabble deck has its scaling reduced to X1.25\r\n- Insolate Card rebalance again because I forgot to add a check (reset your days since rebalance counter)\r\n- Noire has a dynamic description based on where the card is\r\n- Rebalances Symbol & Number distribution in Math Deck\r\n- Standard Packs in Math Deck gives you Symbols and Numbers now\r\n\r\n# Fixes\r\n- Short Form Content no longer crashes when finishing Special Blind\r\n- Pure Hands multiplier now properly shows up in Poker Hand info again\r\n- Fix miscrediting on Catchphrase (the art is mine not gud's)\r\n- Slay the Jokers no longer spawns small cards when certain cards are on screen\r\n- Stability Improvement to Pure Hands\r\n- Hopefully crashes less in general",
-        "publishedAt": "2025-12-10T11:10:41Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251210b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251130a",
-        "name": "0.2.0-alpha-251130a",
-        "body": "- Fix Multiplayer Check crashing after using Short Form Content",
-        "publishedAt": "2025-11-30T05:34:59Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251130a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251129g",
-        "name": "0.2.0-alpha-251129g",
-        "body": "- Fix Hex crashing the game when you only have non-Jokers in Joker slot (Freedom Deck & File Sharing)\r\n- Exit Plan reworked for Multiplayer",
-        "publishedAt": "2025-11-29T15:07:24Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251129g",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251129d",
-        "name": "0.2.0-alpha-251129d",
-        "body": "## Fixes\r\n- Crashes when hovering on some cards",
-        "publishedAt": "2025-11-28T21:10:12Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251129d",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251129b",
-        "name": "0.2.0-alpha-251129b",
-        "body": "## Additions\r\n- Crossmod abilities for Kino, Sagatro, and Maximus for me!\r\n## Changes\r\n- A few adjustment for Multiplayer Mod :>",
-        "publishedAt": "2025-11-28T19:47:15Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251129b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251128g",
-        "name": "0.2.0-alpha-251128g",
-        "body": "# Happy Thanksgiving!\r\n- As per usual, I do not celebrate Thanksgiving. But I figured I would like to give something anyway so here we go\r\n\r\n## Additions\r\n- Added 4 Regular jokers\r\n\r\n<img width=\"629\" height=\"248\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bfe1a819-39f6-4dde-859c-0f1cf959b742\" />\r\n\r\n- Added 1 Letter Joker\r\n\r\n<img width=\"753\" height=\"326\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ba680010-86df-4f8b-b0af-8ad6a17c4d16\" />\r\n\r\n- Added 2 Decks\r\n\r\n<img width=\"345\" height=\"229\" alt=\"image\" src=\"https://github.com/user-attachments/assets/51559844-74e0-4d31-878b-4b9f688cc66f\" />\r\n\r\n- Added 10 Replicant Cards (lesbiab) along with its corresponding Booster Packs\r\n\r\n<img width=\"810\" height=\"538\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e7210448-b2d8-4635-8286-a911903af273\" />\r\n\r\n<img width=\"768\" height=\"313\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fa5ca745-f9c3-4b06-a0cd-67e40b6fe286\" />\r\n\r\n- Don't click on my self-insert 8 times\r\n\r\n- Added 2 Vouchers\r\n\r\n<img width=\"291\" height=\"245\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5a038088-866b-4981-ab9d-f774f9b2d3b0\" />\r\n\r\n- Added 4 Seals\r\n\r\n<img width=\"632\" height=\"230\" alt=\"image\" src=\"https://github.com/user-attachments/assets/22b24bb9-cb09-4b0b-ba40-684bb54ab9de\" />\r\n\r\n- Added 3 Enhanced Cards\r\n\r\n<img width=\"481\" height=\"233\" alt=\"image\" src=\"https://github.com/user-attachments/assets/807bb0f9-418f-4118-803e-708da3486ff5\" />\r\n\r\n## Changes\r\n- Rebalanced Insolate Cards, again\r\n- Core : $2 -> $1\r\n- Moved Legendaries to be behind other Jokers\r\n- Other Rebalances and changes I forgor\r\n\r\n## Fixes\r\n- Loads of them but I can be wrong I might have missed some so file them issues!\r\n",
-        "publishedAt": "2025-11-28T10:22:34Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251128g",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251116b",
-        "name": "0.2.0-alpha-251116b",
-        "body": "- fix insolate cards again",
-        "publishedAt": "2025-11-16T05:54:47Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251116b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251116a",
-        "name": "0.2.0-alpha-251116a",
-        "body": "- Fix for Shimmer Bucket\r\n- Nerfed Insolate\r\n- Fix some localizations errors",
-        "publishedAt": "2025-11-16T04:57:38Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251116a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251111a",
-        "name": "0.2.0-alpha-251111a",
-        "body": "- Fix Goodbye Sengen not working as intended\r\n- I spam releases so i can get to the i release",
-        "publishedAt": "2025-11-10T19:59:32Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251111a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251109a",
-        "name": "0.2.0-alpha-251109a",
-        "body": "- Fix Collection crashing when Experimental Features are disabled",
-        "publishedAt": "2025-11-09T12:48:10Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251109a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251107a",
-        "name": "0.2.0-alpha-251107a",
-        "body": "# Additions\r\n- New Additions screen\r\n# Fixes\r\n- MISPRINTING VALUE FIXES attempt 25",
-        "publishedAt": "2025-11-06T21:03:07Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251107a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251106a",
-        "name": "0.2.0-alpha-251106a",
-        "body": "- Fix a few crashes\r\n- Add a use button for freedom decks",
-        "publishedAt": "2025-11-05T20:00:54Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251106a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251105a",
-        "name": "0.2.0-alpha-251105a",
-        "body": "- Fix holding R on Hardcore Challenges not working\r\n- Properly code in no joker preview modes\r\n- Fix crashes when finishing puzzle blinds",
-        "publishedAt": "2025-11-04T20:07:47Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251105a",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251104l",
-        "name": "0.2.0-alpha-251104l",
-        "body": "- Fix Freedom Deck (maybe)",
-        "publishedAt": "2025-11-04T06:15:59Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251104l",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251104j",
-        "name": "0.2.0-alpha-251104j",
-        "body": "- previews should turn off ALL previews",
-        "publishedAt": "2025-11-04T05:21:10Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251104j",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251104i",
-        "name": "0.2.0-alpha-251104i",
-        "body": "- fix bug",
-        "publishedAt": "2025-11-04T04:55:03Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251104i",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251104h",
-        "name": "0.2.0-alpha-251104h",
-        "body": "- Fixed Sliced edition (mostly) for real now\r\n- Also forgot to mention that last update did some rebalancing so",
-        "publishedAt": "2025-11-03T19:51:36Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251104h",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251104g",
-        "name": "0.2.0-alpha-251104g",
-        "body": "## Additions\r\n- Adds Experimental Toggle for Experimental things.\r\n## Changes\r\n- Tribal now has hand hint\r\n## Fixes\r\n- Fixed a few issue with Pure Card Copying and Sliced not working",
-        "publishedAt": "2025-11-03T19:38:47Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251104g",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      }
-    ],
-    "versionHistoryLastCheck": "2026-02-02T07:28:49.297Z"
+    "tags": []
   },
   "BalatroBakery@BakersDozenBagels": {
     "id": "Bakery",
@@ -2471,7 +2204,42 @@
     "analytics": {
       "views": 3,
       "lastViewed": "2026-01-28T11:27:42.403Z"
-    }
+    },
+    "versionHistory": [
+      {
+        "tag": "v1.0.1",
+        "name": "v1.0.1",
+        "body": "**Changelog**\r\n\r\n- Added a shield mechanic in combination with the health mechanic\r\n- Fleshed out the health mechanic -- adding potential for negative health or health above 100 HP\r\n- Cleaned up and added more functionality to the health mechanic, as well as adding more contexts\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/Alloy/compare/v1.0.0...v1.0.1",
+        "publishedAt": "2025-07-21T05:01:24Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/Alloy/releases/tag/v1.0.1",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 8647,
+            "downloadUrl": "https://github.com/TheCoroboCorner/Alloy/releases/download/v1.0.1/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "Version 1.0.0 release",
+        "body": "This mod currently just adds four new mechanics to the game of Balatro:\r\n\r\n1. It allows you to **lock** and **unlock** your Jokers and Consumeables at will, so that you don't accidentally sell anything.\r\n2. It allows you to play the **last hand** you played at the click of a button (if it's possible to play it, of course).\r\n3. It adds a **health-bar** mechanic. You start at 100 HP. If you lose a round, the percentage left you had to beat is subtracted from your HP. When your HP reaches zero, you lose. Simple as that!\r\n4. It also adds a **hold** mechanic. At any time, you can hold up to five cards in your offhand, swapping them with whatever cards from your hand that you choose. Be careful though -- cards in your offhand don't trigger their \"held in hand\" effects, and can't be played unless they're swapped back into your main hand. \r\n\r\nIn the future, boss blinds and more fun mechanics are intended to be added, so stay tuned for what's next!",
+        "publishedAt": "2025-07-08T23:24:51Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/Alloy/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 7642,
+            "downloadUrl": "https://github.com/TheCoroboCorner/Alloy/releases/download/v1.0.0/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-02T07:28:49.793Z"
   },
   "Tangents@Clickseee": {
     "id": "tangent",
