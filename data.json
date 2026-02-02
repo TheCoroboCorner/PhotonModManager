@@ -810,26 +810,7 @@
     "dependencies": [],
     "readme": "# Grab Bag\nGrab Bag is a Balatro mod that currently adds: \n- 46 (+8) Jokers\n- 3 Tarots\n- 1 Spectral\n- 3 Enhancements \n- 15 Boss Blinds\n- 5 Showdown Boss Blinds\n- and 4 Decks.\n\nThe content in this mod is supposed to feel vanilla, and I created this new content to be largely in line with the rules and design philosophy that localthunk follows when making Jokers and other content. \n\n## Jokers\nAs of the latest update, this mod contains 21 Common, 15 Uncommon, and 10 Rare Jokers.\n### Common\n- Bad Trip\n- Bait\n- Bullseye\n- Counterfeit Joker\n- Coupon\n- Dunce\n- Gasoline\n- Hadal Zone\n- Jackpot\n- Morose Joker\n- Patience\n- Postage Stamp\n- Qubits\n- Receipt\n- Revolution 9\n- Sketchy Joker\n- Torchlight\n- Waterfall\n- Wild Joker\n- Hot Potato\n- Polariser\n  \n### Uncommon\n- Another Brick\n- Bank Teller\n- Boing Ball\n- Calculator\n- Candle\n- Cheque Stub\n- Double Gulp\n- First Strike\n- Honeycomb\n- Impostor\n- Knight\n- Lover's Locket\n- Wax Joker\n- Wheel of Misfortune\n- Yellow Pages\n  \n### Rare\n- Apparition\n- D20\n- Double King\n- Forest Fire\n- Golden Cookie\n- Lobster Claw\n- Pentagram\n- Retro Joker\n- Silver Hammer\n- The Moon's Oceans\n\n## Enhancements\nAs of the latest update, this mod contains 2 new enhancements.\n- River (and The River Tarot)\n- Wooden (and The Life Tarot)\n\n## Shattered Jokers\nJokers can be shattered into more powerful Shattered jokers with the Shatter consumable, which may show up in Arcana and Spectral Packs.\n### Shatterable Jokers\n- Obelisk\n- Flower Pot\n- Fibonacci\n- Polariser\n- Rough Gem\n- Splash\n- Joker\n- Invisible Joker\n\n## Decks\nThere are 4 decks in the latest update of the mod.\n- Gem Deck\n- Mathematical Deck\n- Negative Deck\n- Tech Deck\n",
     "published_at": "2025-06-19T16:08:16.556Z",
-    "type": "Mod",
-    "versionHistory": [
-      {
-        "tag": "v0.8p1",
-        "name": "v0.8p1",
-        "body": "Adds:\r\n- 6 new enhancements. \r\n- 13 Hex Cards, \r\n- 21 Hexes, \r\n- New Jokers\r\n- tons of reworks and bugfixes. \r\n\r\nHere's my birthday gift to you, a shiny new release of Grab Bag. New consumable type, new modifier, new Jokers. I've fixed every bug in the mod I'm aware of but if you find any, please open an issue. Thank you for playing Grab Bag.\r\n",
-        "publishedAt": "2025-08-30T12:59:26Z",
-        "htmlUrl": "https://github.com/thefaketh30ne/grab-bag/releases/tag/v0.8p1",
-        "assets": [
-          {
-            "name": "grab-bag-0.8.30p1.zip",
-            "size": 35526559,
-            "downloadUrl": "https://github.com/thefaketh30ne/grab-bag/releases/download/v0.8p1/grab-bag-0.8.30p1.zip"
-          }
-        ],
-        "prerelease": false,
-        "draft": false
-      }
-    ],
-    "versionHistoryLastCheck": "2026-02-02T07:07:35.969Z"
+    "type": "Mod"
   },
   "Lucky-Rabbit@Trif3ctal": {
     "id": "LuckyRabbit",
@@ -1567,7 +1548,100 @@
     "published_at": "2025-07-12T06:50:03.962Z",
     "type": "Mod",
     "tags": [],
-    "readme": ""
+    "readme": "",
+    "versionHistory": [
+      {
+        "tag": "0.99.2-alpha",
+        "name": "0.99.2",
+        "body": "Mostly a bugfix release related to latest SMODS.\r\n\r\n# Changes\r\n- New sprites and/or some mechanic changes for some things\r\n  - Ice and Frozen cards\r\n  - Haru Urara\r\n  - Kitasan Black\r\n    - Added WIP support card-like animation (disabled by default)\r\n  - Sakura Bakushin O\r\n  - Spirit Ploy\r\n  - Yomiel\r\n  - Mind\r\n  - Adigail\r\n  - Across The World\r\n- New vouchers\r\n  - Deck Builder & Is This Your Card?\r\n  - Expanded Storage & Advanced Hangar\r\n- New Jokers, fully completing the 105 joker roster for 1.0\r\n  - WINDY SUMMER\r\n  - A Jimbo Like Me\r\n- Easier way to cross mod with PTA via a dedicated file (`pta.lua`) that this mod loads\r\n- Updated JoyousSpring and `MISSINGNO.`.\r\n\r\n# Fixes\r\n- Downpour no longer OHKOs\r\n- Stray `info_queue` titles no longer appear\r\n- Banner related things interfering with the Jukebox and Mechanic/Wild DOS prompts\r\n- Blueprint compatibility for specific jokers\r\n- Fix Mimic Card effect not working properly\r\n- Fix Vash not preventing anything\r\n- Fix Aww! No Retriggers not doing anything\r\n- Fix Balance related jokers and enhancements *reducing* mult and chips\r\n- Force chips and mult (ex. Nostalgic Phil) not working\r\n- Paya's permanent exponential mult not working\r\n\r\n# Removed\r\n- Removed Prosopagnosia\r\n  - `qrankloader.lua` has been left behind for reference, however is no longer used.\r\n\r\n**Full Changelog**: https://github.com/hayaunderscore/PayasTerribleAdditions/compare/0.99.1-alpha...0.99.2-alpha",
+        "publishedAt": "2025-08-29T02:13:38Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.99.2-alpha",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.99.1-alpha",
+        "name": "0.99.1",
+        "body": "That's right. A tentative prerelease.\r\nNot entirely representative of 1.0 as a whole.\r\n\r\nRequires EXPLICITLY [smods beta 0822d](https://github.com/Steamodded/smods/archive/2801ca3c15c2b1f7b92d283ba182c97f78633d61.zip).\r\n\r\n# Changes\r\n\r\n- Way too many to count.\r\n- Figure it out ;)\r\n\r\n## From the last alpha\r\n\r\n- Fixed yet another stupid bug",
+        "publishedAt": "2025-08-24T03:21:01Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.99.1-alpha",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.99.0-alpha",
+        "name": "0.99.0",
+        "body": "That's right. A tentative prerelease.\r\nNot entirely representative of 1.0 as a whole.\r\n\r\nRequires EXPLICITLY [smods beta 0822d](https://github.com/Steamodded/smods/archive/2801ca3c15c2b1f7b92d283ba182c97f78633d61.zip).\r\n\r\n# Changes\r\n\r\n- Way too many to count.\r\n- Figure it out ;)",
+        "publishedAt": "2025-08-24T03:06:32Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.99.0-alpha",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.3.1",
+        "name": "0.3.1 - Demicolon and bugfixes",
+        "body": "whoops.\r\n\r\n- Add Demicolon support for most Jokers\r\n- Fix Deviant Memory forgetting when reloading a run",
+        "publishedAt": "2025-05-05T03:40:53Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.3.0",
+        "name": "0.3.0 - FULL STEAM AHEAD",
+        "body": "A whole heap of new additions in this update!\r\n\r\n- DOS Cards! Bought with pyroxenes.\r\n- 5 new Ahead Jokers!\r\n- Yet ANOTHER new rarity, with 4 jokers!\r\n- Ahead rarity now more rarer than ever.....",
+        "publishedAt": "2025-05-05T02:40:00Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.3.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.2.0",
+        "name": "0.2.0: Pyroxene Update",
+        "body": "- Adds Pyroxenes! Indicated by the yen symbol as an additional currency.\r\n\t- Doesn't do anything. Yet.\r\n- A whole heap of new Jokers to complete 5 for each rarity!\r\n- Removed Charred Joker because it sucks\r\n- Numerous other bug fixes and improvements",
+        "publishedAt": "2025-04-28T08:06:01Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.2.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.1.1",
+        "name": "0.1.1",
+        "body": "Small update.\r\n- Adds 2 new Ahead Jokers\r\n- Adds 2 new (glitchy) vouchers\r\n- Hopefully fully get rid of Cryptid dependency\r\n- Challenges!\r\n- 2 new Tags!\r\n- Updates Joyous Spring",
+        "publishedAt": "2025-04-25T06:09:03Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.1.0",
+        "name": "0.1.0",
+        "body": "there is a lot more content in this one. very",
+        "publishedAt": "2025-04-23T07:59:38Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "0.0.1",
+        "name": "0.0.1",
+        "body": "First (proper) release!\r\n\r\nAdds the following jokers:\r\n- Phil (& Shirt)\r\n- Good 'n Evil\r\n- Ten 10s\r\n- Daily Newspaper\r\n- Multiplier\r\n- Adult Card\r\n- Arona (placeholder card graphic)\r\n- Plana (placeholder card graphic)\r\n- Charred Joker\r\n- Photocopier\r\n- Reistorm\r\n\r\nAND a new boss blind: The Nether....",
+        "publishedAt": "2025-04-12T07:06:07Z",
+        "htmlUrl": "https://github.com/hayaunderscore/PayasTerribleAdditions/releases/tag/0.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-02T07:07:36.267Z"
   },
   "pi_cubeds_jokers@pi-cubed-cat": {
     "id": "picubedsjokers",
@@ -2594,7 +2668,19 @@
     "updated_at": "2026-01-31T17:02:19Z",
     "readme": "# CryptLib\nCryptLib is a mod that provides helper functionality otherwise only accesible by depending on Cryptid\nThis includes:\n* Gameset config and disabling arbitrary content (opt-in)\n* Value Manipulation\n* Forcetrigging including Vanilla support\n* Pluralisation for card descriptions\n* Talisman independant ^mult & ^chips if Talisman isnt present\n* Function definitions for to_big, to_number and lenient_bignum incase Talisman isnt present\n* Various other utility functions\n"
   }
-}
+} issues feel free to contact me on [Bluesky](https://bsky.app/profile/nh6574.com) or [on the official Balatro Discord as nh6574](https://discord.com/invite/balatro)\n\nAnd here's my [ko-fi link](https://ko-fi.com/nh6574) if you feel especially grateful.\n\nAlso check out my Quality of Life mod [JokerDisplay](https://github.com/nh6574/JokerDisplay)!\nor my Yu-Gi-Oh! mod [JoyousSpring](https://github.com/nh6574/JoyousSpring)!\n",
+    "images": [
+      {
+        "path": "/wiki-data/Repertorium@nh6574/images/1769878110698-371127692.png",
+        "filename": "1769878110698-371127692.png",
+        "originalName": "icon.png",
+        "size": 1543,
+        "isThumbnail": false
+      }
+    ],
+    "versionHistory": [
+      {
+        "tag": "v0.1.1",
         "name": "0.1.1",
         "body": "## What's Changed\r\nThis release requires [SMODS~BETA-0827c or higher](https://github.com/Steamodded/smods/releases/latest)\r\n* Initial release\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous Repertorium files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\nBetter enjoyed with [Blockbuster: Counters](https://github.com/icyethics/Blockbuster-Counters). \r\nAlso features [Balatro Goes Kino](https://github.com/icyethics/Kino) crossmod.",
         "publishedAt": "2025-09-07T20:12:17Z",
