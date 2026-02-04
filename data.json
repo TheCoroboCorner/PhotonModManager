@@ -1019,7 +1019,58 @@
     "readme": "",
     "published_at": "2025-06-19T20:51:14.447Z",
     "type": "Mod",
-    "tags": []
+    "tags": [],
+    "versionHistory": [
+      {
+        "tag": "v1.0.6",
+        "name": "v1.0.6 - Elements Update",
+        "body": "### v1.0.6 - Elements Update\r\n\r\nAdds a new Tarot card connected to two new Enhancements, and a Joker with functionality tied to said Enhancements.",
+        "publishedAt": "2025-11-15T06:04:11Z",
+        "htmlUrl": "https://github.com/energykid/SuperFine/releases/tag/v1.0.6",
+        "assets": [
+          {
+            "name": "SuperFine.zip",
+            "size": 7546986,
+            "downloadUrl": "https://github.com/energykid/SuperFine/releases/download/v1.0.6/SuperFine.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.5",
+        "name": "v1.0.5 - Bits and Bobs",
+        "body": "### v1.0.5 - Bits and Bobs\r\n\r\nAdds 8 new Jokers (5 of them Attuned), 2 new Boss Blinds, adds a new Enhancement and a Tarot  to go with it.\r\nAlso, reworks a couple of things, and refactors certain bits of the code to be more accessible for cross-mod.",
+        "publishedAt": "2025-06-20T01:33:40Z",
+        "htmlUrl": "https://github.com/energykid/SuperFine/releases/tag/v1.0.5",
+        "assets": [
+          {
+            "name": "SuperFine.zip",
+            "size": 7621921,
+            "downloadUrl": "https://github.com/energykid/SuperFine/releases/download/v1.0.5/SuperFine.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "release",
+        "name": "1.0.0",
+        "body": "### SuperFine!! - Content Launch\r\n\r\n_Contains 14 new Jokers, a new Attunement system with its own rarity, two new Spectral cards (including one important one!), 3 Boss Blinds and one Deck._\r\n\r\n**Full Changelog**: https://github.com/energykid/SuperFine/commits/release",
+        "publishedAt": "2025-06-15T01:07:08Z",
+        "htmlUrl": "https://github.com/energykid/SuperFine/releases/tag/release",
+        "assets": [
+          {
+            "name": "SuperFine.zip",
+            "size": 954014,
+            "downloadUrl": "https://github.com/energykid/SuperFine/releases/download/release/SuperFine.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-04T18:12:37.283Z"
   },
   "CardSleeves@larswijn": {
     "id": "CardSleeves",
