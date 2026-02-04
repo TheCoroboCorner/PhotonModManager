@@ -1070,7 +1070,11 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-04T18:12:37.283Z"
+    "versionHistoryLastCheck": "2026-02-04T18:12:37.283Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-02-04T18:12:37.488Z"
+    }
   },
   "CardSleeves@larswijn": {
     "id": "CardSleeves",
