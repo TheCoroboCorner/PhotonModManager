@@ -3472,6 +3472,199 @@
       "Misc"
     ],
     "updated_at": "2026-01-31T17:02:19Z",
-    "readme": "# CryptLib\nCryptLib is a mod that provides helper functionality otherwise only accesible by depending on Cryptid\nThis includes:\n* Gameset config and disabling arbitrary content (opt-in)\n* Value Manipulation\n* Forcetrigging including Vanilla support\n* Pluralisation for card descriptions\n* Talisman independant ^mult & ^chips if Talisman isnt present\n* Function definitions for to_big, to_number and lenient_bignum incase Talisman isnt present\n* Various other utility functions\n"
+    "readme": "# CryptLib\nCryptLib is a mod that provides helper functionality otherwise only accesible by depending on Cryptid\nThis includes:\n* Gameset config and disabling arbitrary content (opt-in)\n* Value Manipulation\n* Forcetrigging including Vanilla support\n* Pluralisation for card descriptions\n* Talisman independant ^mult & ^chips if Talisman isnt present\n* Function definitions for to_big, to_number and lenient_bignum incase Talisman isnt present\n* Various other utility functions\n",
+    "versionHistory": [
+      {
+        "tag": "v1.3",
+        "name": "v1.3",
+        "body": "**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.2...v1.3",
+        "publishedAt": "2026-01-08T11:28:39Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3c",
+        "name": "v1.3b",
+        "body": "Add more nil checks to prevent crashes with Blindside",
+        "publishedAt": "2026-01-16T19:44:28Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.3c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2",
+        "name": "v1.2",
+        "body": "Added Ascension Power functionality\r\nAdded Voucher un-redeem functionality\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.1.4...v1.2",
+        "publishedAt": "2025-12-17T13:14:47Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.4b",
+        "name": "v1.1.4",
+        "body": "**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.1.3...v1.1.4",
+        "publishedAt": "2025-11-10T01:37:25Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.1.4b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.3",
+        "name": "v1.1.3",
+        "body": "**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.1.2...v1.1.3\r\n\r\nImproved Checks for Big numbers",
+        "publishedAt": "2025-11-04T11:15:46Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.1.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2",
+        "name": "v1.1.2",
+        "body": "## What's Changed\r\n* add card limit to misprintize blacklist by @real-niacat in https://github.com/SpectralPack/Cryptlib/pull/6\r\n\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.1.0...v1.1.2",
+        "publishedAt": "2025-10-18T17:50:34Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.1.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.1b",
+        "name": "v1.1.1",
+        "body": "## What's Changed\r\n* add card limit to misprintize blacklist by @real-niacat in https://github.com/SpectralPack/Cryptlib/pull/6\r\n* fix crash related to centerless cards\r\n\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.1.0...v1.1.1",
+        "publishedAt": "2025-09-09T12:51:33Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.1.1b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0",
+        "name": "v1.1.0",
+        "body": "## What's Changed\r\n* fix crashes with talisman & allow ^chips/mult to proc by @real-niacat in https://github.com/SpectralPack/Cryptlib/pull/3\r\n* fix ^chips / ^mult reverting after trigger by @real-niacat in https://github.com/SpectralPack/Cryptlib/pull/4\r\n* fix typo by @InvalidOS in https://github.com/SpectralPack/Cryptlib/pull/5\r\n\r\n## New Contributors\r\n* @real-niacat made their first contribution in https://github.com/SpectralPack/Cryptlib/pull/3\r\n* @InvalidOS made their first contribution in https://github.com/SpectralPack/Cryptlib/pull/5\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.0.10...v1.1.0",
+        "publishedAt": "2025-08-27T02:06:43Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.10",
+        "name": "v1.0.10",
+        "body": "Fixed missing e_chips localization without Talisman\r\nFixed display for e_chips and e_mult without talisman\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.0.9...v1.0.10",
+        "publishedAt": "2025-08-13T12:14:09Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.10",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.9",
+        "name": "v1.0.9",
+        "body": "Fix gameset related incompatibilities when Cryptid is installed\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.0.8...v1.0.9",
+        "publishedAt": "2025-08-12T16:42:01Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.9",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.8",
+        "name": "v1.0.8",
+        "body": "Fix a crash related to get_next_tag()\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.0.7...v1.0.8",
+        "publishedAt": "2025-08-08T21:01:21Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.8",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.7",
+        "name": "v1.0.7",
+        "body": "Change icon and prefix to differentiate from Cryptid\r\nFix floating sprite issues when both Cryptid and Cryptlib are enabled\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.0.6...v1.0.7",
+        "publishedAt": "2025-07-16T23:38:14Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.7",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.6",
+        "name": "v1.0.6",
+        "body": "Fix Issues when Cryptid is enabled at the same time as CryptLib",
+        "publishedAt": "2025-07-15T19:07:07Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.6",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.5",
+        "name": "v1.0.5",
+        "body": "Make it easier to differentiate between Cryptid and CryptLib for crossmod purposes",
+        "publishedAt": "2025-07-14T13:33:56Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4",
+        "name": "v1.0.4",
+        "body": "Remove Cryptid conflict for ease of use, with Cryptid installed Cryptlib will not do anything\r\nAdded Cryptid.pulse_flame from Cryptid\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.0.3...v1.0.4",
+        "publishedAt": "2025-07-13T09:53:46Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.3",
+        "name": "v1.0.3",
+        "body": "Fix duplicate calculation keys if multiple mods dont require talisman and cryptlib is enabled, and various other bugfixes\r\nAdded support for second floating sprite layers without cryptid\r\n\r\n**Full Changelog**: https://github.com/SpectralPack/Cryptlib/compare/v1.0.2...v1.0.3",
+        "publishedAt": "2025-07-08T22:37:38Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.2",
+        "name": "v1.0.2",
+        "body": "Fix weird bug with description backgrounds being cyan on non standard card types",
+        "publishedAt": "2025-07-06T13:10:35Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1",
+        "name": "v1.0.1",
+        "body": "Update mod id capitalisation to be standardised with what Cryptid provides",
+        "publishedAt": "2025-07-06T12:47:50Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0",
+        "body": "Initial Release Version",
+        "publishedAt": "2025-07-06T12:12:58Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-07T18:06:32.966Z"
   }
 }
