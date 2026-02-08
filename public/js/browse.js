@@ -1,5 +1,6 @@
 import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from './utils.js';
 import { favouritesManager } from './favourites.js';
+import icons from './icons.js';
 
 class BrowsePreferences
 {
@@ -504,15 +505,11 @@ class ModBrowser
         const content = document.createElement('div');
         content.style.cssText = 'position: relative; z-index: 1;';
 
-        const header = document.createElement('div');
-        header.style.cssText = 'display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;';
-
+        // Title
         const title = document.createElement('h3');
         title.textContent = mod.name;
         title.style.cssText = 'margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--text-white);';
         content.appendChild(title);
-
-        content.appendChild(header);
 
         // Author
         const author = document.createElement('div');
@@ -572,27 +569,24 @@ class ModBrowser
         statsDiv.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex: 1;';
 
         // Favourites count
-        const favSpan = document.createElement('span');
-        favSpan.textContent = `${mod.favourites || 0} favourites`;
-        favSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
-        statsDiv.appendChild(favSpan);
+        const favStat = icons.createWithText('heart', `${mod.favourites || 0}`, { size: 14, colour: 'var(--text-secondary)', gap: '0.25rem' });
+        favStat.title = `${mod.favourites || 0} favourites`;
+        statsDiv.appendChild(favStat);
 
         // View count
         if (mod.analytics && mod.analytics.views) 
         {
-            const viewSpan = document.createElement('span');
-            viewSpan.textContent = `${mod.analytics.views} views`;
-            viewSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
-            statsDiv.appendChild(viewSpan);
+            const viewStat = icons.createWithText('eye', `${mod.analytics.views}`, { size: 14, colour: 'var(--text-secondary)', gap: '0.25rem' });
+            viewStat.title = `${mod.analytics.views} views`;
+            statsDiv.appendChild(viewStat);
         }
 
         // Download count
         if (mod.analytics && mod.analytics.downloads) 
         {
-            const dlSpan = document.createElement('span');
-            dlSpan.textContent = `${mod.analytics.downloads} downloads`;
-            dlSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
-            statsDiv.appendChild(dlSpan);
+            const dlStat = icons.createWithText('download', `${mod.analytics.downloads}`, { size: 14, colour: 'var(--text-secondary)', gap: '0.25rem' });
+            dlStat.title = `${mod.analytics.downloads} downloads`;
+            statsDiv.appendChild(dlStat);
         }
 
         footer.appendChild(statsDiv);
@@ -601,31 +595,30 @@ class ModBrowser
         const buttonsDiv = document.createElement('div');
         buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem;';
 
+        const { owner, repo } = parseModKey(mod.key);
+
         // Favourite button (classic style)
         const favBtn = document.createElement('button');
         favBtn.className = 'click-me';
-        favBtn.textContent = 'Favourite';
         favBtn.style.cssText = `
             padding: 0.5rem 1rem;
             font-size: 0.875rem;
             background: linear-gradient(135deg, rgba(255, 59, 118, 0.8) 0%, rgba(189, 42, 122, 0.8) 100%);
-            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
         `;
+
+        const heartIcon = icons.create('heart', { size: 16, colour: 'white' });
+        favBtn.appendChild(heartIcon);
+        favBtn.appendChild(document.createTextNode('Favourite'));
+
         favBtn.addEventListener('click', async (e) => {
             e.stopPropagation();
             await this.toggleFavourite(mod.key);
         });
-        favBtn.addEventListener('mouseenter', () => {
-            favBtn.style.background = 'linear-gradient(135deg, rgba(255, 59, 118, 1) 0%, rgba(189, 42, 122, 1) 100%)';
-            favBtn.style.transform = 'scale(1.05)';
-        });
-        favBtn.addEventListener('mouseleave', () => {
-            favBtn.style.background = 'linear-gradient(135deg, rgba(255, 59, 118, 0.8) 0%, rgba(189, 42, 122, 0.8) 100%)';
-            favBtn.style.transform = 'scale(1)';
-        });
-        buttonsDiv.appendChild(favBtn);
 
-        const { owner, repo } = parseModKey(mod.key);
+        buttonsDiv.appendChild(favBtn);
 
         const detailBtn = document.createElement('button');
         detailBtn.className = 'click-me';
@@ -640,8 +633,12 @@ class ModBrowser
         const wikiBtn = document.createElement('a');
         wikiBtn.href = `/wiki?mod=${encodeURIComponent(mod.key)}`;
         wikiBtn.className = 'click-me';
-        wikiBtn.textContent = 'Wiki';
-        wikiBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem; text-decoration: none;';
+        wikiBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.375rem;';
+
+        const bookIcon = icons.create('book', { size: 16, colour: 'white' });
+        wikiBtn.appendChild(bookIcon);
+        wikiBtn.appendChild(document.createTextNode('Wiki'));
+
         wikiBtn.addEventListener('click', (e) => e.stopPropagation());
         buttonsDiv.appendChild(wikiBtn);
 
@@ -656,37 +653,61 @@ class ModBrowser
                 font-size: 0.875rem;
                 text-decoration: none;
                 background: linear-gradient(135deg, rgba(75, 192, 75, 0.8) 0%, rgba(56, 142, 60, 0.8) 100%);
+                display: inline-flex;
+                align-items: center;
+                gap: 0.375rem;
             `;
             
-            // Show domain name
-            try
-            {
-                const url = new URL(mod.externalWiki);
-                const domain = url.hostname.replace('www.', '');
-                extWikiBtn.textContent = `Official Wiki`;
-                extWikiBtn.title = domain;
-            }
-            catch
-            {
-                extWikiBtn.textContent = 'Official Wiki';
-            }
+            const extLinkIcon = icons.create('external-link', { size: 16, colour: 'white' });
+            extWikiBtn.appendChild(extLinkIcon);
+            extWikiBtn.appendChild(document.createTextNode('Official Wiki'));
             
             extWikiBtn.addEventListener('click', (e) => e.stopPropagation());
-            extWikiBtn.addEventListener('mouseenter', () => extWikiBtn.style.background = 'linear-gradient(135deg, rgba(75, 192, 75, 1) 0%, rgba(56, 142, 60, 1) 100%)');
-            extWikiBtn.addEventListener('mouseleave', () => extWikiBtn.style.background = 'linear-gradient(135deg, rgba(75, 192, 75, 0.8) 0%, rgba(56, 142, 60, 0.8) 100%)');
-            
             buttonsDiv.appendChild(extWikiBtn);
         }
 
+        // Community/Discussion button
+        const communityBtn = document.createElement('a');
+        communityBtn.href = `https://github.com/${owner}/${repo}/discussions`;
+        communityBtn.target = '_blank';
+        communityBtn.className = 'click-me';
+        communityBtn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const messageIcon = icons.create('message-circle', { size: 16, colour: 'white' });
+        communityBtn.appendChild(messageIcon);
+        communityBtn.appendChild(document.createTextNode('Community'));
+        
+        communityBtn.addEventListener('click', (e) => e.stopPropagation());
+        buttonsDiv.appendChild(communityBtn);
+
+        // GitHub button
         const ghBtn = document.createElement('a');
         ghBtn.href = `https://github.com/${owner}/${repo}`;
         ghBtn.target = '_blank';
         ghBtn.className = 'click-me';
-        ghBtn.textContent = 'GitHub';
-        ghBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem; text-decoration: none;';
+        ghBtn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const githubIcon = icons.create('github', { size: 16, colour: 'white' });
+        ghBtn.appendChild(githubIcon);
+        ghBtn.appendChild(document.createTextNode('GitHub'));
+        
         ghBtn.addEventListener('click', async (e) => {
             e.stopPropagation();
-            // Track download
             try 
             {
                 await fetch(`/analytics/download/${encodeURIComponent(mod.key)}`, { method: 'POST', keepalive: true });
