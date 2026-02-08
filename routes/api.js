@@ -1,6 +1,6 @@
 import express from 'express';
 import { readData, writeData } from '../dataService.js';
-import { backupDataJson } from '../githubBackup.js';
+import { backupDataJson } from '../github-backup.js';
 
 const router = express.Router();
 
