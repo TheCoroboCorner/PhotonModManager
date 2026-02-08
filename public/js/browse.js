@@ -610,7 +610,7 @@ class ModBrowser
         const buttonsDiv = document.createElement('div');
         buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem; margin-left: auto;';
 
-        const { owner, repo } = this.parseModKey(mod.key);
+        const { owner, repo } = parseModKey(mod.key);
 
         const wikiBtn = document.createElement('a');
         wikiBtn.href = `/wiki?mod=${encodeURIComponent(mod.key)}`;
