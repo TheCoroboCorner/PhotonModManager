@@ -1432,7 +1432,7 @@ body
   {
     flex-wrap: wrap;
     gap: var(--space-xs);
-    padding: var(--space-md);
+    padding: var(--space-sm);
   }
 
   .hamburger

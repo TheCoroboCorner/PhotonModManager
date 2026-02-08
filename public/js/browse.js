@@ -512,26 +512,6 @@ class ModBrowser
         title.style.cssText = 'margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--text-white);';
         content.appendChild(title);
 
-        const favBtn = document.createElement('button');
-        favBtn.className = 'fav-btn';
-        favBtn.style.cssText = `
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.25rem;
-            transition: all 0.2s;
-            margin-left: 0.5rem;
-        `;
-        favBtn.innerHTML = mod.favourites > 0 ? '❤️' : '🤍';
-        favBtn.title = `${mod.favourites || 0} favorites`;
-        favBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            favouritesManager.toggleFavourite(mod.key);
-            this.renderMods();
-        });
-        header.appendChild(favBtn);
-
         content.appendChild(header);
 
         // Author
@@ -584,33 +564,78 @@ class ModBrowser
             content.appendChild(tagsContainer);
         }
 
-        // Stats and actions
         const footer = document.createElement('div');
-        footer.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;';
+        footer.style.cssText = 'display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-top: 1rem;';
+
+        // Stats section
+        const statsDiv = document.createElement('div');
+        statsDiv.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex: 1;';
+
+        // Favourites count
+        const favSpan = document.createElement('span');
+        favSpan.textContent = `${mod.favourites || 0} favourites`;
+        favSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
+        statsDiv.appendChild(favSpan);
 
         // View count
         if (mod.analytics && mod.analytics.views) 
         {
             const viewSpan = document.createElement('span');
-            viewSpan.textContent = `👁️ ${mod.analytics.views}`;
+            viewSpan.textContent = `${mod.analytics.views} views`;
             viewSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
-            footer.appendChild(viewSpan);
+            statsDiv.appendChild(viewSpan);
         }
 
         // Download count
         if (mod.analytics && mod.analytics.downloads) 
         {
             const dlSpan = document.createElement('span');
-            dlSpan.textContent = `⬇️ ${mod.analytics.downloads}`;
+            dlSpan.textContent = `${mod.analytics.downloads} downloads`;
             dlSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
-            footer.appendChild(dlSpan);
+            statsDiv.appendChild(dlSpan);
         }
+
+        footer.appendChild(statsDiv);
 
         // Buttons container
         const buttonsDiv = document.createElement('div');
-        buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem; margin-left: auto;';
+        buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem;';
+
+        // Favourite button (classic style)
+        const favBtn = document.createElement('button');
+        favBtn.className = 'click-me';
+        favBtn.textContent = 'Favourite';
+        favBtn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            background: linear-gradient(135deg, rgba(255, 59, 118, 0.8) 0%, rgba(189, 42, 122, 0.8) 100%);
+            transition: all 0.2s;
+        `;
+        favBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            await this.toggleFavourite(mod.key);
+        });
+        favBtn.addEventListener('mouseenter', () => {
+            favBtn.style.background = 'linear-gradient(135deg, rgba(255, 59, 118, 1) 0%, rgba(189, 42, 122, 1) 100%)';
+            favBtn.style.transform = 'scale(1.05)';
+        });
+        favBtn.addEventListener('mouseleave', () => {
+            favBtn.style.background = 'linear-gradient(135deg, rgba(255, 59, 118, 0.8) 0%, rgba(189, 42, 122, 0.8) 100%)';
+            favBtn.style.transform = 'scale(1)';
+        });
+        buttonsDiv.appendChild(favBtn);
 
         const { owner, repo } = parseModKey(mod.key);
+
+        const detailBtn = document.createElement('button');
+        detailBtn.className = 'click-me';
+        detailBtn.textContent = 'Details';
+        detailBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem;';
+        detailBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`;
+        })
+        buttonsDiv.appendChild(detailBtn);
 
         const wikiBtn = document.createElement('a');
         wikiBtn.href = `/wiki?mod=${encodeURIComponent(mod.key)}`;
@@ -619,6 +644,39 @@ class ModBrowser
         wikiBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem; text-decoration: none;';
         wikiBtn.addEventListener('click', (e) => e.stopPropagation());
         buttonsDiv.appendChild(wikiBtn);
+
+        if (mod.externalWiki)
+        {
+            const extWikiBtn = document.createElement('a');
+            extWikiBtn.href = mod.externalWiki;
+            extWikiBtn.target = '_blank';
+            extWikiBtn.className = 'click-me';
+            extWikiBtn.style.cssText = `
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+                text-decoration: none;
+                background: linear-gradient(135deg, rgba(75, 192, 75, 0.8) 0%, rgba(56, 142, 60, 0.8) 100%);
+            `;
+            
+            // Show domain name
+            try
+            {
+                const url = new URL(mod.externalWiki);
+                const domain = url.hostname.replace('www.', '');
+                extWikiBtn.textContent = `Official Wiki`;
+                extWikiBtn.title = domain;
+            }
+            catch
+            {
+                extWikiBtn.textContent = 'Official Wiki';
+            }
+            
+            extWikiBtn.addEventListener('click', (e) => e.stopPropagation());
+            extWikiBtn.addEventListener('mouseenter', () => extWikiBtn.style.background = 'linear-gradient(135deg, rgba(75, 192, 75, 1) 0%, rgba(56, 142, 60, 1) 100%)');
+            extWikiBtn.addEventListener('mouseleave', () => extWikiBtn.style.background = 'linear-gradient(135deg, rgba(75, 192, 75, 0.8) 0%, rgba(56, 142, 60, 0.8) 100%)');
+            
+            buttonsDiv.appendChild(extWikiBtn);
+        }
 
         const ghBtn = document.createElement('a');
         ghBtn.href = `https://github.com/${owner}/${repo}`;
@@ -643,11 +701,6 @@ class ModBrowser
         footer.appendChild(buttonsDiv);
         content.appendChild(footer);
         li.appendChild(content);
-
-        li.addEventListener('click', (e) => {
-            if (!e.target.closest('button') && !e.target.closest('a'))
-                window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`;
-        });
 
         li.addEventListener('mouseenter', () => {
             li.style.transform = 'translateY(-4px)';

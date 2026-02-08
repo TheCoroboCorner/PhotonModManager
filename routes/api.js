@@ -1,5 +1,6 @@
 import express from 'express';
-import { readData } from '../dataService.js';
+import { readData, writeData } from '../dataService.js';
+import { backupDataJson } from '../githubBackup.js';
 
 const router = express.Router();
 
@@ -12,10 +13,11 @@ router.get('/api', (req, res) => {
             '/api/search?q=...': 'Search mods',
             '/api/tags': 'Get all tags',
             '/api/authors': 'Get all authors',
+            '/api/stats': 'Get overall statistics',
             '/api/trending?days=7': 'Get trending mods'
         },
         rateLimit: 'No rate limit currently',
-        docs: 'https://photonmodmanager.onrender.com/api'
+        docs: 'https://photonmodmanager.onrender.com/api.html'
     });
 });
 
@@ -101,7 +103,7 @@ router.get('/api/tags', async (req, res) => {
                 mod.tags.forEach(tag => tagCounts[tag] = (tagCounts[tag] || 0) + 1);
         });
 
-        res.json({ success: true, tags: Object.entries(tagCounts).map(([tag, count]) => ({ tag, count })) });
+        res.json({ success: true, tags: Object.entries(tagCounts).map(([tag, count]) => ({ tag, count })).sort((a, b) => b.count - a.count) });
     }
     catch (err)
     {
@@ -121,7 +123,7 @@ router.get('/api/authors', async (req, res) => {
             authors.forEach(author => authorCounts[author] = (authorCounts[author] || 0) + 1);
         });
 
-        res.json({ success: true, authors: Object.entries(authorCounts).map(([author, modCount]) => ({ author, modCount })) });
+        res.json({ success: true, authors: Object.entries(authorCounts).map(([author, modCount]) => ({ author, modCount })).sort((a, b) => b.modCount - a.modCount) });
     }
     catch (err)
     {
@@ -153,35 +155,6 @@ router.post('/api/favourite/:key', async (req, res) => {
     }
 });
 
-router.get('/api/mods', async (req, res) => {
-    try
-    {
-        const data = await readData();
-        res.json(data);
-    }
-    catch (err)
-    {
-        res.status(500).json({ success: false, error: 'Failed to load mod data' });
-    }
-});
-
-router.get('/api/mod/:key', async (req, res) => {
-    try
-    {
-        const { key } = req.params;
-        const data = await readData();
-        
-        if (!data[key])
-            return res.status(404).json({ error: 'Mod not found' });
-        
-        res.json(data[key]);
-    }
-    catch (err)
-    {
-        res.status(500).json({ success: false, error: 'Failed to load mod data' });
-    }
-});
-
 router.get('/api/stats', async (req, res) => {
     try
     {
@@ -197,7 +170,7 @@ router.get('/api/stats', async (req, res) => {
             tags: [...new Set(entries.flatMap(m => m.tags || []))].sort()
         };
         
-        res.json(stats);
+        res.json({ success: true, stats });
     }
     catch (err)
     {
