@@ -37,6 +37,7 @@ class ModDetailPage
         this.updateStatCards();
         this.renderRelatedMods();
         this.updateMetaTags();
+        this.setupImageTab();
     }
 
     showError(message)
@@ -98,46 +99,31 @@ class ModDetailPage
         if (!container)
             return;
 
+        console.log('[ModDetail] Rendering images:', this.mod.images);
+
         const images = this.mod.images || [];
 
         if (images.length === 0)
         {
-            container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 2rem;">No images available for this mod</p>';
+            container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 2rem;">No images have been uploaded for this mod.</p>';
             return;
         }
 
-        container.innerHTML = '';
+        const grid = document.createElement('div');
+        grid.style.cssText = `
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        `;
 
-        const gallery = document.createElement('div');
-        gallery.className = 'image-gallery';
-        gallery.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;';
-
-        images.forEach((image, index) => {
-            const item = document.createElement('div');
-            item.className = 'image-gallery-item';
-            item.style.cssText = 'position: relative; cursor: pointer; border-radius: 8px; overflow: hidden; aspect-ratio: 16 / 9; transition: transform 0.2s; border: 2px solid rgba(102, 126, 234, 0.2);';
-            
-            if (image.isThumbnail)
-            {
-                item.style.borderColor = 'var(--accent-blue)';
-                item.style.boxShadow = '0 0 20px rgba(102, 126, 234, 0.5)';
-            }
-
-            item.innerHTML = `
-                <img src="${image.path}" alt="${image.originalName || 'Mod screenshot'}" style="width: 100%; height: 100%; object-fit: cover;">
-                ${image.isThumbnail ? '<div style="position: absolute; top: 0.5rem; right: 0.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;">⭐ Thumbnail</div>' : ''}
-            `;
-
-            item.addEventListener('mouseenter', () => item.style.transform = 'scale(1.05)');
-
-            item.addEventListener('mouseleave', () => item.style.transform = 'scale(1)');
-
-            item.addEventListener('click', () => this.openLightbox(image.path));
-
-            gallery.appendChild(item);
+        this.mod.images.forEach((image, index) => {
+            const card = this.createImageCard(image, index);
+            grid.appendChild(card);
         });
 
-        container.appendChild(gallery);
+        container.innerHTML = '';
+        container.appendChild(grid);
+        console.log('[ModDetail] Rendered', this.mod.images.length, 'images');
     }
 
     openLightbox(imagePath)
@@ -559,6 +545,81 @@ class ModDetailPage
         return scored.map(item => ({ ...item.mod, key: item.key }));
     }
 
+    createImageCard(image, index)
+    {
+        const card = document.createElement('div');
+        card.style.cssText = `
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid ${image.isThumbnail ? 'var(--accent-blue)' : 'rgba(102, 126, 234, 0.2)'};
+            transition: all 0.3s;
+            cursor: pointer;
+            animation: fadeIn 0.3s ease;
+        `;
+
+        const img = document.createElement('img');
+        img.src = image.path;
+        img.alt = image.originalName || `Screenshot ${index + 1}`;
+        img.style.cssText = 'width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;';
+        
+        img.onload = () => console.log('[ModDetail] ✅ Image loaded:', image.path);
+        
+        img.onerror = () => {
+            console.error('[ModDetail] Failed to load image:', image.path);
+            card.innerHTML = `
+                <div style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: rgba(255, 59, 48, 0.1); color: var(--text-secondary);">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem;">❌</div>
+                        <div style="font-size: 0.875rem; margin-top: 0.5rem;">Failed to load</div>
+                    </div>
+                </div>
+            `;
+        };
+
+        card.appendChild(img);
+
+        if (image.isThumbnail)
+        {
+            const badge = document.createElement('div');
+            badge.textContent = '⭐ Thumbnail';
+            badge.style.cssText = `
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 0.25rem 0.75rem;
+                border-radius: 50px;
+                font-size: 0.75rem;
+                font-weight: 600;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            `;
+            card.appendChild(badge);
+        }
+
+        card.addEventListener('click', () => this.openLightbox(image.path));
+
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'scale(1.05)';
+            card.style.boxShadow = '0 8px 20px rgba(102, 126, 234, 0.3)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'scale(1)';
+            card.style.boxShadow = 'none';
+        });
+
+        return card;
+    }
+
+    setupImageTab()
+    {
+        const imagesTab = document.querySelector('[data-tab="images"]');
+        if (imagesTab)
+            imagesTab.addEventListener('click', () => this.renderImageGallery());
+    }
+
     createRelatedModCard(mod)
     {
         const card = document.createElement('div');
@@ -643,6 +704,26 @@ class ModDetailPage
 
         if (wikiLink)
             wikiLink.href = `/wiki?mod=${this.modKey}`;
+
+        const externalWikiLink = document.getElementById('mod-external-wiki');
+        if (externalWikiLink && this.mod.externalWiki)
+        {
+            externalWikiLink.href = this.mod.externalWiki;
+            externalWikiLink.style.display = 'inline-block';
+
+            try
+            {
+                const url = new URL(this.mod.externalWiki);
+                const domain = url.hostname.replace('www.', '');
+                externalWikiLink.innerHTML = domain;
+            }
+            catch
+            {
+                externalWikiLink.textContent = 'Official Wiki';
+            }
+        }
+        else if (externalWikiLink)
+            externalWikiLink.style.display = 'none';
     }
 
     setMeta(name, content)

@@ -226,6 +226,16 @@ class WikiPage
         console.log('[Wiki] Populated selector with', Object.keys(groups).length, 'groups');
     }
 
+    async getAtlasDimensions(atlasPath)
+    {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+            img.onerror = () => resolve({ width: 1024, height: 1024 });
+            img.src = atlasPath;
+        });
+    }
+
     showCard(idx)
     {
         const card = this.filteredCards[idx];
@@ -274,26 +284,16 @@ class WikiPage
             
             if (atlas.localPath)
             {
-                const spriteWidth = atlas.px * 2;
-                const spriteHeight = atlas.py * 2;
+                const spriteWidth = card.w * 2;
+                const spriteHeight = card.h * 2;
 
-                const cardsUsingAtlas = this.cards.filter(c => c.atlas === card.atlas && c.pos);
+                const { width, height } = await this.getAtlasDimensions(atlas.localPath);
 
-                const minX = Math.min(...cardsUsingAtlas.map(c => c.pos.x));
-                const minY = Math.min(...cardsUsingAtlas.map(c => c.pos.y));
-                const isOneIndexed = minX === 1 && minY === 1;
+                const sheetWidth = width;
+                const sheetHeight = height;
 
-                const posX = isOneIndexed ? card.pos.x - 1 : card.pos.x;
-                const posY = isOneIndexed ? card.pos.y - 1 : card.pos.y;
-
-                let maxX = Math.max(...cardsUsingAtlas.map(c => isOneIndexed ? c.pos.x - 1 : c.pos.x));
-                let maxY = Math.max(...cardsUsingAtlas.map(c => isOneIndexed ? c.pos.y - 1 : c.pos.y));
-
-                const gridColumns = maxX + 1;
-                const gridRows = maxY + 1;
-
-                const sheetWidth = gridColumns * spriteWidth;
-                const sheetHeight = gridRows * spriteHeight;
+                const posX = card.pos.x;
+                const posY = card.pos.y;
 
                 const offsetX = posX * spriteWidth;
                 const offsetY = posY * spriteHeight;
@@ -302,10 +302,8 @@ class WikiPage
                     card: card.key,
                     spriteSize: `${spriteWidth}x${spriteHeight}`,
                     sheetSize: `${sheetWidth}x${sheetHeight}`,
-                    grid: `${gridColumns}x${gridRows}`,
                     position: `${posX},${posY}`,
-                    offset: `${offsetX},${offsetY}`,
-                    oneIndexed: isOneIndexed
+                    offset: `${offsetX},${offsetY}`
                 });
                 
                 html += `

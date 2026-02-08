@@ -89,6 +89,7 @@ class SubmitHandler
         const formData = {
             repoUrl: document.querySelector('[name="repoUrl"]').value,
             jsonPath: document.querySelector('[name="jsonPath"]')?.value || '',
+            externalWiki: document.querySelector('[name="externalWiki"]'?.value || ''),
             tags: Array.from(document.querySelectorAll('[name="tags"]:checked')).map(cb => cb.value)
         };
         

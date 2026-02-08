@@ -1,6 +1,82 @@
 import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from './utils.js';
 import { favouritesManager } from './favourites.js';
 
+class BrowsePreferences
+{
+    constructor()
+    {
+        this.storageKey = 'photon-browse-preferences';
+        this.defaults = {
+            sortBy: 'trending',
+            order: 'desc',
+            type: 'all',
+            tags: [],
+            searchQuery: ''
+        };
+    }
+
+    save(preferences)
+    {
+        try
+        {
+            const toSave = {
+                ...this.defaults,
+                ...preferences,
+                lastUpdated: new Date().toISOString()
+            };
+
+            localStorage.setItem(this.storageKey, JSON.stringify(toSave));
+            console.log('[BrowsePrefs] Saved:', toSave);
+        }
+        catch (err)
+        {
+            console.error('[BrowsePrefs] Failed to save:', err);
+        }
+    }
+
+    load()
+    {
+        try
+        {
+            const stored = localStorage.getItem(this.storageKey);
+            if (!stored)
+            {
+                console.log('[BrowsePrefs] No saved preferences, using defaults');
+                return this.defaults;
+            }
+
+            const parsed = JSON.parse(stored);
+            const preferences = {
+                ...this.defaults,
+                ...parsed
+            };
+
+            console.log('[BrowsePrefs] Loaded:', preferences);
+            return preferences;
+        }
+        catch (err)
+        {
+            console.error('[BrowsePrefs] Failed to load:', err);
+            return this.defaults;
+        }
+    }
+
+    clear()
+    {
+        try
+        {
+            localStorage.removeItem(this.storageKey);
+            console.log('[BrowsePrefs] Cleared preferences');
+        }
+        catch (err)
+        {
+            console.error('[BrowsePrefs] Failed to clear:', err);
+        }
+    }
+}
+
+const browsePrefs = new BrowsePreferences();
+
 class ScrollAnimationObserver {
     constructor() {
         this.observer = null;
@@ -66,10 +142,14 @@ class ModBrowser
             type: 'mods',
             limit: null
         };
+        this.preferences = browsePrefs;
     }
 
     async init()
     {
+        const savedPrefs = this.preferences.load();
+        this.applySavedPreferences(savedPrefs);
+
         await this.loadMods();
         this.extractUrlParams();
         this.updateUIControls();
@@ -77,6 +157,53 @@ class ModBrowser
         this.populateTagFilter();
         this.applyFilters();
         this.setupEventListeners();
+    }
+
+    applySavedPreferences(prefs)
+    {
+        console.log('[Browse] Applying saved preferences:', prefs);
+
+        const sortSelect = document.getElementById('sort-by');
+        if (sortSelect && prefs.sortBy)
+            sortSelect.value = prefs.sortBy;
+
+        const orderSelect = document.getElementById('sort-order');
+        if (orderSelect && prefs.order)
+            orderSelect.value = prefs.order;
+
+        const typeSelect = document.getElementById('type-filter');
+        if (typeSelect && prefs.type)
+            typeSelect.value = prefs.type;
+
+        if (prefs.tags && prefs.tags.length > 0)
+        {
+            prefs.tags.forEach(tag => {
+                const checkbox = document.querySelector(`[name="tags"][value="${tag}"]`);
+                if (checkbox)
+                    checkbox.checked = true;
+            });
+        }
+
+        const searchInput = document.getElementById('search-input');
+        if (searchInput && prefs.searchQuery)
+            searchInput.value = prefs.searchQuery;
+    }
+
+    getCurrentPreferences()
+    {
+        const sortSelect = document.getElementById('sort-by');
+        const orderSelect = document.getElementById('sort-order');
+        const typeSelect = document.getElementById('type-filter');
+        const searchInput = document.getElementById('search-input');
+        const selectedTags = Array.from(document.querySelectorAll('[name="tags"]:checked')).map(cb => cb.value);
+
+        return {
+            sortBy: sortSelect?.value || 'trending',
+            order: orderSelect?.value || 'desc',
+            type: typeSelect?.value || 'all',
+            tags: selectedTags,
+            searchQuery: searchInput?.value || ''
+        };
     }
 
     async loadMods()
@@ -229,6 +356,9 @@ class ModBrowser
 
     applyFilters()
     {
+        const currentPrefs = this.getCurrentPreferences();
+        this.preferences.save(currentPrefs);
+
         this.updateUIControls();
         this.updateURLParams();
         
@@ -374,11 +504,35 @@ class ModBrowser
         const content = document.createElement('div');
         content.style.cssText = 'position: relative; z-index: 1;';
 
-        // Title
+        const header = document.createElement('div');
+        header.style.cssText = 'display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;';
+
         const title = document.createElement('h3');
         title.textContent = mod.name;
         title.style.cssText = 'margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--text-white);';
         content.appendChild(title);
+
+        const favBtn = document.createElement('button');
+        favBtn.className = 'fav-btn';
+        favBtn.style.cssText = `
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            transition: all 0.2s;
+            margin-left: 0.5rem;
+        `;
+        favBtn.innerHTML = mod.favourites > 0 ? '❤️' : '🤍';
+        favBtn.title = `${mod.favourites || 0} favorites`;
+        favBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            favouritesManager.toggleFavourite(mod.key);
+            this.renderMods();
+        });
+        header.appendChild(favBtn);
+
+        content.appendChild(header);
 
         // Author
         const author = document.createElement('div');
@@ -392,42 +546,109 @@ class ModBrowser
         desc.style.cssText = 'color: var(--text-light); margin-bottom: 1rem; line-height: 1.6;';
         content.appendChild(desc);
 
-        // Meta info (tags, stats, etc.)
-        const meta = document.createElement('div');
-        meta.style.cssText = 'display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; font-size: 0.875rem; color: var(--text-secondary);';
-        
-        // Favorites
-        if (mod.favourites) 
+        // Tags
+        if (mod.tags && mod.tags.length > 0) 
         {
-            const favSpan = document.createElement('span');
-            favSpan.textContent = `❤️ ${mod.favourites}`;
-            meta.appendChild(favSpan);
+            const tagsContainer = document.createElement('div');
+            tagsContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;';
+            
+            mod.tags.slice(0, 5).forEach(tag => {
+                const tagSpan = document.createElement('span');
+                tagSpan.textContent = tag;
+                tagSpan.style.cssText = `
+                    padding: 0.25rem 0.75rem;
+                    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+                    border: 1px solid rgba(102, 126, 234, 0.3);
+                    border-radius: 50px;
+                    font-size: 0.75rem;
+                    color: var(--text-light);
+                `;
+                tagsContainer.appendChild(tagSpan);
+            });
+            
+            if (mod.tags.length > 5) 
+            {
+                const moreSpan = document.createElement('span');
+                moreSpan.textContent = `+${mod.tags.length - 5}`;
+                moreSpan.style.cssText = `
+                    padding: 0.25rem 0.75rem;
+                    background: rgba(102, 126, 234, 0.1);
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    font-size: 0.75rem;
+                    color: var(--text-secondary);
+                `;
+                tagsContainer.appendChild(moreSpan);
+            }
+            
+            content.appendChild(tagsContainer);
         }
 
-        // Downloads
+        // Stats and actions
+        const footer = document.createElement('div');
+        footer.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;';
+
+        // View count
+        if (mod.analytics && mod.analytics.views) 
+        {
+            const viewSpan = document.createElement('span');
+            viewSpan.textContent = `👁️ ${mod.analytics.views}`;
+            viewSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
+            footer.appendChild(viewSpan);
+        }
+
+        // Download count
         if (mod.analytics && mod.analytics.downloads) 
         {
             const dlSpan = document.createElement('span');
             dlSpan.textContent = `⬇️ ${mod.analytics.downloads}`;
-            meta.appendChild(dlSpan);
+            dlSpan.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem;';
+            footer.appendChild(dlSpan);
         }
 
-        // Tags
-        if (mod.tags && mod.tags.length > 0) 
-        {
-            const tagsSpan = document.createElement('span');
-            tagsSpan.textContent = `🏷️ ${mod.tags.length}`;
-            meta.appendChild(tagsSpan);
-        }
+        // Buttons container
+        const buttonsDiv = document.createElement('div');
+        buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem; margin-left: auto;';
 
-        content.appendChild(meta);
+        const { owner, repo } = this.parseModKey(mod.key);
+
+        const wikiBtn = document.createElement('a');
+        wikiBtn.href = `/wiki?mod=${encodeURIComponent(mod.key)}`;
+        wikiBtn.className = 'click-me';
+        wikiBtn.textContent = 'Wiki';
+        wikiBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem; text-decoration: none;';
+        wikiBtn.addEventListener('click', (e) => e.stopPropagation());
+        buttonsDiv.appendChild(wikiBtn);
+
+        const ghBtn = document.createElement('a');
+        ghBtn.href = `https://github.com/${owner}/${repo}`;
+        ghBtn.target = '_blank';
+        ghBtn.className = 'click-me';
+        ghBtn.textContent = 'GitHub';
+        ghBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem; text-decoration: none;';
+        ghBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            // Track download
+            try 
+            {
+                await fetch(`/analytics/download/${encodeURIComponent(mod.key)}`, { method: 'POST', keepalive: true });
+            } 
+            catch (err) 
+            {
+                console.error('Failed to track download:', err);
+            }
+        });
+        buttonsDiv.appendChild(ghBtn);
+
+        footer.appendChild(buttonsDiv);
+        content.appendChild(footer);
         li.appendChild(content);
 
-        // Click to view mod
-        li.style.cursor = 'pointer';
-        li.addEventListener('click', () => window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`);
+        li.addEventListener('click', (e) => {
+            if (!e.target.closest('button') && !e.target.closest('a'))
+                window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`;
+        });
 
-        // Hover effect
         li.addEventListener('mouseenter', () => {
             li.style.transform = 'translateY(-4px)';
             li.style.borderColor = 'rgba(102, 126, 234, 0.5)';
@@ -548,6 +769,34 @@ class ModBrowser
                     searchInput.value = '';
                 
                 this.applyFilters();
+            });
+        }
+
+        const elements = [
+            document.getElementById('sort-by'),
+            document.getElementById('sort-order'),
+            document.getElementById('type-filter'),
+            document.getElementById('search-input'),
+            ...document.querySelectorAll('[name="tags"]')
+        ].filter(Boolean);
+
+        elements.forEach(element => {
+            const eventType = element.type === 'checkbox' ? 'change' : 
+                              element.tagName === 'INPUT' ? 'input' : 'change';
+
+            element.addEventListener(eventType, () => {
+                const currentPrefs = this.getCurrentPreferences();
+                this.preferences.save(currentPrefs);
+                this.applyFilters();
+            });
+        });
+
+        const searchBtn = document.getElementById('search-btn');
+        if (searchBtn)
+        {
+            searchBtn.addEventListener('click', () => {
+                const currentPrefs = this.getCurrentPreferences();
+                this.preferences.save(currentPrefs);
             });
         }
     }

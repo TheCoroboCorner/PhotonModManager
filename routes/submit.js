@@ -114,8 +114,20 @@ async function getLatestCommitDate(user, repo)
 router.post('/submit', async (req, res) => {
     try
     {
-        let { repoUrl, jsonPath, tags } = req.body;
+        let { repoUrl, jsonPath, tags, externalWiki } = req.body;
         const tagArray = Array.isArray(tags) ? tags : (tags ? [tags] : []);
+
+        if (externalWiki && externalWiki.trim() !== '')
+        {
+            try
+            {
+                new URL(externalWiki);
+            }
+            catch
+            {
+                return res.status(400).json({ error: 'Invalid external wiki URL' });
+            }
+        }
 
         // Parse the URL
         const { user, repo, filePath } = parseGitHubUrlComponents(repoUrl, jsonPath);
@@ -150,6 +162,7 @@ router.post('/submit', async (req, res) => {
         entry.published_at = new Date().toISOString();
         entry.type = "Mod";
         entry.tags = tagArray;
+        entry.externalWiki = externalWiki && externalWiki.trim() !== '' ? externalWiki.trim() : null;
         
         const latestCommit = await getLatestCommitDate(user, repo);
         entry.updated_at = latestCommit || entry.published_at;

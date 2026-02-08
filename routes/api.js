@@ -130,4 +130,79 @@ router.get('/api/authors', async (req, res) => {
     }
 });
 
+router.post('/api/favourite/:key', async (req, res) => {
+    try
+    {
+        const { key } = req.params;
+        const data = await readData();
+
+        if (!data[key])
+            return res.status(404).json({ error: 'Mod not found' });
+
+        data[key].favourites = (data[key].favourites || 0) + 1;
+
+        await writeData(data);
+        await backupDataJson().catch(err => console.error('Backup failed:', err));
+        
+        res.json({ success: true, favourites: data[key].favourites, action: 'favorited' });
+    }
+    catch (err)
+    {
+        console.error('Failed to toggle favourite:', err);
+        res.status(500).json({ success: false, error: 'Failed to update favourite' });
+    }
+});
+
+router.get('/api/mods', async (req, res) => {
+    try
+    {
+        const data = await readData();
+        res.json(data);
+    }
+    catch (err)
+    {
+        res.status(500).json({ success: false, error: 'Failed to load mod data' });
+    }
+});
+
+router.get('/api/mod/:key', async (req, res) => {
+    try
+    {
+        const { key } = req.params;
+        const data = await readData();
+        
+        if (!data[key])
+            return res.status(404).json({ error: 'Mod not found' });
+        
+        res.json(data[key]);
+    }
+    catch (err)
+    {
+        res.status(500).json({ success: false, error: 'Failed to load mod data' });
+    }
+});
+
+router.get('/api/stats', async (req, res) => {
+    try
+    {
+        const data = await readData();
+        const entries = Object.values(data);
+        
+        const stats = {
+            totalMods: entries.filter(m => m.type === 'Mod').length,
+            totalModpacks: entries.filter(m => m.type === 'Modpack').length,
+            totalFavorites: entries.reduce((sum, m) => sum + (m.favourites || 0), 0),
+            totalViews: entries.reduce((sum, m) => sum + (m.analytics?.views || 0), 0),
+            totalDownloads: entries.reduce((sum, m) => sum + (m.analytics?.downloads || 0), 0),
+            tags: [...new Set(entries.flatMap(m => m.tags || []))].sort()
+        };
+        
+        res.json(stats);
+    }
+    catch (err)
+    {
+        res.status(500).json({ success: false, error: 'Failed to get stats' });
+    }
+});
+
 export default router;
