@@ -226,7 +226,7 @@ class WikiPage
         console.log('[Wiki] Populated selector with', Object.keys(groups).length, 'groups');
     }
 
-    async getAtlasDimensions(atlasPath)
+    getAtlasDimensions(atlasPath)
     {
         return new Promise((resolve) => {
             const img = new Image();
