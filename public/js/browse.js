@@ -666,28 +666,6 @@ class ModBrowser
             buttonsDiv.appendChild(extWikiBtn);
         }
 
-        // Community/Discussion button
-        const communityBtn = document.createElement('a');
-        communityBtn.href = `https://github.com/${owner}/${repo}/discussions`;
-        communityBtn.target = '_blank';
-        communityBtn.className = 'click-me';
-        communityBtn.style.cssText = `
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            text-decoration: none;
-            background: linear-gradient(135deg, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.375rem;
-        `;
-        
-        const messageIcon = icons.create('message-circle', { size: 16, colour: 'white' });
-        communityBtn.appendChild(messageIcon);
-        communityBtn.appendChild(document.createTextNode('Community'));
-        
-        communityBtn.addEventListener('click', (e) => e.stopPropagation());
-        buttonsDiv.appendChild(communityBtn);
-
         // GitHub button
         const ghBtn = document.createElement('a');
         ghBtn.href = `https://github.com/${owner}/${repo}`;
@@ -718,6 +696,28 @@ class ModBrowser
             }
         });
         buttonsDiv.appendChild(ghBtn);
+
+        // Community/Discussion button
+        const communityBtn = document.createElement('a');
+        communityBtn.href = `https://github.com/${owner}/${repo}/discussions`;
+        communityBtn.target = '_blank';
+        communityBtn.className = 'click-me';
+        communityBtn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const messageIcon = icons.create('message-circle', { size: 16, colour: 'white' });
+        communityBtn.appendChild(messageIcon);
+        communityBtn.appendChild(document.createTextNode('Community'));
+        
+        communityBtn.addEventListener('click', (e) => e.stopPropagation());
+        buttonsDiv.appendChild(communityBtn);
 
         footer.appendChild(buttonsDiv);
         content.appendChild(footer);
