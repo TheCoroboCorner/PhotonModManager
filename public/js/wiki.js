@@ -284,16 +284,19 @@ class WikiPage
             
             if (atlas.localPath)
             {
-                const spriteWidth = card.w * 2;
-                const spriteHeight = card.h * 2;
+                const cardWidth = card.w || 71;
+                const cardHeight = card.h || 95;
+
+                const spriteWidth = cardWidth * 2;
+                const spriteHeight = cardHeight * 2;
 
                 const { width, height } = await this.getAtlasDimensions(atlas.localPath);
 
                 const sheetWidth = width;
                 const sheetHeight = height;
 
-                const posX = card.pos.x;
-                const posY = card.pos.y;
+                const posX = card.pos.x ?? 0;
+                const posY = card.pos.y ?? 0;
 
                 const offsetX = posX * spriteWidth;
                 const offsetY = posY * spriteHeight;

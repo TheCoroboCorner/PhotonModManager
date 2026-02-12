@@ -10,7 +10,7 @@ class IconLoader
     {
         const {
             size = 16,
-            colour = 'currentColor',
+            colour = 'white',
             className = '',
             title = ''
         } = options;
@@ -73,8 +73,8 @@ class IconLoader
                 svg.setAttribute('viewBox', '0 0 24 24');
 
             svg.setAttribute('fill', 'none');
-            svg.setAttribute('stroke', 'currentColor');
-            svg.setAttribute('stroke-width', '2');
+            svg.setAttribute('stroke', 'white');
+            svg.setAttribute('stroke-width', '2.5');
             svg.setAttribute('stroke-linecap', 'round');
             svg.setAttribute('stroke-linejoin', 'round');
 
@@ -93,7 +93,7 @@ class IconLoader
     {
         const {
             size = 16,
-            colour = 'currentColor',
+            colour = 'white',
             gap = '0.375rem',
             className = ''
         } = options;
@@ -121,7 +121,7 @@ class IconLoader
     {
         const {
             size = 20,
-            colour = 'currentColor',
+            colour = 'white',
             title = '',
             onClick = null,
             className = ''
