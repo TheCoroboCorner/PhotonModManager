@@ -476,7 +476,7 @@ class ModBrowser
             });
         }
 
-        entries = sortMods(entries);
+        entries = this.sortMods(entries);
 
         if (this.params.limit)
             entries = entries.slice(0, this.params.limit);
