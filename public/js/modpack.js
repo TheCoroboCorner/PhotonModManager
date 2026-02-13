@@ -36,6 +36,70 @@ class ModpackBuilder
         }
     }
 
+    createVersionSelector(modKey, mod)
+    {
+        const select = document.createElement('select');
+        select.className = 'version-select';
+        select.dataset.modKey = modKey;
+        select.style.cssText = `
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            color: var(--text-white);
+            padding: 0.375rem 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            min-width: 120px;
+        `;
+        
+        const latestOption = document.createElement('option');
+        latestOption.value = 'latest';
+        latestOption.textContent = 'Latest';
+        latestOption.selected = true;
+        select.appendChild(latestOption);
+        
+        this.fetchModVersions(modKey).then(versions => {
+            if (versions && versions.length > 0)
+            {
+                versions.forEach(release => {
+                    const option = document.createElement('option');
+                    option.value = release.tag_name;
+                    option.textContent = `${release.tag_name}${release.prerelease ? ' (pre)' : ''}`;
+                    select.appendChild(option);
+                });
+            }
+        });
+        
+        select.addEventListener('click', (e) => e.stopPropagation());
+        
+        return select;
+    }
+
+    async fetchModVersions(modKey)
+    {
+        try
+        {
+            const response = await fetch(`/api/version-history/${encodeURIComponent(modKey)}`);
+            
+            if (!response.ok)
+                return [];
+            
+            const data = await response.json();
+            return data.releases || [];
+        }
+        catch (err)
+        {
+            console.error('[Modpack] Failed to fetch versions:', err);
+            return [];
+        }
+    }
+
+    getSelectedVersion(modKey)
+    {
+        const select = document.querySelector(`.version-select[data-mod-key="${modKey}"]`);
+        return select ? select.value : 'latest';
+    }
+
     renderModList(filter = '')
     {
         const container = document.getElementById('mod-list');
@@ -60,38 +124,59 @@ class ModpackBuilder
 
         mods.forEach(([key, mod]) => {
             const item = document.createElement('label');
-            item.style.cssText = 'display: flex; align-items: center; gap: 1rem; padding: 0.75rem; margin-bottom: 0.5rem; background: rgba(30, 18, 82, 0.4); border-radius: 8px; cursor: pointer; transition: all 0.2s;';
+            item.className = 'checkbox-container mod-item';
+            item.style.cssText = `
+                display: flex;
+                align-items: center;
+                padding: 0.75rem 1rem;
+                background: rgba(30, 18, 82, 0.4);
+                border: 1px solid rgba(102, 126, 234, 0.2);
+                border-radius: 8px;
+                margin-bottom: 0.5rem;
+                cursor: pointer;
+                transition: all 0.2s;
+            `;
             
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
+            checkbox.className = 'mod-checkbox';
+            checkbox.dataset.modKey = key;
             checkbox.checked = this.selectedMods.has(key);
+            
+            const customCheckbox = document.createElement('span');
+            customCheckbox.className = 'custom-checkbox';
+            
+            const info = document.createElement('div');
+            info.style.cssText = 'flex: 1; margin-left: 0.75rem;';
+            info.innerHTML = `
+                <div style="color: var(--text-white); font-weight: 500;">${mod.name}</div>
+                <div style="color: var(--text-secondary); font-size: 0.875rem;">${mod.description || 'No description'}</div>
+            `;
+            
+            const versionSelect = this.createVersionSelector(key, mod);
+            versionSelect.style.marginLeft = 'auto';
+            
+            item.appendChild(checkbox);
+            item.appendChild(customCheckbox);
+            item.appendChild(info);
+            item.appendChild(versionSelect);
+            
             checkbox.addEventListener('change', (e) => {
                 if (e.target.checked)
                     this.selectedMods.add(key);
                 else
                     this.selectedMods.delete(key);
-
                 this.updatePreview();
             });
 
-            const info = document.createElement('div');
-            info.style.flex = '1';
-            info.innerHTML = `
-                <strong>${mod.name}</strong><br>
-                <small style="color: var(--text-secondary);">${mod.description || 'No description'}</small>
-            `;
-
-            item.appendChild(checkbox);
-            item.appendChild(info);
-
             item.addEventListener('mouseenter', () => {
-                if (!checkbox.checked)
-                    item.style.background = 'rgba(102, 126, 234, 0.2)';
+                item.style.background = 'rgba(30, 18, 82, 0.6)';
+                item.style.borderColor = 'rgba(102, 126, 234, 0.4)';
             });
 
             item.addEventListener('mouseleave', () => {
-                if (!checkbox.checked)
-                    item.style.background = 'rgba(30, 18, 82, 0.4)';
+                item.style.background = 'rgba(30, 18, 82, 0.4)';
+                item.style.borderColor = 'rgba(102, 126, 234, 0.2)';
             });
 
             container.appendChild(item);
@@ -100,21 +185,31 @@ class ModpackBuilder
 
     resolveDependencies()
     {
-        if (this.selectedMods.size === 0)
-        {
-            toast.warning('Select at least one mod first!');
-            return;
-        }
-
-        const selectedArray = Array.from(this.selectedMods).map(key => ({ key, version: this.allMods[key].version || 'latest' }));
+        const selectedArray = Array.from(this.selectedMods).map(key => ({ key, version: this.getSelectedVersion(key) }));
 
         const resolver = new DependencyResolver(this.allMods);
         const result = resolver.resolve(selectedArray);
+
+        const foundDeps = result.resolved.filter(dep => !this.selectedMods.has(dep.key));
+        
+        foundDeps.forEach(dep => {
+            this.selectedMods.add(dep.key);
+            
+            const checkbox = document.querySelector(`input.mod-checkbox[data-mod-key="${dep.key}"]`);
+            if (checkbox && !checkbox.checked)
+            {
+                checkbox.checked = true;
+                console.log(`[Modpack] Auto-added: ${this.allMods[dep.key]?.name}`);
+            }
+        });
 
         this.resolvedDeps = result.resolved;
         this.conflicts = result.conflicts;
 
         this.renderDependencyResult();
+        
+        if (foundDeps.length > 0)
+            document.getElementById('dependency-result')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
     renderDependencyResult()
@@ -257,7 +352,7 @@ class ModpackBuilder
 
         const allModKeys = new Set([...Array.from(this.selectedMods), ...this.resolvedDeps.map(d => d.key)]);
 
-        const modsArray = Array.from(allModKeys).map(key => ({ key, version: this.allMods[key]?.version || 'latest' }));
+        const modsArray = Array.from(allModKeys).map(key => ({ key, version: this.getSelectedVersion(key) }));
 
         const metadata = {
             name: document.getElementById('pack-name')?.value || 'Untitled Modpack',
@@ -300,7 +395,7 @@ class ModpackBuilder
 
         const allModKeys = new Set([...Array.from(this.selectedMods), ...this.resolvedDeps.map(d => d.key)]);
 
-        const modsArray = Array.from(allModKeys).map(key => ({ key, version: this.allMods[key]?.version || 'latest' }));
+        const modsArray = Array.from(allModKeys).map(key => ({ key, version: this.getSelectedVersion(key) }));
 
         const tags = Array.from(document.querySelectorAll('input[name="pack-tags"]:checked')).map(cb => cb.value);
 

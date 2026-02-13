@@ -135,7 +135,7 @@ class ModBrowser
         this.allTags = new Set();
         this.filteredMods = [];
         this.params = {
-            sortBy: 'views',
+            sortBy: 'trending',
             order: 'desc',
             tag: '',
             author: '',
@@ -355,6 +355,87 @@ class ModBrowser
         tagSelect.value = this.params.tag;
     }
 
+    calculateTrendingScore(mod)
+    {
+        const days = 7;
+        const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+
+        const recentViews = mod.analytics?.lastViewed > cutoff ? mod.analytics.views : 0;
+        const recentDownloads = mod.analytics?.lastDownloaded > cutoff ? mod.analytics.downloads : 0;
+        const recentFavourites = mod.updated_at > cutoff ? mod.favourites : 0;
+            
+        const viewScore = 0.3;
+        const downloadScore = 0.5;
+        const favouriteScore = 0.2;
+
+        const score = (recentViews * viewScore) + (recentDownloads * downloadScore) + (recentFavourites * favouriteScore);
+
+        return score;
+    }
+
+    sortMods(mods)
+    {
+        const { sortBy, order } = this.params;
+
+        const sorted = [...mods].sort((a, b) => {
+            let aVal, bVal;
+
+            switch (sortBy)
+            {
+                case 'trending':
+                    const aScore = this.calculateTrendingScore(a);
+                    const bScore = this.calculateTrendingScore(b);
+
+                    aVal = aScore;
+                    bVal = bScore;
+
+                    break;
+                case 'name':
+                    aVal = (a.name || '').toLowerCase();
+                    bVal = (b.name || '').toLowerCase();
+
+                    break;
+                case 'author':
+                    const aAuthor = Array.isArray(a.author) ? a.author[0] : a.author;
+                    const bAuthor = Array.isArray(b.author) ? b.author[0] : b.author;
+
+                    aVal = (aAuthor || '').toLowerCase();
+                    bVal = (bAuthor || '').toLowerCase();
+
+                    break;
+                case 'updated':
+                    aVal = new Date(a.lastUpdated || 0).getTime();
+                    bVal = new Date(b.lastUpdated || 0).getTime();
+
+                    break;
+                case 'favourites':
+                    aVal = a.favourites || 0;
+                    bVal = b.favourites || 0;
+
+                    break;
+                case 'views':
+                    aVal = a.analytics?.views || 0;
+                    bVal = b.analytics?.views || 0;
+
+                    break;
+                case 'downloads':
+                    aVal = a.analytics?.downloads || 0;
+                    bVal = b.analytics?.downloads || 0;
+
+                    break;
+                default:
+                    return 0;
+            }
+
+            if (typeof aVal === 'string')
+                return order === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+
+            return order === 'asc' ? aVal - bVal : bVal - aVal;
+        });
+
+        return sorted;
+    }
+
     applyFilters()
     {
         const currentPrefs = this.getCurrentPreferences();
@@ -395,21 +476,7 @@ class ModBrowser
             });
         }
 
-        entries.sort((a, b) => {
-            let diff;
-            if (this.params.sortBy === 'favourites')
-                diff = (b.favourites || 0) - (a.favourites || 0);
-            else if (this.params.sortBy === 'views')
-                diff = (b.analytics?.views || 0) - (a.analytics?.views || 0);
-            else if (this.params.sortBy === 'downloads')
-                diff = (b.analytics?.downloads || 0) - (a.analytics?.downloads || 0);
-            else if (this.params.sortBy === 'updated_at')
-                diff = Date.parse(b.updated_at || b.published_at) - Date.parse(a.updated_at || a.published_at);
-            else
-                diff = Date.parse(b.published_at) - Date.parse(a.published_at);
-
-            return this.params.order === 'asc' ? -diff : diff;
-        });
+        entries = sortMods(entries);
 
         if (this.params.limit)
             entries = entries.slice(0, this.params.limit);
@@ -574,7 +641,7 @@ class ModBrowser
             padding: 0.5rem 1rem;
             font-size: 0.875rem;
             text-decoration: none;
-            background: linear-gradient(135deg, rgba(75, 192, 75, 0.8) 0%, rgba(56, 142, 60, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(67, 160, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
             display: inline-flex;
             align-items: center;
             gap: 0.375rem;
@@ -649,6 +716,31 @@ class ModBrowser
         btn.addEventListener('click', (e) => e.stopPropagation());
         
         return btn;
+    }
+
+    sortByMetric(metric)
+    {
+        this.params.sortBy = metric;
+        this.params.order = 'desc';
+        
+        const sortSelect = document.getElementById('sort-by');
+        if (sortSelect)
+            sortSelect.value = metric;
+        
+        const orderSelect = document.getElementById('sort-order');
+        if (orderSelect)
+            orderSelect.value = 'desc';
+        
+        this.applyFilters();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        const metricNames = {
+            'favourites': 'Favourites',
+            'views': 'Views',
+            'downloads': 'Downloads'
+        };
+        
+        console.log(`[Browse] Sorted by ${metricNames[metric]}`);
     }
 
     createModListItem(mod)
@@ -888,23 +980,118 @@ class ModBrowser
         statsDiv.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex: 1;';
 
         // Favourites count
-        const favStat = icons.createWithText('heart', `${mod.favourites || 0}`, { size: 14, colour: 'white', gap: '0.25rem' });
-        favStat.title = `${mod.favourites || 0} favourites`;
+        const favStat = document.createElement('button');
+        favStat.className = 'stat-button';
+        favStat.style.cssText = `
+            background: none;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        `;
+        favStat.title = 'Sort by favourites';
+
+        const favIcon = icons.createWithText('heart', `${mod.favourites || 0}`, { size: 14, color: 'white', filled: true });
+        favStat.appendChild(favIcon);
+
+        favStat.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.sortByMetric('favourites');
+        });
+
+        favStat.addEventListener('mouseenter', () => {
+            favStat.style.background = 'rgba(255, 59, 118, 0.2)';
+            favStat.style.transform = 'scale(1.05)';
+        });
+
+        favStat.addEventListener('mouseleave', () => {
+            favStat.style.background = 'none';
+            favStat.style.transform = 'scale(1)';
+        });
+
         statsDiv.appendChild(favStat);
 
         // View count
         if (mod.analytics && mod.analytics.views) 
         {
-            const viewStat = icons.createWithText('eye', `${mod.analytics.views}`, { size: 14, colour: 'white', gap: '0.25rem' });
-            viewStat.title = `${mod.analytics.views} views`;
+            const viewStat = document.createElement('button');
+            viewStat.type = 'button';
+            viewStat.className = 'stat-button';
+            viewStat.style.cssText = `
+                background: none;
+                border: none;
+                padding: 0.25rem 0.5rem;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.25rem;
+                border-radius: 4px;
+                transition: all 0.2s;
+            `;
+            viewStat.title = 'Sort by views';
+            
+            const viewIcon = icons.createWithText('eye', `${mod.analytics.views}`, { size: 14, color: 'white', filled: true });
+            viewStat.appendChild(viewIcon);
+            
+            viewStat.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.sortByMetric('views');
+            });
+            
+            viewStat.addEventListener('mouseenter', () => {
+                viewStat.style.background = 'rgba(102, 126, 234, 0.2)';
+                viewStat.style.transform = 'scale(1.05)';
+            });
+            
+            viewStat.addEventListener('mouseleave', () => {
+                viewStat.style.background = 'none';
+                viewStat.style.transform = 'scale(1)';
+            });
+            
             statsDiv.appendChild(viewStat);
         }
 
         // Download count
         if (mod.analytics && mod.analytics.downloads) 
         {
-            const dlStat = icons.createWithText('download', `${mod.analytics.downloads}`, { size: 14, colour: 'white', gap: '0.25rem' });
-            dlStat.title = `${mod.analytics.downloads} downloads`;
+            const dlStat = document.createElement('button');
+            dlStat.type = 'button';
+            dlStat.className = 'stat-button';
+            dlStat.style.cssText = `
+                background: none;
+                border: none;
+                padding: 0.25rem 0.5rem;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.25rem;
+                border-radius: 4px;
+                transition: all 0.2s;
+            `;
+            dlStat.title = 'Sort by downloads';
+            
+            const dlIcon = icons.createWithText('download', `${mod.analytics.downloads}`, { size: 14, color: 'white', filled: true });
+            dlStat.appendChild(dlIcon);
+            
+            dlStat.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.sortByMetric('downloads');
+            });
+            
+            dlStat.addEventListener('mouseenter', () => {
+                dlStat.style.background = 'rgba(102, 126, 234, 0.2)';
+                dlStat.style.transform = 'scale(1.05)';
+            });
+            
+            dlStat.addEventListener('mouseleave', () => {
+                dlStat.style.background = 'none';
+                dlStat.style.transform = 'scale(1)';
+            });
+            
             statsDiv.appendChild(dlStat);
         }
 

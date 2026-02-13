@@ -290,6 +290,7 @@ class ModDetailPage
         container.innerHTML = '';
         const tagBar = document.createElement('div');
         tagBar.className = 'tag-bar';
+        tagBar.style.marginBottom = "2rem";
 
         const tags = Array.isArray(this.mod.tags) ? this.mod.tags : [];
         tags.forEach(tag => {
