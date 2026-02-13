@@ -881,7 +881,7 @@ class ModBrowser
         }
 
         const footer = document.createElement('div');
-        footer.style.cssText = 'display: flex; flex-direction: column; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-top: 1rem;';
+        footer.style.cssText = 'display: flex; flex-direction: column; gap: 0.75rem; align-items: left; flex-wrap: wrap; margin-top: 1rem;';
 
         // Stats section
         const statsDiv = document.createElement('div');
