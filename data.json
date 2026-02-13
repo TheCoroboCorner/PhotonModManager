@@ -833,7 +833,174 @@
     "analytics": {
       "views": 1,
       "lastViewed": "2026-01-28T17:04:13.459Z"
-    }
+    },
+    "versionHistory": [
+      {
+        "tag": "v1.3.0",
+        "name": "v1.3.0 - The massive update that took way too long",
+        "body": "It's been 3 months... Oops! Our bad...\r\n---\r\nThere's been so much stuff added. Like, so much, like, 25 Jokers so much. Like, too much to write full patch notes for, go find it yourself--the wiki will be updated soon. Here's a general overview, though:\r\n### Jokers\r\nThe mod now contains **75** Jokers, filling up 5 entire collection pages. They're also all much more optimized, with a ridiculous amount of items rewritten or fixed in some way.\r\n### Consumables\r\nWe're at **26** Silly cards! That's a lot! These include the new card **Showgirl**, which marks 2 cards with **Gilded**, a new marking that **doubles** probabilities on the card it's applied to, or the card **Crisis**, which... well...\r\n**Silly Packs** also have a theme now, by the talented Potatert0t! It's great, go listen!\r\n### Stability\r\nAlmost all \"at\" patches have been removed, and many patches have been replaced with hooks or alternate functions, making the mod much less finicky. Global values have been improved as well, no longer using literally the worst possible method of being set. In general, an absurd amount of bugs have been fixed too, which is great! The mod should be much more stable now, with most bugs squashed. Most.\r\n...open an issue if you find any more.\r\n### PR Credits\r\n* nero the fool jiggles when first hand is drawn by @Jayd-H in https://github.com/Trif3ctal/Lucky-Rabbit/pull/21\r\n* Description edits, add correct enhancement/seal in_pool by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/25\r\n* Sad Clown description edit by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/27\r\n* a few fixes by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/28\r\n* The Tool correctly debuffs new consumables by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/30\r\n* audit `context.end_of_round` uses by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/31\r\n\r\n## New Contributors\r\n* @Jayd-H made their first contribution in https://github.com/Trif3ctal/Lucky-Rabbit/pull/21\r\n\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.2.2...v1.3.0",
+        "publishedAt": "2025-11-03T04:07:26Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.3.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.2a",
+        "name": "v1.2.2a - Big Bug Fix Thing, I Guess",
+        "body": "We're in a bit of a content hiatus for the moment, so to occupy myself, I fixed a tooooooon of bugs and generally tightened up some stuff. Multiple cards actually do what they say now, probabilities work correctly on the newest SMODS version, and several cards have been optimized in terms of their code. Also, added a new fun Joker, as well as a VERY rare Silly card that may prove to be interesting. Go find it!\r\n\r\n(I don't want to write patch notes uhhhhhh yeah sorry. TL;DR stuff got fixed and balanced and blah blah)\r\n\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.2.2...v1.2.2a",
+        "publishedAt": "2025-07-21T01:26:51Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.2.2a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.2",
+        "name": "v1.2.2 - Jokermania (10 new Jokers!)",
+        "body": "Hey guys, tons of Jokers for you today, as well as some nice general fixes to hold you over! This release brings the Joker count over the 50 mark, which is a pretty cool milestone! Thanks for playing!\r\n\r\n# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n## New Additions\r\n### Jokers\r\n- **Detective** (Uncommon)\r\n    - Cards already scored this Ante give $1\r\n- **Strange Dreams** (Rare)\r\n    - Convert a random unscored card into the rightmost scoring card after hand is played\r\n- **Ransome** (Legendary)\r\n    - When a card is destroyed, create a Polychrome copy with a Red Seal\r\n- **Tem Shop** (Uncommon)\r\n    - Sell price of cards starts at 75% of their base price\r\n- **Feline Fleecer** (Uncommon)\r\n    - After beating a blind, receive a free Remix Pack in the Shop\r\n- **Debut Album** (Uncommon)\r\n    - X5 Mult, -X0.5 Mult after every hand played\r\n- **Zany to the Max** (Uncommon)\r\n    - If played hand is a Three of a Kind, gains either +10 Chips, +1 Mult, or X1.1 Mult\r\n- **Ghostly Joker** (Uncommon)\r\n    - Creates a Death Tarot every fourth 4 scored\r\n- **Friend Inside Me** (Rare)\r\n    - If first discard of round is a single card, destroy it and create 6 temporary copies (destroyed at end of round)\r\n- **Prismatic Joker** (Uncommon)\r\n    - If played hand contains a Four of a Kind, all scoring cards become Copycat Cards\r\n## General Changes\r\n- Dungeon Crawler's logic has been improved\r\n- Fixed Recursive Deck on newer Steamodded versions, previously did not work\r\n- Fixed Pinhole Marking on newer Steamodded versions. Instead of being shuffled back into deck, they were put right at the end\r\n- \"Chance\" has been replaced with \"Odds\" across all files for possible compat\r\n- Crazy Neil's Crazy Deals will not discount already free items\r\n## Bug Fixes\r\n- Copycat cards no longer double-call change_base(), fixes a bug with Trans Joker\r\n- Knife Throw is no longer influenced by Oops! All 6s, meaning cards are not guaranteed to have a seal or not depending on the game's current probability\r\n- The variables of Raffle Cards are no longer impacted by All In Jest's Charged Cards\r\n---\r\n\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.2.1...v1.2.2",
+        "publishedAt": "2025-06-25T05:26:07Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.2.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.1",
+        "name": "v1.2.1 - Copycats & Remixes (New Enhancement, Jokers, more!)",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\nThis is a big one! Added the Copycat Enhancement, Remix Packs, and more. Remix packs are subject to change, very likely lmao. Have a good one!\r\n\r\n## New Additions\r\n### Enhancements\r\n- Copycat Card\r\n    - All copycat cards in deck become the same random rank after scoring\r\n### Jokers\r\n- Free Shipping (Uncommon)\r\n    - Consumables created by Raffle Cards are Negative\r\n- Comic Book Ad (Common)\r\n    - Raffle Cards always generate Silly cards\r\n- Lottery (Common)\r\n    - 1 in 2 chance to gain between $1 and $9 sell value at end of round\r\n### Consumables\r\n- Hall of Mirrors\r\n    - Enhances 2 selected cards into Copycat Cards\r\n### Booster Packs\r\n- Remix Pack\r\n    - Choose 1 of up to 5 Jokers, Playing Cards, or Consumables to add or use\r\n### Vouchers\r\n- Grab Bag\r\n    - Open a free Remix Pack upon clearing a Boss Blind\r\n- Gachapon\r\n    - Remix Packs appear in the Shop\r\n- Mystery Box\r\n    - +1 Booster Pack slot in the Shop\r\n### Blinds\r\n- The Thorn\r\n    - Cards with Seals are debuffed\r\n## General Changes\r\n- The appearance rate of Silly Packs has been slightly upped\r\n- Added a config toggle for Remix Packs and tweaked the toggle for Silly Packs\r\n## Bug Fixes\r\n- Goofy Tag now creates its pack correctly, looks way better!\r\n- A single-pixel offset for Blinds has been fixed, solving uneasiness worldwide\r\n---\r\nThanks to @HarmoniousJoker for their help!\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.2.0...v1.2.1",
+        "publishedAt": "2025-06-18T03:19:49Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.2.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.0",
+        "name": "v1.2.0 - Huge Untitled Update, Download Now You Shmuck!",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\nBeen a while, huh? Figured this update was huge enough to warrant a whole new version. Love ya. Also happy 16th birthday to me! (trif)\r\n\r\n## New Additions\r\n### Jokers\r\n- **Calculator (Common)**\r\n    - Gives Xmult equal to the Rank Difference between first and last scored cards\r\n    - Inactive for that many rounds after scoring (No effect if difference < 1)\r\n- **Tax Return (Common)**\r\n    - Gives $1 for every unscored card in played hand\r\n- **Civic Secretary (Uncommon)**\r\n    - Copies Mult or Chips given by any joker\r\n- **Trans Joker (Common)**\r\n    - Whenever a card has its rank or suit changed, it gains +10 Mult\r\n- **Litterbug (Uncommon)**\r\n    - Discards 1 random card every hand, gains Xmult equal to 0.01X its base chip value\r\n- **Sad Clown (Common)**\r\n    - Gives a random Silly card every 15 cards discarded\r\n- **Dating Sim (Uncommon)**\r\n    - Played Hearts gain +10 Mult\r\n- **Rhythm Game (Uncommon)**\r\n    - Played Diamonds are retriggered\r\n- **Dungeon Crawler (Uncommon)**\r\n    - If played hand contains a scoring Spade, a random Spade in played hand gains a random Enhancement, Seal, or Marking\r\n- **Fighting Game (Uncommon)**\r\n    - Played Clubs have a 1 in 3 chance to give +1 hand size, removed at end of round\r\n- **Claw Machine (Rare)**\r\n    - 7s held in hand give 1.1X Mult, 1 in 7 chance to increase Mult by 0.1\r\n- **Fennex The Clown (Legendary)**\r\n    - Gains X1 Mult for every Voucher owned\r\n## Balance Changes\r\n### Jokers\r\n- Wordle (Uncommon):\r\n    - Now gives 5 chips (was 10)\r\n## General Changes (thanks to @english5040)\r\n- Reworked description of Passport\r\n- Reimplemented Harmony Deck\r\n- Made mod config global and renamed mod variables\r\n## Bug Fixes\r\n- Made several functions more compatible with other mods\r\n- Fixed a glitch where Whoopee Cushion decided to work wrong\r\n- Fixed a crash with Lunchbreak\r\n## PR Credits\r\n* Lunchbreak is immediate by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/17\r\n* Equivalent patch for Reaper deck by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/18\r\n* Improve Calculator by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/19\r\n* Theoretically, this gives Charged card compat immediately by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/20\r\n\r\n---\r\nThanks to @english5040 and @HarmoniousJoker for their help!\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.5...v1.2.0",
+        "publishedAt": "2025-06-09T05:02:31Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.2.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.5",
+        "name": "v1.1.5 - It's Short for Calculator (2 new Jokers, big improvements)",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\n## New Additions\r\n### Jokers\r\n- **Orbit (Common)**\r\n    - If holding a non-Negative Planet card at end of round, create a random Negative Planet card\r\n- **Calculator (Uncommon)** \r\n    - Gives Xmult equal to the rank difference between first and last scored cards\r\n    - Inactive for that many rounds after scoring (No effect if difference < 1)\r\n### Consumables\r\n- **Suspenders**\r\n    - Select 2 cards, copy the Clip of the left card onto the right card ([Paperback](https://github.com/Balatro-Paperback/paperback) crossmod!)\r\n## General Changes\r\n- Made Barker much less complicated (lol)\r\n## Bug Fixes\r\n- Silly cards that convert one card attribute into another are now much less convoluted\r\n- Reimplemented how Silly cards select and copy to other cards, mostly fixing Cryptid compat with its various value changes\r\n---\r\nThanks to @HarmoniousJoker for their help!\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.4...v1.1.5",
+        "publishedAt": "2025-05-27T05:53:56Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.4a",
+        "name": "v1.1.4a - Hotfix",
+        "body": "This hotfix fixes mod incompatibilities with the Ferromancy joker and fixes a bug with Despicable Bear.\r\n\r\n## What's Changed\r\n* Ferromancy's changes, i guess idk by @bepisfever in https://github.com/Trif3ctal/Lucky-Rabbit/pull/15\r\n* try to fix despicable bear by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/16\r\n\r\n## New Contributors\r\n* @bepisfever made their first contribution in https://github.com/Trif3ctal/Lucky-Rabbit/pull/15\r\n\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.4...v1.1.4a",
+        "publishedAt": "2025-05-25T18:50:10Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.4a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.4",
+        "name": "v1.1.4 - The Raffle Update! (new Enhancement, Jokers, bug fixes)",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\n## New Additions\r\n### Jokers\r\n- **Crazy Neil's Crazy Deals (Uncommon)**\r\n    - A random item in the Shop is 75% cheaper every shop\r\n- **Pop Idol Cat (Uncommon)**\r\n    - Increase the odds of Lucky Cards by 1 every time one is triggered\r\n    - Resets after hand played\r\n- **Pub Burger (Rare)**\r\n    - +5 discards, -1 for every hand played after the first\r\n### Enhancements\r\n- **Raffle Card**\r\n    - 1 in 5 chance to create a random Consumable when scored (must have room)\r\n### Consumables\r\n- **Barker**\r\n    - Enhances 2 selected cards into Raffle Cards\r\n## Balance Changes\r\n### Consumables\r\n- **Juggler**\r\n    - Now starts with at $10 and increases by +$5 (was $5, $2)\r\n### Markings\r\n- **Inked**\r\n    - Now covers more implementations, such as challenges\r\n    - Flipped cards that are given the Ink Marking are not flipped over again\r\n## Deck Skins\r\n- Added a [Celeste](https://www.celestegame.com/)-themed Deck skin for Spades\r\n## General Changes (thanks to @english5040)\r\n- Reworked description of Passport\r\n- Reimplemented Harmony Deck\r\n- Made mod config global and renamed mod variables\r\n## Bug Fixes\r\n- Reimplemented Hyperfixation (Uncommon)\r\n- The Light is now disabled properly\r\n- Fixed \"ERROR\" text when Pomni reset\r\n- Made config tab use correctly localized text\r\n- Consumables that un-highlight cards now properly clear hand text\r\n## PR Credits\r\n- Bug fixes by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/13\r\n---\r\nThanks to @HarmoniousJoker and @english5040 for their help!\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.3...v1.1.4",
+        "publishedAt": "2025-05-25T04:58:51Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.3",
+        "name": "v1.1.3 - Rework Release! (Bug fixes, balance changes + more!)",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\n## Balance Changes\r\n### Jokers\r\n- Wordle (Common)\r\n    - No longer upgrades from debuffed cards\r\n- Impractical Joker (Uncommon)\r\n    - Is now Uncommon (was Common)\r\n- Passport (Common)\r\n    - Now resets after boss blind defeated\r\n### Consumables\r\n- Juggler\r\n    - Now starts with $5 (was $3)\r\n## Deck Skins\r\n- Added a Death Note deck skin for Spades, and an extra Deltarune-focused skin for Hearts\r\n- PEPPERED and Death Note deck skins are now compatible with [Paperback](https://github.com/Balatro-Paperback/paperback/tree/main) and its Star and Crown suits\r\n## General Changes (thanks to @english5040)\r\n- Reworked descriptions of many cards\r\n- Reworked code for Blue Angel Mushroom\r\n- Fully reimplemented Despicable Bear\r\n- Reworked file structure to better account for the growing number of functions\r\n## Bug Fixes\r\n- Fixed Reaper Deck, wasn't working on newer mod versions\r\n## PR Credits\r\n* silly cards proc destroy card effects by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/7\r\n* Description changes, improvements by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/8\r\n* whoops, despicable bear was wrong by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/10\r\n* Fix Despicable Bear, again. by @english5040 in https://github.com/Trif3ctal/Lucky-Rabbit/pull/12\r\n\r\n## New Contributors\r\n* @english5040 made their first contribution in https://github.com/Trif3ctal/Lucky-Rabbit/pull/7\r\n---\r\nThanks to @HarmoniousJoker and @english5040 for their help!\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.2...v1.1.3",
+        "publishedAt": "2025-05-20T05:41:34Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2a",
+        "name": "v1.1.2a - Untitled Balance/Bug Hotfix With Overly Long Name",
+        "body": "I'm considering this one a hotfix since it (hopefully) fixes a pretty big crash bug. You have no choice but to agree with me! Mwahahaha!\r\n\r\n## Balance changes:\r\n- Hyperfixation (Uncommon)\r\n    - Can no longer pick the rank it retriggers as a round's required rank.\r\n- Wordle (Common)\r\n    - Now upgrades by 10 chips (was 15)\r\n    - Only scored cards upgrade the card\r\n- Penny Joker (Common)\r\n    - Now upgrades by 1 chip (was 2)\r\n## Bug fixes:\r\n- Hopefully fixed a bug where hovering over Juggler crashed the game\r\n\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.2...v1.1.2a",
+        "publishedAt": "2025-05-17T03:50:28Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.2a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2",
+        "name": "v1.1.2 - Quadruple threat! (4 new Jokers, bug fixes, optimizations)",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\n## New Jokers:\r\n- Hyperfixation (Uncommon)\r\n    - Each played (rank) of (suit) is retriggered 0 time(s). Gains +1 retrigger every 5 times a round's required rank (rank) is scored (Required rank changes every round)\r\n- Fragile Sticker (Rare)\r\n    - Glass cards no longer break through use\r\n- Ghost Trick (Uncommon)\r\n    - Played cards have a 1 in 5 chance to create a Negative Spectral card when retriggered\r\n- Rabbit (Rare)\r\n    - If played hand is a Five of a Kind, creates a copy of the leftmost playing card and discards it immediately. Can be done twice per round\r\n## Deck Skins:\r\n- Added new deck skins from [Your Turn To Die](https://store.steampowered.com/app/2067780/Your_Turn_To_Die_Death_Game_By_Majority/) for Clubs, and a new Catgirl-focused skin for Hearts\r\n## Balance changes:\r\n- Balloons\r\n    - Was reworked to have the same effect, but be displayed slightly differently (no longer changes base values)\r\n## Bug fixes:\r\n- Added a sprite for undiscovered Silly Cards, previously was undiscovered Joker sprite\r\n## General changes:\r\n- Changed around the order of cards in collection\r\n- Added floating tooltips to some cards that previously had none\r\n- Updated the description of Countdown to better reflect its effect\r\n- Made Soully's floating sprite built-in to the card, hopefully saving processing power\r\n- Various \"gates\" (requirements) have been added to cards that use things like Editions or Enhancements, so they no longer appear if none are in your deck\r\n---\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.1...v1.1.2",
+        "publishedAt": "2025-05-15T05:15:44Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.2",
+        "assets": [
+          {
+            "name": "Lucky-Rabbit.zip",
+            "size": 1006411,
+            "downloadUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/download/v1.1.2/Lucky-Rabbit.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.1",
+        "name": "v1.1.1 - Alliteration! (New Joker, Pinhole fixes, Chinese translation)",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\n## New Joker:\r\n- Wordle (Common)\r\n    - Gains +15 Chips if played hand contains a 3, 7, 8, or Queen\r\n## Localization\r\n- Added Chinese translation! Thanks so much to @visjoker6876 from the Discord for this!\r\n## Bug fixes:\r\n- Fixed an issue where having the mod installed negated all discard/play card sounds\r\n- Fixed an issue where Pinhole markings wouldn't be shuffled into the deck and instead sent to the bottom\r\n- Fixed a crash when Clown Car didn't detect any negative Jokers\r\n\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.1.0...v1.1.1",
+        "publishedAt": "2025-05-07T22:19:17Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.1",
+        "assets": [
+          {
+            "name": "Lucky-Rabbit.zip",
+            "size": 848948,
+            "downloadUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/download/v1.1.1/Lucky-Rabbit.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0",
+        "name": "v1.1.0 - Markings, bug fixes, balancing!",
+        "body": "# Report bugs in the [Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)\r\n\r\n# New features\r\n## Card Markings\r\n- Introducing **Markings**, a new card modifier to spice up your runs. Find the new Silly cards **Cannon**, **Greasepaint**, or **Unicycle** to enhance your cards with these new modifiers! \r\n\r\n    - **Inked**: This card cannot be flipped.\r\n    - **Creased**: This card is prioritized to the **top** of the draw order.\r\n    - **Pinholed**: This card is shuffled back into the deck when played.\r\n- While new, we plan to continue adding more Markings to help spice up your runs and enhance deck fixing capabilities! Stay tuned!\r\n## Config Tab\r\n- Added a fully-fledged config tab for you to disable aspects of the mod at will!\r\n## PEPPERED Deck Skin\r\n- Added a new Friends Of Jimbo-style skin for your deck, featuring characters from existential indie platformer [PEPPERED](https://store.steampowered.com/app/1883370/PEPPERED_an_existential_platformer/). Go play it and support indie devs!\r\n# Localization\r\n- Added Spanish (Mexican) translation! Thanks so much to @franderman123 from the Discord for this!\r\n# Balance changes\r\n- Clown Car\r\n    - Created Negative Jokers now have $0 sell value\r\n    - -$5 for every owned Negative Joker\r\n- Jazzercise Joker\r\n    - Changed rarity to Uncommon (was Common)\r\n# Bug fixes:\r\n- Fixed an issue where conversion Silly cards wouldn't allow you to use them depending on card order\r\n- Fixed an issue where the game would crash if Whoopie Cushion was used while Cryptid is installed\r\n- Fixed some typos in lovely.toml\r\n- Made mod functions mod-specific to avoid crossmod issues\r\n\r\n**Full Changelog**: https://github.com/Trif3ctal/Lucky-Rabbit/compare/v1.0.0...v1.1.0",
+        "publishedAt": "2025-05-07T05:57:39Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.1.0",
+        "assets": [
+          {
+            "name": "Lucky-Rabbit.zip",
+            "size": 843532,
+            "downloadUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/download/v1.1.0/Lucky-Rabbit.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0 - Initial Release!",
+        "body": "## Includes:\r\n- New consumable type: **Silly Cards**\r\n- **18** new consumables\r\n- **18** new Jokers (including **3** Legendaries!)\r\n- **5** new Decks\r\n- **11** new Boss Blinds\r\n- **12** new Vouchers\r\n- **4** new Tags\r\n- Probably a lot of bugs! Report them [here](https://discord.com/channels/1116389027176787968/1342484578236895274). Thanks for checking the mod out! :D",
+        "publishedAt": "2025-05-03T05:46:26Z",
+        "htmlUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "Lucky-Rabbit.zip",
+            "size": 749093,
+            "downloadUrl": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/download/v1.0.0/Lucky-Rabbit.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-13T06:58:39.947Z"
   },
   "Ortalab@Eremel": {
     "id": "ortalab",
@@ -1001,8 +1168,8 @@
     ],
     "versionHistoryLastCheck": "2026-02-13T01:23:29.992Z",
     "analytics": {
-      "views": 66,
-      "lastViewed": "2026-02-13T01:23:30.091Z",
+      "views": 67,
+      "lastViewed": "2026-02-13T06:59:23.550Z",
       "downloads": 1,
       "lastDownloaded": "2026-02-08T08:07:35.039Z"
     }
@@ -2232,7 +2399,9 @@
     "tags": [
       "Jokers"
     ],
-    "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n"
+    "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n",
+    "versionHistory": [],
+    "versionHistoryLastCheck": "2026-02-13T06:58:37.247Z"
   },
   "Alloy@TheCoroboCorner": {
     "id": "Alloy",
@@ -2771,7 +2940,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-13T06:58:39.037Z"
+    "versionHistoryLastCheck": "2026-02-02T03:52:47.862Z"
   },
   "JustEnoughJokers@cg-223": {
     "id": "justenoughjokers",
@@ -2796,7 +2965,7 @@
       "lastViewed": "2026-01-27T10:40:10.831Z"
     },
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-02-02T07:29:03.341Z"
+    "versionHistoryLastCheck": "2026-02-13T06:58:36.644Z"
   },
   "bloated_1_modpack": {
     "id": "bloated_1_modpack",
