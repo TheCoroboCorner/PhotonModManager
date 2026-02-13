@@ -1,0 +1,1689 @@
+{
+  "JoJoMod@TheCoroboCorner": {
+    "id": "JoJoMod",
+    "name": "JoJo Mod",
+    "author": [
+      "TheCoroboCorner",
+      "Monachromee",
+      "MrC33ps"
+    ],
+    "description": "Adds various Stands (perhaps one may call them JoJokers) to Balatro. Please excuse the poor quality, this is my first mod.",
+    "favourites": 2,
+    "badge_colour": "2a0057",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "conflicts": [
+      "incantation"
+    ],
+    "git_owner": "TheCoroboCorner",
+    "git_repo": "JoJoMod",
+    "mod_path": "Mods/JoJoMod",
+    "subpath": "JoJoMod",
+    "download_suffix": "Release.zip",
+    "update_mandatory": false,
+    "target_version": "-1",
+    "readme": "# JoJo Mod\n\nThis is a mod that aims to add a lot of the different Stands from JoJo's Bizarre Adventure.\nCurrently, there are *45* Jokers, *29* Consumables, *1* enhancement, and *1* sticker.\n\nTextures are still incomplete for now, with most of them using placeholders, so please stay tuned for the future, and I hope you enjoy the mod!\n\n# How to Install\n\nYou will require [Steamodded](https://github.com/Steamodded/smods) in order to use this mod. Instructions on [how to install Steamodded](https://github.com/Steamodded/smods/wiki) are listed on their Github page.\n\nOnce that's installed, just unzip the file called \"Release.zip\" into your Mods folder, and you should be good to go!\n\n(Oh, and this mod isn't compatible with the Incantation mod; it causes some issues with one of our Jokers. I'll try to fix that in the future, but for right now, if you have both, it won't work.)\n\nEnjoy!\n",
+    "published_at": "2025-06-18T21:45:23.024Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Modifiers",
+      "Mechanics",
+      "Misc"
+    ],
+    "analytics": {
+      "views": 14,
+      "lastViewed": "2026-02-13T04:10:48.485Z"
+    },
+    "versionHistory": [
+      {
+        "tag": "v0.9.4a",
+        "name": "v0.9.4a",
+        "body": "**(ADDITIONS)**\r\n- Added a great many consumable and joker textures\r\n\r\n**(REPAIRS)**\r\n- Fixed it so that the auto-updater doesn't crash the game when the wi-fi is disconnected\r\n\r\n**(MISC)**\r\n- Removed unnecessary comments from the localization file to make it compatible with Photon\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3d...v0.9.4a",
+        "publishedAt": "2025-07-10T06:57:51Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.4a",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 1670938,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.4a/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.3d",
+        "name": "v0.9.3d",
+        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Fixed a problem with Stand Arrows crashing with Tusk\r\n\r\n**(MISC)**\r\n- Added documentation to the self-update module, made it more modular\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3c...v0.9.3d",
+        "publishedAt": "2025-06-17T02:16:39Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3d",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 1017828,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.3d/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.3c",
+        "name": "v0.9.3c",
+        "body": "**(ADDITIONS)**\r\n- Added a texture for C-Moon\r\n\r\n**(REPAIRS)**\r\n- Fixed a bug with the auto-updater crashing on startup\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3b...v0.9.3c",
+        "publishedAt": "2025-06-16T18:17:42Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3c",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 1016280,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.3c/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.3b",
+        "name": "v0.9.3b",
+        "body": "**(ADDITIONS)**\r\n- Added a prompt when the game is started so that if you're playing an outdated version, it can download and install the most recent version automatically for you, no questions asked\r\n- Added textures for the three new decks\r\n\r\n**(REPAIRS)**\r\n- Changed some of the text on some of the localization files\r\n- Minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3a...v0.9.3b",
+        "publishedAt": "2025-06-16T17:23:03Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3b",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 929378,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.3b/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.3a",
+        "name": "v0.9.3a",
+        "body": "**(ADDITIONS)**\r\n- Added new textures to many Jokers and consumables\r\n- Added three new decks to mess around with -- they're not intended to be balanced, moreso just fun, thematic decks that play with the rarer mechanics of the mod\r\n- Added info boxes to the different Jokers to properly explain their abilities better\r\n\r\n**(REPAIRS)**\r\n- Minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2a...v0.9.3a",
+        "publishedAt": "2025-06-15T16:25:10Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3a",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 623660,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.3a/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.2c",
+        "name": "v0.9.2c",
+        "body": "**(ADDITIONS)**\r\n- Added an icon for the mod\r\n- Changed the way scraps items work so they're not clogging up the shop all the time and only appear when they can be useful\r\n\r\n**(REPAIRS)**\r\n- Patched an issue with Killer Queen not properly giving money\r\n- Other minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2b...v0.9.2c",
+        "publishedAt": "2025-06-11T19:23:48Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.2c",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 213552,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.2c/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.2b",
+        "name": "v0.9.2b",
+        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2a...v0.9.2b",
+        "publishedAt": "2025-06-09T13:01:38Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.2b",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 208400,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.2b/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.2a",
+        "name": "v0.9.2a",
+        "body": "**(ADDITIONS)**\r\n- Added finalized textures to Water, Tomatoes, Meat, Caramel, Small Coin, Refined Water, and Stand Arrow consumables.\r\n\r\n**(REPAIRS)**\r\n- Fixed an issue with Heaven's Door where it wouldn't properly duplicate all the values, and broke some Tarot cards\r\n- Fixed an issue where Pearl Jam was resetting to 0X Mult at the end of the hand instead of 1X Mult\r\n- Fixed an issue where Star Platinum, The World, and The World Over Heaven were not properly getting affected by Blueprint, Brainstorm, and Moody Blues\r\n- Other small changes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.1...v0.9.2a",
+        "publishedAt": "2025-06-09T03:20:03Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.2a",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 208398,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.2a/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.1",
+        "name": "v0.9.1",
+        "body": "**(ADDITIONS)**\r\n- Added placeholder textures for all of the consumables, similar to the ones being used for the Stands\r\n\r\n**(REPAIRS)**\r\n- Further polished and repaired Pearl Jam's functionality\r\n- Other minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0a...v0.9.1",
+        "publishedAt": "2025-06-08T16:42:33Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.1",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 123833,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.1/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.0c",
+        "name": "v0.9.0c",
+        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Fixed an issue with Pearl Jam where its stats would not reset after each hand/round properly, and where it would say \"Reset\" even when there was nothing to reset\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0b...v0.9.0c",
+        "publishedAt": "2025-06-08T16:16:43Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.0c",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 127087,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.0c/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.0b",
+        "name": "v0.9.0b",
+        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Fixed several cooked food items from crashing the game on use\r\n- Fixed Pearl Jam not working properly with some other cooked food items\r\n\r\n**(MISC)**\r\n- Switched over the consumable sprites to the default template added in the last update\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0a...v0.9.0b",
+        "publishedAt": "2025-06-08T16:02:49Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.0b",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 127066,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.0b/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.9.0a",
+        "name": "v0.9.0a",
+        "body": "**(ADDITIONS)**\r\n- Added final textures for Hermit Purple\r\n- Added final textures for Crazy Diamond\r\n\r\n**(REPAIRS)**\r\n- Fixed a bug with Pearl Jam which prevented it from cooking food scraps\r\n- Fixed a bug with Tusk Act 1 which prevented it from increasing its X Mult\r\n- Fixed a bug with the Requiem Stands and the Stand Arrow which made frames drop significantly after viewing them\r\n- Fixed a typo in the localization\r\n\r\n**(MISC)**\r\n- Added placeholder consumable sprites to be implemented in a later update\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.9...v0.9.0a",
+        "publishedAt": "2025-06-08T15:28:36Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.0a",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 110230,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.9.0a/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.8.9",
+        "name": "v0.8.9",
+        "body": "- Added new temporary textures to all of the Jokers (except Heaven's Door)\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.1...v0.8.9",
+        "publishedAt": "2025-06-07T20:55:37Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.8.9",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 102296,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.8.9/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.8.1",
+        "name": "v0.8.1",
+        "body": "Changelog:\r\n\r\n- Fixed a bug with The Mattekudasai where it would generate Tarot cards beyond the item limit\r\n- Fixed a bug with Made In Heaven where other cards could increment its speed value\r\n- Added a working texture for The Hand and added WIP textures for all of the other Stands\r\n- Added an effect to the Stand Arrow card for use in a future release\r\n- Other minor changes\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.0...v0.8.1",
+        "publishedAt": "2025-06-07T14:21:10Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.8.1",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 77045,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.8.1/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.8.0",
+        "name": "v0.8.0",
+        "body": "v0.8.0 Release\r\n\r\nInitial version of the mod -- 45 Jokers, 28 Consumables, 1 Sticker, 1 Spectral Card, and 1 Enhancement.\r\n\r\nTextures are still incomplete, but that'll be a v1.0.0 thing.",
+        "publishedAt": "2025-06-06T20:34:20Z",
+        "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.8.0",
+        "assets": [
+          {
+            "name": "Release.zip",
+            "size": 48271,
+            "downloadUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/download/v0.8.0/Release.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-13T00:51:51.991Z"
+  },
+  "Maximus@the-Astra": {
+    "id": "Maximus",
+    "name": "Maximus",
+    "author": [
+      "theAstra",
+      "Maxiss02"
+    ],
+    "description": "Maximus is a Vanilla+ mod that strives to preserve the Vanilla feel of the game (for the most part, looking at you Nuclear deck) while innovating on newer ideas to keep things fresh! Join the Discord: https://discord.gg/GvCCcryM48",
+    "favourites": 0,
+    "badge_colour": "f51bbc",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0614a)",
+      "Lovely (>=0.7.1)"
+    ],
+    "git_owner": "the-Astra",
+    "git_repo": "Maximus",
+    "readme": "![Banner](https://github.com/user-attachments/assets/fa66aa30-60b8-44f9-9d41-5a452ca08b49)\nMaximus is a Vanilla+ mod that strives to preserve the Vanilla feel of the game (for the most part, looking at you Nuclear deck) while innovating on newer ideas to keep things fresh!\n\nMaximus currently adds the following:\n- 150 Jokers\n- 6 Decks\n- 15 Achievements\n- 12 Horoscope Cards\n- 3 Spectral Cards\n- 11 Planet Cards\n- 10 Boss Blinds\n- 15 Challenges\n- 8 Vouchers\n- AND MORE!!!\n\n### THIS MOD DEPENDS ON [3xCredits](https://github.com/AuroraKy/3xCredits)! Please ensure you install this mod too!!\n\n### [Official Discord](https://discord.gg/GvCCcryM48)\nJoin to keep up to date with development, contributions, or just to chat with people who also enjoy the mod!\n\n### [How to install](https://github.com/Steamodded/smods/wiki)\nFollow this guide and unzip the latest release of Maximus into the newly created \"Mods\" folder\n\n",
+    "published_at": "2025-06-19T04:17:42.152Z",
+    "type": "Mod",
+    "tags": [
+      "Vanilla Plus",
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Blinds",
+      "Modifiers",
+      "Mechanics",
+      "Misc"
+    ],
+    "analytics": {
+      "views": 3,
+      "lastViewed": "2026-01-31T17:10:03.821Z"
+    },
+    "versionHistory": [
+      {
+        "tag": "v1.3.0-PRERELEASE.3",
+        "name": "v1.3.0-PRERELEASE-3",
+        "body": "# Changes\r\n- Added better Horoscope Tag effect visibility\r\n- Clarified Golden Rings description a bit\r\n- Added Dummy Deck\r\n- Made Scarred Deck visible by default\r\n- Added JokerDisplay for Adrenaline and Apophenia (currently too lazy to do more than that)\r\n\r\n# Fixes\r\n- Fixed a bunch of Conspiracy cards showing nil values\r\n\r\n## Installation\r\nUnzip the `Maximus-dev.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2026-01-30T06:04:33Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.3.0-PRERELEASE.3",
+        "assets": [
+          {
+            "name": "Maximus-dev.zip",
+            "size": 2639648,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.3.0-PRERELEASE.3/Maximus-dev.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.0-PRERELEASE.2",
+        "name": "v1.3.0-PRERELEASE-2",
+        "body": "# Changes\r\n- Reworked Conveyor Belt\r\n  - Now excludes score given by the card\r\n  - No longer reaches \"Infinity\" values with Talisman\r\n- Gemini's hand upgrade method was updated to use the new SMODS.upgrade_poker_hands function\r\n- Under Construction now takes up 2 Joker Slots instead of decreasing slot limit by one while in hand\r\n\r\n# Fixes\r\n- Fixed Refrigerator checks causing crashes sometimes\r\n\r\n## Installation\r\nUnzip the `Maximus-dev.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2026-01-10T05:15:13Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.3.0-PRERELEASE.2",
+        "assets": [
+          {
+            "name": "Maximus-dev.zip",
+            "size": 2635276,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.3.0-PRERELEASE.2/Maximus-dev.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.0-PRERELEASE.1",
+        "name": "v1.3.0-PRERELEASE-1",
+        "body": "This is a pre-release version of Maximus 1.3.0, which contains numerous balance changes and new features, but may be in an unfinished state. Feel free to try it out!\r\n\r\n## Installation\r\nUnzip the `Maximus-dev.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-12-31T04:49:29Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.3.0-PRERELEASE.1",
+        "assets": [
+          {
+            "name": "Maximus-dev.zip",
+            "size": 2635421,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.3.0-PRERELEASE.1/Maximus-dev.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.6",
+        "name": "v1.2.6",
+        "body": "## Fixes\r\n- Fix Honorable Joker destroying itself when created by Judgement\r\n- Fix Microwave and Leftovers causing crashes due to half-assed checks\r\n- Fix Abyss destroying itself instead of a chosen card (also change method of pseudorandom usages)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-12-31T01:05:44Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.6",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660497,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.6/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.5",
+        "name": "v1.2.5",
+        "body": "## Fixes\r\n- Light Show and The Prince should no longer crash when trying to spawn while attempting to look at cards in the deck\r\n\r\n## Changes\r\n- Maximus now depends on the newest SMODS version (BETA-1221a). As such, most changes in this version are compatibility related and should have no impact on functionality\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-12-21T03:08:54Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.5",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660456,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.5/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.4c",
+        "name": "v1.2.4c",
+        "body": "## Fixes\r\n- Fixed Nuke Deck crashing\r\n- Fixed blueprint cards copying 4D Joker on the Speedrun challenge ending the run when sold\r\n- Hopefully made Little Brother a bit more clear\r\n\r\n## 1.2.4b Changes\r\n- Fixed Nuke Sleeve crashing\r\n\r\n## 1.2.4c Changes\r\n- Fixed Microwave being very broken due to old check method\r\n- Fixed Taurus and Gemini crashing on Doppelganger use when progress is at 0\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-11-21T03:35:15Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.4c",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660894,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.4c/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.3c",
+        "name": "v1.2.3c",
+        "body": "## Fixes\r\n- Fixed a number of Black Seal related issues\r\n\r\n## 1.2.3b Changes\r\n- Fixed bad pool checks for Microwave and Refrigerator\r\n\r\n## 1.2.3c Changes\r\n- New SMODS compat (removed like 3 patches)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-09-23T01:10:22Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.3c",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2660715,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.3c/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.2b",
+        "name": "v1.2.2b",
+        "body": "## Additions\r\n- Localization support for Simplified Chinese (Thank you @MomoiAiriMMJ!!)\r\n\r\n## Fixes\r\n- Fixed a crash related to Hamill and JokerDisplay\r\n- Fixed Hammer and Chisel should_hide_front hook not returning, causing weird visuals\r\n- Fixed Conveyor Belt causing persistent chips-mult scoring visuals\r\n- Fixed Hype Man no triggering\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-09-02T01:58:57Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.2b",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2689253,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.2b/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.1",
+        "name": "v1.2.1",
+        "body": "## Additions\r\n- 4 new Challenges (Feast Fit for a King, Coexist, Speedrun, and Greedy Bastard)\r\n- A ton of winning/losing Quips\r\n- Maximus now properly provides OneTooManyAPI\r\n\r\n## Changes\r\n- Changed all scaling methods to use SMODS' new method. Allows for cross-mod compatibility for features like Group Chat and Soil Joker\r\n- Changed Nuclear deck from using custom code to the new SMODS Operator API. Allows for less conflicts with Nuclear Deck specifically (aka you can now use Nuke Deck with Cryptid)\r\n- Spider Joker is no longer affected by chance modifiers\r\n- Changed many challenges to use new challenge calculation methods for better reliability\r\n- Changed some Horoscope tags to trigger using global mod calculate methods for better reliability\r\n- Secret Society is no longer hardcoded and will change based on the highest and lowest ranks available\r\n- Achievements can now be unlocked on Unlock All profiles\r\n\r\n## Fixes\r\n- Fixed Bones Jr being able to spawn as eternal\r\n- Fixed a ton of Black Seal related issues\r\n- Fixed Detective not flipping cards\r\n- Fixed eggsplosion patch\r\n- Fixed Aeon not having an info card for Footprint\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-08-27T01:09:02Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.1",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2668545,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.1/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.7",
+        "name": "v1.1.7",
+        "body": "## Changes\r\n- All Maximus achievements can be acquired on Unlock All profiles\r\n- Aquarius' goal has been reduced from 10 to 6\r\n- Scorpio can no longer appear as the first Horoscope card on the Zodiac Killer challenge\r\n- PNGoker has been changed from Uncommon to Rare\r\n- Reference credits have been moved to the card description from the credits badge\r\n- Galaxy Brain's effect is handled in a much more consistent way\r\n\r\n## Fixes\r\n- Fixed emplaced Horoscope cards showing up as undiscovered\r\n- Fixed Nomai credits not appearing\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-08-05T19:30:40Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.7",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2663365,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.7/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.6",
+        "name": "v1.1.6",
+        "body": "## Changes\r\n- Sixth Finger Sleeve and Celestial Deity no longer rely on patches\r\n- Removed 3xCredits support in favor of built-in credits system based on Cryptid's\r\n- Added a few hover tooltips to some challenges\r\n- The Prince now checks for polychrome face cards in hand to be in pool\r\n- Some credits now include reference sources\r\n- Some description clarifications\r\n\r\n## Fixes\r\n- Fix Zodiac Killer pools not resetting when restarting the challenge\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-08-03T22:43:40Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.6",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2662694,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.6/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.4",
+        "name": "v1.1.4",
+        "body": "## Changes\r\n- Optimized 4D Joker's update hook\r\n- Did a cleanup pass on some older Jokers\r\n- Fortune Cookie no longer wastes rolls if the Consumables area is full\r\n\r\n## Fixes\r\n- Fixed Jackpot showing the nil values\r\n- Fixed Star Tag showing the incorrect card quantities for the Mega Horoscope Pack it provides\r\n- Fixed Slippery Slope crashing from trying to index a nil poker hand\r\n- Fixed Hypeman not using its custom trigger sound\r\n- Fixed Pessimistic Joker causing crashes due to incorrect context index\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-29T23:27:28Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.4",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2678489,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.4/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.3",
+        "name": "v1.1.3",
+        "body": "## Changes\r\n- Nirvana Deck now rounds down to the nearest whole number\r\n- Moon Landing should now be unaffected by patch conflicts\r\n- Horoscope cards now work properly with the Negative edition \r\n\r\n## Fixes\r\n- Fixed a crash caused by Mega Horoscope Pack's in_pool check\r\n- Fixed some cards showing nil values due to an error fetching probability values\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-28T01:04:10Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.3",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2678437,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.3/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2",
+        "name": "v1.1.2",
+        "body": "## Changes\r\n- Update Super handtypes to utilize more modern SMODS functions\r\n- Better internal card value consistency across card objects\r\n- Fixed a typo involving Sixth Finger\r\n- Added a sound when clicking the Maximus logo\r\n- Simplified the implementation of cards with non-standard dimensions\r\n- Better handling of banning some tag-reliant jokers while on Professional Deck\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-20T19:52:35Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.2",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2678366,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.2/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.1",
+        "name": "v1.1.1",
+        "body": "## Fixes\r\n- Black Seal no longer always affirms eternal check when present\r\n- Fixed Pessimistic joker not working due to old variable names\r\n- Added extra check to James to prevent edge case of performing calculations on the main menu\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-12T22:16:55Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.1",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2677679,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.1/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0",
+        "name": "v1.1.0",
+        "body": "## Additions\r\n- Destiny Deck\r\n- CardSleeves support for every Maximus Deck (including the new Destiny Deck)\r\n- TheFamily support\r\n- JokerDisplay support\r\n- 2 new Jokers (Boar Bank, Spider Joker)\r\n- 1 new Challenge (Despite Everything)\r\n- 1 new Achievement (Right Behind You...)\r\n- 1 new Enhancement (Footprint)\r\n- 1 new Tarot Card (Aeon)\r\n\r\n## Fixes\r\n- Pizza can no longer be Perishable\r\n- Bear now has the correct credits\r\n- Generated Horoscope Cards no longer appear as undiscovered\r\n- Improved Star Tag functionality\r\n- Fixed Maximus planet cards crashing with Cryptid\r\n- Changed Conveyor Belt timings so the values it adds do not get overwritten\r\n- Fixed Maximus jokers in the cashout list that change cashout value in unique ways appearing incorrectly\r\n- Changed Screaming Joker's check to be more robust\r\n\r\n## Changes\r\n- Abyss Angel gain nerfed from X0.5 to X0.25\r\n- Six Card planet cards no longer rely on deck to be in pool\r\n- Cheat and Rule are now mutually exclusive per run\r\n- Multiple Scale Tags will now be used every shop\r\n- Complete rewrite for Hammer and Chisel rendering\r\n- Changed all probability rolls to use new SMODS standardized functions\r\n- Pessimistic Joker now works with cards from mods using new probability standards\r\n- Black Seal now utilizes SMODS.is_eternal\r\n- Gave Coupon events an overhaul\r\n- A number of minor technical changes and improvements\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-07-12T01:23:03Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.1.0",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2677645,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.1.0/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.6",
+        "name": "v1.0.6",
+        "body": "## Fixes\r\n- Made The Flame and Winged Dragon of Ra much less buggy\r\n- Fixed Cancri's Exoplanet badge being the wrong color\r\n- Fixed Soyjoke scaling from jokers becoming undebuffed\r\n- Fixed multiple \"Modifiers\" atlases being defined\r\n- Fixed Gutbuster causing crashes when copied (like with Ankh)\r\n- Fixed Taurus Level Up message persisting after Doppelganger being used\r\n\r\n## Changes\r\n- Much better handling of High Dive\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-22T18:26:09Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.6",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2576100,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.6/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.5",
+        "name": "v1.0.5",
+        "body": "## Additions\r\n- Auto-update checker (Thank you Corobo!)\r\n\r\n## Fixes\r\n- Fix a few inconsistencies with The Spring\r\n- Made Horoscopes way more stable\r\n- (Hopefully) made Severed Floor implementation more reliable\r\n\r\n## Changes\r\n- Gave Blackjack and Piggy Bank formatting makeovers\r\n- Buffed Caterpillar lineage by reducing goal values\r\n- Nerfed under-21 Blackjack gain\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-17T22:40:12Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.5",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2576262,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.5/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4",
+        "name": "v1.0.4",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! This mod is not required, but is recommended!\r\n\r\n## Fixes\r\n- Fix Gutbuster edge case where it tries to destroy a nonexistant card\r\n- Fixed some Blueprint oversights\r\n- Fix Hurdle edge case where it tries to debuff a nonexistant card\r\n- Fix Spare Tire assuming failed prob passes a card\r\n- Fix Jackpot triggering prob failure with no sevens\r\n- Fix Apocalypse Achievement being broken\r\n- Fix Zombie causing a hard crash when turning its target\r\n\r\n## Changes\r\n- Removed needless loc_colours lovely patch\r\n- Changed Who's Laughing Now achievement description\r\n- Made Occam's Razor functionality much more clear\r\n- Made Zombie \"Turned\" text a localization parameter\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-14T01:45:05Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.4",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2574088,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.4/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.3",
+        "name": "v1.0.3",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! This mod is not required, but is recommended!\r\n\r\n## Fixes\r\n- Fixed incorrect Virgo reset\r\n- Fixed Secret Society effect persisting across runs\r\n- Fixed Hammer and Chisel not drawing card fronts when most editions are applied to card\r\n\r\n## Changes\r\n- Made custom global variables and contexts more identifiably unique to Maximus (sorry cross-mod compatibility friends)\r\n- Changed Coupon functionality to trigger via context\r\n- Changed dependent SMODS version to be equal to the most recent stable version\r\n- Moved Maximus color implementation off of patching to storing locally\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-13T00:08:48Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.3",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2573713,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.3/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.2",
+        "name": "v1.0.2",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! Please ensure you install this mod too!!\r\n\r\n## Fixes\r\n- Fixed Breadsticks Scales trying to add to a null value\r\n- Fixed Ra not triggering destroyed card contexts\r\n- Fixed Flame causing crashes\r\n- Fixed Abandoned Deck having Face Cards\r\n\r\n## Changes\r\n- Improved Nuclear Deck implementation\r\n- Some Horoscope Cards now award Tags for better visibility of the effect\r\n- Nerfed Gemini by lowering level upgrade by 1 (now 2 levels for each hand)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-11T18:41:11Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.2",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2573229,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.2/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1",
+        "name": "v1.0.1",
+        "body": "## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! Please ensure you install this mod too!!\r\n\r\n## Fixes\r\n- Fixed Stardust Crusaders Challenge crashing when viewing restrictions\r\n- Fixed Welder/Prospector triggering at the wrong times, potentially causing multiple triggers\r\n- Fixed a few cards crashing due to flawed Blueprint implementation\r\n- Fixed Cleaner causing crashes on sell\r\n\r\n## Changes\r\n- Changed Minimalist's code organization in an attempt to fix a crash I could not recreate\r\n- Changed some formatting for some card descriptions\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-10T15:16:30Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.1",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2568314,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.1/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0",
+        "body": "# 1.0 IS FINALLY HERE!!! \r\n## THIS UPDATE UTILIZES [3xCredits](https://github.com/AuroraKy/3xCredits)! Please ensure you install this mod too!!\r\n\r\n## Additions\r\nDue to the sheer number of additions this update adds, I will instead list what the mod as a whole adds\r\n- 150 Jokers\r\n- 6 Decks\r\n- 15 Achievements\r\n- 12 Horoscope Cards\r\n- 3 Spectral Cards\r\n- 11 Planet Cards\r\n- 10 Boss Blinds\r\n- 15 Challenges\r\n- 8 Vouchers\r\n- AND MORE!!!\r\n\r\n## Fixes\r\n- Space Race caused crashes\r\n- Green Joker does not scale\r\n- Ophiucus does not have buttons when appearing in Spectral Packs\r\n\r\n## Changes\r\nMany Maximus Jokers have been tweaked during this time to help with balance, be they values or rarity. There are too many to list here, so feel free to find out for yourself\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-06-09T18:54:58Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.0.0",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 2568277,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.0.0/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.1-beta",
+        "name": "v0.6.1-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.1.0 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Fixes\r\n- Fixed glass cards always breaking\r\n- A few minor refactors\r\n- Fixed Zombie/Bootleg continued run crash (Finally!!!!)\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-03-28T00:14:11Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.6.1-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1945786,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.6.1-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.0-beta",
+        "name": "v0.6.0-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.1.0 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n- Added new Jokers: PNGoker, King's Rook, Slifer the Sky Dragon, Hippie, Cheat Day, Employee, Letter of Recommendation, and Slippery Slope\r\n- Added new Spectrals: Doppelganger and Ophiucus\r\n- Added new Vouchers: Multitask and Workaholic\r\n- Added Horoscope toggle config option\r\n\r\n## Changes\r\n- Updated art to fit with vanilla standards\r\n\r\n## Fixes\r\n- Fixed DMIID infinitely triggering\r\n- Fixed custom handtypes displaying improperly with Impractical Joker\r\n- Fixed Hypeman triggering on pack and shop cards\r\n- Fixed crashes caused by missing dependencies\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-03-26T05:26:13Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.6.0-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1946299,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.6.0-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.0-beta",
+        "name": "v0.5.0-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.0.2 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n- Added High Dive Joker\r\n- Added proper config menu\r\n- Added Experimental Features option in config. This enables features that will be fully implemented later but are not quite finished (mostly from a card art perspective)\r\n- Added All's Fair in Love and War challenge\r\n\r\n## Changes\r\n- Buffed and reworked a few challenges \r\n- Change Matador to only work during boss blinds (why was this not a thing?)\r\n- Simplified stop sign implementation for vanilla jokers\r\n- Reworked Coronation (At long last!!!)\r\n\r\n## Fixes\r\n- Fixed Streaker giving values of the opposite type\r\n- Fixed Pessimistic Joker causing crashes on missed Lucky Cards\r\n- Fixed Salt Circle causing crashes\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-03-06T01:56:02Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.5.0-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1864274,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.5.0-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.4-beta",
+        "name": "v0.4.4-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.0.2 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Changes\r\n- Added progress trackers to some Horoscope cards\r\n- Changed Food Joker definition to have cross-mod compatibility (Thank you sup3p!)\r\n\r\n## Fixes\r\n- Fixed Fortune Cookie prob not dropping below 9\r\n- Fixed Sagittarius showing fail text for every discarded card\r\n- Fixed Old Man Jimbo description\r\n- Fixed incorrect Combo Breaker mult\r\n- Fixed Clown Car crash\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-23T05:55:19Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.4-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1811137,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.4-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.3-beta",
+        "name": "v0.4.3-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 AND TALISMAN 2.0.2 FEATURES!!! PLEASE ENSURE YOU HAVE BOTH BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Changes\r\n- Restructured and refortmatted codebase for better organization\r\n- Talisman compatibility (Talisman is now a dependency due to this)\r\n\r\n## Fixes\r\n- Thought Experiment no longer crashes\r\n- Fortune Cookie no longer crashes\r\n- Leftovers can no longer spawn as eternal\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-21T23:15:58Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.3-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1811592,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.3-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.2-beta",
+        "name": "v0.4.2-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 FEATURES!!! PLEASE UPDATE LOVELY BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n### Challenges\r\n- Down the Drain\r\n- Thought Experiment\r\n\r\n## Changes\r\n- Banned Capricorn and Aquarius in Pay to Win and Let's Go Gambling\r\n- Also banned Pisces in Pay to Win\r\n- Reworked Scorpio and Sagittarius\r\n- Slightly retuned Taurus\r\n- Changed Nuclear Deck to reduce Joker Slots to 1\r\n- Made Sixth Finger deck description a bit more clear\r\n- So much internal polishing\r\n\r\n## Fixes\r\n- Fixed Yorick scaling function\r\n- Fixed crash from Glass Cannon and Horoscope interaction\r\n- Fixed some 1x Sprite Sheets\r\n- Fixed Fortune Cookie crash due to wrong variable usage\r\n- Fixed crash caused by created new profile\r\n- Fixed Leftovers eternal compat\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-19T07:55:49Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.2-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1725321,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.2-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v0.4.1-beta",
+        "name": "v0.4.1-beta",
+        "body": "## THIS UPDATE UTILIZES LOVELY 0.7.1 FEATURES!!! PLEASE UPDATE LOVELY BEFORE PLAYING THIS AND FUTURE VERSIONS!!!!!!!!!!\r\n\r\n## Additions\r\n### Challenges\r\n- Pay to Win\r\n- Zodiac Killer\r\n\r\n## Changes\r\n- 6 Card Hand Types now rely on highlight limit instead of deck\r\n- Upped Grinder minimum ante from 1 to 3\r\n\r\n## Fixes\r\n- Fixed Egg scaling function causing crashes\r\n- Fixed Taurus not dissolving on completion\r\n- Fixed Horoscope CardArea not enforcing its limit\r\n\r\n## Installation\r\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\r\n\r\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "publishedAt": "2025-02-17T05:28:41Z",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v0.4.1-beta",
+        "assets": [
+          {
+            "name": "Maximus-main.zip",
+            "size": 1734275,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v0.4.1-beta/Maximus-main.zip"
+          }
+        ],
+        "prerelease": true,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-01-31T16:52:11.775Z"
+  },
+  "grab-bag@thefaketh30ne": {
+    "id": "GrabBag",
+    "name": "Grab Bag",
+    "author": [
+      "Th30ne"
+    ],
+    "description": "Adds 50+ new Jokers, alongside other content. (HINT: You can turn off the custom music in config.lua)",
+    "favourites": 1,
+    "badge_colour": "793A80",
+    "dependencies": [],
+    "readme": "# Grab Bag\nGrab Bag is a Balatro mod that currently adds: \n- 46 (+8) Jokers\n- 3 Tarots\n- 1 Spectral\n- 3 Enhancements \n- 15 Boss Blinds\n- 5 Showdown Boss Blinds\n- and 4 Decks.\n\nThe content in this mod is supposed to feel vanilla, and I created this new content to be largely in line with the rules and design philosophy that localthunk follows when making Jokers and other content. \n\n## Jokers\nAs of the latest update, this mod contains 21 Common, 15 Uncommon, and 10 Rare Jokers.\n### Common\n- Bad Trip\n- Bait\n- Bullseye\n- Counterfeit Joker\n- Coupon\n- Dunce\n- Gasoline\n- Hadal Zone\n- Jackpot\n- Morose Joker\n- Patience\n- Postage Stamp\n- Qubits\n- Receipt\n- Revolution 9\n- Sketchy Joker\n- Torchlight\n- Waterfall\n- Wild Joker\n- Hot Potato\n- Polariser\n  \n### Uncommon\n- Another Brick\n- Bank Teller\n- Boing Ball\n- Calculator\n- Candle\n- Cheque Stub\n- Double Gulp\n- First Strike\n- Honeycomb\n- Impostor\n- Knight\n- Lover's Locket\n- Wax Joker\n- Wheel of Misfortune\n- Yellow Pages\n  \n### Rare\n- Apparition\n- D20\n- Double King\n- Forest Fire\n- Golden Cookie\n- Lobster Claw\n- Pentagram\n- Retro Joker\n- Silver Hammer\n- The Moon's Oceans\n\n## Enhancements\nAs of the latest update, this mod contains 2 new enhancements.\n- River (and The River Tarot)\n- Wooden (and The Life Tarot)\n\n## Shattered Jokers\nJokers can be shattered into more powerful Shattered jokers with the Shatter consumable, which may show up in Arcana and Spectral Packs.\n### Shatterable Jokers\n- Obelisk\n- Flower Pot\n- Fibonacci\n- Polariser\n- Rough Gem\n- Splash\n- Joker\n- Invisible Joker\n\n## Decks\nThere are 4 decks in the latest update of the mod.\n- Gem Deck\n- Mathematical Deck\n- Negative Deck\n- Tech Deck\n",
+    "published_at": "2025-06-19T16:08:16.556Z",
+    "type": "Mod"
+  },
+  "Lucky-Rabbit@Trif3ctal": {
+    "id": "LuckyRabbit",
+    "name": "Lucky Rabbit",
+    "author": [
+      "Fennex",
+      "Trif",
+      "HarmoniousJoker"
+    ],
+    "description": "Vanilla+ content mod that adds new jokers, boss blinds, a new consumable type, and more to expand upon the base game. It's time to get silly!",
+    "favourites": 2,
+    "badge_colour": "f0c87e",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0614a)",
+      "Lovely (>=0.7.1)"
+    ],
+    "readme": "# Lucky Rabbit\nLucky Rabbit is a WIP Vanilla+ Balatro mod that adds new Jokers, boss blinds, a new consumable type, and more to expand upon the base game, cooked up by [Fennex](https://www.twitch.tv/mrfennex), [Trif](https://github.com/Trif3ctal), and [HarmoniousJoker](https://github.com/HarmoniousJoker). It’s time to get silly!\n\n*Note: This mod requires [Steamodded](https://github.com/Steamopollys/Steamodded/archive/refs/heads/main.zip) and [Lovely](https://github.com/ethangreen-dev/lovely-injector/releases/latest) (obviously)*\n\nAs of now, this mod adds:\n- **42** fun new Jokers\n- **23** new Silly consumable cards\n- **3** brand-new card modifiers known as **Markings**\n- **2** new Enhancements to expand your deck\n- **15** upgraded and helpful Vouchers\n- **5** practical Decks\n- **4** skip-worthy Tags\n- **11** tough new Boss Blinds\n- **6** themed Friends of Jimbo-style card skins\n\n__Feel free to check out [the in-depth mod progress spreadsheet!](https://docs.google.com/spreadsheets/d/1-gmJJKUTY5EP2TqhpfTXqD-P1NzQQxCRvEpoFnwK72g/edit?gid=1809378509#gid=1809378509)__\n\n*Give us feedback or notify us of issues at [the official Balatro Discord thread!](https://discord.com/channels/1116389027176787968/1342484578236895274)*\n-\n\n![image](https://github.com/user-attachments/assets/971a669a-ae21-4699-8caa-a58b7ee9748b)\n",
+    "published_at": "2025-06-19T16:27:24.948Z",
+    "type": "Mod",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-01-28T17:04:13.459Z"
+    }
+  },
+  "Ortalab@Eremel": {
+    "id": "ortalab",
+    "name": "Ortalab",
+    "author": [
+      "Balatro Discord"
+    ],
+    "description": "Every action has an opposite reaction. In another world, in the nation of \"Virtue\", a simple indie developer created Ortalab, which so happened to be the opposite of our world's Balatro. This mod is intended to port everything from that parallel world to Balatro. Within this demo, it includes 75 Jokers, 10 Decks, 7 sets of Coupons, a new Consumable Type with Boosters - Loteria Cards, 8 Enhancements, 4 Editions, 12 patches, and 2 Stakes for you to try out.",
+    "favourites": 1,
+    "badge_colour": "990000",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0322a)"
+    ],
+    "readme": "",
+    "published_at": "2025-06-19T18:02:01.854Z",
+    "type": "Mod"
+  },
+  "SealsOnJokers@Somethingcom515": {
+    "id": "SealsOnEverything",
+    "name": "Seals On Everything",
+    "author": [
+      "Somethingcom515"
+    ],
+    "description": "Allows seals on Everything also comes with more seals",
+    "favourites": 21,
+    "badge_colour": "E8463D",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0509b-STEAMODDED)",
+      "Lovely (>=0.7.1)",
+      "Balatro (>=1.0.1o)"
+    ],
+    "readme": "Puts seals everywhere! Decks? Boosters? Jokers? Consumables? Stakes? Blinds? We got those!\n",
+    "published_at": "2025-06-19T20:50:51.882Z",
+    "type": "Mod",
+    "tags": [],
+    "versionHistory": [
+      {
+        "tag": "3.0.0",
+        "name": "3.0.0",
+        "body": "Added many new things\r\n\r\nHopefully nothing broke during the merging process",
+        "publishedAt": "2025-08-18T18:26:04Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/3.0.0",
+        "assets": [
+          {
+            "name": "SealsOnEverything.zip",
+            "size": 6747465,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/3.0.0/SealsOnEverything.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.1.0",
+        "name": "2.1.0",
+        "body": "1. Reworked the seal\r\n2. Added sprites for joker enhancements\r\n3. Yellow seal\r\n4. Other things I probably forgot",
+        "publishedAt": "2025-05-16T10:20:34Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/2.1.0",
+        "assets": [
+          {
+            "name": "SealsOnEverything.zip",
+            "size": 6792642,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/2.1.0/SealsOnEverything.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.0.0",
+        "name": "2.0.0 - Major update",
+        "body": "Quite a few things.",
+        "publishedAt": "2025-05-04T10:35:58Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/2.0.0",
+        "assets": [
+          {
+            "name": "SealsOnEverything.zip",
+            "size": 2429909,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/2.0.0/SealsOnEverything.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.7.0",
+        "name": "1.7.0",
+        "body": "More seals and others",
+        "publishedAt": "2025-04-12T22:54:53Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.7.0",
+        "assets": [
+          {
+            "name": "SealsOnJokers.zip",
+            "size": 344759,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.7.0/SealsOnJokers.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.5.0",
+        "name": "1.5.0",
+        "body": "Seal exotic\r\nSeal deck\r\nSeal Sleeve\r\nSeal Seal\r\nThe Seal\r\nProbably a lot more that I forgot",
+        "publishedAt": "2025-04-04T14:00:25Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.5.0",
+        "assets": [
+          {
+            "name": "SealsOnEverything.zip",
+            "size": 261179,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.5.0/SealsOnEverything.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.1.1",
+        "name": "1.1.1",
+        "body": "Fixed enhancements overwriting the joker they are on",
+        "publishedAt": "2025-03-31T11:46:47Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.1.1",
+        "assets": [
+          {
+            "name": "SealsOnJokers.zip",
+            "size": 224661,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.1.1/SealsOnJokers.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.1.0",
+        "name": "1.1.0",
+        "body": "1. Joker enhancements\r\n2. Fixed mail in rebate not retriggering correctly",
+        "publishedAt": "2025-03-31T10:44:27Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.1.0",
+        "assets": [
+          {
+            "name": "SealsOnJokers.zip",
+            "size": 528096,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.1.0/SealsOnJokers.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.0",
+        "name": "1.0.0",
+        "body": "First release",
+        "publishedAt": "2025-03-30T08:02:14Z",
+        "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.0.0",
+        "assets": [
+          {
+            "name": "SealsOnJokers.zip",
+            "size": 35941,
+            "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.0.0/SealsOnJokers.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-13T01:23:29.992Z",
+    "analytics": {
+      "views": 66,
+      "lastViewed": "2026-02-13T01:23:30.091Z",
+      "downloads": 1,
+      "lastDownloaded": "2026-02-08T08:07:35.039Z"
+    }
+  },
+  "SuperFine@energykid": {
+    "id": "superfine",
+    "name": "SuperFine!!",
+    "author": [
+      "ENNWAY",
+      "Fred"
+    ],
+    "description": "SuperFine is a 'Vanilla++' mod - aiming to add content that fits in with vanilla's balance, but stands out on its own.",
+    "favourites": 2,
+    "badge_colour": "FF4A93",
+    "dependencies": [],
+    "readme": "",
+    "published_at": "2025-06-19T20:51:14.447Z",
+    "type": "Mod",
+    "tags": [],
+    "versionHistory": [
+      {
+        "tag": "v1.0.6",
+        "name": "v1.0.6 - Elements Update",
+        "body": "### v1.0.6 - Elements Update\r\n\r\nAdds a new Tarot card connected to two new Enhancements, and a Joker with functionality tied to said Enhancements.",
+        "publishedAt": "2025-11-15T06:04:11Z",
+        "htmlUrl": "https://github.com/energykid/SuperFine/releases/tag/v1.0.6",
+        "assets": [
+          {
+            "name": "SuperFine.zip",
+            "size": 7546986,
+            "downloadUrl": "https://github.com/energykid/SuperFine/releases/download/v1.0.6/SuperFine.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.5",
+        "name": "v1.0.5 - Bits and Bobs",
+        "body": "### v1.0.5 - Bits and Bobs\r\n\r\nAdds 8 new Jokers (5 of them Attuned), 2 new Boss Blinds, adds a new Enhancement and a Tarot  to go with it.\r\nAlso, reworks a couple of things, and refactors certain bits of the code to be more accessible for cross-mod.",
+        "publishedAt": "2025-06-20T01:33:40Z",
+        "htmlUrl": "https://github.com/energykid/SuperFine/releases/tag/v1.0.5",
+        "assets": [
+          {
+            "name": "SuperFine.zip",
+            "size": 7621921,
+            "downloadUrl": "https://github.com/energykid/SuperFine/releases/download/v1.0.5/SuperFine.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "release",
+        "name": "1.0.0",
+        "body": "### SuperFine!! - Content Launch\r\n\r\n_Contains 14 new Jokers, a new Attunement system with its own rarity, two new Spectral cards (including one important one!), 3 Boss Blinds and one Deck._\r\n\r\n**Full Changelog**: https://github.com/energykid/SuperFine/commits/release",
+        "publishedAt": "2025-06-15T01:07:08Z",
+        "htmlUrl": "https://github.com/energykid/SuperFine/releases/tag/release",
+        "assets": [
+          {
+            "name": "SuperFine.zip",
+            "size": 954014,
+            "downloadUrl": "https://github.com/energykid/SuperFine/releases/download/release/SuperFine.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-04T18:12:37.283Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-02-04T18:12:37.488Z"
+    }
+  },
+  "CardSleeves@larswijn": {
+    "id": "CardSleeves",
+    "name": "Card Sleeves",
+    "author": [
+      "Larswijn"
+    ],
+    "description": "Adds sleeves as modifier to decks.  See full description in-game by enabling mod or checking `descriptions.Mods.CardSleeves`.",
+    "favourites": 3,
+    "badge_colour": "0047AA",
+    "dependencies": [
+      "Steamodded (>=1.0.0~ALPHA-1206c)",
+      "Lovely (>=0.6.0)"
+    ],
+    "conflicts": [
+      "GRM (<=0.9.5)",
+      "VNBalatro (<=1.3.0)",
+      "SKHDecks (<=1.2.2)",
+      "MoreFluff (<=1.0.3)"
+    ],
+    "readme": "# ![icon](assets/1x/icon.png) CardSleeves\nA Steamodded+lovely Balatro Mod that adds Sleeves.\n\n![Balatro_Card_Sleeves](Balatro_Card_Sleeves.png)\n\n# Requirements\nRequires `steamodded >= 1.0.0~ALPHA-1206c` - [link](https://github.com/Steamodded/smods/wiki).\n\nRequires `Lovely >= 0.6.0` - [link](https://github.com/ethangreen-dev/lovely-injector). This should already be installed as part of steamodded's installation process.\n\n# Installation\nGet the latest stable version from the [Releases](https://github.com/larswijn/CardSleeves/releases/latest), then download and extract the zip.\nOr use `git clone` for the latest development code, which is more up-to-date, but might be unstable.\n\nMake sure to put the `CardSleeves` folder in the `Mods` directory, and that it is not nested.\n\n# Features\nSleeves are run modifiers similar to decks. Any deck and sleeve can be combined.\n\nCardSleeves adds 15 Sleeves by default, some of which have an unique and different effect when paired with their corresponding deck:\n| Sleeve           | Base effect                                            | Unique effect                                                          |\n|------------------|--------------------------------------------------------|------------------------------------------------------------------------|\n| Red Sleeve       | +1 discard                                             | +1 discard, -1 hand                                                    |\n| Blue Sleeve      | +1 hand                                                | +1 hand, -1 discard                                                    |\n| Yellow Sleeve    | +$10                                                   | Seed Money Voucher                                                     |\n| Green Sleeve     | +$1 per remaining hand/discard                         | Can go up to -$2 in debt for every hand and discard                    |\n| Black Sleeve     | +1 joker slot, -1 hand                                 | +1 joker slot, -1 discard                                              |\n| Magic Sleeve     | Crystal Ball Voucher, 2 Fools                          | Omen Globe Voucher                                                     |\n| Nebula Sleeve    | Telescope Voucher, -1 consumable slot                  | Observatory Voucher                                                    |\n| Ghost Sleeve     | Spectral cards appear in shop, Hex card                | Spectrals appear more often in shop, Spectral pack size increases by 2 |\n| Abandoned Sleeve | No Face Cards in starting deck                         | Face Cards never appear                                                |\n| Checkered Sleeve | 26 Spades and 26 Hearts in starting deck               | Only Spades and Hearts appear                                          |\n| Zodiac Sleeve    | Tarot Merchant, Planet Merchant and Overstock Vouchers | Arcana/Celestial pack size increases by 2                              |\n| Painted Sleeve   | +2 hand size, -1 joker slot                            | +1 card selection limit, -1 joker slot                                 |\n| Anaglyph Sleeve  | Double Tag after each Boss Blind                       | Double Tag after each Small/Big Blind                                  |\n| Plasma Sleeve    | Balance chips/mult, X2 base Blind size                 | Balance prices in shop                                                 |\n| Erratic Sleeve   | All ranks/suits in starting deck are randomized        | Starting Hands/Discards/Dollars/Joker slots are randomized between 3-6 |\n\nOther mods have the ability to add their own Sleeves! Some of these mods include:\n+ [Cryptid](https://github.com/MathIsFun0/Cryptid)\n+ [Familiar](https://github.com/RattlingSnow353/Familiar)\n+ [SDM_0's Stuff](https://github.com/SDM0/SDM_0-s-Stuff)\n+ [MoreFluff](https://github.com/notmario/MoreFluff)\n+ [Reverie](https://github.com/dvrp0/reverie)\n+ [Pokermon](https://github.com/InertSteak/Pokermon)\n+ [Buffoonery](https://github.com/pinkmaggit-hub/Buffoonery)\n+ [Balatro Drafting](https://github.com/spire-winder/Balatro-Draft)\n+ [Themed Jokers](https://github.com/cerloCasa/Themed-Jokers)\n+ [Jimbo's Pack](https://github.com/art-muncher/Jimbo-s-Pack)\n+ And more!\n\nCardSleeves also has support for [Galdur](https://github.com/Eremel/Galdur)'s improved new run menu!\n\n# API (for mod developers)\nAny other mod can create new sleeves. See [the wiki](https://github.com/larswijn/CardSleeves/wiki) for more information.\n\n# Credits\nBig thanks to Sable for the original idea and the original art, all the cool people who helped translate, and the amazing balatro modding community for helping out with the lua code.\n\nAny suggestions, improvements or bugs are welcome and can be submitted through Github's Issues, or on the Balatro Discord [Thread](https://discord.com/channels/1116389027176787968/1279246553931976714).\n",
+    "published_at": "2025-06-20T00:23:42.053Z",
+    "type": "Mod",
+    "tags": [],
+    "versionHistory": [
+      {
+        "tag": "v1.8.0",
+        "name": "V1.8.0",
+        "body": "* For other mods devs (also see [API changes](https://github.com/larswijn/CardSleeves/wiki/Sleeves-API-Changes)):\r\n  * Deprecated `shop_final_pass` context for sleeves. As far I'm aware, no mod actually used this context.\r\n  * Refactored `Sleeve:calculate` behind the scenes to use `SMODS.get_card_areas`.\r\n* Mod compatibility for users:\r\n  * Bumped minimum SMODS version to 1.0.0~ALPHA-1424a (feb 2025). You should already have this.\r\n* Localization:\r\n  * 🇩🇪 German by @onichama.",
+        "publishedAt": "2025-06-28T23:22:48Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.8.0",
+        "assets": [
+          {
+            "name": "CardSleeves-1.8.0.zip",
+            "size": 498831,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.8.0/CardSleeves-1.8.0.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.8",
+        "name": "V1.7.8",
+        "body": "* Bug fixes:\r\n  * Fixes compat with recent [SMODS#582 deck preview pages](https://github.com/Steamodded/smods/pull/582) in beta-0525b or later",
+        "publishedAt": "2025-05-28T22:10:49Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.8",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.8.zip",
+            "size": 496796,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.8/CardSleeves-1.7.8.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.7",
+        "name": "V1.7.7",
+        "body": "* New changes in v1.7.7:\r\n  * Added 🇷🇺 Russian localization by @EnderDrag0n and Astryder in #15 \r\n* Changes since v1.7.6:\r\n  * Fixed the `modify_scoring_hand` context for other mod devs (requires SMODS 0521 or later)",
+        "publishedAt": "2025-05-17T00:36:48Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.7",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.7.zip",
+            "size": 496466,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.7/CardSleeves-1.7.7.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.5",
+        "name": "V1.7.5",
+        "body": "- Localization:\r\n  - Added 🇵🇱 Polish by avandemortell2137\r\n",
+        "publishedAt": "2025-05-01T01:21:54Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.5",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.5.zip",
+            "size": 493807,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.5/CardSleeves-1.7.5.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.4",
+        "name": "V1.7.4",
+        "body": "+ Bugfixes:\r\n  + Fixes #13 (Gold Stake sticker visual issues)\r\n  + Yellow sleeve now has the actual word \"voucher\" in its description\r\n+ Localization:\r\n  + Updates to zh_CN\r\n+ Future-proofing:\r\n  + Hopefully take https://github.com/Steamodded/smods/pull/626 into account",
+        "publishedAt": "2025-04-23T19:11:57Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.4",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.4.zip",
+            "size": 491658,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.4/CardSleeves-1.7.4.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.3",
+        "name": "V1.7.3",
+        "body": "+ Added a new option for the config that visually stacks/compress the deck when cardsleeves is installed:\r\n  + Always stack [default]\r\n    + Always stacks the deck closer together.\r\n  + When using sleeve\r\n    + Stack the deck only when using a sleeve.\r\n    + This is the new option, as requested by @fiiibee.\r\n  + Never stack\r\n    + Does not stack the cards. This could result in the sleeve being stretched, and cards visually being outside the sleeve.\r\n    + Not recommended.",
+        "publishedAt": "2025-04-13T23:05:39Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.3",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.3.zip",
+            "size": 490995,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.3/CardSleeves-1.7.3.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.2",
+        "name": "V1.7.2",
+        "body": "* Hopefully fixed sleeves getting confused about the current deck when opening the new run menu while already in a run",
+        "publishedAt": "2025-04-05T05:12:46Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.2",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.2.zip",
+            "size": 490541,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.2/CardSleeves-1.7.2.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.7.1",
+        "name": "V1.7.1",
+        "body": "* For other mods devs:\r\n  * Sleeves now properly handle returning from the `destroy_card` context\r\n  * Removed `Sleeve:get_name()`, since it did not respect `loc_vars` key change. As far I'm aware, no mod actually used this function\r\n* Mod compatibility:\r\n  * If you are using [VietnameseBalatro](https://github.com/HuyTheKiller/VietnameseBalatro), please update it to avoid conflicts\r\n  * If you are using [SauKhongHuDecks](https://github.com/HuyTheKiller/SauKhongHuDecks), please update it to avoid conflicts\r\n  * If you are using [MoreFluff](https://github.com/notmario/MoreFluff), please update it to avoid conflicts\r\n* Localization:\r\n  * Vietnamese by @HuyTheKiller",
+        "publishedAt": "2025-03-13T15:39:43Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.7.1",
+        "assets": [
+          {
+            "name": "CardSleeves-1.7.1.zip",
+            "size": 489988,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.7.1/CardSleeves-1.7.1.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.9",
+        "name": "V1.6.9",
+        "body": "- Fixed green sleeve description (effect remains unchanged)",
+        "publishedAt": "2025-03-10T13:35:01Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.9",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.9.zip",
+            "size": 487400,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.9/CardSleeves-1.6.9.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.8",
+        "name": "V1.6.8",
+        "body": "* For other mods devs:\r\n  * Sleeves can now retrigger jokers, similar to steamodded's [1.0.0~BETA-0309b](https://github.com/Steamodded/smods/commit/41bd70adc3fe4664de0cbedd9489583535114494) version letting decks retrigger jokers\r\n* Localization:\r\n  * Green sleeve now has the exact same phrasing as green deck",
+        "publishedAt": "2025-03-09T18:26:51Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.8",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.8.zip",
+            "size": 487403,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.8/CardSleeves-1.6.8.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.7",
+        "name": "V1.6.7",
+        "body": "* New changes in v1.6.7:\r\n  * Other mods' collection -> other -> sleeves should now have better visible description pop-ups\r\n* Bug fixes since v1.6.6:\r\n  * Fixed a bug when using Galdur, it was possible for sleeves to think you were running a different deck\r\n* Bug fixes since v1.6.5:\r\n  * Fix stacked nebula deck + sleeve effect",
+        "publishedAt": "2025-03-05T15:30:40Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.7",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.7.zip",
+            "size": 487655,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.7/CardSleeves-1.6.7.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.4",
+        "name": "V1.6.4",
+        "body": "* For other mods devs (also see [API changes](https://github.com/larswijn/CardSleeves/wiki/Sleeves-API-Changes)):\r\n  * `Sleeve:get_name` has been deprecated. Use `Sleeve:generate_ui` instead. \r\n  * `:apply` now takes a `sleeve` argument (currently same as self). This should not require any code changes currently.\r\n* Content:\r\n  * Added red deck+sleeve unique effects\r\n  * Added blue deck+sleeve unique effects\r\n  * Added yellow deck+sleeve unique effects\r\n  * Added painted deck+sleeve unique effects\r\n* Bug fixes:\r\n  * Automatically unlock sleeves without needing to win a run first\r\n  * Sleeve sprite no longer gets stretched when moving around the top card of the deck\r\n  * No more error messages in collection\r\n  * Hopefully no more `attempt to index G.GAME.viewed_back` crashes\r\n* Localization:\r\n  * Added traditional Chinese (thanks to Mr Clover)",
+        "publishedAt": "2025-02-25T14:53:13Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.4",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.4.zip",
+            "size": 487258,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.4/CardSleeves-1.6.4.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.3",
+        "name": "V1.6.3",
+        "body": "* New in v1.6.3:\r\n  * Fixed sleeve description pop-up location in game over -> new run menu\r\n  * Fixed crash when using Cryptid's refactor branch\r\n* Since v1.6.1 and v1.6.2:\r\n  * Updated mod description when mod is unloaded\r\n  * Internal changes to use metadata json file by @therealbenpai in #10 \r\n  * Safety checks in `check_for_unlock` as reported in #9 ",
+        "publishedAt": "2025-02-11T13:45:18Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.3",
+        "assets": [
+          {
+            "name": "CardSleeves-1.6.3.zip",
+            "size": 482405,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.3/CardSleeves-1.6.3.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.6.0",
+        "name": "V1.6.0",
+        "body": "* API-relevant changes for other mod developers:\r\n  * If you use unlock conditions for sleeves, and it's the default \"win on X deck with Y stake\", you should change from stake index to stake key. See [this page](<https://github.com/larswijn/CardSleeves/wiki/Sleeves-API-Changes#v160>) for more information.\r\n  * Sleeves now support `:calculate`. No worries if your sleeve still uses `:trigger_effect`, as I'll probably support it as long as steamodded is too.\r\n* General changes:\r\n  * Sleeves will now show up in other mods' Additions -> Other, as suggested by @dimserene \r\n  * Plasma deck + plasma sleeve now has a neat little animation for balancing the prices in the shop!\r\n  * The in-game mod description now uses localization for some fancy effects and better readability\r\n  * Changed CardSleeves priority `-1` -> `-10` for compatability with Gemstones\r\n  * Bumped min steamodded version to `1.0.0~ALPHA-1206c`, and set min lovely version to `0.6.0`\r\n* Localization:\r\n  * Portuguese (BR) by @pinkmaggit-hub in #6, appreciate it!\r\n* Bugfixes:\r\n  * Plasma deck + plasma sleeve no longer balances the score twice (visual bug only)",
+        "publishedAt": "2025-01-29T06:02:04Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.6.0",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.6.0.zip",
+            "size": 481706,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.6.0/CardSleeves-v1.6.0.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.5",
+        "name": "V1.5.5",
+        "body": "- Steamodded compatibility change for vouchers loading (see #7) (steamodded version 1321c or higher)\r\n- For other mod developers: finally removed `get_current_deck_name`",
+        "publishedAt": "2025-01-23T16:54:09Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.5",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.5.zip",
+            "size": 476903,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.5/CardSleeves-v1.5.5.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.4",
+        "name": "V1.5.4",
+        "body": "* Bugfix: playing cards from other mods should now work properly when using the abandoned deck + sleeve combo",
+        "publishedAt": "2025-01-21T11:20:08Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.4",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.4.zip",
+            "size": 476975,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.4/CardSleeves-v1.5.4.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.3",
+        "name": "V1.5.3",
+        "body": "- Bug fixes:\r\n  - (Galdur only) Last run button no longer changes its sleeve when selecting one without starting a run\r\n- Localization: \r\n  - Changed some hard-coded strings to use localization instead\r\n- UI: \r\n  - Better alignment of sleeve select with stake select in new run menu\r\n  - Sleeve info in deck select and run info should look a bit nicer",
+        "publishedAt": "2025-01-13T16:43:05Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.3",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.3.zip",
+            "size": 477990,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.3/CardSleeves-v1.5.3.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.2",
+        "name": "V1.5.2",
+        "body": "- Fixed possible crash when switching between selecting sleeves <-> selecting deck (galdur only)\r\n- Fixed possible crash when highlighting locked sleeves on a brand new profile",
+        "publishedAt": "2025-01-11T23:00:27Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.2",
+        "assets": [
+          {
+            "name": "CardSleeves-v1.5.2.zip",
+            "size": 89963,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.5.2/CardSleeves-v1.5.2.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.1",
+        "name": "V1.5.1",
+        "body": "+ Compatibility with the latest version of steamodded ALPHA-1306a, also known as \"better-calc 2.0\".",
+        "publishedAt": "2025-01-06T14:43:52Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.5.0",
+        "name": "V1.5.0",
+        "body": "+ Sprite-sheet changes (for other mod developers):\r\n  + Sleeve sprites should be changed to have a 1px border on both sides to prevent sprite bleeding\r\n+ General fixes:\r\n  + Fixed sleeve sprite bleeding (no more weird green edge flicker)\r\n+ Galdur-related changes:\r\n  + Added controller support\r\n  + Fixed bug where it was possible to bypass the unique effect check\r\n  + Fixed memory leak when switching between sleeve pages\r\n  + Fixed tooltips from appearing on locked sleeves by @jumbocarrot0 \r\n  + Fixed unlock description of locked sleeves to properly use \"???\" when it includes an unknown deck to the player by @jumbocarrot0 \r\n\r\nBig thanks to @jumbocarrot0 for helping out with most of these changes!",
+        "publishedAt": "2025-01-02T00:40:25Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.5.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.8",
+        "name": "V1.4.8",
+        "body": "- Fix mod incompatibility (Cryptid+Galdur) editioned decks issue (only with lovely 0.6.0 or later)",
+        "publishedAt": "2024-12-07T15:23:19Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.8",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.7",
+        "name": "V1.4.7",
+        "body": "+ Localization! Big thanks to all the people that helped me translate text into other languages!\r\n  + Chinese by Mr Clover\r\n  + Spanish by Batolol\r\n  + French by Miser\r\n+ Added incompatibility with 2 month (before 13 Sep 2024) or older versions of grim<=0.9.5 due to it breaking sleeve unlocks",
+        "publishedAt": "2024-11-13T19:17:18Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.7",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.6",
+        "name": "V1.4.6",
+        "body": "+ Fix suit icon issue with recent version of steamodded (ALPHA-1028b or later)\r\n+ Fix Cryptid misprint deck compatibility issue (only with lovely 0.6.0 or later)",
+        "publishedAt": "2024-11-02T02:46:13Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.6",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.5",
+        "name": "V1.4.5",
+        "body": "- If you were using Galdur, make sure to update it to [v1.1.4](https://github.com/Eremel/Galdur/releases/latest)!\r\n- Fix crash in config menu if user did not have Galdur installed\r\n- Fixed sleeves vibrating on selection",
+        "publishedAt": "2024-10-07T22:38:34Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.4",
+        "name": "V1.4.4",
+        "body": "+ Fix regression with plasma sleeve's unique effect",
+        "publishedAt": "2024-10-03T01:48:06Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.3",
+        "name": "V1.4.3",
+        "body": "+ Added a config option for where to show sleeve information (name + description), with 4 options:\r\n  + Only in deck view  [default]\r\n    + No space for sleeve sprite/mod badges\r\n    + Also condenses the suit counter from 2x2 to 4x1 for space\r\n  + Only in run info\r\n    + Still has sleeve sprite/mod badges\r\n  + Show in both\r\n    + Sleeve info shows up in either menu for the best of both worlds\r\n  + Hide sleeve info\r\n    + Hides it in both menus for the minimalists\r\n\r\n+ Fix issue with the random sleeve button when having both locked and modded sleeves\r\n",
+        "publishedAt": "2024-09-29T16:22:05Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.2",
+        "name": "V1.4.2",
+        "body": "+ Fix HouseRules incompatibility issue",
+        "publishedAt": "2024-09-28T23:16:33Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.4.1",
+        "name": "V1.4.1",
+        "body": "+ API-relevant changes (for developers):\r\n  + DEPRECATION: use `CardSleeves.Sleeve.get_current_deck_key()` now for deck comparisons instead of `CardSleeves.Sleeve.get_current_deck_name()`\r\n  + Sleeves can now be locked (using `unlocked`, `unlock_condition`, and optionally `check_for_unlock`, `locked_loc_vars`)\r\n  + Challenges now support the `sleeve` argument (if that's something someone wants?) - still in a beta version and might have issues/bugs\r\n\r\n+ Content changes:\r\n  + Sleeves are now in the collection and the CardSleeves additions tab! Find them under collection/additions -> other -> sleeves\r\n  + Sleeves now have stickers to show the highest stake you've won with them!\r\n  + Sleeves now have badges to show which mod(s) they're from!\r\n  + Base-game sleeves are now locked by default, and get unlocked by winning on their corresponding deck and a minimum stake\r\n  + Added mod config option to ignore all sleeve unlock conditions. Also added a description to all config options.\r\n\r\n+ Multiple bug fixes\r\n  + Sleeves no longer get applied in challenges that do not define a sleeve\r\n  + Sleeve badges now respect Steamodded no badges config option\r\n  + Sleeve alignment now looks better when adjust deck alignment config is disabled\r\n  + Galdur: Last run's sleeve now persists through restarting the game",
+        "publishedAt": "2024-09-28T14:20:25Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.4.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.10",
+        "name": "V1.3.10",
+        "body": "+ Fix issue with Galdur's random sleeve button not properly loading the sleeve",
+        "publishedAt": "2024-09-22T14:10:35Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.3.10",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.9",
+        "name": "V1.3.9",
+        "body": "+ Fix `:snap_to` error\r\n+ Fix Nebula sleeve unique description (visual bug only)",
+        "publishedAt": "2024-09-19T14:49:48Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.3.9",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-02T07:28:48.894Z"
+  },
+  "JokerDisplay@nh6574": {
+    "id": "JokerDisplay",
+    "name": "JokerDisplay",
+    "author": [
+      "nh6574"
+    ],
+    "description": "Display useful information under Jokers. Controls: Right-click or B - hide/show. Left-click or Up - collapse/expand.",
+    "favourites": 4,
+    "badge_colour": "",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0301b)"
+    ],
+    "readme": "# JokerDisplay for Balatro\n\nBalatro mod that displays information such as modifiers or relevant hands, ranks or suits under Jokers.\n\n## Installation\n\n1. Install [Steamodded](https://github.com/Steamopollys/Steamodded) [(version >1.0.0)](https://github.com/Steamodded/smods/wiki)\n2. Download the [latest release](https://github.com/nh6574/JokerDisplay/releases)\n3. Extract the zip file into its own folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\n\n## Usage\n\n* Right-click the display or a Joker to hide/unhide displays (or use the back button on your controller over a Joker). This will disable all calculations for that joker (in case of crashes).\n* Left-click the display to collapse/expand extra rows of text. (or use the up button on your controller over a Joker).\n* Go to Mods > JokerDisplay > Config for more options.\n\nFeel free to [open an issue](https://github.com/nh6574/JokerDisplay/issues) for suggestions or bug reports.\n\n## Screenshots\n\n<img src=\"examples/example_1.png\" alt=\"Example 1\" width=\"500\">\n<img src=\"examples/example_2.png\" alt=\"Example 2\" width=\"500\">\n<img src=\"examples/example_3.png\" alt=\"Example 3\" width=\"500\">\n<img src=\"examples/example_4.png\" alt=\"Example 4\" width=\"500\">\n\n## Mod Support\n\nThis mod only supports vanilla jokers but you can add support for it in your own mod by defining how the display should look.\n\nCheck out the [wiki](https://github.com/nh6574/JokerDisplay/wiki) for API documentation.\n\n| Mods with JokerDisplay support |  |\n|---|---|\n| [Aikoyori's Shenanigans](https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans) | [Baladrone](https://github.com/fantasygone/Baladrone) |\n| [BalatroOlympus](https://github.com/lshtech/BalatroOlympus) | [Balatro Multiplayer](https://github.com/Balatro-Multiplayer/BalatroMultiplayer) | \n| [Betmma Jokers](https://github.com/betmma/my_balatro_mods) | [Bird Jokers](https://github.com/JustinBanzon/Bird-Jokers) |\n| [Boss Jokers](https://github.com/KilledByLava/BossJokers) | [Bunco](https://github.com/Firch/Bunco) |\n| [Cryptid](https://github.com/MathIsFun0/Cryptid) | [D6-Jokers](https://github.com/GauntletGames-2086/D6-Jokers) |\n| [Diceylatro](https://nriomoder.itch.io/diceylatro) | [Emporium](https://github.com/krokshut/Emporium) |\n| [Friends Vs. Balatro](https://github.com/rae-vyn/FriendsVsBalatro/tree/main) | [Inscrybed Jokers](https://github.com/LunaAstraCassiopeia/LunasBalatroMods) |\n| [Jank Jonklers](https://github.com/spikeof2010/JankJonklers) | [Joker Evolution](https://github.com/SDM0/Joker-Evolution) | \n| [JamMod](https://github.com/WilsontheWolf/JamMod) | [Lobotomy Corporation](https://github.com/Mysthaps/LobotomyCorp) | \n| [Pampa Joker Pack](https://github.com/lshtech/balatro-pampa-joker-pack) | [Redux Arcanum](https://github.com/jumbocarrot0/Redux-Arcanum) |\n| [Reverie](https://github.com/dvrp0/reverie/tree/main) | [Revo's Vault](https://github.com/Cdrvo/Revos-Vault---Balatro-Mod/tree/main) |\n| [SDM_0's Stuff](https://github.com/SDM0/SDM_0-s-Stuff/) | [Snow-s-Mods](https://github.com/RattlingSnow353/Snow-s-Mods) |\n| [SpicyJokers](https://github.com/RitchieDimaria/SpicyJokers) | [The World Ends With Jimbo](https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo) |\n| [Valkyrie](https://github.com/dainekoichi/Valkyrie-BalatroMod) |  |\n\n## Contributing\n\nThis mod will probably not get any new features after 1.8, so please feel free to fork or do PRs if you feel like you can improve on this or fix any issues!\n\nAlso I would appreciate if people contact me when there are updates to the game or Steamodded that break any features or add content.\n\n### Acknowledgements\n\nSpecial thanks to Eremel and OppositeWolf770 for the help!\n\nAnd thank you to WholeHorse for the Russian localization and SDM0 for the French localization!\n\n## Contact\n\nIf you have any issues feel free to contact me on [Twitter](https://nh6574.com/), [Bluesky](https://bsky.app/profile/nh6574.com) or Discord as nh6574\n\nAnd here's my [ko-fi link](https://ko-fi.com/nh6574) if you feel especially grateful.\n",
+    "published_at": "2025-06-20T00:29:26.971Z",
+    "type": "Mod",
+    "tags": []
+  },
+  "JoyousSpring@nh6574": {
+    "id": "JoyousSpring",
+    "name": "JoyousSpring",
+    "author": [
+      "nh6574"
+    ],
+    "description": "Adds modern Yu-Gi-Oh! cards and mechanics.",
+    "favourites": 3,
+    "badge_colour": "F4A6C7",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-0614a)"
+    ],
+    "readme": "# JoyousSpring - Balatro Mod\n\nAdds modern Yu-Gi-Oh! cards and mechanics.\n\n## Installation\n\n1. Install [Steamodded](https://github.com/Steamopollys/Steamodded) [(version >1.0.0)](https://github.com/Steamodded/smods/wiki)\n2. Download the [latest release](https://github.com/nh6574/JoyousSpring/releases)\n3. Extract the zip file into its own folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\n\nMake sure to check the Glossary and the Config in Main Menu > Mods > JoyousSpring\n\nHas compatibility with [JokerDisplay](https://github.com/nh6574/JokerDisplay) version >1.8.2\n\nCheck out the [Discord](https://discord.gg/Ac5FKpQCRV) for troubleshooting and chatting about the mod <3\n\n## Known Issues and future ideas\n\n- Still very much WIP\n- Extra Deck and summon material selection doesn't work properly with a controller\n- It hasn't been tested with other mods (other than JokerDisplay) so it might not play well with them\n\n## Screenshots\n\n<img src=\"screenshots/1.png\" alt=\"Example 1\" width=\"500\">\n<img src=\"screenshots/2.png\" alt=\"Example 2\" width=\"500\">\n<img src=\"screenshots/3.png\" alt=\"Example 3\" width=\"500\">\n<img src=\"screenshots/4.png\" alt=\"Example 4\" width=\"500\">\n<img src=\"screenshots/5.png\" alt=\"Example 5\" width=\"500\">\n<img src=\"screenshots/6.png\" alt=\"Example 6\" width=\"500\">\n<img src=\"screenshots/7.png\" alt=\"Example 7\" width=\"500\">\n<img src=\"screenshots/8.png\" alt=\"Example 8\" width=\"500\">\n\n## Currently implemented\n\n|||||||\n|--|--|--|--|--|--|\n|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/d/dd/House_Dragonmaid_(JoyousSpring).png/100px-House_Dragonmaid_(JoyousSpring).png\"><br>[Dragonmaid](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Dragonmaid)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/a/a1/Evil%E2%98%85Twins_Ki-sikil_%26_Lil-la_%28JoyousSpring%29.png/100px-Evil%E2%98%85Twins_Ki-sikil_%26_Lil-la_%28JoyousSpring%29.png\"><br>[Live☆Twin](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/LiveTwin)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/a/a9/Dogmatika_Ecclesia%2C_the_Virtuous_%28JoyousSpring%29.png/100px-Dogmatika_Ecclesia%2C_the_Virtuous_%28JoyousSpring%29.png\"><br>[Dogmatika](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Dogmatika)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/7/71/Ghost_Ogre_%26_Snow_Rabbit_%28JoyousSpring%29.png/100px-Ghost_Ogre_%26_Snow_Rabbit_%28JoyousSpring%29.png\"><br>[Ghost Girls](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Ghost_Girls)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/1/1b/Spright_Blue_%28JoyousSpring%29.png/100px-Spright_Blue_%28JoyousSpring%29.png\"><br>[Spright](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Spright)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/8/86/Mekk-Knight_Blue_Sky_%28JoyousSpring%29.png/100px-Mekk-Knight_Blue_Sky_%28JoyousSpring%29.png\"><br>[Mekk-Knight](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Mekk-Knight)|\n|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/d/de/Generaider_Boss_Stage_%28JoyousSpring%29.png/100px-Generaider_Boss_Stage_%28JoyousSpring%29.png\"><br>[Generaider](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Generaider)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/d/da/Ghoti_of_the_Deep_Beyond_%28JoyousSpring%29.png/100px-Ghoti_of_the_Deep_Beyond_%28JoyousSpring%29.png\"><br>[Ghoti](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Ghoti)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/8/8b/PSY-Framelord_Omega_%28JoyousSpring%29.png/100px-PSY-Framelord_Omega_%28JoyousSpring%29.png\"><br>[PSY-Frame](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/PSY-Frame)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/3/31/Hugin_the_Runick_Wings_%28JoyousSpring%29.png/100px-Hugin_the_Runick_Wings_%28JoyousSpring%29.png\"><br>[Runick](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Runick)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/2/23/Dante%2C_Traveler_of_the_Burning_Abyss_%28JoyousSpring%29.png/100px-Dante%2C_Traveler_of_the_Burning_Abyss_%28JoyousSpring%29.png\"><br>[Burning Abyss](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Burning_Abyss)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/7/71/Lovely_Labrynth_of_the_Silver_Castle_%28JoyousSpring%29.png/100px-Lovely_Labrynth_of_the_Silver_Castle_%28JoyousSpring%29.png\"><br>[Labrynth](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Labrynth)|\n|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/5/51/Subterror_Guru_%28JoyousSpring%29.png/100px-Subterror_Guru_%28JoyousSpring%29.png\"><br>[Subterror](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Subterror)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/4/43/Eldlich_the_Golden_Lord_%28JoyousSpring%29.png/100px-Eldlich_the_Golden_Lord_%28JoyousSpring%29.png\"><br>[Eldlich](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Eldlich)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/8/88/The_Arrival_Cyberse_%40Ignister_%28JoyousSpring%29.png/100px-The_Arrival_Cyberse_%40Ignister_%28JoyousSpring%29.png\"><br>[@Ignister](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/@Ignister)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/b/b7/DoSolfachord_Coolia_%28JoyousSpring%29.png/100px-DoSolfachord_Coolia_%28JoyousSpring%29.png\"><br>[Solfachord](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Solfachord)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/7/73/Witchcrafter_Madame_Verre_%28JoyousSpring%29.png/100px-Witchcrafter_Madame_Verre_%28JoyousSpring%29.png\"><br>[Witchcrafter](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Witchcrafter)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/1/16/El_Shaddoll_Construct_%28JoyousSpring%29.png/100px-El_Shaddoll_Construct_%28JoyousSpring%29.png\"><br>[Shaddoll](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Shaddoll)|\n|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/9/9c/Paleozoic_Dinomischus_%28JoyousSpring%29.png/100px-Paleozoic_Dinomischus_%28JoyousSpring%29.png\"><br>[Paleozoic](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Paleozoic)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/2/26/Aleister_the_Invoker_%28JoyousSpring%29.png/100px-Aleister_the_Invoker_%28JoyousSpring%29.png\"><br>[Invoked](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Invoked)|<img src=\"https://static.wikitide.net/balatromodswiki/thumb/c/cd/Danger%21_Tsuchinoko_%28JoyousSpring%29.png/100px-Danger%21_Tsuchinoko_%28JoyousSpring%29.png\"><br>[Danger!](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Danger!)|||<img src=\"https://static.wikitide.net/balatromodswiki/thumb/8/8e/Tour_Guide_From_the_Underworld_%28JoyousSpring%29.png/100px-Tour_Guide_From_the_Underworld_%28JoyousSpring%29.png\"><br>[Free Agents](https://balatromods.miraheze.org/wiki/JoyousSpring/Jokers/Free_Agents)|\n\n<img src=\"screenshots/additions.png\" alt=\"Additions\">\n\n## Contributing\n\nI might drop this at any moment (if I haven't already), so please feel free to fork or do PRs if you feel like you can improve on this or fix any of the problems above!\n\nI will be strict with any card constributions that don't fit the theme of the mod. Also, when contributing an archetype I'm not merging PRs until a minimum viable version of the entire archetype is finished.\n\n## Contact\n\nIf you have any issues feel free to contact me on [Bluesky](https://bsky.app/profile/nh6574.com) or [on the official Balatro Discord as nh6574](https://discord.com/invite/balatro)\n\nAnd here's my [ko-fi link](https://ko-fi.com/nh6574) if you feel especially grateful.\n\nAlso check out my Quality of Life mod [JokerDisplay](https://github.com/nh6574/JokerDisplay)!\n",
+    "published_at": "2025-06-20T00:30:28.484Z",
+    "type": "Mod",
+    "tags": [],
+    "analytics": {
+      "views": 16,
+      "lastViewed": "2026-02-13T04:32:07.911Z",
+      "downloads": 1,
+      "lastDownloaded": "2026-01-30T03:25:57.299Z"
+    },
+    "versionHistory": [
+      {
+        "tag": "v0.8.5.4",
+        "name": "0.8.5.4 - Reasoning",
+        "body": "## What's Changed\r\nThis update requires [SMODS~BETA-0827b or higher](https://github.com/Steamodded/smods/releases/latest)\r\n\r\nv0.8.5.4:\r\n* Fix crash when calculating excavations at end of run\r\n\r\nv0.8.5.3:\r\n* Fixes to Spright Jet and Trouble Sunny\r\n* Fixes cardarea styling in newer SMODS.\r\n\r\nv0.8.5.2:\r\n* Fixed Harr's activation condition check\r\n* Fixed Spright Sprind's crash\r\n\r\nv0.8.5:\r\n* Small fixes\r\n* Updated French localization\r\n\r\nv0.8.4.3:\r\n* Added JokerDisplay support for Fortune Ladies and Free Agents\r\n\r\nv0.8.4.2:\r\n* Some tooltips have been added or rewritten\r\n\r\nv0.8.4.1:\r\n* Cardian Synchros and Fortune Lady Every can be summoned without space\r\n* Fix Super Koi Koi not working with Telescope\r\n* Fix cards that add to the Extra Deck when used as material counting the summoned cards when checking for room\r\n\r\nv0.8.4:\r\n* Added Linkslayer @ Ignister, Linkslayer and Code Igniter\r\n* Added alt arts (check config) and updated some cards that were using scans\r\n* Added text when trying to summon an extra deck joker without space\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n# Recommended mods:\r\n## Mods with native support:\r\n* [JokerDisplay](https://github.com/nh6574/JokerDisplay) - Adds information under Jokers so you don't have to hover them. This mod adds native support.\r\n* [TheFamily](https://github.com/SleepyG11/TheFamilyBalatro) - Adds extra tabs to the side to save space on the screen. This mod adds native support (might add exclusive features in the future so it's recommended)\r\n* [CardSleeves](https://github.com/larswijn/CardSleeves) - Adds sleeves to decks for extra effects. This mod adds some.\r\n* [Handy](https://github.com/SleepyG11/HandyBalatro) - Adds QoL controls to the game. This mods supports some features natively.\r\n* [Unjankify](https://github.com/blazingulag/Unjankify) - Fixes some issues when playing with multiple mods like cardarea overlap. Includes JoyousSpring support.\r\n\r\n## Other mods:\r\n* [Galdur](https://github.com/Eremel/Galdur) - Nicer deck selection (Highly Recommended)\r\n* [Glue](https://github.com/icyethics/Glue-For-Modpacks) - Utility to change shop slots, joker and consumable slots and rates\r\n* [Cartomancer](https://github.com/stupxd/Cartomancer) - Includes functionalities to help in runs with lots of cards either in the Joker area or Deck, alongside other QoL features\r\n* [Overflow](https://github.com/lord-ruby/Overflow) - Stacks consumables\r\n* [Banner](https://github.com/SylviBlossom/Banner) - Ban objects from appearing in a run\r\n* [Better Tags](https://github.com/WaffleDevs/BetterTags) - Stacks Tags\r\n* [DebugPlus](https://github.com/WilsontheWolf/DebugPlus) - Debug/Cheating tools. Useful even if you're not a developer to bypass crashes or give yourself some items to test",
+        "publishedAt": "2025-09-10T23:23:42Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.8.5.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.8.3.1",
+        "name": "0.8.3.1 - Reasoning",
+        "body": "## What's Changed\r\nThis update requires [SMODS~BETA-0827b or higher](https://github.com/Steamodded/smods/releases/latest)\r\n\r\n* Elfuria's last effect now works\r\n* Vanilla cards can not longer create field spells\r\n* Custom tooltips for negative cards in custom areas\r\n* Other fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-08-27T20:46:46Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.8.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.8.2.8",
+        "name": "0.8.2.8 - Reasoning",
+        "body": "## What's Changed\r\nv0.8.2:\r\n* Add TMJ compat by @cg-223 in https://github.com/nh6574/JoyousSpring/pull/14\r\n* Simplified Chinese translation by @Alophrine \r\n\r\nv0.8.1:\r\n* Updated FR translation by @Keraloon in https://github.com/nh6574/JoyousSpring/pull/12\r\n\r\nv0.8.0\r\n* Implemented some new archetypes with exciting new themes!\r\n  * Adamancipator: Adds gambling!\r\n  * Flower Cardian: Adds gambling!\r\n  * Fortune Lady/Fairy: Adds gambling!\r\n  * Virtual World: Adds xenophobia!\r\n  * ... and 18 more Free Agents that support the themes of \"gambling\" and \"xenophobia\"!\r\n* A bunch of changes, nerfs, buffs and fixes\r\n* Yes, yes, I know: getting cards is hard with 400 Jokers. Next update will address that.\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-07-23T23:59:23Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.8.2.8",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.7.3.1",
+        "name": "0.7.3.1 - Book of Lunar Eclipse",
+        "body": "## What's Changed\r\n* A bunch of nerfs, some buffs, but most importantly many fixes all of which I'm too sick at the time of writing to remember. Still no JokerDisplay update.\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-06-16T13:01:22Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.7.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.7.2",
+        "name": "0.7.2 - Book of Lunar Eclipse",
+        "body": "## What's Changed\r\n* adding localization/fr.lua by @Keraloon in https://github.com/nh6574/JoyousSpring/pull/8\r\n\r\n## New Contributors\r\n* @Keraloon made their first contribution in https://github.com/nh6574/JoyousSpring/pull/8\r\n\r\n**Full Changelog**: https://github.com/nh6574/JoyousSpring/compare/v0.7.1.1...v0.7.2\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki) (You will need the dev version 0410b for now)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-06-03T21:14:04Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.7.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.7.1.1",
+        "name": "0.7.1.1 - Book of Lunar Eclipse",
+        "body": "Join the [Discord](https://discord.gg/Ac5FKpQCRV) for sneak peeks!\r\n\r\n## What's Changed since 0.6\r\n* Implemented:\r\n    * Labrynth\r\n    * Subterror\r\n    * Eldlich\r\n    * @/Ignister\r\n    * Solfachord\r\n    * Witchcrafter\r\n    * Paleozoic\r\n    * Shaddoll\r\n    * Invoked\r\n    * Danger!\r\n    * and 73 more Free Agents!\r\n* Some more config options\r\n* Some other changes to existing content\r\n* A lot of fixes\r\n\r\n(Better effect messages and proper JokerDisplay support are planned for later)\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki) (You will need the dev version 0410b for now)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-04-19T14:18:37Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.7.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.5.8",
+        "name": "v0.6.5.8",
+        "body": "Join the [Discord](https://discord.gg/Ac5FKpQCRV) for sneak peeks!\r\n\r\n## What's Changed\r\nv0.6.5.8: Error if Lovely is not loaded properly\r\nv0.6.5.7: Fix cards not drawn face down during blinds\r\nv0.6.5.6: Fix Field Spells\r\nv0.6.5.5: Cards that send to the graveyard work properly\r\n\r\n* Implemented Field Spells for Live Twin, Dogmatika, Mekk-Knight, Ghoti and PSY-Frame\r\n* Some fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-03-08T20:47:36Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.6.5.8",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.4.2",
+        "name": "v0.6.4.2",
+        "body": "## What's Changed\r\n* Some effect changes\r\n* Booster Art by IcyEthics <3\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-03-07T19:57:22Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.6.4.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.6.3.1",
+        "name": "v0.6.3.1",
+        "body": "## What's Changed\r\nv0.6.3.1:\r\n* Fix summons\r\n\r\nv0.6.3:\r\n* New tooltips and related cards view (press \"D\")\r\n* Fixes\r\n\r\nv0.6.1:\r\n* Burning Abyss that trigger when destroyed also trigger on sell (might change later)\r\n\r\nv0.6.0\r\n* Implemented: Burning Abyss\r\n* Implemented: Banishment area display (inside Graveyard menu)\r\n* Other bugfixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-03-04T19:31:21Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.6.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.5.4",
+        "name": "v0.5.5.4",
+        "body": "## What's Changed\r\nv0.5.5.4\r\n* Bugfixes\r\n\r\nv0.5.5.1\r\n* Fix Deep Beyond's summoning conditions\r\n\r\nv0.5.5\r\n* Implemented booster packs\r\n* There's an option in the config to add an extra booster pack from the mod to the shop\r\n* Some bug fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-28T23:55:10Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.5.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.4",
+        "name": "v0.5.4",
+        "body": "## What's Changed\r\n* Implemented some challenges\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-27T22:28:28Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.3",
+        "name": "v0.5.3",
+        "body": "## What's Changed\r\nv0.5.3:\r\n* Ghoti too strong\r\n* Bug fixes\r\n\r\nv0.5.2:\r\n* Bug fixes\r\n\r\nv0.5.1:\r\n* Config option to disable all other types of Jokers. This is just a temporary hack while I work on better ways to get the cards :)\r\n\r\nv0.5.0:\r\n* Implemented: Mekk-Knight, who act on cards played in the same \"column\" as them\r\n* Implemented: Generaider - use the field spell to tribute Tokens and summon powerful Jokers\r\n* Implemented: Ghoti - the banish mechanics can keep cards off your inventory during the shop so you have more space\r\n* Implemented: PSY-Frame - A Psychic soldier that rides into battle against the Security Forces on currents of lightning, using an autonomic amplifier called \"PSY-Frame\"\r\n* Implemented: Runick, who use Tarot cards to fusion summon and can replenish them quickly at the cost of the cards in your deck\r\n* Also many bug fixes and slight ability tweaks\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-25T21:41:18Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.2.1",
+        "name": "v0.5.2",
+        "body": "## What's Changed\r\nv0.5.2:\r\n* Bug fixes\r\n\r\nv0.5.1:\r\n* Config option to disable all other types of Jokers. This is just a temporary hack while I work on better ways to get the cards :)\r\n\r\nv0.5.0:\r\n* Implemented: Mekk-Knight, who act on cards played in the same \"column\" as them\r\n* Implemented: Generaider - use the field spell to tribute Tokens and summon powerful Jokers\r\n* Implemented: Ghoti - the banish mechanics can keep cards off your inventory during the shop so you have more space\r\n* Implemented: PSY-Frame - A Psychic soldier that rides into battle against the Security Forces on currents of lightning, using an autonomic amplifier called \"PSY-Frame\"\r\n* Implemented: Runick, who use Tarot cards to fusion summon and can replenish them quickly at the cost of the cards in your deck\r\n* Also many bug fixes and slight ability tweaks\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JoyousSpring files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "publishedAt": "2025-02-22T18:45:47Z",
+        "htmlUrl": "https://github.com/nh6574/JoyousSpring/releases/tag/v0.5.2.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v0.5.1.5",
+        "name": "v0.5.1",
+        "body": "## What's Changed\r\nv0.5.1:\r\n* Config option to disable all other types of Jokers. This is just a temporary hack while I work on better ways to get the cards :)\r\n\
