@@ -2232,9 +2232,7 @@
     "tags": [
       "Jokers"
     ],
-    "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n",
-    "versionHistory": [],
-    "versionHistoryLastCheck": "2026-02-13T06:58:37.247Z"
+    "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n"
   },
   "Alloy@TheCoroboCorner": {
     "id": "Alloy",
@@ -2773,7 +2771,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-02T03:52:47.862Z"
+    "versionHistoryLastCheck": "2026-02-13T06:58:39.037Z"
   },
   "JustEnoughJokers@cg-223": {
     "id": "justenoughjokers",
@@ -2798,7 +2796,7 @@
       "lastViewed": "2026-01-27T10:40:10.831Z"
     },
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-02-13T06:58:36.644Z"
+    "versionHistoryLastCheck": "2026-02-02T07:29:03.341Z"
   },
   "bloated_1_modpack": {
     "id": "bloated_1_modpack",
