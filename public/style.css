@@ -560,6 +560,52 @@ textarea:hover:not(:focus)
   pointer-events: none;
 }
 
+.tag-badge.clickable
+{
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tag-badge.clickable:hover
+{
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%) !important;
+  border-color: rgba(102, 126, 234, 0.6) !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(102, 126, 234, 0.5);
+}
+
+.tag-expand-btn 
+{
+  transition: all 0.2s;
+}
+
+.tag-expand-btn:hover 
+{
+  background: rgba(102, 126, 234, 0.3) !important;
+  border-color: rgba(102, 126, 234, 0.5) !important;
+  transform: scale(1.05);
+}
+
+.hidden-tags 
+{
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown 
+{
+  from 
+  {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  to 
+  {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
 .label-text
 {
   display: flex;
@@ -622,12 +668,33 @@ textarea:hover:not(:focus)
   background: var(--bg-card);
   border-radius: var(--radius-md);
   padding: 1.5rem;
-  border: 1px solid rgba(102, 126, 234, 0.1);
+  border: 2px solid rgba(102, 126, 234, 0.2);
   transition: all var(--transition-slow);
   position: relative;
   overflow: hidden;
   opacity: 1;
   transform: translateY(200px);
+}
+
+.mod-card h3 a 
+{
+  transition: color 0.2s;
+}
+
+.mod-card h3 a:hover 
+{
+  color: var(--accent-blue);
+}
+
+.mod-card a[href="#"] 
+{
+  transition: all 0.2s;
+}
+
+.mod-card a[href="#"]:hover 
+{
+  color: var(--accent-blue);
+  text-decoration: underline;
 }
 
 .mod-card.visible
@@ -796,6 +863,36 @@ textarea:hover:not(:focus)
   gap: var(--space-xs);
 }
 
+.icon-with-text 
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  white-space: nowrap;
+}
+
+.icon svg[fill="currentColor"] 
+{
+  stroke: none;
+}
+
+.mod-card .click-me
+{
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.mod-card .tags-container
+{
+  margin-bottom: 1rem;
+}
+
+.mod-card footer
+{
+  margin-top: 1rem;
+}
+
 .favourite-btn
 {
   background: var(--accent-pink);
@@ -811,6 +908,17 @@ textarea:hover:not(:focus)
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
+}
+
+.favourite-btn:hover
+{
+  box-shadow: 0 0 16px rgba(255, 59, 118, 0.5);
+  transform: scale(1.02);
+}
+
+.favourite-btn:hover .icon
+{
+  filter: drop-shadow(0 0 8px rgba(255, 59, 118, 0.8));
 }
 
 .favourite-btn:hover:not(:disabled)
@@ -830,6 +938,22 @@ textarea:hover:not(:focus)
   cursor: not-allowed;
   background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
   box-shadow: none;
+}
+
+.community-btn
+{
+  transition: all var(--transition-base);
+}
+
+.community-btn:hover
+{
+  box-shadow: 0 0 16px rgba(147, 51, 234, 0.5);
+  transform: scale(1.02);
+}
+
+.community-btn:hover .icon
+{
+  filter: drop-shadow(0 0 8px rgba(147, 51, 234, 0.8));
 }
 
 /* Mod Detail Page */
@@ -1551,6 +1675,36 @@ body
     grid-template-columns: 1fr;
   }
 
+  .mod-card 
+  {
+    padding: 1rem;
+  }
+    
+  .mod-card footer 
+  {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .mod-card .click-me
+  {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+  
+  .mod-card .icon 
+  {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  .mod-card .click-me 
+  {
+    flex: 1 1 auto;
+    min-width: calc(50% - 0.25rem);
+    justify-content: center;
+  }
+
   .tabs
   {
     padding: 0 var(--space-md);
@@ -1565,5 +1719,51 @@ body
   {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) 
+{
+  .mod-card .click-me 
+  {
+    flex: 0 1 calc(33.333% - 0.5rem);
+  }
+}
+
+@media (min-width: 1025px) 
+{
+  .mod-card .click-me 
+  {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 480px)
+{
+  .mod-card 
+  {
+    padding: 0.75rem;
+  }
+    
+  .mod-card h3 
+  {
+    font-size: 1.1rem;
+  }
+    
+  .mod-card p 
+  {
+    font-size: 0.875rem;
+  }
+    
+  .mod-card .click-me 
+  {
+    width: 100%;
+    min-width: 100%;
+    justify-content: center;
+  }
+    
+  .mod-card-thumbnail 
+  {
+    display: none;
   }
 }

@@ -12,7 +12,8 @@ class IconLoader
             size = 16,
             colour = 'white',
             className = '',
-            title = ''
+            title = '',
+            filled = false
         } = options;
 
         const wrapper = document.createElement('span');
@@ -30,12 +31,27 @@ class IconLoader
         if (title)
             wrapper.title = title;
 
+        const iconName = filled && !name.endsWith('-filled') ? `${name}-filled` : name;
+
         this.loadSVG(name).then(svg => {
             if (svg)
             {
                 svg.style.width = '100%';
                 svg.style.height = '100%';
+                svg.style.filter = 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))';
                 wrapper.appendChild(svg);
+            }
+            else if (filled && iconName.endsWith('-filled'))
+            {
+                this.loadSVG(name).then(regularSvg => {
+                    if (regularSvg)
+                    {
+                        regularSvg.style.width = '100%';
+                        regularSvg.style.height = '100%';
+                        regularSvg.style.filter = 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))';
+                        wrapper.appendChild(regularSvg);
+                    }
+                });
             }
             else wrapper.textContent = '•';
         });
@@ -72,11 +88,20 @@ class IconLoader
             if (!svg.hasAttribute('viewBox'))
                 svg.setAttribute('viewBox', '0 0 24 24');
 
-            svg.setAttribute('fill', 'none');
-            svg.setAttribute('stroke', 'white');
-            svg.setAttribute('stroke-width', '2.5');
-            svg.setAttribute('stroke-linecap', 'round');
-            svg.setAttribute('stroke-linejoin', 'round');
+            const isFilled = name.includes('-filled');
+            if (isFilled)
+            {
+                svg.setAttribute('fill', 'currentColor');
+                svg.setAttribute('stroke', 'none');
+            }
+            else
+            {
+                svg.setAttribute('fill', 'none');
+                svg.setAttribute('stroke', 'currentColor');
+                svg.setAttribute('stroke-width', '2.5');
+                svg.setAttribute('stroke-linecap', 'round');
+                svg.setAttribute('stroke-linejoin', 'round');
+            }
 
             this.cache.set(name, svg);
 
@@ -95,7 +120,8 @@ class IconLoader
             size = 16,
             colour = 'white',
             gap = '0.375rem',
-            className = ''
+            className = '',
+            filled = true
         } = options;
 
         const container = document.createElement('span');
@@ -105,11 +131,13 @@ class IconLoader
             align-items: center;
             gap: ${gap};
             color: ${colour};
+            font-size: 0.875rem;
         `;
 
         const icon = this.create(name, { size, colour });
         const textNode = document.createElement('span');
         textNode.textContent = text;
+        textNode.style.color = 'rgba(255, 255, 255, 0.7)';
 
         container.appendChild(icon);
         container.appendChild(textNode);
@@ -124,15 +152,16 @@ class IconLoader
             colour = 'white',
             title = '',
             onClick = null,
-            className = ''
+            className = '',
+            filled = false
         } = options;
 
         const button = document.createElement('button');
         button.type = 'button';
         button.className = `icon-button ${className}`;
         button.style.cssText = `
-            background: none;
-            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 0.375rem;
             cursor: pointer;
             display: inline-flex;
@@ -146,19 +175,21 @@ class IconLoader
         if (title)
             button.title = title;
 
-        const icon = this.create(name, { size, colour });
+        const icon = this.create(name, { size, colour, filled });
         button.appendChild(icon);
 
         if (onClick)
             button.addEventListener('click', onClick);
 
         button.addEventListener('mouseenter', () => {
-            button.style.background = 'rgba(102, 126, 234, 0.1)';
+            button.style.background = 'rgba(102, 126, 234, 0.2)';
+            button.style.borderColor = 'rgba(102, 126, 234, 0.4)';
             button.style.transform = 'scale(1.1)';
         });
 
         button.addEventListener('mouseleave', () => {
-            button.style.background = 'none';
+            button.style.background = 'rgba(255, 255, 255, 0.05)';
+            button.style.borderColor = 'rgba(255, 255, 255, 0.1)';
             button.style.transform = 'scale(1)';
         });
 
@@ -179,7 +210,7 @@ icons.preload([
     'heart-filled',
     'eye',
     'download',
-    'tag',
+    'tags',
     'book',
     'star',
     'star-filled',

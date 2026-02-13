@@ -440,6 +440,217 @@ class ModBrowser
         return tagBar;
     }
 
+    createClickableTag(tag)
+    {
+        const tagSpan = document.createElement('button');
+        tagSpan.type = 'button';
+        tagSpan.className = 'tag-badge clickable';
+        tagSpan.style.cssText = `
+            padding: 0.25rem 0.75rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.9);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        `;
+        
+        const tagIcon = icons.create('tag', { size: 12, color: 'rgba(255, 255, 255, 0.8)' });
+        tagSpan.appendChild(tagIcon);
+        tagSpan.appendChild(document.createTextNode(tag));
+        
+        tagSpan.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.filterByTag(tag);
+        });
+        
+        tagSpan.addEventListener('mouseenter', () => {
+            tagSpan.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%)';
+            tagSpan.style.borderColor = 'rgba(102, 126, 234, 0.6)';
+            tagSpan.style.transform = 'scale(1.05)';
+            tagSpan.style.boxShadow = '0 0 12px rgba(102, 126, 234, 0.5)';
+        });
+        
+        tagSpan.addEventListener('mouseleave', () => {
+            tagSpan.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+            tagSpan.style.borderColor = 'rgba(102, 126, 234, 0.3)';
+            tagSpan.style.transform = 'scale(1)';
+            tagSpan.style.boxShadow = 'none';
+        });
+        
+        return tagSpan;
+    }
+
+    filterByTag(tag)
+    {
+        this.params.tag = tag;
+        this.applyFilters();
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    filterByAuthor(author)
+    {
+        this.params.author = author;
+        this.applyFilters();
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    createFavouriteButton(modKey)
+    {
+        const btn = document.createElement('button');
+        btn.className = 'click-me favourite-btn';
+        btn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            background: linear-gradient(135deg, rgba(255, 59, 118, 0.8) 0%, rgba(189, 42, 122, 0.8) 100%);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const heartIcon = icons.create('heart-filled', { size: 16, color: 'white' });
+        btn.appendChild(heartIcon);
+        btn.appendChild(document.createTextNode('Favourite'));
+        
+        btn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            await this.toggleFavourite(modKey);
+        });
+        
+        return btn;
+    }
+
+    createDetailsButton(modKey)
+    {
+        const btn = document.createElement('button');
+        btn.className = 'click-me';
+        btn.textContent = 'Details';
+        btn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem;';
+        
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.location.href = `/mod.html?key=${encodeURIComponent(modKey)}`;
+        });
+        
+        return btn;
+    }
+
+    createWikiButton(modKey)
+    {
+        const btn = document.createElement('a');
+        btn.href = `/wiki?mod=${encodeURIComponent(modKey)}`;
+        btn.className = 'click-me';
+        btn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const bookIcon = icons.create('book', { size: 16, color: 'white' });
+        btn.appendChild(bookIcon);
+        btn.appendChild(document.createTextNode('Wiki'));
+        
+        btn.addEventListener('click', (e) => e.stopPropagation());
+        
+        return btn;
+    }
+
+    createOfficialWikiButton(externalWiki)
+    {
+        const btn = document.createElement('a');
+        btn.href = externalWiki;
+        btn.target = '_blank';
+        btn.className = 'click-me';
+        btn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            background: linear-gradient(135deg, rgba(75, 192, 75, 0.8) 0%, rgba(56, 142, 60, 0.8) 100%);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const extLinkIcon = icons.create('external-link', { size: 16, color: 'white' });
+        btn.appendChild(extLinkIcon);
+        btn.appendChild(document.createTextNode('Official Wiki'));
+        
+        btn.addEventListener('click', (e) => e.stopPropagation());
+        
+        return btn;
+    }
+
+    createGitHubButton(owner, repo, modKey)
+    {
+        const btn = document.createElement('a');
+        btn.href = `https://github.com/${owner}/${repo}`;
+        btn.target = '_blank';
+        btn.className = 'click-me';
+        btn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const githubIcon = icons.create('github', { size: 16, color: 'white' });
+        btn.appendChild(githubIcon);
+        btn.appendChild(document.createTextNode('GitHub'));
+        
+        btn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            try 
+            {
+                await fetch(`/analytics/download/${encodeURIComponent(modKey)}`, { 
+                    method: 'POST', 
+                    keepalive: true 
+                });
+            } 
+            catch (err) 
+            {
+                console.error('Failed to track download:', err);
+            }
+        });
+        
+        return btn;
+    }
+
+    createCommunityButton(owner, repo)
+    {
+        const btn = document.createElement('a');
+        btn.href = `https://github.com/${owner}/${repo}/discussions`;
+        btn.target = '_blank';
+        btn.className = 'click-me community-btn';
+        btn.style.cssText = `
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        `;
+        
+        const messageIcon = icons.create('message-circle', { size: 16, color: 'white' });
+        btn.appendChild(messageIcon);
+        btn.appendChild(document.createTextNode('Community'));
+        
+        btn.addEventListener('click', (e) => e.stopPropagation());
+        
+        return btn;
+    }
+
     createModListItem(mod)
     {
         const li = document.createElement('li');
@@ -507,15 +718,69 @@ class ModBrowser
 
         // Title
         const title = document.createElement('h3');
-        title.textContent = mod.name;
-        title.style.cssText = 'margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--text-white);';
+        title.style.cssText = `
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+            color: var(--text-white);
+            cursor: pointer;
+            transition: color 0.2s;
+        `;
+
+        const titleLink = document.createElement('a');
+        titleLink.textContent = mod.name;
+        titleLink.href = `/mod.html?key=${encodeURIComponent(mod.key)}`;
+        titleLink.style.cssText = `
+            color: var(--text-white);
+            text-decoration: none;
+            transition: color 0.2s;
+        `;
+        titleLink.addEventListener('mouseenter', () => titleLink.style.color = 'var(--accent-blue)');
+        titleLink.addEventListener('mouseleave', () => titleLink.style.color = 'var(--text-white)');
+
+        title.appendChild(titleLink);
         content.appendChild(title);
 
         // Author
-        const author = document.createElement('div');
-        author.textContent = `by ${Array.isArray(mod.author) ? mod.author.join(', ') : mod.author}`;
-        author.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 0.75rem;';
-        content.appendChild(author);
+        const authorDiv = document.createElement('div');
+        authorDiv.style.cssText = 'color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 0.75rem;';
+        
+        const authors = Array.isArray(mod.author) ? mod.author : [mod.author];
+        authorDiv.appendChild(document.createTextNode('by '));
+        
+        authors.forEach((author, index) => {
+            const authorLink = document.createElement('a');
+            authorLink.textContent = author;
+            authorLink.href = '#';
+            authorLink.style.cssText = `
+                color: var(--text-secondary);
+                text-decoration: none;
+                transition: color 0.2s;
+                cursor: pointer;
+            `;
+            
+            authorLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.filterByAuthor(author);
+            });
+            
+            authorLink.addEventListener('mouseenter', () => {
+                authorLink.style.color = 'var(--accent-blue)';
+                authorLink.style.textDecoration = 'underline';
+            });
+            
+            authorLink.addEventListener('mouseleave', () => {
+                authorLink.style.color = 'var(--text-secondary)';
+                authorLink.style.textDecoration = 'none';
+            });
+            
+            authorDiv.appendChild(authorLink);
+            
+            if (index < authors.length - 1)
+                authorDiv.appendChild(document.createTextNode(', '));
+        });
+        
+        content.appendChild(authorDiv);
 
         // Description
         const desc = document.createElement('p');
@@ -528,34 +793,88 @@ class ModBrowser
         {
             const tagsContainer = document.createElement('div');
             tagsContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;';
+            tagsContainer.className = 'tags-container';
             
-            mod.tags.slice(0, 5).forEach(tag => {
-                const tagSpan = document.createElement('span');
-                tagSpan.textContent = tag;
-                tagSpan.style.cssText = `
-                    padding: 0.25rem 0.75rem;
-                    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
-                    border: 1px solid rgba(102, 126, 234, 0.3);
-                    border-radius: 50px;
-                    font-size: 0.75rem;
-                    color: var(--text-light);
-                `;
+            const visibleTags = mod.tags.slice(0, 5);
+            const hiddenTags = mod.tags.slice(5);
+            
+            visibleTags.forEach(tag => {
+                const tagSpan = this.createClickableTag(tag);
                 tagsContainer.appendChild(tagSpan);
             });
             
-            if (mod.tags.length > 5) 
+            if (hiddenTags.length > 0) 
             {
-                const moreSpan = document.createElement('span');
-                moreSpan.textContent = `+${mod.tags.length - 5}`;
-                moreSpan.style.cssText = `
+                const hiddenContainer = document.createElement('div');
+                hiddenContainer.className = 'hidden-tags';
+                hiddenContainer.style.cssText = `
+                    display: none;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                    width: 100%;
+                `;
+                
+                hiddenTags.forEach(tag => {
+                    const tagSpan = this.createClickableTag(tag);
+                    hiddenContainer.appendChild(tagSpan);
+                });
+                
+                const moreBtn = document.createElement('button');
+                moreBtn.type = 'button';
+                moreBtn.className = 'tag-expand-btn';
+                moreBtn.textContent = `+${hiddenTags.length}`;
+                moreBtn.style.cssText = `
                     padding: 0.25rem 0.75rem;
                     background: rgba(102, 126, 234, 0.1);
                     border: 1px solid rgba(102, 126, 234, 0.2);
                     border-radius: 50px;
                     font-size: 0.75rem;
                     color: var(--text-secondary);
+                    cursor: pointer;
+                    transition: all 0.2s;
                 `;
-                tagsContainer.appendChild(moreSpan);
+                
+                let expanded = false;
+                
+                moreBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    expanded = !expanded;
+                    
+                    if (expanded)
+                    {
+                        hiddenContainer.style.display = 'flex';
+                        moreBtn.textContent = 'Show less';
+                        moreBtn.style.background = 'rgba(102, 126, 234, 0.2)';
+                    }
+                    else
+                    {
+                        hiddenContainer.style.display = 'none';
+                        moreBtn.textContent = `+${hiddenTags.length}`;
+                        moreBtn.style.background = 'rgba(102, 126, 234, 0.1)';
+                    }
+                });
+                
+                moreBtn.addEventListener('mouseenter', () => {
+                    moreBtn.style.background = 'rgba(102, 126, 234, 0.3)';
+                    moreBtn.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+                    moreBtn.style.transform = 'scale(1.05)';
+                });
+                
+                moreBtn.addEventListener('mouseleave', () => {
+                    if (!expanded)
+                    {
+                        moreBtn.style.background = 'rgba(102, 126, 234, 0.1)';
+                        moreBtn.style.borderColor = 'rgba(102, 126, 234, 0.2)';
+                    }
+                    else
+                    {
+                        moreBtn.style.background = 'rgba(102, 126, 234, 0.2)';
+                    }
+                    moreBtn.style.transform = 'scale(1)';
+                });
+                
+                tagsContainer.appendChild(moreBtn);
+                tagsContainer.appendChild(hiddenContainer);
             }
             
             content.appendChild(tagsContainer);
@@ -569,14 +888,14 @@ class ModBrowser
         statsDiv.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex: 1;';
 
         // Favourites count
-        const favStat = icons.createWithText('heart', `${mod.favourites || 0}`, { size: 14, colour: 'var(--text-secondary)', gap: '0.25rem' });
+        const favStat = icons.createWithText('heart', `${mod.favourites || 0}`, { size: 14, colour: 'white', gap: '0.25rem' });
         favStat.title = `${mod.favourites || 0} favourites`;
         statsDiv.appendChild(favStat);
 
         // View count
         if (mod.analytics && mod.analytics.views) 
         {
-            const viewStat = icons.createWithText('eye', `${mod.analytics.views}`, { size: 14, colour: 'var(--text-secondary)', gap: '0.25rem' });
+            const viewStat = icons.createWithText('eye', `${mod.analytics.views}`, { size: 14, colour: 'white', gap: '0.25rem' });
             viewStat.title = `${mod.analytics.views} views`;
             statsDiv.appendChild(viewStat);
         }
@@ -584,7 +903,7 @@ class ModBrowser
         // Download count
         if (mod.analytics && mod.analytics.downloads) 
         {
-            const dlStat = icons.createWithText('download', `${mod.analytics.downloads}`, { size: 14, colour: 'var(--text-secondary)', gap: '0.25rem' });
+            const dlStat = icons.createWithText('download', `${mod.analytics.downloads}`, { size: 14, colour: 'white', gap: '0.25rem' });
             dlStat.title = `${mod.analytics.downloads} downloads`;
             statsDiv.appendChild(dlStat);
         }
@@ -593,131 +912,19 @@ class ModBrowser
 
         // Buttons container
         const buttonsDiv = document.createElement('div');
-        buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem;';
+        buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem; flex-wrap: wrap;';
 
         const { owner, repo } = parseModKey(mod.key);
 
-        // Favourite button (classic style)
-        const favBtn = document.createElement('button');
-        favBtn.className = 'click-me';
-        favBtn.style.cssText = `
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            background: linear-gradient(135deg, rgba(255, 59, 118, 0.8) 0%, rgba(189, 42, 122, 0.8) 100%);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.375rem;
-        `;
-
-        const heartIcon = icons.create('heart', { size: 16, colour: 'white' });
-        favBtn.appendChild(heartIcon);
-        favBtn.appendChild(document.createTextNode('Favourite'));
-
-        favBtn.addEventListener('click', async (e) => {
-            e.stopPropagation();
-            await this.toggleFavourite(mod.key);
-        });
-
-        buttonsDiv.appendChild(favBtn);
-
-        const detailBtn = document.createElement('button');
-        detailBtn.className = 'click-me';
-        detailBtn.textContent = 'Details';
-        detailBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem;';
-        detailBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`;
-        })
-        buttonsDiv.appendChild(detailBtn);
-
-        const wikiBtn = document.createElement('a');
-        wikiBtn.href = `/wiki?mod=${encodeURIComponent(mod.key)}`;
-        wikiBtn.className = 'click-me';
-        wikiBtn.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.875rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.375rem;';
-
-        const bookIcon = icons.create('book', { size: 16, colour: 'white' });
-        wikiBtn.appendChild(bookIcon);
-        wikiBtn.appendChild(document.createTextNode('Wiki'));
-
-        wikiBtn.addEventListener('click', (e) => e.stopPropagation());
-        buttonsDiv.appendChild(wikiBtn);
+        buttonsDiv.appendChild(this.createFavouriteButton(mod.key));
+        buttonsDiv.appendChild(this.createDetailsButton(mod.key));
+        buttonsDiv.appendChild(this.createWikiButton(mod.key));
 
         if (mod.externalWiki)
-        {
-            const extWikiBtn = document.createElement('a');
-            extWikiBtn.href = mod.externalWiki;
-            extWikiBtn.target = '_blank';
-            extWikiBtn.className = 'click-me';
-            extWikiBtn.style.cssText = `
-                padding: 0.5rem 1rem;
-                font-size: 0.875rem;
-                text-decoration: none;
-                background: linear-gradient(135deg, rgba(75, 192, 75, 0.8) 0%, rgba(56, 142, 60, 0.8) 100%);
-                display: inline-flex;
-                align-items: center;
-                gap: 0.375rem;
-            `;
-            
-            const extLinkIcon = icons.create('external-link', { size: 16, colour: 'white' });
-            extWikiBtn.appendChild(extLinkIcon);
-            extWikiBtn.appendChild(document.createTextNode('Official Wiki'));
-            
-            extWikiBtn.addEventListener('click', (e) => e.stopPropagation());
-            buttonsDiv.appendChild(extWikiBtn);
-        }
+            buttonsDiv.appendChild(this.createOfficialWikiButton(mod.externalWiki));
 
-        // GitHub button
-        const ghBtn = document.createElement('a');
-        ghBtn.href = `https://github.com/${owner}/${repo}`;
-        ghBtn.target = '_blank';
-        ghBtn.className = 'click-me';
-        ghBtn.style.cssText = `
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.375rem;
-        `;
-        
-        const githubIcon = icons.create('github', { size: 16, colour: 'white' });
-        ghBtn.appendChild(githubIcon);
-        ghBtn.appendChild(document.createTextNode('GitHub'));
-        
-        ghBtn.addEventListener('click', async (e) => {
-            e.stopPropagation();
-            try 
-            {
-                await fetch(`/analytics/download/${encodeURIComponent(mod.key)}`, { method: 'POST', keepalive: true });
-            } 
-            catch (err) 
-            {
-                console.error('Failed to track download:', err);
-            }
-        });
-        buttonsDiv.appendChild(ghBtn);
-
-        // Community/Discussion button
-        const communityBtn = document.createElement('a');
-        communityBtn.href = `https://github.com/${owner}/${repo}/discussions`;
-        communityBtn.target = '_blank';
-        communityBtn.className = 'click-me';
-        communityBtn.style.cssText = `
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            text-decoration: none;
-            background: linear-gradient(135deg, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.8) 100%);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.375rem;
-        `;
-        
-        const messageIcon = icons.create('message-circle', { size: 16, colour: 'white' });
-        communityBtn.appendChild(messageIcon);
-        communityBtn.appendChild(document.createTextNode('Community'));
-        
-        communityBtn.addEventListener('click', (e) => e.stopPropagation());
-        buttonsDiv.appendChild(communityBtn);
+        buttonsDiv.appendChild(this.createGitHubButton(owner, repo, mod.key));
+        buttonsDiv.appendChild(this.createCommunityButton(owner, repo));
 
         footer.appendChild(buttonsDiv);
         content.appendChild(footer);
