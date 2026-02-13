@@ -520,7 +520,7 @@ class ModBrowser
         
         btn.addEventListener('click', async (e) => {
             e.stopPropagation();
-            await this.toggleFavourite(modKey);
+            await toggleFavourite(modKey);
         });
         
         return btn;
