@@ -3468,6 +3468,16 @@
     },
     "versionHistory": [
       {
+        "tag": "v4.9.1",
+        "name": "v4.9.1",
+        "body": "- Zipload support, TMJ can now be dragged into your mods folder as a zip file instead of a normal folder\r\n- Remove `key:keyhere` stuff, nobody used it and it got in the way\r\n**Full Changelog**: https://github.com/cg-223/toomanyjokers/compare/v4.8.1...v4.9.0",
+        "publishedAt": "2026-02-16T23:13:17Z",
+        "htmlUrl": "https://github.com/cg-223/toomanyjokers/releases/tag/v4.9.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
         "tag": "v4.8.1",
         "name": "v4.8.1",
         "body": "Notable changes:\r\n- Dragged cards in TMJ now display overtop the UI\r\n- `{edition:<modprefix_key>}` added as a special command to apply a certain edition to all cards in TMJ\r\n- `{ace:<lua code>}` added as a special command to return `true` if a card should be included in the search result, given a `center` as an argument. An error being thrown or anything other than `true` being returned means that center will not be shown in TMJ\r\n- Fix banner compatibility (thanks to ejwu)\r\n- Add config option to disable automatically focusing the TMJ textbox when you type\r\n- Add config option to show ALL cards in TMJ, regardless of whether they are no_collection\r\n- Fix a small issue where G.TMJTAGS wasn't set to nil\r\n- Support trackpads better by not reloading TMJ when you haven't scrolled enough to make a difference in the cards being shown\r\n- Add config option to increase/decrease the sensitivity of your scrolling\r\n- (v4.8.1) Fix configs not saving sometimes\r\n\r\n**Full Changelog**: https://github.com/cg-223/toomanyjokers/compare/v4.7.3...v4.8.1",
@@ -3588,7 +3598,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-12T23:43:33.305Z"
+    "versionHistoryLastCheck": "2026-02-21T03:53:21.741Z"
   },
   "Medium@Goldofleaves": {
     "id": "Medium",
