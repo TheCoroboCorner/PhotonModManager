@@ -2015,7 +2015,7 @@ body
     border-radius: 2px;
   }
 
-  .tab 
+  .tab-button
   {
     display: flex;
     align-items: center;
@@ -2032,7 +2032,7 @@ body
     flex-shrink: 0;
   }
 
-  .tab svg 
+  .tab-button svg 
   {
     flex-shrink: 0;
     transition: all 0.3s;
@@ -2044,32 +2044,32 @@ body
     font-weight: 500;
   }
 
-  .tab:hover 
+  .tab-button:hover 
   {
     color: var(--text-white);
     background: rgba(102, 126, 234, 0.1);
   }
 
-  .tab:hover svg 
+  .tab-button:hover svg 
   {
     stroke: var(--accent-blue);
   }
 
-  .tab.active 
+  .tab-button.active 
   {
     color: var(--accent-blue);
     border-bottom-color: var(--accent-blue);
     font-weight: 600;
   }
 
-  .tab.active svg 
+  .tab-button.active svg 
   {
     stroke: var(--accent-blue);
   }
 
   @media (max-width: 768px) 
   {
-    .tab 
+    .tab-button
     {
       padding: 0.75rem 1rem;
     }
