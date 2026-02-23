@@ -2809,13 +2809,13 @@
     "versionHistory": [
       {
         "tag": "v1.0.1",
-        "name": "v1.0.1",
-        "body": "**Changelog**\r\n\r\n- Added a shield mechanic in combination with the health mechanic\r\n- Fleshed out the health mechanic -- adding potential for negative health or health above 100 HP\r\n- Cleaned up and added more functionality to the health mechanic, as well as adding more contexts\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/Alloy/compare/v1.0.0...v1.0.1",
+        "name": "\\bv1\\b.\\b0\\b.\\b1\\b",
+        "body": "**\\bChangelog\\b**\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b- \\bAdded\\b \\ba\\b \\bshield\\b \\bmechanic\\b \\bin\\b \\bcombination\\b \\bwith\\b \\bthe\\b \\bhealth\\b \\bmechanic\\b\\\\br\\b\\\\bn\\b- \\bFleshed\\b \\bout\\b \\bthe\\b \\bhealth\\b \\bmechanic\\b -- \\badding\\b \\bpotential\\b \\bfor\\b \\bnegative\\b \\bhealth\\b \\bor\\b \\bhealth\\b \\babove\\b \\b100\\b \\bHP\\b\\\\br\\b\\\\bn\\b- \\bCleaned\\b \\bup\\b \\band\\b \\badded\\b \\bmore\\b \\bfunctionality\\b \\bto\\b \\bthe\\b \\bhealth\\b \\bmechanic\\b, \\bas\\b \\bwell\\b \\bas\\b \\badding\\b \\bmore\\b \\bcontexts\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b**\\bFull\\b \\bChangelog\\b**: \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bTheCoroboCorner\\b/\\bAlloy\\b/\\bcompare\\b/\\bv1\\b.\\b0\\b.\\b0\\b...\\bv1\\b.\\b0\\b.\\b1\\b",
         "publishedAt": "2025-07-21T05:01:24Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/Alloy/releases/tag/v1.0.1",
         "assets": [
           {
-            "name": "Release.zip",
+            "name": "\\bRelease\\b.\\bzip\\b",
             "size": 8647,
             "downloadUrl": "https://github.com/TheCoroboCorner/Alloy/releases/download/v1.0.1/Release.zip"
           }
@@ -2825,13 +2825,13 @@
       },
       {
         "tag": "v1.0.0",
-        "name": "Version 1.0.0 release",
-        "body": "This mod currently just adds four new mechanics to the game of Balatro:\r\n\r\n1. It allows you to **lock** and **unlock** your Jokers and Consumeables at will, so that you don't accidentally sell anything.\r\n2. It allows you to play the **last hand** you played at the click of a button (if it's possible to play it, of course).\r\n3. It adds a **health-bar** mechanic. You start at 100 HP. If you lose a round, the percentage left you had to beat is subtracted from your HP. When your HP reaches zero, you lose. Simple as that!\r\n4. It also adds a **hold** mechanic. At any time, you can hold up to five cards in your offhand, swapping them with whatever cards from your hand that you choose. Be careful though -- cards in your offhand don't trigger their \"held in hand\" effects, and can't be played unless they're swapped back into your main hand. \r\n\r\nIn the future, boss blinds and more fun mechanics are intended to be added, so stay tuned for what's next!",
+        "name": "\\bVersion\\b \\b1\\b.\\b0\\b.\\b0\\b \\brelease\\b",
+        "body": "\\bThis\\b \\bmod\\b \\bcurrently\\b \\bjust\\b \\badds\\b \\bfour\\b \\bnew\\b \\bmechanics\\b \\bto\\b \\bthe\\b \\bgame\\b \\bof\\b \\bBalatro\\b:\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn1\\b. \\bIt\\b \\ballows\\b \\byou\\b \\bto\\b **\\block\\b** \\band\\b **\\bunlock\\b** \\byour\\b \\bJokers\\b \\band\\b \\bConsumeables\\b \\bat\\b \\bwill\\b, \\bso\\b \\bthat\\b \\byou\\b \\bdon\\b'\\bt\\b \\baccidentally\\b \\bsell\\b \\banything\\b.\\\\br\\b\\\\bn2\\b. \\bIt\\b \\ballows\\b \\byou\\b \\bto\\b \\bplay\\b \\bthe\\b **\\blast\\b \\bhand\\b** \\byou\\b \\bplayed\\b \\bat\\b \\bthe\\b \\bclick\\b \\bof\\b \\ba\\b \\bbutton\\b (\\bif\\b \\bit\\b'\\bs\\b \\bpossible\\b \\bto\\b \\bplay\\b \\bit\\b, \\bof\\b \\bcourse\\b).\\\\br\\b\\\\bn3\\b. \\bIt\\b \\badds\\b \\ba\\b **\\bhealth\\b-\\bbar\\b** \\bmechanic\\b. \\bYou\\b \\bstart\\b \\bat\\b \\b100\\b \\bHP\\b. \\bIf\\b \\byou\\b \\blose\\b \\ba\\b \\bround\\b, \\bthe\\b \\bpercentage\\b \\bleft\\b \\byou\\b \\bhad\\b \\bto\\b \\bbeat\\b \\bis\\b \\bsubtracted\\b \\bfrom\\b \\byour\\b \\bHP\\b. \\bWhen\\b \\byour\\b \\bHP\\b \\breaches\\b \\bzero\\b, \\byou\\b \\blose\\b. \\bSimple\\b \\bas\\b \\bthat\\b!\\\\br\\b\\\\bn4\\b. \\bIt\\b \\balso\\b \\badds\\b \\ba\\b **\\bhold\\b** \\bmechanic\\b. \\bAt\\b \\bany\\b \\btime\\b, \\byou\\b \\bcan\\b \\bhold\\b \\bup\\b \\bto\\b \\bfive\\b \\bcards\\b \\bin\\b \\byour\\b \\boffhand\\b, \\bswapping\\b \\bthem\\b \\bwith\\b \\bwhatever\\b \\bcards\\b \\bfrom\\b \\byour\\b \\bhand\\b \\bthat\\b \\byou\\b \\bchoose\\b. \\bBe\\b \\bcareful\\b \\bthough\\b -- \\bcards\\b \\bin\\b \\byour\\b \\boffhand\\b \\bdon\\b'\\bt\\b \\btrigger\\b \\btheir\\b \\\"\\bheld\\b \\bin\\b \\bhand\\b\\\" \\beffects\\b, \\band\\b \\bcan\\b'\\bt\\b \\bbe\\b \\bplayed\\b \\bunless\\b \\bthey\\b'\\bre\\b \\bswapped\\b \\bback\\b \\binto\\b \\byour\\b \\bmain\\b \\bhand\\b. \\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnIn\\b \\bthe\\b \\bfuture\\b, \\bboss\\b \\bblinds\\b \\band\\b \\bmore\\b \\bfun\\b \\bmechanics\\b \\bare\\b \\bintended\\b \\bto\\b \\bbe\\b \\badded\\b, \\bso\\b \\bstay\\b \\btuned\\b \\bfor\\b \\bwhat\\b'\\bs\\b \\bnext\\b!",
         "publishedAt": "2025-07-08T23:24:51Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/Alloy/releases/tag/v1.0.0",
         "assets": [
           {
-            "name": "Release.zip",
+            "name": "\\bRelease\\b.\\bzip\\b",
             "size": 7642,
             "downloadUrl": "https://github.com/TheCoroboCorner/Alloy/releases/download/v1.0.0/Release.zip"
           }
@@ -2840,7 +2840,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-13T01:24:31.392Z"
+    "versionHistoryLastCheck": "2026-02-23T02:22:20.746Z"
   },
   "Tangents@Clickseee": {
     "id": "tangent",
