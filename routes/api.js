@@ -1,6 +1,7 @@
 import express from 'express';
 import { readData, writeData } from '../dataService.js';
 import { backupDataJson } from '../github-backup.js';
+import { getVersionHistory } from '../versionHistoryService.js';
 
 const router = express.Router();
 
@@ -182,14 +183,12 @@ router.get('/api/version-history/:key', async (req, res) => {
     try
     {
         const { key } = req.params;
-        const data = await readData();
+        const forceRefresh = req.query.refresh === 'true';
 
-        if (!data[key])
-            return res.status(404).json({ error: 'Mod not found' });
+        const versionHistory = await getVersionHistory(key, forceRefresh);
 
-        const versionHistory = data[key].releases || data[key].versionHistory || [];
-        
-        res.json({ versionHistory });
+
+        return res.json({ success: versionHistory !== null, versionHistory, releases: versionHistory });
     }
     catch (err)
     {

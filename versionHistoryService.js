@@ -4,6 +4,21 @@ import { config } from './config.js';
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
+function sanitizeForJSON(text)
+{
+    if (!text) return '';
+    
+    return text
+        .replace(/\\/g, '\\\\')
+        .replace(/"/g, '\\"')
+        .replace(/\n/g, '\\n')
+        .replace(/\r/g, '\\r')
+        .replace(/\t/g, '\\t')
+        .replace(/\f/g, '\\f')
+        .replace(/\b/g, '\\b')
+        .slice(0, 5000);
+}
+
 export async function getVersionHistory(modKey, forceRefresh = false)
 {
     const data = await readData();
@@ -40,12 +55,12 @@ export async function getVersionHistory(modKey, forceRefresh = false)
 
         const versionHistory = releases.map(release => ({
             tag: release.tag_name,
-            name: release.name || release.tag_name,
-            body: release.body || '',
+            name: sanitizeForJSON(release.name || release.tag_name),
+            body: sanitizeForJSON(release.body || ''),
             publishedAt: release.published_at,
             htmlUrl: release.html_url,
             assets: release.assets.map(asset => ({
-                name: asset.name,
+                name: sanitizeForJSON(asset.name),
                 size: asset.size,
                 downloadUrl: asset.browser_download_url
             })),
@@ -56,8 +71,20 @@ export async function getVersionHistory(modKey, forceRefresh = false)
         mod.versionHistory = versionHistory;
         mod.versionHistoryLastCheck = new Date().toISOString();
 
+        try
+        {
+            const testJson = JSON.stringify(data);
+            JSON.parse(testJson);
+        }
+        catch (validateErr)
+        {
+            console.error('[VersionHistory] Generated invalid JSON, not saving:', validateErr);
+            return mod.versionHistory || [];
+        }
+
         await writeData(data);
-        backupDataJson().catch(console.error);
+        
+        backupDataJson().catch(err => console.error('[VersionHistory] Backup failed (non-critical):', err.message));
 
         console.log(`[VersionHistory] Cached ${versionHistory.length} releases for ${modKey}`);
 
