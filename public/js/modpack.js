@@ -475,45 +475,92 @@ class ModpackBuilder
             const versionConflicts = this.conflicts.filter(c => c.type === 'version_conflict');
 
             let conflictHtml = '<div style="background: rgba(254, 95, 85, 0.1); border-left: 3px solid #FE5F55; padding: 1rem; border-radius: 8px;">';
-            conflictHtml += `<strong>Conflicts detected (${this.conflicts.length}):</strong>`;
+            conflictHtml += `<strong>⚠️ Conflicts detected:</strong>`;
 
-            if (missingConflicts.length > 0) {
-                conflictHtml += '<div style="margin-top: 1rem;"><strong>Missing Dependencies:</strong><ul style="margin: 0.5rem 0 0 0; padding-left: 1.5rem;">';
+            if (missingConflicts.length > 0) 
+            {
+                const grouped = {};
                 missingConflicts.forEach(conflict => {
+                    const depName = conflict.dependency;
+                    if (!grouped[depName])
+                        grouped[depName] = [];
+
+                    grouped[depName].push({
+                        version: conflict.requiredVersion,
+                        requiredBy: conflict.modName
+                    });
+                });
+
+                conflictHtml += '<div style="margin-top: 1rem;"><strong>Missing Dependencies (not found on Photon):</strong><ul style="margin: 0.5rem 0 0 0; padding-left: 1.5rem;">';
+                
+                Object.entries(grouped).forEach(([depName, requirements]) => {
                     conflictHtml += `
-                        <li>
-                            <strong>${conflict.dependency}</strong> 
-                            <span style="color: var(--text-secondary);">(${conflict.requiredVersion})</span><br>
-                            <small style="color: var(--text-secondary);">Required by: ${conflict.modName}</small>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>${depName}</strong>
+                            <div style="margin-left: 1rem; margin-top: 0.25rem;">
+                    `;
+                    
+                    requirements.forEach(req => {
+                        conflictHtml += `
+                            <div style="color: var(--text-secondary); font-size: 0.875rem;">
+                                • Version <code style="background: rgba(0,0,0,0.3); padding: 0.125rem 0.375rem; border-radius: 3px;">${req.version}</code> required by <strong>${req.requiredBy}</strong>
+                            </div>
+                        `;
+                    });
+                    
+                    conflictHtml += `
+                            </div>
                         </li>
                     `;
                 });
-                conflictHtml += '</ul></div>';
+                
+                conflictHtml += '</ul>';
+                conflictHtml += '<small style="color: var(--text-secondary); display: block; margin-top: 0.5rem;">💡 These mods are not available in Photon\'s database. You may need to add them manually.</small>';
+                conflictHtml += '</div>';
             }
 
-            if (versionConflicts.length > 0) {
-                conflictHtml += '<div style="margin-top: 1rem;"><strong>Version Conflicts:</strong><ul style="margin: 0.5rem 0 0 0; padding-left: 1.5rem;">';
+            if (versionConflicts.length > 0) 
+            {
+                const grouped = {};
                 versionConflicts.forEach(conflict => {
+                    const depName = conflict.dependencyName || conflict.dependency;
+                    if (!grouped[depName])
+                        grouped[depName] = { existing: conflict.existing, requirements: [] };
+
+                    grouped[depName].requirements.push({
+                        version: conflict.required,
+                        requiredBy: conflict.modName
+                    });
+                });
+
+                conflictHtml += '<div style="margin-top: 1rem;"><strong>Version Conflicts:</strong><ul style="margin: 0.5rem 0 0 0; padding-left: 1.5rem;">';
+                
+                Object.entries(grouped).forEach(([depName, data]) => {
                     conflictHtml += `
-                        <li>
-                            <strong>${conflict.dependencyName || conflict.dependency}</strong><br>
-                            <span style="color: var(--text-secondary);">
-                                Has version: <code style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.4rem; border-radius: 4px;">${conflict.existing}</code><br>
-                                Needs version: <code style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.4rem; border-radius: 4px;">${conflict.required}</code><br>
-                                Required by: ${conflict.modName}
-                            </span>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>${depName}</strong>
+                            <div style="margin-left: 1rem; margin-top: 0.25rem;">
+                                <div style="color: var(--text-secondary); font-size: 0.875rem;">
+                                    Current: <code style="background: rgba(0,0,0,0.3); padding: 0.125rem 0.375rem; border-radius: 3px;">${data.existing}</code>
+                                </div>
+                    `;
+                    
+                    data.requirements.forEach(req => {
+                        conflictHtml += `
+                            <div style="color: var(--text-secondary); font-size: 0.875rem;">
+                                • Needs <code style="background: rgba(0,0,0,0.3); padding: 0.125rem 0.375rem; border-radius: 3px;">${req.version}</code> for <strong>${req.requiredBy}</strong>
+                            </div>
+                        `;
+                    });
+                    
+                    conflictHtml += `
+                            </div>
                         </li>
                     `;
                 });
+                
                 conflictHtml += '</ul></div>';
             }
-
-            conflictHtml += '<details style="margin-top: 1rem;"><summary style="cursor: pointer; color: var(--text-white);">💡 How to resolve</summary>';
-            conflictHtml += '<ul style="margin: 0.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">';
-            conflictHtml += '<li>For missing dependencies: Find and add the required mod to Photon</li>';
-            conflictHtml += '<li>For version conflicts: Try removing mods with conflicting requirements, or manually select a compatible version</li>';
-            conflictHtml += '<li>You can still download the modpack - users will see which mods are incompatible</li>';
-            conflictHtml += '</ul></details>';
 
             conflictHtml += '</div>';
             conflictsContainer.innerHTML = conflictHtml;
@@ -543,7 +590,7 @@ class ModpackBuilder
         // Get all mods (selected + resolved deps)
         const allModKeys = new Set([...Array.from(this.selectedMods), ...this.resolvedDeps.map(d => d.key)]);
 
-        const modsArray = Array.from(allModKeys).map(key => ({ key, version: this.allMods[key]?.version || 'latest' }));
+        const modsArray = Array.from(allModKeys).map(key => ({ key, version: this.getSelectedVersion(key) }));
 
         const metadata = {
             name: document.getElementById('pack-name')?.value || 'Untitled Modpack',
@@ -746,8 +793,62 @@ class ModpackBuilder
             uploadBtn.addEventListener('click', () => this.uploadModpack());
 
         const fileInput = document.getElementById('modpack-file');
-        if (fileInput)
-            fileInput.addEventListener('change', (e) => this.importModpack(e.target.files[0]));
+        if (fileInput) 
+        {
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) 
+                {
+                    const filenameDisplay = document.getElementById('file-upload-filename');
+                    if (filenameDisplay) 
+                    {
+                        filenameDisplay.textContent = file.name;
+                        filenameDisplay.style.display = 'flex';
+                    }
+                }
+                this.importModpack(e.target.files[0]);
+            });
+
+            const label = document.querySelector('.file-upload-label');
+            if (label) 
+            {
+                ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                    label.addEventListener(eventName, (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                });
+
+                ['dragenter', 'dragover'].forEach(eventName => {
+                    label.addEventListener(eventName, () => {
+                        label.classList.add('dragging');
+                    });
+                });
+
+                ['dragleave', 'drop'].forEach(eventName => {
+                    label.addEventListener(eventName, () => {
+                        label.classList.remove('dragging');
+                    });
+                });
+
+                label.addEventListener('drop', (e) => {
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) 
+                    {
+                        fileInput.files = files;
+                        
+                        const filenameDisplay = document.getElementById('file-upload-filename');
+                        if (filenameDisplay) 
+                        {
+                            filenameDisplay.textContent = files[0].name;
+                            filenameDisplay.style.display = 'flex';
+                        }
+                        
+                        this.importModpack(files[0]);
+                    }
+                });
+            }
+        }
 
         ['pack-name', 'pack-author', 'pack-description'].forEach(id => {
             const el = document.getElementById(id);

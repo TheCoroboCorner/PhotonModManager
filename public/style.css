@@ -1988,9 +1988,96 @@ body
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .tabs
+  .tabs 
   {
-    padding: 0 var(--space-md);
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabs::-webkit-scrollbar 
+  {
+    height: 4px;
+  }
+
+  .tabs::-webkit-scrollbar-track 
+  {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .tabs::-webkit-scrollbar-thumb 
+  {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.6), rgba(118, 75, 162, 0.6));
+    border-radius: 2px;
+  }
+
+  .tab 
+  {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .tab svg 
+  {
+    flex-shrink: 0;
+    transition: all 0.3s;
+  }
+
+  .tab-label 
+  {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .tab:hover 
+  {
+    color: var(--text-white);
+    background: rgba(102, 126, 234, 0.1);
+  }
+
+  .tab:hover svg 
+  {
+    stroke: var(--accent-blue);
+  }
+
+  .tab.active 
+  {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+    font-weight: 600;
+  }
+
+  .tab.active svg 
+  {
+    stroke: var(--accent-blue);
+  }
+
+  @media (max-width: 768px) 
+  {
+    .tab 
+    {
+      padding: 0.75rem 1rem;
+    }
+    
+    .tab-label 
+    {
+      font-size: 0.8125rem;
+    }
   }
 
   .tab-content
@@ -2060,4 +2147,162 @@ body
   {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.file-upload-container 
+{
+  margin: 1rem 0;
+}
+
+.file-upload-label 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(30, 18, 82, 0.4) 0%, rgba(20, 12, 60, 0.4) 100%);
+  border: 2px dashed rgba(102, 126, 234, 0.4);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.file-upload-label::before 
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.file-upload-label:hover 
+{
+  border-color: rgba(102, 126, 234, 0.8);
+  background: linear-gradient(135deg, rgba(30, 18, 82, 0.6) 0%, rgba(20, 12, 60, 0.6) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.file-upload-label:hover::before 
+{
+  opacity: 1;
+}
+
+.file-upload-label:hover .file-upload-icon 
+{
+  transform: translateY(-4px) scale(1.1);
+}
+
+.file-upload-label:hover .file-upload-icon svg 
+{
+  stroke: var(--accent-blue);
+  filter: drop-shadow(0 0 12px rgba(102, 126, 234, 0.6));
+}
+
+.file-upload-icon 
+{
+  margin-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.file-upload-icon svg 
+{
+  color: rgba(102, 126, 234, 0.8);
+  transition: all 0.3s ease;
+}
+
+.file-upload-text 
+{
+  font-size: 1rem;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.file-upload-text strong 
+{
+  color: var(--accent-blue);
+}
+
+.file-upload-hint 
+{
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.file-upload-filename 
+{
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 6px;
+  color: var(--text-white);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.file-upload-filename::before 
+{
+  content: '📄';
+  font-size: 1.25rem;
+}
+
+.file-upload-label.dragging 
+{
+  border-color: var(--accent-blue);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  transform: scale(1.02);
+}
+
+.file-upload-label.dragging .file-upload-icon 
+{
+  transform: scale(1.2);
+}
+
+select 
+{
+  background: linear-gradient(135deg, rgba(30, 18, 82, 0.6) 0%, rgba(20, 12, 60, 0.6) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  color: var(--text-white);
+  padding: 0.625rem 2.5rem 0.625rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23667EEA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+}
+
+select:hover 
+{
+  border-color: rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, rgba(30, 18, 82, 0.8) 0%, rgba(20, 12, 60, 0.8) 100%);
+}
+
+select:focus 
+{
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+select option 
+{
+  background: rgb(20, 12, 60);
+  color: var(--text-white);
+  padding: 0.5rem;
 }

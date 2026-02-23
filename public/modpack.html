@@ -146,10 +146,25 @@
                         <div class="step-section" style="margin-top: 2rem;">
                             <h2>Or Import Existing Modpack</h2>
 
-                            <label style="display: block; margin-bottom: 1rem;">
-                                <strong>Upload .modpack file:</strong><br>
-                                <input type="file" id="modpack-file" accept=".modpack,.txt" style="margin-top: 0.5rem;">
-                            </label>
+                            <div class="file-upload-container" style="margin-top: 1rem;">
+                                <input type="file" id="modpack-file" accept=".modpack,.txt" style="display: none;">
+                                <label for="modpack-file" class="file-upload-label">
+                                    <div class="file-upload-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="17 8 12 3 7 8"></polyline>
+                                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="file-upload-text">
+                                        <strong>Click to upload</strong> or drag and drop
+                                    </div>
+                                    <div class="file-upload-hint">
+                                        .modpack or .txt files
+                                    </div>
+                                    <div id="file-upload-filename" class="file-upload-filename" style="display: none;"></div>
+                                </label>
+                            </div>
 
                             <div id="import-result" style="display: none; margin-top: 1rem;"></div>
                         </div>
