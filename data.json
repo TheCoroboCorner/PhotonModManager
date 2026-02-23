@@ -1000,7 +1000,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-23T02:12:00.018Z"
+    "versionHistoryLastCheck": "2026-02-13T06:58:39.947Z"
   },
   "Ortalab@Eremel": {
     "id": "ortalab",
@@ -1698,11 +1698,11 @@
     "tags": [],
     "versionHistory": [
       {
-        "tag": "v1.9.5",
-        "name": "v1.9.5",
-        "body": "## What's Changed\r\n1.9.5: Fixes Amulet crash\r\n1.9.3: Zip loading supported (bumps dependency to lovely 0.9)\r\n\r\nJokerDisplay has dropped the SMODS dependency and can now be used just by installing Lovely.\r\n\r\nFor most people this will change nothing but if you want to play vanilla without any SMODS modifications or you can't use SMODS on your system then now you can use JokerDisplay!\r\n\r\nLower versions of SMODS are still a conflict because I can't be bothered to fix issues for all versions :)\r\n\r\nPlease open an issue if you find any problems because of this change!\r\n\r\n### Installation\r\n* Install/update [Lovely](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.9.1...v1.9.0",
+        "tag": "v1.9.6",
+        "name": "v1.9.6",
+        "body": "## What's Changed\r\n1.9.6: Fixes localization issues\r\n1.9.5: Fixes Amulet crash\r\n1.9.3: Zip loading supported (bumps dependency to lovely 0.9)\r\n\r\nJokerDisplay has dropped the SMODS dependency and can now be used just by installing Lovely.\r\n\r\nFor most people this will change nothing but if you want to play vanilla without any SMODS modifications or you can't use SMODS on your system then now you can use JokerDisplay!\r\n\r\nLower versions of SMODS are still a conflict because I can't be bothered to fix issues for all versions :)\r\n\r\nPlease open an issue if you find any problems because of this change!\r\n\r\n### Installation\r\n* Install/update [Lovely](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.9.1...v1.9.0",
         "publishedAt": "2026-01-17T21:07:25Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.9.5",
+        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.9.6",
         "assets": [],
         "prerelease": false,
         "draft": false
@@ -2070,7 +2070,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-13T07:03:01.337Z"
+    "versionHistoryLastCheck": "2026-02-23T02:12:03.031Z"
   },
   "JoyousSpring@nh6574": {
     "id": "JoyousSpring",
