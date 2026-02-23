@@ -1168,8 +1168,8 @@
     ],
     "versionHistoryLastCheck": "2026-02-23T02:11:43.768Z",
     "analytics": {
-      "views": 69,
-      "lastViewed": "2026-02-21T03:53:14.747Z",
+      "views": 70,
+      "lastViewed": "2026-02-23T02:11:43.864Z",
       "downloads": 1,
       "lastDownloaded": "2026-02-08T08:07:35.039Z"
     }
@@ -2776,7 +2776,7 @@
     ],
     "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-02-13T06:58:37.247Z"
+    "versionHistoryLastCheck": "2026-02-23T02:11:59.325Z"
   },
   "Alloy@TheCoroboCorner": {
     "id": "Alloy",
@@ -4198,6 +4198,38 @@
         "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.2",
         "assets": [],
         "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1",
+        "name": "v1.0.1",
+        "body": "Update mod id capitalisation to be standardised with what Cryptid provides",
+        "publishedAt": "2025-07-06T12:47:50Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0",
+        "body": "Initial Release Version",
+        "publishedAt": "2025-07-06T12:12:58Z",
+        "htmlUrl": "https://github.com/SpectralPack/Cryptlib/releases/tag/v1.0.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-02-13T07:36:18.022Z",
+    "analytics": {
+      "views": 7,
+      "lastViewed": "2026-02-13T07:36:18.114Z",
+      "downloads": 2,
+      "lastDownloaded": "2026-02-09T19:23:50.620Z"
+    }
+  }
+}  "prerelease": false,
         "draft": false
       },
       {
