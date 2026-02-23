@@ -526,7 +526,7 @@ class ModBrowser
             transition: all 0.2s;
         `;
         
-        const tagIcon = icons.create('tag', { size: 12, color: 'rgba(255, 255, 255, 0.8)' });
+        const tagIcon = icons.create('tags', { size: 12, color: 'rgba(255, 255, 255, 0.8)' });
         tagSpan.appendChild(tagIcon);
         tagSpan.appendChild(document.createTextNode(tag));
         

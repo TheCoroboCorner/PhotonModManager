@@ -1,45 +1,118 @@
 import fs from 'fs/promises';
 import { config } from './config.js';
 
-export async function readData()
+class DataQueue
 {
-    try
+    constructor()
     {
-        const txt = await fs.readFile(config.paths.data, 'utf8');
+        this.queue = [];
+        this.processing = false;
+    }
+
+    async add(operation)
+    {
+        return new Promise((resolve, reject) => {
+            this.queue.push({ operation, resolve, reject });
+            this.process();
+        });
+    }
+
+    async process()
+    {
+        if (this.processing || this.queue.length === 0)
+            return;
+
+        this.processing = true;
+        const { operation, resolve, reject } = this.queue.shift();
 
         try
         {
-            return JSON.parse(txt);
+            const result = await operation();
+            resolve(result);
         }
         catch (err)
         {
-            console.error('JSON parse error:', err.message);
+            reject(err);
+        }
+        finally
+        {
+            this.processing = false;
+            this.process();
+        }
+    }
+}
 
-            if (typeof err.position === 'number')
+const dataQueue = new DataQueue();
+
+let cachedData = null;
+let lastReadTime = 0;
+const CACHE_TTL = 5000;
+
+export async function readData()
+{
+    return dataQueue.add(async () => {
+        const now = Date.now();
+        if (cachedData && (now - lastReadTime) < CACHE_TTL)
+            return cachedData;
+
+        try
+        {
+            const raw = await fs.readFile(config.paths.data, 'utf8');
+            const data = JSON.parse(raw);
+
+            cachedData = data;
+            lastReadTime = now;
+
+            return data;
+        }
+        catch (err)
+        {
+            if (err.code === 'ENOENT')
             {
-                const pos = err.position;
-                console.error('...context:', txt.slice(Math.max(0, pos-20), pos+20).replace(/\n/g, '\\n'));
+                console.warn('[DataService] data.json not found, creating empty file');
+                
+                const emptyData = {};
+                await fs.writeFile(config.paths.data, JSON.stringify(emptyData, null, 2));
+
+                cachedData = emptyData;
+                lastReadTime = now;
+
+                return emptyData;
             }
 
+            console.error('[DataService] Failed to read data.json:', err.message);
             throw err;
         }
-    }
-    catch (err)
-    {
-        if (err.code === 'ENOENT')
-        {
-            console.warn('[DataService] data.json not found, creating empty file');
-            await writeData({});
-            return {};
-        }
-        
-        throw err;
-    }
+    });
 }
 
 export async function writeData(data)
 {
-    await fs.writeFile(config.paths.data, JSON.stringify(data, null, 2));
+    return dataQueue.add(async () => {
+        try
+        {
+            const jsonString = JSON.stringify(data, null, 2);
+            JSON.parse(jsonString);
+
+            await fs.writeFile(config.paths.data, jsonString, 'utf8');
+
+            cachedData = data;
+            lastReadTime = Date.now();
+
+            console.log('[DataService] Successfully wrote data.json');
+        }
+        catch (err)
+        {
+            console.error('[DataService] Failed to write data.json:', err.message);
+            throw err;
+        }
+    });
+}
+
+export function clearCache() 
+{
+    cachedData = null;
+    lastReadTime = 0;
 }
 
 export async function readVotes()
