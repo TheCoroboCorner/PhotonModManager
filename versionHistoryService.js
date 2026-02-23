@@ -13,7 +13,7 @@ function scheduleBackup()
         clearTimeout(backupTimeout);
 
     backupTimeout = setTimeout(() => {
-        backupDataJson.catch(err => console.error('[VersionHistory] Backup failed (non-critical):', err.message));
+        backupDataJson().catch(err => console.error('[VersionHistory] Backup failed (non-critical):', err.message));
         backupTimeout = null;
     }, 5000);
 }
