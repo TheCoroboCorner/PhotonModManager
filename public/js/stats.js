@@ -1,5 +1,6 @@
 import { fetchJson } from './utils.js';
 import { toast } from './toast.js';
+import icons from './icons.js';
 
 class StatsPage
 {
@@ -51,14 +52,33 @@ class StatsPage
             { label: 'Total Favourites', value: totalFavourites.toLocaleString(), icon: '❤️' }
         ];
 
+        const iconMap = {
+            '📦': 'package',
+            '🎁': 'gift',
+            '👁️': 'eye',
+            '📥': 'download',
+            '❤️': 'heart'
+        };
+
         stats.forEach(stat => {
             const card = document.createElement('div');
             card.className = 'stat-card';
-            card.innerHTML = `
-                <div class="stat-card-icon">${stat.icon}</div>
-                <div class="stat-card-value">${stat.value}</div>
-                <div class="stat-card-label">${stat.label}</div>
-            `;
+            
+            const iconName = iconMap[stat.icon] || 'package';
+            const iconEl = icons.create(iconName, { size: 32, color: 'rgba(102, 126, 234, 0.8)', filled: true });
+            
+            const valueDiv = document.createElement('div');
+            valueDiv.className = 'stat-card-value';
+            valueDiv.textContent = stat.value;
+            
+            const labelDiv = document.createElement('div');
+            labelDiv.className = 'stat-card-label';
+            labelDiv.textContent = stat.label;
+            
+            card.appendChild(iconEl);
+            card.appendChild(valueDiv);
+            card.appendChild(labelDiv);
+            
             container.appendChild(card);
         });
     }

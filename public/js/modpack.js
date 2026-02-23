@@ -3,6 +3,7 @@ import { toast } from './toast.js';
 import { confetti } from './confetti.js';
 import { ModpackParser } from './modpackParser.js';
 import { DependencyResolver } from './dependencyResolver.js';
+import icons from './icons.js';
 
 class ModpackBuilder
 {
@@ -85,7 +86,7 @@ class ModpackBuilder
                 return [];
             
             const data = await response.json();
-            return data.releases || [];
+            return data.releases || data.versionHistory || [];
         }
         catch (err)
         {

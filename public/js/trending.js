@@ -1,5 +1,6 @@
 import { fetchJson } from './utils.js';
 import { toast } from './toast.js';
+import icons from './icons.js';
 
 class TrendingPage
 {
@@ -75,11 +76,17 @@ class TrendingPage
             card.appendChild(info);
 
             const score = document.createElement('div');
-            score.style.cssText = 'text-align: right;';
-            score.innerHTML = `
-                <div style="font-size: 1.5rem;">🔥</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary);">Score: ${item.score.toFixed(1)}</div>
-            `;
+            score.style.cssText = 'text-align: right; display: flex; flex-direction: column; align-items: center; gap: 0.25rem;';
+
+            const fireIcon = icons.create('trending-up', { size: 24, color: '#ff6b35', filled: true });
+            fireIcon.style.filter = 'drop-shadow(0 0 8px rgba(255, 107, 53, 0.6))';
+
+            const scoreText = document.createElement('div');
+            scoreText.style.cssText = 'font-size: 0.75rem; color: var(--text-secondary);';
+            scoreText.textContent = `Score: ${item.score.toFixed(1)}`;
+
+            score.appendChild(fireIcon);
+            score.appendChild(scoreText);
             card.appendChild(score);
 
             card.addEventListener('mouseenter', () => {

@@ -2,6 +2,7 @@ import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from '
 import { favouritesManager } from './favourites.js';
 import { collectVersionRanges } from './version.js';
 import { ModpackParser } from './modpackParser.js';
+import icons from './icons.js';
 
 class ModDetailPage
 {
@@ -205,8 +206,8 @@ class ModDetailPage
                     <a href="${release.htmlUrl}" target="_blank" class="click-me mod-download" style="padding: 0.5rem 1rem; height: auto; font-size: 0.875rem; text-decoration: none;">
                         View on GitHub
                     </a>
-                    ${release.assets && release.assets.length > 0 ? `<span style="font-size: 0.875rem; color: var(--text-secondary);">📦 ${release.assets.length} asset${release.assets.length > 1 ? 's' : ''}</span>` : ''}
-                    ${release.prerelease ? '<span style="color: var(--accent-purple); font-size: 0.875rem;">⚠️ Pre-release</span>' : ''}
+                    ${release.assets && release.assets.length > 0 ? `<span style="font-size: 0.875rem; color: var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg> ${release.assets.length} asset${release.assets.length > 1 ? 's' : ''}</span>` : ''}
+                    ${release.prerelease ? '<span style="color: var(--accent-purple); font-size: 0.875rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg> Pre-release</span>' : ''}
                 </div>
             `;
 
@@ -274,9 +275,8 @@ class ModDetailPage
         
         favBtn.style.cssText = 'width: auto; height: 64px; padding: 1rem 2rem; font-size: 1rem;';
 
-        const icon = document.createElement('span');
-        icon.textContent = '❤️';
-        favBtn.insertBefore(icon, favBtn.firstChild);
+        const heartIcon = icons.create('heart-filled', { size: 20, color: 'white' });
+        favBtn.insertBefore(heartIcon, favBtn.firstChild);
         
         container.appendChild(favBtn);
     }
@@ -583,7 +583,13 @@ class ModDetailPage
         if (image.isThumbnail)
         {
             const badge = document.createElement('div');
-            badge.textContent = '⭐ Thumbnail';
+            badge.innerHTML = '';
+            const starIcon = icons.create('star-filled', { size: 14, color: 'white' });
+            badge.appendChild(starIcon);
+            badge.appendChild(document.createTextNode('Thumbnail'));
+            badge.style.display = 'inline-flex';
+            badge.style.alignItems = 'center';
+            badge.style.gap = '0.25rem';
             badge.style.cssText = `
                 position: absolute;
                 top: 0.5rem;

@@ -178,4 +178,24 @@ router.get('/api/stats', async (req, res) => {
     }
 });
 
+router.get('/api/version-history/:key', async (req, res) => {
+    try
+    {
+        const { key } = req.params;
+        const data = await readData();
+
+        if (!data[key])
+            return res.status(404).json({ error: 'Mod not found' });
+
+        const versionHistory = data[key].releases || data[key].versionHistory || [];
+        
+        res.json({ versionHistory });
+    }
+    catch (err)
+    {
+        console.error('Version history error:', err);
+        res.json({ success: false, error: 'Internal server error' })
+    }
+});
+
 export default router;
