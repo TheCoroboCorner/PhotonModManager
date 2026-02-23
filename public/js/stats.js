@@ -54,7 +54,6 @@ class StatsPage
 
         const iconMap = {
             '📦': 'package',
-            '🎁': 'gift',
             '👁️': 'eye',
             '📥': 'download',
             '❤️': 'heart'

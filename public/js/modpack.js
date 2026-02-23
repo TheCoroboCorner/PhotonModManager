@@ -39,41 +39,267 @@ class ModpackBuilder
 
     createVersionSelector(modKey, mod)
     {
-        const select = document.createElement('select');
-        select.className = 'version-select';
-        select.dataset.modKey = modKey;
-        select.style.cssText = `
-            background: rgba(102, 126, 234, 0.2);
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            color: var(--text-white);
-            padding: 0.375rem 0.75rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.875rem;
+        const container = document.createElement('div');
+        container.className = 'version-selector-container';
+        container.style.cssText = `
+            position: relative;
             min-width: 120px;
+            margin-left: auto;
         `;
         
-        const latestOption = document.createElement('option');
-        latestOption.value = 'latest';
+        const selected = document.createElement('button');
+        selected.type = 'button';
+        selected.className = 'version-selector-button';
+        selected.dataset.modKey = modKey;
+        selected.style.cssText = `
+            width: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            color: var(--text-white);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        `;
+        
+        const selectedText = document.createElement('span');
+        selectedText.textContent = 'Latest';
+        selectedText.className = 'version-selector-text';
+        
+        const arrow = document.createElement('span');
+        arrow.textContent = '▼';
+        arrow.className = 'version-selector-arrow';
+        arrow.style.cssText = `
+            font-size: 0.625rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        `;
+        
+        selected.appendChild(selectedText);
+        selected.appendChild(arrow);
+        
+        const dropdown = document.createElement('div');
+        dropdown.className = 'version-dropdown';
+        dropdown.style.cssText = `
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(30, 18, 82, 0.98) 0%, rgba(20, 12, 60, 0.98) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.4);
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        `;
+        
+        const latestOption = document.createElement('div');
+        latestOption.className = 'version-option selected';
+        latestOption.dataset.value = 'latest';
         latestOption.textContent = 'Latest';
-        latestOption.selected = true;
-        select.appendChild(latestOption);
+        latestOption.style.cssText = `
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-white);
+            border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+            background: rgba(102, 126, 234, 0.2);
+        `;
+        dropdown.appendChild(latestOption);
         
         this.fetchModVersions(modKey).then(versions => {
-            if (versions && versions.length > 0)
+            if (versions && versions.length > 0) 
             {
                 versions.forEach(release => {
-                    const option = document.createElement('option');
-                    option.value = release.tag_name;
-                    option.textContent = `${release.tag_name}${release.prerelease ? ' (pre)' : ''}`;
-                    select.appendChild(option);
+                    const option = document.createElement('div');
+                    option.className = 'version-option';
+                    option.dataset.value = release.tag || release.tag_name || 'unknown';
+                    option.style.cssText = `
+                        padding: 0.75rem 1rem;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                        color: var(--text-light);
+                        border-bottom: 1px solid rgba(102, 126, 234, 0.05);
+                    `;
+                    
+                    const versionText = document.createElement('span');
+                    versionText.textContent = release.tag || release.tag_name || 'Unknown';
+                    
+                    if (release.prerelease) 
+                    {
+                        versionText.textContent += ' ';
+                        const badge = document.createElement('span');
+                        badge.textContent = 'pre';
+                        badge.style.cssText = `
+                            font-size: 0.65rem;
+                            background: rgba(255, 152, 0, 0.3);
+                            padding: 0.125rem 0.375rem;
+                            border-radius: 3px;
+                            color: rgba(255, 152, 0, 1);
+                            margin-left: 0.25rem;
+                        `;
+                        option.appendChild(versionText);
+                        option.appendChild(badge);
+                    } 
+                    else option.textContent = versionText.textContent;
+                    
+                    option.addEventListener('mouseenter', () => {
+                        option.style.background = 'rgba(102, 126, 234, 0.3)';
+                        option.style.color = 'var(--text-white)';
+                        option.style.transform = 'translateX(4px)';
+                    });
+                    
+                    option.addEventListener('mouseleave', () => {
+                        if (!option.classList.contains('selected')) {
+                            option.style.background = 'transparent';
+                            option.style.color = 'var(--text-light)';
+                            option.style.transform = 'translateX(0)';
+                        }
+                    });
+                    
+                    option.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        
+                        dropdown.querySelectorAll('.version-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                            opt.style.background = 'transparent';
+                        });
+                        option.classList.add('selected');
+                        option.style.background = 'rgba(102, 126, 234, 0.2)';
+                        
+                        selectedText.textContent = option.dataset.value;
+                        
+                        closeDropdown();
+                    });
+                    
+                    dropdown.appendChild(option);
                 });
             }
         });
         
-        select.addEventListener('click', (e) => e.stopPropagation());
+        latestOption.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            dropdown.querySelectorAll('.version-option').forEach(opt => {
+                opt.classList.remove('selected');
+                opt.style.background = 'transparent';
+            });
+            latestOption.classList.add('selected');
+            latestOption.style.background = 'rgba(102, 126, 234, 0.2)';
+            
+            selectedText.textContent = 'Latest';
+            closeDropdown();
+        });
         
-        return select;
+        latestOption.addEventListener('mouseenter', () => {
+            if (!latestOption.classList.contains('selected'))
+                latestOption.style.background = 'rgba(102, 126, 234, 0.3)';
+        });
+        
+        latestOption.addEventListener('mouseleave', () => {
+            if (!latestOption.classList.contains('selected'))
+                latestOption.style.background = 'transparent';
+        });
+        
+        let isOpen = false;
+        
+        function openDropdown() 
+        {
+            isOpen = true;
+            dropdown.style.opacity = '1';
+            dropdown.style.transform = 'translateY(0) scale(1)';
+            dropdown.style.pointerEvents = 'auto';
+            arrow.style.transform = 'rotate(180deg)';
+            selected.style.borderColor = 'rgba(102, 126, 234, 0.8)';
+            selected.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%)';
+        }
+        
+        function closeDropdown() 
+        {
+            isOpen = false;
+            dropdown.style.opacity = '0';
+            dropdown.style.transform = 'translateY(-10px) scale(0.95)';
+            dropdown.style.pointerEvents = 'none';
+            arrow.style.transform = 'rotate(0deg)';
+            selected.style.borderColor = 'rgba(102, 126, 234, 0.3)';
+            selected.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+        }
+        
+        selected.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isOpen)
+                closeDropdown();
+            else
+                openDropdown();
+        });
+        
+        selected.addEventListener('mouseenter', () => {
+            if (!isOpen) 
+            {
+                selected.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%)';
+                selected.style.borderColor = 'rgba(102, 126, 234, 0.5)';
+                selected.style.transform = 'scale(1.02)';
+            }
+        });
+        
+        selected.addEventListener('mouseleave', () => {
+            if (!isOpen) 
+            {
+                selected.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+                selected.style.borderColor = 'rgba(102, 126, 234, 0.3)';
+                selected.style.transform = 'scale(1)';
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!container.contains(e.target) && isOpen)
+                closeDropdown();
+        });
+        
+        dropdown.style.setProperty('scrollbar-width', 'thin');
+        const style = document.createElement('style');
+        style.textContent = `
+            .version-dropdown::-webkit-scrollbar {
+                width: 8px;
+            }
+            .version-dropdown::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+            }
+            .version-dropdown::-webkit-scrollbar-thumb {
+                background: linear-gradient(135deg, rgba(102, 126, 234, 0.6), rgba(118, 75, 162, 0.6));
+                border-radius: 4px;
+            }
+            .version-dropdown::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            }
+        `;
+        document.head.appendChild(style);
+        
+        container.appendChild(selected);
+        container.appendChild(dropdown);
+        
+        return container;
+    }
+
+    getSelectedVersion(modKey)
+    {
+        const button = document.querySelector(`.version-selector-button[data-mod-key="${modKey}"]`);
+        if (!button) 
+            return 'latest';
+        
+        const selectedText = button.querySelector('.version-selector-text');
+        return selectedText ? selectedText.textContent : 'latest';
     }
 
     async fetchModVersions(modKey)
@@ -93,12 +319,6 @@ class ModpackBuilder
             console.error('[Modpack] Failed to fetch versions:', err);
             return [];
         }
-    }
-
-    getSelectedVersion(modKey)
-    {
-        const select = document.querySelector(`.version-select[data-mod-key="${modKey}"]`);
-        return select ? select.value : 'latest';
     }
 
     renderModList(filter = '')
