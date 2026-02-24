@@ -1058,13 +1058,13 @@
     "versionHistory": [
       {
         "tag": "3.0.0",
-        "name": "3.0.0",
-        "body": "Added many new things\r\n\r\nHopefully nothing broke during the merging process",
+        "name": "\\b3\\b.\\b0\\b.\\b0\\b",
+        "body": "\\bAdded\\b \\bmany\\b \\bnew\\b \\bthings\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnHopefully\\b \\bnothing\\b \\bbroke\\b \\bduring\\b \\bthe\\b \\bmerging\\b \\bprocess\\b",
         "publishedAt": "2025-08-18T18:26:04Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/3.0.0",
         "assets": [
           {
-            "name": "SealsOnEverything.zip",
+            "name": "\\bSealsOnEverything\\b.\\bzip\\b",
             "size": 6747465,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/3.0.0/SealsOnEverything.zip"
           }
@@ -1074,13 +1074,13 @@
       },
       {
         "tag": "2.1.0",
-        "name": "2.1.0",
-        "body": "1. Reworked the seal\r\n2. Added sprites for joker enhancements\r\n3. Yellow seal\r\n4. Other things I probably forgot",
+        "name": "\\b2\\b.\\b1\\b.\\b0\\b",
+        "body": "\\b1\\b. \\bReworked\\b \\bthe\\b \\bseal\\b\\\\br\\b\\\\bn2\\b. \\bAdded\\b \\bsprites\\b \\bfor\\b \\bjoker\\b \\benhancements\\b\\\\br\\b\\\\bn3\\b. \\bYellow\\b \\bseal\\b\\\\br\\b\\\\bn4\\b. \\bOther\\b \\bthings\\b \\bI\\b \\bprobably\\b \\bforgot\\b",
         "publishedAt": "2025-05-16T10:20:34Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/2.1.0",
         "assets": [
           {
-            "name": "SealsOnEverything.zip",
+            "name": "\\bSealsOnEverything\\b.\\bzip\\b",
             "size": 6792642,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/2.1.0/SealsOnEverything.zip"
           }
@@ -1090,13 +1090,13 @@
       },
       {
         "tag": "2.0.0",
-        "name": "2.0.0 - Major update",
-        "body": "Quite a few things.",
+        "name": "\\b2\\b.\\b0\\b.\\b0\\b - \\bMajor\\b \\bupdate\\b",
+        "body": "\\bQuite\\b \\ba\\b \\bfew\\b \\bthings\\b.",
         "publishedAt": "2025-05-04T10:35:58Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/2.0.0",
         "assets": [
           {
-            "name": "SealsOnEverything.zip",
+            "name": "\\bSealsOnEverything\\b.\\bzip\\b",
             "size": 2429909,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/2.0.0/SealsOnEverything.zip"
           }
@@ -1106,13 +1106,13 @@
       },
       {
         "tag": "1.7.0",
-        "name": "1.7.0",
-        "body": "More seals and others",
+        "name": "\\b1\\b.\\b7\\b.\\b0\\b",
+        "body": "\\bMore\\b \\bseals\\b \\band\\b \\bothers\\b",
         "publishedAt": "2025-04-12T22:54:53Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.7.0",
         "assets": [
           {
-            "name": "SealsOnJokers.zip",
+            "name": "\\bSealsOnJokers\\b.\\bzip\\b",
             "size": 344759,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.7.0/SealsOnJokers.zip"
           }
@@ -1122,13 +1122,13 @@
       },
       {
         "tag": "1.5.0",
-        "name": "1.5.0",
-        "body": "Seal exotic\r\nSeal deck\r\nSeal Sleeve\r\nSeal Seal\r\nThe Seal\r\nProbably a lot more that I forgot",
+        "name": "\\b1\\b.\\b5\\b.\\b0\\b",
+        "body": "\\bSeal\\b \\bexotic\\b\\\\br\\b\\\\bnSeal\\b \\bdeck\\b\\\\br\\b\\\\bnSeal\\b \\bSleeve\\b\\\\br\\b\\\\bnSeal\\b \\bSeal\\b\\\\br\\b\\\\bnThe\\b \\bSeal\\b\\\\br\\b\\\\bnProbably\\b \\ba\\b \\blot\\b \\bmore\\b \\bthat\\b \\bI\\b \\bforgot\\b",
         "publishedAt": "2025-04-04T14:00:25Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.5.0",
         "assets": [
           {
-            "name": "SealsOnEverything.zip",
+            "name": "\\bSealsOnEverything\\b.\\bzip\\b",
             "size": 261179,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.5.0/SealsOnEverything.zip"
           }
@@ -1138,13 +1138,13 @@
       },
       {
         "tag": "1.1.1",
-        "name": "1.1.1",
-        "body": "Fixed enhancements overwriting the joker they are on",
+        "name": "\\b1\\b.\\b1\\b.\\b1\\b",
+        "body": "\\bFixed\\b \\benhancements\\b \\boverwriting\\b \\bthe\\b \\bjoker\\b \\bthey\\b \\bare\\b \\bon\\b",
         "publishedAt": "2025-03-31T11:46:47Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.1.1",
         "assets": [
           {
-            "name": "SealsOnJokers.zip",
+            "name": "\\bSealsOnJokers\\b.\\bzip\\b",
             "size": 224661,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.1.1/SealsOnJokers.zip"
           }
@@ -1154,13 +1154,13 @@
       },
       {
         "tag": "1.1.0",
-        "name": "1.1.0",
-        "body": "1. Joker enhancements\r\n2. Fixed mail in rebate not retriggering correctly",
+        "name": "\\b1\\b.\\b1\\b.\\b0\\b",
+        "body": "\\b1\\b. \\bJoker\\b \\benhancements\\b\\\\br\\b\\\\bn2\\b. \\bFixed\\b \\bmail\\b \\bin\\b \\brebate\\b \\bnot\\b \\bretriggering\\b \\bcorrectly\\b",
         "publishedAt": "2025-03-31T10:44:27Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.1.0",
         "assets": [
           {
-            "name": "SealsOnJokers.zip",
+            "name": "\\bSealsOnJokers\\b.\\bzip\\b",
             "size": 528096,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.1.0/SealsOnJokers.zip"
           }
@@ -1170,13 +1170,13 @@
       },
       {
         "tag": "1.0.0",
-        "name": "1.0.0",
-        "body": "First release",
+        "name": "\\b1\\b.\\b0\\b.\\b0\\b",
+        "body": "\\bFirst\\b \\brelease\\b",
         "publishedAt": "2025-03-30T08:02:14Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/1.0.0",
         "assets": [
           {
-            "name": "SealsOnJokers.zip",
+            "name": "\\bSealsOnJokers\\b.\\bzip\\b",
             "size": 35941,
             "downloadUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/download/1.0.0/SealsOnJokers.zip"
           }
@@ -1185,10 +1185,10 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-23T02:11:43.768Z",
+    "versionHistoryLastCheck": "2026-02-24T02:45:03.854Z",
     "analytics": {
-      "views": 76,
-      "lastViewed": "2026-02-23T11:36:05.585Z",
+      "views": 77,
+      "lastViewed": "2026-02-24T02:45:03.918Z",
       "downloads": 1,
       "lastDownloaded": "2026-02-08T08:07:35.039Z"
     }
