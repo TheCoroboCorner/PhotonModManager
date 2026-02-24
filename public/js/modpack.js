@@ -587,7 +587,6 @@ class ModpackBuilder
 
         previewSection.style.display = 'block';
 
-        // Get all mods (selected + resolved deps)
         const allModKeys = new Set([...Array.from(this.selectedMods), ...this.resolvedDeps.map(d => d.key)]);
 
         const modsArray = Array.from(allModKeys).map(key => ({ key, version: this.getSelectedVersion(key) }));

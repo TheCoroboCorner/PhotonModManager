@@ -29,7 +29,7 @@ function sanitizeForJSON(text)
         .replace(/\r/g, '\\r')
         .replace(/\t/g, '\\t')
         .replace(/\f/g, '\\f')
-        .replace(/\b/g, '\\b')
+        .replace(/\x08/g, '\\b')
         .slice(0, 5000);
 }
 

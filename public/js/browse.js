@@ -403,9 +403,14 @@ class ModBrowser
                     bVal = (bAuthor || '').toLowerCase();
 
                     break;
-                case 'updated':
-                    aVal = new Date(a.lastUpdated || 0).getTime();
-                    bVal = new Date(b.lastUpdated || 0).getTime();
+                case 'updated_at':
+                    aVal = new Date(a.updated_at || 0).getTime();
+                    bVal = new Date(b.updated_at || 0).getTime();
+
+                    break;
+                case 'published_at':
+                    aVal = new Date(a.published_at || 0).getTime();
+                    bVal = new Date(b.published_at || 0).getTime();
 
                     break;
                 case 'favourites':
