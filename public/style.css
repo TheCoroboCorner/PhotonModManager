@@ -2279,10 +2279,14 @@ select
   padding: 0.625rem 2.5rem 0.625rem 1rem;
   border-radius: 6px;
   font-size: 0.875rem;
+  font-family: inherit;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23667EEA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  -webkit-appearance: none;
+  -moz-appearance: none;
+    
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23667EEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
 }
@@ -2291,6 +2295,8 @@ select:hover
 {
   border-color: rgba(102, 126, 234, 0.6);
   background: linear-gradient(135deg, rgba(30, 18, 82, 0.8) 0%, rgba(20, 12, 60, 0.8) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
 }
 
 select:focus 
@@ -2298,11 +2304,25 @@ select:focus
   outline: none;
   border-color: var(--accent-blue);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  background: linear-gradient(135deg, rgba(30, 18, 82, 0.9) 0%, rgba(20, 12, 60, 0.9) 100%);
+}
+
+select:active 
+{
+  transform: translateY(0);
 }
 
 select option 
 {
   background: rgb(20, 12, 60);
   color: var(--text-white);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+@-moz-document url-prefix() 
+{
+  select 
+  {
+    padding-right: 1rem;
+  }
 }
