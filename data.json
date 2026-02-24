@@ -1718,8 +1718,8 @@
     "versionHistory": [
       {
         "tag": "v1.9.6",
-        "name": "v1.9.6",
-        "body": "## What's Changed\r\n1.9.6: Fixes localization issues\r\n1.9.5: Fixes Amulet crash\r\n1.9.3: Zip loading supported (bumps dependency to lovely 0.9)\r\n\r\nJokerDisplay has dropped the SMODS dependency and can now be used just by installing Lovely.\r\n\r\nFor most people this will change nothing but if you want to play vanilla without any SMODS modifications or you can't use SMODS on your system then now you can use JokerDisplay!\r\n\r\nLower versions of SMODS are still a conflict because I can't be bothered to fix issues for all versions :)\r\n\r\nPlease open an issue if you find any problems because of this change!\r\n\r\n### Installation\r\n* Install/update [Lovely](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.9.1...v1.9.0",
+        "name": "\\bv1\\b.\\b9\\b.\\b6\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn1\\b.\\b9\\b.\\b6\\b: \\bFixes\\b \\blocalization\\b \\bissues\\b\\\\br\\b\\\\bn1\\b.\\b9\\b.\\b5\\b: \\bFixes\\b \\bAmulet\\b \\bcrash\\b\\\\br\\b\\\\bn1\\b.\\b9\\b.\\b3\\b: \\bZip\\b \\bloading\\b \\bsupported\\b (\\bbumps\\b \\bdependency\\b \\bto\\b \\blovely\\b \\b0\\b.\\b9\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnJokerDisplay\\b \\bhas\\b \\bdropped\\b \\bthe\\b \\bSMODS\\b \\bdependency\\b \\band\\b \\bcan\\b \\bnow\\b \\bbe\\b \\bused\\b \\bjust\\b \\bby\\b \\binstalling\\b \\bLovely\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnFor\\b \\bmost\\b \\bpeople\\b \\bthis\\b \\bwill\\b \\bchange\\b \\bnothing\\b \\bbut\\b \\bif\\b \\byou\\b \\bwant\\b \\bto\\b \\bplay\\b \\bvanilla\\b \\bwithout\\b \\bany\\b \\bSMODS\\b \\bmodifications\\b \\bor\\b \\byou\\b \\bcan\\b'\\bt\\b \\buse\\b \\bSMODS\\b \\bon\\b \\byour\\b \\bsystem\\b \\bthen\\b \\bnow\\b \\byou\\b \\bcan\\b \\buse\\b \\bJokerDisplay\\b!\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnLower\\b \\bversions\\b \\bof\\b \\bSMODS\\b \\bare\\b \\bstill\\b \\ba\\b \\bconflict\\b \\bbecause\\b \\bI\\b \\bcan\\b'\\bt\\b \\bbe\\b \\bbothered\\b \\bto\\b \\bfix\\b \\bissues\\b \\bfor\\b \\ball\\b \\bversions\\b :)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnPlease\\b \\bopen\\b \\ban\\b \\bissue\\b \\bif\\b \\byou\\b \\bfind\\b \\bany\\b \\bproblems\\b \\bbecause\\b \\bof\\b \\bthis\\b \\bchange\\b!\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bLovely\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bethangreen\\b-\\bdev\\b/\\blovely\\b-\\binjector\\b?\\btab\\b=\\breadme\\b-\\bov\\b-\\bfile\\b#\\bmanual\\b-\\binstallation\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b**\\bFull\\b \\bChangelog\\b**: \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bcompare\\b/\\bv1\\b.\\b8\\b.\\b9\\b.\\b1\\b...\\bv1\\b.\\b9\\b.\\b0\\b",
         "publishedAt": "2026-01-17T21:07:25Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.9.6",
         "assets": [],
@@ -1728,8 +1728,8 @@
       },
       {
         "tag": "v1.8.9.1",
-        "name": "v1.8.9.1",
-        "body": "## What's Changed\r\n* fix crash when going from game over -> main menu by @MrToph in https://github.com/nh6574/JokerDisplay/pull/68\r\n* Standardize Joker Active/Inactive Status by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/70\r\n* Red warning colour on Turtle Bean and Dutch translation fixes by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/71\r\n* Fix crash in style override when Blueprint-like jokers copy uninitialized cards by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/72\r\n* Add red warning color to seltzer count when only 1 hand remains (similar to bean) by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/73\r\n* Standardize suit-based joker reminder text by @DimitrovNoversey in https://github.com/nh6574/JokerDisplay/pull/74\r\n\r\n## New Contributors\r\n* @MrToph made their first contribution in https://github.com/nh6574/JokerDisplay/pull/68\r\n* @DimitrovNoversey made their first contribution in https://github.com/nh6574/JokerDisplay/pull/70\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.8.5...v1.8.9.1",
+        "name": "\\bv1\\b.\\b8\\b.\\b9\\b.\\b1\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bfix\\b \\bcrash\\b \\bwhen\\b \\bgoing\\b \\bfrom\\b \\bgame\\b \\bover\\b -> \\bmain\\b \\bmenu\\b \\bby\\b @\\bMrToph\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b68\\b\\\\br\\b\\\\bn\\b* \\bStandardize\\b \\bJoker\\b \\bActive\\b/\\bInactive\\b \\bStatus\\b \\bby\\b @\\bDimitrovNoversey\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b70\\b\\\\br\\b\\\\bn\\b* \\bRed\\b \\bwarning\\b \\bcolour\\b \\bon\\b \\bTurtle\\b \\bBean\\b \\band\\b \\bDutch\\b \\btranslation\\b \\bfixes\\b \\bby\\b @\\bDimitrovNoversey\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b71\\b\\\\br\\b\\\\bn\\b* \\bFix\\b \\bcrash\\b \\bin\\b \\bstyle\\b \\boverride\\b \\bwhen\\b \\bBlueprint\\b-\\blike\\b \\bjokers\\b \\bcopy\\b \\buninitialized\\b \\bcards\\b \\bby\\b @\\bDimitrovNoversey\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b72\\b\\\\br\\b\\\\bn\\b* \\bAdd\\b \\bred\\b \\bwarning\\b \\bcolor\\b \\bto\\b \\bseltzer\\b \\bcount\\b \\bwhen\\b \\bonly\\b \\b1\\b \\bhand\\b \\bremains\\b (\\bsimilar\\b \\bto\\b \\bbean\\b) \\bby\\b @\\bDimitrovNoversey\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b73\\b\\\\br\\b\\\\bn\\b* \\bStandardize\\b \\bsuit\\b-\\bbased\\b \\bjoker\\b \\breminder\\b \\btext\\b \\bby\\b @\\bDimitrovNoversey\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b74\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b## \\bNew\\b \\bContributors\\b\\\\br\\b\\\\bn\\b* @\\bMrToph\\b \\bmade\\b \\btheir\\b \\bfirst\\b \\bcontribution\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b68\\b\\\\br\\b\\\\bn\\b* @\\bDimitrovNoversey\\b \\bmade\\b \\btheir\\b \\bfirst\\b \\bcontribution\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b70\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b**\\bFull\\b \\bChangelog\\b**: \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bcompare\\b/\\bv1\\b.\\b8\\b.\\b8\\b.\\b5\\b...\\bv1\\b.\\b8\\b.\\b9\\b.\\b1\\b",
         "publishedAt": "2026-01-04T14:56:41Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.9.1",
         "assets": [],
@@ -1738,8 +1738,8 @@
       },
       {
         "tag": "v1.8.8.5",
-        "name": "v1.8.8.5",
-        "body": "## What's Changed\r\n\r\nv1.8.8.5:\r\n* Fix crash with [Amulet](https://github.com/frostice482/amulet/)\r\n\r\nv1.8.8.4: \r\n* Cards that retrigger playing cards don't assume playing cards are in scoring hand anymore\r\n\r\n* Added support for ref_table in colours\r\n* Changed priority because the Hot Potato devs hate me specifically\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b8\\b.\\b8\\b.\\b5\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b8\\b.\\b8\\b.\\b5\\b:\\\\br\\b\\\\bn\\b* \\bFix\\b \\bcrash\\b \\bwith\\b [\\bAmulet\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bfrostice482\\b/\\bamulet\\b/)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b8\\b.\\b8\\b.\\b4\\b: \\\\br\\b\\\\bn\\b* \\bCards\\b \\bthat\\b \\bretrigger\\b \\bplaying\\b \\bcards\\b \\bdon\\b'\\bt\\b \\bassume\\b \\bplaying\\b \\bcards\\b \\bare\\b \\bin\\b \\bscoring\\b \\bhand\\b \\banymore\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bsupport\\b \\bfor\\b \\bref_table\\b \\bin\\b \\bcolours\\b\\\\br\\b\\\\bn\\b* \\bChanged\\b \\bpriority\\b \\bbecause\\b \\bthe\\b \\bHot\\b \\bPotato\\b \\bdevs\\b \\bhate\\b \\bme\\b \\bspecifically\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2025-10-18T20:56:55Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.8.5",
         "assets": [],
@@ -1748,8 +1748,8 @@
       },
       {
         "tag": "v1.8.7.4",
-        "name": "v1.8.7.4",
-        "body": "## What's Changed\r\n\r\n- 1.8.7.4: Japanese localization by koukichi_kkc\r\n- 1.8.7.3: Fix crash when there are non-playing card objects in G.play\r\n- 1.8.7.2: Fix display for consumables/other cards in display areas\r\n- 1.8.7.1: Fix nil display counter on older SMODS versions\r\n* Option to display joker slot count over displays\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.4.2...v1.8.5",
+        "name": "\\bv1\\b.\\b8\\b.\\b7\\b.\\b4\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b- \\b1\\b.\\b8\\b.\\b7\\b.\\b4\\b: \\bJapanese\\b \\blocalization\\b \\bby\\b \\bkoukichi_kkc\\b\\\\br\\b\\\\bn\\b- \\b1\\b.\\b8\\b.\\b7\\b.\\b3\\b: \\bFix\\b \\bcrash\\b \\bwhen\\b \\bthere\\b \\bare\\b \\bnon\\b-\\bplaying\\b \\bcard\\b \\bobjects\\b \\bin\\b \\bG\\b.\\bplay\\b\\\\br\\b\\\\bn\\b- \\b1\\b.\\b8\\b.\\b7\\b.\\b2\\b: \\bFix\\b \\bdisplay\\b \\bfor\\b \\bconsumables\\b/\\bother\\b \\bcards\\b \\bin\\b \\bdisplay\\b \\bareas\\b\\\\br\\b\\\\bn\\b- \\b1\\b.\\b8\\b.\\b7\\b.\\b1\\b: \\bFix\\b \\bnil\\b \\bdisplay\\b \\bcounter\\b \\bon\\b \\bolder\\b \\bSMODS\\b \\bversions\\b\\\\br\\b\\\\bn\\b* \\bOption\\b \\bto\\b \\bdisplay\\b \\bjoker\\b \\bslot\\b \\bcount\\b \\bover\\b \\bdisplays\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b**\\bFull\\b \\bChangelog\\b**: \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bcompare\\b/\\bv1\\b.\\b8\\b.\\b4\\b.\\b2\\b...\\bv1\\b.\\b8\\b.\\b5\\b",
         "publishedAt": "2025-08-28T19:27:18Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.7.4",
         "assets": [],
@@ -1758,8 +1758,8 @@
       },
       {
         "tag": "v1.8.6",
-        "name": "v1.8.6",
-        "body": "## What's Changed\r\n\r\n* Perma-repetition support\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.4.2...v1.8.5",
+        "name": "\\bv1\\b.\\b8\\b.\\b6\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b* \\bPerma\\b-\\brepetition\\b \\bsupport\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b**\\bFull\\b \\bChangelog\\b**: \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bcompare\\b/\\bv1\\b.\\b8\\b.\\b4\\b.\\b2\\b...\\bv1\\b.\\b8\\b.\\b5\\b",
         "publishedAt": "2025-08-09T14:33:00Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.6",
         "assets": [],
@@ -1768,8 +1768,8 @@
       },
       {
         "tag": "v1.8.5.2",
-        "name": "v1.8.5.2",
-        "body": "## What's Changed\r\nv.1.8.5.2\r\n* Simplified Chinese localization by @ChromaPIE\r\n\r\nv.1.8.5.1\r\n* Fix crash\r\n* Deprecate `scoring_function` in favor of `context.modify_scoring_hand`\r\n\r\nv1.8.5\r\n* Updated to use new probability functions\r\n* Some fixes \r\n* German localization | Help for #43 by @GunnableScum in https://github.com/nh6574/JokerDisplay/pull/60\r\n* traditional chinese localization by @Wilfredlam0418 in https://github.com/nh6574/JokerDisplay/pull/62\r\n* Dutch localization by Soulsphere\r\n\r\n## New Contributors\r\n* @GunnableScum made their first contribution in https://github.com/nh6574/JokerDisplay/pull/60\r\n* @Wilfredlam0418 made their first contribution in https://github.com/nh6574/JokerDisplay/pull/62\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.4.2...v1.8.5",
+        "name": "\\bv1\\b.\\b8\\b.\\b5\\b.\\b2\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnv\\b.\\b1\\b.\\b8\\b.\\b5\\b.\\b2\\b\\\\br\\b\\\\bn\\b* \\bSimplified\\b \\bChinese\\b \\blocalization\\b \\bby\\b @\\bChromaPIE\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv\\b.\\b1\\b.\\b8\\b.\\b5\\b.\\b1\\b\\\\br\\b\\\\bn\\b* \\bFix\\b \\bcrash\\b\\\\br\\b\\\\bn\\b* \\bDeprecate\\b `\\bscoring_function\\b` \\bin\\b \\bfavor\\b \\bof\\b `\\bcontext\\b.\\bmodify_scoring_hand\\b`\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b8\\b.\\b5\\b\\\\br\\b\\\\bn\\b* \\bUpdated\\b \\bto\\b \\buse\\b \\bnew\\b \\bprobability\\b \\bfunctions\\b\\\\br\\b\\\\bn\\b* \\bSome\\b \\bfixes\\b \\\\br\\b\\\\bn\\b* \\bGerman\\b \\blocalization\\b | \\bHelp\\b \\bfor\\b #\\b43\\b \\bby\\b @\\bGunnableScum\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b60\\b\\\\br\\b\\\\bn\\b* \\btraditional\\b \\bchinese\\b \\blocalization\\b \\bby\\b @\\bWilfredlam0418\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b62\\b\\\\br\\b\\\\bn\\b* \\bDutch\\b \\blocalization\\b \\bby\\b \\bSoulsphere\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b## \\bNew\\b \\bContributors\\b\\\\br\\b\\\\bn\\b* @\\bGunnableScum\\b \\bmade\\b \\btheir\\b \\bfirst\\b \\bcontribution\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b60\\b\\\\br\\b\\\\bn\\b* @\\bWilfredlam0418\\b \\bmade\\b \\btheir\\b \\bfirst\\b \\bcontribution\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b62\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b**\\bFull\\b \\bChangelog\\b**: \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bcompare\\b/\\bv1\\b.\\b8\\b.\\b4\\b.\\b2\\b...\\bv1\\b.\\b8\\b.\\b5\\b",
         "publishedAt": "2025-07-11T21:27:45Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.5.2",
         "assets": [],
@@ -1778,8 +1778,8 @@
       },
       {
         "tag": "v1.8.4.2",
-        "name": "v1.8.4.3",
-        "body": "## What's Changed\r\n* Fixes\r\n* pt_BR localization by @naumazeredo in https://github.com/nh6574/JokerDisplay/pull/52\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)\r\n\r\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.8.3.1...v1.8.4",
+        "name": "\\bv1\\b.\\b8\\b.\\b4\\b.\\b3\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bFixes\\b\\\\br\\b\\\\bn\\b* \\bpt_BR\\b \\blocalization\\b \\bby\\b @\\bnaumazeredo\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b52\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b**\\bFull\\b \\bChangelog\\b**: \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bcompare\\b/\\bv1\\b.\\b8\\b.\\b3\\b.\\b1\\b...\\bv1\\b.\\b8\\b.\\b4\\b",
         "publishedAt": "2025-02-09T23:55:45Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.4.2",
         "assets": [],
@@ -1788,8 +1788,8 @@
       },
       {
         "tag": "v1.8.1",
-        "name": "v1.8.1",
-        "body": "## What's Changed\r\n* You can now define a joker_display_def function when making a Joker to give it a definition\r\n\r\n```lua\r\nSMODS.Joker{\r\n    -- Your code\r\n   joker_display_def = function(JokerDisplay)\r\n        return {\r\n            text = {\r\n                { text = \"+\" },\r\n                { ref_table = \"card.joker_display_values\", ref_value = \"mult\", retrigger_type = \"mult\" }\r\n            },\r\n            text_config = { colour = G.C.MULT },\r\n            calc_function = function(card)\r\n                card.joker_display_values.mult = G.GAME and G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.tarot or 0\r\n            end,\r\n            mod_function = function(card, mod_joker)\r\n                return {\r\n                    mult = mod_joker.ability.extra.mult * JokerDisplay.calculate_joker_triggers(mod_joker) or nil)\r\n                }\r\n            end\r\n        }\r\n    end\r\n}\r\n```\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b8\\b.\\b1\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\bdefine\\b \\ba\\b \\bjoker_display_def\\b \\bfunction\\b \\bwhen\\b \\bmaking\\b \\ba\\b \\bJoker\\b \\bto\\b \\bgive\\b \\bit\\b \\ba\\b \\bdefinition\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b```\\blua\\b\\\\br\\b\\\\bnSMODS\\b.\\bJoker\\b{\\\\br\\b\\\\bn\\b    -- \\bYour\\b \\bcode\\b\\\\br\\b\\\\bn\\b   \\bjoker_display_def\\b = \\bfunction\\b(\\bJokerDisplay\\b)\\\\br\\b\\\\bn\\b        \\breturn\\b {\\\\br\\b\\\\bn\\b            \\btext\\b = {\\\\br\\b\\\\bn\\b                { \\btext\\b = \\\"+\\\" },\\\\br\\b\\\\bn\\b                { \\bref_table\\b = \\\"\\bcard\\b.\\bjoker_display_values\\b\\\", \\bref_value\\b = \\\"\\bmult\\b\\\", \\bretrigger_type\\b = \\\"\\bmult\\b\\\" }\\\\br\\b\\\\bn\\b            },\\\\br\\b\\\\bn\\b            \\btext_config\\b = { \\bcolour\\b = \\bG\\b.\\bC\\b.\\bMULT\\b },\\\\br\\b\\\\bn\\b            \\bcalc_function\\b = \\bfunction\\b(\\bcard\\b)\\\\br\\b\\\\bn\\b                \\bcard\\b.\\bjoker_display_values\\b.\\bmult\\b = \\bG\\b.\\bGAME\\b \\band\\b \\bG\\b.\\bGAME\\b.\\bconsumeable_usage_total\\b \\band\\b \\bG\\b.\\bGAME\\b.\\bconsumeable_usage_total\\b.\\btarot\\b \\bor\\b \\b0\\b\\\\br\\b\\\\bn\\b            \\bend\\b,\\\\br\\b\\\\bn\\b            \\bmod_function\\b = \\bfunction\\b(\\bcard\\b, \\bmod_joker\\b)\\\\br\\b\\\\bn\\b                \\breturn\\b {\\\\br\\b\\\\bn\\b                    \\bmult\\b = \\bmod_joker\\b.\\bability\\b.\\bextra\\b.\\bmult\\b * \\bJokerDisplay\\b.\\bcalculate_joker_triggers\\b(\\bmod_joker\\b) \\bor\\b \\bnil\\b)\\\\br\\b\\\\bn\\b                }\\\\br\\b\\\\bn\\b            \\bend\\b\\\\br\\b\\\\bn\\b        }\\\\br\\b\\\\bn\\b    \\bend\\b\\\\br\\b\\\\bn\\b}\\\\br\\b\\\\bn\\b```\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2025-02-08T15:19:41Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.1",
         "assets": [],
@@ -1798,8 +1798,8 @@
       },
       {
         "tag": "v1.8.0",
-        "name": "v1.8.0",
-        "body": "## What's Changed\r\n* Add support for custom Editions\r\n* You can now collapse the display with D-pad Up on a controller\r\n* Now empty displays are hidden by default (can still be changed in the config menu)\r\n* Supernova now displays the correct mult when selecting a hand (times played + 1)\r\n* Changed to the new Steamodded metadata format. This breaks compatibility with older versions. (Minimum version required is set to the last version with old_calc for compatibility with Cryptid and other mods)\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b8\\b.\\b0\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bAdd\\b \\bsupport\\b \\bfor\\b \\bcustom\\b \\bEditions\\b\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\bcollapse\\b \\bthe\\b \\bdisplay\\b \\bwith\\b \\bD\\b-\\bpad\\b \\bUp\\b \\bon\\b \\ba\\b \\bcontroller\\b\\\\br\\b\\\\bn\\b* \\bNow\\b \\bempty\\b \\bdisplays\\b \\bare\\b \\bhidden\\b \\bby\\b \\bdefault\\b (\\bcan\\b \\bstill\\b \\bbe\\b \\bchanged\\b \\bin\\b \\bthe\\b \\bconfig\\b \\bmenu\\b)\\\\br\\b\\\\bn\\b* \\bSupernova\\b \\bnow\\b \\bdisplays\\b \\bthe\\b \\bcorrect\\b \\bmult\\b \\bwhen\\b \\bselecting\\b \\ba\\b \\bhand\\b (\\btimes\\b \\bplayed\\b + \\b1\\b)\\\\br\\b\\\\bn\\b* \\bChanged\\b \\bto\\b \\bthe\\b \\bnew\\b \\bSteamodded\\b \\bmetadata\\b \\bformat\\b. \\bThis\\b \\bbreaks\\b \\bcompatibility\\b \\bwith\\b \\bolder\\b \\bversions\\b. (\\bMinimum\\b \\bversion\\b \\brequired\\b \\bis\\b \\bset\\b \\bto\\b \\bthe\\b \\blast\\b \\bversion\\b \\bwith\\b \\bold_calc\\b \\bfor\\b \\bcompatibility\\b \\bwith\\b \\bCryptid\\b \\band\\b \\bother\\b \\bmods\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2025-01-22T19:34:25Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.8.0",
         "assets": [],
@@ -1808,8 +1808,8 @@
       },
       {
         "tag": "v1.7.4.1",
-        "name": "v1.7.4",
-        "body": "## What's Changed\r\n* Fix Seeing Double\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b7\\b.\\b4\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bFix\\b \\bSeeing\\b \\bDouble\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2025-01-15T04:31:11Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.4.1",
         "assets": [],
@@ -1818,8 +1818,8 @@
       },
       {
         "tag": "v1.7.3",
-        "name": "v1.7.3",
-        "body": "## What's Changed\r\n* Added french translation by @SDM0 in https://github.com/nh6574/JokerDisplay/pull/46\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b7\\b.\\b3\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bfrench\\b \\btranslation\\b \\bby\\b @\\bSDM0\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b46\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2025-01-14T13:27:58Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.3",
         "assets": [],
@@ -1828,8 +1828,8 @@
       },
       {
         "tag": "v1.7.2",
-        "name": "v1.7.2",
-        "body": "## What's Changed\r\n* Add ru localization by @WholeHorse in https://github.com/nh6574/JokerDisplay/pull/45\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b7\\b.\\b2\\b",
+        "body": "## \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bAdd\\b \\bru\\b \\blocalization\\b \\bby\\b @\\bWholeHorse\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b45\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2025-01-07T17:34:32Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.2",
         "assets": [],
@@ -1838,8 +1838,8 @@
       },
       {
         "tag": "v1.7.1.2",
-        "name": "v1.7.1.2",
-        "body": "### What's Changed\r\nv1.7.1.2:\r\n* Bug fixes\r\n\r\nv1.7.0:\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b7\\b.\\b1\\b.\\b2\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnv1\\b.\\b7\\b.\\b1\\b.\\b2\\b:\\\\br\\b\\\\bn\\b* \\bBug\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b7\\b.\\b0\\b:\\\\br\\b\\\\bn\\b* \\bJoker\\b \\bretrigger\\b \\bAPI\\b (\\bmore\\b \\binfo\\b \\bon\\b \\bthe\\b \\bwiki\\b)\\\\br\\b\\\\bn\\b* \\be_mult\\b \\badded\\b \\bto\\b \\bmodifiers\\b \\bAPI\\b\\\\br\\b\\\\bn\\b* \\bother\\b \\bsmall\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-10-15T13:28:00Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.1.2",
         "assets": [],
@@ -1848,8 +1848,8 @@
       },
       {
         "tag": "v1.7.1.1",
-        "name": "v1.7.1.1",
-        "body": "### What's Changed\r\nv1.7.1.1:\r\n* Bug fixes\r\n\r\nv1.7.0:\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b7\\b.\\b1\\b.\\b1\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnv1\\b.\\b7\\b.\\b1\\b.\\b1\\b:\\\\br\\b\\\\bn\\b* \\bBug\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b7\\b.\\b0\\b:\\\\br\\b\\\\bn\\b* \\bJoker\\b \\bretrigger\\b \\bAPI\\b (\\bmore\\b \\binfo\\b \\bon\\b \\bthe\\b \\bwiki\\b)\\\\br\\b\\\\bn\\b* \\be_mult\\b \\badded\\b \\bto\\b \\bmodifiers\\b \\bAPI\\b\\\\br\\b\\\\bn\\b* \\bother\\b \\bsmall\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-09-06T00:51:04Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.1.1",
         "assets": [],
@@ -1858,8 +1858,8 @@
       },
       {
         "tag": "v1.7.1",
-        "name": "v1.7.1",
-        "body": "### What's Changed\r\nv1.7.1:\r\n* Bug fixes\r\n\r\nv1.7.0:\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b7\\b.\\b1\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnv1\\b.\\b7\\b.\\b1\\b:\\\\br\\b\\\\bn\\b* \\bBug\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b7\\b.\\b0\\b:\\\\br\\b\\\\bn\\b* \\bJoker\\b \\bretrigger\\b \\bAPI\\b (\\bmore\\b \\binfo\\b \\bon\\b \\bthe\\b \\bwiki\\b)\\\\br\\b\\\\bn\\b* \\be_mult\\b \\badded\\b \\bto\\b \\bmodifiers\\b \\bAPI\\b\\\\br\\b\\\\bn\\b* \\bother\\b \\bsmall\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-08-21T13:26:31Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.1",
         "assets": [],
@@ -1868,8 +1868,8 @@
       },
       {
         "tag": "v1.7.0.1",
-        "name": "v1.7.0.1",
-        "body": "### What's Changed\r\n* Joker retrigger API (more info on the wiki)\r\n* e_mult added to modifiers API\r\n* other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b7\\b.\\b0\\b.\\b1\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bJoker\\b \\bretrigger\\b \\bAPI\\b (\\bmore\\b \\binfo\\b \\bon\\b \\bthe\\b \\bwiki\\b)\\\\br\\b\\\\bn\\b* \\be_mult\\b \\badded\\b \\bto\\b \\bmodifiers\\b \\bAPI\\b\\\\br\\b\\\\bn\\b* \\bother\\b \\bsmall\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-08-18T14:32:37Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.7.0.1",
         "assets": [],
@@ -1878,8 +1878,8 @@
       },
       {
         "tag": "v1.6.5",
-        "name": "v1.6.5",
-        "body": "### What's Changed\r\n* New Replace global definition to replace all displays at once\r\n* Added proper number formatting\r\n* Other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b6\\b.\\b5\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bNew\\b \\bReplace\\b \\bglobal\\b \\bdefinition\\b \\bto\\b \\breplace\\b \\ball\\b \\bdisplays\\b \\bat\\b \\bonce\\b\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bproper\\b \\bnumber\\b \\bformatting\\b\\\\br\\b\\\\bn\\b* \\bOther\\b \\bsmall\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-08-17T17:20:31Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.5",
         "assets": [],
@@ -1888,8 +1888,8 @@
       },
       {
         "tag": "v1.6.4",
-        "name": "v1.6.4",
-        "body": "### What's Changed\r\n* There's now a more strict Steamodded version check, please make sure to use the latest version of Steamodded.\r\n* Matador now checks if the hand activates the boss blind!\r\n* API Changes:\r\n  * JokerDisplay.find_joker_or_copy now uses the Joker's key\r\n  * JokerDisplay.sort_cards returns the cards sorted from leftmost to rightmost (there are also individual leftmost card and rightmost card functions)\r\n  * JokerDisplay.evaluate_hand can now be called without arguments and it will return a precalculated hand. Please use this instead of the older method to evaluate a hand if possible.\r\n  * You can now specify a scoring_function in your Joker definition to add cards to the scoring hand (like Splash in vanilla)\r\n  * JokerDisplay.triggers_blind tells you if a hand triggers a blind\r\n  * To add more blinds to the above function, you need to add a new definition inside JokerDisplay.Blind_Definitions with your blind key and a trigger_function.\r\n* Other small fixes\r\n\r\n### Installation\r\n* Install/update [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Delete your previous JokerDisplay files if any\r\n* Download \"Source Code (zip)\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b6\\b.\\b4\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bThere\\b'\\bs\\b \\bnow\\b \\ba\\b \\bmore\\b \\bstrict\\b \\bSteamodded\\b \\bversion\\b \\bcheck\\b, \\bplease\\b \\bmake\\b \\bsure\\b \\bto\\b \\buse\\b \\bthe\\b \\blatest\\b \\bversion\\b \\bof\\b \\bSteamodded\\b.\\\\br\\b\\\\bn\\b* \\bMatador\\b \\bnow\\b \\bchecks\\b \\bif\\b \\bthe\\b \\bhand\\b \\bactivates\\b \\bthe\\b \\bboss\\b \\bblind\\b!\\\\br\\b\\\\bn\\b* \\bAPI\\b \\bChanges\\b:\\\\br\\b\\\\bn\\b  * \\bJokerDisplay\\b.\\bfind_joker_or_copy\\b \\bnow\\b \\buses\\b \\bthe\\b \\bJoker\\b'\\bs\\b \\bkey\\b\\\\br\\b\\\\bn\\b  * \\bJokerDisplay\\b.\\bsort_cards\\b \\breturns\\b \\bthe\\b \\bcards\\b \\bsorted\\b \\bfrom\\b \\bleftmost\\b \\bto\\b \\brightmost\\b (\\bthere\\b \\bare\\b \\balso\\b \\bindividual\\b \\bleftmost\\b \\bcard\\b \\band\\b \\brightmost\\b \\bcard\\b \\bfunctions\\b)\\\\br\\b\\\\bn\\b  * \\bJokerDisplay\\b.\\bevaluate_hand\\b \\bcan\\b \\bnow\\b \\bbe\\b \\bcalled\\b \\bwithout\\b \\barguments\\b \\band\\b \\bit\\b \\bwill\\b \\breturn\\b \\ba\\b \\bprecalculated\\b \\bhand\\b. \\bPlease\\b \\buse\\b \\bthis\\b \\binstead\\b \\bof\\b \\bthe\\b \\bolder\\b \\bmethod\\b \\bto\\b \\bevaluate\\b \\ba\\b \\bhand\\b \\bif\\b \\bpossible\\b.\\\\br\\b\\\\bn\\b  * \\bYou\\b \\bcan\\b \\bnow\\b \\bspecify\\b \\ba\\b \\bscoring_function\\b \\bin\\b \\byour\\b \\bJoker\\b \\bdefinition\\b \\bto\\b \\badd\\b \\bcards\\b \\bto\\b \\bthe\\b \\bscoring\\b \\bhand\\b (\\blike\\b \\bSplash\\b \\bin\\b \\bvanilla\\b)\\\\br\\b\\\\bn\\b  * \\bJokerDisplay\\b.\\btriggers_blind\\b \\btells\\b \\byou\\b \\bif\\b \\ba\\b \\bhand\\b \\btriggers\\b \\ba\\b \\bblind\\b\\\\br\\b\\\\bn\\b  * \\bTo\\b \\badd\\b \\bmore\\b \\bblinds\\b \\bto\\b \\bthe\\b \\babove\\b \\bfunction\\b, \\byou\\b \\bneed\\b \\bto\\b \\badd\\b \\ba\\b \\bnew\\b \\bdefinition\\b \\binside\\b \\bJokerDisplay\\b.\\bBlind_Definitions\\b \\bwith\\b \\byour\\b \\bblind\\b \\bkey\\b \\band\\b \\ba\\b \\btrigger_function\\b.\\\\br\\b\\\\bn\\b* \\bOther\\b \\bsmall\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b/\\bupdate\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bDelete\\b \\byour\\b \\bprevious\\b \\bJokerDisplay\\b \\bfiles\\b \\bif\\b \\bany\\b\\\\br\\b\\\\bn\\b* \\bDownload\\b \\\"\\bSource\\b \\bCode\\b (\\bzip\\b)\\\" \\band\\b \\bunzip\\b \\bit\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-08-07T01:15:40Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.4",
         "assets": [],
@@ -1898,13 +1898,13 @@
       },
       {
         "tag": "v1.6.3",
-        "name": "v1.6.3",
-        "body": "### What's Changed\r\nNOTE: Please make sure to use the latest version of Steamodded.\r\n* Display now updates continuously instead of having to wait for an action.\r\n* If it detects too much slowdown with a lot of Jokers (20+) the displays will deactivate themselves.\r\n* Small fixes\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b6\\b.\\b3\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnNOTE\\b: \\bPlease\\b \\bmake\\b \\bsure\\b \\bto\\b \\buse\\b \\bthe\\b \\blatest\\b \\bversion\\b \\bof\\b \\bSteamodded\\b.\\\\br\\b\\\\bn\\b* \\bDisplay\\b \\bnow\\b \\bupdates\\b \\bcontinuously\\b \\binstead\\b \\bof\\b \\bhaving\\b \\bto\\b \\bwait\\b \\bfor\\b \\ban\\b \\baction\\b.\\\\br\\b\\\\bn\\b* \\bIf\\b \\bit\\b \\bdetects\\b \\btoo\\b \\bmuch\\b \\bslowdown\\b \\bwith\\b \\ba\\b \\blot\\b \\bof\\b \\bJokers\\b (\\b20\\b+) \\bthe\\b \\bdisplays\\b \\bwill\\b \\bdeactivate\\b \\bthemselves\\b.\\\\br\\b\\\\bn\\b* \\bSmall\\b \\bfixes\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-08-03T21:18:21Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.3",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 20195,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.3/JokerDisplay.zip"
           }
@@ -1914,13 +1914,13 @@
       },
       {
         "tag": "v1.6.2",
-        "name": "v1.6.2",
-        "body": "### What's Changed\r\nNOTE: This update uses a new Steamodded feature, please update to the latest version.\r\nv1.6.2:\r\n* Add options to disable collapsing, and perishable and rental displays.\r\n* retrigger_function and mod_function now have the joker that's triggering them as the last argument\r\n* Fix Mr. Bones crash when using Talisman (Cryptid)\r\n\r\nv1.6.1:\r\n* Added a \"hide display by default\" option to the settings.\r\n* Dropped Steamodded 0.9.8 support.\r\n\r\nv1.6.0:\r\n* Add config menu by @Eremel in https://github.com/nh6574/JokerDisplay/pull/38\r\n* You can now choose what rows of the display are active from the menu.\r\n* You can select to hide all displays with no information (useful if playing with many unsupported mods).\r\n* Now you can disable displays individually by right-clicking (disabling all is now in the settings menu).\r\n* Now if a display is disabled it doesn't perform any calculations which may help for debugging issues.\r\n* Fixes retriggers working for cards in hand when they shouldn't.\r\n* Fixes reminder_text_config not doing anything.\r\n* Fixes an issue where it would call evaluate_hand on vouchers with Cryptid.\r\n* Blueprint/Brainstorm now properly display if they're incompatible or they're copying something debuffed.\r\n* Mod icon.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b6\\b.\\b2\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnNOTE\\b: \\bThis\\b \\bupdate\\b \\buses\\b \\ba\\b \\bnew\\b \\bSteamodded\\b \\bfeature\\b, \\bplease\\b \\bupdate\\b \\bto\\b \\bthe\\b \\blatest\\b \\bversion\\b.\\\\br\\b\\\\bnv1\\b.\\b6\\b.\\b2\\b:\\\\br\\b\\\\bn\\b* \\bAdd\\b \\boptions\\b \\bto\\b \\bdisable\\b \\bcollapsing\\b, \\band\\b \\bperishable\\b \\band\\b \\brental\\b \\bdisplays\\b.\\\\br\\b\\\\bn\\b* \\bretrigger_function\\b \\band\\b \\bmod_function\\b \\bnow\\b \\bhave\\b \\bthe\\b \\bjoker\\b \\bthat\\b'\\bs\\b \\btriggering\\b \\bthem\\b \\bas\\b \\bthe\\b \\blast\\b \\bargument\\b\\\\br\\b\\\\bn\\b* \\bFix\\b \\bMr\\b. \\bBones\\b \\bcrash\\b \\bwhen\\b \\busing\\b \\bTalisman\\b (\\bCryptid\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b6\\b.\\b1\\b:\\\\br\\b\\\\bn\\b* \\bAdded\\b \\ba\\b \\\"\\bhide\\b \\bdisplay\\b \\bby\\b \\bdefault\\b\\\" \\boption\\b \\bto\\b \\bthe\\b \\bsettings\\b.\\\\br\\b\\\\bn\\b* \\bDropped\\b \\bSteamodded\\b \\b0\\b.\\b9\\b.\\b8\\b \\bsupport\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b6\\b.\\b0\\b:\\\\br\\b\\\\bn\\b* \\bAdd\\b \\bconfig\\b \\bmenu\\b \\bby\\b @\\bEremel\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b38\\b\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\bchoose\\b \\bwhat\\b \\brows\\b \\bof\\b \\bthe\\b \\bdisplay\\b \\bare\\b \\bactive\\b \\bfrom\\b \\bthe\\b \\bmenu\\b.\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bselect\\b \\bto\\b \\bhide\\b \\ball\\b \\bdisplays\\b \\bwith\\b \\bno\\b \\binformation\\b (\\buseful\\b \\bif\\b \\bplaying\\b \\bwith\\b \\bmany\\b \\bunsupported\\b \\bmods\\b).\\\\br\\b\\\\bn\\b* \\bNow\\b \\byou\\b \\bcan\\b \\bdisable\\b \\bdisplays\\b \\bindividually\\b \\bby\\b \\bright\\b-\\bclicking\\b (\\bdisabling\\b \\ball\\b \\bis\\b \\bnow\\b \\bin\\b \\bthe\\b \\bsettings\\b \\bmenu\\b).\\\\br\\b\\\\bn\\b* \\bNow\\b \\bif\\b \\ba\\b \\bdisplay\\b \\bis\\b \\bdisabled\\b \\bit\\b \\bdoesn\\b'\\bt\\b \\bperform\\b \\bany\\b \\bcalculations\\b \\bwhich\\b \\bmay\\b \\bhelp\\b \\bfor\\b \\bdebugging\\b \\bissues\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\bretriggers\\b \\bworking\\b \\bfor\\b \\bcards\\b \\bin\\b \\bhand\\b \\bwhen\\b \\bthey\\b \\bshouldn\\b'\\bt\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\breminder_text_config\\b \\bnot\\b \\bdoing\\b \\banything\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\ban\\b \\bissue\\b \\bwhere\\b \\bit\\b \\bwould\\b \\bcall\\b \\bevaluate_hand\\b \\bon\\b \\bvouchers\\b \\bwith\\b \\bCryptid\\b.\\\\br\\b\\\\bn\\b* \\bBlueprint\\b/\\bBrainstorm\\b \\bnow\\b \\bproperly\\b \\bdisplay\\b \\bif\\b \\bthey\\b'\\bre\\b \\bincompatible\\b \\bor\\b \\bthey\\b'\\bre\\b \\bcopying\\b \\bsomething\\b \\bdebuffed\\b.\\\\br\\b\\\\bn\\b* \\bMod\\b \\bicon\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-25T20:17:55Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.2",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 19980,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.2/JokerDisplay.zip"
           }
@@ -1930,13 +1930,13 @@
       },
       {
         "tag": "v1.6.1",
-        "name": "v1.6.1",
-        "body": "### What's Changed\r\nNOTE: This update uses a new Steamodded feature, please update to the latest version.\r\nv1.6.1:\r\n* Added a \"hide display by default\" option to the settings.\r\n* Dropped Steamodded 0.9.8 support.\r\n\r\nv1.6.0:\r\n* Add config menu by @Eremel in https://github.com/nh6574/JokerDisplay/pull/38\r\n* You can now choose what rows of the display are active from the menu.\r\n* You can select to hide all displays with no information (useful if playing with many unsupported mods).\r\n* Now you can disable displays individually by right-clicking (disabling all is now in the settings menu).\r\n* Now if a display is disabled it doesn't perform any calculations which may help for debugging issues.\r\n* Fixes retriggers working for cards in hand when they shouldn't.\r\n* Fixes reminder_text_config not doing anything.\r\n* Fixes an issue where it would call evaluate_hand on vouchers with Cryptid.\r\n* Blueprint/Brainstorm now properly display if they're incompatible or they're copying something debuffed.\r\n* Mod icon.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b6\\b.\\b1\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnNOTE\\b: \\bThis\\b \\bupdate\\b \\buses\\b \\ba\\b \\bnew\\b \\bSteamodded\\b \\bfeature\\b, \\bplease\\b \\bupdate\\b \\bto\\b \\bthe\\b \\blatest\\b \\bversion\\b.\\\\br\\b\\\\bnv1\\b.\\b6\\b.\\b1\\b:\\\\br\\b\\\\bn\\b* \\bAdded\\b \\ba\\b \\\"\\bhide\\b \\bdisplay\\b \\bby\\b \\bdefault\\b\\\" \\boption\\b \\bto\\b \\bthe\\b \\bsettings\\b.\\\\br\\b\\\\bn\\b* \\bDropped\\b \\bSteamodded\\b \\b0\\b.\\b9\\b.\\b8\\b \\bsupport\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b6\\b.\\b0\\b:\\\\br\\b\\\\bn\\b* \\bAdd\\b \\bconfig\\b \\bmenu\\b \\bby\\b @\\bEremel\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b38\\b\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\bchoose\\b \\bwhat\\b \\brows\\b \\bof\\b \\bthe\\b \\bdisplay\\b \\bare\\b \\bactive\\b \\bfrom\\b \\bthe\\b \\bmenu\\b.\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bselect\\b \\bto\\b \\bhide\\b \\ball\\b \\bdisplays\\b \\bwith\\b \\bno\\b \\binformation\\b (\\buseful\\b \\bif\\b \\bplaying\\b \\bwith\\b \\bmany\\b \\bunsupported\\b \\bmods\\b).\\\\br\\b\\\\bn\\b* \\bNow\\b \\byou\\b \\bcan\\b \\bdisable\\b \\bdisplays\\b \\bindividually\\b \\bby\\b \\bright\\b-\\bclicking\\b (\\bdisabling\\b \\ball\\b \\bis\\b \\bnow\\b \\bin\\b \\bthe\\b \\bsettings\\b \\bmenu\\b).\\\\br\\b\\\\bn\\b* \\bNow\\b \\bif\\b \\ba\\b \\bdisplay\\b \\bis\\b \\bdisabled\\b \\bit\\b \\bdoesn\\b'\\bt\\b \\bperform\\b \\bany\\b \\bcalculations\\b \\bwhich\\b \\bmay\\b \\bhelp\\b \\bfor\\b \\bdebugging\\b \\bissues\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\bretriggers\\b \\bworking\\b \\bfor\\b \\bcards\\b \\bin\\b \\bhand\\b \\bwhen\\b \\bthey\\b \\bshouldn\\b'\\bt\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\breminder_text_config\\b \\bnot\\b \\bdoing\\b \\banything\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\ban\\b \\bissue\\b \\bwhere\\b \\bit\\b \\bwould\\b \\bcall\\b \\bevaluate_hand\\b \\bon\\b \\bvouchers\\b \\bwith\\b \\bCryptid\\b.\\\\br\\b\\\\bn\\b* \\bBlueprint\\b/\\bBrainstorm\\b \\bnow\\b \\bproperly\\b \\bdisplay\\b \\bif\\b \\bthey\\b'\\bre\\b \\bincompatible\\b \\bor\\b \\bthey\\b'\\bre\\b \\bcopying\\b \\bsomething\\b \\bdebuffed\\b.\\\\br\\b\\\\bn\\b* \\bMod\\b \\bicon\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-21T13:34:26Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.1",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 19636,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.1/JokerDisplay.zip"
           }
@@ -1946,13 +1946,13 @@
       },
       {
         "tag": "v1.6.0",
-        "name": "v1.6.0",
-        "body": "### What's Changed\r\n* Add config menu by @Eremel in https://github.com/nh6574/JokerDisplay/pull/38\r\n* You can now choose what rows of the display are active from the menu.\r\n* You can select to hide all displays with no information (useful if playing with many unsupported mods).\r\n* Now you can disable displays individually by right-clicking (disabling all is now in the settings menu).\r\n* Now if a display is disabled it doesn't perform any calculations which may help for debugging issues.\r\n* Fixes retriggers working for cards in hand when they shouldn't.\r\n* Fixes reminder_text_config not doing anything.\r\n* Fixes an issue where it would call evaluate_hand on vouchers with Cryptid.\r\n* Blueprint/Brainstorm now properly display if they're incompatible or they're copying something debuffed.\r\n* Mod icon.\r\n* (HOTFIX) Fixed Steamodded 0.9.8 compatibility. It will be dropped moving forward.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b6\\b.\\b0\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bAdd\\b \\bconfig\\b \\bmenu\\b \\bby\\b @\\bEremel\\b \\bin\\b \\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bnh6574\\b/\\bJokerDisplay\\b/\\bpull\\b/\\b38\\b\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\bchoose\\b \\bwhat\\b \\brows\\b \\bof\\b \\bthe\\b \\bdisplay\\b \\bare\\b \\bactive\\b \\bfrom\\b \\bthe\\b \\bmenu\\b.\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bselect\\b \\bto\\b \\bhide\\b \\ball\\b \\bdisplays\\b \\bwith\\b \\bno\\b \\binformation\\b (\\buseful\\b \\bif\\b \\bplaying\\b \\bwith\\b \\bmany\\b \\bunsupported\\b \\bmods\\b).\\\\br\\b\\\\bn\\b* \\bNow\\b \\byou\\b \\bcan\\b \\bdisable\\b \\bdisplays\\b \\bindividually\\b \\bby\\b \\bright\\b-\\bclicking\\b (\\bdisabling\\b \\ball\\b \\bis\\b \\bnow\\b \\bin\\b \\bthe\\b \\bsettings\\b \\bmenu\\b).\\\\br\\b\\\\bn\\b* \\bNow\\b \\bif\\b \\ba\\b \\bdisplay\\b \\bis\\b \\bdisabled\\b \\bit\\b \\bdoesn\\b'\\bt\\b \\bperform\\b \\bany\\b \\bcalculations\\b \\bwhich\\b \\bmay\\b \\bhelp\\b \\bfor\\b \\bdebugging\\b \\bissues\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\bretriggers\\b \\bworking\\b \\bfor\\b \\bcards\\b \\bin\\b \\bhand\\b \\bwhen\\b \\bthey\\b \\bshouldn\\b'\\bt\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\breminder_text_config\\b \\bnot\\b \\bdoing\\b \\banything\\b.\\\\br\\b\\\\bn\\b* \\bFixes\\b \\ban\\b \\bissue\\b \\bwhere\\b \\bit\\b \\bwould\\b \\bcall\\b \\bevaluate_hand\\b \\bon\\b \\bvouchers\\b \\bwith\\b \\bCryptid\\b.\\\\br\\b\\\\bn\\b* \\bBlueprint\\b/\\bBrainstorm\\b \\bnow\\b \\bproperly\\b \\bdisplay\\b \\bif\\b \\bthey\\b'\\bre\\b \\bincompatible\\b \\bor\\b \\bthey\\b'\\bre\\b \\bcopying\\b \\bsomething\\b \\bdebuffed\\b.\\\\br\\b\\\\bn\\b* \\bMod\\b \\bicon\\b.\\\\br\\b\\\\bn\\b* (\\bHOTFIX\\b) \\bFixed\\b \\bSteamodded\\b \\b0\\b.\\b9\\b.\\b8\\b \\bcompatibility\\b. \\bIt\\b \\bwill\\b \\bbe\\b \\bdropped\\b \\bmoving\\b \\bforward\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-20T23:17:44Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.6.0",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 19780,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.6.0/JokerDisplay.zip"
           }
@@ -1962,13 +1962,13 @@
       },
       {
         "tag": "v1.5.2",
-        "name": "v1.5.2",
-        "body": "### What's Changed\r\n* Added config options for future menu\r\n* Fixes Blueprint/Brainstorm slowing down the game\r\n* Fixes localization\r\n* Fixes Raised Fist + retriggers\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b5\\b.\\b2\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bconfig\\b \\boptions\\b \\bfor\\b \\bfuture\\b \\bmenu\\b\\\\br\\b\\\\bn\\b* \\bFixes\\b \\bBlueprint\\b/\\bBrainstorm\\b \\bslowing\\b \\bdown\\b \\bthe\\b \\bgame\\b\\\\br\\b\\\\bn\\b* \\bFixes\\b \\blocalization\\b\\\\br\\b\\\\bn\\b* \\bFixes\\b \\bRaised\\b \\bFist\\b + \\bretriggers\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-16T23:22:54Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.5.2",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 16119,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.5.2/JokerDisplay.zip"
           }
@@ -1978,13 +1978,13 @@
       },
       {
         "tag": "v1.5.1",
-        "name": "v1.5.1",
-        "body": "### What's Changed\r\nv1.5.1:\r\n* Blueprint/Brainstorm now change depending on the card they're copying :)\r\n\r\nv1.5.0:\r\nVisual changes and additions:\r\n* Extra modifiers and odds now display on top of the description\r\n* Some (very small) UI improvements\r\n* Clicking on a display now hides all extra modifiers and odds. There will be a customization option in the future.\r\n* Discard Jokers check if there's any discard left\r\n* Loyalty Card now displays (somewhat) properly\r\n\r\nBugfixes:\r\n* Fixes Blueprint/Brainstorm crashing the game\r\n\r\nAPI:\r\n* Added the ability to add extra lines on top with the API using the field \"extra\"\r\n* Renamed \"line_1\" to \"text\" and \"line_2\" to \"reminder_text\". (\"line_1\" and \"line_2\" still work for compatibility)\r\n* Changed the default parameters of \"reminder_text\" to colour = G.C.UI.TEXT_INACTIVE and scale = 0.3\r\n* Added a field to the API to change default values for each section (\"text_config\", \"reminder_text_config\" and \"extra_config\")\r\n* Added mod_function to API for Jokers that modify other Jokers (like Baseball Card)\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b5\\b.\\b1\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bnv1\\b.\\b5\\b.\\b1\\b:\\\\br\\b\\\\bn\\b* \\bBlueprint\\b/\\bBrainstorm\\b \\bnow\\b \\bchange\\b \\bdepending\\b \\bon\\b \\bthe\\b \\bcard\\b \\bthey\\b'\\bre\\b \\bcopying\\b :)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnv1\\b.\\b5\\b.\\b0\\b:\\\\br\\b\\\\bnVisual\\b \\bchanges\\b \\band\\b \\badditions\\b:\\\\br\\b\\\\bn\\b* \\bExtra\\b \\bmodifiers\\b \\band\\b \\bodds\\b \\bnow\\b \\bdisplay\\b \\bon\\b \\btop\\b \\bof\\b \\bthe\\b \\bdescription\\b\\\\br\\b\\\\bn\\b* \\bSome\\b (\\bvery\\b \\bsmall\\b) \\bUI\\b \\bimprovements\\b\\\\br\\b\\\\bn\\b* \\bClicking\\b \\bon\\b \\ba\\b \\bdisplay\\b \\bnow\\b \\bhides\\b \\ball\\b \\bextra\\b \\bmodifiers\\b \\band\\b \\bodds\\b. \\bThere\\b \\bwill\\b \\bbe\\b \\ba\\b \\bcustomization\\b \\boption\\b \\bin\\b \\bthe\\b \\bfuture\\b.\\\\br\\b\\\\bn\\b* \\bDiscard\\b \\bJokers\\b \\bcheck\\b \\bif\\b \\bthere\\b'\\bs\\b \\bany\\b \\bdiscard\\b \\bleft\\b\\\\br\\b\\\\bn\\b* \\bLoyalty\\b \\bCard\\b \\bnow\\b \\bdisplays\\b (\\bsomewhat\\b) \\bproperly\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnBugfixes\\b:\\\\br\\b\\\\bn\\b* \\bFixes\\b \\bBlueprint\\b/\\bBrainstorm\\b \\bcrashing\\b \\bthe\\b \\bgame\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnAPI\\b:\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bthe\\b \\bability\\b \\bto\\b \\badd\\b \\bextra\\b \\blines\\b \\bon\\b \\btop\\b \\bwith\\b \\bthe\\b \\bAPI\\b \\busing\\b \\bthe\\b \\bfield\\b \\\"\\bextra\\b\\\"\\\\br\\b\\\\bn\\b* \\bRenamed\\b \\\"\\bline_1\\b\\\" \\bto\\b \\\"\\btext\\b\\\" \\band\\b \\\"\\bline_2\\b\\\" \\bto\\b \\\"\\breminder_text\\b\\\". (\\\"\\bline_1\\b\\\" \\band\\b \\\"\\bline_2\\b\\\" \\bstill\\b \\bwork\\b \\bfor\\b \\bcompatibility\\b)\\\\br\\b\\\\bn\\b* \\bChanged\\b \\bthe\\b \\bdefault\\b \\bparameters\\b \\bof\\b \\\"\\breminder_text\\b\\\" \\bto\\b \\bcolour\\b = \\bG\\b.\\bC\\b.\\bUI\\b.\\bTEXT_INACTIVE\\b \\band\\b \\bscale\\b = \\b0\\b.\\b3\\b\\\\br\\b\\\\bn\\b* \\bAdded\\b \\ba\\b \\bfield\\b \\bto\\b \\bthe\\b \\bAPI\\b \\bto\\b \\bchange\\b \\bdefault\\b \\bvalues\\b \\bfor\\b \\beach\\b \\bsection\\b (\\\"\\btext_config\\b\\\", \\\"\\breminder_text_config\\b\\\" \\band\\b \\\"\\bextra_config\\b\\\")\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bmod_function\\b \\bto\\b \\bAPI\\b \\bfor\\b \\bJokers\\b \\bthat\\b \\bmodify\\b \\bother\\b \\bJokers\\b (\\blike\\b \\bBaseball\\b \\bCard\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-14T22:00:05Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.5.1",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 15518,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.5.1/JokerDisplay.zip"
           }
@@ -1994,13 +1994,13 @@
       },
       {
         "tag": "v1.5.0",
-        "name": "v1.5.0",
-        "body": "### What's Changed\r\n\r\nVisual changes and additions:\r\n* Extra modifiers and odds now display on top of the description\r\n* Some (very small) UI improvements\r\n* Clicking on a display now hides all extra modifiers and odds. There will be a customization option in the future.\r\n* Discard Jokers check if there's any discard left\r\n* Loyalty Card now displays (somewhat) properly\r\n\r\nBugfixes:\r\n* Fixes Blueprint/Brainstorm crashing the game\r\n\r\nAPI:\r\n* Added the ability to add extra lines on top with the API using the field \"extra\"\r\n* Renamed \"line_1\" to \"text\" and \"line_2\" to \"reminder_text\". (\"line_1\" and \"line_2\" still work for compatibility)\r\n* Changed the default parameters of \"reminder_text\" to colour = G.C.UI.TEXT_INACTIVE and scale = 0.3\r\n* Added a field to the API to change default values for each section (\"text_config\", \"reminder_text_config\" and \"extra_config\")\r\n* Added mod_function to API for Jokers that modify other Jokers (like Baseball Card)\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b5\\b.\\b0\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnVisual\\b \\bchanges\\b \\band\\b \\badditions\\b:\\\\br\\b\\\\bn\\b* \\bExtra\\b \\bmodifiers\\b \\band\\b \\bodds\\b \\bnow\\b \\bdisplay\\b \\bon\\b \\btop\\b \\bof\\b \\bthe\\b \\bdescription\\b\\\\br\\b\\\\bn\\b* \\bSome\\b (\\bvery\\b \\bsmall\\b) \\bUI\\b \\bimprovements\\b\\\\br\\b\\\\bn\\b* \\bClicking\\b \\bon\\b \\ba\\b \\bdisplay\\b \\bnow\\b \\bhides\\b \\ball\\b \\bextra\\b \\bmodifiers\\b \\band\\b \\bodds\\b. \\bThere\\b \\bwill\\b \\bbe\\b \\ba\\b \\bcustomization\\b \\boption\\b \\bin\\b \\bthe\\b \\bfuture\\b.\\\\br\\b\\\\bn\\b* \\bDiscard\\b \\bJokers\\b \\bcheck\\b \\bif\\b \\bthere\\b'\\bs\\b \\bany\\b \\bdiscard\\b \\bleft\\b\\\\br\\b\\\\bn\\b* \\bLoyalty\\b \\bCard\\b \\bnow\\b \\bdisplays\\b (\\bsomewhat\\b) \\bproperly\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnBugfixes\\b:\\\\br\\b\\\\bn\\b* \\bFixes\\b \\bBlueprint\\b/\\bBrainstorm\\b \\bcrashing\\b \\bthe\\b \\bgame\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bnAPI\\b:\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bthe\\b \\bability\\b \\bto\\b \\badd\\b \\bextra\\b \\blines\\b \\bon\\b \\btop\\b \\bwith\\b \\bthe\\b \\bAPI\\b \\busing\\b \\bthe\\b \\bfield\\b \\\"\\bextra\\b\\\"\\\\br\\b\\\\bn\\b* \\bRenamed\\b \\\"\\bline_1\\b\\\" \\bto\\b \\\"\\btext\\b\\\" \\band\\b \\\"\\bline_2\\b\\\" \\bto\\b \\\"\\breminder_text\\b\\\". (\\\"\\bline_1\\b\\\" \\band\\b \\\"\\bline_2\\b\\\" \\bstill\\b \\bwork\\b \\bfor\\b \\bcompatibility\\b)\\\\br\\b\\\\bn\\b* \\bChanged\\b \\bthe\\b \\bdefault\\b \\bparameters\\b \\bof\\b \\\"\\breminder_text\\b\\\" \\bto\\b \\bcolour\\b = \\bG\\b.\\bC\\b.\\bUI\\b.\\bTEXT_INACTIVE\\b \\band\\b \\bscale\\b = \\b0\\b.\\b3\\b\\\\br\\b\\\\bn\\b* \\bAdded\\b \\ba\\b \\bfield\\b \\bto\\b \\bthe\\b \\bAPI\\b \\bto\\b \\bchange\\b \\bdefault\\b \\bvalues\\b \\bfor\\b \\beach\\b \\bsection\\b (\\\"\\btext_config\\b\\\", \\\"\\breminder_text_config\\b\\\" \\band\\b \\\"\\bextra_config\\b\\\")\\\\br\\b\\\\bn\\b* \\bAdded\\b \\bmod_function\\b \\bto\\b \\bAPI\\b \\bfor\\b \\bJokers\\b \\bthat\\b \\bmodify\\b \\bother\\b \\bJokers\\b (\\blike\\b \\bBaseball\\b \\bCard\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-14T20:18:14Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.5.0",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 15276,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.5.0/JokerDisplay.zip"
           }
@@ -2010,13 +2010,13 @@
       },
       {
         "tag": "v1.4.1",
-        "name": "v1.4.1",
-        "body": "### What's Changed\r\n* You can now additionally hide the displays by right-cling on a display.\r\n* You can now hide the second row (reminder text) of the display by left-clicking it.\r\n* This updates makes the display no longer click-throughable, which might be an issue during Blind selection (but mitigated by the above change)\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b4\\b.\\b1\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\badditionally\\b \\bhide\\b \\bthe\\b \\bdisplays\\b \\bby\\b \\bright\\b-\\bcling\\b \\bon\\b \\ba\\b \\bdisplay\\b.\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\bhide\\b \\bthe\\b \\bsecond\\b \\brow\\b (\\breminder\\b \\btext\\b) \\bof\\b \\bthe\\b \\bdisplay\\b \\bby\\b \\bleft\\b-\\bclicking\\b \\bit\\b.\\\\br\\b\\\\bn\\b* \\bThis\\b \\bupdates\\b \\bmakes\\b \\bthe\\b \\bdisplay\\b \\bno\\b \\blonger\\b \\bclick\\b-\\bthroughable\\b, \\bwhich\\b \\bmight\\b \\bbe\\b \\ban\\b \\bissue\\b \\bduring\\b \\bBlind\\b \\bselection\\b (\\bbut\\b \\bmitigated\\b \\bby\\b \\bthe\\b \\babove\\b \\bchange\\b)\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-05T18:53:47Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.4.1",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 16105,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.4.1/JokerDisplay.zip"
           }
@@ -2026,13 +2026,13 @@
       },
       {
         "tag": "v1.4.0",
-        "name": "v1.4.0",
-        "body": "### What's Changed\r\n* Changed how a lot of Joker information is displayed for added consistency and to fix display issues with editions.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b4\\b.\\b0\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bChanged\\b \\bhow\\b \\ba\\b \\blot\\b \\bof\\b \\bJoker\\b \\binformation\\b \\bis\\b \\bdisplayed\\b \\bfor\\b \\badded\\b \\bconsistency\\b \\band\\b \\bto\\b \\bfix\\b \\bdisplay\\b \\bissues\\b \\bwith\\b \\beditions\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-04T23:31:12Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.4.0",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 14987,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.4.0/JokerDisplay.zip"
           }
@@ -2042,13 +2042,13 @@
       },
       {
         "tag": "v1.3.5",
-        "name": "v1.3.5",
-        "body": "### What's Changed\r\n* You can now right-click on a Joker (or press the back button on a controller) to hide all displays.\r\n* Added a retrigger function to definitions for better custom Joker support.\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into a folder inside your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b3\\b.\\b5\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bYou\\b \\bcan\\b \\bnow\\b \\bright\\b-\\bclick\\b \\bon\\b \\ba\\b \\bJoker\\b (\\bor\\b \\bpress\\b \\bthe\\b \\bback\\b \\bbutton\\b \\bon\\b \\ba\\b \\bcontroller\\b) \\bto\\b \\bhide\\b \\ball\\b \\bdisplays\\b.\\\\br\\b\\\\bn\\b* \\bAdded\\b \\ba\\b \\bretrigger\\b \\bfunction\\b \\bto\\b \\bdefinitions\\b \\bfor\\b \\bbetter\\b \\bcustom\\b \\bJoker\\b \\bsupport\\b.\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\ba\\b \\bfolder\\b \\binside\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-04T20:00:08Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.3.5",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 14971,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.3.5/JokerDisplay.zip"
           }
@@ -2058,13 +2058,13 @@
       },
       {
         "tag": "v1.3.4",
-        "name": "v1.3.4",
-        "body": "### What's Changed\r\n* Fix Constellation\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b3\\b.\\b4\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bFix\\b \\bConstellation\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-07-01T23:08:06Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.3.4",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 14425,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.3.4/JokerDisplay.zip"
           }
@@ -2074,13 +2074,13 @@
       },
       {
         "tag": "v1.3.3",
-        "name": "v1.3.3",
-        "body": "### What's Changed\r\n* Fix rental counter crashing the game again\r\n* Fix Baseball mult not displaying on debuffed jokers (#23)\r\n* Fix Misprint\r\n* Changed \"custom_node\" field in display definitions to a less generic \"dynatext\" field\r\n\r\n### Installation\r\n* Install [Steamodded](https://github.com/Steamopollys/Steamodded)\r\n* Unzip JokerDisplay.zip into your Balatro mods folder (%appdata%\\Balatro\\Mods)",
+        "name": "\\bv1\\b.\\b3\\b.\\b3\\b",
+        "body": "### \\bWhat\\b'\\bs\\b \\bChanged\\b\\\\br\\b\\\\bn\\b* \\bFix\\b \\brental\\b \\bcounter\\b \\bcrashing\\b \\bthe\\b \\bgame\\b \\bagain\\b\\\\br\\b\\\\bn\\b* \\bFix\\b \\bBaseball\\b \\bmult\\b \\bnot\\b \\bdisplaying\\b \\bon\\b \\bdebuffed\\b \\bjokers\\b (#\\b23\\b)\\\\br\\b\\\\bn\\b* \\bFix\\b \\bMisprint\\b\\\\br\\b\\\\bn\\b* \\bChanged\\b \\\"\\bcustom_node\\b\\\" \\bfield\\b \\bin\\b \\bdisplay\\b \\bdefinitions\\b \\bto\\b \\ba\\b \\bless\\b \\bgeneric\\b \\\"\\bdynatext\\b\\\" \\bfield\\b\\\\br\\b\\\\bn\\b\\\\br\\b\\\\bn\\b### \\bInstallation\\b\\\\br\\b\\\\bn\\b* \\bInstall\\b [\\bSteamodded\\b](\\bhttps\\b://\\bgithub\\b.\\bcom\\b/\\bSteamopollys\\b/\\bSteamodded\\b)\\\\br\\b\\\\bn\\b* \\bUnzip\\b \\bJokerDisplay\\b.\\bzip\\b \\binto\\b \\byour\\b \\bBalatro\\b \\bmods\\b \\bfolder\\b (%\\bappdata\\b%\\\\\\bBalatro\\b\\\\\\bMods\\b)",
         "publishedAt": "2024-06-28T19:46:04Z",
         "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.3.3",
         "assets": [
           {
-            "name": "JokerDisplay.zip",
+            "name": "\\bJokerDisplay\\b.\\bzip\\b",
             "size": 14114,
             "downloadUrl": "https://github.com/nh6574/JokerDisplay/releases/download/v1.3.3/JokerDisplay.zip"
           }
@@ -2089,7 +2089,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-23T02:12:03.031Z"
+    "versionHistoryLastCheck": "2026-02-24T02:51:04.383Z"
   },
   "JoyousSpring@nh6574": {
     "id": "JoyousSpring",
@@ -3641,7 +3641,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-23T02:22:20.746Z"
+    "versionHistoryLastCheck": "2026-02-24T02:51:04.243Z"
   },
   "Tangents@Clickseee": {
     "id": "tangent",
@@ -4803,7 +4803,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-23T02:22:18.746Z",
+    "versionHistoryLastCheck": "2026-02-24T02:51:04.301Z",
     "analytics": {
       "views": 20,
       "lastViewed": "2026-02-23T03:51:45.818Z",
