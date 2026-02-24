@@ -34,14 +34,14 @@
       "Misc"
     ],
     "analytics": {
-      "views": 15,
-      "lastViewed": "2026-02-21T03:52:16.287Z"
+      "views": 16,
+      "lastViewed": "2026-02-24T03:36:10.413Z"
     },
     "versionHistory": [
       {
         "tag": "v0.9.4a",
         "name": "v0.9.4a",
-        "body": "**(ADDITIONS)**\r\n- Added a great many consumable and joker textures\r\n\r\n**(REPAIRS)**\r\n- Fixed it so that the auto-updater doesn't crash the game when the wi-fi is disconnected\r\n\r\n**(MISC)**\r\n- Removed unnecessary comments from the localization file to make it compatible with Photon\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3d...v0.9.4a",
+        "body": "**(ADDITIONS)**\\r\\n- Added a great many consumable and joker textures\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Fixed it so that the auto-updater doesn't crash the game when the wi-fi is disconnected\\r\\n\\r\\n**(MISC)**\\r\\n- Removed unnecessary comments from the localization file to make it compatible with Photon\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3d...v0.9.4a",
         "publishedAt": "2025-07-10T06:57:51Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.4a",
         "assets": [
@@ -57,7 +57,7 @@
       {
         "tag": "v0.9.3d",
         "name": "v0.9.3d",
-        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Fixed a problem with Stand Arrows crashing with Tusk\r\n\r\n**(MISC)**\r\n- Added documentation to the self-update module, made it more modular\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3c...v0.9.3d",
+        "body": "**(ADDITIONS)**\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Fixed a problem with Stand Arrows crashing with Tusk\\r\\n\\r\\n**(MISC)**\\r\\n- Added documentation to the self-update module, made it more modular\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3c...v0.9.3d",
         "publishedAt": "2025-06-17T02:16:39Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3d",
         "assets": [
@@ -73,7 +73,7 @@
       {
         "tag": "v0.9.3c",
         "name": "v0.9.3c",
-        "body": "**(ADDITIONS)**\r\n- Added a texture for C-Moon\r\n\r\n**(REPAIRS)**\r\n- Fixed a bug with the auto-updater crashing on startup\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3b...v0.9.3c",
+        "body": "**(ADDITIONS)**\\r\\n- Added a texture for C-Moon\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Fixed a bug with the auto-updater crashing on startup\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3b...v0.9.3c",
         "publishedAt": "2025-06-16T18:17:42Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3c",
         "assets": [
@@ -89,7 +89,7 @@
       {
         "tag": "v0.9.3b",
         "name": "v0.9.3b",
-        "body": "**(ADDITIONS)**\r\n- Added a prompt when the game is started so that if you're playing an outdated version, it can download and install the most recent version automatically for you, no questions asked\r\n- Added textures for the three new decks\r\n\r\n**(REPAIRS)**\r\n- Changed some of the text on some of the localization files\r\n- Minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3a...v0.9.3b",
+        "body": "**(ADDITIONS)**\\r\\n- Added a prompt when the game is started so that if you're playing an outdated version, it can download and install the most recent version automatically for you, no questions asked\\r\\n- Added textures for the three new decks\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Changed some of the text on some of the localization files\\r\\n- Minor bug fixes\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.3a...v0.9.3b",
         "publishedAt": "2025-06-16T17:23:03Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3b",
         "assets": [
@@ -105,7 +105,7 @@
       {
         "tag": "v0.9.3a",
         "name": "v0.9.3a",
-        "body": "**(ADDITIONS)**\r\n- Added new textures to many Jokers and consumables\r\n- Added three new decks to mess around with -- they're not intended to be balanced, moreso just fun, thematic decks that play with the rarer mechanics of the mod\r\n- Added info boxes to the different Jokers to properly explain their abilities better\r\n\r\n**(REPAIRS)**\r\n- Minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2a...v0.9.3a",
+        "body": "**(ADDITIONS)**\\r\\n- Added new textures to many Jokers and consumables\\r\\n- Added three new decks to mess around with -- they're not intended to be balanced, moreso just fun, thematic decks that play with the rarer mechanics of the mod\\r\\n- Added info boxes to the different Jokers to properly explain their abilities better\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Minor bug fixes\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2a...v0.9.3a",
         "publishedAt": "2025-06-15T16:25:10Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.3a",
         "assets": [
@@ -121,7 +121,7 @@
       {
         "tag": "v0.9.2c",
         "name": "v0.9.2c",
-        "body": "**(ADDITIONS)**\r\n- Added an icon for the mod\r\n- Changed the way scraps items work so they're not clogging up the shop all the time and only appear when they can be useful\r\n\r\n**(REPAIRS)**\r\n- Patched an issue with Killer Queen not properly giving money\r\n- Other minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2b...v0.9.2c",
+        "body": "**(ADDITIONS)**\\r\\n- Added an icon for the mod\\r\\n- Changed the way scraps items work so they're not clogging up the shop all the time and only appear when they can be useful\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Patched an issue with Killer Queen not properly giving money\\r\\n- Other minor bug fixes\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2b...v0.9.2c",
         "publishedAt": "2025-06-11T19:23:48Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.2c",
         "assets": [
@@ -137,7 +137,7 @@
       {
         "tag": "v0.9.2b",
         "name": "v0.9.2b",
-        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2a...v0.9.2b",
+        "body": "**(ADDITIONS)**\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Minor bug fixes\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.2a...v0.9.2b",
         "publishedAt": "2025-06-09T13:01:38Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.2b",
         "assets": [
@@ -153,7 +153,7 @@
       {
         "tag": "v0.9.2a",
         "name": "v0.9.2a",
-        "body": "**(ADDITIONS)**\r\n- Added finalized textures to Water, Tomatoes, Meat, Caramel, Small Coin, Refined Water, and Stand Arrow consumables.\r\n\r\n**(REPAIRS)**\r\n- Fixed an issue with Heaven's Door where it wouldn't properly duplicate all the values, and broke some Tarot cards\r\n- Fixed an issue where Pearl Jam was resetting to 0X Mult at the end of the hand instead of 1X Mult\r\n- Fixed an issue where Star Platinum, The World, and The World Over Heaven were not properly getting affected by Blueprint, Brainstorm, and Moody Blues\r\n- Other small changes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.1...v0.9.2a",
+        "body": "**(ADDITIONS)**\\r\\n- Added finalized textures to Water, Tomatoes, Meat, Caramel, Small Coin, Refined Water, and Stand Arrow consumables.\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Fixed an issue with Heaven's Door where it wouldn't properly duplicate all the values, and broke some Tarot cards\\r\\n- Fixed an issue where Pearl Jam was resetting to 0X Mult at the end of the hand instead of 1X Mult\\r\\n- Fixed an issue where Star Platinum, The World, and The World Over Heaven were not properly getting affected by Blueprint, Brainstorm, and Moody Blues\\r\\n- Other small changes\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.1...v0.9.2a",
         "publishedAt": "2025-06-09T03:20:03Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.2a",
         "assets": [
@@ -169,7 +169,7 @@
       {
         "tag": "v0.9.1",
         "name": "v0.9.1",
-        "body": "**(ADDITIONS)**\r\n- Added placeholder textures for all of the consumables, similar to the ones being used for the Stands\r\n\r\n**(REPAIRS)**\r\n- Further polished and repaired Pearl Jam's functionality\r\n- Other minor bug fixes\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0a...v0.9.1",
+        "body": "**(ADDITIONS)**\\r\\n- Added placeholder textures for all of the consumables, similar to the ones being used for the Stands\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Further polished and repaired Pearl Jam's functionality\\r\\n- Other minor bug fixes\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0a...v0.9.1",
         "publishedAt": "2025-06-08T16:42:33Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.1",
         "assets": [
@@ -185,7 +185,7 @@
       {
         "tag": "v0.9.0c",
         "name": "v0.9.0c",
-        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Fixed an issue with Pearl Jam where its stats would not reset after each hand/round properly, and where it would say \"Reset\" even when there was nothing to reset\r\n\r\n**(MISC)**\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0b...v0.9.0c",
+        "body": "**(ADDITIONS)**\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Fixed an issue with Pearl Jam where its stats would not reset after each hand/round properly, and where it would say \\\"Reset\\\" even when there was nothing to reset\\r\\n\\r\\n**(MISC)**\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0b...v0.9.0c",
         "publishedAt": "2025-06-08T16:16:43Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.0c",
         "assets": [
@@ -201,7 +201,7 @@
       {
         "tag": "v0.9.0b",
         "name": "v0.9.0b",
-        "body": "**(ADDITIONS)**\r\n\r\n**(REPAIRS)**\r\n- Fixed several cooked food items from crashing the game on use\r\n- Fixed Pearl Jam not working properly with some other cooked food items\r\n\r\n**(MISC)**\r\n- Switched over the consumable sprites to the default template added in the last update\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0a...v0.9.0b",
+        "body": "**(ADDITIONS)**\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Fixed several cooked food items from crashing the game on use\\r\\n- Fixed Pearl Jam not working properly with some other cooked food items\\r\\n\\r\\n**(MISC)**\\r\\n- Switched over the consumable sprites to the default template added in the last update\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.9.0a...v0.9.0b",
         "publishedAt": "2025-06-08T16:02:49Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.0b",
         "assets": [
@@ -217,7 +217,7 @@
       {
         "tag": "v0.9.0a",
         "name": "v0.9.0a",
-        "body": "**(ADDITIONS)**\r\n- Added final textures for Hermit Purple\r\n- Added final textures for Crazy Diamond\r\n\r\n**(REPAIRS)**\r\n- Fixed a bug with Pearl Jam which prevented it from cooking food scraps\r\n- Fixed a bug with Tusk Act 1 which prevented it from increasing its X Mult\r\n- Fixed a bug with the Requiem Stands and the Stand Arrow which made frames drop significantly after viewing them\r\n- Fixed a typo in the localization\r\n\r\n**(MISC)**\r\n- Added placeholder consumable sprites to be implemented in a later update\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.9...v0.9.0a",
+        "body": "**(ADDITIONS)**\\r\\n- Added final textures for Hermit Purple\\r\\n- Added final textures for Crazy Diamond\\r\\n\\r\\n**(REPAIRS)**\\r\\n- Fixed a bug with Pearl Jam which prevented it from cooking food scraps\\r\\n- Fixed a bug with Tusk Act 1 which prevented it from increasing its X Mult\\r\\n- Fixed a bug with the Requiem Stands and the Stand Arrow which made frames drop significantly after viewing them\\r\\n- Fixed a typo in the localization\\r\\n\\r\\n**(MISC)**\\r\\n- Added placeholder consumable sprites to be implemented in a later update\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.9...v0.9.0a",
         "publishedAt": "2025-06-08T15:28:36Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.9.0a",
         "assets": [
@@ -233,7 +233,7 @@
       {
         "tag": "v0.8.9",
         "name": "v0.8.9",
-        "body": "- Added new temporary textures to all of the Jokers (except Heaven's Door)\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.1...v0.8.9",
+        "body": "- Added new temporary textures to all of the Jokers (except Heaven's Door)\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.1...v0.8.9",
         "publishedAt": "2025-06-07T20:55:37Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.8.9",
         "assets": [
@@ -249,7 +249,7 @@
       {
         "tag": "v0.8.1",
         "name": "v0.8.1",
-        "body": "Changelog:\r\n\r\n- Fixed a bug with The Mattekudasai where it would generate Tarot cards beyond the item limit\r\n- Fixed a bug with Made In Heaven where other cards could increment its speed value\r\n- Added a working texture for The Hand and added WIP textures for all of the other Stands\r\n- Added an effect to the Stand Arrow card for use in a future release\r\n- Other minor changes\r\n\r\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.0...v0.8.1",
+        "body": "Changelog:\\r\\n\\r\\n- Fixed a bug with The Mattekudasai where it would generate Tarot cards beyond the item limit\\r\\n- Fixed a bug with Made In Heaven where other cards could increment its speed value\\r\\n- Added a working texture for The Hand and added WIP textures for all of the other Stands\\r\\n- Added an effect to the Stand Arrow card for use in a future release\\r\\n- Other minor changes\\r\\n\\r\\n**Full Changelog**: https://github.com/TheCoroboCorner/JoJoMod/compare/v0.8.0...v0.8.1",
         "publishedAt": "2025-06-07T14:21:10Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.8.1",
         "assets": [
@@ -265,7 +265,7 @@
       {
         "tag": "v0.8.0",
         "name": "v0.8.0",
-        "body": "v0.8.0 Release\r\n\r\nInitial version of the mod -- 45 Jokers, 28 Consumables, 1 Sticker, 1 Spectral Card, and 1 Enhancement.\r\n\r\nTextures are still incomplete, but that'll be a v1.0.0 thing.",
+        "body": "v0.8.0 Release\\r\\n\\r\\nInitial version of the mod -- 45 Jokers, 28 Consumables, 1 Sticker, 1 Spectral Card, and 1 Enhancement.\\r\\n\\r\\nTextures are still incomplete, but that'll be a v1.0.0 thing.",
         "publishedAt": "2025-06-06T20:34:20Z",
         "htmlUrl": "https://github.com/TheCoroboCorner/JoJoMod/releases/tag/v0.8.0",
         "assets": [
@@ -279,7 +279,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-02-21T03:52:16.183Z"
+    "versionHistoryLastCheck": "2026-02-24T03:36:10.350Z"
   },
   "Maximus@the-Astra": {
     "id": "Maximus",
