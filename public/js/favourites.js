@@ -93,7 +93,7 @@ export class FavouritesManager
             try 
             {
                 const newCount = await this.toggleFavourite(modKey);
-                button.textContent = `❤ Favourite (${newCount})`;
+                button.textContent = `Favourite (${newCount})`;
             }
             catch (err)
             {

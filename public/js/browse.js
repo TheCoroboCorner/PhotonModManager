@@ -1,5 +1,6 @@
 import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from './utils.js';
 import { favouritesManager } from './favourites.js';
+import { CustomDropdown } from './customDropdown.js';
 import icons from './icons.js';
 
 class BrowsePreferences
@@ -153,6 +154,7 @@ class ModBrowser
 
         await this.loadMods();
         this.extractUrlParams();
+        this.setupCustomDropdowns();
         this.updateUIControls();
         this.extractAllTags();
         this.populateTagFilter();
@@ -355,6 +357,77 @@ class ModBrowser
         tagSelect.value = this.params.tag;
     }
 
+    setupCustomDropdowns()
+    {
+        const container = document.getElementById('filter-dropdowns');
+        if (!container)
+            return;
+
+        const sortDropdown = new CustomDropdown({
+            label: 'Sort By',
+            options: [
+                { value: 'trending', label: 'Trending' },
+                { value: 'views', label: 'Most Views' },
+                { value: 'downloads', label: 'Most Downloads' },
+                { value: 'published_at', label: 'Date Published' },
+                { value: 'updated_at', label: 'Recently Updated' },
+                { value: 'favourites', label: 'Most Favourited' }
+            ],
+            selected: this.params.sortBy,
+            onChange: (value) => this.params.sortBy = value
+        });
+
+        const orderDropdown = new CustomDropdown({
+            label: 'Order',
+            options: [
+                { value: 'desc', label: 'Descending' },
+                { value: 'asc', label: 'Ascending' }
+            ],
+            selected: this.params.order,
+            onChange: (value) => this.params.order = value
+        });
+
+        const tagDropdown = new CustomDropdown({
+            label: 'Filter by Tag',
+            options: [
+                { value: '', label: 'All Tags' },
+                { value: 'Textures', label: 'Textures' },
+                { value: 'SFX', label: 'SFX / Music' },
+                { value: 'Vanilla Plus', label: 'Vanilla Plus' },
+                { value: 'Jokers', label: 'Jokers' },
+                { value: 'Consumables', label: 'Consumables' },
+                { value: 'Cards', label: 'Cards' },
+                { value: 'Blinds', label: 'Blinds' },
+                { value: 'Modifiers', label: 'Modifiers' },
+                { value: 'Mechanics', label: 'Mechanics' },
+                { value: 'Quality of Life', label: 'Quality of Life' },
+                { value: 'Misc', label: 'Miscellaneous' }
+            ],
+            selected: this.params.tag,
+            onChange: (value) => this.params.tag = value
+        });
+
+        const typeDropdown = new CustomDropdown({
+            label: 'Type',
+            options: [
+                { value: 'mods', label: 'Mods Only' },
+                { value: 'modpacks', label: 'Modpacks Only' },
+                { value: 'all', label: 'All' }
+            ],
+            selected: this.params.type,
+            onChange: (value) => this.params.type = value
+        });
+
+        container.appendChild(sortDropdown.getElement());
+        container.appendChild(orderDropdown.getElement());
+        container.appendChild(tagDropdown.getElement());
+        container.appendChild(typeDropdown.getElement());
+
+        const applyBtn = document.getElementById('apply-filters-btn');
+        if (applyBtn)
+            applyBtn.addEventListener('click', () => this.applyFilters());
+    }
+
     calculateTrendingScore(mod)
     {
         const days = 7;
@@ -404,8 +477,8 @@ class ModBrowser
 
                     break;
                 case 'updated_at':
-                    aVal = new Date(a.updated_at || 0).getTime();
-                    bVal = new Date(b.updated_at || 0).getTime();
+                    aVal = new Date(a.updated_at || a.published_at || 0).getTime();
+                    bVal = new Date(b.updated_at || b.published_at || 0).getTime();
 
                     break;
                 case 'published_at':

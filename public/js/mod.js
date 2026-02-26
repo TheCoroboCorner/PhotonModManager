@@ -248,6 +248,12 @@ class ModDetailPage
             return;
 
         return markdown
+            // Just in case because I can't figure out what's wrong
+            .replace(/\\n/g, '\n')
+            .replace(/\\r/g, '')
+            .replace(/\\t/g, '    ')
+            .replace(/\\"/g, '"')
+            .replace(/\\\\/g, '\\')
             // Headers
             .replace(/^### (.*$)/gim, '<h4 style="margin: 0.5rem 0;">$1</h4>')
             .replace(/^## (.*$)/gim, '<h3 style="margin: 0.5rem 0;">$1</h3>')
@@ -638,26 +644,48 @@ class ModDetailPage
             card.style.boxShadow = '0 8px 20px rgba(102, 126, 234, 0.3)';
         });
 
-        card.addEventListener('mouseenter', () => {
+        card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0)';
             card.style.borderColor = 'rgba(102, 126, 234, 0.2)';
             card.style.boxShadow = 'none';
         });
 
-        card.addEventListener('click', () => {
-            window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`;
-        });
+        card.addEventListener('click', () => window.location.href = `/mod.html?key=${encodeURIComponent(mod.key)}`);
 
+        const statsContainer = document.createElement('div');
+        statsContainer.style.cssText = 'display: flex; gap: 0.5rem; align-items: center; font-size: 0.75rem; color: var(--text-secondary);';
+        
+        const heartIcon = icons.create('heart-filled', { size: 12, color: 'rgba(255, 59, 118, 0.8)' });
+        const favSpan = document.createElement('span');
+        favSpan.style.cssText = 'display: inline-flex; align-items: center; gap: 0.25rem;';
+        favSpan.appendChild(heartIcon);
+        favSpan.appendChild(document.createTextNode(mod.favourites || 0));
+        
+        statsContainer.appendChild(favSpan);
+        
+        if (mod.tags && mod.tags.length > 0) 
+        {
+            const separator = document.createElement('span');
+            separator.textContent = '•';
+            statsContainer.appendChild(separator);
+            
+            const tagIcon = icons.create('tags', { size: 12, color: 'rgba(102, 126, 234, 0.8)' });
+            const tagSpan = document.createElement('span');
+            tagSpan.style.cssText = 'display: inline-flex; align-items: center; gap: 0.25rem;';
+            tagSpan.appendChild(tagIcon);
+            tagSpan.appendChild(document.createTextNode(mod.tags.length));
+            
+            statsContainer.appendChild(tagSpan);
+        }
+        
         card.innerHTML = `
             <h4 style="margin: 0 0 0.5rem 0; color: var(--text-white); font-size: 1rem;">${mod.name}</h4>
             <p style="margin: 0 0 0.5rem 0; font-size: 0.875rem; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                 ${mod.description || 'No description'}
             </p>
-            <div style="display: flex; gap: 0.5rem; align-items: center; font-size: 0.75rem; color: var(--text-secondary);">
-                <span>❤️ ${mod.favourites || 0}</span>
-                ${mod.tags ? `<span>•</span><span>🏷️ ${mod.tags.length}</span>` : ''}
-            </div>
         `;
+        
+        card.appendChild(statsContainer);
 
         return card;
     }
