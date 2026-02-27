@@ -1,6 +1,7 @@
 import { fetchJson, formatDate, formatAuthor, parseModKey, getUrlParams } from './utils.js';
 import { favouritesManager } from './favourites.js';
 import { CustomDropdown } from './customDropdown.js';
+import { MultiSelectDropdown } from './multiSelectDropdown.js';
 import icons from './icons.js';
 
 class BrowsePreferences
@@ -138,7 +139,7 @@ class ModBrowser
         this.params = {
             sortBy: 'trending',
             order: 'desc',
-            tag: '',
+            tag: [],
             author: '',
             search: '',
             type: 'mods',
@@ -387,10 +388,9 @@ class ModBrowser
             onChange: (value) => this.params.order = value
         });
 
-        const tagDropdown = new CustomDropdown({
-            label: 'Filter by Tag',
+        const tagDropdown = new MultiSelectDropdown({
+            label: 'Filter by Tags',
             options: [
-                { value: '', label: 'All Tags' },
                 { value: 'Textures', label: 'Textures' },
                 { value: 'SFX', label: 'SFX / Music' },
                 { value: 'Vanilla Plus', label: 'Vanilla Plus' },
@@ -403,8 +403,13 @@ class ModBrowser
                 { value: 'Quality of Life', label: 'Quality of Life' },
                 { value: 'Misc', label: 'Miscellaneous' }
             ],
-            selected: this.params.tag,
-            onChange: (value) => this.params.tag = value
+            selected: this.params.tags || [],
+            onChange: (values) => {
+                this.params.tags = values;
+                const toggle = document.getElementById('tag-logic-toggle');
+                if (toggle)
+                    toggle.style.display = values.length > 1 ? 'block' : 'none';
+            }
         });
 
         const typeDropdown = new CustomDropdown({
@@ -529,8 +534,25 @@ class ModBrowser
         else if (this.params.type === 'modpacks')
             entries = entries.filter(mod => mod.type === 'Modpack');
 
-        if (this.params.tag)
-            entries = entries.filter(mod => Array.isArray(mod.tags) && mod.tags.includes(this.params.tag));
+        if (this.params.tags && this.params.tags.length > 0) 
+        {
+            const useAndLogic = document.getElementById('tag-and-logic')?.checked || false;
+            
+            if (useAndLogic) 
+            {
+                entries = entries.filter(mod => {
+                    const modTags = Array.isArray(mod.tags) ? mod.tags : [];
+                    return this.params.tags.every(tag => modTags.includes(tag));
+                });
+            } 
+            else 
+            {
+                entries = entries.filter(mod => {
+                    const modTags = Array.isArray(mod.tags) ? mod.tags : [];
+                    return this.params.tags.some(tag => modTags.includes(tag));
+                });
+            }
+        }
         
         if (this.params.author) 
         {

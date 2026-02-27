@@ -94,6 +94,16 @@
                 <!-- Dropdowns will be inserted here by JavaScript -->
               </div>
 
+              <div id="tag-logic-toggle" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px; border-left: 3px solid var(--accent-blue);">
+                <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-white); cursor: pointer;">
+                  <input type="checkbox" id="tag-and-logic" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--accent-blue);">
+                  <span style="font-weight: 600;">Require ALL selected tags</span>
+                </label>
+                <p style="margin: 0.5rem 0 0 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                  When unchecked, shows mods with ANY of the selected tags
+                </p>
+              </div>
+
               <div style="text-align: center; margin-top: 1.5rem;">
                 <button class="click-me" id="apply-filters-btn" type="button">
                   Apply Filters

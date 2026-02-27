@@ -1,6 +1,7 @@
 import { fetchJson, getUrlParams } from './utils.js';
 import { formatMarkup, replaceVariables } from './formatter.js';
 import { toast } from './toast.js';
+import { CustomDropdown } from './customDropdown.js';
 
 class WikiPage
 {
@@ -196,33 +197,35 @@ class WikiPage
 
     populateCardSelector()
     {
-        const selectEl = document.getElementById('card-select');
-        if (!selectEl)
+        const container = document.getElementById('card-select-container');
+        if (!container)
         {
-            console.error('[Wiki] Card select element not found!');
+            console.error('[Wiki] Card select container not found!');
             return;
         }
 
-        selectEl.innerHTML = '<option value="" disabled selected>-- Choose a Card --</option>';
-
         const groups = this.groupCardsByType();
-
+        
+        const options = [{ value: '', label: '-- Choose a Card --', disabled: true }];
+        
         for (const [type, items] of Object.entries(groups))
         {
-            const optgroup = document.createElement('optgroup');
-            optgroup.label = type;
-
-            items.forEach(({ card, idx }) => {
-                const option = document.createElement('option');
-                option.value = idx;
-                option.textContent = this.getCardDisplayName(card);
-
-                optgroup.appendChild(option);
-            });
-
-            selectEl.appendChild(optgroup);
+            items.forEach(({ card, idx }) => options.push({ value: idx.toString(), label: `[${type}] ${this.getCardDisplayName(card)}` }));
         }
-
+        
+        this.cardDropdown = new CustomDropdown({
+            label: 'Select Card',
+            options: options,
+            selected: '',
+            onChange: (value) => {
+                const idx = parseInt(value, 10);
+                if (!isNaN(idx) && idx >= 0)
+                    this.showCard(idx);
+            }
+        });
+        
+        container.appendChild(this.cardDropdown.getElement());
+        
         console.log('[Wiki] Populated selector with', Object.keys(groups).length, 'groups');
     }
 
