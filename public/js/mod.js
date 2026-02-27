@@ -129,12 +129,16 @@ class ModDetailPage
 
     openLightbox(imagePath)
     {
+        let normalizedPath = imagePath;
+        if (normalizedPath && !normalizedPath.startsWith('/') && !normalizedPath.startsWith('http'))
+            normalizedPath = '/' + normalizedPath;
+        
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
         lightbox.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); display: flex; align-items: center; justify-content: center; z-index: 2000; animation: fadeIn 0.2s;';
 
         lightbox.innerHTML = `
-            <img src="${imagePath}" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px;">
+            <img src="${normalizedPath}" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px;">
             <button style="position: absolute; top: 2rem; right: 2rem; background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 2rem; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; transition: background 0.2s; line-height: 1;">&times;</button>
         `;
 
@@ -567,19 +571,30 @@ class ModDetailPage
         `;
 
         const img = document.createElement('img');
-        img.src = image.path;
+        
+        let imagePath = image.path;
+        if (imagePath && !imagePath.startsWith('/') && !imagePath.startsWith('http'))
+            imagePath = '/' + imagePath;
+        
+        console.log('[ModDetail] Loading image:', imagePath);
+        
+        img.src = imagePath;
         img.alt = image.originalName || `Screenshot ${index + 1}`;
         img.style.cssText = 'width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;';
         
         img.onload = () => console.log('[ModDetail] ✅ Image loaded:', image.path);
         
-        img.onerror = () => {
-            console.error('[ModDetail] Failed to load image:', image.path);
+        img.onerror = (e) => {
+            console.error('[ModDetail] Failed to load image:', imagePath);
+            console.error('[ModDetail] Image object:', image);
+            console.error('[ModDetail] Error event:', e);
+            
             card.innerHTML = `
                 <div style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: rgba(255, 59, 48, 0.1); color: var(--text-secondary);">
                     <div style="text-align: center;">
                         <div style="font-size: 2rem;">❌</div>
                         <div style="font-size: 0.875rem; margin-top: 0.5rem;">Failed to load</div>
+                        <div style="font-size: 0.75rem; margin-top: 0.25rem; opacity: 0.7;">${imagePath}</div>
                     </div>
                 </div>
             `;

@@ -1073,11 +1073,11 @@ class ModBrowser
         }
 
         const footer = document.createElement('div');
-        footer.style.cssText = 'display: flex; flex-direction: column; gap: 0.75rem; align-items: left; flex-wrap: wrap; margin-top: 1rem;';
+        footer.style.cssText = 'display: flex; flex-direction: column; gap: 0.75rem; align-items: left; flex-wrap: wrap; margin-top: 1rem; position: relative;';
 
         // Stats section
         const statsDiv = document.createElement('div');
-        statsDiv.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex: 1;';
+        statsDiv.style.cssText = 'display: flex; gap: 1rem; align-items: center; flex: 1; position: relative; z-index: 10;';
 
         // Favourites count
         const favStat = document.createElement('button');
@@ -1092,6 +1092,8 @@ class ModBrowser
             gap: 0.25rem;
             border-radius: 4px;
             transition: all 0.2s;
+            position: relative;
+            z-index: 10;
         `;
         favStat.title = 'Sort by favourites';
 
@@ -1131,6 +1133,8 @@ class ModBrowser
                 gap: 0.25rem;
                 border-radius: 4px;
                 transition: all 0.2s;
+                position: relative;
+                z-index: 10;
             `;
             viewStat.title = 'Sort by views';
             
@@ -1171,6 +1175,8 @@ class ModBrowser
                 gap: 0.25rem;
                 border-radius: 4px;
                 transition: all 0.2s;
+                position: relative;
+                z-index: 10;
             `;
             dlStat.title = 'Sort by downloads';
             
@@ -1199,7 +1205,7 @@ class ModBrowser
 
         // Buttons container
         const buttonsDiv = document.createElement('div');
-        buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem; flex-wrap: wrap;';
+        buttonsDiv.style.cssText = 'display: flex; gap: 0.5rem; flex-wrap: wrap; position: relative; z-index: 1;';
 
         const { owner, repo } = parseModKey(mod.key);
 
@@ -1271,14 +1277,26 @@ class ModBrowser
         const searchInput = document.getElementById('search-input');
         if (searchInput) 
         {
+            const newSearchInput = searchInput.cloneNode(true);
+            searchInput.parentNode.replaceChild(newSearchInput, searchInput);
+            
             let timeout;
-            searchInput.addEventListener('input', (e) => {
+            newSearchInput.addEventListener('input', (e) => {
                 clearTimeout(timeout);
                 timeout = setTimeout(() => {
                     this.params.search = e.target.value;
-
                     this.applyFilters();
-                }, 500);
+                }, 300);
+            });
+            
+            newSearchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') 
+                {
+                    e.preventDefault();
+
+                    this.params.search = e.target.value;
+                    this.applyFilters();
+                }
             });
         }
 
