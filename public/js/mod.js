@@ -181,7 +181,8 @@ class ModDetailPage
             const badge = isLatest ? '<span style="background: linear-gradient(135deg, #4BC292 0%, #56A887 100%); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; color: white; margin-left: 0.5rem; font-weight: 700;">LATEST</span>' : '';
             
             const releaseBody = release.body || '';
-            const lines = releaseBody.split('\n');
+            const normalized = releaseBody.replace(/\\n/g, '\n').replace(/\\r/g, '');
+            const lines = normalized.split('\n');
             const needsCollapse = lines.length > 5;
             
             const releaseId = `release-${index}`;
