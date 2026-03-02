@@ -4,7 +4,7 @@ import path from 'path';
 import fs from 'fs/promises';
 import { config } from '../config.js';
 import { readData, writeData } from '../dataService.js';
-import { backupDataJson } from '../github-backup.js';
+import { backupDataJson, backupModUserImages } from '../github-backup.js';
 
 const router = express.Router();
 
@@ -57,6 +57,7 @@ router.post('/upload-images', upload.array('images', 10), async (req, res) => {
 
         await writeData(data);
         backupDataJson().catch(console.error);
+        backupModUserImages(modKey).catch(err => console.error('[Upload] Failed to backup images:', err.message));
 
         res.json({ success: true, images: imagePaths });
     }

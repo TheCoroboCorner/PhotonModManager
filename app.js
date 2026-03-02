@@ -22,7 +22,7 @@ async function startServer()
         app.use(express.urlencoded({ extended: true }));
         app.use(express.json());
         app.use(express.static(config.paths.public));
-        app.use('/wiki-data', express.static(config.paths.wikiData, { maxAge: '1d', immutable: true }));
+        app.use('/wiki-data', express.static(config.paths.wikiData, { maxAge: '1d', etag: true }));
 
         app.use(cookieMiddleware);
         app.use(securityHeadersMiddleware);

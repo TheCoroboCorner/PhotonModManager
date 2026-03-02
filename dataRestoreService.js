@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
-import { config } from './config.js';
 import path from 'path';
+import { config } from './config.js';
 
 let dataRestored = false;
 
@@ -20,14 +20,13 @@ export async function restoreDataOnStartup()
         const repo = process.env.GITHUB_REPO;
         const branch = 'main';
 
-        const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/data.json`;
+        const dataUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/data.json`;
+        console.log('[DataRestore] Fetching data.json from:', dataUrl);
 
-        console.log('[DataRestore] Fetching from:', url);
-
-        const response = await fetch(url, { headers: config.github.headers });
-        if (!response.ok)
+        const dataResponse = await fetch(dataUrl, { headers: config.github.headers });
+        if (!dataResponse.ok)
         {
-            console.error(`[DataRestore] Failed to fetch backup: ${response.status} ${response.statusText}`);
+            console.error(`[DataRestore] Failed to fetch data.json: ${dataResponse.status} ${dataResponse.statusText}`);
 
             const localExists = await fs.access(config.paths.data).then(() => true).catch(() => false);
 
@@ -46,7 +45,7 @@ export async function restoreDataOnStartup()
             }
         }
 
-        const backupData = await response.text();
+        const backupData = await dataResponse.text();
 
         try
         {
@@ -63,8 +62,10 @@ export async function restoreDataOnStartup()
         const data = JSON.parse(backupData);
         const modCount = Object.keys(data).length;
 
-        console.log('[DataRestore] Successfully restored data from GitHub backup');
+        console.log('[DataRestore] Successfully restored data.json from GitHub');
         console.log(`[DataRestore] Loaded ${modCount} mods`);
+
+        await restoreModImages(owner, repo, branch);
 
         dataRestored = true;
     }
@@ -84,6 +85,115 @@ export async function restoreDataOnStartup()
             await fs.writeFile(config.paths.data, '{}', 'utf8');
             dataRestored = true;
         }
+    }
+}
+
+async function restoreModImages(owner, repo, branch)
+{
+    console.log('[DataRestore] Restoring user-uploaded images...');
+
+    try
+    {
+        const cacheUrl = `https://api.github.com/repos/${owner}/${repo}/contents/wiki-data-cache`;
+        const cacheResponse = await fetch(cacheUrl, { headers: config.github.headers });
+
+        if (!cacheResponse.ok)
+        {
+            console.log('[DataRestore] No wiki-data-cache found on GitHub');
+            return;
+        }
+
+        const cacheDirs = await cacheResponse.json();
+        
+        if (!Array.isArray(cacheDirs))
+        {
+            console.log('[DataRestore] Unexpected response format from GitHub');
+            return;
+        }
+
+        const modKeys = cacheDirs
+            .filter(item => item.type === 'dir')
+            .map(item => item.name);
+
+        console.log(`[DataRestore] Found ${modKeys.length} mods with potential images`);
+
+        let restoredCount = 0;
+
+        for (const modKey of modKeys)
+        {
+            const restored = await restoreModKeyImages(owner, repo, branch, modKey);
+            if (restored > 0)
+                restoredCount += restored;
+        }
+
+        console.log(`[DataRestore] Restored ${restoredCount} images total`);
+    }
+    catch (err)
+    {
+        console.error('[DataRestore] Error restoring images:', err.message);
+    }
+}
+
+async function restoreModKeyImages(owner, repo, branch, modKey)
+{
+    try
+    {
+        const imagesUrl = `https://api.github.com/repos/${owner}/${repo}/contents/wiki-data-cache/${modKey}/images`;
+        const imagesResponse = await fetch(imagesUrl, { headers: config.github.headers });
+
+        if (!imagesResponse.ok)
+            return 0;
+
+        const images = await imagesResponse.json();
+        
+        if (!Array.isArray(images))
+            return 0;
+
+        const imageFiles = images.filter(item => item.type === 'file');
+
+        if (imageFiles.length === 0)
+            return 0;
+
+        console.log(`[DataRestore] Restoring ${imageFiles.length} images for ${modKey}...`);
+
+        const localImagesDir = path.join(config.paths.wikiData, modKey, 'images');
+        await fs.mkdir(localImagesDir, { recursive: true });
+
+        let restoredCount = 0;
+
+        for (const imageFile of imageFiles)
+        {
+            try
+            {
+                const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/wiki-data-cache/${modKey}/images/${imageFile.name}`;
+                const imageResponse = await fetch(rawUrl, { headers: config.github.headers });
+
+                if (!imageResponse.ok)
+                {
+                    console.error(`[DataRestore] Failed to download ${imageFile.name}: ${imageResponse.status}`);
+                    continue;
+                }
+
+                const buffer = await imageResponse.arrayBuffer();
+                const localPath = path.join(localImagesDir, imageFile.name);
+                
+                await fs.writeFile(localPath, Buffer.from(buffer));
+                
+                console.log(`[DataRestore] Restored ${imageFile.name} for ${modKey}`);
+                restoredCount++;
+            }
+            catch (err)
+            {
+                console.error(`[DataRestore] Failed to restore ${imageFile.name}:`, err.message);
+            }
+        }
+
+        return restoredCount;
+    }
+    catch (err)
+    {
+        console.error(`[DataRestore] Error restoring images for ${modKey}:`, err.message);
+        return 0;
     }
 }
 

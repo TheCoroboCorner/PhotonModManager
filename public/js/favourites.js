@@ -80,7 +80,7 @@ export class FavouritesManager
     {
         const button = document.createElement('button');
         button.className = 'favourite-btn click-me';
-        button.textContent = `❤ Favourite (${currentCount})`;
+        button.textContent = `Favourite (${currentCount})`;
         button.style.width = '160px';
         button.style.height = '30px';
 
