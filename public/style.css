@@ -1815,7 +1815,7 @@ body
 
 /* Responsive */
 
-@media (min-width: 481px) and (max-width: 768px)
+@media (max-width: 768px)
 {
   #trending-list h3,
   #trending-list a
