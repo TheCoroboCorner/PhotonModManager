@@ -119,52 +119,6 @@ async function backupWikiImages(modKey, versionTag)
   }
 }
 
-async function backupModImages(modKey)
-{
-  const localImagesDir = path.join(config.paths.wikiData, modKey, 'images');
-
-  let files;
-  try
-  {
-    files = await fs.readdir(localImagesDir);
-  }
-  catch
-  {
-    return;
-  }
-
-  const imageFiles = files.filter(f => {
-    const ext = f.toLowerCase().split('.').pop();
-    return ['png', 'jpg', 'jpeg', 'gif', 'webp'].includes(ext);
-  });
-
-  if (imageFiles.length === 0)
-  {
-    console.log(`[Backup] No user images to backup for ${modKey}`);
-    return;
-  }
-
-  console.log(`[Backup] Backing up ${imageFiles.length} user images for ${modKey}...`);
-
-  for (const fileName of imageFiles)
-  {
-    const fullPath = path.join(localImagesDir, fileName);
-    const repoPath = `wiki-data-cache/${modKey}/images/${fileName}`;
-
-    try
-    {
-      const buffer = await fs.readFile(fullPath);
-      const base64 = buffer.toString('base64');
-
-      await uploadFile(repoPath, base64, `Backup image ${fileName} for ${modKey}`);
-    }
-    catch (err)
-    {
-      console.error(`[Backup] Failed to backup ${fileName}:`, err.message);
-    }
-  }
-}
-
 export async function backupAllModImages()
 {
   const wikiDataDir = config.paths.wikiData;
@@ -226,7 +180,7 @@ async function backupModImages(modKey)
   {
     files = await fs.readdir(localImagesDir);
   }
-  catch (err)
+  catch
   {
     return;
   }
@@ -248,19 +202,13 @@ async function backupModImages(modKey)
   {
     const fullPath = path.join(localImagesDir, fileName);
     const repoPath = `wiki-data-cache/${modKey}/images/${fileName}`;
-    
+
     try
     {
       const buffer = await fs.readFile(fullPath);
       const base64 = buffer.toString('base64');
 
-      await uploadFile(
-        repoPath,
-        base64,
-        `Backup image ${fileName} for ${modKey}`
-      );
-      
-      console.log(`[Backup] Backed up ${fileName} for ${modKey}`);
+      await uploadFile(repoPath, base64, `Backup image ${fileName} for ${modKey}`);
     }
     catch (err)
     {
