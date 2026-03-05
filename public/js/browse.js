@@ -1362,7 +1362,6 @@ class ModBrowser
             document.getElementById('sort-by'),
             document.getElementById('sort-order'),
             document.getElementById('type-filter'),
-            document.getElementById('search-input'),
             ...document.querySelectorAll('[name="tags"]')
         ].filter(Boolean);
 
