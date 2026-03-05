@@ -1035,7 +1035,11 @@
     ],
     "readme": "",
     "published_at": "2025-06-19T18:02:01.854Z",
-    "type": "Mod"
+    "type": "Mod",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-03-05T20:51:07.726Z"
+    }
   },
   "SealsOnJokers@Somethingcom515": {
     "id": "SealsOnEverything",
