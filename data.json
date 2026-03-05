@@ -279,7 +279,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.362Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.390Z"
   },
   "Maximus@the-Astra": {
     "id": "Maximus",
@@ -316,16 +316,16 @@
     },
     "versionHistory": [
       {
-        "tag": "v1.2.8",
-        "name": "v1.2.8",
-        "body": "## Changes\\r\\nMany of the following changes were made to utilize the new SMODS version (1501a)\\r\\n- Enter Maurice and Detective implementations are now less invasive\\r\\n- Horoscope cardarea should no longer cause conflicts with button alignment\\r\\n- Custom Maximus menu overhauled to use new SMODS methods\\r\\n\\r\\n## Fixes\\r\\n- Fix Obelisk the Tormentor's scaling message showing as \\\"ERROR\\\"\\r\\n- Fix Perspective potentially causing crashes with other mods due to expecting hand contents (#51)\\r\\n\\r\\n## Installation\\r\\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\\r\\n\\r\\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!## Fixes\\r\\n- Fix Honorable Joker destroying itself when created by Judgement\\r\\n- Fix Microwave and Leftovers causing crashes due to half-assed checks\\r\\n- Fix Abyss destroying itself instead of a chosen card (also change method of pseudorandom usages)\\r\\n\\r\\n## Installation\\r\\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\\r\\n\\r\\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
+        "tag": "v1.2.8b",
+        "name": "v1.2.8b",
+        "body": "## Changes\\r\\nMany of the following changes were made to utilize the new SMODS version (1501a)\\r\\n- Enter Maurice and Detective implementations are now less invasive\\r\\n- Horoscope cardarea should no longer cause conflicts with button alignment\\r\\n- Custom Maximus menu overhauled to use new SMODS methods\\r\\n\\r\\n## Fixes\\r\\n- Fix Obelisk the Tormentor's scaling message showing as \\\"ERROR\\\"\\r\\n- Fix Perspective potentially causing crashes with other mods due to expecting hand contents (#51)\\r\\n\\r\\n### 1.2.8b Fixes\\r\\n- Fixed Overgrowth challenge ante scaling not being applied\\r\\n- Fixed Hip to be Square challenge causing crashes on startup\\r\\n\\r\\n## Installation\\r\\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\\r\\n\\r\\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!## Fixes\\r\\n- Fix Honorable Joker destroying itself when created by Judgement\\r\\n- Fix Microwave and Leftovers causing crashes due to half-assed checks\\r\\n- Fix Abyss destroying itself instead of a chosen card (also change method of pseudorandom usages)\\r\\n\\r\\n## Installation\\r\\nUnzip the `Maximus-main.zip` file in your `%Appdata%/Roaming/Balatro/mods` folder. This assumes you have already installed Steamodded. If you have not, then please follow the installation instructions for it [here.](https://github.com/Steamodded/smods/wiki)\\r\\n\\r\\n## Join the [Discord](https://discord.gg/GvCCcryM48) to stay up-to-date on planned features and bug fixes!",
         "publishedAt": "2026-03-01T03:40:54Z",
-        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.8",
+        "htmlUrl": "https://github.com/the-Astra/Maximus/releases/tag/v1.2.8b",
         "assets": [
           {
             "name": "Maximus-main.zip",
-            "size": 2658913,
-            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.8/Maximus-main.zip"
+            "size": 2658997,
+            "downloadUrl": "https://github.com/the-Astra/Maximus/releases/download/v1.2.8b/Maximus-main.zip"
           }
         ],
         "prerelease": false,
@@ -796,7 +796,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.068Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.396Z"
   },
   "grab-bag@thefaketh30ne": {
     "id": "GrabBag",
@@ -829,7 +829,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:47.363Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.390Z"
   },
   "Lucky-Rabbit@Trif3ctal": {
     "id": "LuckyRabbit",
@@ -1019,7 +1019,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.366Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.390Z"
   },
   "Ortalab@Eremel": {
     "id": "ortalab",
@@ -1258,7 +1258,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.360Z",
+    "versionHistoryLastCheck": "2026-03-05T20:06:04.840Z",
     "analytics": {
       "views": 1,
       "lastViewed": "2026-02-04T18:12:37.488Z"
@@ -1697,7 +1697,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.366Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.332Z"
   },
   "JokerDisplay@nh6574": {
     "id": "JokerDisplay",
@@ -2089,7 +2089,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.391Z"
   },
   "JoyousSpring@nh6574": {
     "id": "JoyousSpring",
@@ -2335,7 +2335,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.160Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.396Z"
   },
   "balatro-typist-mod@kasimeka": {
     "id": "typist",
@@ -2562,7 +2562,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:47.965Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.389Z"
   },
   "SystemClock@Breezebuilder": {
     "id": "SystemClock",
@@ -2819,7 +2819,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.361Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.389Z"
   },
   "DismissAlert@Breezebuilder": {
     "id": "DismissAlert",
@@ -2852,7 +2852,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.280Z"
   },
   "Balatro-Aikoyoris-Shenanigans@Aikoyori": {
     "id": "aikoyorisshenanigans",
@@ -2875,6 +2875,16 @@
     "type": "Mod",
     "tags": [],
     "versionHistory": [
+      {
+        "tag": "0.2.0-alpha-260304f",
+        "name": "0.2.0-alpha-260304f",
+        "body": "## March Maintenance Release\\r\\nWhy do my maintenance release come with new content? Because I feel like it.\\r\\n\\r\\n## Additions\\r\\n- Added Replicant Tag which gives you a (Normal Sized) Replica Pack\\r\\n\\r\\n## Changes\\r\\n- Aikoyori has been resprited\\r\\n\\t- Menu Colours has been tweaked as a result\\r\\n- Bumped SMODS & Lovely Requirements\\r\\n- Moved Oxidising Stake to be above Bismuth Stake\\r\\n- Added Music pool to Jokers (#51)\\r\\n- ???\\r\\n\\r\\n## Fixes\\r\\n- Preliminary Fix for Bishop Ring never appearing ever (now it should appear a bit more often, maybe a bit TOO often)\\r\\n- Extra Defensive Bulwark Hardcore Challenge no longer crashes when opening Standard Packs (#52 )",
+        "publishedAt": "2026-03-04T15:23:26Z",
+        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-260304f",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
       {
         "tag": "0.2.0-alpha-260207b",
         "name": "0.2.0-alpha-260207b",
@@ -3164,19 +3174,9 @@
         "assets": [],
         "prerelease": false,
         "draft": false
-      },
-      {
-        "tag": "0.2.0-alpha-251104h",
-        "name": "0.2.0-alpha-251104h",
-        "body": "- Fixed Sliced edition (mostly) for real now\\r\\n- Also forgot to mention that last update did some rebalancing so",
-        "publishedAt": "2025-11-03T19:51:36Z",
-        "htmlUrl": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/releases/tag/0.2.0-alpha-251104h",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.160Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.391Z"
   },
   "BalatroBakery@BakersDozenBagels": {
     "id": "Bakery",
@@ -3205,7 +3205,7 @@
     ],
     "readme": "# Bakery\n\nA mod for [Balatro](https://www.playbalatro.com/) that adds various miscellaneous things, created by BakersDozenBagels.\n\nAdditions are generally meant to be well-balanced with vanilla, although the decks are a bit wackier.\n\nCurrent contents:\n\n- 22 Jokers\n- 10 Charms (a new kind of thing in the shop)\n- 20 Tags\n- 3 Decks\n- 3 [Deck Sleeves](https://github.com/larswijn/CardSleeves)\n- 5 Blinds\n- 3 Challenges\n- 1 Tarot Card\n- 2 Spectral Cards\n- 2 Enhancements\n- 1 Edition\n- Miscellaneous modding API features (If this mod does something interesting, it can probably be used as a dependency to do that thing)\n\n## Cross-Mod Content\n\nWith certain other mods installed, Bakery will add extra items:\n- [Revo's Vault](https://github.com/Cdrvo/Revos-Vault---Balatro-Mod) - 1 Charm\n- [MoreFluff](https://github.com/notmario/MoreFluff) - 1 Charm\n- [Cryptid](https://github.com/SpectralPack/Cryptid) - 2 Charms\n\n## Installation\n\n1. Bakery requires [Steamodded](https://github.com/Steamodded/smods). Follow the instructions to install it if you haven't already.\n2. Clone this repository into your mods folder, or download it as a zip and place it there.\n3. Enjoy!\n\n## Lite Version\n\nIf another mod depends on Bakery, but you do not want Bakery's additions, you can install the [lite version](https://github.com/BakersDozenBagels/BalatroBakery/tree/lite). This version only has a modding API and nothing else. Note that both versions can be installed together without issue so long as both are up-to-date.\n\n## Other Contributors\n\nThanks to GhostSalt (@ghost12salt) and SadCube (@sadcube) on Discord for some of the artwork used.\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.360Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.280Z"
   },
   "Balatest@BakersDozenBagels": {
     "id": "Balatest",
@@ -3229,7 +3229,7 @@
     ],
     "readme": "# Balatest - Unit Testing for Balatro\n\nBalatest is a unit testing framework for Balatro mods. See [Bakery's unit tests](https://github.com/BakersDozenBagels/BalatroBakery/tree/main/test) for example code using Balatest.\n\n## How To Use\n\nFirst, register some unit tests with `Balatest.TestPlay` (see below). Then, to run tests, execute `Balatest.run_tests()` (I recommend using [DebugPlus](https://github.com/WilsontheWolf/DebugPlus) to do so). Balatest will put test results in the console/log. You can also only run the tests from a given mod (`Balatest.run_tests 'Bakery'`) or from a category in a mod (`Balatest.run_tests('Bakery', 'blinds')`).\n\n## Writing Tests\n\nA test in Balatest is fundamentally a [challenge](https://github.com/Steamodded/smods/wiki/SMODS.Challenge). Many of the keys in a challenge will also work in a test. Balatest will automatically begin the challenge and navigate to the Small Blind (note that every blind is Small by default). From there, `test.execute()` is called, where you will play, discard, navigate rounds, etc. Finally, `test.assert()` is called to evaluate the results of the test.\n\n### `execute`\n\nHere you will put some actions in a queue to set up the test. Note that this queue is *not* the default one; use `Balatest.q()` to add to it (`q` accepts bare functions as well as `Event`s for added convenience. Additionally, it will automatically `return true` for you unless you explicitly `return false`).\n\nBalatest also provides some pre-built events for you (each of these adds to the queue for you):\n- `Balatest.next_round()` ends the round and navigates to the next one.\n- `Balatest.end_round()` ends the round and waits on the evaluation screen.\n- `Balatest.cash_out()` cashes out the round evaluation screen.\n- `Balatest.exit_shop()` exits the shop.\n- `Balatest.start_round()` selects the next blind.\n- `Balatest.skip_blind(for_tag)` skips the next blind for the given tag (by key).\n- `Balatest.play_hand { '2S', '10H' }` plays those cards in that order. Note that this fails if the cards are not in hand.\n- `Balatest.discard { 'Ts', 'Qc' }` discards those cards. Note that this fails if the cards are not in hand.\n- `Balatest.highlight { '2S', '10H' }` highlights those cards in that order. Note that this fails if the cards are not in hand.\n- `Balatest.unhighlight_all()` unhighlights the hand.\n- `Balatest.use(card, instant)` uses a consumable. E.g. `Balatest.use(G.consumeables.cards[1])` (you can also pass a function as in `buy`)\n- `Balatest.buy(func)` buys something from the shop. E.g. `Balatest.buy(function() return G.shop_jokers.cards[1] end)`\n- `Balatest.hook(obj, name, func)` hooks a function until the test concludes. See below for more information.\n- `Balatest.hook_raw(obj, name, new)` overwrites an object until the test concludes.\n- `Balatest.wait_for_input(state, front)` waits until the game will accept input.\n- `Balatest.reload()` saves and loads the game as if by returning to the main menu.\n- `Balatest.wait()` waits until everything currently in the standard event queue completes.\n\n### `assert`\n\nHere you will write some assertions on the final state of the test. Balatest provides a few helpers for this:\n- `Balatest.assert(bool, message?)` is a bare assertion.\n- `Balatest.assert_eq(a, b, message?)` asserts that two numbers are equal with or without Talisman.\n- `Balatest.assert_neq(a, b, message?)` asserts that two numbers are unequal with or without Talisman.\n- `Balatest.assert_chips(num, message?)` asserts that `G.GAME.chips` is equal to the supplied number.\n\n## Example Test\n\n```lua\nBalatest.TestPlay {\n    jokers = { 'j_joker' }, -- Start with a Joker\n    execute = function()\n        Balatest.play_hand { '2S' } -- Play a High Card\n    end,\n    assert = function()\n        Balatest.assert_chips(35) -- Total round score, *not* the last hand\n    end\n}\n```\n\n## Default Values\n\nBalatest will run each test with the following defaults:\n- `back = 'Red Deck'`\n- `stake = 1`\n- `seed = nil`\n- `jokers = {}`\n- `consumeables = {}`\n- `vouchers = {}`\n- `dollars = 0` (Starting money)\n- `discards = 999`\n- `hands = 999`\n- `hand_size = 52`\n- `modifiers = {}` (`challenge.rules.modifiers`)\n- `custom = {}` (`challenge.rules.custom`)\n- `deck = nil`\n- `blind = 'bl_small'`\n- `no_auto_start = false`\n\n# Advanced Features\n\n- Specify `blind = 'bl_wheel'` to make every blind The Wheel. By default, every blind is a Small Blind.\n- Specify `name = 'something'` to give your test a descriptive name. Names are automatically prefixed with your mod's ID.\n- Specify `category = 'my_category'` to be able to run a subset of your tests. You can specify multiple categories in a table.\n- Use `Balatest.run_test { ... }` to run a single test not defined elsewhere.\n- Use `Balatest.run_test 'mod_id_test_name'` to run a single test.\n- Check `Balatest.current_test` for the name of the currently running test.\n- Check `Balatest.current_test_object` for the whole config of the currently running test.\n- Inspect `Balatest.done` for more detailed results of your tests.\n\n## `Balatest.hook`\n\nSometimes it's necessary to hook a function in the middle of a test, for example to control RNG.\nBalatest provides a fixture to do this and automatically unhook the functions later.\n\nConsider the following quite silly test:\n\n```lua\nBalatest.run_test {\n    consumeables = { 'c_judgement' },\n    execute = function()\n        Balatest.hook(_G, 'create_card', function(orig, t, a, l, r, k, s, forced_key, ...)\n            return orig(t, a, l, r, k, s, 'j_chicot', ...)\n        end)\n        Balatest.use(G.consumeables.cards[1])\n    end,\n    assert = function()\n        Balatest.assert_eq(#G.consumeables.cards, 0)\n        Balatest.assert_eq(#G.jokers.cards, 1)\n        Balatest.assert(G.jokers.cards[1].config.center.key == 'j_chicot')\n    end\n}\n```\n\nHere, we force the global function `create_card` to create a Chicot (which otherwise cannot spawn from Judgement).\nNote that the first argument to the new function is the previous function.\n\n```lua\nBalatest.run_test {\n    consumeables = { 'c_judgement', 'c_judgement' },\n    execute = function()\n        Balatest.hook(_G, 'create_card', function(orig, t, a, l, r, k, s, forced_key, ...)\n            return orig(t, a, l, r, k, s, 'j_perkeo', ...)\n        end)\n        Balatest.use(G.consumeables.cards[1])\n        Balatest.hook(_G, 'create_card', function(orig, t, a, l, r, k, s, forced_key, ...)\n            return orig(t, a, l, r, k, s, 'j_caino', ...)\n        end)\n        Balatest.use(G.consumeables.cards[2]) -- The card is looked up before the other one gets destroyed.\n    end,\n    assert = function()\n        Balatest.assert_eq(#G.consumeables.cards, 0)\n        Balatest.assert_eq(#G.jokers.cards, 2)\n        Balatest.assert(G.jokers.cards[1].config.center.key == 'j_perkeo')\n        Balatest.assert(G.jokers.cards[2].config.center.key == 'j_caino')\n    end\n}\n```\n\nHere, we hook the same function twice. Note that when the second hook is applied, the first hook gets removed.\nAlso note that the application of the hook is queued.\nAfter running these tests, even if they fail, the function will be what it was originally.\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.389Z"
   },
   "LobotomyCorp@Mysthaps": {
     "id": "LobotomyCorp",
@@ -3559,7 +3559,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.391Z"
   },
   "Balatro-Dream-BBQ-Mod@Noodlemire": {
     "id": "DreamBBQ",
@@ -3577,7 +3577,7 @@
     ],
     "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.360Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.388Z"
   },
   "Alloy@TheCoroboCorner": {
     "id": "Alloy",
@@ -3641,7 +3641,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.361Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:04.840Z"
   },
   "Tangents@Clickseee": {
     "id": "tangent",
@@ -3667,7 +3667,7 @@
     ],
     "readme": "<img width=\"1550\" height=\"500\" alt=\"logo\" src=\"https://github.com/user-attachments/assets/a52bbcdb-5fcf-4ea2-ac9e-a17104bd454b\" />\n\n# Tangents\n\n Shenanigans and Randomness had a hot steamy intimate time\n\n # CREDITS TO THESE PEOPLE WHO HELPED ME/FOR THEIR CODES REFERENCE\n- N' (@nh6574 on discord)\n- Somethingcom515 (on discord)\n- BepisFever (on discord)\n- HeavenPierceHer (@kxeine_ on discord)\n- Freh (on discord) [for their timer code]\n- Aikoyori (on discord) [for their SMODS.Font tutorial]\n- PERKOLATED (on discord) [for the card title screen code]\n- SleepyG11 (on discord)\n- HuyTheKiller (on discord)\n- senfinbrare (on discord)\n- Victin (on discord)\n\n# HOW TO DOWNLOAD??????????\ngreen big obvious button on top, said download ZIP, enjyo\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.360Z",
+    "versionHistoryLastCheck": "2026-03-05T20:06:04.845Z",
     "analytics": {
       "views": 1,
       "lastViewed": "2026-01-31T17:06:01.991Z"
@@ -3792,7 +3792,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.361Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.280Z"
   },
   "pi_cubeds_jokers@pi-cubed-cat": {
     "id": "picubedsjokers",
@@ -4116,7 +4116,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.160Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.391Z"
   },
   "JustEnoughJokers@cg-223": {
     "id": "justenoughjokers",
@@ -4141,7 +4141,7 @@
       "lastViewed": "2026-01-27T10:40:10.831Z"
     },
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:04.444Z"
   },
   "bloated_1_modpack": {
     "id": "bloated_1_modpack",
@@ -4399,7 +4399,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.361Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.332Z"
   },
   "Medium@Goldofleaves": {
     "id": "Medium",
@@ -4431,7 +4431,7 @@
       "lastViewed": "2026-02-13T04:36:03.928Z"
     },
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-03-01T12:51:47.966Z"
+    "versionHistoryLastCheck": "2026-03-05T20:06:04.845Z"
   },
   "CoroboUtils@TheCoroboCorner": {
     "id": "CoroboUtils",
@@ -4484,7 +4484,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:48.360Z",
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.280Z",
     "analytics": {
       "views": 3,
       "lastViewed": "2026-02-26T04:11:33.351Z"
@@ -4529,7 +4529,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z",
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.280Z",
     "analytics": {
       "views": 5,
       "lastViewed": "2026-02-02T06:11:56.516Z"
@@ -4576,7 +4576,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z",
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.280Z",
     "analytics": {
       "views": 2,
       "lastViewed": "2026-02-02T06:14:44.762Z"
@@ -4622,6 +4622,26 @@
       }
     ],
     "versionHistory": [
+      {
+        "tag": "v1.3.1",
+        "name": "v1.3.1",
+        "body": "## What's Changed\\r\\nFix a crash with daily challenges where Entropy.srandom was removed by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/117\\r\\n\\r\\n\\r\\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.3...v1.3.1",
+        "publishedAt": "2026-03-04T19:45:19Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3",
+        "name": "v1.3",
+        "body": "## What's Changed\\r\\n* technically better mod compact by @soulware1 in https://github.com/lord-ruby/Entropy/pull/101\\r\\n* mentions of hidden consumables get {E:1} applied and use the legendary rarity color by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/104\\r\\n* make prismatic last in enhancement order by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/103\\r\\n* Fix shader crash on mobile by @WilsontheWolf in https://github.com/lord-ruby/Entropy/pull/107\\r\\n* add Music pool to jokers based on songs by @soulware1 in https://github.com/lord-ruby/Entropy/pull/106\\r\\n* allow custom reverse legendary pulsing outline colors by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/108\\r\\n* fix the rlegendary outline skipping part of its animation if it is on screen at exactly 5000 seconds after the game started running, and every 5000 seconds thereafter by @InvalidOS in https://github.com/lord-ruby/Entropy/pull/109\\r\\n* Dev by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/111\\r\\n\\r\\n## New Contributors\\r\\n* @WilsontheWolf made their first contribution in https://github.com/lord-ruby/Entropy/pull/107\\r\\n\\r\\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.2...v1.3",
+        "publishedAt": "2026-03-01T22:21:48Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
       {
         "tag": "v1.2b",
         "name": "v1.2",
@@ -4803,7 +4823,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:49.069Z",
+    "versionHistoryLastCheck": "2026-03-05T20:06:05.396Z",
     "analytics": {
       "views": 27,
       "lastViewed": "2026-03-02T02:35:51.845Z",
@@ -5022,7 +5042,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-01T12:51:47.959Z",
+    "versionHistoryLastCheck": "2026-03-05T20:06:06.332Z",
     "analytics": {
       "views": 7,
       "lastViewed": "2026-02-13T07:36:18.114Z",
