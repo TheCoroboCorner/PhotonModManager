@@ -155,12 +155,12 @@ class ModBrowser
 
         await this.loadMods();
         this.extractUrlParams();
-        this.setupCustomDropdowns();
-        this.updateUIControls();
         this.extractAllTags();
         this.populateTagFilter();
-        this.applyFilters();
+        this.setupCustomDropdowns();
         this.setupEventListeners();
+        this.updateUIControls();
+        this.applyFilters();
     }
 
     applySavedPreferences(prefs)
