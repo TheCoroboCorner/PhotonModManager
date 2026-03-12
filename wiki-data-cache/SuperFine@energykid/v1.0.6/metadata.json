@@ -1,0 +1,2159 @@
+{
+  "locMap": {
+    "supf_module_content": {
+      "name": "",
+      "text": [
+        "Content"
+      ],
+      "type": "config"
+    },
+    "supf_module_content_desc": {
+      "name": "",
+      "text": [
+        "Recommended!",
+        "If enabled, SuperFine!! will add content as usual.",
+        "This includes jokers, consumables, blinds, and more.",
+        "It's not all vanilla-styled, but tries to be balanced."
+      ],
+      "type": "config"
+    },
+    "supf_module_visual": {
+      "name": "",
+      "text": [
+        "Visual"
+      ],
+      "type": "config"
+    },
+    "supf_module_visual_desc": {
+      "name": "",
+      "text": [
+        "Recommended!",
+        "If enabled, SuperFine!! will make the game look nice.",
+        "This means some content will have extra visual effects.",
+        "Animations for some common actions may also be changed."
+      ],
+      "type": "config"
+    },
+    "j_supf_ecstaticJoker": {
+      "name": "Ecstatic Joker",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_emphasis": {
+      "name": "Emphasis!",
+      "text": [
+        "If played hand contains",
+        "all {C:attention}numbered cards{} or",
+        "{C:attention}Aces{}, last played card",
+        "gives {C:mult}+#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_voidcard": {
+      "name": "Voidcard",
+      "text": [
+        "Debuffs all jokers",
+        "to the left",
+        "of Voidcard",
+        "{X:mult,C:white}X#1#{} Mult, plus",
+        "{X:mult,C:white}X#1#{} Mult for",
+        "each joker debuffed"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_cucumber": {
+      "name": "Cucumber",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "At end of round,",
+        "{C:green}#4# in #2#{} chance to",
+        "negate this card's",
+        "effect until the",
+        "next round ends",
+        "and reduce to",
+        "{C:mult}#5#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_cucumber_alt": {
+      "name": "Cucumber",
+      "text": [
+        "Does nothing",
+        "At end of next round,",
+        "increase value back",
+        "to {C:mult}+#3#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_cicada": {
+      "name": "Cicada",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "At end of round,",
+        "multiply this",
+        "value by 2,",
+        "up to a maximum of",
+        "{C:mult}128{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_timeBomb": {
+      "name": "Time Bomb",
+      "text": [
+        "{C:mult}+#2#{} Mult after",
+        "every {C:attention}#1#th{} card",
+        "scored",
+        "{C:inactive}(Currently #3#)"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_cicadas": {
+      "name": "#2# Cicadas",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "At end of round,",
+        "multiply this",
+        "value by 2,",
+        "up to a maximum of",
+        "{C:mult}128{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_glimby": {
+      "name": "Glimby",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "If any Cucumber scores",
+        "from adjacent Joker slot,",
+        "gives {X:mult,C:white}X#2#{} Mult",
+        "then {C:red,E:1}explodes"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_hauntedHouse": {
+      "name": "Haunted House",
+      "text": [
+        "When playing a {C:blue}Full House{},",
+        "if final scoring card",
+        "is not a {C:tarot,T:m_supf_ghost}#1#{},",
+        "convert it into one",
+        "Otherwise, {C:attention}retrigger it"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_whimsy": {
+      "name": "Whimsy",
+      "text": [
+        "{C:chips}+#1#{} Chips",
+        "when played card",
+        "with an {C:attention}Enhancement",
+        "is scored"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_wonder": {
+      "name": "Wonder",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "when played card",
+        "with an {C:attention}Edition",
+        "is scored"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_luckyTicket": {
+      "name": "Lucky Ticket",
+      "text": [
+        "{C:green}#3# in #2#{} chance at",
+        "end of round to",
+        "gain {C:attention}$#1#{}"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_peoplewatching": {
+      "name": "Peoplewatching",
+      "text": [
+        "Gain {C:mult}+20{} Mult",
+        "if played hand",
+        "contains at least",
+        "{C:attention}3 face cards"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_stoneFactory": {
+      "name": "Stone Factory",
+      "text": [
+        "Create a {C:attention}#1#",
+        "and add it to",
+        "your deck if",
+        "played hand has",
+        "a {C:mult}#2#",
+        "and an {C:chips}#3#"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_archibald": {
+      "name": "Archibald",
+      "text": [
+        "Upon {C:attention}selecting",
+        "or {C:attention}skipping{} Blind,",
+        "create an {C:attention}enhanced",
+        "{C:attention}Polychrome Ace",
+        "and add them to",
+        "your deck"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_overachiever": {
+      "name": "Overachiever",
+      "text": [
+        "Played {C:attention}Aces{} give",
+        "{C:mult}+#2#{} Mult when scored",
+        "Retrigger first played",
+        "{C:attention}Ace {C:mult}#1#{} times"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_blueJava": {
+      "name": "Blue Java",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "{C:green}#7# in #2#{} chance to gain",
+        "{X:mult,C:white}X#3#{} Mult at end of round",
+        "{C:green}#7# in #4#{} chance to gain",
+        "{X:mult,C:white}X#5#{} Mult at end of round",
+        "{C:green}#7# in #6#{} chance to {C:red,E:1}reset{} to",
+        "{X:mult,C:white}X3{} Mult at end of round"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_thePayoff": {
+      "name": "The Payoff",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "Gain {C:attention}$#2#{} for each",
+        "remaining discard",
+        "and add an additional",
+        "{X:mult,C:white}X#3#{} Mult if no",
+        "discards used at",
+        "the end of the round"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_rainstorm": {
+      "name": "Storm",
+      "text": [
+        "Every {C:attention}played card",
+        "counts in scoring",
+        "Played cards that",
+        "otherwise {C:red}wouldn't",
+        "be scored will additionally",
+        "give {X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_ultimateJimbo": {
+      "name": "Ultimate Jimbo",
+      "text": [
+        "{C:mult}+#1#{} Mult",
+        "{X:mult,C:white}X1{} Mult, plus",
+        "{X:mult,C:white}X#3#{} Mult for each",
+        "card played or discarded",
+        "this round",
+        "{C:inactive}(Currently {C:white,X:inactive}X#2# {C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_murderJoker": {
+      "name": "{C:red}MURDER JOKER",
+      "text": [
+        "If played hand is a",
+        "{C:attention}Four of a Kind,",
+        "{E:1,C:red}KILL THEM ALL{} and",
+        "{E:1,C:red}STEAL{} their {E:1,C:red}WALLETS!!!",
+        "{C:inactive}(Destroys all four cards,",
+        "{C:inactive}giving you 1/4 of their",
+        "{C:inactive}rank as money)"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_enamoredJoker": {
+      "name": "Enamored Joker",
+      "text": [
+        "Cards of {V:1}#1#{} suit",
+        "give {E:1}quadruple{} the amount",
+        "of {V:1}#1#{} cards in",
+        "{C:attention}scoring hand{} as Mult",
+        "when scored",
+        "{C:inactive}(Minimum of {C:mult}+#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_engaudedJoker": {
+      "name": "Engauded Joker",
+      "text": [
+        "Cards of {V:1}#1#{} suit",
+        "give {E:1}quadruple{} the amount",
+        "of {V:1}#1#{} cards in",
+        "{C:attention}scoring hand{} as Mult",
+        "when scored",
+        "{C:inactive}(Minimum of {C:mult}+#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_enragedJoker": {
+      "name": "Enraged Joker",
+      "text": [
+        "Cards of {V:1}#1#{} suit",
+        "give {E:1}quadruple{} the amount",
+        "of {V:1}#1#{} cards in",
+        "{C:attention}scoring hand{} as Mult",
+        "when scored",
+        "{C:inactive}(Minimum of {C:mult}+#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_engorgedJoker": {
+      "name": "Engorged Joker",
+      "text": [
+        "Cards of {V:1}#1#{} suit",
+        "give {E:1}quadruple{} the amount",
+        "of {V:1}#1#{} cards in",
+        "{C:attention}scoring hand{} as Mult",
+        "when scored",
+        "{C:inactive}(Minimum of {C:mult}+#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_supf_violentVisage": {
+      "name": "Violent Visage",
+      "text": [
+        "Played {C:attention}face cards{}",
+        "permanently gain {C:chips}+#1#{}",
+        "Chips and {C:mult}+#2#{} Mult",
+        "when scored"
+      ],
+      "type": "Joker"
+    },
+    "c_supf_crystal": {
+      "name": "The Crystal",
+      "text": [
+        "Enhances {C:attention}#1#{} selected",
+        "#3#s or",
+        "#4#s into",
+        "{V:1}#2#s"
+      ],
+      "type": "Tarot"
+    },
+    "c_supf_absence": {
+      "name": "Absence",
+      "text": [
+        "Enhances up to",
+        "{C:attention}#1#{} selected cards,",
+        "{C:mult}PERMANENTLY debuffs{}",
+        "one random",
+        "card in hand"
+      ],
+      "type": "Tarot"
+    },
+    "c_supf_elements": {
+      "name": "The Elements",
+      "text": [
+        "Enhances {C:attention}leftmost{}",
+        "selected card",
+        "into a {C:mult}#1#{} and",
+        "{C:attention}rightmost{}",
+        "selected card",
+        "into a {C:chips}#2#{}"
+      ],
+      "type": "Tarot"
+    },
+    "supf_rune": {
+      "name": "Rune",
+      "text": [
+        "Convert selected Joker",
+        "into its {V:1,E:1}Attuned{} form",
+        "{C:inactive}(Compatible Jokers will glow)"
+      ],
+      "type": "Spectral"
+    },
+    "supf_shade": {
+      "name": "Shade",
+      "text": [
+        "Enhances {C:attention}#1#{} selected",
+        "cards into",
+        "{V:1}#2#s"
+      ],
+      "type": "Spectral"
+    },
+    "m_supf_ghost": {
+      "name": "Ghost Card",
+      "text": [
+        "{C:red}Does not count{} towards",
+        "selection limit"
+      ],
+      "type": "Enhanced"
+    },
+    "m_supf_obsidian": {
+      "name": "Obsidian Card",
+      "text": [
+        "{C:white,X:chips}X#1#{} Chips and {C:white,X:mult}X#2#{} Mult",
+        "No rank or suit"
+      ],
+      "type": "Enhanced"
+    },
+    "m_supf_fire": {
+      "name": "Fire Card",
+      "text": [
+        "{C:white,X:mult}X#1#{} Mult if an",
+        "{C:chips}Ice Card{} is in played hand"
+      ],
+      "type": "Enhanced"
+    },
+    "m_supf_ice": {
+      "name": "Ice Card",
+      "text": [
+        "{C:white,X:chips}X#1#{} Chips if a",
+        "{C:mult}Fire Card{} is in played hand"
+      ],
+      "type": "Enhanced"
+    },
+    "bl_supf_scroll": {
+      "name": "The Scroll",
+      "text": [
+        "Hands must not contain",
+        "exactly two suits"
+      ],
+      "type": "Blind"
+    },
+    "bl_supf_canvas": {
+      "name": "The Canvas",
+      "text": [
+        "Hands must not contain",
+        "exactly four suits"
+      ],
+      "type": "Blind"
+    },
+    "bl_supf_stack": {
+      "name": "The Stack",
+      "text": [
+        "X0.9 total chips",
+        "after each hand played"
+      ],
+      "type": "Blind"
+    },
+    "bl_supf_revenant": {
+      "name": "The Revenant",
+      "text": [
+        "-1 hand selection size",
+        "for your first hand"
+      ],
+      "type": "Blind"
+    },
+    "bl_supf_mace": {
+      "name": "The Mace",
+      "text": [
+        "Reduces rank of played",
+        "cards before scoring"
+      ],
+      "type": "Blind"
+    },
+    "bl_supf_lute": {
+      "name": "The Lute",
+      "text": [
+        "Lose $1 for each",
+        "empty Joker slot"
+      ],
+      "type": "Blind"
+    },
+    "bl_supf_sky": {
+      "name": "The Sky",
+      "text": [
+        "All cards debuffed if",
+        "less than 2 free",
+        "consumable slots"
+      ],
+      "type": "Blind"
+    },
+    "b_supf_shadow": {
+      "name": "Shadow Deck",
+      "text": [
+        "Starting {C:attention}Aces{} become",
+        "{V:1,T:m_supf_ghost}#1#s"
+      ],
+      "type": "Back"
+    }
+  },
+  "atlases": {
+    "Enhancements": {
+      "path": "supf_Enhancements.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_Enhancements.png",
+      "resolvedGitHubPath": "assets/1x/supf_Enhancements.png"
+    },
+    "Decks": {
+      "path": "supf_Decks.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_Decks.png",
+      "resolvedGitHubPath": "assets/1x/supf_Decks.png"
+    },
+    "Blinds": {
+      "path": "supf_Blinds.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_Blinds.png",
+      "resolvedGitHubPath": "assets/1x/supf_Blinds.png"
+    },
+    "Jokers": {
+      "path": "supf_Jokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_Jokers.png",
+      "resolvedGitHubPath": "assets/1x/supf_Jokers.png"
+    },
+    "AttunedJokers": {
+      "path": "supf_AttunedJokers.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_AttunedJokers.png",
+      "resolvedGitHubPath": "assets/1x/supf_AttunedJokers.png"
+    },
+    "Tarots": {
+      "path": "supf_Tarots.png",
+      "px": 65,
+      "py": 95,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_Tarots.png",
+      "resolvedGitHubPath": "assets/1x/supf_Tarots.png"
+    },
+    "Spectrals": {
+      "path": "supf_Spectrals.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_Spectrals.png",
+      "resolvedGitHubPath": "assets/1x/supf_Spectrals.png"
+    },
+    "AttunementGlow": {
+      "path": "supf_AttunementGlow.png",
+      "px": 71,
+      "py": 95,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_AttunementGlow.png",
+      "resolvedGitHubPath": "assets/1x/supf_AttunementGlow.png"
+    },
+    "timebomb_puff": {
+      "path": "supf_timebomb_puff.png",
+      "px": 12,
+      "py": 10,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_timebomb_puff.png",
+      "resolvedGitHubPath": "assets/1x/supf_timebomb_puff.png"
+    },
+    "cicada": {
+      "path": "supf_cicada.png",
+      "px": 14,
+      "py": 24,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_cicada.png",
+      "resolvedGitHubPath": "assets/1x/supf_cicada.png"
+    },
+    "glimby_arrow": {
+      "path": "supf_glimby_arrow.png",
+      "px": 52,
+      "py": 34,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_glimby_arrow.png",
+      "resolvedGitHubPath": "assets/1x/supf_glimby_arrow.png"
+    },
+    "attunement_burst": {
+      "path": "supf_attunement_burst.png",
+      "px": 7,
+      "py": 9,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_attunement_burst.png",
+      "resolvedGitHubPath": "assets/1x/supf_attunement_burst.png"
+    },
+    "explosion": {
+      "path": "supf_explosion.png",
+      "px": 72,
+      "py": 101,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_explosion.png",
+      "resolvedGitHubPath": "assets/1x/supf_explosion.png"
+    },
+    "SmokeParticle": {
+      "path": "supf_SmokeParticle.png",
+      "px": 12,
+      "py": 14,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_SmokeParticle.png",
+      "resolvedGitHubPath": "assets/1x/supf_SmokeParticle.png"
+    },
+    "VoidBlast": {
+      "path": "supf_VoidBlast.png",
+      "px": 48,
+      "py": 64,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_VoidBlast.png",
+      "resolvedGitHubPath": "assets/1x/supf_VoidBlast.png"
+    },
+    "money_up": {
+      "path": "supf_money_up.png",
+      "px": 21,
+      "py": 17,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_money_up.png",
+      "resolvedGitHubPath": "assets/1x/supf_money_up.png"
+    },
+    "card_shine": {
+      "path": "supf_card_shine.png",
+      "px": 71,
+      "py": 96,
+      "localPath": "/wiki-data/SuperFine@energykid/v1.0.6/supf_card_shine.png",
+      "resolvedGitHubPath": "assets/1x/supf_card_shine.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Back",
+      "key": "shadow",
+      "name": null,
+      "atlas": "Decks",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"shadow\",\n    atlas = \"Decks\",\n    pos = { x = 0, y = 0 },\n    unlocked = true,\n    apply = function(self, back)\n        G.E_MANAGER:add_event(Event({\n            func = function()\n                for k, v in pairs(G.playing_cards) do\n                    if SMODS.Ranks[v.base.value].key == 'Ace' then\n                        v:set_ability(G.P_CENTERS['m_supf_ghost'])\n                    end\n                end\n                return true\n            end\n        }))\n    end,\n    loc_vars = function(self, info_queue, back)\n        return {\n            vars = {\n                localize { type = 'name_text', set = 'Enhanced', key = 'm_supf_ghost' },\n                colours = { \n                    HEX(\"233E74\")\n                }\n            }\n        }\n    end,\n    locked_loc_vars = function(self, info_queue, back)\n        local other_name = localize('k_unknown')\n        if G.P_CENTERS['b_ghost'].unlocked then\n            other_name = localize { type = 'name_text', set = 'Back', key = 'b_ghost' }\n        end\n\n        return { vars = { other_name } }\n    end,\n    check_for_unlock = function(self, args)\n        return args.type == 'win_deck'\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "canvas",
+      "name": null,
+      "atlas": "Blinds",
+      "pos": null,
+      "raw": "key = 'canvas',\n    atlas = 'Blinds', \n    pos = { y=1 },\n    loc_vars = function(self)\n        return {}\n    end,\n    boss = {min = 0},\n    boss_colour = HEX('886859'),\n    debuff_hand = function(self, cards, hand, handname, check)\n        local suits = {}\n        \n        for i1, card in ipairs(cards) do\n            local b = false\n            for i2, suit in ipairs(suits) do\n                if (card.config.card.suit == suit) then\n                    b = true\n                end\n            end\n            if not b then\n                suits[#suits+1] = card.config.card.suit\n            end\n        end\n\n        return #suits == 4\n    end",
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "lute",
+      "name": null,
+      "atlas": "Blinds",
+      "pos": null,
+      "raw": "key = 'lute',\n    atlas = 'Blinds',\n    mult = 1.75,\n    pos = { y=5 },\n    loc_vars = function(self)\n        return {}\n    end,\n    boss = {min = 2},\n    boss_colour = HEX('EE7945'),\n    set_blind = supf_lute_enable,\n    defeat = supf_lute_disable,\n    disable = supf_lute_disable",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "mace",
+      "name": null,
+      "atlas": "Blinds",
+      "pos": null,
+      "raw": "key = 'mace',\n    atlas = 'Blinds',\n    mult = 1.5,\n    pos = { y=4 },\n    loc_vars = function(self)\n        return {}\n    end,\n    boss = {min = 0},\n    boss_colour = HEX('885259'),\n    press_play = function(self)\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.6,\n            func = function ()\n                for num, card in ipairs(G.play.cards) do\n                    forceFlipCardToReduce(card, num / 3, 1, num / 20)\n                end\n                return true\n            end\n        }))\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "revenant",
+      "name": null,
+      "atlas": "Blinds",
+      "pos": null,
+      "raw": "key = 'revenant',\n    atlas = 'Blinds',\n    mult = 1.5,\n    pos = { y=3 },\n    loc_vars = function(self)\n        return {}\n    end,\n    boss = {min = 4},\n    boss_colour = HEX('6D758D'),\n    set_blind = supf_rev_enable,\n    defeat = supf_rev_disable,\n    disable = supf_rev_disable",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "scroll",
+      "name": null,
+      "atlas": "Blinds",
+      "pos": null,
+      "raw": "key = 'scroll',\n    atlas = 'Blinds', \n    pos = { y=0 },\n    loc_vars = function(self)\n        return {}\n    end,\n    boss = {min = 0},\n    boss_colour = HEX('516936'),\n    debuff_hand = function(self, cards, hand, handname, check)\n        local suits = {}\n        \n        for i1, card in ipairs(cards) do\n            local b = false\n            for i2, suit in ipairs(suits) do\n                if (card.config.card.suit == suit) then\n                    b = true\n                end\n            end\n            if not b then\n                suits[#suits+1] = card.config.card.suit\n            end\n        end\n\n        return #suits == 2\n    end",
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "sky",
+      "name": null,
+      "atlas": "Blinds",
+      "pos": null,
+      "raw": "key = 'sky',\n    atlas = 'Blinds',\n    mult = 1.75,\n    pos = { y=6 },\n    loc_vars = function(self)\n        return {}\n    end,\n    boss = {min = 2},\n    boss_colour = HEX('5993D9'),\n    set_blind = supf_sky_enable,\n    disable = supf_sky_disable,\n    defeat = supf_sky_disable",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "stack_reducechips",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"stack_reducechips\",\n    path = \"stack_reducechips.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "stack",
+      "name": null,
+      "atlas": "Blinds",
+      "pos": null,
+      "raw": "key = 'stack',\n    atlas = 'Blinds',\n    mult = 1.75,\n    pos = { y=2 },\n    loc_vars = function(self)\n        return {}\n    end,\n    boss = {min = 3},\n    boss_colour = HEX('804380')",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "supf_rune",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'supf_rune',\n    order = -200,\n    \n    func = function(card, layer)\n        if G.jokers and card.config.center.discovered then\n            if not card.shouldBeRuneHighlighted then\n                for i, v in ipairs(SUPF.ATTUNEMENTS) do\n                    if card.config.center.key == 'j_'..v.base then \n                        card.shouldBeRuneHighlighted = true\n                    end\n                end\n            end\n            if card.shouldBeRuneHighlighted and SUPF.RUNE_SELECTED then\n                card.runicGlowScale = card.runicGlowScale or 0\n                card.runicGlowTimer = card.runicGlowTimer or 0\n                card.runicGlowTimer = card.runicGlowTimer + 1\n                card.runicGlowScale = lerp(card.runicGlowScale, 0.55, 0.05)\n                drawFloatingSpriteLegacy(card, 'supf_AttunementGlow', {x = 0, y = 0}, card.runicGlowTimer * math.rad(5), card.runicGlowScale + (math.sin(card.runicGlowTimer / 30) * 0.02), 0, 0, 'runic_glow')\n            else\n                if card.runicGlowScale then\n                    card.runicGlowScale = lerp(card.runicGlowScale, 0, 0.05)\n                    card.runicGlowTimer = card.runicGlowTimer + card.runicGlowScale * 2\n                    drawFloatingSpriteLegacy(card, 'supf_AttunementGlow', {x = 0, y = 0}, card.runicGlowTimer * math.rad(5), card.runicGlowScale + (math.sin(card.runicGlowTimer / 30) * 0.02), 0, 0, 'runic_glow')\n                end\n            end\n        end\n    end",
+      "config": {
+        "x": 0,
+        "y": 0
+      },
+      "ability": {
+        "x": 0,
+        "y": 0
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "attunement_jingle",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"attunement_jingle\",\n    path = \"attunement_jingle.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "rune",
+      "name": null,
+      "atlas": "Spectrals",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'rune',\n    set = 'Spectral',\n\n    atlas = 'Spectrals', \n    pos = { x = 0, y = 0 },\n\n    soul_rate = 0.006,\n\n    keep_on_use = function(self, card)\n        return card.area ~= G.consumeables\n    end,\n\n    config = {extra = {is_rune = true}},\n    \n    loc_vars = function(self, info_queue, card)\n        return {\n            key = \"supf_rune\",\n            vars = {\n                colours = { \n                    SUPF.GRADIENTS.ATTUNED\n                }\n            }\n        }\n    end,\n\n    can_use = function(self, card)\n        if card.area ~= G.consumeables then return true end\n        if #G.jokers.highlighted == 1 then \n            for i, v in ipairs(SUPF.ATTUNEMENTS) do\n                if G.jokers.highlighted[1].config.center.key == 'j_'..v.base then return true end\n            end\n        end\n        return false\n    end,\n\n    use = function(self, card, area, copier)\n\n        local oldCard = G.jokers.highlighted[1]\n        local spot = 0\n        for i = 1, #G.jokers.cards, 1 do\n            if G.jokers.cards[i] == oldCard then\n                spot = i\n            end\n        end\n\n        local pos = getCardPosition(G.jokers.cards[spot])\n        for _ = 0, 24, 1 do\n            table.insert(SUPF.PARTICLES, #SUPF.PARTICLES + 1, NewAttunementBurst(pos.x, pos.y, 3 + (math.random(80) / 10)))\n        end\n        table.insert(SUPF.PARTICLES, #SUPF.PARTICLES + 1, NewAttunementExplosion(pos.x, pos.y))\n        play_sound(\"supf_attunement_jingle\", 1, 1)\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.6,\n            blockable = false,\n            func = function()\n                for i, v in ipairs(SUPF.ATTUNEMENTS) do\n                    if G.jokers.highlighted[1].config.center.key == 'j_'..v.base then\n                        --G.jokers.highlighted[1]:start_dissolve({G.C.BLACK, G.C.ORANGE, G.C.RED, G.C.GOLD, G.C.JOKER_GREY}, true, 0.05, true)\n                        G.jokers.cards[spot] = SMODS.create_card({\n                            set = 'Joker', \n                            area = G.jokers, \n                            key = \"j_\"..v.attuned,\n                            skip_materialize = true\n                        })\n                        G.jokers.cards[spot]:set_card_area(G.jokers)\n                        G.jokers.cards[spot].T = oldCard.T\n                        G.jokers.cards[spot].CT = oldCard.CT\n                        G.jokers.cards[spot].VT = oldCard.VT\n                    end\n                end\n                return true\n            end\n        }))\n    end,\n\n    hidden = true,\n    soul_set = 'Joker',\n    can_repeat_soul = true,\n\n    draw = function(self, card, layer)\n        if card.config.center.discovered then\n            card.runic_timer = card.runic_timer or 0\n            card.runic_timer = card.runic_timer + 1\n            local rot = math.sin(card.runic_timer / 46) * math.rad(10)\n            local sc = 0.5 * (math.sin(card.runic_timer / 62) * 0.1)\n            drawFloatingSpriteLegacy(card, 'supf_Spectrals', {x = 2, y = 0}, rot + math.rad(card.runic_timer), 0.35, 0, 0, 'the_rune_spiral')\n            love.graphics.setShader()\n            drawFloatingSpriteLegacy(card, 'supf_Spectrals', {x = 1, y = 0}, rot, sc, 0, 0, 'the_rune')\n\n            SUPF.RUNE_SELECTED = false\n            if G.consumeables and G.consumeables.highlighted then\n                for i, v in ipairs(G.consumeables.highlighted) do\n                    if G.consumeables.highlighted[i] == card then\n                        SUPF.RUNE_SELECTED = true\n                    end\n                end\n            end\n        end\n    end",
+      "config": {
+        "extra": {
+          "is_rune": true
+        }
+      },
+      "ability": {
+        "extra": {
+          "is_rune": true
+        }
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "shade",
+      "name": null,
+      "atlas": "Spectrals",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = 'shade',\n    set = 'Spectral',\n\n    atlas = 'Spectrals', \n    pos = { x = 0, y = 1 },\n    \n    config = { max_highlighted = 3, mod_conv = 'm_supf_ghost' },\n\n    loc_vars = function(self, info_queue, card)\n        info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.mod_conv]\n        return {\n            key = 'supf_shade',\n            vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv },\n            colours = {HEX('9A89BB')}}\n        }\n    end,",
+      "config": {
+        "max_highlighted": 3,
+        "mod_conv": "m_supf_ghost"
+      },
+      "ability": {
+        "max_highlighted": 3,
+        "mod_conv": "m_supf_ghost"
+      },
+      "vars": [
+        3,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "absence",
+      "name": null,
+      "atlas": "Tarots",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'absence',\n    set = 'Tarot',\n\n    atlas = 'Tarots', \n    pos = { x = 0, y = 0 },\n    \n    config = { max_highlighted = 3 },\n\n    use = function(self, card, area, copier)\n        local currenthand = G.hand\n\n        if (card ~= nil) then\n            local copyCards = function()\n                local debuffableCards = {}\n                for index, value in ipairs(currenthand.cards) do\n                    if not value.highlighted then\n                        debuffableCards[#debuffableCards + 1] = value\n                    end\n                end\n                local debuffedCard = pseudorandom_element(debuffableCards, pseudoseed('supf_absence'))\n                if debuffedCard then\n                    flipCardsThenRun(debuffedCard, function(c) SMODS.debuff_card(c, true, \"supf_perma_debuff\") end)\n                end\n                for i, _card in ipairs(currenthand.highlighted) do\n                    local cen_pool = {}\n                    for _, enhancement_center in pairs(G.P_CENTER_POOLS[\"Enhanced\"]) do\n                        if enhancement_center.key ~= 'm_stone' and not enhancement_center.overrides_base_rank then\n                        cen_pool[#cen_pool + 1] = enhancement_center.key\n                        end\n                    end\n                    forceFlipCardToEnhance(_card, pseudorandom_element(cen_pool, pseudoseed(\"supf_absence\")), i / 3, i / 10)\n                end\n            end\n\n            if card.area == G.consumeables and #currenthand.highlighted ~= 0 and #currenthand.highlighted <= card.ability.max_highlighted then \n                copyCards()\n            elseif #currenthand.highlighted ~= 0 then \n                copyCards()\n            end\n        end\n    end,\n\n    loc_vars = function(self, info_queue, card)\n        return {\n            vars = { card.ability.max_highlighted },\n        }\n    end",
+      "config": {
+        "max_highlighted": 3
+      },
+      "ability": {
+        "max_highlighted": 3
+      },
+      "vars": [
+        3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "crystal",
+      "name": null,
+      "atlas": "Tarots",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'crystal',\n    set = 'Tarot',\n\n    atlas = 'Tarots', \n    pos = { x = 1, y = 0 },\n    \n    config = { max_highlighted = 2, mod_conv = 'm_supf_obsidian' },\n\n    keep_on_use = function(self, card)\n        return card.area ~= G.consumeables\n    end,\n\n    can_use = function(self, card)\n        local currenthand = G.hand\n        if card.area == G.consumeables then\n            if #currenthand.highlighted <= 2 and #currenthand.highlighted ~= 0 then \n                local b = true\n                for _, _card in ipairs(currenthand.highlighted) do\n                    if not SMODS.has_enhancement(_card, 'm_stone') and not SMODS.has_enhancement(_card, 'm_glass') then\n                        b = false\n                    end\n                end\n                return b\n            else\n                return false\n            end\n        else\n            return true\n        end\n    end,\n\n    use = function(self, card, area, copier)\n\n        local currenthand = G.hand\n        local copyCards = function()\n            for i, _card in ipairs(currenthand.highlighted) do\n                forceFlipCardToEnhance(_card, 'm_supf_obsidian', i / 3, i / 10)\n            end\n        end\n\n        if card.area == G.consumeables and #currenthand.highlighted ~= 0 and #currenthand.highlighted <= 2 then \n            copyCards()\n        elseif #currenthand.highlighted ~= 0 then \n            copyCards()\n        end\n    end,\n\n    loc_vars = function(self, info_queue, card)\n        info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.mod_conv]\n        return {\n            vars = { card.ability.max_highlighted, \n            localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv },\n            localize { type = 'name_text', set = 'Enhanced', key = 'm_stone' },\n            localize { type = 'name_text', set = 'Enhanced', key = 'm_glass' },\n            colours = {HEX('33428F')}},\n        }\n    end,",
+      "config": {
+        "max_highlighted": 2,
+        "mod_conv": "m_supf_obsidian"
+      },
+      "ability": {
+        "max_highlighted": 2,
+        "mod_conv": "m_supf_obsidian"
+      },
+      "vars": [
+        2,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "elements",
+      "name": null,
+      "atlas": "Tarots",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'elements',\n    set = 'Tarot',\n\n    atlas = 'Tarots', \n    pos = { x = 2, y = 0 },\n    \n    config = { max_highlighted = 4 },\n\n    can_use = function(self, card)\n        local currenthand = G.hand\n        if card.area == G.consumeables then\n            if #currenthand.highlighted >= 2 and #currenthand.highlighted ~= 0 then \n                return true\n            else\n                return false\n            end\n        else\n            return true\n        end\n    end,\n\n    use = function(self, card, area, copier)\n      local currenthand = G.hand\n      \n      for i, _card in ipairs(currenthand.highlighted) do\n        if (i <= 1) then\n          forceFlipCardToEnhance(_card, 'm_supf_fire', i / 3, i / 10)\n        elseif (i >= #currenthand.highlighted) then\n          forceFlipCardToEnhance(_card, 'm_supf_ice', i / 3, i / 10)\n        end\n      end\n    end,\n\n    loc_vars = function(self, info_queue, card)\n        info_queue[#info_queue + 1] = G.P_CENTERS['m_supf_fire']\n        info_queue[#info_queue + 1] = G.P_CENTERS['m_supf_ice']\n        return {\n            vars = {\n            localize { type = 'name_text', set = 'Enhanced', key = 'm_supf_fire' },\n            localize { type = 'name_text', set = 'Enhanced', key = 'm_supf_ice' }\n            }\n        }\n    end,",
+      "config": {
+        "max_highlighted": 4
+      },
+      "ability": {
+        "max_highlighted": 4
+      },
+      "vars": [
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Enhancements",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Enhancements\",\n  path = \"supf_Enhancements.png\",\n  px = 71,\n  py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Decks",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Decks\",\n  path = \"supf_Decks.png\",\n  px = 71,\n  py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Blinds",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Blinds\",\n  path = \"supf_Blinds.png\",\n  px = 34,\n  py = 34,\n  atlas_table = 'ANIMATION_ATLAS', \n  frames = 21",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Jokers",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Jokers\",\n  path = \"supf_Jokers.png\",\n  px = 71,\n  py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "AttunedJokers",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"AttunedJokers\",\n  path = \"supf_AttunedJokers.png\",\n  px = 71,\n  py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Tarots",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Tarots\",\n  path = \"supf_Tarots.png\",\n  px = 65,\n  py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "Spectrals",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"Spectrals\",\n  path = \"supf_Spectrals.png\",\n  px = 71,\n  py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "AttunementGlow",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"AttunementGlow\",\n  path = \"supf_AttunementGlow.png\",\n  px = 71,\n  py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "attuned",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key=\"attuned\",\n    colours = {\n        HEX(\"FF741C\"),\n        HEX(\"FFC600\")\n    },\n    cycle = 2",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Rarity",
+      "key": "attuned",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"attuned\",\n    badge_colour = SUPF.GRADIENTS.ATTUNED,\n    default_weight = 0,\n    \n    pools = {\n        [\"Joker\"] = false,\n    },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Enhancement",
+      "key": "fire",
+      "name": null,
+      "atlas": "Enhancements",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'fire',\n    atlas = 'Enhancements',\n    config = {\n      conditional_x_mult = 1.5,\n    },\n    pos = { x = 2, y = 0 },\n    calculate = function(self, card, context)\n      if context.main_scoring and context.cardarea == G.play then\n        for _, c in ipairs(context.scoring_hand) do\n          if SMODS.has_enhancement(c, 'm_supf_ice') then\n            return {\n              message = \"Fire!\",\n              xmult = card.ability.conditional_x_mult\n            }\n          end\n        end\n      end\n    end,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.conditional_x_mult } }\n    end",
+      "config": {
+        "conditional_x_mult": 1.5
+      },
+      "ability": {
+        "conditional_x_mult": 1.5
+      },
+      "vars": [
+        1.5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Enhancement",
+      "key": "ice",
+      "name": null,
+      "atlas": "Enhancements",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = 'ice',\n    atlas = 'Enhancements', \n    pos = { x = 3, y = 0 },\n    config = {\n      conditional_x_chips = 1.5,\n    },\n    calculate = function(self, card, context)\n      if context.main_scoring and context.cardarea == G.play then\n        for _, c in ipairs(context.scoring_hand) do\n          if SMODS.has_enhancement(c, 'm_supf_fire') then\n            return {\n              message = \"Ice!\",\n              xchips = card.ability.conditional_x_chips\n            }\n          end\n        end\n      end\n    end,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.conditional_x_chips } }\n    end",
+      "config": {
+        "conditional_x_chips": 1.5
+      },
+      "ability": {
+        "conditional_x_chips": 1.5
+      },
+      "vars": [
+        1.5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Enhancement",
+      "key": "ghost",
+      "name": null,
+      "atlas": "Enhancements",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'ghost',\n    atlas = 'Enhancements', \n    pos = { x = 0, y = 0 },\n    update = function(self, card, dt)\n        local shouldSelect = false\n\n        for _, reference_card in ipairs(card.area.highlighted) do\n            if reference_card == card then\n                shouldSelect = true\n                break\n            end\n        end\n        \n        if shouldSelect and card.area == G.hand and not card.debuff then\n            increaseCardSelection(1)\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Enhancement",
+      "key": "obsidian",
+      "name": null,
+      "atlas": "Enhancements",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'obsidian',\n    atlas = 'Enhancements', \n    pos = { x = 1, y = 0 },\n    config = {\n        x_chips = 1.5,\n        x_mult = 1.5\n    },\n    replace_base_card = true,\n    no_rank = true,\n    no_suit = true,\n    always_scores = true,\n    weight = 0,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.x_chips, card.ability.x_mult } }\n    end",
+      "config": {
+        "x_chips": 1.5,
+        "x_mult": 1.5
+      },
+      "ability": {
+        "x_chips": 1.5,
+        "x_mult": 1.5
+      },
+      "vars": [
+        1.5,
+        1.5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "blueJava",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = 'blueJava',\n\n  config = { bluejava = true, extra = { Xmult = 3 }, odds1 = 4, odds2 = 10, add1 = 0.25, add2 = 1, oddsReset = 500 },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 0, y = 1 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.Xmult, card.ability.odds1, card.ability.add1, card.ability.odds2, card.ability.add2, card.ability.oddsReset, getProbability() }\n      }\n  end,\n  \n  draw = function(self, card, layer)\n    if card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      local rnd1 = -50 + math.random(100)\n      local rnd2 = -50 + math.random(100)\n      rnd1 = rnd1 * 0.00025\n      rnd2 = rnd2 * 0.00025\n\n      local sc = (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05)\n\n      drawFloatingSprite(card, \"supf_AttunedJokers\", { x = 1, y = 1 }, {\n        rotation = rotate_mod * 0.5, \n        scale = scale_mod * 0.7, \n        position = {x = 0, y = 0}\n      }, 'blueJava_Lightning')\n\n      drawFloatingSprite(card, \"supf_AttunedJokers\", { x = 2, y = 1 }, {\n        rotation = rotate_mod, \n        scale = sc / 2,\n        position = {x = 0, y = 0}\n      }, 'blueJava_Banana')\n\n    end\n  end,\n\n  calculate = function(self, card, context)\n    \n    if context.joker_main then\n      return {\n        Xmult_mod = card.ability.extra.Xmult,\n        message = localize{ type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult }}\n      }\n    end\n    \n    if context.end_of_round and not context.repetition and context.game_over == false and not context.blueprint then\n      if pseudorandom('supf_blueJava') < G.GAME.probabilities.normal / card.ability.odds1 then\n        card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.add1\n        return {\n          message = 'Upgrade!'\n        }\n      else\n        if pseudorandom('supf_blueJava2') < G.GAME.probabilities.normal / card.ability.odds2 then\n          card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.add2\n          return {\n            message = 'Upgrade!'\n          }\n        else\n          if pseudorandom('supf_blueJava3') < G.GAME.probabilities.normal / card.ability.oddsReset then\n            card.ability.extra.Xmult = 3\n            return {\n              message = 'Unfortunate!'\n            }\n          else\n            return {\n              message = 'Nope!'\n            }\n          end\n        end\n      end\n    end\n  end",
+      "config": {
+        "bluejava": true,
+        "extra": {
+          "Xmult": 3
+        },
+        "odds1": 4,
+        "odds2": 10,
+        "add1": 0.25,
+        "add2": 1,
+        "oddsReset": 500
+      },
+      "ability": {
+        "bluejava": true,
+        "extra": {
+          "Xmult": 3
+        },
+        "odds1": 4,
+        "odds2": 10,
+        "add1": 0.25,
+        "add2": 1,
+        "oddsReset": 500
+      },
+      "vars": [
+        3,
+        4,
+        0.25,
+        10,
+        1,
+        500,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "enamoredJoker",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 3,
+        "y": 1
+      },
+      "raw": "key = 'enamoredJoker',\n\n  config = { enamoredjoker = true, extra = { suit = 'Hearts', minimum = 6 } },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 3, y = 1 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { 'Heart', card.ability.extra.minimum, colours = { G.C.SUITS[card.ability.extra.suit] } }\n      }\n  end,\n\n  draw = function(self, card, layer)\n    if card.ability.enamoredjoker and card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 5, y = 1 }, 0, scale_mod * 0.7, 0, 0, 'enamored_symbol')\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 4, y = 1 }, rotate_mod, (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05), 0, 0, 'enamored_face')\n\n    end\n  end,\n  \n  calculate = function(self, card, context)\n    if context.individual and context.cardarea == G.play then\n      local mlt = 0\n      for _, reference_card in ipairs(context.scoring_hand) do\n        if reference_card:is_suit(card.ability.extra.suit) then\n          mlt = mlt + 4\n        end\n      end\n      if context.other_card:is_suit(card.ability.extra.suit) then\n        mlt = math.max(mlt, card.ability.extra.minimum)\n        return {\n          mult_mod = mlt,\n          message = localize{ type = 'variable', key = 'a_mult', vars = { mlt }}\n        }\n      end\n    end\n  end",
+      "config": {
+        "enamoredjoker": true,
+        "extra": {
+          "suit": "Hearts",
+          "minimum": 6
+        }
+      },
+      "ability": {
+        "enamoredjoker": true,
+        "extra": {
+          "suit": "Hearts",
+          "minimum": 6
+        }
+      },
+      "vars": [
+        null,
+        6,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "engaudedJoker",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 3,
+        "y": 2
+      },
+      "raw": "key = 'engaudedJoker',\n\n  config = { engaudedjoker = true, extra = { suit = 'Diamonds', minimum = 6 } },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 3, y = 2 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { 'Diamond', card.ability.extra.minimum, colours = { G.C.SUITS[card.ability.extra.suit] } }\n      }\n  end,\n\n  draw = function(self, card, layer)\n    if card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 5, y = 2 }, 0, scale_mod * 0.7, 0, 0, 'engauded_symbol')\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 4, y = 2 }, rotate_mod, (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05), 0, 0, 'engauded_face')\n    end\n  end,\n  \n  calculate = function(self, card, context)\n    if context.individual and context.cardarea == G.play then\n      local mlt = 0\n      for _, reference_card in ipairs(context.scoring_hand) do\n        if reference_card:is_suit(card.ability.extra.suit) then\n          mlt = mlt + 4\n        end\n      end\n      if context.other_card:is_suit(card.ability.extra.suit) then\n        mlt = math.max(mlt, card.ability.extra.minimum)\n        return {\n          mult_mod = mlt,\n          message = localize{ type = 'variable', key = 'a_mult', vars = { mlt }}\n        }\n      end\n    end\n  end",
+      "config": {
+        "engaudedjoker": true,
+        "extra": {
+          "suit": "Diamonds",
+          "minimum": 6
+        }
+      },
+      "ability": {
+        "engaudedjoker": true,
+        "extra": {
+          "suit": "Diamonds",
+          "minimum": 6
+        }
+      },
+      "vars": [
+        null,
+        6,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "engorgedJoker",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 3,
+        "y": 4
+      },
+      "raw": "key = 'engorgedJoker',\n\n  config = { extra = { suit = 'Clubs', minimum = 6 } },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 3, y = 4 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { 'Club', card.ability.extra.minimum, colours = { G.C.SUITS[card.ability.extra.suit] } }\n      }\n  end,\n\n  draw = function(self, card, layer)\n    if card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 5, y = 4 }, 0, scale_mod * 0.7, 0, 0, 'engorged_symbol')\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 4, y = 4 }, rotate_mod, (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05), 0, 0, 'engorged_face')\n\n    end\n  end,\n  \n  calculate = function(self, card, context)\n    if context.individual and context.cardarea == G.play then\n      local mlt = 0\n      for _, reference_card in ipairs(context.scoring_hand) do\n        if reference_card:is_suit(card.ability.extra.suit) then\n          mlt = mlt + 4\n        end\n      end\n      if context.other_card:is_suit(card.ability.extra.suit) then\n        mlt = math.max(mlt, card.ability.extra.minimum)\n        return {\n          mult_mod = mlt,\n          message = localize{ type = 'variable', key = 'a_mult', vars = { mlt }}\n        }\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "suit": "Clubs",
+          "minimum": 6
+        }
+      },
+      "ability": {
+        "extra": {
+          "suit": "Clubs",
+          "minimum": 6
+        }
+      },
+      "vars": [
+        null,
+        6,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "enragedJoker",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 3,
+        "y": 3
+      },
+      "raw": "key = 'enragedJoker',\n\n  config = { extra = { suit = 'Spades', minimum = 6 } },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 3, y = 3 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { 'Spade', card.ability.extra.minimum, colours = { G.C.SUITS[card.ability.extra.suit] } }\n      }\n  end,\n\n  draw = function(self, card, layer)\n    if card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 5, y = 3 }, 0, scale_mod * 0.7, 0, 0, 'enraged_symbol')\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 4, y = 3 }, rotate_mod, (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05), 0, 0, 'enraged_face')\n\n    end\n  end,\n  \n  calculate = function(self, card, context)\n    if context.individual and context.cardarea == G.play then\n      local mlt = 0\n      for _, reference_card in ipairs(context.scoring_hand) do\n        if reference_card:is_suit(card.ability.extra.suit) then\n          mlt = mlt + 4\n        end\n      end\n      if context.other_card:is_suit(card.ability.extra.suit) then\n        mlt = math.max(mlt, card.ability.extra.minimum)\n        return {\n          mult_mod = mlt,\n          message = localize{ type = 'variable', key = 'a_mult', vars = { mlt }}\n        }\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "suit": "Spades",
+          "minimum": 6
+        }
+      },
+      "ability": {
+        "extra": {
+          "suit": "Spades",
+          "minimum": 6
+        }
+      },
+      "vars": [
+        null,
+        6,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "supf_overachiever",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'supf_overachiever',\n  order = 20,\n  func = function(card)\n    if card.ability.overachiever and card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      local rnd1 = -50 + math.random(100)\n      local rnd2 = -50 + math.random(100)\n      rnd1 = rnd1 * 0.00025\n      rnd2 = rnd2 * 0.00025\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 2, y = 0 }, rotate_mod, scale_mod * 1.05, (math.sin((card.visualtimer + 7) / 33) * 0.05), (math.sin(card.visualtimer / 32) * 0.05), 2)\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 1, y = 0 }, rotate_mod * 1.1, scale_mod * 1.1, 0, 0, 3)\n\n    end\n  end,\n  conditions = {vortex = false, facing = \"front\", discovered = true}",
+      "config": {
+        "x": 2,
+        "y": 0
+      },
+      "ability": {
+        "x": 2,
+        "y": 0
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "overachiever",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'overachiever',\n\n  config = { extra = { mult = 6 }, overachiever = true, repetitions = 3, cards_scored = 0 },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 0, y = 0 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.repetitions, card.ability.extra.mult }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.individual and context.cardarea == G.play then\n      if context.other_card:get_id() == 14 then\n        return {\n          message = \"Aced!\",\n          colour = G.C.RED,\n          mult_mod = card.ability.extra.mult\n        }\n      end\n    end\n    if context.repetition and context.cardarea == G.play then\n      if context.other_card:get_id() == 14 then\n        card.ability.cards_scored = card.ability.cards_scored + 1\n        if card.ability.cards_scored == 1 then\n          return {\n            message = \"Again!\",\n            repetitions = card.ability.repetitions\n          }\n        end\n      end\n    end\n    if context.final_scoring_step then\n      card.ability.cards_scored = 0\n    end\n  end",
+      "config": {
+        "extra": {
+          "mult": 6
+        },
+        "overachiever": true,
+        "repetitions": 3,
+        "cards_scored": 0
+      },
+      "ability": {
+        "extra": {
+          "mult": 6
+        },
+        "overachiever": true,
+        "repetitions": 3,
+        "cards_scored": 0
+      },
+      "vars": [
+        3,
+        6
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "supf_rainstorm",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'supf_rainstorm',\n  order = 20,\n  func = function(card)\n    if card.ability.rainstorm and card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      local rnd1 = -50 + math.random(100)\n      local rnd2 = -50 + math.random(100)\n      rnd1 = rnd1 * 0.00025\n      rnd2 = rnd2 * 0.00025\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 1, y = 2 }, 0, 0.05 - (scale_mod * 0.6), 0, 0, 'rainstorm_background')\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 2, y = 2 }, 0, (scale_mod * 1.2), 0, 0, 'rainstorm_foreground')\n\n    end\n  end,\n  conditions = {vortex = false, facing = \"front\", discovered = true}",
+      "config": {
+        "x": 1,
+        "y": 2
+      },
+      "ability": {
+        "x": 1,
+        "y": 2
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "rainstorm",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 0,
+        "y": 2
+      },
+      "raw": "key = 'rainstorm',\n\n  config = { rainstorm = true, extra = { Xmult = 1.25 } },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 0, y = 2 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.Xmult }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.modify_scoring_hand and not context.blueprint then\n      context.other_card.should_count_for_rainstorm = nil\n      local b = false\n      for index, value in ipairs(context.scoring_hand) do\n        if (value == context.other_card) then b = true end\n      end\n      if not b then\n        context.other_card.should_count_for_rainstorm = true\n        return { \n          add_to_hand = true \n        }\n      end\n    end\n    if context.individual and context.cardarea == G.play then\n      if context.other_card.should_count_for_rainstorm then\n        return { \n\t\t\t\tXmult_mod = card.ability.extra.Xmult,\n        message = localize{ type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult }}\n        }\n      end\n    end\n  end",
+      "config": {
+        "rainstorm": true,
+        "extra": {
+          "Xmult": 1.25
+        }
+      },
+      "ability": {
+        "rainstorm": true,
+        "extra": {
+          "Xmult": 1.25
+        }
+      },
+      "vars": [
+        1.25
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "thePayoff",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 0,
+        "y": 4
+      },
+      "raw": "key = \"thePayoff\",\n\n    blueprint_compat = false,\n    \n    rarity = \"supf_attuned\",\n    \n    cost = 15,\n    \n    atlas = 'AttunedJokers',\n\n    pos = { x = 0, y = 4 },\n\n    config = { Xmult_gain = 0.25, extra = { dollars = 2, Xmult = 2 } },\n    \n    loc_vars = function(self, info_queue, card)\n        return { vars = { card.ability.extra.Xmult, card.ability.extra.dollars, card.ability.Xmult_gain } }\n    end,\n\n    calculate = function(self, card, context)\n        if context.end_of_round and context.cardarea == G.jokers then\n            if G.GAME.current_round.discards_used == 0 then\n                card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.Xmult_gain\n                return {\n                    message = \"Moving Up!\"\n                }\n            end\n        end\n        if (context.joker_main) then\n            return\n            {\n                Xmult = card.ability.extra.Xmult\n            }\n        end\n    end,\n\n    calc_dollar_bonus = function(self, card)\n        return G.GAME.current_round.discards_used == 0 and G.GAME.current_round.discards_left > 0 and\n            G.GAME.current_round.discards_left * card.ability.extra.dollars or nil\n    end,\n    \n    draw = function(self, card, layer)\n        if card.config.center.discovered then\n        local timer = G.TIMERS.REAL\n\n        card.visualtimer = card.visualtimer or 0\n\n        card.visualtimer = card.visualtimer + 1\n\n        local timeroff = timer + 0.25\n\n        local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n        local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n        local sc = (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05)\n\n        drawFloatingSprite(card, \"supf_AttunedJokers\", { x = 1, y = 4 }, {\n            rotation = rotate_mod * 0.5, \n            scale = scale_mod * 0.7, \n            position = {x = 0, y = 0}\n        }, 'thePayoff_Splotches')\n\n        drawFloatingSprite(card, \"supf_AttunedJokers\", { x = 2, y = 4 }, {\n            rotation = rotate_mod, \n            scale = sc / 2,\n            position = {x = 0, y = 0}\n        }, 'thePayoff_Stars')\n\n        end\n    end,",
+      "config": {
+        "Xmult_gain": 0.25,
+        "extra": {
+          "dollars": 2,
+          "Xmult": 2
+        }
+      },
+      "ability": {
+        "Xmult_gain": 0.25,
+        "extra": {
+          "dollars": 2,
+          "Xmult": 2
+        }
+      },
+      "vars": [
+        2,
+        2,
+        0.25
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "supf_ultimateJimbo",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'supf_ultimateJimbo',\n  order = 20,\n  func = function(card)\n    if card.ability.ultimateJimbo and card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      local rnd1 = -50 + math.random(100)\n      local rnd2 = -50 + math.random(100)\n      rnd1 = rnd1 * 0.00025\n      rnd2 = rnd2 * 0.00025\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 4, y = 0 }, rotate_mod * 0.5, (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05), 0, 0, \"ultimate_jimbo_face\")\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 5, y = 0 }, 0, 0.1, 0, 0, \"ultimate_jimbo_overlay\")\n\n    end\n  end,\n  conditions = {vortex = false, facing = \"front\", discovered = true}",
+      "config": {
+        "x": 4,
+        "y": 0
+      },
+      "ability": {
+        "x": 4,
+        "y": 0
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ultimateJimbo",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = 'ultimateJimbo',\n\n  config = { ultimateJimbo = true, extra = { mult = 4, Xmult = 1, Xmult_inc = 0.2 } },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 3, y = 0 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.mult, card.ability.extra.Xmult, card.ability.extra.Xmult_inc }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    \n    if context.joker_main then\n      return {\n        mult_mod = card.ability.extra.mult,\n        Xmult_mod = card.ability.extra.Xmult,\n        message = localize{ type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult }}\n      }\n    end\n    if (context.individual and context.cardarea == G.play) or context.discard then\n      card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_inc\n    end\n    if context.end_of_round and context.cardarea == G.jokers then\n      card.ability.extra.Xmult = 1\n    end\n  end",
+      "config": {
+        "ultimateJimbo": true,
+        "extra": {
+          "mult": 4,
+          "Xmult": 1,
+          "Xmult_inc": 0.2
+        }
+      },
+      "ability": {
+        "ultimateJimbo": true,
+        "extra": {
+          "mult": 4,
+          "Xmult": 1,
+          "Xmult_inc": 0.2
+        }
+      },
+      "vars": [
+        4,
+        1,
+        0.2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "violentVisage",
+      "name": null,
+      "atlas": "AttunedJokers",
+      "pos": {
+        "x": 0,
+        "y": 3
+      },
+      "raw": "key = 'violentVisage',\n\n  config = { extra = { chips = 30, mult = 5 } },\n  \n  rarity = \"supf_attuned\",\n  \n  cost = 15,\n  \n  atlas = 'AttunedJokers',\n  pos = { x = 0, y = 3 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.chips, card.ability.extra.mult }\n      }\n  end,\n  \n  draw = function(self, card, layer)\n    if card.config.center.discovered then\n      local timer = G.TIMERS.REAL\n\n      card.visualtimer = card.visualtimer or 0\n\n      card.visualtimer = card.visualtimer + 1\n\n      local timeroff = timer + 0.25\n\n      local scale_mod = 0.07 + 0.02*math.sin(1.8*(timeroff)) + 0.00*math.sin(((timeroff) - math.floor((timeroff)))*math.pi*14)*(1 - ((timeroff) - math.floor((timeroff))))^3\n      local rotate_mod = 0.05*math.sin(1.219*(timeroff)) + 0.00*math.sin(((timeroff))*math.pi*5)*(1 - ((timeroff) - math.floor((timeroff))))^2\n\n      local rnd1 = -50 + math.random(100)\n      local rnd2 = -50 + math.random(100)\n      rnd1 = rnd1 * 0.00025\n      rnd2 = rnd2 * 0.00025\n\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 2, y = 3 }, rotate_mod * 0.2, scale_mod * 0.7, rnd1, rnd2, 'violent_visage_1')\n      drawFloatingSpriteLegacy(card, \"supf_AttunedJokers\", { x = 1, y = 3 }, rotate_mod * 4, (scale_mod * 1.2) - 0.015 + (math.sin(card.visualtimer / 50) * 0.05), rnd1 * 2, rnd2 * 2, 'violent_visage_2')\n\n    end\n  end,\n\n  calculate = function(self, card, context)\n    if context.individual and context.cardarea == G.play then\n      if context.other_card:is_face() then\n        context.other_card.ability.perma_bonus = context.other_card.ability.perma_bonus + card.ability.extra.chips\n        context.other_card.ability.perma_mult = context.other_card.ability.perma_mult + card.ability.extra.mult\n        return {message = 'Upgrade!', colour = HEX(\"8F1400\")}\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "chips": 30,
+          "mult": 5
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 30,
+          "mult": 5
+        }
+      },
+      "vars": [
+        30,
+        5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "supf_cucumber",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = 'supf_cucumber',\n\n  config = { extra = { mult = 18, odds = 3, multBack = 18 }, isCucumber = true },\n  \n  rarity = 1,\n  \n  cost = 4,\n  \n  atlas = 'Jokers',\n  pos = { x = 2, y = 0 },\n\n  loc_vars = function(self, info_queue, card)\n    local KEY = \"j_supf_cucumber\"\n    if card.ability.extra.mult == 0 then\n      KEY = \"j_supf_cucumber_alt\"\n    end\n    \n    return { key = KEY, vars = { card.ability.extra.mult, card.ability.extra.odds, card.ability.extra.multBack, getProbability(), card.ability.extra.mult - 6 } }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.joker_main then\n      if card.ability.extra.mult ~= 0 then \n        return {\n          mult_mod = card.ability.extra.mult,\n          message = localize{ type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult }}\n        }\n      end\n    end\n    if context.end_of_round and not context.repetition and context.game_over == false and not context.blueprint then\n      if card.ability.extra.mult == 0 then \n        card.ability.extra.mult = card.ability.extra.multBack\n        return {\n\t\t\t\t\tmessage = 'Reset!'\n\t\t\t\t}\n      elseif pseudorandom('supf_cucumber') < G.GAME.probabilities.normal / card.ability.extra.odds then\n        card.ability.extra.mult = 0\n        card.ability.extra.multBack = card.ability.extra.multBack - 6\n        return {\n\t\t\t\t\tmessage = 'Disabled!'\n\t\t\t\t}\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "mult": 18,
+          "odds": 3,
+          "multBack": 18
+        },
+        "isCucumber": true
+      },
+      "ability": {
+        "extra": {
+          "mult": 18,
+          "odds": 3,
+          "multBack": 18
+        },
+        "isCucumber": true
+      },
+      "vars": [
+        18,
+        3,
+        18,
+        null,
+        12
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "supf_luckyTicket",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "key = 'supf_luckyTicket',\n\n  config = { dolers = 1000, extra = { odds = 500 } },\n  \n  rarity = 1,\n  \n  cost = 4,\n  \n  atlas = 'Jokers',\n  pos = { x = 7, y = 0 },\n\n  loc_vars = function(self, info_queue, card)    \n    return { vars = { card.ability.dolers, card.ability.extra.odds, getProbability() } }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.end_of_round and not context.repetition and context.game_over == false and not context.blueprint then\n      if pseudorandom('supf_luckyTicket') < G.GAME.probabilities.normal / card.ability.extra.odds then\n        return {\n          dollars = card.ability.dolers,\n\t\t\t\t\tmessage = 'Jackpot!'\n\t\t\t\t}\n      else\n        return {\n\t\t\t\t\tmessage = 'Nope!'\n\t\t\t\t}\n      end\n    end\n  end",
+      "config": {
+        "dolers": 1000,
+        "extra": {
+          "odds": 500
+        }
+      },
+      "ability": {
+        "dolers": 1000,
+        "extra": {
+          "odds": 500
+        }
+      },
+      "vars": [
+        1000,
+        500,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "timebomb_boom",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"timebomb_boom\",\n    path = \"timebomb_boom.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "timebomb_tick",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"timebomb_tick\",\n    path = \"timebomb_tick.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "timebomb_puff",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"timebomb_puff\",\n\tpath = \"supf_timebomb_puff.png\",\n\tpx = 12,\n\tpy = 10",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "timeBomb",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 5,
+        "y": 1
+      },
+      "raw": "key = 'timeBomb',\n\n    config = { max_cards_scored = 10, cards_scored = 0, extra = { mult = 15 } },\n\n    rarity = 1,\n\n    cost = 3,\n\n    atlas = 'Jokers',\n    pos = { x = 5, y = 1 },\n\n    loc_vars = function(self, info_queue, card)\n        return {\n        vars = { card.ability.max_cards_scored, card.ability.extra.mult, card.ability.cards_scored }\n        }\n    end,\n\n    calculate = function(self, card, context)\n        if context.individual and context.cardarea == G.play then\n            card.ability.cards_scored = card.ability.cards_scored + 1\n            \n            if (card.ability.cards_scored >= card.ability.max_cards_scored) then\n                card.ability.cards_scored = 0\n                boom(context.other_card)\n                return {\n                    mult_mod = card.ability.extra.mult\n                }\n            elseif (card.ability.cards_scored >= card.ability.max_cards_scored - 3) then\n                tick()\n            end\n        end\n        if context.joker_main then\n        end\n    end",
+      "config": {
+        "max_cards_scored": 10,
+        "cards_scored": 0,
+        "extra": {
+          "mult": 15
+        }
+      },
+      "ability": {
+        "max_cards_scored": 10,
+        "cards_scored": 0,
+        "extra": {
+          "mult": 15
+        }
+      },
+      "vars": [
+        10,
+        15,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "wonder",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "key = 'wonder',\n  \n  config = { extra = { mult = 4 } },\n  \n  rarity = 1,\n  \n  cost = 4,\n  \n  atlas = 'Jokers',\n  pos = { x = 6, y = 0 },\n  \n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.mult }\n    }\n  end,\n  \n  calculate = function(self, card, context)\n    \n    if context.individual and context.cardarea == G.play then\n      if (context.other_card.edition) then\n        local amt = card.ability.extra.mult\n        return {\n          mult_mod = amt,\n          message = localize{ type = 'variable', key = 'a_mult', vars = { amt }}\n        }\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "mult": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 4
+        }
+      },
+      "vars": [
+        4
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "whimsy",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = 'whimsy',\n  \n  config = { extra = { chips = 30 } },\n  \n  rarity = 1,\n  \n  cost = 4,\n  \n  atlas = 'Jokers',\n  pos = { x = 5, y = 0 },\n  \n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.chips }\n    }\n  end,\n  \n  calculate = function(self, card, context)\n    \n    if context.individual and context.cardarea == G.play then\n      if (context.other_card.config.center ~= G.P_CENTERS.c_base) then\n        local amt = card.ability.extra.chips\n        return {\n          chips_mod = amt,\n          message = localize{ type = 'variable', key = 'a_chips', vars = { amt }},\n          colour = G.C.BLUE\n        }\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "chips": 30
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 30
+        }
+      },
+      "vars": [
+        30
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "archibald",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 8,
+        "y": 0
+      },
+      "raw": "key = 'archibald',\n\n  config = { archibald = true },\n  \n  rarity = 4,\n  \n  cost = 20,\n  \n  atlas = 'Jokers',\n  pos = { x = 8, y = 0 },\n  soul_pos = { x = 9, y = 0 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.cards_to_create }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.skip_blind or context.setting_blind then\n      card.ability.cards_to_create = card.ability.cards_to_create or 2\n      local cards = {}\n      local _suit, _rank = pseudorandom_element(SMODS.Suits, pseudoseed('supf_archibald')).card_key, 'A'\n      local cen_pool = {}\n      for _, enhancement_center in pairs(G.P_CENTER_POOLS[\"Enhanced\"]) do\n        if enhancement_center.key ~= 'm_stone' and not enhancement_center.overrides_base_rank then\n          cen_pool[#cen_pool + 1] = enhancement_center\n        end\n      end\n      cards[#cards+1] = create_playing_card({\n        front = G.P_CARDS[_suit .. '_' .. _rank],\n        center = pseudorandom_element(cen_pool, pseudoseed('supf_archibald'))\n      }, G.deck, nil)\n\n      cards[#cards]:set_edition({polychrome = true}, true, true)\n\n      SMODS.calculate_context({ playing_card_added = true, cards = cards })\n    end\n  end",
+      "config": {
+        "archibald": true
+      },
+      "ability": {
+        "archibald": true
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "cicada",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"cicada\",\n\tpath = \"supf_cicada.png\",\n\tpx = 14,\n\tpy = 24",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "supf_cicadas",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'supf_cicadas',\n  order = 0,\n  func = function(card, layer)\n    \n    if card.ability.cicadasToDraw and card.config.center.discovered then      \n      for i, cic in pairs(card.ability.cicadasToDraw) do\n        cic.t = cic.t + 1\n        local pos = scalePosition(45 / 2, 57 / 2)\n        local pos2 = scalePosition(math.sin(cic.t / cic.xmod * 1.2462) * 10, math.sin(cic.t / cic.xmod * 1.1356) * 12)\n        cic.xv = (getCardPosition(card).x + (math.sin(cic.t / cic.xmod) * pos.x) + (math.sin(cic.t / cic.xmod * 1.20836) * pos2.x)) - cic.x\n        cic.yv = (getCardPosition(card).y + (math.sin(cic.t / cic.ymod) * pos.y) + (math.sin(cic.t / cic.xmod * 1.08326) * pos2.y)) - cic.y\n        cic.x = cic.x + cic.xv\n        cic.y = cic.y + cic.yv\n      end\n      \n      for i, cic in pairs(card.ability.cicadasToDraw) do\n        drawCicada(cic)\n      end\n    end\n  end,\n  conditions = {vortex = false, facing = \"front\", discovered = true}",
+      "config": {
+        "vortex": false,
+        "facing": "front",
+        "discovered": true
+      },
+      "ability": {
+        "vortex": false,
+        "facing": "front",
+        "discovered": true
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cicadas",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = 'cicadas',\n\n  config = { extra = { mult = 1 }, cicadas = 1, cicadasToDraw = {\n      \n      {x = 0, y = 0, xmod = 7 + (math.random(1000) / 100), ymod = 7 + (math.random(1000) / 100), t = math.random(1000) / 100}\n      \n      } },\n  \n  rarity = 3,\n  \n  cost = 6,\n  \n  atlas = 'Jokers',\n  pos = { x = 3, y = 0 },\n\n  loc_vars = function(self, info_queue, card)    \n    local KEY = \"j_supf_cicada\"\n    if (card.ability.cicadas > 1) then KEY = \"j_supf_cicadas\" end\n    return {\n      key = KEY,\n      vars = { card.ability.extra.mult, card.ability.cicadas }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.joker_main then\n      return {\n        mult_mod = card.ability.extra.mult,\n        message = localize{ type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult }}\n      }\n    end\n    if context.end_of_round and not context.repetition and context.game_over == false and not context.blueprint then\n      if (card.ability.extra.mult < 128) then \n        card.ability.extra.mult = card.ability.extra.mult * 2\n        card.ability.cicadas = card.ability.cicadas * 2\n        \n        for i = #card.ability.cicadasToDraw, card.ability.cicadas - 1 do\n          table.insert(card.ability.cicadasToDraw, #card.ability.cicadasToDraw, {x = 0, y = 0, xmod = 7 + (math.random(1000) / 100), ymod = 7 + (math.random(1000) / 100), t = math.random(1000) / 100})\n        end\n        \n        return {\n          message = \"+\"..tostring(card.ability.extra.mult / 2)..\" Mult\",\n          colour = G.C.RED\n        }\n      end\n    end\n  end",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "glimby_arrow",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"glimby_arrow\",\n\tpath = \"supf_glimby_arrow.png\",\n\tpx = 52,\n\tpy = 34",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "supf_glimby",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'supf_glimby',\n  order = 0,\n  func = function(card, layer)\n    if card.ability.arrowtimer and card.config.center.discovered then\n      card.ability.arrowtimer = card.ability.arrowtimer + 1\n      local at = card.ability.arrowtimer\n      local sc = 0.5 + (math.sin(at / 28) * 0.05)\n      local rot = math.sin(at / 35) * math.rad(2.5)\n      drawFloatingSpriteLegacy(card, 'supf_glimby_arrow', {x = 0, y = 0}, rot, sc, 0.25, 0.25 + (math.sin(at / 24) * 0.01), 'glimby_arrow')\n    end\n  end,\n  conditions = {vortex = false, facing = \"front\", discovered = true}",
+      "config": {
+        "x": 0,
+        "y": 0
+      },
+      "ability": {
+        "x": 0,
+        "y": 0
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "glimby",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = 'glimby',\n  \n  config = { extra = { Xmult = 2 }, arrowtimer = 0, XmultWhenCucumber = 10, shouldExplode = false },\n  \n  rarity = 3,\n  \n  cost = 8,\n  \n  atlas = 'Jokers',\n  pos = { x = 4, y = 0 },\n  \n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.Xmult, card.ability.XmultWhenCucumber }\n    }\n  end,\n  \n  calculate = function(self, card, context)\n    \n    if context.joker_main then \n      local amt = card.ability.extra.Xmult\n      local slot = 1\n      for i, v in ipairs(G.jokers.cards) do\n        if G.jokers.cards[i] == card then\n          slot = i\n          break\n        end\n      end\n\n      if G.jokers.cards[slot - 1] ~= nil then\n        if G.jokers.cards[slot - 1].ability.isCucumber then\n          card.ability.shouldExplode = true\n          amt = card.ability.XmultWhenCucumber\n        end\n      end\n\n      if G.jokers.cards[slot + 1] ~= nil then\n        if G.jokers.cards[slot + 1].ability.isCucumber then\n          card.ability.shouldExplode = true\n          if amt == card.ability.XmultWhenCucumber then\n            amt = card.ability.XmultWhenCucumber * 2\n          else\n            amt = card.ability.XmultWhenCucumber\n          end\n        end\n      end\n      \n      return {\n        Xmult_mod = amt,\n        message = localize{ type = 'variable', key = 'a_xmult', vars = { amt }}\n      }\n    end\n\n    local b = (context.hand_drawn or context.end_of_round)\n    if b and not context.blueprint then\n      if card.ability.shouldExplode then\n        G.E_MANAGER:add_event(Event({\n          trigger = 'after',\n          delay = 1,\n          blockable = false,\n          func = function()\n            local pos = getCardPosition(card)\n            table.insert(SUPF.PARTICLES, NewExplosion(pos.x, pos.y))\n            play_sound(\"supf_explosion\", 1, 0.5)\n            G.jokers:remove_card(card)\n            card:remove()\n            card = nil\n            return true;\n          end\n        }))\n      end\n    end\n    \n  end",
+      "config": {
+        "extra": {
+          "Xmult": 2
+        },
+        "arrowtimer": 0,
+        "XmultWhenCucumber": 10,
+        "shouldExplode": false
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 2
+        },
+        "arrowtimer": 0,
+        "XmultWhenCucumber": 10,
+        "shouldExplode": false
+      },
+      "vars": [
+        2,
+        10
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "hauntedHouse",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 2,
+        "y": 1
+      },
+      "raw": "key = 'hauntedHouse',\n  \n  rarity = 3,\n  \n  cost = 5,\n  \n  atlas = 'Jokers',\n  pos = { x = 2, y = 1 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { localize { type = 'name_text', set = 'Enhanced', key = 'm_supf_ghost' } }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.cardarea == G.play and context.repetition and next(context.poker_hands['Full House']) then\n      if context.other_card == context.scoring_hand[#context.scoring_hand] then\n        if context.other_card.config.center.key == \"c_base\" then\n          flipCardToEnhance(context.other_card, 'm_supf_ghost')\n        elseif SMODS.has_enhancement(context.other_card, 'm_supf_ghost') then\n          return\n          {\n            message = \"Again!\",\n            repetitions = 1\n          }\n        end\n      end\n    end\n  end",
+      "config": {
+        "message": "Again!",
+        "repetitions": 1
+      },
+      "ability": {
+        "message": "Again!",
+        "repetitions": 1
+      },
+      "vars": [
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "murderjoker",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"murderjoker\",\n    path = \"murderjoker.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "murderJoker",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 3,
+        "y": 1
+      },
+      "raw": "key = 'murderJoker',\n\n  config = { extra = { Xmult = 1.2 } },\n  \n  rarity = 3,\n  \n  cost = 5,\n  \n  atlas = 'Jokers',\n  pos = { x = 3, y = 1 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.Xmult }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.before and next(context.poker_hands['Four of a Kind']) then\n      card.ability.murder = true\n    end\n    if context.final_scoring_step and context.cardarea == G.jokers and card.ability.murder then\n      local dolers = 0\n      for _, c in ipairs(context.scoring_hand) do\n        dolers = dolers + math.ceil(c.rank and c.rank / 4 or 2)\n      end\n      for _, c in ipairs(context.scoring_hand) do\n        c.destroyed = true\n      end\n      G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 0.4,\n            func = function()\n              SUPF.MURDER_FRAMES = 10\n              if getSupfModule(\"visual\") then\n                play_sound('supf_murderjoker')\n              end\n              if getSupfModule(\"visual\") then\n                for _, c in ipairs(context.scoring_hand) do\n                  c:start_dissolve({G.C.RED}, true, 0, true)\n                end\n              else\n                for _, c in ipairs(context.scoring_hand) do\n                  c:start_dissolve({G.C.RED})\n                end\n              end\n              return true\n            end\n        }))\n      card.ability.murder = false\n      return {\n        dollars = dolers\n      }\n    end\n  end",
+      "config": {
+        "extra": {
+          "Xmult": 1.2
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 1.2
+        }
+      },
+      "vars": [
+        1.2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "voidcard",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = 'voidcard',\n  \n  config = { extra = { Xmult = 1 }, amount = 1 },\n  \n  rarity = 3,\n  \n  cost = 6,\n  \n  atlas = 'Jokers',\n  pos = { x = 1, y = 0 },\n  \n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.Xmult }\n    }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.before then\n      card.ability.amount = 1\n      local myPosition = 0\n      for i = 1, #G.jokers.cards do\n        if G.jokers.cards[i] == card then\n          myPosition = i\n          break\n        end\n      end\n      for i = 1, myPosition - 1 do\n        local pos = getCardPosition(G.jokers.cards[i])\n        local blst = NewVoidBlast(pos.x, pos.y, i)\n        table.insert(SUPF.PARTICLES, #SUPF.PARTICLES + 1, blst)\n        G.jokers.cards[i].VT.scale = G.jokers.cards[i].VT.scale * 0.8\n        SMODS.debuff_card(G.jokers.cards[i], true, 'supf_cardVoided')\n        card.ability.amount = card.ability.amount + 1\n      end\n      if (myPosition ~= 0) then\n        return {\n          message = \"Voided\",\n          colour = G.C.JOKER_GREY\n        }\n      end\n    end\n    \n    if context.joker_main then \n      local amt = card.ability.extra.Xmult * card.ability.amount\n      return {\n        Xmult_mod = amt,\n        message = localize{ type = 'variable', key = 'a_xmult', vars = { amt }}\n      }\n    end\n    \n    if context.selling_card and context.card == card then\n      for i = 1, #G.jokers.cards do\n        SMODS.debuff_card(G.jokers.cards[i], false, 'supf_cardVoided')\n      end\n    end\n      \n    if context.end_of_round then\n      for i = 1, #G.jokers.cards do\n        SMODS.debuff_card(G.jokers.cards[i], false, 'supf_cardVoided')\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "Xmult": 1
+        },
+        "amount": 1
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 1
+        },
+        "amount": 1
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ecstaticJoker",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = 'ecstaticJoker',\n\n    config = { extra = { Xmult = 1.2 } },\n\n    rarity = 2,\n\n    cost = 5,\n\n    atlas = 'Jokers',\n    pos = { x = 0, y = 0 },\n\n    loc_vars = function(self, info_queue, card)\n        return {\n        vars = { card.ability.extra.Xmult }\n        }\n    end,\n\n    calculate = function(self, card, context)\n        if context.joker_main then\n            return {\n                Xmult_mod = card.ability.extra.Xmult,\n                message = localize{ type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult }}\n            }\n        end\n    end",
+      "config": {
+        "extra": {
+          "Xmult": 1.2
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 1.2
+        }
+      },
+      "vars": [
+        1.2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "emphasis",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"emphasis\",\n    path = \"emphasis.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "emphasis",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 1,
+        "y": 1
+      },
+      "raw": "key = 'emphasis',\n\n  config = { extra = { mult = 10 } },\n  \n  rarity = 2,\n  \n  cost = 5,\n  \n  atlas = 'Jokers',\n  pos = { x = 1, y = 1 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.mult }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.end_of_round and context.individual then\n      if context.other_card.supf_do_emphasis then\n        context.other_card.supf_do_emphasis = nil\n      end\n    end\n    if context.individual and context.cardarea == G.play then\n      local allNumbered = true\n      for _, c in ipairs(G.play.cards) do\n        if c:is_face() then allNumbered = false end\n      end\n      if context.other_card == context.scoring_hand[#context.scoring_hand] and allNumbered then\n        return {\n          mult_mod = card.ability.extra.mult,\n          message = localize{ type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult }},\n          sound = 'supf_emphasis'\n        }\n      end\n    end\n  end",
+      "config": {
+        "extra": {
+          "mult": 10
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 10
+        }
+      },
+      "vars": [
+        10
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "peoplewatching",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = 'peoplewatching',\n\n  config = { extra = { mult = 20 }, face_cards_scored = 0 },\n  \n  rarity = 2,\n  \n  cost = 3,\n  \n  atlas = 'Jokers',\n  pos = { x = 0, y = 1 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { card.ability.extra.Xmult }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.individual and context.cardarea == G.play then\n      if context.other_card:is_face() then\n        card.ability.face_cards_scored = card.ability.face_cards_scored + 1\n        if card.ability.face_cards_scored == 3 then\n          return {\n            message = \"Score!\",\n            colour = G.C.GREEN,\n            mult_mod = card.ability.extra.mult\n          }\n        end\n      end\n    end\n    if context.before then\n      card.ability.face_cards_scored = 0\n    end\n  end",
+      "config": {
+        "extra": {
+          "mult": 20
+        },
+        "face_cards_scored": 0
+      },
+      "ability": {
+        "extra": {
+          "mult": 20
+        },
+        "face_cards_scored": 0
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "cobblestone_generator",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"cobblestone_generator\",\n    path = \"cobblestone_generator.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "stoneFactory",
+      "name": null,
+      "atlas": "Jokers",
+      "pos": {
+        "x": 4,
+        "y": 1
+      },
+      "raw": "key = 'stoneFactory',\n  \n  rarity = 2,\n  \n  cost = 5,\n  \n  atlas = 'Jokers',\n  pos = { x = 4, y = 1 },\n\n  loc_vars = function(self, info_queue, card)\n    return {\n      vars = { \n        localize { type = 'name_text', set = 'Enhanced', key = 'm_stone' },\n        localize { type = 'name_text', set = 'Enhanced', key = 'm_supf_fire' },\n        localize { type = 'name_text', set = 'Enhanced', key = 'm_supf_ice' }\n        }\n      }\n  end,\n  \n  calculate = function(self, card, context)\n    if context.joker_main then\n      local fire = false\n      local ice = false\n      for i, c in ipairs(context.scoring_hand) do\n        if SMODS.has_enhancement(c, 'm_supf_fire') then fire = true end\n        if SMODS.has_enhancement(c, 'm_supf_ice') then ice = true end\n        if fire and ice then break end\n      end\n      if fire and ice then \n        \n        card.ability.cards_to_create = card.ability.cards_to_create or 2\n        local cen = nil\n        local cards = {}\n          local _suit, _rank =\n            pseudorandom_element(SMODS.Suits, pseudoseed('stonefactory_create')).card_key, 'A'\n          for _, enhancement_center in pairs(G.P_CENTER_POOLS[\"Enhanced\"]) do\n          if enhancement_center.key == 'm_stone' then\n            cen = enhancement_center\n          end\n        end\n        cards[#cards+1] = create_playing_card({\n          front = G.P_CARDS[_suit .. '_' .. _rank],\n          center = cen\n        }, G.deck, nil)\n    \n        local pos = getCardPosition(card)\n        \n        for i = 1, 20 do\n          table.insert(SUPF.PARTICLES, #SUPF.PARTICLES + 1, NewSmokeParticle(pos.x, pos.y, 1 + (math.random(40) / 10)))\n        end\n        \n        play_sound(\"supf_cobblestone_generator\", 1, 1)\n        \n        SMODS.calculate_context({ playing_card_added = true, cards = cards })\n        \n      end\n    end\n  end",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "attunement_burst",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"attunement_burst\",\n\tpath = \"supf_attunement_burst.png\",\n\tpx = 7,\n\tpy = 9",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "explosion",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"explosion\",\n\tpath = \"supf_explosion.png\",\n\tpx = 72,\n\tpy = 101",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "explosion",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"explosion\",\n  path = \"explosion.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "SmokeParticle",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"SmokeParticle\",\n\tpath = \"supf_SmokeParticle.png\",\n\tpx = 12,\n\tpy = 14",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "VoidBlast",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"VoidBlast\",\n\tpath = \"supf_VoidBlast.png\",\n\tpx = 48,\n\tpy = 64",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "voidcard_proc",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"voidcard_proc\",\n  path = \"voidcard_proc.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n\t\tpath = \"supf_icon.png\",\n\t\tpx = 32,\n\t\tpy = 32,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n\t\tpath = \"supf_icon.png\",\n\t\tpx = 32,\n\t\tpy = 32,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "MurderJoker",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"MurderJoker\",\n\t\tpath = \"supf_MurderJoker.png\",\n\t\tpx = 32,\n\t\tpy = 32,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "money_up",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"money_up\",\n\tpath = \"supf_money_up.png\",\n\tpx = 21,\n\tpy = 17",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "money_up",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"money_up\",\n\tpath = \"money_up.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "gold_card_shine",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"gold_card_shine\",\n\tpath = \"gold_card_shine.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "steel_card_shine",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"steel_card_shine\",\n\tpath = \"steel_card_shine.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "card_shine",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"card_shine\",\n\tpath = \"supf_card_shine.png\",\n\tpx = 71,\n\tpy = 96",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "m_gold",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"m_gold\",\n    order = 0,\n    func = function(card, layer)\n        if getSupfModule(\"visual\") then\n            if card.ability.supf_shine then\n                drawFloatingSprite(card, \"supf_card_shine\", vec2(card.ability.supf_shine,0), {scale = 0, shadowLength = 0}, \"supf_cardShineVisual_\"..tostring(card.ability.supf_shine))\n                card.ability.supf_shine_timer = card.ability.supf_shine_timer + 1\n                if (card.ability.supf_shine_timer >= 3) then card.ability.supf_shine_timer = 0; card.ability.supf_shine = card.ability.supf_shine + 1 end\n                if card.ability.supf_shine > 7 then\n                    card.ability.supf_shine = nil\n                    card.ability.supf_shine_timer = nil\n                end\n            end\n        end\n    end,\n    conditions = {vortex = false, facing = \"front\", discovered = true}",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "m_steel",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"m_steel\",\n    order = 0,\n    func = function(card, layer)\n        if getSupfModule(\"visual\") then\n            if card.ability.supf_shine then\n                drawFloatingSprite(card, \"supf_card_shine\", vec2(card.ability.supf_shine,0), {scale = 0, shadowLength = 0}, \"supf_cardShineVisual_\"..tostring(card.ability.supf_shine))\n                card.ability.supf_shine_timer = card.ability.supf_shine_timer + 0.5\n                if (card.ability.supf_shine_timer >= 6) then card.ability.supf_shine_timer = 0; card.ability.supf_shine = card.ability.supf_shine + 1 end\n                if card.ability.supf_shine > 7 then\n                    card.ability.supf_shine = nil\n                    card.ability.supf_shine_timer = nil\n                end\n            end\n        end\n    end,\n    conditions = {vortex = false, facing = \"front\", discovered = true}",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.0.6"
+}
