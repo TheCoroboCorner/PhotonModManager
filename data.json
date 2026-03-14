@@ -5114,6 +5114,313 @@
     ],
     "externalWiki": null,
     "updated_at": "2026-03-13T21:13:20Z",
-    "readme": "\n# Revo's Vault\n\nCurrently there are 5 New Rarities (Printer, Chaos, Vaulted, Secret and Curse), **200+** jokers and a lot more!\n\n\n<img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5d784f62-9b5d-4d35-b554-2c4605f9728f\" />  <img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d2e92661-909a-4b29-b652-b77bab3c7106\" />  <img width=\"140\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ad3074ff-43b9-4b15-8e20-8153312fc83a\" />  <img width=\"141\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/eeda0325-8b1b-4254-beec-7f12aaab1207\" /> <img width=\"138\" height=\"186\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f99e9838-3314-46d4-b058-dbb6b2d4f906\" />\n\n\n\n\n----\n\n**Cross-Mod Content**\n\n----\n\n**[Cryptid](https://github.com/MathIsFun0/Cryptid)**\n\n- 7 Jokers\n\n**[CardSleeves](https://github.com/larswijn/CardSleeves)**\n\n- 1 Sleeve\n\n**[Rift-Raft](https://github.com/vitellaryjr/RiftRaft)**\n\n- 1 Joker\n- 1 Consumable\n\n**[Reverse Tarots](https://github.com/SkywardTARDIS/balatro_reverse_tarots)**\n\n- 5 Jokers\n- 3 Consumables\n- 2 Enhancements\n\nAnd arround 30 more mods!\n\n------\n\n\nyou can reach out to me from discord (revoo_.) for any suggestions or bug reports\n\n\n### Credits\n\n--MilƱMeg4 for great ideas\n\n--BepisFever for button code\n\n"
+    "readme": "\n# Revo's Vault\n\nCurrently there are 5 New Rarities (Printer, Chaos, Vaulted, Secret and Curse), **200+** jokers and a lot more!\n\n\n<img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5d784f62-9b5d-4d35-b554-2c4605f9728f\" />  <img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d2e92661-909a-4b29-b652-b77bab3c7106\" />  <img width=\"140\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ad3074ff-43b9-4b15-8e20-8153312fc83a\" />  <img width=\"141\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/eeda0325-8b1b-4254-beec-7f12aaab1207\" /> <img width=\"138\" height=\"186\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f99e9838-3314-46d4-b058-dbb6b2d4f906\" />\n\n\n\n\n----\n\n**Cross-Mod Content**\n\n----\n\n**[Cryptid](https://github.com/MathIsFun0/Cryptid)**\n\n- 7 Jokers\n\n**[CardSleeves](https://github.com/larswijn/CardSleeves)**\n\n- 1 Sleeve\n\n**[Rift-Raft](https://github.com/vitellaryjr/RiftRaft)**\n\n- 1 Joker\n- 1 Consumable\n\n**[Reverse Tarots](https://github.com/SkywardTARDIS/balatro_reverse_tarots)**\n\n- 5 Jokers\n- 3 Consumables\n- 2 Enhancements\n\nAnd arround 30 more mods!\n\n------\n\n\nyou can reach out to me from discord (revoo_.) for any suggestions or bug reports\n\n\n### Credits\n\n--MilƱMeg4 for great ideas\n\n--BepisFever for button code\n\n",
+    "versionHistory": [
+      {
+        "tag": "2.19.0a",
+        "name": "2.19.0a",
+        "body": "## Content\\r\\n### Jokers\\r\\n- Vaulted Brainstorm (Vaulted)\\r\\n- Mythical Printer (Mythical)\\r\\n### Consumables\\r\\n- Stained Contract (Contract)\\r\\n- Aflame Contract (Contract)\\r\\n- The Superior Soul (Superior Spectral)\\r\\n### Achievements \\r\\n- 2 New Achievements\\r\\n## Balancing\\r\\n### Nerfs\\r\\n- Absolute (Sticker) now requires room\\r\\n- Multi Banana (Rare) now requires room\\r\\n- Honey (Enhancement) ($5 > $3)\\r\\n- Lowered superior rate on boosters (my dumbass forgot to change booster rates)\\r\\n- Increased superior rate in general (1 in 1000 to 1 in 800)\\r\\n- Grinder (Uncommon) (X4 Chips > X3 Chips)\\r\\n- The Dealer HPs were lowered (6 > 4)\\r\\n### Fixes\\r\\n- Fixed Jhorah, Chained Beast crashing when obtained\\r\\n- Fixed rankless cards having ranks\\r\\n- Fixed Multi Banana crashing\\r\\n- Fixed Glass Gun fucking up the chances\\r\\n- Fixed Mod Icon being able to pick Deathcards to act as\\r\\n## Other\\r\\n### Important\\r\\n- Renamed Chaos rarity (Chaos -> Mythical)\\r\\n- Removed Chaotic Printer Machine until further notice\\r\\n- Removed Infinite Chicot Printer until further notice\\r\\n- Removed Promotion permanently\\r\\n- Removed Holy Printer until further notice\\r\\n- Reworked remaining Chaos jokers to be more balanced\\r\\n- Remade the sprites for remaining Chaos jokers\\r\\n### Misc\\r\\n- Charcoal now says that it doesn't replace enhancements\\r\\n- Chicken Printer now says it requires room\\r\\n- Changed some art for certain Enhancements / Jokers\\r\\n- Changes were made to Superior Card spawning\\r\\n- Superior Fool now shows the description of the joker its creating\\r\\n- Removed Devil's Contract (split into Aflame and Stained contracts)\\r\\n- Improvements on Mod Icon's description\\r\\n-----\\r\\n- And more!",
+        "publishedAt": "2026-03-13T21:14:39Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.19.0a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.18.4a",
+        "name": "2.18.4a",
+        "body": "## Balancing\\r\\n### Nerfs\\r\\n- Lowered Pinpoint System's XMULT (X22 > X4.4)\\r\\n## Fixes\\r\\n- Eternals now get destroyed in Deathcard making\\r\\n- Deathcard's shouldnt inherit any stickers now\\r\\n## Misc\\r\\n- Improved Superior collection even more",
+        "publishedAt": "2026-03-04T14:30:30Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.18.4a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.18.3a",
+        "name": "2.18.3a",
+        "body": "## Content\\r\\n### Mechanics\\r\\n- Deathcards \\r\\n### Vouchers\\r\\n- Jimbo's Photograph \\r\\n- Timer Upgrade  \\r\\n### Decks\\r\\n- Golden Deck\\r\\n### Gems\\r\\n- Lapis Lazuli \\r\\n## Cross-Mod\\r\\n### Card Sleeves\\r\\n- Golden Deck Sleeve\\r\\n### Feli's Jokeria\\r\\n- Pelt Printer (Printer) \\r\\n### Hyperfixation\\r\\n- Superior Deceit (Superior Spectral)\\r\\n- Overgrown Printer (Printer)\\r\\n## Balancing\\r\\n### Nerfs\\r\\n- Camera now also applies Temporary to created cards \\r\\n## Fixes\\r\\n- Fixed gems being able to appear multiple times/appear while rerolling if you reload the game \\r\\n- Fixed the descriptions for Emerald (Gem) and Everyone (Joker)\\r\\n- Fixed Soul Scythe \\r\\n- Fixed Vault buttons being clickable during the card Upgrade/Vault animation \\r\\n- Fixed \\\"The Eyes\\\" blueprint compatiblity \\r\\n## Misc\\r\\n- Improved the config UI \\r\\n- Gems now display the total and discovered amount of gems \\r\\n- Added SFX and VFX to superior cards for when they appear \\r\\n- Improvmenets on Superior collection UI\\r\\n- Whiteboard now supports modded suits and is not stuck in Spades until obtained \\r\\n- Added a list in The Vault to check which jokers have vaulted variants\\r\\n-- And more!",
+        "publishedAt": "2026-03-02T22:17:54Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.18.3a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.17.0c",
+        "name": "2.17.0c",
+        "body": "## Fixes\\r\\n- Fixed Cookie Cats working when it shouldnt\\r\\n- Fixed Killer Queen crashing the game when obtained",
+        "publishedAt": "2026-02-21T13:15:02Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.17.0c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.17.0",
+        "name": "2.17.0",
+        "body": "## Content\\r\\n### Jokers\\r\\n- Evil Joker (Common)\\r\\n- Golden Egg (Rare)\\r\\n- Chicken Printer (Printer)\\r\\n- Charcoal Joker (Uncommon)\\r\\n- Rainbow (Common)\\r\\n- Birthday Cake (Uncommon)\\r\\n### Consumables\\r\\n- Camera (Tarot)\\r\\n### Blinds\\r\\n- The Balance\\r\\n- The Hole\\r\\n### Stickers\\r\\n- Weak\\r\\n## Balancing\\r\\n### Nerfs\\r\\n- Lowered superior rate\\r\\n- Nerfed Bocchi the Joker\\r\\n### Buffs\\r\\n- Buffed Clicker's chip gain (0.1 > 0.5)\\r\\n## Fixes\\r\\n- Fixed D6 Crash\\r\\n- Fixed Mod Icon crashing (again)\\r\\n- Fixed a Cryptid UI crash \\r\\n- Fixed Investor's button being off-centered\\r\\n- Fixed Investor lagging the game\\r\\n## Misc\\r\\n- Added animations to The Vault's Ugrade and Vault buttons\\r\\n- Renamed Golden Shark to Goldfish\\r\\n- Adjusted/changed some of the jokers' sprites\\r\\n- Devilish Printer no longer applies Aflame to cards\\r\\n- Reworked Aflame's ability\\r\\n- Jokers with haunted sticker doesn't occupy space anymore\\r\\n- Mega Contracts and cards are now bigger\\r\\n- Added artist credits for jokers and gems (some may be missing/wrong)\\r\\n- Gem timers now update properly in run info\\r\\n- Obsidian (Gem) can now only appear if you have glass cards\\r\\n\\r\\n-- And more!",
+        "publishedAt": "2026-02-18T16:56:02Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.17.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.16.1a",
+        "name": "2.16.1a",
+        "body": "## CONTENT\\r\\n- The Fan (Curse)\\r\\n- Bottleflip (Tarot)\\r\\n## FIXES\\r\\n- Fix potential issues with Mod Icon\\r\\n## MISC\\r\\n- Made some Superior Cards' descriptions clearer",
+        "publishedAt": "2026-02-08T15:13:34Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.16.1a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.16.0b",
+        "name": "2.16.0b",
+        "body": "## Fixes\\r\\n- Removed experimental config requirements for Starspace crossmod content",
+        "publishedAt": "2026-02-03T20:36:15Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.16.0b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.16.0a",
+        "name": "2.16.0a",
+        "body": "## New Content\\r\\n- The Club (Vaulted)\\r\\n- The Diamond (Vaulted)\\r\\n- The Heart (Vaulted)\\r\\n- The Spade (Vaulted)\\r\\n- Rush (Curse)\\r\\n- Soul Scythe (Uncommon)\\r\\n- Heavy (Sticker)\\r\\n## Fixes\\r\\n- Fixed Chaotic Printer Machine crashing\\r\\n- Fix Celestial Printer's corner being wierd(??)\\r\\n- Fix some printers having wrong blueprint compat settings\\r\\n## Cross-Mod\\r\\n### Cryptid\\r\\n- Kitty Printer? (Printer)\\r\\n- Changed the art for Printorium and reworked the effects for Madness\\r\\n- Fixed ://SEED not affecting Legendary Printer's odds\\r\\n- Added Printorium to the printer deck\\r\\n### GIGA\\r\\n- Astral Printer (Printer)\\r\\n###  Fool's Gambit\\r\\n- Aberration Printer (Printer)\\r\\n###  Starspace\\r\\n- Blessed (Patch for Vampiric)\\r\\n- Stable (Patch for Radioactive)\\r\\n- Purified (Patch for Cursed)\\r\\n## Nerfs\\r\\n###  Scraps\\r\\n- Horn ($30 -> $20)\\r\\n- Pickles ($25 -> $15)\\r\\n- Metal Piece ($20 -> $10)\\r\\n- Apparatus ($35 -> $25)\\r\\n- Duck ($15 -> $5)\\r\\n## Other\\r\\n- Added an overview menu for curses for when they first appear\\r\\n- Added SFX to The Hand and made it instantly remove the joker on the right instead of making it dissolve\\r\\n- And more stuff i probably forgot about",
+        "publishedAt": "2026-02-03T20:34:15Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.16.0a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.7d",
+        "name": "2.15.7d",
+        "body": "# Content\\r\\n- Vaulted Golden Joker\\r\\n# Fixes\\r\\n- Fix a bug where your deck would get filled with ghost/fake cards\\r\\n-----",
+        "publishedAt": "2026-01-27T04:03:42Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.7d",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.7a",
+        "name": "2.15.7a",
+        "body": "# Content\\r\\n- 1 New Joker (Mod Icon, Legendary)\\r\\n- 4 New Vouchers (Freedom, Vision, Pink, Superior)\\r\\n- 1 Colour Card (MoreFluff Crossmod)\\r\\n- 1 Tarot (Prayer)\\r\\n# Nerfs\\r\\n- Lowered Superior Card spawn rate\\r\\n- Upgrade Cost in The Vault now scales with the Joker's Rarity\\r\\n# Fixes\\r\\n- Fix Pandik being affected by Ink vouchers\\r\\n- Fix cost not being updated properly after upgrading in vault\\r\\n- Fix Shop Sign not respecting pools\\r\\n-----\\r\\n- and more stuff i forgot about",
+        "publishedAt": "2026-01-26T05:38:28Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.7a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.5c",
+        "name": "2.15.5c",
+        "body": "# Fixes\\r\\n- Fix Cursed Stake appearing when curses are disabled\\r\\n- Remove print statements\\r\\n# Additions\\r\\n- Add The Prayer (Tarot): 1 in 4 Chance to destroy up to 1 selected curse",
+        "publishedAt": "2026-01-24T23:40:45Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.5c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.5b",
+        "name": "2.15.5b",
+        "body": "- New area for curses\\r\\n- Missing atlas fix for JoyousSpring cross-mod\\r\\n- Bloom rework\\r\\n- Pastel rework\\r\\n- Stickers no longer apply outside of the shop areas\\r\\n- Nerf Lethal Press Machine scaling (+15 Mult -> +5 Mult)\\r\\n- Fix some superior cards missing can_use checks\\r\\n- +1 Achievement\\r\\n- Banana Tag (next shop has a free Banana)\\r\\n- Fix jokers that give extra slots are not buyable when slots are full (e.g Do a Barrel Roll)\\r\\n- other stuff that i probably forgot about",
+        "publishedAt": "2026-01-24T14:53:30Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.5b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.4e",
+        "name": "Fix 2.15.4e",
+        "body": "- Added colours to mod's info menu\\r\\n- Fixed a crash about something i forgot\\r\\n\\r\\nSome other stuff i forgot to write down :D",
+        "publishedAt": "2026-01-21T20:16:16Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.4e",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.4a",
+        "name": "Fix 2.15.4a",
+        "body": "- Fix Reincarnated Jimbo gaining Xmult upon placing it to The Vault's card area\\r\\n- Fix Nyan cat softlocking the game if you have more than 1 when it activates\\r\\n- Fix D6 duping curses and being usable outside of shop\\r\\n- Fix Curses being duped if they're placed in The Vault area\\r\\n- Fix some other issues releated to moving cards\\r\\n- Fix missing localization on superior cards\\r\\n- Fix The Eyes hardcrashing under certain circumstances\\r\\n\\r\\nHuge thanks to Creator34 for helping me find these bugs",
+        "publishedAt": "2026-01-21T02:25:05Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.4a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.3a",
+        "name": "Fix 2.15.3a",
+        "body": "- Fix Gems not spawning due to a config typo\\r\\n- Fix Secret Jokers being unobtainable due to a config typo\\r\\n- Fix Gem Tag spawning when the gem config is disabled\\r\\n- The Vault help menu \\r\\n- Fix a bug where spamming the harvest button would give you more souls than you'd get",
+        "publishedAt": "2026-01-20T19:28:44Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.3a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.2g",
+        "name": "Fix 2.15.2g",
+        "body": "I forgot to make a release \\r\\n\\r\\nFix Killer Queen crashing\\r\\nSome ui file organization",
+        "publishedAt": "2026-01-19T20:37:20Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.2g",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.2f",
+        "name": "Fix 2.15.2f",
+        "body": "Better buttons for \\\"The Vault\\\" and \\\"Holographic Face\\\"",
+        "publishedAt": "2026-01-19T12:33:28Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.2f",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.15.2e",
+        "name": "Release 2.15.2e",
+        "body": "A new button for the shop (The Vault)\\r\\nLowered curse rate (0.001 -> 0.0009)\\r\\nFixed some curse triggers\\r\\nFixed Eren not working as intended\\r\\nPurify now cannot appear if curses are disabled\\r\\nFix a bug where printer deck would allow you to get any card you want\\r\\nFix The Ace showing blueprint incompatiblity when it's fully compatible\\r\\nFix Maliketh giving xmult itself\\r\\nBunch of new tags\\r\\nRemove Heavy sticker\\r\\nFix sticker applied/removed functions\\r\\n\\r\\nOther fixes and additions i probably forgot",
+        "publishedAt": "2026-01-19T11:50:59Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.15.2e",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.14.2b",
+        "name": "Release 2.14.2b",
+        "body": "uhh \\r\\n\\r\\nBanana Deck\\r\\nPedro full rework\\r\\nLocalization changes\\r\\nNew achievements\\r\\n\\r\\nand some other stuff which are not important",
+        "publishedAt": "2026-01-17T19:20:27Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.14.2b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.14.0b",
+        "name": "Hotfix 2.14.0b",
+        "body": "",
+        "publishedAt": "2026-01-16T19:02:32Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.14.0b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.14.0",
+        "name": "Release 2.14.0",
+        "body": "CURSES\\r\\nVersion number reset\\r\\nand some other stuff",
+        "publishedAt": "2026-01-16T18:48:41Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.14.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.9.1",
+        "name": "Fix 4.9.1",
+        "body": "",
+        "publishedAt": "2026-01-05T20:42:54Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.9.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.9.0",
+        "name": "Release 4.9.0",
+        "body": "",
+        "publishedAt": "2026-01-05T17:17:48Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.9.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.8.0",
+        "name": "Release 4.8.0",
+        "body": "",
+        "publishedAt": "2025-09-29T16:10:35Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.8.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.7.0",
+        "name": "Release 4.7.0",
+        "body": "",
+        "publishedAt": "2025-08-21T14:10:19Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.7.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.6.0",
+        "name": "Release 4.6.0",
+        "body": "# NOT RECOMMENDED\\r\\n\\r\\nGetting this mod from releases is not recommended since they're usually outdated!",
+        "publishedAt": "2025-08-05T14:54:26Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.6.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.3.0",
+        "name": "Release 4.3.0",
+        "body": "",
+        "publishedAt": "2025-07-26T08:09:29Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.3.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.2.2c",
+        "name": "Fix 4.2.2c",
+        "body": "Fixed some jokers missing localization text",
+        "publishedAt": "2025-06-28T23:40:02Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.2.2c",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.2.2b",
+        "name": "Fix 4.2.2b",
+        "body": "Fix the ERROR sticker ",
+        "publishedAt": "2025-06-28T23:23:57Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.2.2b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "4.2.2a",
+        "name": "Release 4.2.2a",
+        "body": "Woooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",
+        "publishedAt": "2025-06-28T23:15:12Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.2.2a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-03-14T16:17:58.989Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-03-14T16:17:59.219Z"
+    }
   }
 }
