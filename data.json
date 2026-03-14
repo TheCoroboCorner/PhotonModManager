@@ -5089,5 +5089,31 @@
       "downloads": 2,
       "lastDownloaded": "2026-02-09T19:23:50.620Z"
     }
+  },
+  "Revos-Vault@Cdrvo": {
+    "id": "RevosVault",
+    "name": "Revo's Vault",
+    "author": [
+      "CodeRevo"
+    ],
+    "description": "Adds a lot of random stuff",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "7E7AFF",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-1503a)"
+    ],
+    "published_at": "2026-03-14T16:17:55.374Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Blinds",
+      "Mechanics",
+      "Misc"
+    ],
+    "externalWiki": null,
+    "updated_at": "2026-03-13T21:13:20Z",
+    "readme": "\n# Revo's Vault\n\nCurrently there are 5 New Rarities (Printer, Chaos, Vaulted, Secret and Curse), **200+** jokers and a lot more!\n\n\n<img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5d784f62-9b5d-4d35-b554-2c4605f9728f\" />  <img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d2e92661-909a-4b29-b652-b77bab3c7106\" />  <img width=\"140\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ad3074ff-43b9-4b15-8e20-8153312fc83a\" />  <img width=\"141\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/eeda0325-8b1b-4254-beec-7f12aaab1207\" /> <img width=\"138\" height=\"186\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f99e9838-3314-46d4-b058-dbb6b2d4f906\" />\n\n\n\n\n----\n\n**Cross-Mod Content**\n\n----\n\n**[Cryptid](https://github.com/MathIsFun0/Cryptid)**\n\n- 7 Jokers\n\n**[CardSleeves](https://github.com/larswijn/CardSleeves)**\n\n- 1 Sleeve\n\n**[Rift-Raft](https://github.com/vitellaryjr/RiftRaft)**\n\n- 1 Joker\n- 1 Consumable\n\n**[Reverse Tarots](https://github.com/SkywardTARDIS/balatro_reverse_tarots)**\n\n- 5 Jokers\n- 3 Consumables\n- 2 Enhancements\n\nAnd arround 30 more mods!\n\n------\n\n\nyou can reach out to me from discord (revoo_.) for any suggestions or bug reports\n\n\n### Credits\n\n--MilƱMeg4 for great ideas\n\n--BepisFever for button code\n\n"
   }
 }
