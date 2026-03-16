@@ -2120,8 +2120,8 @@
     "type": "Mod",
     "tags": [],
     "analytics": {
-      "views": 18,
-      "lastViewed": "2026-02-21T03:50:54.814Z",
+      "views": 19,
+      "lastViewed": "2026-03-16T03:36:21.145Z",
       "downloads": 1,
       "lastDownloaded": "2026-01-30T03:25:57.299Z"
     },
@@ -2347,7 +2347,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-14T21:40:11.968Z"
+    "versionHistoryLastCheck": "2026-03-16T03:36:20.822Z"
   },
   "balatro-typist-mod@kasimeka": {
     "id": "typist",
