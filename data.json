@@ -5133,6 +5133,26 @@
     "readme": "\n# Revo's Vault\n\nCurrently there are 5 New Rarities (Printer, Chaos, Vaulted, Secret and Curse), **200+** jokers and a lot more!\n\n\n<img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5d784f62-9b5d-4d35-b554-2c4605f9728f\" />  <img width=\"142\" height=\"190\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d2e92661-909a-4b29-b652-b77bab3c7106\" />  <img width=\"140\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ad3074ff-43b9-4b15-8e20-8153312fc83a\" />  <img width=\"141\" height=\"187\" alt=\"image\" src=\"https://github.com/user-attachments/assets/eeda0325-8b1b-4254-beec-7f12aaab1207\" /> <img width=\"138\" height=\"186\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f99e9838-3314-46d4-b058-dbb6b2d4f906\" />\n\n\n\n\n----\n\n**Cross-Mod Content**\n\n----\n\n**[Cryptid](https://github.com/MathIsFun0/Cryptid)**\n\n- 7 Jokers\n\n**[CardSleeves](https://github.com/larswijn/CardSleeves)**\n\n- 1 Sleeve\n\n**[Rift-Raft](https://github.com/vitellaryjr/RiftRaft)**\n\n- 1 Joker\n- 1 Consumable\n\n**[Reverse Tarots](https://github.com/SkywardTARDIS/balatro_reverse_tarots)**\n\n- 5 Jokers\n- 3 Consumables\n- 2 Enhancements\n\nAnd arround 30 more mods!\n\n------\n\n\nyou can reach out to me from discord (revoo_.) for any suggestions or bug reports\n\n\n### Credits\n\n--MilƱMeg4 for great ideas\n\n--BepisFever for button code\n\n",
     "versionHistory": [
       {
+        "tag": "2.19.4b",
+        "name": "2.19.4b",
+        "body": "### Fixes\\r\\n- Fixed Dreams & Desires appearing in every tarot pack",
+        "publishedAt": "2026-03-19T15:06:29Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.19.4b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "2.19.4a",
+        "name": "2.19.4a",
+        "body": "## Content\\r\\n### Cross-Mod\\r\\n#### GIGA\\r\\n- Ultra Mega (Enhancement)\\r\\n## Balancing\\r\\n### Nerfs\\r\\n- Lowered Vaulted Banana's XMULT (30 > 20)\\r\\n### Buffs\\r\\n- Lowered Genetic Mutation's chances of destruction (1 in 3 > 1 in 6)\\r\\n- Lowered Vaulted Banana's chances of destruction (1 in 12 > 1 in 14)\\r\\n- Lowered VBall's chances of destruction (1 in 4 > 1 in 8)\\r\\n- Increases souls gained from Soul Scythe (2 > 5)\\r\\n### Fixes\\r\\n- Fixed Mod Icon getting destroyed if viewed in collection\\r\\n- Fixed Soul Scythe destroying unplayed cards\\r\\n- Fixed Superior Purify doing nothing when used\\r\\n- Fixed some crashes with Aikoyori's Shenanigans & Entropy\\r\\n## Other\\r\\n### Important\\r\\n- Souls now persist between runs and can be viewed in the profile page\\r\\n",
+        "publishedAt": "2026-03-18T18:34:49Z",
+        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/2.19.4a",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
         "tag": "2.19.2b",
         "name": "2.19.2b",
         "body": "## Content\\r\\n### Seals\\r\\n- Superior Seal\\r\\n### Consumables\\r\\n- Superior Contracts\\r\\n- Superior Scraps\\r\\n- Superiors for remaining Tarots & Spectrals\\r\\n### Cross-Mod\\r\\n#### Incognito\\r\\n- Superior variants for Zen Consumables\\r\\n## Balancing\\r\\n### Nerfs\\r\\n- Lowered the appearence rate of Dreams & Desires (Tarot) \\r\\n- Nerfed Golden Deck\\r\\n## Fixes\\r\\n- Fixed Lucky Contract having wrong return values\\r\\n- Fixed Shop Sign not working properly\\r\\n## Other\\r\\n### Misc\\r\\n- Tweaked the tiered contracts' sprites \\r\\n",
@@ -5411,32 +5431,12 @@
         "assets": [],
         "prerelease": false,
         "draft": false
-      },
-      {
-        "tag": "4.2.2c",
-        "name": "Fix 4.2.2c",
-        "body": "Fixed some jokers missing localization text",
-        "publishedAt": "2025-06-28T23:40:02Z",
-        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.2.2c",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
-      },
-      {
-        "tag": "4.2.2b",
-        "name": "Fix 4.2.2b",
-        "body": "Fix the ERROR sticker ",
-        "publishedAt": "2025-06-28T23:23:57Z",
-        "htmlUrl": "https://github.com/Cdrvo/Revos-Vault/releases/tag/4.2.2b",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-16T03:37:25.175Z",
+    "versionHistoryLastCheck": "2026-03-21T09:55:20.010Z",
     "analytics": {
-      "views": 3,
-      "lastViewed": "2026-03-16T05:41:20.374Z"
+      "views": 4,
+      "lastViewed": "2026-03-21T09:55:20.334Z"
     }
   }
 }
