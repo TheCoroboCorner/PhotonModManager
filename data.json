@@ -2103,7 +2103,13 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-24T17:47:50.215Z"
+    "versionHistoryLastCheck": "2026-03-24T17:47:50.215Z",
+    "analytics": {
+      "views": 0,
+      "downloads": 1,
+      "lastDownloaded": "2026-03-24T17:50:47.161Z",
+      "lastViewed": null
+    }
   },
   "JoyousSpring@nh6574": {
     "id": "JoyousSpring",
