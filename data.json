@@ -3820,7 +3820,11 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-24T17:47:51.210Z"
+    "versionHistoryLastCheck": "2026-03-24T17:47:51.210Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-03-24T17:51:32.995Z"
+    }
   },
   "pi_cubeds_jokers@pi-cubed-cat": {
     "id": "picubedsjokers",
