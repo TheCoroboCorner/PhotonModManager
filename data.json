@@ -5494,5 +5494,30 @@
       "views": 5,
       "lastViewed": "2026-04-01T21:36:09.971Z"
     }
+  },
+  "JROK@ThunderEdge73": {
+    "id": "jrok",
+    "name": "JROK",
+    "author": [
+      "ThunderEdge73"
+    ],
+    "description": "A mod containing only Al content.",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "374244",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-1503a)"
+    ],
+    "published_at": "2026-04-01T21:45:46.255Z",
+    "type": "Mod",
+    "tags": [
+      "Textures",
+      "Modifiers",
+      "Mechanics",
+      "Misc"
+    ],
+    "externalWiki": null,
+    "updated_at": "2026-04-01T21:32:20Z",
+    "readme": "# JROK\nA mod containing only Al content.\n"
   }
 }
