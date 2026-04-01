@@ -5518,6 +5518,63 @@
     ],
     "externalWiki": null,
     "updated_at": "2026-04-01T21:32:20Z",
-    "readme": "# JROK\nA mod containing only Al content.\n"
+    "readme": "# JROK\nA mod containing only Al content.\n",
+    "versionHistory": [
+      {
+        "tag": "v1.2.1",
+        "name": "v1.2.1 - Metadata Moment",
+        "body": "Updated metadata",
+        "publishedAt": "2026-04-01T21:32:57Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.2.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.0",
+        "name": "v1.2.0 - I Can't Think of a Funny Title",
+        "body": "title",
+        "publishedAt": "2026-04-01T21:19:56Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.2.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.1",
+        "name": "v1.1.1 - I wish JROK could help me be good at git",
+        "body": "Accidentally left out a commit that was supposed to be in v1.1.0",
+        "publishedAt": "2026-03-31T23:16:09Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.1.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0",
+        "name": "v1.1.0 - The Rise of AI",
+        "body": "# 🗒️ Fixes\\r\\n\\r\\n- 🔧 Tweaked some shader visual effects — Screenshaders should feel a lot more impactful compared to the previous version.\\r\\n- 🔧 Fixed crashes with jokers used as training data — JROK's content should be more stable now.\\r\\n- 🔧 Tweaked some shader visual effects — Screenshaders should feel a lot more impactful compared to the previous version.\\r\\n- 🔧 Adjusted prompt input — JROK should feel better to use for menu navigation.\\r\\n\\r\\n**Full Changelog**: https://github.com/ThunderEdge73/JROK/compare/v1.0.0...v1.1.0",
+        "publishedAt": "2026-03-31T23:12:45Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.1.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0 - Randomly Generated Humor",
+        "body": "Initial release, good luck",
+        "publishedAt": "2026-03-29T02:27:52Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.0.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-04-01T21:45:49.704Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-04-01T21:45:49.811Z"
+    }
   }
 }
