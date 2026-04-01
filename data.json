@@ -4715,6 +4715,16 @@
     ],
     "versionHistory": [
       {
+        "tag": "v1.3.666",
+        "name": "v1.3.666",
+        "body": "Go play the update\\r\\n\\r\\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.3.3...v1.3.666",
+        "publishedAt": "2026-04-01T09:44:15Z",
+        "htmlUrl": "https://github.com/lord-ruby/Entropy/releases/tag/v1.3.666",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
         "tag": "v1.3.3",
         "name": "v1.3.3",
         "body": "## What's Changed\\r\\n* Fix colour definitions by @lord-ruby in https://github.com/lord-ruby/Entropy/pull/119\\r\\n\\r\\n\\r\\n**Full Changelog**: https://github.com/lord-ruby/Entropy/compare/v1.3.2...v1.3.3",
@@ -4935,10 +4945,10 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-03-31T03:47:38.491Z",
+    "versionHistoryLastCheck": "2026-04-01T21:47:13.058Z",
     "analytics": {
-      "views": 30,
-      "lastViewed": "2026-03-05T22:29:30.168Z",
+      "views": 31,
+      "lastViewed": "2026-04-01T21:47:13.189Z",
       "downloads": 2,
       "lastDownloaded": "2026-02-09T19:21:21.225Z"
     }
