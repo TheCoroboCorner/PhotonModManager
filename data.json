@@ -5531,6 +5531,76 @@
     "readme": "# JROK\nA mod containing only Al content.\n",
     "versionHistory": [
       {
+        "tag": "v1.3.1",
+        "name": "v1.3.1 - sobbing",
+        "body": "why am i an idiot",
+        "publishedAt": "2026-04-02T04:29:39Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.3.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.3.0",
+        "name": "v1.3.0 - I am not touching this god forsaken repo ever again",
+        "body": "i have gone insane",
+        "publishedAt": "2026-04-02T04:25:28Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.3.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.6",
+        "name": "v1.2.6 - perkeo DUI",
+        "body": "",
+        "publishedAt": "2026-04-02T01:47:48Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.2.6",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.5",
+        "name": "v1.2.5 - i swear to god im gonna crash out",
+        "body": "",
+        "publishedAt": "2026-04-02T01:45:22Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.2.5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.4",
+        "name": "v1.2.4 - ts so vibecoded it isnt even working",
+        "body": "",
+        "publishedAt": "2026-04-02T01:00:28Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.2.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.3",
+        "name": "v1.2.3 - I hate Cloud 9",
+        "body": "",
+        "publishedAt": "2026-04-02T00:31:51Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.2.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.2.2",
+        "name": "v1.2.2 - fixes",
+        "body": "",
+        "publishedAt": "2026-04-02T00:29:53Z",
+        "htmlUrl": "https://github.com/ThunderEdge73/JROK/releases/tag/v1.2.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
         "tag": "v1.2.1",
         "name": "v1.2.1 - Metadata Moment",
         "body": "Updated metadata",
@@ -5581,10 +5651,10 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-01T21:45:49.704Z",
+    "versionHistoryLastCheck": "2026-04-02T22:29:40.580Z",
     "analytics": {
-      "views": 6,
-      "lastViewed": "2026-04-02T21:15:58.459Z",
+      "views": 7,
+      "lastViewed": "2026-04-02T22:29:40.825Z",
       "downloads": 1,
       "lastDownloaded": "2026-04-02T01:27:46.936Z"
     }
