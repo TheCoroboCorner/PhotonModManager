@@ -1,0 +1,3203 @@
+{
+  "locMap": {
+    "b_jrok_ai": {
+      "name": "AI Deck",
+      "text": [
+        "Channels the power of",
+        "{C:attention}generative AI{} to assist",
+        "you with the decisions",
+        "you make within the run."
+      ],
+      "type": "Back"
+    },
+    "e_jrok_hallucinated": {
+      "name": "Hallucinated",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult"
+      ],
+      "type": "Edition"
+    },
+    "j_jrok_spoon_bender": {
+      "name": "Spoon Bender",
+      "text": [
+        "{C:attention}Unscored cards{}",
+        "give {C:white,X:mult}X#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_dream_catcher": {
+      "name": "Dream Catcher",
+      "text": [
+        "The next {C:attention}Boss Blind{}",
+        "is {C:attention}#1#",
+        "{s:0.8}Prediction might change",
+        "{s:0.8}based on your actions"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_normal": {
+      "name": "Normal Joker",
+      "text": [
+        "Played cards without an",
+        "{C:attention}Enhancement{}, {C:attention}Edition{}, or {C:attention}Seal",
+        "give {C:mult}+#1#{} Mult and {C:chips}+#2#{} Chips"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_4d": {
+      "name": "4D Joker",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult",
+        "Decreases by {X:mult,C:white}X#2#{}",
+        "{C:attention}every second"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_jetfish": {
+      "name": "Jetfish",
+      "text": [
+        "{C:mult}+#1#{} Mult for each",
+        "{C:attention}consecutive{} hand",
+        "played without",
+        "unscoring cards",
+        "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_cobbler": {
+      "name": "Cobbler",
+      "text": [
+        "Gains {C:mult}+#1#{} Mult at",
+        "end of round",
+        "This Joker {C:red}self-destructs",
+        "after reaching {C:mult}+#3#{} Mult",
+        "{C:inactive}(Currently {C:red}+#2#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_shiny_rock": {
+      "name": "Shiny Rock",
+      "text": [
+        "{C:green}#1# in #2#{} chance to give",
+        "a playing card an {C:dark_edition}Edition",
+        "when scored"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_cultist": {
+      "name": "Cultist",
+      "text": [
+        "{C:attention}Arcana Packs{} contain a",
+        "bonus {C:attention}Spectral{} Card"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_forgery": {
+      "name": "Forgery",
+      "text": [
+        "When {C:attention}Blind{} is selected,",
+        "{C:attention}destroy{} a random card in {C:attention}deck{},",
+        "and add a {C:attention}quarter{} of its",
+        "{C:chips}Chips{} to this Joker as {C:mult}Mult",
+        "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_leeroooooy": {
+      "name": "LEEROOOOOY!!",
+      "text": [
+        "{C:attention}Retrigger{} all played cards",
+        "per {C:attention}Blind skipped{} this {C:attention}Ante",
+        "{C:inactive}(Currently {C:attention}#1#{} {C:inactive}retriggers)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_hatchet": {
+      "name": "Hatchet",
+      "text": [
+        "{X:red,C:white}X#1#{} Mult on {C:attention}first",
+        "{C:attention}hand of round",
+        "{C:red}Destroy{} played",
+        "cards in {C:attention}first{}",
+        "hand of round"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_dakimakura": {
+      "name": "Dakimakura",
+      "text": [
+        "If played hand contains a",
+        "{C:attention}Flush{}, convert each played",
+        "card into a {C:attention}random suit"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_philosophical": {
+      "name": "Philosophical Joker",
+      "text": [
+        "{C:dark_edition}+#1#{} Joker Slot"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_basepaul": {
+      "name": "Basepaul Card",
+      "text": [
+        "{X:mult,C:white} X#1# {} Mult. {X:mult,C:white} X#2# {} Mult",
+        "instead for {C:red}Paul{}",
+        "{C:inactive}(Who's Paul?)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_dazzles": {
+      "name": "The Dazzles",
+      "text": [
+        "{C:mult}+#1#{} Mult after {C:attention}#2#{} card#3#",
+        "scored, then change to a random",
+        "requirement between {C:attention}1{}, {C:attention}2{}, {C:attention}3{} and {C:attention}6{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_croque_madame": {
+      "name": "Croque Madame",
+      "text": [
+        "If a Joker is on the right of",
+        "this at end of round, consume",
+        "this and gain {C:money}${} equal to {C:attention}double",
+        "the {C:attention}sell value{} of both"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_tony": {
+      "name": "Tony",
+      "text": [
+        "Create a {C:dark_edition}Negative {C:spectral}Spectral{}",
+        "card if played hand",
+        "contains a card with",
+        "{C:attention}Foil{} and an {C:attention}Ace{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_nyala": {
+      "name": "Nyala",
+      "text": [
+        "Played hands turn their respective",
+        "held {C:planet}Planets{} into {C:enhanced}Black Holes{}",
+        "{X:mult,C:white}X#2#{} Mult for every {C:enhanced}Black Hole{} used",
+        "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_punch_card": {
+      "name": "Punch Card",
+      "text": [
+        "Duplicates next used",
+        "consumable every {C:attention}#1#",
+        "consumables used",
+        "{C:inactive}(#2#){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_copycat": {
+      "name": "Copy Cat",
+      "text": [
+        "Copies the effect of a {C:attention}random{} other Joker",
+        "{C:inactive}(Changes target at end of shop){}",
+        "{C:inactive}(Currently {C:attention}#1#{C:inactive}){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_obsession": {
+      "name": "Obsession",
+      "text": [
+        "Retriggers all cards",
+        "of rank {C:attention}#1#{}, {C:blue}#2#{} time#3#",
+        "{C:inactive}(Rank selected randomly on spawn)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_toiletrock": {
+      "name": "Toilet Rock",
+      "text": [
+        "{C:attention}#1#es{} can be made",
+        "out of {C:attention}Stone Cards{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_wishingstones": {
+      "name": "Wishing Stones",
+      "text": [
+        "{C:attention}#1#s{} can be made",
+        "out of {C:attention}Stone Cards{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_kitsune_mask": {
+      "name": "Kitsune Mask",
+      "text": [
+        "{C:green}#1# in #2#{} chance for each",
+        "played {C:attention}#3#{} to create a",
+        "{C:spectral}#4#{} card when scored",
+        "Chance {C:green}doubled{} on {C:attention}#5#s{}",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_thrift_shop": {
+      "name": "Thrift Shop",
+      "text": [
+        "{C:green}#1# in #2#{} chance for each",
+        "shop {C:green}reroll{} to",
+        "create a random {C:attention}Tag{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_posh": {
+      "name": "Posh Joker",
+      "text": [
+        "{C:chips}+#1#{} Chips for each",
+        "enhanced card {C:attention}held-in-hand{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_stellar_yogurt": {
+      "name": "Stellar Yogurt",
+      "text": [
+        "Creates {C:attention}The Fool{}",
+        "and a {C:planet}Meteor Tag{}",
+        "when sold"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_slop_vulpix": {
+      "name": "Vulpix Plush :)",
+      "text": [
+        "When a {C:planet}Planet{} card is",
+        "sold, {C:green}#1# in #2#{} chance to",
+        "gain {C:blue}+1{} hand for this",
+        "round temporarily",
+        "If a {C:planet}Planet{} card was",
+        "sold this round,",
+        "{C:green}#3# in #4#{} chance",
+        "to lose {C:red}1{} discard",
+        "when hand is played"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_slop_moist": {
+      "name": "Moisturiser",
+      "text": [
+        "When sold, removes {C:attention}Perishable{}",
+        "or a {C:attention}debuff{} from a",
+        "random owned Joker",
+        "If there are no existing",
+        "{C:attention}Perishable{} or {C:red}debuffed{} Jokers,",
+        "a random Joker instead",
+        "becomes {C:dark_edition}Foil{}, {C:dark_edition}Polychrome{},",
+        "or {C:dark_edition}Negative{}",
+        "{C:inactive,s:0.8}(Can override existing editions)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_sora": {
+      "name": "Sora",
+      "text": [
+        "This Joker gains {X:mult,C:white}X#2#{} Mult",
+        "for each scored card",
+        "with a {C:hearts}Heart{} suit, resets",
+        "when {C:attention}Boss Blind{} is defeated.{}",
+        "{C:inactive}(Currently {X:mult,C:white}X#1# {C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_paopufruit": {
+      "name": "Paopu Fruit",
+      "text": [
+        "Add a random {C:dark_edition}Edition{},",
+        "{C:dark_edition}Enhancement{}, and {C:attention}Seal{} to",
+        "first scored card for",
+        "the next {C:attention}#1#{} hands"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_orchid": {
+      "name": "Orchid",
+      "text": [
+        "This Joker gains {C:mult}+#1#{} Mult",
+        "per hand played with",
+        "a scoring {C:attention}Jack{}",
+        "{C:inactive}(Currently {C:mult}+#2#{}{C:inactive} Mult){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_sunflower": {
+      "name": "Sunflower",
+      "text": [
+        "After skipping a blind",
+        "{C:attention}disable{} the {C:attention}Boss Blind{}",
+        "{C:inactive}(#1#){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_goldship": {
+      "name": "Gold Ship",
+      "text": [
+        "Earn {C:money}money{} for each {C:attention}#1#",
+        "drawn to hand, rank",
+        "changes every round",
+        "{C:inactive,S:0.8}Golshi decides how much"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_tmoperao": {
+      "name": "TM Opera O",
+      "text": [
+        "This Joker gains {C:white,X:red}X#2#{} Mult",
+        "per {C:attention}consecutive{} hand played",
+        "with a scoring {C:attention}face{} card",
+        "{C:inactive}(Currently {C:white,X:red}X#1#{C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_atmospheric": {
+      "name": "Atmospheric Joker",
+      "text": [
+        "Retriggers the {C:attention}first three{}",
+        "scored {C:attention}5s{} twice"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_precious": {
+      "name": "Precious Joker",
+      "text": [
+        "This Joker gains {X:mult,C:white}X#1#{} Mult",
+        "each time a {C:attention}5{} is scored",
+        "Resets at end of round",
+        "{C:inactive} (Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_grosdish": {
+      "name": "Grosdish",
+      "text": [
+        "{C:chips}+#1#{} Chips",
+        "{C:green}#2# in #3#{} chance",
+        "to go extinct"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_spin": {
+      "name": "Do a Barrel Roll",
+      "text": [
+        "Scored cards will do a spin",
+        "{C:dark_edition}+1{C:attention} Joker Slot"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_detour": {
+      "name": "Detour",
+      "text": [
+        "Allows {C:attention}Straights{}",
+        "to wrap around",
+        "{C:inactive}(ex: {C:attention}Q K A 2 3{C:inactive}){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_twins": {
+      "name": "The Twins",
+      "text": [
+        "When {C:attention}Blind{} is skipped,",
+        "create a {C:attention}Double Tag{}",
+        "before {C:attention}Tag{} reward"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_berry_golden": {
+      "name": "Goldenberry",
+      "text": [
+        "Each scored",
+        "{C:attention}#1#{} or {C:attention}#2#",
+        "earns {C:money}$#3#{}-{C:money}$#4#",
+        "{s:0.1} ",
+        "{C:inactive}Ranks change",
+        "{C:inactive}every round",
+        "{C:red,s:0.9,E:2}Eaten{s:0.9} when",
+        "{s:0.9}no {C:attention,s:0.9}#1#{s:0.9} or {C:attention,s:0.9}#2#",
+        "{s:0.9}scored this round"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_berry_shimmer": {
+      "name": "Shimmerberry",
+      "text": [
+        "Each scored",
+        "{C:attention}#1#{} or {C:attention}#2#",
+        "{C:green}reduces {C:attention}Blind",
+        "{C:attention}Size{} by {C:SEMBY_percent}#3#%",
+        "{s:0.1} ",
+        "{C:inactive}Ranks change",
+        "{C:inactive}every round",
+        "{C:red,s:0.9,E:2}Eaten{s:0.9} when",
+        "{s:0.9}no {C:attention,s:0.9}#1#{s:0.9} or {C:attention,s:0.9}#2#",
+        "{s:0.9}scored this round"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_baguette": {
+      "name": "Baguette",
+      "text": [
+        "Played {C:attention}face cards{}",
+        "give {C:money}$#1#{} when scored",
+        "{C:red}Self-destructs",
+        "in {C:attention}#2#{} rounds"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_thunderedge": {
+      "name": "ThunderEdge",
+      "text": [
+        "This Joker gains {X:mult,C:white}X#1#{} Mult",
+        "for every {C:money}$#2#{} {C:inactive}($#3#){} earned",
+        "{C:inactive}(Currently {X:mult,C:white}X#4#{C:inactive} Mult)",
+        "{C:inactive,s:0.8}How the hell did I get here?"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_fireball": {
+      "name": "Fireball",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult next hand"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_fireball_infinity": {
+      "name": "Fireball",
+      "text": [
+        "{X:legendary,C:white,E:1}X#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_dead_ringer": {
+      "name": "Dead Ringer",
+      "text": [
+        "Prevents death against {C:attention}Small Blinds",
+        "{X:mult,C:white}X#1#{} Mult if this Joker prevented",
+        "death this {C:attention}ante",
+        "{C:inactive}(#2#)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_pero": {
+      "name": "PERO",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult if all",
+        "Joker slots are full"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_butterfly": {
+      "name": "Butterfly Memory",
+      "text": [
+        "Creates a random {C:dark_edition}Negative{}",
+        "{C:spectral}Spectral{} card when {C:attention}Boss Blind{}",
+        "is selected"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_ghost_joker": {
+      "name": "Poltergeist",
+      "text": [
+        "Create a {C:spectral}Spectral{} card",
+        "when {C:attention}Blind{} is selected",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_uniku": {
+      "name": "Uniku",
+      "text": [
+        "{C:attention}Retrigger{} all scored",
+        "{C:attention}7{}s {C:attention}#1#{} times"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_ghostinabucket": {
+      "name": "Ghost in a Bucket",
+      "text": [
+        "{C:attention}Aces{} held in hand each",
+        "have a {C:green}#1# in #2#{} chance to",
+        "create a {C:tarot}Tarot{} card",
+        "{C:inactive}(Must have room){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_ghost": {
+      "name": "Ghost",
+      "text": [
+        "Gives {X:mult,C:white}X#1#{} Mult for",
+        "each {C:tarot}Tarot{} card in",
+        "your {C:attention}consumable{} area",
+        "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_d0": {
+      "name": "D0",
+      "text": [
+        "Multiplies all {C:attention}listed{}",
+        "{C:green,E:1}probabilities{} by {C:attention}0",
+        "{C:inactive}(ex. {C:green}1 in 3{C:inactive} -> {C:green}0 in 3{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_lambda_calculus": {
+      "name": "Lambda Calculus",
+      "text": [
+        "Whenever another Joker {C:attention}triggers{}",
+        "add its {C:attention}values{} to this Jokers {C:blue}Chips{}",
+        "{C:red}Resets{} when this Joker triggers",
+        "{C:inactive}(Currently {C:blue}+#1#{C:inactive} Chips)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_subterfuge": {
+      "name": "Subterfuge",
+      "text": [
+        "Destroys the {C:attention}first played",
+        "{C:attention}hand{} every round"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_deadringer": {
+      "name": "Deadringer",
+      "text": [
+        "Retrigger scored {C:attention}#1#s{} and {C:attention}#2#s",
+        "once, and scored {C:attention}#3#s{} twice"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_starPlatinum": {
+      "name": "Star Platinum",
+      "text": [
+        "This Joker gains {C:mult}+#1#{} Mult",
+        "per {C:attention}consecutive hand{} played that",
+        "is your most played {C:attention}poker hand",
+        "{C:inactive}(Currently {C:mult}+#2#{} {C:inactive}Mult{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_crazyDiamond": {
+      "name": "Crazy Diamond",
+      "text": [
+        "Create a {C:attention}copy{} of any",
+        "{C:attention}destroyed cards{} and",
+        "add them to hand"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_fountain": {
+      "name": "Fountain",
+      "text": [
+        "Played cards have a",
+        "{C:green}#1# in (rank){} chance to",
+        "earn {C:money}$#2#{} when {C:attention}scored{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_jokerton": {
+      "name": "Jokerton",
+      "text": [
+        "Every {C:attention}#1# {C:inactive}[#2#] {C:hearts}Hearts{} cards discarded,",
+        "enhance {C:attention}first card{} of next",
+        "hand played to a {C:attention}Steel Card{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_stormshooter": {
+      "name": "Storm Shooter",
+      "text": [
+        "Creates as many {C:planet}Planet{} cards for the scoring hand as possible",
+        "if an unscored card is played in this card's {C:attention}column{}",
+        "This card has to be in {C:attention}column #1#{} to use this ability",
+        "{C:inactive}(Changes each round){}",
+        "{C:inactive}(Currently in {C:attention}column #2#{}{C:inactive})"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_trash_bin": {
+      "name": "Trash Bin",
+      "text": [
+        "{C:mult}+#1#{} Mult for each",
+        "card discarded or previously",
+        "played this round",
+        "{C:inactive}(Currently{} {C:mult}+#2#{} {C:inactive}Mult){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_futuristic": {
+      "name": "Futuristic Joker",
+      "text": [
+        "Each {C:attention}played card{} gives {X:red,C:white}X#1#{} Mult",
+        "if {C:attention}played hand{} contains a {C:attention}rank{}",
+        "one {C:attention}higher{} or {C:attention}lower{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_gratification": {
+      "name": "Instant Gratification",
+      "text": [
+        "Earn {C:money}$#1#{} when you",
+        "use a {C:red}discard{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_solar": {
+      "name": "Solar Flare",
+      "text": [
+        "If first hand of round",
+        "is {C:attention}not{} your most played",
+        "hand, {C:attention}upgrade{} it and {C:red}destroy",
+        "random {C:attention}#1#{} played cards"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_7_ball": {
+      "name": "7 Ball",
+      "text": [
+        "{C:green}#1# in #2#{} chance for each",
+        "played {C:attention}7{} to create a",
+        "{C:spectral}Spectral{} card when scored",
+        "{C:inactive}(Must have room)"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_eviloops": {
+      "name": "{C:red}Evil{} Oops All Sixes",
+      "text": [
+        "Halves all {C:attention}listed{}",
+        "{C:green,E:1}probabilities",
+        "{C:inactive}(ex: {C:green}1 in 3{C:inactive} -> {C:green}1 in 6{C:inactive}){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_polychromeToTheRight": {
+      "name": "Polychrome to the Right",
+      "text": [
+        "Always {C:dark_edition}Polychrome",
+        "{X:mult,C:white}X#1#{} Mult if this",
+        "Joker is the",
+        "rightmost {C:attention}Joker"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_pissandshittium": {
+      "name": "Pissandshittium",
+      "text": [
+        "Tells the URL where to download",
+        "{B:1,C:white}Pissandshittium{}",
+        "{V:1}+#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_ash_joker": {
+      "name": "Ash Joker",
+      "text": [
+        "{C:chips}+#1#{} Chips",
+        "{C:green}#2# in #3#{} chance",
+        "of disintegrating",
+        "at the end of the round",
+        "but gains {C:chips}+#4#{} Chips",
+        "if it survives"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_hitomania": {
+      "name": "HITO Mania",
+      "text": [
+        "Played {C:attention}face{} cards",
+        "give {C:mult}#1#{} to {C:mult}#2#{} Mult",
+        "or {C:chips}#3#{} to {C:chips}#4#{} Chips",
+        "when scored"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_pingas": {
+      "name": "Snoo{C:attention}ping as{} usual?",
+      "text": [
+        "{C:red}+#1#{} Mult for each {C:attention}Played{} cards",
+        "{C:attention}He{} might see {C:red}you{} snooping around."
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_kendih": {
+      "name": ". . .{X:attention,C:white,s:2,E:2}M-{}",
+      "text": [
+        "{C:green}#1#{} in {C:green}#2#{} chance for {C:attention}Kendih{}{f:jrok_emoji}🥀{}",
+        "to scream {X:attention,C:white,s:2,E:2}MUSTARD{}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_stereom": {
+      "name": "Stereo Madness",
+      "text": [
+        "Scored cards give",
+        "{C:mult}+#1#{} Mult"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_dryout": {
+      "name": "Dry Out",
+      "text": [
+        "Gains {C:mult}+#1#{} Mult when",
+        "{C:attention}Blind{} is selected",
+        "{C:red}Resets{} if a",
+        "card is sold",
+        "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult){}"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_jimbot": {
+      "name": "Jimbot",
+      "text": [
+        "If played hand contains",
+        "only one card,",
+        "{C:attention}enhance{} it into a",
+        "{C:attention}Steel{} or {C:attention}Gold{} card"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_hhgregg": {
+      "name": "hhgregg",
+      "text": [
+        "All cards in the shop",
+        "are {C:attention}discounted{} by {C:money}$#1#"
+      ],
+      "type": "Joker"
+    },
+    "j_jrok_mcbedrock": {
+      "name": "Minecraft: Bedrock Edition",
+      "text": [
+        "{C:green}#1# in #2#{} chance to {C:attention}siphon",
+        "the base {C:blue}chips{} and {C:red}mult{} from played hand",
+        "{s:0.8,C:inactive}(Currently {s:0.8,C:blue}+#3#{s:0.8,C:inactive} chips and {s:0.8,C:red}+#4#{s:0.8,C:inactive} mult)"
+      ],
+      "type": "Joker"
+    },
+    "o_jrok_ortalab_dead_ringer": {
+      "name": "Ortalab Blinds",
+      "text": [
+        "{C:attention}Fold{}, {C:attention}Check{}, and {C:attention}Bet{} also",
+        "count as Small Blinds",
+        "for this Joker's purposes"
+      ],
+      "type": "Other"
+    },
+    "c_jrok_alcohol": {
+      "name": "Alcohol",
+      "text": [
+        "{X:mult,C:white}X#1#{} Mult while held in",
+        "consumable slots",
+        "After using {C:attention}Alcohol",
+        "{C:attention}10 {C:inactive}(#2#){} times,",
+        "{C:red,E:1}lose the run{}"
+      ],
+      "type": "Tarot"
+    },
+    "Straight": {
+      "name": "\"StrAIght\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "Pair": {
+      "name": "\"PAIr\"",
+      "text": [],
+      "type": "poker_hands"
+    },
+    "k_jrok_prompt": {
+      "name": "\"Generate your own Balatro content\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_prompt2": {
+      "name": "\"How may I help you?\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_text_prompt": {
+      "name": "\"What's your idea?\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_text_prompt2": {
+      "name": "\"Ask anything\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_text_prompt3": {
+      "name": "\"Let me know what's on your mind\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_start": {
+      "name": "\"Start Run\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_submit": {
+      "name": "\"Submit\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_arrow": {
+      "name": "\">\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok": {
+      "name": "\"JROK\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_error": {
+      "name": "\"Sorry",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_powered": {
+      "name": "\"(Powered\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_by_jrok": {
+      "name": "\"by JROK)\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_felled_ex": {
+      "name": "\"Felled!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_berry_ex": {
+      "name": "\"Berry!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_unknown": {
+      "name": "\"[Unknown]\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_acquire_to_reveal": {
+      "name": "\"[Acquire to reveal]\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_punch_duplicate": {
+      "name": "\"Consumable printed\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_active": {
+      "name": "\"Active\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_inactive": {
+      "name": "\"Inactive\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_disabled": {
+      "name": "\"Disabled!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_nom": {
+      "name": "\"Nom!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_spell": {
+      "name": "\"Spell\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_inactive": {
+      "name": "\"Inactive...\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_jrok_dead_ringer_saved": {
+      "name": "\"Feigned Death\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_destroyed_ex": {
+      "name": "\"Destroyed!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "ph_score_jrok_gallons": {
+      "name": "\"Gallons Of Water Used\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_steel": {
+      "name": "\"Steel!\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_rank": {
+      "name": "\"certain rank\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_jrok_pissandshittium": {
+      "name": "\"https://pissandshittium.org/\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "jrok_punch_card_more": {
+      "name": "\"#1# more required...\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "jrok_punch_card_will": {
+      "name": "\"Next consumable will be duplicated!\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "jrok_percentage_minus": {
+      "name": "\"-#1#%\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "jrok_hallucinated": {
+      "name": "\"Hallucinated\"",
+      "text": [],
+      "type": "labels"
+    }
+  },
+  "atlases": {},
+  "cards": [
+    {
+      "type": "Joker",
+      "key": "dazzles",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 1
+      },
+      "raw": "key = \"dazzles\",\n\tstolen_from = \"0 ERROR\",\n\tpos = { x = 4, y = 1 },\n\tatlas = \"stolen\",\n\trarity = 1,\n\tcost = 3,\n\tunlocked = true,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\tdemicoloncompat = false,\n\tconfig = {\n\t\textra = { mult = 6, times = 3, count = 0 },\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.mult,\n\t\t\t\tcard.ability.extra.times,\n\t\t\t\tcard.ability.extra.times == 1 and \" is\" or \"s are\",\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif (context.individual and context.cardarea == G.play) or context.forcetrigger then\n\t\t\tcard.ability.extra.count = card.ability.extra.count + 1\n\t\t\tif card.ability.extra.count >= card.ability.extra.times then\n\t\t\t\tcard.ability.extra.count = 0\n\t\t\t\tcard.ability.extra.times = pseudorandom_element({ 1, 2, 3, 6 }, \"dazzles\")\n\t\t\t\treturn {\n\t\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "mult": 6,
+          "times": 3,
+          "count": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 6,
+          "times": 3,
+          "count": 0
+        }
+      },
+      "vars": [
+        6,
+        3,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "croque_madame",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 1
+      },
+      "raw": "key = \"croque_madame\",\n\tstolen_from = \"0 ERROR\",\n\tatlas = \"stolen\",\n\tpos = { x = 5, y = 1 },\n\trarity = 1,\n\tblueprint_compat = false,\n\teternal_compat = false,\n\tcost = 3,\n\tunlocked = true,\n\tdiscovered = true,\n\tcalculate = function(self, card, context)\n\t\tif context.end_of_round and context.main_eval and not context.blueprint then\n            local other_joker = nil\n\t\t\tfor i = 1, #G.jokers.cards do\n\t\t\t\tif G.jokers.cards[i] == card then\n\t\t\t\t\tother_joker = G.jokers.cards[i + 1]\n\t\t\t\tend\n\t\t\tend\n\t\t\tif other_joker and other_joker.config.center.cost then\n\t\t\t\tSMODS.destroy_cards(card, nil, nil, true)\n\t\t\t\treturn {\n\t\t\t\t\tdollars = (card.sell_cost + other_joker.sell_cost) * 2,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tpronouns = \"she_her\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "twins",
+      "name": "The Twins",
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 2
+      },
+      "raw": "key = \"twins\",\n\tname = \"The Twins\",\n\trarity = 3,\n\tpos = { x = 8, y = 2 },\n\tcost = 8,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_TAGS.tag_double\n\tend,\n\tblueprint_compat = false,\n\tcalculate = function(self, card, context)\n\t\tif context.mfxfj_pre_skip then\n\t\t\tadd_tag(Tag(\"tag_double\"))\n\t\t\tplay_sound(\"generic1\", 0.9 + math.random() * 0.1, 0.8)\n\t\t\tplay_sound(\"holo1\", 1.2 + math.random() * 0.1, 0.4)\n\t\tend\n\tend,\n\tatlas = \"stolen\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "detour",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 3
+      },
+      "raw": "key = \"detour\",\n\tblueprint_compat = false,\n\tperishable_compat = true,\n\trarity = 2,\n\tcost = 7,\n\tpos = { x = 0, y = 3 },\n\tsoul_pos = { x = 1, y = 3 },\n\tatlas = \"stolen\",\n    in_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "punch_card",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 1
+      },
+      "raw": "key = \"punch_card\",\n\tstolen_from = \"Adventure Map\",\n\tconfig = { extra = { Xmult = 4, every = 4, remaining = 4 } },\n\tatlas = \"stolen\",\n\tpos = { x = 8, y = 1 },\n\trarity = 2,\n\tcost = 4,\n\tblueprint_compat = false,\n\teternal_compat = true,\n\tunlocked = true,\n\tdiscovered = true,\n\tcalculate = function(self, card, context)\n\t\tif context.blueprint then\n\t\t\treturn\n\t\tend\n\t\tif context.using_consumeable then\n\t\t\tcard.ability.extra.remaining = card.ability.extra.remaining - 1\n\n\t\t\tif card.ability.extra.remaining == 1 then\n\t\t\t\tlocal eval = function(card)\n\t\t\t\t\treturn card.ability.extra.remaining == 1 and not G.RESET_JIGGLES\n\t\t\t\tend\n\t\t\t\tjuice_card_until(card, eval, true)\n\t\t\tend\n\n\t\t\tif card.ability.extra.remaining == 0 then\n\t\t\t\tcard.ability.extra.remaining = card.ability.extra.every\n\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tSMODS.add_card({\n\t\t\t\t\t\t\tkey = context.consumeable.config.center.key, -- Optional, useful for manipulating the random seed and checking the source of the creation in `in_pool`.\n\t\t\t\t\t\t})\n\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\treturn {\n\t\t\t\t\tcard = card,\n\t\t\t\t\tcolour = G.C.GREEN,\n\t\t\t\t\tmessage = localize(\"k_jrok_punch_duplicate\"),\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.every,\n\t\t\t\tlocalize({\n\t\t\t\t\ttype = \"variable\",\n\t\t\t\t\tkey = (card.ability.extra.remaining == 1 and \"jrok_punch_card_will\" or \"jrok_punch_card_more\"),\n\t\t\t\t\tvars = { card.ability.extra.remaining },\n\t\t\t\t}),\n\t\t\t},\n\t\t}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "Xmult": 4,
+          "every": 4,
+          "remaining": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 4,
+          "every": 4,
+          "remaining": 4
+        }
+      },
+      "vars": [
+        4,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "pissandshittium",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 7,
+        "y": 7
+      },
+      "raw": "key = \"pissandshittium\",\n\tatlas = \"stolen\",\n\tpos = {\n\t\tx = 7,\n\t\ty = 7,\n\t},\n\trarity = 1,\n\tstolen_from = \"Aikoyori's Shenanigans\",\n\tcost = 2,\n\tconfig = {\n\t\textras = {\n\t\t\tmult = 6,\n\t\t\teeemult = 0.1,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extras.mult,\n\t\t\t\tcolours = {\n\t\t\t\t\tHEX(\"68211d\"),\n\t\t\t\t},\n\t\t\t},\n\t\t}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_jrok_pissandshittium\"),\n\t\t\t\tcolour = HEX(\"68211d\"),\n\t\t\t\tmult = card.ability.extras.mult,\n\t\t\t}\n\t\tend\n\tend,\n\tblueprint_compat = true,",
+      "config": {
+        "extras": {
+          "mult": 6,
+          "eeemult": 0.1
+        }
+      },
+      "ability": {
+        "extras": {
+          "mult": 6,
+          "eeemult": 0.1
+        }
+      },
+      "vars": [
+        6,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ash_joker",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 7
+      },
+      "raw": "atlas = \"stolen\",\n\tkey = \"ash_joker\",\n\tpos = {\n\t\tx = 8,\n\t\ty = 7,\n\t},\n\trarity = 1,\n\tcost = 0,\n\tstolen_from = \"Aikoyori's Shenanigans\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tconfig = {\n\t\textras = {\n\t\t\tchips = 35,\n\t\t\tchips_gain = 15,\n\t\t\todds = 4,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal n, d = SMODS.get_probability_vars(card, 1, card.ability.extras.odds, \"jrok_ash_joker\")\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extras.chips,\n\t\t\t\tn,\n\t\t\t\td,\n\t\t\t\tcard.ability.extras.chips_gain,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main or context.forcetrigger then\n\t\t\treturn { chips = card.ability.extras.chips }\n\t\tend\n\t\tif context.end_of_round and context.cardarea == G.jokers then\n\t\t\tif SMODS.pseudorandom_probability(card, \"jrok_ash_joker\", 1, card.ability.extras.odds) then\n\t\t\t\tSMODS.destroy_cards(card, nil, nil, true)\n\t\t\telse\n\t\t\t\tSMODS.scale_card(\n\t\t\t\t\tcard,\n\t\t\t\t\t{ ref_table = card.ability.extras, ref_value = \"chips\", scalar_value = \"chips_gain\" }\n\t\t\t\t)\n\t\t\tend\n\t\tend\n\tend,\n\tdemicoloncompat = true,",
+      "config": {
+        "extras": {
+          "chips": 35,
+          "chips_gain": 15,
+          "odds": 4
+        }
+      },
+      "ability": {
+        "extras": {
+          "chips": 35,
+          "chips_gain": 15,
+          "odds": 4
+        }
+      },
+      "vars": [
+        35,
+        null,
+        null,
+        15
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "butterfly",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 6
+      },
+      "raw": "key = \"butterfly\",\n\tstolen_from = \"Balatro Waves\",\n\trarity = 3,\n\tblueprint_compat = true,\n\tcost = 10,\n\tpos = { x = 4, y = 6 },\n\tatlas = \"stolen\",\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = {\n\t\t\tkey = \"e_negative_consumable\",\n\t\t\tset = \"Edition\",\n\t\t\tconfig = { extra = 1 },\n\t\t}\n\tend,\n    in_pool = function (self, args)\n        return false\n    end,\n    pixel_size = { w = 69, h = 95 },\n\tcalculate = function(self, card, context)\n\t\tif context.setting_blind and context.blind and context.blind.boss then\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\tfunc = function()\n\t\t\t\t\tSMODS.add_card({\n\t\t\t\t\t\tset = \"Spectral\",\n\t\t\t\t\t\tedition = { negative = true },\n\t\t\t\t\t})\n\t\t\t\t\treturn true\n\t\t\t\tend,\n\t\t\t}))\n\t\tend\n\tend,",
+      "config": {
+        "extra": 1
+      },
+      "ability": {
+        "extra": 1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "pero",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 6
+      },
+      "raw": "key = \"pero\",\n\trarity = 2,\n    pixel_size = { w = 69, h = 95 },\n\tblueprint_compat = true,\n    in_pool = function (self, args)\n        return false\n    end,\n    stolen_from = \"Balatro Waves\",\n\tcost = 7,\n\tatlas = \"stolen\",\n\tpos = { x = 3, y = 6 },\n\n\tconfig = { extra = { Xmult = 2 } },\n\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.Xmult } }\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tlocal max_slots = G.jokers.config.card_limit or 0\n\t\t\tlocal filled = #G.jokers.cards\n\n\t\t\tif filled >= max_slots and max_slots > 0 then\n\t\t\t\treturn { Xmult = card.ability.extra.Xmult }\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "Xmult": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 2
+        }
+      },
+      "vars": [
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "stereom",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 8
+      },
+      "raw": "key = \"stereom\",\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.mult } }\n\tend,\n\tconfig = { extra = { mult = 2 } },\n\tstolen_from = \"Balatro Dash\",\n\tin_pool = function (self, args)\n\t\treturn false\n\tend,\n\trarity = 1,\n\tunlocked = true,\n\tblueprint_compat = true,\n\tmainlevel = true,\n\tfirstrelease = true,\n\tatlas = \"stolen\",\n\tpos = { x = 2, y = 8 },\n\tcost = 4,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "mult": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 2
+        }
+      },
+      "vars": [
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "dryout",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 8
+      },
+      "raw": "key = \"dryout\",\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.mult_mod, card.ability.extra.mult } }\n\tend,\n\tconfig = { extra = { mult = 0, mult_mod = 5 } },\n\trarity = 2,\n\tunlocked = true,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\tstolen_from = \"Balatro Dash\",\n\tin_pool = function (self, args)\n\t\treturn false\n\tend,\n\tatlas = \"stolen\",\n\tpos = { x = 3, y = 8 },\n\tcost = 8,\n\tcalculate = function(self, card, context)\n\t\tif context.setting_blind and not context.blueprint and not context.retrigger_joker then\n\t\t\tcard.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod\n\t\tend\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t}\n\t\tend\n\t\tif context.selling_card and context.cardarea == G.jokers then\n\t\t\tcard.ability.extra.mult = 0\n            return {\n                message = localize(\"k_reset\")\n            }\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "mult": 0,
+          "mult_mod": 5
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 0,
+          "mult_mod": 5
+        }
+      },
+      "vars": [
+        5,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "tony",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 1
+      },
+      "raw": "key = \"tony\",\n\tstolen_from = \"Berry's Legendaries\",\n\tatlas = \"stolen\",\n\trarity = 4,\n\tpos = { x = 6, y = 1 },\n\tsoul_pos = { x = 7, y = 1 },\n\tcost = 20,\n\tblueprint_compat = true,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = {\n\t\t\tkey = \"e_negative_consumable\",\n\t\t\tset = \"Edition\",\n\t\t\tconfig = { extra = 1 },\n\t\t}\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_foil\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.cardarea ~= G.jokers or not context.before then\n\t\t\treturn\n\t\tend\n\t\tlocal hasAce = false\n\t\tlocal hasFoiled = false\n\t\tfor i, v in pairs(context.full_hand) do\n\t\t\tif v:get_id() == 14 then\n\t\t\t\thasAce = true\n\t\t\tend\n\t\t\tif v.edition and v.edition.key == \"e_foil\" then\n\t\t\t\thasFoiled = true\n\t\t\tend\n\t\t\tif hasAce and hasFoiled then\n\t\t\t\tbreak\n\t\t\tend\n\t\tend\n\t\tif not hasAce or not hasFoiled then\n\t\t\treturn\n\t\tend\n\t\tG.E_MANAGER:add_event(Event({\n\t\t\ttrigger = \"after\",\n\t\t\tfunc = function()\n\t\t\t\tlocal card = SMODS.add_card({ set = \"Spectral\", edition = \"e_negative\", area = G.consumeables })\n\t\t\t\treturn true\n\t\t\tend,\n\t\t}))\n\t\treturn {\n\t\t\tmessage = localize(\"k_berry_ex\"),\n\t\t\tcolour = G.C.BLUE,\n\t\t\tcard = card,\n\t\t}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": 1
+      },
+      "ability": {
+        "extra": 1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "nyala",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 9,
+        "y": 2
+      },
+      "raw": "key = \"nyala\",\n\tatlas = \"stolen\",\n\tstolen_from = \"Berry's Legendaries\",\n\trarity = 4,\n\tconfig = { extra = {\n\t\tx_mult = 1,\n\t\tx_mult_gain = 0.5,\n\t\tate_card = 0,\n\t} },\n\tpos = { x = 9, y = 2 },\n\tsoul_pos = { x = 9, y = 3 },\n\tcost = 20,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tblueprint_compat = true,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.c_black_hole\n\t\treturn { vars = {\n\t\t\tcard.ability.extra.x_mult,\n\t\t\tcard.ability.extra.x_mult_gain,\n\t\t} }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tlocal count = 0\n\t\t\tfor _, v in ipairs(G.consumeables.cards) do\n\t\t\t\t-- Check if planet card is eaten already, or consumable is a planet card to be eaten\n\t\t\t\tlocal eat_card = self.config.extra.ate_card == 0 and v.ability.set == \"Planet\"\n\t\t\t\t-- Check if current scored hand matches target planet\n\t\t\t\teat_card = eat_card\n\t\t\t\t\tand (\n\t\t\t\t\t\tnext(SMODS.deepfind(v.ability, context.scoring_name, \"value\", false))\n\t\t\t\t\t\tor (v.label == \"cry-sunplanet\" and G.GAME.current_round.current_hand.cry_asc_num > 0)\n\t\t\t\t\t)\n\t\t\t\tif eat_card then\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\tplay_sound(\"tarot1\")\n\t\t\t\t\t\t\tv.T.r = -0.2\n\t\t\t\t\t\t\tv:juice_up(0.3, 0.4)\n\t\t\t\t\t\t\tv.states.drag.is = true\n\t\t\t\t\t\t\tv.children.center.pinch.x = true\n\t\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\t\t\t\tdelay = 0.3,\n\t\t\t\t\t\t\t\tblockable = false,\n\t\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\t\tG.consumeables:remove_card(v)\n\t\t\t\t\t\t\t\t\tv:remove()\n\t\t\t\t\t\t\t\t\tv = nil\n\n\t\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t\t}))\n\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\tend,\n\t\t\t\t\t}))\n\t\t\t\t\tcount = count + 1\n\t\t\t\tend\n\t\t\tend\n\n\t\t\tfor _ = self.config.extra.ate_card + 1, count do\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tSMODS.add_card({ set = \"Spectral\", key = \"c_black_hole\" })\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\n\t\t\tif count > self.config.extra.ate_card then\n\t\t\t\tSMODS.calculate_effect({ message = localize(\"jrok_nom\"), colour = HEX(\"AD7B5C\") }, card)\n\t\t\tend\n\t\t\tif self.config.extra.ate_card == 0 then\n\t\t\t\tself.config.extra.ate_card = count\n\t\t\tend\n\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.x_mult,\n\t\t\t}\n\t\tend\n\n\t\tif context.using_consumeable and context.consumeable.label == \"Black Hole\" and not context.blueprint then\n\t\t\tcard.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.x_mult_gain\n\t\t\tSMODS.calculate_effect({ message = localize(\"k_upgrade_ex\"), colour = G.C.MULT }, card)\n\t\tend\n\n\t\tif context.after and self.config.extra.ate_card ~= 0 then\n\t\t\tself.config.extra.ate_card = 0\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "x_mult": 1,
+          "x_mult_gain": 0.5,
+          "ate_card": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "x_mult": 1,
+          "x_mult_gain": 0.5,
+          "ate_card": 0
+        }
+      },
+      "vars": [
+        1,
+        0.5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "lambda_calculus",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 1,
+        "y": 4
+      },
+      "raw": "key = \"lambda_calculus\",\n\trarity = 2,\n\tcost = 6,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\teternal_compat = true,\n\tpos = { x = 1, y = 4 },\n\tatlas = \"stolen\",\n\tconfig = {\n\t\tchips = 0,\n\t},\n\tperishable_compat = true,\n\tloc_vars = function(self, q, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.chips,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tlocal chips = card.ability.chips\n\t\t\tcard.ability.chips = 0\n\t\t\treturn {\n\t\t\t\tchips = chips,\n\t\t\t}\n\t\tend\n\t\tif context.post_trigger and context.other_card ~= card then\n\t\t\tlocal change = JROK.gather_values(context.other_card)\n\t\t\tif to_big(change) > to_big(0) then\n\t\t\t\tcard.ability.chips = card.ability.chips + change\n\t\t\t\tcard_eval_status_text(\n\t\t\t\t\tcard,\n\t\t\t\t\t\"extra\",\n\t\t\t\t\tnil,\n\t\t\t\t\tnil,\n\t\t\t\t\tnil,\n\t\t\t\t\t{ message = number_format(card.ability.chips), colour = G.C.BLUE }\n\t\t\t\t)\n\t\t\tend\n\t\tend\n\tend,\n\tstolen_from = \"Entropy\",",
+      "config": {
+        "chips": 0
+      },
+      "ability": {
+        "chips": 0
+      },
+      "vars": [
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "d0",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 4
+      },
+      "raw": "key = \"d0\",\n\trarity = 1,\n\tcost = 6,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\teternal_compat = true,\n\tpos = { x = 2, y = 4 },\n\tatlas = \"stolen\",\n\tdemicoloncompat = true,\n\tcalculate = function(self, card, context)\n\t\tif context.fix_probability and not context.blueprint and not context.repetition then\n\t\t\treturn {\n\t\t\t\tnumerator = 0,\n\t\t\t}\n\t\tend\n\tend,\n\tstolen_from = \"Entropy\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "sora",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 9,
+        "y": 0
+      },
+      "raw": "key = \"sora\",\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.x_mult, --1\n\t\t\t\tcard.ability.extra.Xmult_gain, --2\n\t\t\t},\n\t\t}\n\tend,\n\tstolen_from = \"Final Mix\",\n\trarity = 3,\n\tatlas = \"stolen\",\n\tpos = { x = 9, y = 0 },\n\tcost = 7,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\tconfig = {\n\t\textra = {\n\t\t\tx_mult = 1,\n\t\t\tXmult_gain = 0.2,\n\t\t},\n\t},\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and context.cardarea == G.play and not context.blueprint then\n\t\t\tif context.other_card:is_suit(\"Hearts\") then\n\t\t\t\tSMODS.scale_card(card, {\n\t\t\t\t\tref_table = card.ability.extra,\n\t\t\t\t\tref_value = \"x_mult\",\n\t\t\t\t\tscalar_value = \"Xmult_gain\",\n\t\t\t\t\toperation = \"+\",\n\t\t\t\t})\n\t\t\tend\n\t\tend\n\t\tif context.joker_main and card.ability.extra.x_mult > 1 then\n\t\t\treturn {\n\t\t\t\tx_mult = card.ability.extra.x_mult,\n\t\t\t}\n\t\tend\n\t\tif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\n\t\t\tif context.beat_boss then\n\t\t\t\tcard.ability.extra.x_mult = 1\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "x_mult": 1,
+          "Xmult_gain": 0.2
+        }
+      },
+      "ability": {
+        "extra": {
+          "x_mult": 1,
+          "Xmult_gain": 0.2
+        }
+      },
+      "vars": [
+        1,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "paopufruit",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 9,
+        "y": 1
+      },
+      "raw": "key = \"paopufruit\",\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.hands_left, -- 1\n\t\t\t},\n\t\t}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tstolen_from = \"Final Mix\",\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 9, y = 1 },\n\tcost = 6,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\tconfig = {\n\t\textra = {\n\t\t\thands_left = 5,\n\t\t},\n\t},\n\tcalculate = function(self, card, context)\n\t\tif context.before and not context.blueprint then\n\t\t\tlocal first_card = context.scoring_hand[1]\n\t\t\tlocal edition = poll_edition(\"kh_paopufruit\", nil, true, true, { \"e_polychrome\", \"e_holo\", \"e_foil\" })\n\t\t\tlocal random_seal = SMODS.poll_seal({ key = \"kh_seed\", guaranteed = true })\n\t\t\tlocal enhancement = SMODS.poll_enhancement({ key = \"kh_seed\", guaranteed = true })\n\t\t\tfirst_card:set_edition(edition, true)\n\t\t\tfirst_card:set_seal(random_seal, true)\n\t\t\tfirst_card:set_ability(enhancement, true)\n\t\tend\n\n\t\tif context.after and not context.blueprint then\n\t\t\tif card.ability.extra.hands_left - 1 <= 0 then\n\t\t\t\tSMODS.destroy_cards(card, nil, nil, true)\n\t\t\t\tSMODS.calculate_effect({ message = localize(\"kh_riku_no\"), colour = G.C.FILTER }, card)\n\t\t\telse\n\t\t\t\tcard.ability.extra.hands_left = card.ability.extra.hands_left - 1\n\t\t\t\treturn {\n\t\t\t\t\tmessage = card.ability.extra.hands_left .. \"\",\n\t\t\t\t\tcolour = G.C.FILTER,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "hands_left": 5
+        }
+      },
+      "ability": {
+        "extra": {
+          "hands_left": 5
+        }
+      },
+      "vars": [
+        5,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "baguette",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 3
+      },
+      "raw": "key = \"baguette\",\n\tatlas = \"stolen\",\n\tstolen_from = \"FooBar\",\n\tpos = { x = 4, y = 3 },\n\tconfig = {\n\t\textra = {\n\t\t\tmoney = 1,\n\t\t},\n\t\timmutable = {\n\t\t\trounds = 4,\n\t\t},\n\t},\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcost = 4,\n\teternal_compat = false,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.money, card.ability.immutable.rounds } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\tif context.other_card:is_face() then\n\t\t\t\treturn {\n\t\t\t\t\tdollars = card.ability.extra.money,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\t\tif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\n\t\t\tcard.ability.immutable.rounds = card.ability.immutable.rounds - 1\n\t\t\tif card.ability.immutable.rounds == 0 then\n\t\t\t\tSMODS.destroy_cards(card, nil, nil, nil)\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_eaten_ex\"),\n\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t}\n\t\t\telse\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"jrok_nom\"),\n\t\t\t\t\tcolour = G.C.YELLOW,\n\t\t\t\t\tfunc = function(...)\n\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\tself:set_sprites(card, card.config.center)\n\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t}))\n\t\t\t\t\tend,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tset_sprites = function(self, card, front)\n\t\tif card.ability and card.ability.immutable and card.ability.immutable.rounds > 0 then\n\t\t\tcard.children.center:set_sprite_pos({ x = 4 + 4 - card.ability.immutable.rounds, y = 3 })\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "money": 1
+        },
+        "immutable": {
+          "rounds": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "money": 1
+        },
+        "immutable": {
+          "rounds": 4
+        }
+      },
+      "vars": [
+        1,
+        4
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "hitomania",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 9,
+        "y": 7
+      },
+      "raw": "key = \"hitomania\",\n\tatlas = \"stolen\",\n\tpos = { x = 9, y = 7 },\n\tcost = 5,\n\tstolen_from = \"FooBar\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tconfig = {\n\t\textra = {\n\t\t\tmin_mult = 1,\n\t\t\tmax_mult = 5,\n\t\t\tmin_chips = 1,\n\t\t\tmax_chips = 30,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.min_mult,\n\t\t\t\tcard.ability.extra.max_mult,\n\t\t\t\tcard.ability.extra.min_chips,\n\t\t\t\tcard.ability.extra.max_chips,\n\t\t\t},\n\t\t}\n\tend,\n\tblueprint_compat = true,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\tif context.other_card:is_face() then\n\t\t\t\tlocal mult = pseudorandom(\"hito_mult\", card.ability.extra.min_mult, card.ability.extra.max_mult)\n\t\t\t\tlocal chips = pseudorandom(\"hito_chips\", card.ability.extra.min_chips, card.ability.extra.max_chips)\n\t\t\t\tif pseudorandom(\"hito_determine\", 1, 2) == 1 then\n\t\t\t\t\tmult = 0\n\t\t\t\telse\n\t\t\t\t\tchips = 0\n\t\t\t\tend\n\t\t\t\treturn {\n\t\t\t\t\tmult = mult,\n\t\t\t\t\tchips = chips,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "min_mult": 1,
+          "max_mult": 5,
+          "min_chips": 1,
+          "max_chips": 30
+        }
+      },
+      "ability": {
+        "extra": {
+          "min_mult": 1,
+          "max_mult": 5,
+          "min_chips": 1,
+          "max_chips": 30
+        }
+      },
+      "vars": [
+        1,
+        5,
+        1,
+        30
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "kitsune_mask",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 4
+      },
+      "raw": "key = \"kitsune_mask\",\n    stolen_from = \"Forager Nonessentials\",\n\tblueprint_compat = true,\n\tperishable_compat = true,\n\teternal_compat = true,\n\trarity = 2,\n\tcost = 7,\n\tatlas = \"stolen\",\n\tpos = { x = 4, y = 4 },\n\tdiscovered = false,\n\tunlocked = true,\n\tconfig = { extra = { odds = 7 } },\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.m_lucky\n\t\tlocal numerator, denominator =\n\t\t\tSMODS.get_probability_vars(card, 1, card.ability.extra.odds, \"j8mod_kitsune_mask\")\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tnumerator,\n\t\t\t\tdenominator,\n\t\t\t\tlocalize(\"7\", \"ranks\"),\n\t\t\t\tlocalize(\"k_spectral\"),\n\t\t\t\tlocalize({ type = \"name_text\", set = \"Enhanced\", key = \"m_lucky\" }),\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif\n\t\t\tcontext.individual\n\t\t\tand context.cardarea == G.play\n\t\t\tand #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit\n\t\tthen\n\t\t\tif\n\t\t\t\t(context.other_card:get_id() == 7)\n\t\t\t\tand (\n\t\t\t\t\tSMODS.pseudorandom_probability(\n\t\t\t\t\t\tcard,\n\t\t\t\t\t\t\"j8mod_kitsune_mask\",\n\t\t\t\t\t\tSMODS.has_enhancement(context.other_card, \"m_lucky\") and 2 or 1,\n\t\t\t\t\t\tcard.ability.extra.odds\n\t\t\t\t\t)\n\t\t\t\t)\n\t\t\tthen\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\n\t\t\t\treturn {\n\t\t\t\t\textra = {\n\t\t\t\t\t\tmessage = localize(\"k_plus_spectral\"),\n\t\t\t\t\t\tcolour = G.C.SECONDARY_SET.Spectral,\n\t\t\t\t\t\tmessage_card = context.blueprint_card or card,\n\t\t\t\t\t\tfunc = function() -- This is for timing purposes, everything here runs after the message\n\t\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\t\tSMODS.add_card({\n\t\t\t\t\t\t\t\t\t\tset = \"Spectral\",\n\t\t\t\t\t\t\t\t\t\tkey_append = \"k_plus_spectral\", -- Optional, useful for manipulating the random seed and checking the source of the creation in `in_pool`.\n\t\t\t\t\t\t\t\t\t})\n\t\t\t\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\n\t\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t\t}))\n\t\t\t\t\t\tend,\n\t\t\t\t\t},\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "odds": 7
+        }
+      },
+      "ability": {
+        "extra": {
+          "odds": 7
+        }
+      },
+      "vars": [
+        null,
+        null,
+        null,
+        null,
+        "k_spectral",
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "thrift_shop",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 4
+      },
+      "raw": "key = \"thrift_shop\",\n    stolen_from = \"Forager Nonessentials\",\n\tblueprint_compat = true,\n\tperishable_compat = true,\n\teternal_compat = true,\n\trarity = 2,\n\tcost = 7,\n\tatlas = \"stolen\",\n\tpos = { x = 3, y = 4 },\n\tdiscovered = false,\n\tunlocked = true,\n\tconfig = { extra = { odds = 6 } },\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, \"j8mod_thrift_shop\")\n\t\treturn { vars = { numerator, denominator } }\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.reroll_shop then\n\t\t\tif SMODS.pseudorandom_probability(card, \"j8mod_thrift_shop\", 1, card.ability.extra.odds) then\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"j8mod_tagged_ex\"),\n\t\t\t\t\tcolour = G.C.GREEN,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\ttrigger = \"immediate\",\n\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\t--- Credits to Eremel\n\t\t\t\t\t\t\t\tlocal tag_pool = get_current_pool(\"Tag\")\n\t\t\t\t\t\t\t\tlocal selected_tag = pseudorandom_element(tag_pool, \"j8mod_thrift_shop\")\n\t\t\t\t\t\t\t\tlocal it = 1\n\t\t\t\t\t\t\t\twhile selected_tag == \"UNAVAILABLE\" do\n\t\t\t\t\t\t\t\t\tit = it + 1\n\t\t\t\t\t\t\t\t\tselected_tag = pseudorandom_element(tag_pool, \"j8mod_thrift_shop_resample\" .. it)\n\t\t\t\t\t\t\t\tend\n\t\t\t\t\t\t\t\tlocal tag = Tag(selected_tag)\n\t\t\t\t\t\t\t\tif tag.name == \"Orbital Tag\" then\n\t\t\t\t\t\t\t\t\tlocal _poker_hands = {}\n\t\t\t\t\t\t\t\t\tfor k, v in pairs(G.GAME.hands) do\n\t\t\t\t\t\t\t\t\t\tif v.visible then\n\t\t\t\t\t\t\t\t\t\t\t_poker_hands[#_poker_hands + 1] = k\n\t\t\t\t\t\t\t\t\t\tend\n\t\t\t\t\t\t\t\t\tend\n\t\t\t\t\t\t\t\t\ttag.ability.orbital_hand =\n\t\t\t\t\t\t\t\t\t\tpseudorandom_element(_poker_hands, \"j8mod_thrift_shop_orbital_tag\")\n\t\t\t\t\t\t\t\tend\n\t\t\t\t\t\t\t\ttag:set_ability()\n\t\t\t\t\t\t\t\tadd_tag(tag)\n\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t}))\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "odds": 6
+        }
+      },
+      "ability": {
+        "extra": {
+          "odds": 6
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "jimbot",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 8
+      },
+      "raw": "key = \"jimbot\",\n\t-- Extra is empty, because it only happens once. If you wanted to copy multiple cards, you'd need to restructure the code and add a for loop or something.\n\tconfig = { extra = { punk = 0 } },\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 4, y = 8 },\n    stolen_from = \"Garbshit\",\n    in_pool = function (self, args)\n        return false\n    end,\n\tunlocked = true,\n\tdiscovered = false, --whether or not it starts discovered\n\tblueprint_compat = true, --can it be blueprinted/brainstormed/other\n\teternal_compat = true, --can it be eternal\n\tperishable_compat = true, --can it be perishable\n\tcost = 5,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.m_steel\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.m_gold\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.before and #G.play.cards == 1 then\n\t\t\tG.play.cards[1]:set_ability(\n\t\t\t\tG.P_CENTERS[pseudorandom_element({ \"m_steel\", \"m_gold\" }, pseudoseed(\"BROBOT\"))]\n\t\t\t)\n\t\t\tG.play.cards[1]:juice_up()\n\t\t\tcard.ability.extra.punk = card.ability.extra.punk + 1\n\t\t\tif card.ability.extra.punk > 4 then\n\t\t\t\tcard.ability.extra.punk = 1\n\t\t\tend\n\t\t\tlocal daft = { \"HARDER!\", \"BETTER!\", \"FASTER!\", \"STRONGER!\" }\n\n\t\t\treturn {\n\t\t\t\tmessage = daft[card.ability.extra.punk],\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "punk": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "punk": 0
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "hhgregg",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 8
+      },
+      "raw": "key = \"hhgregg\",\n\tconfig = { extra = { discount = 2 } },\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 5, y = 8 },\n\tcost = 7,\n    stolen_from = \"Garbshit\",\n    in_pool = function (self, args)\n        return false\n    end,\n\tunlocked = true,\n\tdiscovered = false, --whether or not it starts discovered\n\tblueprint_compat = false, --can it be blueprinted/brainstormed/other\n\teternal_compat = true, --can it be eternal\n\tperishable_compat = true, --can it be perishable\n\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.discount } }\n\tend,\n\n\tadd_to_deck = function(self, card, from_debuff)\n\t\tif G.STATE == G.STATES.SHOP then\n\t\t\tfor k, v in pairs(G.shop_jokers.cards) do\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\tdelay = 0.5,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tif v.cost - card.ability.extra.discount >= 0 then\n\t\t\t\t\t\t\tv.cost = v.cost - card.ability.extra.discount\n\t\t\t\t\t\t\tcard:juice_up()\n\t\t\t\t\t\t\tv:juice_up()\n\t\t\t\t\t\t\tplay_sound(\"coin1\", 1.2)\n\t\t\t\t\t\telseif v.cost > 0 then\n\t\t\t\t\t\t\tv.cost = 0\n\t\t\t\t\t\t\tcard:juice_up()\n\t\t\t\t\t\t\tv:juice_up()\n\t\t\t\t\t\t\tplay_sound(\"coin1\", 1.2)\n\t\t\t\t\t\tend\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\tend\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.starting_shop or context.reroll_shop and not context.blueprint then\n\t\t\tfor k, v in pairs(G.shop_jokers.cards) do\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\tdelay = 0.5,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tif v.cost - card.ability.extra.discount >= 0 then\n\t\t\t\t\t\t\tv.cost = v.cost - card.ability.extra.discount\n\t\t\t\t\t\t\tif context.blueprint_card then\n\t\t\t\t\t\t\t\tcontext.blueprint_card:juice_up()\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\tcard:juice_up()\n\t\t\t\t\t\t\tend\n\t\t\t\t\t\t\tv:juice_up()\n\t\t\t\t\t\t\tplay_sound(\"coin1\", 1.2)\n\t\t\t\t\t\telseif v.cost > 0 then\n\t\t\t\t\t\t\tv.cost = 0\n\t\t\t\t\t\t\tif context.blueprint_card then\n\t\t\t\t\t\t\t\tcontext.blueprint_card:juice_up()\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\tcard:juice_up()\n\t\t\t\t\t\t\tend\n\t\t\t\t\t\t\tv:juice_up()\n\t\t\t\t\t\t\tplay_sound(\"coin1\", 1.2)\n\t\t\t\t\t\tend\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "discount": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "discount": 2
+        }
+      },
+      "vars": [
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "hatchet",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = \"hatchet\",\n\tstolen_from = \"Hatchet\",\n\tconfig = {\n\t\textra = {\n\t\t\txmult = 2.5,\n\t\t},\n\t},\n\tpos = { x = 0, y = 1 },\n\tcost = 9,\n\trarity = 3,\n\tblueprint_compat = false,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tunlocked = true,\n\tdiscovered = true,\n\tatlas = \"stolen\",\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.xmult,\n\t\t\t},\n\t\t}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main and G.GAME.current_round.hands_played == 0 then\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.xmult,\n\t\t\t}\n\t\tend\n\t\tif context.destroy_card and G.GAME.current_round.hands_played == 0 and SMODS.in_scoring(context.destroy_card, context.scoring_hand) then\n\t\t\treturn {\n\t\t\t\tremove = true,\n\t\t\t}\n\t\tend\n\t\tif context.after and G.GAME.current_round.hands_played == 0 then\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_felled_ex\"),\n\t\t\t\tcolour = G.C.RED,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "xmult": 2.5
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 2.5
+        }
+      },
+      "vars": [
+        2.5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "dakimakura",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 1,
+        "y": 1
+      },
+      "raw": "key = \"dakimakura\",\n\tstolen_from = \"Hatchet\",\n\tconfig = {\n\t\textra = {},\n\t},\n\tpos = { x = 1, y = 1 },\n\tcost = 5,\n\trarity = 1,\n\tblueprint_compat = false,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tunlocked = true,\n\tatlas = \"stolen\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main and next(context.poker_hands[\"Flush\"]) then\n\t\t\tfor i = 1, #context.full_hand do\n\t\t\t\tlocal percent = 1.15 - (i - 0.999) / (#G.hand.cards - 0.998) * 0.3\n\t\t\t\tlocal target = context.full_hand[i]\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\tdelay = 0.15,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\ttarget:flip()\n\t\t\t\t\t\tplay_sound(\"card1\", percent)\n\t\t\t\t\t\ttarget:juice_up(0.3, 0.3)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\t\tfor i = 1, #context.full_hand do\n\t\t\t\tlocal target = context.full_hand[i]\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tassert(SMODS.change_base(target, pseudorandom_element(SMODS.Suits, \"edit_card_suit\").key, nil))\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\t\tfor i = 1, #context.full_hand do\n\t\t\t\tlocal percent = 1.15 - (i - 0.999) / (#G.hand.cards - 0.998) * 0.3\n\t\t\t\tlocal target = context.full_hand[i]\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\tdelay = 0.15,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\ttarget:flip()\n\t\t\t\t\t\tplay_sound(\"card1\", percent)\n\t\t\t\t\t\ttarget:juice_up(0.3, 0.3)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {}
+      },
+      "ability": {
+        "extra": {}
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "atmospheric",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 5
+      },
+      "raw": "key = \"atmospheric\",\n\tatlas = \"stolen\",\n\tstolen_from = \"Hawaii Pt. II\",\n\trarity = 2,\n\tcost = 5,\n\tunlocked = true,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = false,\n\tpos = { x = 2, y = 5 },\n\tconfig = {\n\t\textra = {\n\t\t\tretriggers = 2,\n\t\t\tthree = 0,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = {} }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.before then\n\t\t\tG.atmoScoredFives = 0\n\t\tend\n\t\tif context.cardarea == G.play and context.repetition and not context.repetition_only then\n\t\t\tif context.other_card:get_id() == 5 and G.atmoScoredFives < 3 then\n\t\t\t\tif not context.blueprint then\n\t\t\t\t\tG.atmoScoredFives = G.atmoScoredFives + 1\n\t\t\t\tend\n\t\t\t\treturn {\n\t\t\t\t\trepetitions = card.ability.extra.retriggers,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "retriggers": 2,
+          "three": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "retriggers": 2,
+          "three": 0
+        }
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "precious",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 5
+      },
+      "raw": "key = \"precious\",\n\tstolen_from = \"Hawaii Pt. II\",\n\tatlas = \"stolen\",\n\trarity = 2,\n\tcost = 5,\n\tunlocked = true,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = false,\n\tpos = { x = 3, y = 5 },\n\tconfig = {\n\t\textra = {\n\t\t\tXmult = 1,\n\t\t\tXmult_gain = 0.25,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.Xmult_gain, card.ability.extra.Xmult } }\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.end_of_round and context.main_eval and card.ability.extra.Xmult > 1 and not context.game_over then\n\t\t\tcard.ability.extra.Xmult = 1\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t}\n\t\tend\n\n\t\tif context.joker_main and card.ability.extra.Xmult > 1 then\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.Xmult,\n\t\t\t}\n\t\tend\n\n\t\tif context.cardarea == G.play and context.individual and not context.blueprint then\n\t\t\tif context.other_card:get_id() == 5 then\n\t\t\t\tcard.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_gain\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_upgrade_ex\"),\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "Xmult": 1,
+          "Xmult_gain": 0.25
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 1,
+          "Xmult_gain": 0.25
+        }
+      },
+      "vars": [
+        0.25,
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "7_ball",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 7
+      },
+      "raw": "key = \"7_ball\",\n\tatlas = \"stolen\",\n\tpos = { x = 4, y = 7 },\n\trarity = 2,\n\tcost = 7,\n\tconfig = { extra = 7 },\n\tpools = { Meme = true },\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal n, d = SMODS.get_probability_vars(card, 1, card.ability.extra, \"hpr_7_ball\")\n\t\treturn { vars = { n, d } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif\n\t\t\t(context.individual and context.cardarea == G.play or context.forcetrigger)\n\t\t\tand #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit\n\t\tthen\n\t\t\tif\n\t\t\t\tcontext.forcetrigger\n\t\t\t\tor context.other_card:get_id() == 7\n\t\t\t\t\tand SMODS.pseudorandom_probability(card, \"hpr_7_ball\", 1, card.ability.extra)\n\t\t\tthen\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\n\t\t\t\treturn {\n\t\t\t\t\textra = {\n\t\t\t\t\t\tmessage = localize(\"k_plus_spectral\"),\n\t\t\t\t\t\tcolour = G.C.SECONDARY_SET.Spectral,\n\t\t\t\t\t\tmessage_card = card,\n\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\t\tSMODS.add_card({\n\t\t\t\t\t\t\t\t\t\tset = \"Spectral\",\n\t\t\t\t\t\t\t\t\t\tkey_append = \"hpr_7_ball\",\n\t\t\t\t\t\t\t\t\t})\n\t\t\t\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\n\t\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t\t}))\n\t\t\t\t\t\tend,\n\t\t\t\t\t},\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n    stolen_from = \"Hypernova\",\n    in_pool = function (self, args)\n        return false\n    end,\n\tforcetrigger_compat = true,",
+      "config": {
+        "extra": 7
+      },
+      "ability": {
+        "extra": 7
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "solar",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 7
+      },
+      "raw": "-- solar flare, levels up not most played hands and destroys some cards\n    key = \"solar\",\n    atlas = \"stolen\",\n    pos = { x = 3, y = 7 },\n    in_pool = function (self, args)\n        return false\n    end,\n    config = { extra = { destroyed = 2 } },\n    loc_vars = function (self, info_queue, card)\n        return { vars = { card.ability.extra.destroyed } }\n    end,\n    stolen_from = \"Hypernova\",\n    rarity = 3,\n    cost = 10,\n    calculate = function(self, card, context)\n        if context.before and G.GAME.current_round.hands_played == 0 then\n            local _handname, _played = 'High Card', -1\n            for hand_key, hand in pairs(G.GAME.hands) do\n                if hand.played > _played then\n                    _played = hand.played\n                    _handname = hand_key\n                end\n            end\n            if context.scoring_name ~= _handname then\n                local options = {}\n                for _, c in ipairs(G.play.cards) do\n                    if not SMODS.is_eternal(c) then options[#options+1] = c end\n                end\n                for _ = 1, math.min(card.ability.extra.destroyed, #options) do\n                    local roll, pos = pseudorandom_element(options, \"hpr_solar\")\n                    roll.hpr_solar_destroy = true\n                    table.remove(options, pos)\n                end\n                return {\n                    level_up = 1,\n                    message = localize(\"k_upgrade_ex\"),\n                    colour = G.C.GREEN\n                }\n            end\n        end\n        if context.destroy_card and not context.blueprint and G.GAME.current_round.hands_played == 0 then\n            local _handname, _played = 'High Card', -1\n            for hand_key, hand in pairs(G.GAME.hands) do\n                if hand.played > _played then\n                    _played = hand.played\n                    _handname = hand_key\n                end\n            end\n            if context.scoring_name ~= _handname and context.destroy_card.hpr_solar_destroy then\n                return { remove = true }\n            end\n        end\n    end,\n    hpr_ascension_key = \"j_hpr_observatorium\"",
+      "config": {
+        "extra": {
+          "destroyed": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "destroyed": 2
+        }
+      },
+      "vars": [
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "starPlatinum",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 6
+      },
+      "raw": "key = \"starPlatinum\",\n\tconfig = {\n\t\textra = {\n\t\t\tmult_added = 1,\n\t\t\tmult_mod = 0,\n\t\t\tchips = 0,\n\t\t\tmult = 0,\n\t\t},\n\t},\n\tstolen_from = \"JoJo Mod\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tatlas = \"stolen\",\n\tpos = { x = 5, y = 6 },\n\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.mult_added,\n\t\t\t\tcard.ability.extra.mult_mod,\n\t\t\t},\n\t\t}\n\tend,\n\n\trarity = 2,\n\tcost = 7,\n\tblueprint_compat = true,\n\n\tcalculate = function(self, card, context)\n\t\t-- Basic scoring context\n\t\tif context.joker_main then\n\t\t\tlocal playhand = G.GAME.hands[context.scoring_name].played or 0\n\t\t\tlocal should_reset = false\n\t\t\tfor k, v in pairs(G.GAME.hands) do\n\t\t\t\tif k ~= context.scoring_name and v.played >= playhand and v.visible then\n\t\t\t\t\tshould_reset = true\n\t\t\t\t\tbreak\n\t\t\t\tend\n\t\t\tend\n\t\t\tif not context.blueprint and not should_reset then\n\t\t\t\tSMODS.scale_card(card, {\n\t\t\t\t\tref_table = card.ability.extra,\n\t\t\t\t\tref_value = \"mult_mod\",\n\t\t\t\t\tscalar_value = \"mult_added\",\n\t\t\t\t})\n\t\t\telseif should_reset then\n\t\t\t\tSMODS.calculate_effect({\n\t\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\t}, card)\n\t\t\t\tcard.ability.extra.mult_mod = 0\n\t\t\tend\n\n\t\t\treturn { mult = card.ability.extra.mult_mod }\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "mult_added": 1,
+          "mult_mod": 0,
+          "chips": 0,
+          "mult": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult_added": 1,
+          "mult_mod": 0,
+          "chips": 0,
+          "mult": 0
+        }
+      },
+      "vars": [
+        1,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "crazyDiamond",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 6
+      },
+      "raw": "key = \"crazyDiamond\",\n\tconfig = {},\n\trarity = 3,\n\tcost = 10,\n\tblueprint_compat = true,\n\tstolen_from = \"JoJo Mod\",\n\tatlas = \"stolen\",\n\tpos = { x = 6, y = 6 },\n\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.remove_playing_cards then\n\t\t\tfor _, removed_card in ipairs(context.removed) do\n\t\t\t\t-- Duplicate the card\n\t\t\t\tG.playing_card = (G.playing_card and G.playing_card + 1) or 1\n\t\t\t\tlocal copy_card = copy_card(removed_card, nil, nil, G.playing_card)\n\t\t\t\tcopy_card:add_to_deck()\n\t\t\t\tG.deck.config.card_limit = G.deck.config.card_limit + 1\n\t\t\t\ttable.insert(G.playing_cards, copy_card)\n\t\t\t\tG.hand:emplace(copy_card)\n\t\t\t\tcopy_card.states.visible = nil\n\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tcopy_card:start_materialize()\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "stormshooter",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 9,
+        "y": 6
+      },
+      "raw": "key = \"stormshooter\",\n\tatlas = \"stolen\",\n\tpos = { x = 9, y = 6 },\n\trarity = 2,\n\tin_pool = function(self, args)\n        return false\n    end,\n\tstolen_from = \"JoyousSpring\",\n\tdiscovered = true,\n\tblueprint_compat = false,\n\teternal_compat = true,\n\tcost = 8,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.column, JROK.get_joker_column(card) } }\n\tend,\n\tconfig = {\n\t\textra = {\n\t\t\tjoyous_spring = JROK.init_joy_table({\n\t\t\t\tattribute = \"WIND\",\n\t\t\t\tmonster_type = \"WingedBeast\",\n\t\t\t}),\n\t\t\tcolumn = 2,\n\t\t},\n\t},\n\tcalculate = function(self, card, context)\n\t\tif JROK.can_use_abilities(card) then\n\t\t\tif\n\t\t\t\tcontext.after\n\t\t\t\tand JROK.get_joker_column(card) == card.ability.extra.column\n\t\t\t\tand #context.full_hand >= card.ability.extra.column\n\t\t\t\tand not SMODS.in_scoring(context.full_hand[card.ability.extra.column], context.scoring_hand)\n\t\t\t\tand #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit\n\t\t\tthen\n\t\t\t\tlocal planet = JROK.get_played_planet(context.scoring_name)\n\t\t\t\tif planet then\n\t\t\t\t\tlocal amount = G.consumeables.config.card_limit - #G.consumeables.cards\n\t\t\t\t\tfor i = 1, amount do\n\t\t\t\t\t\tSMODS.add_card({\n\t\t\t\t\t\t\tkey = planet,\n\t\t\t\t\t\t})\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tend\n\t\t\tif context.end_of_round and context.game_over == false and context.main_eval then\n\t\t\t\tcard.ability.extra.column = pseudorandom(\"j_joy_stormshooter\", 2, 5)\n\t\t\tend\n\t\tend\n\tend,\n\tadd_to_deck = function(self, card, from_debuff)\n\t\tcard.ability.extra.column = pseudorandom(\"j_joy_stormshooter\", 2, 5)\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "dead_ringer",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 1,
+        "y": 6
+      },
+      "raw": "key = \"dead_ringer\",\n\tatlas = \"stolen\",\n\tstolen_from = \"Lemniscate\",\n\tpos = { x = 1, y = 6 },\n\tpixel_size = { w = 70, h = 95 }, -- horror\n\trarity = 3,\n\tcost = 8,\n\tblueprint_compat = true,\n\tdemicoloncompat = true,\n\tconfig = {\n\t\textra = {\n\t\t\txmult = 3,\n\t\t\tactive = false,\n\t\t},\n\t},\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\t-- clarify that Ortalab's parallel blinds are counted\n\t\tif (SMODS.Mods.ortalab or {}).can_load then\n\t\t\tinfo_queue[#info_queue + 1] = {\n\t\t\t\tkey = \"o_jrok_ortalab_dead_ringer\",\n\t\t\t\tset = \"Other\",\n\t\t\t}\n\t\tend\n\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.xmult,\n\t\t\t\tcard.ability.extra.active and localize({\n\t\t\t\t\ttype = \"variable\",\n\t\t\t\t\tkey = \"loyalty_active\",\n\t\t\t\t}) or localize(\"k_jrok_inactive\"),\n\t\t\t},\n\t\t}\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.end_of_round and context.main_eval and not context.blueprint then\n\t\t\tif context.game_over and JROK.is_small_blind() then\n\t\t\t\tcard.ability.extra.active = true\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_saved_ex\"),\n\t\t\t\t\tsaved = \"ph_jrok_dead_ringer_saved\",\n\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t}\n\t\t\telseif context.beat_boss then\n\t\t\t\tcard.ability.extra.active = false\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\n\t\tif context.joker_main and card.ability.extra.active then\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.xmult,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "xmult": 3,
+          "active": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 3,
+          "active": false
+        }
+      },
+      "vars": [
+        3,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "fireball",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 6
+      },
+      "raw": "key = \"fireball\",\n\tatlas = \"stolen\",\n\tstolen_from = \"Lemniscate\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tspectralized_atlas = \"lem_spells_spectralized\", -- this involves a lovely patch\n\tpos = { x = 2, y = 6 },\n\tcost = 3,\n\trarity = 1,\n\n\tconfig = {\n\t\textra = {\n\t\t\txmult = 3,\n\t\t\ttriggered = false,\n\t\t},\n\t},\n\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\t---@diagnostic disable-next-line: undefined-global\n\t\t\tkey = (next(SMODS.Mods.Lemniscate or {}) and Lemniscate.show_infinite_spell_infoqueue(card))\n\t\t\t\t\tand self.key .. \"_infinity\"\n\t\t\t\tor nil,\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.xmult,\n\t\t\t},\n\t\t}\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tcard.ability.extra.triggered = true\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.xmult,\n\t\t\t}\n\t\tend\n\t\tif context.after and card.ability.extra.triggered then\n\t\t\treturn {\n\t\t\t\tfunc = function()\n\t\t\t\t\tif not card.ability.lem_infinite_spell then\n\t\t\t\t\t\tSMODS.destroy_cards(card, true)\n\t\t\t\t\tend\n\t\t\t\tend,\n\t\t\t}\n\t\tend\n\tend,\n\tupdate = function(self, card, dt)\n\t\t-- spectralize spell cards\n\t\tif card.ability.lem_spectralized then\n\t\t\tcard.children.center.atlas = SMODS.get_atlas(card.config.center.spectralized_atlas)\n\t\tend\n\tend,\n\tset_card_type_badge = function(self, card, badges)\n\t\tlocal strings = { localize(\"k_common\"), localize(\"k_jrok_spell\") }\n\t\tfor _ = 1, 9 do\n\t\t\tstrings[#strings + 1] = localize(\"k_common\")\n\t\tend\n\t\tbadges[#badges + 1] = {\n\t\t\tn = G.UIT.R,\n\t\t\tconfig = { align = \"cm\" },\n\t\t\tnodes = {\n\t\t\t\t{\n\t\t\t\t\tn = G.UIT.R,\n\t\t\t\t\tconfig = {\n\t\t\t\t\t\talign = \"cm\",\n\t\t\t\t\t\tcolour = G.C.BLUE,\n\t\t\t\t\t\tr = 0.1,\n\t\t\t\t\t\tminw = 2,\n\t\t\t\t\t\tminh = 0.4 * 1.2,\n\t\t\t\t\t\temboss = 0.05,\n\t\t\t\t\t\tpadding = 0.03 * 1.2,\n\t\t\t\t\t\tfunc = \"update_badge_lem\",\n\t\t\t\t\t},\n\t\t\t\t\tnodes = {\n\t\t\t\t\t\t{ n = G.UIT.B, config = { h = 0.1, w = 0.03 } },\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tn = G.UIT.O,\n\t\t\t\t\t\t\tconfig = {\n\t\t\t\t\t\t\t\tobject = DynaText({\n\t\t\t\t\t\t\t\t\tstring = strings,\n\t\t\t\t\t\t\t\t\tcolours = { G.C.WHITE },\n\t\t\t\t\t\t\t\t\tfloat = true,\n\t\t\t\t\t\t\t\t\tshadow = true,\n\t\t\t\t\t\t\t\t\toffset_y = -0.05,\n\t\t\t\t\t\t\t\t\tsilent = true,\n\t\t\t\t\t\t\t\t\tspacing = 1,\n\t\t\t\t\t\t\t\t\tscale = 0.33 * 1.2,\n\t\t\t\t\t\t\t\t\tpop_in_rate = 9999999,\n\t\t\t\t\t\t\t\t\trandom_element = true,\n\t\t\t\t\t\t\t\t\tpop_delay = 0.3,\n\t\t\t\t\t\t\t\t\tmin_cycle_time = 0,\n\t\t\t\t\t\t\t\t}),\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{ n = G.UIT.B, config = { h = 0.1, w = 0.03 } },\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t}\n\tend,",
+      "config": {
+        "extra": {
+          "xmult": 3,
+          "triggered": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 3,
+          "triggered": false
+        }
+      },
+      "vars": [
+        3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "normal",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 0
+      },
+      "raw": "key = \"normal\",\n\tstolen_from = \"Maximus\",\n\tatlas = \"stolen\",\n\tpos = {\n\t\tx = 2,\n\t\ty = 0,\n\t},\n\tconfig = {\n\t\textra = {\n\t\t\tmult = 2,\n\t\t\tchips = 15,\n\t\t},\n\t},\n\tdiscovered = true,\n\trarity = 1,\n\tblueprint_compat = true,\n\tcost = 3,\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal stg = card.ability.extra\n\t\treturn { vars = { stg.mult, stg.chips } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tlocal stg = card.ability.extra\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\tif\n\t\t\t\tnot context.other_card.edition\n\t\t\t\tand not context.other_card.seal\n\t\t\t\tand not next(SMODS.get_enhancements(context.other_card))\n\t\t\tthen\n\t\t\t\treturn {\n\t\t\t\t\tmult = stg.mult,\n\t\t\t\t\tchips = stg.chips,\n\t\t\t\t\tcard = card,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "mult": 2,
+          "chips": 15
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 2,
+          "chips": 15
+        }
+      },
+      "vars": [
+        2,
+        15
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "4d",
+      "name": null,
+      "atlas": "stolen_4d",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"4d\",\n\tstolen_from = \"Maximus\",\n\tatlas = \"stolen_4d\",\n\tpos = {\n\t\tx = 0,\n\t\ty = 0,\n\t},\n\trarity = 2,\n\tperishable_compat = false,\n\teternal_compat = false,\n\tblueprint_compat = true,\n\tcost = 6,\n\tconfig = {\n\t\textra = {\n\t\t\tXmult = 4,\n\t\t\tdXmult = 0.01,\n\t\t\tdt_mod = 0,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal stg = card.ability.extra\n\t\treturn {\n\t\t\tvars = { stg.Xmult, stg.dXmult },\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tlocal stg = card.ability.extra\n\t\tif context.joker_main and stg.Xmult > 1 then\n\t\t\treturn {\n\t\t\t\tx_mult = stg.Xmult,\n\t\t\t}\n\t\tend\n\t\tif stg.Xmult <= 1 and not context.blueprint and not stg.depleated then\n\t\t\tstg.depleated = true\n\t\t\tcard:start_dissolve({ G.C.BLUE }, nil, 1.6)\n\t\tend\n\tend,\n\tset_sprites = function(self, card, front)\n\t\tcard.children.floating_sprite =\n\t\t\tSprite(card.T.x, card.T.y, card.T.w, card.T.h, G.ASSET_ATLAS[\"jrok_stolen_4d_soul\"], { x = 0, y = 1 })\n\t\tcard.children.floating_sprite.role.draw_major = card\n\t\tcard.children.floating_sprite.states.hover.can = false\n\t\tcard.children.floating_sprite.states.click.can = false\n\tend,\n\tupdate = function(self, card, dt)\n\t\tlocal stg = card.ability.extra\n\t\tif not G.SETTINGS.paused and card.area == G.jokers then\n\t\t\tstg.dt_mod = stg.dt_mod + dt\n\t\tend\n\t\tif stg.dt_mod > 1 * G.SETTINGS.GAMESPEED then\n\t\t\tstg.dt_mod = 0\n\t\t\tif stg.Xmult > 1 and not card.debuff then\n\t\t\t\tstg.Xmult = math.max(stg.Xmult - stg.dXmult, 1)\n\t\t\t\tcard:juice_up(0.1, 0.2)\n\t\t\t\tplay_sound(\"generic1\")\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "Xmult": 4,
+          "dXmult": 0.01,
+          "dt_mod": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 4,
+          "dXmult": 0.01,
+          "dt_mod": 0
+        }
+      },
+      "vars": [
+        4,
+        0.01
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "jrok_4d_float",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jrok_4d_float\",\n\torder = 60,\n\tfunc = function(self)\n\t\tif\n\t\t\tself.config.center_key == \"j_jrok_4d\" and (self.config.center.discovered or self.bypass_discovery_center)\n\t\tthen\n\t\t\tlocal scale_mod = 0.07\n\t\t\t\t+ 0.02 * math.sin(1.8 * G.TIMERS.REAL)\n\t\t\t\t+ 0.00\n\t\t\t\t\t* math.sin((G.TIMERS.REAL - math.floor(G.TIMERS.REAL)) * math.pi * 14)\n\t\t\t\t\t* (1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL))) ^ 3\n\t\t\tlocal rotate_mod = 0.05 * math.sin(1.219 * G.TIMERS.REAL)\n\t\t\t\t+ 0.00 * math.sin(G.TIMERS.REAL * math.pi * 5) * (1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL))) ^ 2\n\n\t\t\tself.children.floating_sprite:draw_shader(\n\t\t\t\t\"dissolve\",\n\t\t\t\t0,\n\t\t\t\tnil,\n\t\t\t\tnil,\n\t\t\t\tself.children.center,\n\t\t\t\tscale_mod,\n\t\t\t\trotate_mod,\n\t\t\t\tnil,\n\t\t\t\t0.1 + 0.03 * math.sin(1.8 * G.TIMERS.REAL),\n\t\t\t\tnil,\n\t\t\t\t0.6\n\t\t\t)\n\t\t\tself.children.floating_sprite:draw_shader(\n\t\t\t\t\"dissolve\",\n\t\t\t\tnil,\n\t\t\t\tnil,\n\t\t\t\tnil,\n\t\t\t\tself.children.center,\n\t\t\t\tscale_mod,\n\t\t\t\trotate_mod\n\t\t\t)\n\t\t\tif self.edition then\n\t\t\t\tlocal edition = G.P_CENTERS[self.edition.key]\n\t\t\t\tif edition.apply_to_float and self.children.floating_sprite then\n\t\t\t\t\tself.children.floating_sprite:draw_shader(\n\t\t\t\t\t\tedition.shader,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tself.children.center,\n\t\t\t\t\t\tscale_mod,\n\t\t\t\t\t\trotate_mod\n\t\t\t\t\t)\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\tend,\n\tconditions = { vortex = false, facing = \"front\" },",
+      "config": {
+        "vortex": false,
+        "facing": "front"
+      },
+      "ability": {
+        "vortex": false,
+        "facing": "front"
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "copycat",
+      "name": "None",
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 2
+      },
+      "raw": "key = \"copycat\",\n\tatlas = \"stolen\",\n    stolen_from = \"Menthol\",\n\tpos = {\n\t\tx = 0,\n\t\ty = 2,\n\t},\n\tsoul_pos = {\n\t\tx = 1,\n\t\ty = 2,\n\t},\n\trarity = 2,\n\tcost = 9,\n\tunlocked = true,\n\tdiscovered = false,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tblueprint_compat = true,\n\tdemicoloncompat = true,\n\tconfig = {\n\t\timmutable = {\n\t\t\ttargetname = \"None\",\n\t\t\ttargetkey = \"\",\n\t\t\ttargetid = 0,\n\t\t\ttargetcard = {},\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tif next(SMODS.find_mod(\"cardpronouns\")) then\n\t\t\tlocal mirrorkey = \"minty_mirror\"\n\t\t\tinfo_queue[#info_queue + 1] = {\n\t\t\t\tset = \"Other\",\n\t\t\t\tkey = mirrorkey,\n\t\t\t\tspecific_vars = { localize({ type = \"name_text\", set = \"Joker\", key = self.key }) },\n\t\t\t}\n\t\tend\n\t\tlocal target\n\t\tif card.ability.immutable.targetkey ~= \"\" then\n\t\t\tfor i = 1, #G.jokers.cards do\n\t\t\t\tif G.jokers.cards[i].unique_val == card.ability.immutable.targetid then\n\t\t\t\t\ttarget = G.jokers.cards[i]\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\t\tif target then\n\t\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS[card.ability.immutable.targetkey]\n\t\t\tcard.ability.immutable.targetname =\n\t\t\t\tlocalize({ type = \"name_text\", set = \"Joker\", key = card.ability.immutable.targetkey })\n\t\telse\n\t\t\tcard.ability.immutable.targetname = \"None\"\n\t\tend\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.immutable.targetname,\n\t\t\t},\n\t\t}\n\tend,\n\t--[[]]\n\tin_pool = function(self, args) ----Crashes a bunch with Cryptid fsr 👍️\n\t\treturn false\n\tend,\n\t--]]\n\tcalculate = function(self, card, context)\n\t\tif context.ending_shop and context.cardarea == G.jokers and not context.blueprint then\n\t\t\t--go through jokers, pick a random bp-compatible one, put its unique id in targetid\n\t\t\tlocal jokers = {}\n\t\t\tfor i = 1, #G.jokers.cards do\n\t\t\t\tif (G.jokers.cards[i] ~= card) and G.jokers.cards[i].config.center.blueprint_compat then\n\t\t\t\t\t--MINTY.say(\"Found a compatible Joker\")\n\t\t\t\t\tjokers[#jokers + 1] = G.jokers.cards[i]\n\t\t\t\tend\n\t\t\tend\n\t\t\tif not next(jokers) then\n\t\t\t\treturn\n\t\t\tend\n\t\t\tlocal target = pseudorandom_element(jokers, pseudoseed(\"copycat\"))\n\t\t\t--MINTY.say(\"attempting to copy\")\n\t\t\tcard.ability.immutable.targetcard = target\n\t\t\tcard.ability.immutable.targetkey = target.config.center.key\n\t\t\tcard.ability.immutable.targetid = target.unique_val\n\t\t\tcard.ability.immutable.targetname =\n\t\t\t\tlocalize({ type = \"name_text\", set = \"Joker\", key = card.ability.immutable.targetkey })\n\t\t\t--MINTY.say(\"Joker copied: \"..card.ability.immutable.targetname)\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_copied_ex\"),\n\t\t\t\tmessage_card = card,\n\t\t\t}\n\t\tend\n\n\t\tif context.selling_card and (context.card.unique_val == card.ability.immutable.targetid) then\n\t\t\tcard.ability.immutable = {\n\t\t\t\ttargetname = \"None\",\n\t\t\t\ttargetkey = \"\",\n\t\t\t\ttargetcard = {},\n\t\t\t\ttargetid = 0,\n\t\t\t}\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_minty_bye\"),\n\t\t\t\tmessage_card = card,\n\t\t\t}\n\t\tend\n\n\t\t--MINTY.say(\"Considering calculation context\")\n\t\tif card.ability.immutable.targetname == \"None\" then\n\t\t\treturn\n\t\tend\n\t\tif context.no_blueprint then\n\t\t\treturn\n\t\tend\n\t\t--MINTY.say(\"Calculation context allowed\")\n\t\tlocal target\n\t\tfor i = 1, #G.jokers.cards do\n\t\t\tif G.jokers.cards[i].unique_val == card.ability.immutable.targetid then\n\t\t\t\ttarget = G.jokers.cards[i]\n\t\t\t\tbreak\n\t\t\tend\n\t\tend\n\t\tif\n\t\t\tcontext.forcetrigger\n\t\t\tand next(card.ability.immutable.targetcard)\n\t\t\tand card.ability.immutable.targetcard.config.center.demicoloncompat\n\t\tthen\n\t\t\t--MINTY.say(\"Calculating force-triggered blueprint effect of \"..card.ability.immutable.targetname..\" copied by Copy Cat\", \"TRACE\")\n\t\t\tlocal ret = SMODS.blueprint_effect(card, target, context)\n\t\t\tif ret then\n\t\t\t\treturn ret\n\t\t\tend\n\t\tend\n\t\tif target and target ~= card then\n\t\t\t--MINTY.say(\"Calculating blueprint effect of \"..card.ability.immutable.targetname..\" copied by Copy Cat\", \"TRACE\")\n\t\t\tlocal ret = SMODS.blueprint_effect(card, target, context)\n\t\t\tif ret and next(ret) then\n\t\t\t\treturn ret\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "immutable": {
+          "targetname": "None",
+          "targetkey": "",
+          "targetid": 0,
+          "targetcard": {}
+        }
+      },
+      "ability": {
+        "immutable": {
+          "targetname": "None",
+          "targetkey": "",
+          "targetid": 0,
+          "targetcard": {}
+        }
+      },
+      "vars": [
+        "None"
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "obsession",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 2
+      },
+      "raw": "key = \"obsession\",\n\tatlas = \"stolen\",\n    stolen_from = \"Menthol\",\n\tpos = {\n\t\tx = 2,\n\t\ty = 2,\n\t},\n\tsoul_pos = {\n\t\tx = 3,\n\t\ty = 2,\n\t},\n\trarity = 2,\n\tcost = 5,\n\tunlocked = true,\n\tdiscovered = false,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tblueprint_compat = true,\n\tdemicoloncompat = false,\n\tconfig = {\n\t\textra = {\n\t\t\trank = \"Ace\",\n\t\t\treps = 1,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal key = self.key\n\t\tlocal rank = localize(card.ability.extra.rank, \"ranks\")\n\t\treturn {\n\t\t\tkey = key,\n\t\t\tvars = {\n\t\t\t\trank,\n\t\t\t\tcard.ability.extra.reps,\n\t\t\t\tcard.ability.extra.reps == 1 and \"\" or \"s\",\n\t\t\t},\n\t\t}\n\tend,\n\tset_ability = function(self, card, initial, delay_sprites)\n\t\tlocal seed = \"minty_obsession_rank\"\n\t\tlocal target\n\t\tlocal pool = {}\n\n\t\tif G.playing_cards then\n\t\t\tfor _, c in ipairs(G.playing_cards) do\n\t\t\t\tif not SMODS.has_no_rank(c) then\n\t\t\t\t\tpool[#pool + 1] = c\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\n\t\tlocal in_collection = false\n\n\t\tif G.your_collection then\n\t\t\tfor _, v in pairs(G.your_collection) do\n\t\t\t\tif card.area == v then\n\t\t\t\t\tin_collection = true\n                    break\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\n\t\tif next(pool) and not in_collection then\n            target = pseudorandom_element(pool, seed)\n\t\tend\n\n\t\tcard.ability.extra.rank = target and target.base.value or card.ability.extra.rank\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.repetition and context.other_card:get_id() == SMODS.Ranks[card.ability.extra.rank].id then\n\t\t\treturn {\n\t\t\t\trepetitions = card.ability.extra.reps,\n\t\t\t}\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "rank": "Ace",
+          "reps": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "rank": "Ace",
+          "reps": 1
+        }
+      },
+      "vars": [
+        null,
+        1,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "philosophical",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 1
+      },
+      "raw": "key = \"philosophical\",\n\tstolen_from = \"More Fluff\",\n\tconfig = {\n\t\tcard_limit = 1,\n\t},\n\tatlas = \"stolen\",\n\tpos = { x = 2, y = 1 },\n\trarity = 1,\n\tcost = 1,\n\tunlocked = true,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = false,\n\tloc_vars = function(self, info_queue, center)\n\t\treturn {\n\t\t\tvars = { center.ability.card_limit },\n\t\t}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "card_limit": 1
+      },
+      "ability": {
+        "card_limit": 1
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "basepaul",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 1
+      },
+      "raw": "key = \"basepaul\",\n\tstolen_from = \"More Fluff\",\n\tconfig = {\n\t\textra = { x_mult = 1.25 },\n\t},\n\tatlas = \"stolen\",\n\tpos = { x = 3, y = 1 },\n\trarity = 1,\n\tcost = 5,\n\tunlocked = true,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tdemicoloncompat = true,\n\tloc_vars = function(self, info_queue, center)\n\t\treturn {\n\t\t\tvars = { center.ability.extra.x_mult, center.ability.extra.x_mult * 10 },\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.forcetrigger or context.joker_main then\n\t\t\tif string.find(string.lower(G.PROFILES[G.SETTINGS.profile].name), \"paul\") then\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize({\n\t\t\t\t\t\ttype = \"variable\",\n\t\t\t\t\t\tkey = \"a_xmult\",\n\t\t\t\t\t\tvars = {\n\t\t\t\t\t\t\tcard.ability.extra.x_mult * 10,\n\t\t\t\t\t\t},\n\t\t\t\t\t}),\n\t\t\t\t\tXmult_mod = card.ability.extra.x_mult * 10,\n\t\t\t\t}\n\t\t\telse\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize({\n\t\t\t\t\t\ttype = \"variable\",\n\t\t\t\t\t\tkey = \"a_xmult\",\n\t\t\t\t\t\tvars = {\n\t\t\t\t\t\t\tcard.ability.extra.x_mult,\n\t\t\t\t\t\t},\n\t\t\t\t\t}),\n\t\t\t\t\tXmult_mod = card.ability.extra.x_mult,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "x_mult": 1.25
+        }
+      },
+      "ability": {
+        "extra": {
+          "x_mult": 1.25
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "thunderedge",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 9,
+        "y": 4
+      },
+      "raw": "key = \"thunderedge\",\n\tatlas = \"stolen\",\n    stolen_from = \"Multiverse\",\n\tpos = { x = 9, y = 4 },\n\tsoul_pos = { x = 9, y = 5 },\n\tconfig = {\n\t\textra = {\n\t\t\txmult = 1,\n            xmult_gain = 0.1,\n            money_earned = 0,\n            money_req = 10\n\t\t},\n\t},\n\trarity = 4,\n\tcost = 20,\n\tblueprint_compat = true,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n            vars = {\n                card.ability.extra.xmult_gain,\n                card.ability.extra.money_req,\n                card.ability.extra.money_req - card.ability.extra.money_earned,\n                card.ability.extra.xmult,\n            }\n        }\n\tend,\n    calculate = function(self, card, context)\n        if context.money_altered and context.amount > 0 and not context.blueprint then\n            card.ability.extra.money_earned = card.ability.extra.money_earned + context.amount\n            if card.ability.extra.money_earned >= card.ability.extra.money_req then\n                local ref = {}\n                ref.amt = math.floor(card.ability.extra.money_earned / card.ability.extra.money_req) * card.ability.extra.xmult_gain\n                SMODS.scale_card(card, {\n                    ref_table = card.ability.extra,\n                    ref_value = \"xmult\",\n                    scalar_table = ref,\n                    scalar_value = \"amt\",\n                })\n                card.ability.extra.money_earned = card.ability.extra.money_earned % card.ability.extra.money_req\n            end\n        end\n        if context.joker_main then\n            return {\n                xmult = card.ability.extra.xmult\n            }\n        end\n    end,\n\tin_pool = function(self, args)\n        return false\n    end",
+      "config": {
+        "extra": {
+          "xmult": 1,
+          "xmult_gain": 0.1,
+          "money_earned": 0,
+          "money_req": 10
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 1,
+          "xmult_gain": 0.1,
+          "money_earned": 0,
+          "money_req": 10
+        }
+      },
+      "vars": [
+        0.1,
+        10,
+        10,
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "mcbedrock",
+      "name": "Minecraft Bedrock",
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 8
+      },
+      "raw": "key = \"mcbedrock\",\n\tname = \"Minecraft Bedrock\",\n\tobject_type = \"Joker\",\n    stolen_from = \"neonflame\",\n    in_pool = function (self, args)\n        return false\n    end,\n\tatlas = \"stolen\",\n\tpos = { x = 6, y = 8 },\n\tpools = { minecraft = true },\n\n\tconfig = { extra = { chance = 4, chip = 5, mult = 1 } },\n\trarity = 1,\n\tcost = 3,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = false,\n\tdemicolon_compat = true,\n\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal num, den = SMODS.get_probability_vars(card, 1, card.ability.extra.chance, \"nflame_mcbedrock\")\n\t\treturn { vars = { num, den, card.ability.extra.chip, card.ability.extra.mult } }\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif\n\t\t\tcontext.initial_scoring_step\n\t\t\tand not context.blueprint\n\t\t\tand SMODS.pseudorandom_probability(card, \"nflame_mcbedrock\", 1, card.ability.extra.chance)\n\t\tthen\n\t\t\tcard.ability.extra.chip = card.ability.extra.chip + hand_chips\n\t\t\tcard.ability.extra.mult = card.ability.extra.mult + mult\n\n\t\t\treturn { mult_mod = -mult, chip_mod = -hand_chips, message = localize(\"k_upgrade_ex\") }\n\t\tend\n\n\t\tif context.joker_main or context.forcetrigger then\n\t\t\treturn { chips = card.ability.extra.chip, mult = card.ability.extra.mult }\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "chance": 4,
+          "chip": 5,
+          "mult": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "chance": 4,
+          "chip": 5,
+          "mult": 1
+        }
+      },
+      "vars": [
+        null,
+        null,
+        5,
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "shiny_rock",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "key = \"shiny_rock\",\n\tstolen_from = \"Opalstuff\",\n\tconfig = { extra = { odds = 20 } },\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 5, y = 0 },\n\tcost = 7,\n\tblueprint_compat = true,\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, \"opal_sr1\")\n\t\treturn { vars = { numerator, denominator } }\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\tlocal chosencard = context.other_card\n\t\t\tif\n\t\t\t\tchosencard\n\t\t\t\tand not chosencard.edition\n\t\t\t\tand not chosencard.being_opaled\n\t\t\t\tand SMODS.pseudorandom_probability(card, \"opal_sr2\", 1, card.ability.extra.odds)\n\t\t\tthen\n\t\t\t\tchosencard.being_opaled = true\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tlocal edition = poll_edition(\"opal\", nil, true, true)\n\t\t\t\t\t\tchosencard:set_edition(edition, true)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\tcard_eval_status_text(card, \"extra\", nil, nil, nil, { message = \"Edition!\", colour = G.C.TAROT })\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "odds": 20
+        }
+      },
+      "ability": {
+        "extra": {
+          "odds": 20
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cultist",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 0
+      },
+      "raw": "key = \"cultist\",\n\tstolen_from = \"Opalstuff\",\n\trarity = 1,\n\tatlas = \"stolen\",\n\tpos = { x = 6, y = 0 },\n\tcost = 5,\n\tblueprint_compat = true,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.open_booster and context.card.ability.name:find(\"Arcana\") then\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\ttrigger = \"after\",\n\t\t\t\tfunc = function()\n\t\t\t\t\textra_card = create_card(\"Spectral\", G.pack_cards, nil, nil, true, true, nil, \"cultist\")\n\t\t\t\t\textra_card:start_materialize()\n\t\t\t\t\tG.pack_cards:emplace(extra_card)\n\t\t\t\t\treturn true\n\t\t\t\tend,\n\t\t\t}))\n\t\tend\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "futuristic",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 1,
+        "y": 7
+      },
+      "raw": "key = \"futuristic\",\n\tatlas = \"stolen\",\n\tpos = { x = 1, y = 7 },\n\trarity = 3,\n\tcost = 8,\n\tunlocked = true,\n\tdiscovered = false,\n\tblueprint_compat = true,\n\teternal_compat = true,\n    in_pool = function (self, args)\n        return false\n    end,\n    stolen_from = \"Ortalab\",\n\tperishable_compat = true,\n\tconfig = { extra = { xmult = 1.25 } },\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.xmult,\n\t\t\t\tcard.ability.extra.rank and localize(card.ability.extra.rank, \"ranks\") or localize(\"jrok_rank\"),\n\t\t\t\tlocalize(\"Straight\", \"poker_hands\"),\n\t\t\t},\n\t\t}\n\tend,\n\tset_ability = function(self, card)\n\t\tif G.playing_cards and #G.playing_cards > 0 then\n\t\t\tcard.ability.extra.rank = JROK.rank_from_deck(\"ortalab_futuristic\")\n\t\tend\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.before then\n\t\t\tcard.ability.extra.ranks = {}\n\t\t\tfor _, pcard in ipairs(context.scoring_hand) do\n\t\t\t\tif not SMODS.has_no_rank(card) then\n\t\t\t\t\tcard.ability.extra.ranks[#card.ability.extra.ranks + 1] = pcard.base.value\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\t\tif\n\t\t\tcontext.cardarea == G.play\n\t\t\tand context.individual\n\t\t\tand JROK.futuristic_check(\n\t\t\t\tSMODS.merge_lists({\n\t\t\t\t\tSMODS.Ranks[context.other_card.base.value].next,\n\t\t\t\t\tSMODS.Ranks[context.other_card.base.value].prev,\n\t\t\t\t}),\n\t\t\t\tcard.ability.extra.ranks\n\t\t\t)\n\t\tthen\n\t\t\treturn {\n\t\t\t\tx_mult = card.ability.extra.xmult,\n\t\t\t\tmessage_card = context.other_card,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "xmult": 1.25
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 1.25
+        }
+      },
+      "vars": [
+        1.25,
+        null,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "gratification",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 7
+      },
+      "raw": "key = \"gratification\",\n\tatlas = \"stolen\",\n\tpos = { x = 2, y = 7 },\n\trarity = 1,\n    in_pool = function (self, args)\n        return false\n    end,\n    stolen_from = \"Ortalab\",\n\tcost = 5,\n\tunlocked = true,\n\tdiscovered = false,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tconfig = { extra = 1 },\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra } }\n\tend,\n\tcalculate = function(self, card, context) --Instant Gratification logic\n\t\tif context.discard and context.other_card == context.full_hand[#context.full_hand] then\n\t\t\treturn {\n\t\t\t\tdollars = card.ability.extra,\n\t\t\t\tcard = card,\n\t\t\t}\n\t\t\t-- G.E_MANAGER:add_event(Event({\n\t\t\t--     func = function()\n\t\t\t--         ease_dollars(card.ability.extra)\n\t\t\t--         card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = localize('$')..card.ability.extra,colour = G.C.MONEY, delay = 0.45})\n\t\t\t--         return true\n\t\t\t--     end}))\n\t\t\t-- return\n\t\tend\n\tend,",
+      "config": {
+        "extra": 1
+      },
+      "ability": {
+        "extra": 1
+      },
+      "vars": [
+        1
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "subterfuge",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 3
+      },
+      "raw": "key = \"subterfuge\",\n\trarity = 3,\n\tpos = { x = 8, y = 3 },\n\tpools = {\n\t\tMusic = true,\n\t},\n\tatlas = \"stolen\",\n\tcost = 8,\n\tdiscovered = false,\n\tblueprint_compat = false,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tcalculate = function(self, card, context)\n\t\tif\n\t\t\tnot context.blueprint\n\t\t\tand context.destroy_card\n\t\t\tand (context.cardarea == G.play or context.cardarea == \"unscored\")\n\t\tthen\n\t\t\t-- Destroy all cards in first hand\n\t\t\tif G.GAME.current_round.hands_played == 0 then\n\t\t\t\tif context.destroy_card == context.full_hand[#context.full_hand] then\n\t\t\t\t\treturn {\n\t\t\t\t\t\tremove = true,\n\t\t\t\t\t\tmessage = localize(\"jrok_destroyed_ex\"),\n\t\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t\treturn {\n\t\t\t\t\t\tremove = true,\n\t\t\t\t\t}\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\tend,\n    in_pool = function (self, args)\n        return false\n    end,\n    stolen_from = \"Paperback\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "deadringer",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 4
+      },
+      "raw": "key = \"deadringer\",\n\tconfig = {\n\t\textra = {\n\t\t\t[\"Ace\"] = 1,\n\t\t\t[\"7\"] = 1,\n\t\t\t[\"9\"] = 2,\n\t\t},\n\t},\n\trarity = 3,\n\tpos = { x = 0, y = 4 },\n\tatlas = \"stolen\",\n\tcost = 7,\n\tunlocked = true,\n\tdiscovered = false,\n\tblueprint_compat = true,\n\teternal_compat = true,\n    in_pool = function (self, args)\n        return false\n    end,\n    stolen_from = \"Paperback\",\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tlocalize(\"Ace\", \"ranks\"),\n\t\t\t\tlocalize(\"7\", \"ranks\"),\n\t\t\t\tlocalize(\"9\", \"ranks\"),\n\t\t\t},\n\t\t}\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.cardarea == G.play and context.repetition and not SMODS.has_no_rank(context.other_card) then\n\t\t\treturn {\n\t\t\t\trepetitions = card.ability.extra[context.other_card.base.value],\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ghost",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 3
+      },
+      "raw": "key = \"ghost\",\n    stolen_from = \"Phanta\",\n    in_pool = function (self, args)\n        return false\n    end,\n\tconfig = { extra = { xmult = 1 } },\n\trarity = 3,\n\tatlas = \"stolen\",\n\tindividual_quips = true,\n\tpos = { x = 3, y = 3 },\n\tdraw = function(self, card, layer)\n\t\tif self.discovered or card.params.bypass_discovery_center then\n\t\t\tcard.children.center:draw_shader(\"booster\", nil, card.ARGS.send_to_shader)\n\t\tend\n\tend,\n\tcost = 8,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = true,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.xmult, 1 + (JROK.count_tarots() * card.ability.extra.xmult) } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tlocal tarot_count = JROK.count_tarots()\n\t\t\tif tarot_count > 0 then\n\t\t\t\treturn { xmult = 1 + (tarot_count * card.ability.extra.xmult) }\n\t\t\tend\n\t\tend\n\tend,\n\tpronouns = \"she_her\",",
+      "config": {
+        "extra": {
+          "xmult": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 1
+        }
+      },
+      "vars": [
+        1,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ghostinabucket",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 2,
+        "y": 3
+      },
+      "raw": "key = \"ghostinabucket\",\n\tconfig = { extra = { odds = 4 } },\n\trarity = 1,\n    stolen_from = \"Phanta\",\n\tatlas = \"stolen\",\n\tpos = { x = 2, y = 3 },\n\tcost = 4,\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, \"ghostinabucket\")\n\t\treturn { vars = { num, denom } }\n\tend,\n    in_pool = function (self, args)\n        return false\n    end,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tperishable_compat = true,\n\n\tcalculate = function(self, card, context)\n\t\tif\n\t\t\tcontext.individual\n\t\t\tand context.cardarea == G.hand\n\t\t\tand not context.end_of_round\n\t\t\tand context.other_card:get_id() == 14\n\t\t\tand SMODS.pseudorandom_probability(card, \"ghostinabucket\", 1, card.ability.extra.odds)\n\t\t\tand #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit\n\t\tthen\n\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\n\t\t\tlocal juice_card = context.other_card\n\t\t\treturn {\n\t\t\t\textra = {\n\t\t\t\t\tmessage = localize(\"k_plus_tarot\"),\n\t\t\t\t\tmessage_card = juice_card,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\tjuice_card:juice_up()\n\t\t\t\t\t\t\t\tSMODS.add_card({\n\t\t\t\t\t\t\t\t\tset = \"Tarot\",\n\t\t\t\t\t\t\t\t\tkey_append = \"ghostinabucket\",\n\t\t\t\t\t\t\t\t})\n\t\t\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\n\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t}))\n\t\t\t\t\tend,\n\t\t\t\t},\n\t\t\t}\n\t\tend\n\tend,\n\tpronouns = \"she_her\",",
+      "config": {
+        "extra": {
+          "odds": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "odds": 4
+        }
+      },
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "forgery",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 7,
+        "y": 0
+      },
+      "raw": "key = \"forgery\",\n\tstolen_from = \"pi_cubed's Jokers\",\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 7, y = 0 },\n\tcost = 7,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\tperishable_compat = false,\n\teternal_compat = true,\n\tconfig = { extra = { mult = 0 } },\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.mult } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.setting_blind and not context.blueprint and not context.retrigger_joker and #G.playing_cards > 0 then\n\t\t\tlocal card_list = {}\n\t\t\tfor k, v in ipairs(G.playing_cards) do\n\t\t\t\tif not v.getting_sliced then\n\t\t\t\t\ttable.insert(card_list, v)\n\t\t\t\tend\n\t\t\tend\n\n\t\t\tif #card_list > 0 then\n\t\t\t\tlocal card_is_kil = pseudorandom_element(card_list, pseudoseed(\"forgery\" .. G.GAME.round_resets.ante))\n\t\t\t\tcard_is_kil.getting_sliced = true\n\t\t\t\tlocal card_mult = 0\n\t\t\t\tif SMODS.has_no_rank(card_is_kil) then -- rankless cards\n\t\t\t\t\tcard_mult = card_mult + 0\n\t\t\t\telse\n\t\t\t\t\tcard_mult = card_is_kil.base.nominal or 0\n\t\t\t\tend\n\t\t\t\tcard_mult = card_mult\n\t\t\t\t\t+ (card_is_kil.ability.perma_bonus or 0)\n\t\t\t\t\t+ (card_is_kil.ability.perma_h_chips or 0)\n\t\t\t\tif SMODS.has_enhancement(card_is_kil, \"m_bonus\") then -- bonus card (vanilla)\n\t\t\t\t\tcard_mult = card_mult + 30\n\t\t\t\telseif SMODS.has_enhancement(card_is_kil, \"m_stone\") then -- stone card (vanilla)\n\t\t\t\t\tcard_mult = card_mult + 50\n\t\t\t\telseif SMODS.has_enhancement(card_is_kil, \"m_akyrs_ash_card\") then -- ash card (aikoyori's shenanigans)\n\t\t\t\t\tcard_mult = card_mult + 30\n\t\t\t\tend\n\t\t\t\tif card_is_kil.edition then\n\t\t\t\t\tif card_is_kil.edition.key == \"e_foil\" then -- foil (vanilla)\n\t\t\t\t\t\tcard_mult = card_mult + 50\n\t\t\t\t\telseif card_is_kil.edition.key == \"e_cry_noisy\" then -- noisy (cryptid)\n\t\t\t\t\t\tcard_mult = card_mult + pseudorandom(\"noisy\") * 150\n\t\t\t\t\telseif card_is_kil.edition.key == \"e_ortalab_anaglyphic\" then -- anaglyphic (ortalab)\n\t\t\t\t\t\tcard_mult = card_mult + 20\n\t\t\t\t\telseif card_is_kil.edition.key == \"e_cry_mosaic\" then -- mosaic (cryptid)\n\t\t\t\t\t\tcard_mult = 2.5 * card_mult\n\t\t\t\t\telseif card_is_kil.edition.key == \"e_akyrs_texelated\" then -- texelated (aikoyori's shenanigans)\n\t\t\t\t\t\tcard_mult = 0.8 * card_mult\n\t\t\t\t\telseif card_is_kil.edition.key == \"e_bunc_glitter\" then -- glitter (bunco)\n\t\t\t\t\t\tcard_mult = 1.3 * card_mult\n\t\t\t\t\telseif card_is_kil.edition.key == \"e_yahimod_evil\" then -- evil (yahimod)\n\t\t\t\t\t\tcard_mult = 1.5 * card_mult\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\t\tif card_is_kil.ability.perma_x_chips and card_is_kil.ability.perma_x_chips > 1 then\n\t\t\t\t\tcard_mult = card_mult * card_is_kil.ability.perma_x_chips\n\t\t\t\tend\n\t\t\t\tif card_is_kil.ability.perma_h_x_chips and card_is_kil.ability.perma_h_x_chips > 1 then\n\t\t\t\t\tcard_mult = card_mult * card_is_kil.ability.perma_h_x_chips\n\t\t\t\tend\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"before\",\n\t\t\t\t\tdelay = 0.1,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tdraw_card(G.deck, G.play, 90, \"up\", nil, card_is_kil)\n\t\t\t\t\t\tdelay(1)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"before\",\n\t\t\t\t\tdelay = 0.1,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tSMODS.destroy_cards(card_is_kil)\n\t\t\t\t\t\tSMODS.calculate_effect({\n\t\t\t\t\t\t\tmessage = localize({ type = \"variable\", key = \"a_mult\", vars = { card_mult * 0.25 } }),\n\t\t\t\t\t\t\tcolour = G.C.MULT,\n\t\t\t\t\t\t\tsound = \"slice1\",\n\t\t\t\t\t\t\tpitch = 0.96 + math.random() * 0.08,\n\t\t\t\t\t\t}, card)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\tcard.ability.extra.mult = card.ability.extra.mult + card_mult * 0.25\n\t\t\tend\n\t\tend\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t\tcard = card,\n\t\t\t}\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "mult": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 0
+        }
+      },
+      "vars": [
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "leeroooooy",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 0
+      },
+      "raw": "key = \"leeroooooy\",\n\tstolen_from = \"pi_cubed's Jokers\",\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 8, y = 0 },\n\tcost = 5,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tdiscovered = true,\n\tblueprint_compat = true,\n\tperishable_compat = true,\n\teternal_compat = true,\n\tconfig = { extra = { retriggers = 0 } },\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.retriggers } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.skip_blind and not context.blueprint and not context.retrigger_joker then\n\t\t\tcard.ability.extra.retriggers = card.ability.extra.retriggers + 1\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_upgrade_ex\"),\n\t\t\t}\n\t\tend\n\t\tif\n\t\t\tcontext.end_of_round\n\t\t\tand context.game_over == false\n\t\t\tand context.main_eval\n\t\t\tand not context.blueprint\n\t\t\tand not context.retrigger_joker\n\t\tthen\n\t\t\tif context.beat_boss and card.ability.extra.retriggers ~= 0 then\n\t\t\t\tcard.ability.extra.retriggers = 0\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\t\tif context.repetition and context.cardarea == G.play and card.ability.extra.retriggers >= 1 then\n\t\t\treturn {\n\t\t\t\trepetitions = card.ability.extra.retriggers,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "retriggers": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "retriggers": 0
+        }
+      },
+      "vars": [
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "trash_bin",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 7
+      },
+      "raw": "key = \"trash_bin\",\n\tconfig = { extra = { mult = 1 } },\n\trarity = 1,\n\tatlas = \"stolen\",\n\tpos = { x = 0, y = 7 },\n\tcost = 5,\n\tblueprint_compat = true,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.mult, card.ability.extra.mult * (G.discard and #G.discard.cards or 0) } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult * #G.discard.cards,\n\t\t\t}\n\t\tend\n\tend,\n    stolen_from = \"PokerJokers\",\n    in_pool = function(self, args)\n        return false\n    end,",
+      "config": {
+        "extra": {
+          "mult": 1
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 1
+        }
+      },
+      "vars": [
+        1,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "slop_moist",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 7,
+        "y": 4
+      },
+      "raw": "key = \"slop_moist\",\n\tstolen_from = \"Stocking Stuffer\",\n\tatlas = \"stolen\",\n\tpos = { x = 7, y = 4 },\n\trarity = 2,\n\tcost = 10,\n\tdiscovered = true,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = {\n\t\t\tset = \"Other\",\n\t\t\tkey = \"perishable\",\n\t\t\tvars = { G.GAME.perishable_rounds or 5, G.GAME.perishable_rounds or 5 },\n\t\t}\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_foil\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_polychrome\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_negative\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.selling_self then\n\t\t\t-- do stuff here\n\t\t\tlocal cards = {}\n\t\t\tfor i = 1, #G.jokers.cards do\n\t\t\t\tif G.jokers.cards[i].ability.perishable or G.jokers.cards[i].debuff then\n\t\t\t\t\ttable.insert(cards, i)\n\t\t\t\tend\n\t\t\tend\n\t\t\tif #cards >= 1 then\n\t\t\t\tlocal thing = pseudorandom_element(cards, \"remove debuffs\")\n\t\t\t\tG.jokers.cards[thing].ability.perishable = false\n\t\t\t\tG.jokers.cards[thing].ability.debuff = false\n\t\t\telse\n\t\t\t\tlocal smelly = pseudorandom_element(G.jokers.cards, \"make it scented\")\n\t\t\t\tlocal scent = pseudorandom_element({ \"e_foil\", \"e_polychrome\", \"e_negative\" }, \"scent to apply\")\n\t\t\t\tsmelly:set_edition(scent)\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "slop_vulpix",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 4
+      },
+      "raw": "key = \"slop_vulpix\",\n\tstolen_from = \"Stocking Stuffer\",\n\tatlas = \"stolen\",\n\tpos = { x = 8, y = 4 },\n\tcost = 8,\n\trarity = 2,\n\tdiscovered = true,\n\tconfig = {\n\t\textra = {\n\t\t\tnumer1 = 1,\n\t\t\tdenom1 = 4,\n\t\t\tnumer2 = 2,\n\t\t\tdenom2 = 11,\n\t\t\thandQ = 0,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal numer1, denom1 =\n\t\t\tSMODS.get_probability_vars(card, card.ability.extra.numer1, card.ability.extra.denom1, \"planet sold\")\n\t\tlocal numer2, denom2 =\n\t\t\tSMODS.get_probability_vars(card, card.ability.extra.numer2, card.ability.extra.denom2, \"lost discard\")\n\t\treturn { vars = { numer1, denom1, numer2, denom2 } }\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tlocal ret = {}\n\t\tif context.selling_card and context.card.ability.set == \"Planet\" then\n\t\t\tif\n\t\t\t\tG.STATE ~= G.STATES.SELECTING_HAND\n\t\t\t\tand SMODS.pseudorandom_probability(\n\t\t\t\t\tcard,\n\t\t\t\t\t\"shoutouts to aroace vulpienbies\",\n\t\t\t\t\tcard.ability.extra.numer1,\n\t\t\t\t\tcard.ability.extra.denom1,\n\t\t\t\t\t\"planet sold\"\n\t\t\t\t)\n\t\t\tthen\n\t\t\t\tG.GAME.proot_psold = true\n\t\t\t\tcard.ability.extra.handQ = card.ability.extra.handQ + 1\n\t\t\t\tif card.ability.extra.handQ >= 3 then\n\t\t\t\t\tret.sound = \"chips\" .. (card.ability.extra.handQ % 2) + 1\n\t\t\t\tend\n\t\t\t\tret.message = localize(\"proot_yep\")\n\t\t\t\tret.colour = G.C.GREEN\n\t\t\t\tret.extra = {}\n\t\t\t\tret.extra.message = \"+\" .. card.ability.extra.handQ\n\t\t\t\treturn ret\n\t\t\telse\n\t\t\t\tret.message = localize(\"k_nope_ex\")\n\t\t\t\tret.colour = G.C.SECONDARY_SET.Tarot\n\t\t\t\treturn ret\n\t\t\tend\n\t\t\tif G.STATE == G.STATES.SELECTING_HAND then\n\t\t\t\tG.GAME.proot_psold = true\n\t\t\t\tif\n\t\t\t\t\tSMODS.pseudorandom_probability(\n\t\t\t\t\t\tcard,\n\t\t\t\t\t\t\"shoutouts to aroace vulpienbies\",\n\t\t\t\t\t\tcard.ability.extra.numer1,\n\t\t\t\t\t\tcard.ability.extra.denom1,\n\t\t\t\t\t\t\"planet sold\"\n\t\t\t\t\t)\n\t\t\t\tthen\n\t\t\t\t\tG.GAME.current_round.hands_left = G.GAME.current_round.hands_left + 1\n\t\t\t\t\tret.message = localize({ type = \"variable\", key = \"a_hands\", vars = { 1 } })\n\t\t\t\t\treturn ret\n\t\t\t\telse\n\t\t\t\t\tret.message = localize(\"k_nope_ex\")\n\t\t\t\t\tret.colour = G.C.SECONDARY_SET.Tarot\n\t\t\t\t\treturn ret\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\n\t\tif context.setting_blind then\n\t\t\tif G.GAME.proot_psold then\n\t\t\t\tG.GAME.current_round.hands_left = G.GAME.current_round.hands_left + card.ability.extra.handQ\n\t\t\t\tret.message = localize({ type = \"variable\", key = \"a_hands\", vars = { card.ability.extra.handQ } })\n\t\t\t\tcard.ability.extra.handQ = 0\n\t\t\t\treturn ret\n\t\t\tend\n\t\tend\n\n\t\tif context.joker_main and G.GAME.proot_psold then\n\t\t\tif\n\t\t\t\tSMODS.pseudorandom_probability(\n\t\t\t\t\tcard,\n\t\t\t\t\t\"*paws at you- paws at you- paws at y-*\",\n\t\t\t\t\tcard.ability.extra.numer2,\n\t\t\t\t\tcard.ability.extra.denom2,\n\t\t\t\t\t\"lost discard\"\n\t\t\t\t)\n\t\t\tthen\n\t\t\t\tease_discard(-1, nil, nil)\n\t\t\t\tcard:juice_up()\n\t\t\tend\n\t\tend\n\n\t\tif context.end_of_round then\n\t\t\tG.GAME.proot_psold = nil\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "numer1": 1,
+          "denom1": 4,
+          "numer2": 2,
+          "denom2": 11,
+          "handQ": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "numer1": 1,
+          "denom1": 4,
+          "numer2": 2,
+          "denom2": 11,
+          "handQ": 0
+        }
+      },
+      "vars": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "spin",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 5
+      },
+      "raw": "key = \"spin\",\n\tatlas = \"stolen\",\n\tstolen_from = \"Revo's Vault\",\n\trarity = 1,\n\tcost = 5,\n\tunlocked = true,\n\tdiscovered = false,\n\tblueprint_compat = false,\n\tpos = {\n\t\tx = 4,\n\t\ty = 5,\n\t},\n\tconfig = {\n\t\textra = {},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {},\n\t\t}\n\tend,\n\tadd_to_deck = function(self, card, from_debuff)\n\t\tG.jokers.config.card_limit = G.jokers.config.card_limit + 1\n\tend,\n\tremove_from_deck = function(self, card, from_debuff)\n\t\tG.jokers.config.card_limit = G.jokers.config.card_limit - 1\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\tif context.other_card then\n\t\t\t\tcontext.other_card:flip()\n\t\t\t\tcontext.other_card:flip()\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {}
+      },
+      "ability": {
+        "extra": {}
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "grosdish",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 5
+      },
+      "raw": "key = \"grosdish\",\n    stolen_from = \"Revo's Vault\",\n\tatlas = \"stolen\",\n\tno_pool_flag = \"groex\",\n\trarity = 2,\n\tcost = 6,\n\tunlocked = true,\n\tdiscovered = false,\n\tblueprint_compat = true,\n\tperishable_compat = false,\n\tpos = {\n\t\tx = 5,\n\t\ty = 5,\n\t},\n\tconfig = {\n\t\textra = {\n\t\t\tchips = 120,\n\t\t\todds = 6,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal cae = card.ability.extra\n\t\tlocal num, den = SMODS.get_probability_vars(card, 1, cae.odds, \"grosdish_seed\")\n\t\treturn {\n\t\t\tvars = { card.ability.extra.chips, num, den },\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tlocal crv = card.ability.extra\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tchips = crv.chips,\n\t\t\t}\n\t\tend\n\t\tif\n\t\t\tcontext.end_of_round\n\t\t\tand not context.blueprint\n\t\t\tand context.main_eval\n\t\t\tand SMODS.pseudorandom_probability(card, \"gros_seed\", 1, crv.odds)\n\t\tthen\n\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\tfunc = function()\n\t\t\t\t\tplay_sound(\"tarot1\")\n\t\t\t\t\tcard.T.r = -0.2\n\t\t\t\t\tcard:juice_up(0.3, 0.4)\n\t\t\t\t\tcard.states.drag.is = true\n\t\t\t\t\tcard.children.center.pinch.x = true\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\t\tdelay = 1.5,\n\t\t\t\t\t\tblockable = false,\n\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\tG.jokers:remove_card(card)\n\t\t\t\t\t\t\tcard:remove()\n\t\t\t\t\t\t\tcard = nil\n\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\tend,\n\t\t\t\t\t}))\n\t\t\t\t\tG.GAME.pool_flags.groex = true\n\t\t\t\t\treturn true\n\t\t\t\tend,\n\t\t\t}))\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"k_extinct_ex\"),\n\t\t\t\tdelay(0.6),\n\t\t\t}\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "chips": 120,
+          "odds": 6
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 120,
+          "odds": 6
+        }
+      },
+      "vars": [
+        120,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "sunflower",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 2
+      },
+      "raw": "discovered = true,\n\tkey = \"sunflower\",\n\tstolen_from = \"Sarcpot\",\n\tconfig = {\n\t\textra = {\n\t\t\tactive = false,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal status = \"\"\n\t\tif card.ability.extra.active == true then\n\t\t\tstatus = localize(\"jrok_active\")\n\t\telse\n\t\t\tstatus = localize(\"jrok_inactive\")\n\t\tend\n\t\treturn {\n\t\t\tvars = { status },\n\t\t}\n\tend,\n\trarity = 3,\n\tatlas = \"stolen\",\n\tpos = {\n\t\tx = 6,\n\t\ty = 2,\n\t},\n\tcost = 5,\n\tblueprint_compat = true,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.skip_blind and not context.blueprint and card.ability.extra.active ~= true then\n\t\t\tcard.ability.extra.active = true\n\t\t\tlocal eval = function(card)\n\t\t\t\treturn card.ability.extra.active == true\n\t\t\tend\n\t\t\tjuice_card_until(card, eval, true)\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"jrok_active\"),\n\t\t\t}\n\t\tend\n\t\tif\n\t\t\tcontext.setting_blind\n\t\t\tand G.GAME.blind.boss\n\t\t\tand card.ability.extra.active == true\n\t\t\tand not G.GAME.blind.disabled\n\t\tthen\n\t\t\tG.GAME.blind:disable()\n\t\t\tcard.ability.extra.active = false\n\t\t\treturn {\n\t\t\t\tmessage = localize(\"jrok_disabled\"),\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "active": false
+        }
+      },
+      "ability": {
+        "extra": {
+          "active": false
+        }
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "orchid",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 7,
+        "y": 2
+      },
+      "raw": "discovered = true,\n\tkey = \"orchid\",\n\tstolen_from = \"Sarcpot\",\n\tconfig = {\n\t\textra = {\n\t\t\tmult_mod = 2,\n\t\t\tmult = 0,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = { card.ability.extra.mult_mod, card.ability.extra.mult },\n\t\t}\n\tend,\n\trarity = 1,\n\tatlas = \"stolen\",\n\tpos = {\n\t\tx = 7,\n\t\ty = 2,\n\t},\n\tcost = 5,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.before and context.scoring_hand and not context.blueprint then\n\t\t\tlocal found = false\n\t\t\tfor _, v in pairs(context.scoring_hand) do\n\t\t\t\tif v:get_id() == 11 then\n\t\t\t\t\tfound = true\n\t\t\t\tend\n\t\t\tend\n\t\t\tif found then\n\t\t\t\tSMODS.scale_card(card, {\n\t\t\t\t\tref_table = card.ability.extra,\n\t\t\t\t\tref_value = \"mult\",\n\t\t\t\t\tscalar_value = \"mult_mod\",\n\t\t\t\t})\n\t\t\tend\n\t\tend\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "mult_mod": 2,
+          "mult": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult_mod": 2,
+          "mult": 0
+        }
+      },
+      "vars": [
+        2,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "berry_shimmer",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 5
+      },
+      "raw": "key = \"berry_shimmer\",\n\tatlas = \"stolen\",\n    stolen_from = \"Shimmerberry\",\n\tpos = { x = 8, y = 5 },\n\tunlocked = true,\n\tdiscovered = true,\n\teternal_compat = false,\n\tperishable_compat = true,\n\tblueprint_compat = true,\n\trarity = 3,\n\tcost = 6,\n\tconfig = {\n\t\tactivated = false,\n\t\textra = {\n\t\t\tpercent = 0.05,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal card_one = G.GAME.current_round.SEMBY_berry_rank_one or { rank = \"King\" }\n\t\tlocal card_two = G.GAME.current_round.SEMBY_berry_rank_two or { rank = \"Queen\" }\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tlocalize(card_one.rank, \"ranks\"),\n\t\t\t\tlocalize(card_two.rank, \"ranks\"),\n\t\t\t\t100 * card.ability.extra.percent,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.setting_blind and not (self.getting_sliced or context.blueprint) then\n\t\t\tcard.ability.activated = false\n\t\tend\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\tif\n\t\t\t\tcontext.other_card:get_id() == G.GAME.current_round.SEMBY_berry_rank_one.id\n\t\t\t\tor context.other_card:get_id() == G.GAME.current_round.SEMBY_berry_rank_two.id\n\t\t\tthen\n\t\t\t\tcard.ability.activated = true\n\t\t\t\treturn {\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tJROK.reduce_blind_size(card.ability.extra.percent, context.other_card, true)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\t\tif context.end_of_round and context.cardarea == G.jokers and not context.blueprint then\n\t\t\tif not card.ability.activated then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tcard:juice_up()\n\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\t\t\tdelay = 0.3,\n\t\t\t\t\t\t\tblockable = false,\n\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\tSMODS.destroy_cards(card, nil, nil, true)\n\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t}))\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\treturn { message = localize(\"k_eaten_ex\") }\n\t\t\telse\n\t\t\t\treturn { message = localize(\"k_safe_ex\") }\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "activated": false,
+        "extra": {
+          "percent": 0.05
+        }
+      },
+      "ability": {
+        "activated": false,
+        "extra": {
+          "percent": 0.05
+        }
+      },
+      "vars": [
+        null,
+        null,
+        null,
+        null,
+        5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "berry_golden",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 6
+      },
+      "raw": "key = \"berry_golden\",\n\tatlas = \"stolen\",\n    stolen_from = \"Shimmerberry\",\n\tpos = { x = 0, y = 6 },\n\tunlocked = true,\n\tdiscovered = false,\n\teternal_compat = false,\n\tperishable_compat = true,\n\tblueprint_compat = true,\n\trarity = 2,\n\tcost = 5,\n\tconfig = {\n\t\tactivated = false,\n\t\textra = {\n\t\t\t-- Description says \"1 or 2\" but\n\t\t\t-- it's actually \"between 1 and 2\"\n\t\t\tdollars_min = 1,\n\t\t\tdollars_max = 2,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal card_one = G.GAME.current_round.SEMBY_berry_rank_one or { rank = \"King\" }\n\t\tlocal card_two = G.GAME.current_round.SEMBY_berry_rank_two or { rank = \"Queen\" }\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tlocalize(card_one.rank, \"ranks\"),\n\t\t\t\tlocalize(card_two.rank, \"ranks\"),\n\t\t\t\tcard.ability.extra.dollars_min,\n\t\t\t\tcard.ability.extra.dollars_max,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.setting_blind and not (self.getting_sliced or context.blueprint) then\n\t\t\tcard.ability.activated = false\n\t\tend\n\t\tif context.individual and context.cardarea == G.play then\n\t\t\tif\n\t\t\t\tcontext.other_card:get_id() == G.GAME.current_round.SEMBY_berry_rank_one.id\n\t\t\t\tor context.other_card:get_id() == G.GAME.current_round.SEMBY_berry_rank_two.id\n\t\t\tthen\n\t\t\t\tcard.ability.activated = true\n\t\t\t\t--> This is too slow: Card scores, and when the NEXT card scores you get the Money.\n\t\t\t\treturn {\n\t\t\t\t\tdollars = math.floor(\n\t\t\t\t\t\tpseudorandom(\n\t\t\t\t\t\t\t\"SEMBY_berry_golden_\" .. card.sort_id,\n\t\t\t\t\t\t\tcard.ability.extra.dollars_min,\n\t\t\t\t\t\t\tcard.ability.extra.dollars_max\n\t\t\t\t\t\t)\n\t\t\t\t\t),\n\t\t\t\t}\n\t\t\t\t--[[--> Quick'n'Dirty Alternative:\n\t\t\t\tlocal gain = math.floor(pseudorandom('SEMBY_berry_golden_'..card.sort_id, card.ability.extra.dollars_min, card.ability.extra.dollars_max))\n\t\t\t\treturn {\n            \t\tfunc = function()\n\t\t\t\t\t\tease_dollars(gain)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t\textra = {\n\t\t\t\t\t\tmessage = localize{ type = 'variable', key = 'SEMBY_money', vars = { gain } },\n\t\t\t\t\t\tcolour = G.C.MONEY,\n\t\t\t\t\t\tsound = 'coin'..math.random(3, 5),\n\t\t\t\t\t\tsize = 1.2\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t--]]\n\t\t\t\t--> I'm not gonna use that.\n\t\t\tend\n\t\tend\n\t\tif context.end_of_round and context.cardarea == G.jokers and not context.blueprint then\n\t\t\tif not card.ability.activated then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tcard:juice_up()\n\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\t\t\tdelay = 0.3,\n\t\t\t\t\t\t\tblockable = false,\n\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\tSMODS.destroy_cards(card, nil, nil, true)\n\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t}))\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\treturn { message = localize(\"k_eaten_ex\") }\n\t\t\telse\n\t\t\t\treturn { message = localize(\"k_safe_ex\") }\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "pingas",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 8
+      },
+      "raw": "key = \"pingas\",\n\trarity = 1,\n\tatlas = \"stolen\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tstolen_from = \"Tangents\",\n\tpos = { x = 0, y = 8 },\n\tcost = 3,\n\tunlocked = true,\n\tdiscovered = true,\n\tconfig = { extra = { mult = 4 } },\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.mult } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif\n\t\t\tcontext.individual\n\t\t\tand not context.repetition\n\t\t\tand not context.end_of_round\n\t\t\tand context.cardarea == G.play\n\t\tthen\n\t\t\tlocal sound = \"jrok_pingas\"\n\t\t\treturn {\n\t\t\t\tfocus = context.other_card,\n\t\t\t\tmult_mod = card.ability.extra.mult,\n\t\t\t\tmessage = localize({ type = \"variable\", key = \"a_mult\", vars = { card.ability.extra.mult } }),\n\t\t\t\tsound = sound,\n\t\t\t\tcolour = G.C.RED,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "mult": 4
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult": 4
+        }
+      },
+      "vars": [
+        4
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "kendih",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 1,
+        "y": 8
+      },
+      "raw": "key = \"kendih\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tstolen_from = \"Tangents\",\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 1, y = 8 },\n\tcost = 3,\n\tunlocked = true,\n\tdiscovered = true,\n\tconfig = { extra = {\n\t\tchance = 4,\n\t\txmult = 1000,\n\t\tvariance = 5000,\n\t} },\n\tloc_vars = function(self, info_queue, card)\n\t\tlocal n, d = SMODS.get_probability_vars(card, 1, card.ability.extra.chance, \"mustard\")\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tn,\n\t\t\t\td,\n\t\t\t\tcard.ability.extra.xmult,\n\t\t\t\tcard.ability.extra.xmult + card.ability.extra.variance,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tif SMODS.pseudorandom_probability(card, \"mustard\", 1, card.ability.extra.chance) then\n\t\t\t\tlocal multard = card.ability.extra.xmult + pseudorandom(\"mustard\") * card.ability.extra.variance\n\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\tdelay = 0.3,\n\t\t\t\t\tblockable = false,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tcard:juice_up(2, 2)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"immediate\",\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tplay_sound(\"jrok_mustard\", 1, 1000)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\n\t\t\t\treturn {\n\t\t\t\t\txmult = multard,\n\t\t\t\t\tcard = card,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "chance": 4,
+          "xmult": 1000,
+          "variance": 5000
+        }
+      },
+      "ability": {
+        "extra": {
+          "chance": 4,
+          "xmult": 1000,
+          "variance": 5000
+        }
+      },
+      "vars": [
+        null,
+        null,
+        1000,
+        6000
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Font",
+      "key": "emoji",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"emoji\",\n\tpath = \"NotoEmoji-Regular.ttf\",\n\trender_scale = 95,\n\tTEXT_HEIGHT_SCALE = 1,\n\tTEXT_OFFSET = { x = 10, y = -17 },\n\tFONTSCALE = 0.15,\n\tsquish = 1,\n\tDESCSCALE = 1,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "jrok_mustard",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jrok_mustard\",\n\tpath = \"mustard.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "jrok_pingas",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"jrok_pingas\",\n\tpath = \"pingas.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "spoon_bender",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"spoon_bender\",\n\tstolen_from = \"TBOJ\",\n\tpos = { x = 0, y = 0 },\n\tconfig = { extra = { Xmult_multi = 2 } },\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.Xmult_multi } }\n\tend,\n\trarity = 3,\n\tcost = 8,\n\tatlas = \"stolen\",\n\tperishable_compat = true,\n\teternal_compat = true,\n\tblueprint_compat = true,\n\tcalculate = function(self, card, context)\n\t\tif context.cardarea == \"unscored\" and context.individual then\n\t\t\treturn {\n\t\t\t\tcolour = G.C.MULT,\n\t\t\t\tXmult = card.ability.extra.Xmult_multi,\n\t\t\t}\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "Xmult_multi": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult_multi": 2
+        }
+      },
+      "vars": [
+        2
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "dream_catcher",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 1,
+        "y": 0
+      },
+      "raw": "key = \"dream_catcher\",\n\tstolen_from = \"TBOJ\",\n\tpos = { x = 1, y = 0 },\n\tconfig = { extra = {} },\n\tloc_vars = function(self, info_queue, card)\n\t\tif not G.jokers then\n\t\t\t--print(\"not in game\")\n\t\t\treturn { vars = { localize(\"jrok_unknown\") } }\n\t\tend\n\t\tif not next(SMODS.find_card(\"j_jrok_dream_catcher\")) then\n\t\t\t--print(\"not owned\")\n\t\t\treturn { vars = { localize(\"jrok_acquire_to_reveal\") } }\n\t\tend\n\t\tlocal blind = JROK.predict_next_boss()\n\t\tif blind then\n\t\t\treturn { vars = { localize({ type = \"name_text\", key = blind, set = \"Blind\" }) } }\n\t\telse\n\t\t\t--print(\"cant find blind\")\n\t\t\treturn { vars = { localize(\"jrok_unknown\") } }\n\t\tend\n\tend,\n\trarity = 1,\n\tcost = 4,\n\tatlas = \"stolen\",\n\tperishable_compat = true,\n\teternal_compat = true,\n\tblueprint_compat = false,\n\tcalculate = function(self, card, context) end,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {}
+      },
+      "ability": {
+        "extra": {}
+      },
+      "vars": [
+        "\"[Unknown]\""
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "toiletrock",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 2
+      },
+      "raw": "key = \"toiletrock\",\n    stolen_from = \"TOGA's Stuff\",\n\tunlocked = true,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.m_stone\n\t\treturn { vars = { localize(\"Flush\", \"poker_hands\") } }\n\tend,\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 4, y = 2 },\n\tcost = 6,\n\tblueprint_compat = false,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "wishingstones",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 2
+      },
+      "raw": "key = \"wishingstones\",\n    stolen_from = \"TOGA's Stuff\",\n\tunlocked = true,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.m_stone\n\t\treturn { vars = { localize(\"Straight\", \"poker_hands\") } }\n\tend,\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 5, y = 2 },\n\tcost = 6,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tblueprint_compat = false,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "eviloops",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 7
+      },
+      "raw": "key = \"eviloops\",\n\tblueprint_compat = false,\n\trarity = 2,\n\tcost = 5,\n\tatlas = \"stolen\",\n\tpos = { x = 5, y = 7 },\n\tcalculate = function(self, card, context)\n\t\tif context.mod_probability and not context.blueprint then\n\t\t\treturn {\n\t\t\t\tnumerator = context.numerator / 2,\n\t\t\t}\n\t\tend\n\tend,\n\tstolen_from = \"Typ0's Random Jokers\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "polychromeToTheRight",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 7
+      },
+      "raw": "key = \"polychromeToTheRight\",\n\tstolen_from = \"Typ0's Random Jokers\",\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tdraw = function(self, card, layer)\n\t\tif card.config.center.discovered or card.bypass_discovery_center then\n\t\t\tcard.children.center:draw_shader(\"polychrome\", nil, card.ARGS.send_to_shader)\n\t\tend\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.e_polychrome\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.x_mult,\n\t\t\t},\n\t\t}\n\tend,\n\tatlas = \"stolen\",\n\tpos = { x = 6, y = 7 },\n\trarity = 2,\n\tcost = 6,\n\tblueprint_compat = true,\n\tconfig = {\n\t\textra = {\n\t\t\tx_mult = 1.5,\n\t\t},\n\t},\n\n\tcalculate = function(self, card, context)\n\t\tif context.joker_main then\n\t\t\tlocal jokers = G.jokers and G.jokers.cards\n\t\t\tif jokers and jokers[#jokers] == card then\n\t\t\t\treturn {\n\t\t\t\t\tXmult = 1.5,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\n\tadd_to_deck = function(self, card, from_debuff)\n\t\tif not card.edition or card.edition.type ~= \"polychrome\" then\n\t\t\tcard:set_edition({ type = \"polychrome\" }, true)\n\t\tend\n\tend,\n\n\tset_edition = function(self, card, edition)\n\t\treturn { type = \"polychrome\" }\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "goldship",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 4
+      },
+      "raw": "--Gold Ship\n\tkey = \"goldship\",\n\tstolen_from = \"UmaMusumod\",\n\tconfig = {\n\t\textra = {\n\t\t\tkicks = { -2, -1, 1, 2, 3, 4, 5 },\n\t\t},\n\t},\n\tpos = {\n\t\tx = 6,\n\t\ty = 4,\n\t},\n\tcost = 4,\n\trarity = 1,\n\tblueprint_compat = true,\n\teternal_compat = true,\n\tunlocked = true,\n\tdiscovered = true,\n\tatlas = \"stolen\",\n\n\tloc_vars = function(self, info_queue, card)\n        local rank = \"Ace\"\n        if G.GAME.current_round and G.GAME.current_round.ship_card then\n            rank = G.GAME.current_round.ship_card.rank\n        end\n\t\treturn { vars = { rank } }\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.hand_drawn then\n\t\t\tfor k, v in ipairs(context.hand_drawn) do\n\t\t\t\tif v:get_id() == G.GAME.current_round.ship_card.id then\n\t\t\t\t\tlocal amount = pseudorandom_element(card.ability.extra.kicks, pseudoseed(\"dropkick\"))\n\t\t\t\t\tease_dollars(amount)\n\t\t\t\t\tcard_eval_status_text(v, \"extra\", nil, nil, nil, { message = \"$\" .. amount, colour = G.C.MONEY })\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "tmoperao",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 5,
+        "y": 4
+      },
+      "raw": "--TM Opera O\n\tkey = \"tmoperao\",\n\tstolen_from = \"UmaMusumod\",\n\tconfig = {\n\t\textra = {\n\t\t\tXmult = 1,\n\t\t\tXmult_mod = 0.25,\n\t\t},\n\t},\n\tpos = {\n\t\tx = 5,\n\t\ty = 4,\n\t},\n\tcost = 9,\n\trarity = 3,\n\tblueprint_compat = true,\n\tperishable_compat = false,\n\teternal_compat = true,\n\tunlocked = true,\n\tdiscovered = true,\n\tatlas = \"stolen\",\n\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.Xmult, card.ability.extra.Xmult_mod } }\n\tend,\n\n\tcalculate = function(self, card, context)\n\t\tif context.before and not context.blueprint then\n\t\t\tlocal faces = false\n\t\t\tfor i = 1, #context.scoring_hand do\n\t\t\t\tif context.scoring_hand[i]:is_face() then\n\t\t\t\t\tfaces = true\n\t\t\t\t\tbreak\n\t\t\t\tend\n\t\t\tend\n\t\t\tif faces then\n\t\t\t\tcard.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_mod\n\t\t\t\treturn {\n\t\t\t\t\tcard = card,\n\t\t\t\t\tmessage = localize(\"k_upgrade_ex\"),\n\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t}\n\t\t\telse\n\t\t\t\tlocal last_mult = card.ability.extra.Xmult\n\t\t\t\tcard.ability.extra.Xmult = 1\n\t\t\t\tif last_mult > 1 then\n\t\t\t\t\treturn {\n\t\t\t\t\t\tcard = card,\n\t\t\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\t\t\tcolour = G.C.RED,\n\t\t\t\t\t}\n\t\t\t\tend\n\t\t\tend\n\t\telseif context.cardarea == G.jokers and context.joker_main and card.ability.extra.Xmult > 1 then\n\t\t\treturn {\n\t\t\t\tmessage = localize({ type = \"variable\", key = \"a_xmult\", vars = { card.ability.extra.Xmult } }),\n\t\t\t\tXmult_mod = card.ability.extra.Xmult,\n\t\t\t}\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "Xmult": 1,
+          "Xmult_mod": 0.25
+        }
+      },
+      "ability": {
+        "extra": {
+          "Xmult": 1,
+          "Xmult_mod": 0.25
+        }
+      },
+      "vars": [
+        1,
+        0.25
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "uniku",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 0,
+        "y": 5
+      },
+      "raw": "key = \"uniku\",\n\tstolen_from = \"UNIK's Mod\",\n\tatlas = \"stolen\",\n\tpos = { x = 0, y = 5 },\n\trarity = 2,\n\tconfig = { extra = { repetitions = 2 } },\n\tcost = 5,\n    in_pool = function (self, args)\n        return false\n    end,\n\tblueprint_compat = true,\n\tperishable_compat = true,\n\teternal_compat = true,\n\tloc_vars = function(self, info_queue, center)\n\t\treturn { vars = { center.ability.extra.repetitions } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.cardarea == G.play and context.repetition and not context.repetition_only then\n\t\t\tif context.other_card:get_id() == 7 then\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_again_ex\"),\n\t\t\t\t\trepetitions = card.ability.extra.repetitions,\n\t\t\t\t\tcolour = G.C.UNIK_UNIK,\n\t\t\t\t\tcard = card,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "repetitions": 2
+        }
+      },
+      "ability": {
+        "extra": {
+          "repetitions": 2
+        }
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "ghost_joker",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 1,
+        "y": 5
+      },
+      "raw": "key = \"ghost_joker\",\n\tatlas = \"stolen\",\n    stolen_from = \"UNIK's Mod\",\n    in_pool = function (self, args)\n        return false\n    end,\n\tpos = { x = 1, y = 5 },\n\trarity = 3,\n\tcost = 9,\n\tblueprint_compat = true,\n\tperishable_compat = true,\n\teternal_compat = true,\n\tdemicoloncompat = true,\n\tcalculate = function(self, card, context)\n\t\tif (context.setting_blind or context.forcetrigger) and not (context.blueprint_card or self).getting_sliced then\n\t\t\tif #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then\n\t\t\t\tG.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"before\",\n\t\t\t\t\tdelay = 0.0,\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tlocal n_card =\n\t\t\t\t\t\t\tcreate_card(\"Spectral\", G.consumeables, nil, nil, nil, nil, nil, \"unik_ghost_joker\")\n\t\t\t\t\t\tn_card:add_to_deck()\n\t\t\t\t\t\tG.consumeables:emplace(n_card)\n\t\t\t\t\t\tG.GAME.consumeable_buffer = 0\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\tcard_eval_status_text(card, \"extra\", nil, nil, nil, {\n\t\t\t\t\tmessage = localize(\"k_plus_spectral\"),\n\t\t\t\t\tcolour = G.C.SECONDARY_SET.Spectral,\n\t\t\t\t\tcard = card,\n\t\t\t\t})\n\t\t\tend\n\t\t\treturn {}\n\t\tend\n\tend,\n\tdraw = function(self, card, layer)\n\t\tlocal notilt = nil\n\t\tif card.area and card.area.config.type == \"deck\" then\n\t\t\tnotilt = true\n\t\tend\n\t\tcard.children.center:draw_shader(\"negative_shine\", nil, card.ARGS.send_to_shader, notilt, card.children.center)\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "posh",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 7,
+        "y": 5
+      },
+      "raw": "key = \"posh\",\n    stolen_from = \"Valk:Redux\",\n\tatlas = \"stolen\",\n\tpos = { x = 7, y = 5 },\n\tconfig = { extra = { chips = 30 } },\n\trarity = 1,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.ability.extra.chips } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.individual and context.cardarea == G.hand and next(SMODS.get_enhancements(context.other_card)) then\n\t\t\treturn { chips = card.ability.extra.chips }\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcost = 4,",
+      "config": {
+        "extra": {
+          "chips": 30
+        }
+      },
+      "ability": {
+        "extra": {
+          "chips": 30
+        }
+      },
+      "vars": [
+        30
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "stellar_yogurt",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 6,
+        "y": 5
+      },
+      "raw": "key = \"stellar_yogurt\",\n    stolen_from = \"Valk:Redux\",\n\tatlas = \"stolen\",\n\tpos = { x = 6, y = 5 },\n\tconfig = { extra = {} },\n\trarity = 2,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS.c_fool\n\t\tinfo_queue[#info_queue + 1] = G.P_TAGS.tag_meteor\n\t\treturn { vars = {} }\n\tend,\n\tcalculate = function(self, card, context)\n\t\t-- code here\n\t\tif context.selling_self then\n\t\t\tif G.consumeables.config.card_limits.total_slots - G.consumeables.config.card_count > 0 then\n\t\t\t\tSMODS.add_card({ key = \"c_fool\" })\n\t\t\tend\n\t\t\tadd_tag(Tag(\"tag_meteor\"))\n\t\tend\n\tend,\n\tcost = 6,\n\tvalk_artist = \"pangaea\",",
+      "config": {
+        "extra": {}
+      },
+      "ability": {
+        "extra": {}
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "jokerton",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 8,
+        "y": 6
+      },
+      "raw": "key = \"jokerton\",\n\tatlas = \"stolen\",\n\tstolen_from = \"WaffleMod\",\n\tpos = { x = 8, y = 6 },\n\tconfig = {\n\t\textra = {\n\t\t\tdiscard_requirement = 5,\n\t\t\tdiscards_remaining = 5,\n\t\t\tis_juicing = false,\n\t\t\tconv_enhancement = \"m_steel\",\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\tinfo_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.conv_enhancement]\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.discard_requirement,\n\t\t\t\tcard.ability.extra.discards_remaining,\n\t\t\t},\n\t\t}\n\tend,\n\tblueprint_compat = false,\n\trarity = 2,\n\tcost = 5,\n\tcalculate = function(self, card, context)\n\t\tlocal extra = card.ability.extra\n\t\tif context.discard and context.other_card:is_suit(\"Hearts\") then\n\t\t\textra.discards_remaining = math.max(extra.discards_remaining - 1, 0)\n\t\t\tif extra.discards_remaining == 0 and not extra.is_juicing then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tSMODS.calculate_effect({\n\t\t\t\t\t\t\tmessage = localize(\"k_active_ex\"),\n\t\t\t\t\t\t\tcolour = G.C.FILTER,\n\t\t\t\t\t\t}, card)\n\t\t\t\t\t\tlocal eval = function(card)\n\t\t\t\t\t\t\treturn not extra.is_juicing\n\t\t\t\t\t\tend\n\t\t\t\t\t\tjuice_card_until(card, eval, true)\n\t\t\t\t\t\textra.is_juicing = true\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\tend\n\t\tif extra.is_juicing and context.before then\n\t\t\tif context.scoring_hand and context.scoring_hand[1] then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tlocal convCard = context.scoring_hand[1]\n\t\t\t\t\t\tconvCard:set_ability(extra.conv_enhancement)\n\t\t\t\t\t\tconvCard:juice_up()\n\t\t\t\t\t\textra.is_juicing = false\n\t\t\t\t\t\textra.discards_remaining = 10\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_jrok_steel\"),\n\t\t\t\t\tcolour = G.C.FILTER,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,",
+      "config": {
+        "extra": {
+          "discard_requirement": 5,
+          "discards_remaining": 5,
+          "is_juicing": false,
+          "conv_enhancement": "m_steel"
+        }
+      },
+      "ability": {
+        "extra": {
+          "discard_requirement": 5,
+          "discards_remaining": 5,
+          "is_juicing": false,
+          "conv_enhancement": "m_steel"
+        }
+      },
+      "vars": [
+        5,
+        5
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "fountain",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 7,
+        "y": 6
+      },
+      "raw": "key = \"fountain\",\n\tatlas = \"stolen\",\n\tpos = { x = 7, y = 6 },\n\tstolen_from = \"WaffleMod\",\n\tconfig = { extra = {\n\t\tdollars = 3,\n\t} },\n\tcost = 5,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tG.GAME.probabilities.normal or 1,\n\t\t\t\tcard.ability.extra.dollars,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif\n\t\t\tcontext.individual\n\t\t\tand context.cardarea == G.play\n\t\t\tand SMODS.has_no_rank(context.other_card) ~= true -- Stone cards have no rank and thus should not count for this\n\t\t\tand SMODS.pseudorandom_probability(card, \"wafflemod_fountain_roll\", 1, context.other_card.base.nominal)\n\t\tthen\n\t\t\tG.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + card.ability.extra.dollars\n\t\t\treturn {\n\t\t\t\tdollars = card.ability.extra.dollars,\n\t\t\t\tfunc = function()\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\tG.GAME.dollar_buffer = 0\n\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\tend,\n\t\t\t\t\t}))\n\t\t\t\tend,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "dollars": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "dollars": 3
+        }
+      },
+      "vars": [
+        1,
+        3
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "jetfish",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 3,
+        "y": 0
+      },
+      "raw": "key = \"jetfish\",\n\tstolen_from = \"Willatro\",\n\trarity = 2,\n\tatlas = \"stolen\",\n\tpos = { x = 3, y = 0 },\n\tcost = 6,\n\tblueprint_compat = true,\n\tperishable_compat = false,\n\tconfig = {\n\t\textra = {\n\t\t\tmult_gain = 3,\n\t\t\tmult = 0,\n\t\t},\n\t},\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.mult_gain,\n\t\t\t\tcard.ability.extra.mult,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tlocal unscoring = false\n\t\tif context.before and context.main_eval and not context.blueprint then\n\t\t\tif #context.full_hand ~= #context.scoring_hand then\n\t\t\t\tunscoring = true\n\t\t\tend\n\n\t\t\tif unscoring then\n\t\t\t\tlocal last_mult = card.ability.extra.mult\n\t\t\t\tcard.ability.extra.mult = 0\n\t\t\t\tif last_mult > 0 then\n\t\t\t\t\treturn {\n\t\t\t\t\t\tmessage = localize(\"k_reset\"),\n\t\t\t\t\t}\n\t\t\t\tend\n\t\t\telse\n\t\t\t\tcard.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain\n\t\t\tend\n\t\tend\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "mult_gain": 3,
+          "mult": 0
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult_gain": 3,
+          "mult": 0
+        }
+      },
+      "vars": [
+        3,
+        0
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "cobbler",
+      "name": null,
+      "atlas": "stolen",
+      "pos": {
+        "x": 4,
+        "y": 0
+      },
+      "raw": "key = \"cobbler\",\n\trarity = 1,\n\tatlas = \"stolen\",\n\tstolen_from = \"Willatro\",\n\tpos = { x = 4, y = 0 },\n\tcost = 6,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tblueprint_compat = true,\n\teternal_compat = false,\n\tconfig = {\n\t\textra = {\n\t\t\tmult_gain = 5,\n\t\t\tmult = 0,\n\t\t\tmax_mult = 40,\n\t\t},\n\t},\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.mult_gain,\n\t\t\t\tcard.ability.extra.mult,\n\t\t\t\tcard.ability.extra.max_mult,\n\t\t\t},\n\t\t}\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then\n\t\t\tcard.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain\n\n\t\t\tif card.ability.extra.mult >= card.ability.extra.max_mult then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tplay_sound(\"tarot1\")\n\t\t\t\t\t\tcard.T.r = -0.2\n\t\t\t\t\t\tcard:juice_up(0.3, 0.4)\n\t\t\t\t\t\tcard.states.drag.is = true\n\t\t\t\t\t\tcard.children.center.pinch.x = true\n\t\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\t\t\tdelay = 0.3,\n\t\t\t\t\t\t\tblockable = false,\n\t\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\t\tcard:remove()\n\t\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\t\tend,\n\t\t\t\t\t\t}))\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"k_eaten_ex\"),\n\t\t\t\t}\n\t\t\telse\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize({ type = \"variable\", key = \"a_mult\", vars = { card.ability.extra.mult_gain } }),\n\t\t\t\t\tcolour = G.C.MULT,\n\t\t\t\t}\n\t\t\tend\n\t\tend\n\t\tif context.joker_main then\n\t\t\treturn {\n\t\t\t\tmult = card.ability.extra.mult,\n\t\t\t}\n\t\tend\n\tend,",
+      "config": {
+        "extra": {
+          "mult_gain": 5,
+          "mult": 0,
+          "max_mult": 40
+        }
+      },
+      "ability": {
+        "extra": {
+          "mult_gain": 5,
+          "mult": 0,
+          "max_mult": 40
+        }
+      },
+      "vars": [
+        5,
+        0,
+        40
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "al_jokers",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"al_jokers\",\n\tpath = \"al_jokers.png\",\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "new_al",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"new_al\",\n\tpath = \"new_al.png\",\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n\tpath = \"jrok.png\",\n\tpx = 34,\n\tpy = 34,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "ai_deck",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"ai_deck\",\n\tpath = \"ai_deck.png\",\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Back",
+      "key": "ai",
+      "name": null,
+      "atlas": "ai_deck",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"ai\",\n\tatlas = \"ai_deck\",\n\tpos = { x = 0, y = 0 },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "stolen",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"stolen\",\n\tpath = \"stolen.png\",\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "stolen_4d",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"stolen_4d\",\n\tpath = \"4d.png\",\n\tpx = 71,\n\tpy = 95,\n\tatlas_table = \"ANIMATION_ATLAS\",\n\tframes = 71,\n\tfps = 20,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "stolen_4d_soul",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"stolen_4d_soul\",\n\tpath = \"4d.png\",\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "NFS",
+      "key": "hallucinated",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"hallucinated\",\n\tpath = \"hallucinated.fs\",\n\tsend_vars = function(sprite, card)\n\t\treturn {\n\t\t\tseed = card and card.edition.jrok_hallucination_seed or { 0, 0 },\n\t\t}\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Edition",
+      "key": "hallucinated",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"hallucinated\",\n\tshader = \"hallucinated\",\n\tconfig = { xmult = 0.75 },\n\ton_apply = function(card)\n\t\tcard.edition.jrok_hallucination_seed = {\n\t\t\tmath.random(),\n\t\t\tmath.random(),\n\t\t}\n\tend,\n\tloc_vars = function(self, info_queue, card)\n\t\treturn { vars = { card.edition.extra.xmult } }\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.post_joker or (context.main_scoring and context.cardarea == G.play) then\n\t\t\treturn {\n\t\t\t\tx_mult = card.edition.x_mult,\n\t\t\t}\n\t\tend\n\tend,\n\tapply_to_float = true,",
+      "config": {
+        "xmult": 0.75
+      },
+      "ability": {
+        "xmult": 0.75
+      },
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "JimboQuip",
+      "key": "feedback",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"feedback\",\n\textra = {\n\t\tcenter = \"j_jrok_thunderedge\",\n\t\ttimes = 10,\n\t},\n\tfilter = function(self, quip_type)\n\t\treturn true, { weight = 1e308 }\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "c_jrok_alcohol",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "calculate = function(self, card, context)\n\t\tif context.ending_shop and G.consumeables.cards[1] then\n\t\t\tif JROK.drunk() and pseudorandom(\"drunk\", 1, 2) == 1 then\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tSMODS.add_card({\n\t\t\t\t\t\t\tkey = \"c_jrok_alcohol\",\n\t\t\t\t\t\t\tedition = \"e_negative\",\n\t\t\t\t\t\t\tstickers = { \"eternal\" },\n\t\t\t\t\t\t\tforce_stickers = true,\n\t\t\t\t\t\t})\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\telse\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\tfunc = function()\n\t\t\t\t\t\tlocal card_to_copy, _ = pseudorandom_element(G.consumeables.cards, \"vremade_perkeo\")\n\t\t\t\t\t\tlocal copied_card = copy_card(card_to_copy)\n\t\t\t\t\t\tcopied_card:set_edition(\"e_negative\", true)\n\t\t\t\t\t\tcopied_card:add_to_deck()\n\t\t\t\t\t\tG.consumeables:emplace(copied_card)\n\t\t\t\t\t\treturn true\n\t\t\t\t\tend,\n\t\t\t\t}))\n\t\t\tend\n\t\t\treturn { message = localize(\"k_duplicated_ex\") }\n\t\tend\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ScreenShader",
+      "key": "drunk",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"drunk\",\n\tpath = \"drunk.fs\",\n\tsend_vars = function(self)\n\t\treturn {\n\t\t\tprogress = math.pow((G.GAME.jrok_drunk or 0) / 10, 1.5),\n\t\t\ttime = G.TIMERS.REAL,\n\t\t}\n\tend,\n\tshould_apply = function(self)\n\t\treturn (G.GAME.jrok_drunk or 0) > 0\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ScreenShader",
+      "key": "blackout",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"blackout\",\n\tpath = \"blackout.fs\",\n\tsend_vars = function(self)\n\t\treturn {\n\t\t\tprogress = JROK.blackout,\n\t\t}\n\tend,\n\tshould_apply = function(self)\n\t\treturn JROK.blackout > 0\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "alcohol",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"alcohol\",\n\tpath = \"alcohol.png\",\n\tpx = 71,\n\tpy = 95,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "alcohol",
+      "name": null,
+      "atlas": "alcohol",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"alcohol\",\n\tset = \"Tarot\",\n\tatlas = \"alcohol\",\n\tpos = { x = 0, y = 0 },\n\tconfig = { extra = { xmult = 0.8 } },\n\tloc_vars = function(self, info_queue, card)\n\t\treturn {\n\t\t\tvars = {\n\t\t\t\tcard.ability.extra.xmult,\n\t\t\t\tJROK.drunk_limit - ((G.GAME or {}).jrok_drunk or 0),\n\t\t\t},\n\t\t}\n\tend,\n\tin_pool = function(self, args)\n\t\treturn false\n\tend,\n\tcalculate = function(self, card, context)\n\t\tif context.final_scoring_step then\n\t\t\treturn {\n\t\t\t\txmult = card.ability.extra.xmult,\n\t\t\t}\n\t\tend\n\tend,\n\tuse = function(self, card, area, copier)\n\t\tG.GAME.jrok_drunk = G.GAME.jrok_drunk or 0\n\t\tlocal final = G.GAME.jrok_drunk + 1\n\t\tG.E_MANAGER:add_event(Event({\n\t\t\ttrigger = \"after\",\n\t\t\tdelay = 0.4,\n\t\t\tfunc = function()\n\t\t\t\tplay_sound(\"timpani\")\n\t\t\t\tcard:juice_up(0.3, 0.5)\n\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\ttrigger = \"ease\",\n\t\t\t\t\tref_table = G.GAME,\n\t\t\t\t\tref_value = \"jrok_drunk\",\n\t\t\t\t\tease_to = final,\n\t\t\t\t\ttimer = \"REAL\",\n\t\t\t\t\tdelay = 0.6,\n\t\t\t\t\ttype = \"inoutquad\",\n\t\t\t\t}))\n\t\t\t\tif final >= JROK.drunk_limit then\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\ttrigger = \"ease\",\n\t\t\t\t\t\tref_table = JROK,\n\t\t\t\t\t\tref_value = \"blackout\",\n\t\t\t\t\t\tpause_force = true,\n\t\t\t\t\t\tease_to = 1,\n\t\t\t\t\t\tdelay = 0.5,\n\t\t\t\t\t\ttimer = \"REAL\",\n\t\t\t\t\t\ttype = \"inoutquad\",\n\t\t\t\t\t}))\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\t\ttimer = \"REAL\",\n\t\t\t\t\t\tpause_force = true,\n\t\t\t\t\t\tdelay = 3,\n\t\t\t\t\t\tfunc = function()\n\t\t\t\t\t\t\tJROK.lose()\n\t\t\t\t\t\t\treturn true\n\t\t\t\t\t\tend,\n\t\t\t\t\t}))\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\ttrigger = \"after\",\n\t\t\t\t\t\ttimer = \"REAL\",\n\t\t\t\t\t\tpause_force = true,\n\t\t\t\t\t\tdelay = 1.5,\n\t\t\t\t\t}))\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\ttrigger = \"ease\",\n\t\t\t\t\t\tref_table = JROK,\n\t\t\t\t\t\tref_value = \"blackout\",\n\t\t\t\t\t\tease_to = 0,\n\t\t\t\t\t\tpause_force = true,\n\t\t\t\t\t\ttimer = \"REAL\",\n\t\t\t\t\t\tdelay = 0.5,\n\t\t\t\t\t\tblocking = false,\n\t\t\t\t\t\ttype = \"inoutquad\",\n\t\t\t\t\t}))\n\t\t\t\t\tG.E_MANAGER:add_event(Event({\n\t\t\t\t\t\ttrigger = \"ease\",\n\t\t\t\t\t\tref_table = G.GAME,\n\t\t\t\t\t\tref_value = \"jrok_drunk\",\n\t\t\t\t\t\tease_to = 0,\n\t\t\t\t\t\ttimer = \"REAL\",\n\t\t\t\t\t\tpause_force = true,\n\t\t\t\t\t\tdelay = 0.5,\n\t\t\t\t\t\ttype = \"inoutquad\",\n\t\t\t\t\t}))\n\t\t\t\tend\n\t\t\t\treturn true\n\t\t\tend,\n\t\t}))\n\t\tdelay(0.3)\n\tend,\n\tcan_use = function(self, card)\n\t\treturn true\n\tend,\n\tselect_card = \"consumeables\",",
+      "config": {
+        "extra": {
+          "xmult": 0.8
+        }
+      },
+      "ability": {
+        "extra": {
+          "xmult": 0.8
+        }
+      },
+      "vars": [
+        0.8,
+        null
+      ],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.2.4"
+}
