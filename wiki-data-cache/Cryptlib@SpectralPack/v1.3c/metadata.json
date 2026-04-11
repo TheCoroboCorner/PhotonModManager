@@ -1,0 +1,252 @@
+{
+  "locMap": {
+    "disabled": {
+      "name": "Disabled",
+      "text": [
+        "No longer appears",
+        "during a run"
+      ],
+      "type": "Other"
+    },
+    "cry_gameset_disabled": {
+      "name": "\"Disabled\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_gameset_modest": {
+      "name": "\"Disabled\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_gameset_mainline": {
+      "name": "\"Enabled\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_gameset_madness": {
+      "name": "\"Disabled\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_gameset_custom": {
+      "name": "\"Disabled\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_gameset_exp": {
+      "name": "\"Disabled\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_content_set": {
+      "name": "\"Thematic Set\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_content_sets": {
+      "name": "\"Thematic Sets\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_view_set_contents": {
+      "name": "\"View Items in Set\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_set_enable_features": {
+      "name": "\"Use this section to enable or disable entire Thematic Sets.\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_family": {
+      "name": "\"Family Friendly Mode\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_tag": {
+      "name": "\"Tag\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_blind": {
+      "name": "\"Blind\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_mult": {
+      "name": "\"Mult\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_chips": {
+      "name": "\"Chips\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "cry_balanced_q": {
+      "name": "\"Balanced...?\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "a_xchips": {
+      "name": "\"X#1# Chips\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_powmult": {
+      "name": "\"^#1# Mult\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_powchips": {
+      "name": "\"^#1# Chips\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_powmultchips": {
+      "name": "\"^#1# Mult+Chips\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_round": {
+      "name": "\"+#1# Round\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_xchips_minus": {
+      "name": "\"-X#1# Chips\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_powmult_minus": {
+      "name": "\"-^#1# Mult\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_powchips_minus": {
+      "name": "\"-^#1# Chips\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_powmultchips_minus": {
+      "name": "\"-^#1# Mult+Chips\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_round_minus": {
+      "name": "\"-#1# Round\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_tag_minus": {
+      "name": "\"-#1# Tag\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_tags_minus": {
+      "name": "\"-#1# Tags\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_tag": {
+      "name": "\"+#1# Tag\"",
+      "text": [],
+      "type": "v_dictionary"
+    },
+    "a_tags": {
+      "name": "\"+#1# Tags\"",
+      "text": [],
+      "type": "v_dictionary"
+    }
+  },
+  "atlases": {
+    "modicon": {
+      "path": "crylib_icon.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Cryptlib@SpectralPack/v1.3c/crylib_icon.png",
+      "resolvedGitHubPath": "assets/1x/crylib_icon.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Sound",
+      "key": "forcetrigger",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"forcetrigger\",\n\tpath = \"forcetrigger.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "demitrigger",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"demitrigger\",\n\tpath = \"demitrigger.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n    path = \"crylib_icon.png\",\n    px = 34,\n    py = 34,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "emult",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"emult\",\n\tpath = \"ExponentialMult.wav\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "echips",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"echips\",\n\tpath = \"ExponentialChips.wav\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "floating_sprite2",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"floating_sprite2\",\n\t\torder = 59,\n\t\tfunc = function(self)\n\t\t\tif\n\t\t\t\tself.config.center.soul_pos\n\t\t\t\tand self.config.center.soul_pos.extra\n\t\t\t\tand (self.config.center.discovered or self.bypass_discovery_center)\n\t\t\tthen\n\t\t\t\tlocal scale_mod = 0.07 -- + 0.02*math.cos(1.8*G.TIMERS.REAL) + 0.00*math.cos((G.TIMERS.REAL - math.floor(G.TIMERS.REAL))*math.pi*14)*(1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL)))^3\n\t\t\t\tlocal rotate_mod = 0 --0.05*math.cos(1.219*G.TIMERS.REAL) + 0.00*math.cos((G.TIMERS.REAL)*math.pi*5)*(1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL)))^2\n\t\t\t\tif self.children.floating_sprite2 then\n\t\t\t\t\tself.children.floating_sprite2:draw_shader(\n\t\t\t\t\t\t\"dissolve\",\n\t\t\t\t\t\t0,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tself.children.center,\n\t\t\t\t\t\tscale_mod,\n\t\t\t\t\t\trotate_mod,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\t0.1 --[[ + 0.03*math.cos(1.8*G.TIMERS.REAL)--]],\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\t0.6\n\t\t\t\t\t)\n\t\t\t\t\tself.children.floating_sprite2:draw_shader(\n\t\t\t\t\t\t\"dissolve\",\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tnil,\n\t\t\t\t\t\tself.children.center,\n\t\t\t\t\t\tscale_mod,\n\t\t\t\t\t\trotate_mod\n\t\t\t\t\t)\n\t\t\t\telse\n\t\t\t\t\tlocal center = self.config.center\n\t\t\t\t\tif _center and _center.soul_pos and _center.soul_pos.extra then\n\t\t\t\t\t\tself.children.floating_sprite2 = Sprite(\n\t\t\t\t\t\t\tself.T.x,\n\t\t\t\t\t\t\tself.T.y,\n\t\t\t\t\t\t\tself.T.w,\n\t\t\t\t\t\t\tself.T.h,\n\t\t\t\t\t\t\tG.ASSET_ATLAS[_center.atlas or _center.set],\n\t\t\t\t\t\t\t_center.soul_pos.extra\n\t\t\t\t\t\t)\n\t\t\t\t\t\tself.children.floating_sprite2.role.draw_major = self\n\t\t\t\t\t\tself.children.floating_sprite2.states.hover.can = false\n\t\t\t\t\t\tself.children.floating_sprite2.states.click.can = false\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\tend\n\t\tend,\n\t\tconditions = { vortex = false, facing = \"front\" },",
+      "config": {
+        "vortex": false,
+        "facing": "front"
+      },
+      "ability": {
+        "vortex": false,
+        "facing": "front"
+      },
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.3c"
+}
