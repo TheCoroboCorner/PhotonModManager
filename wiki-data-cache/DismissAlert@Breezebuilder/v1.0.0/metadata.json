@@ -1,0 +1,19 @@
+{
+  "locMap": {},
+  "atlases": {},
+  "cards": [
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'modicon',\r\n\tpath = 'icon.png',\r\n\tpx = 32,\r\n\tpy = 32",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.0.0"
+}
