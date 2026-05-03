@@ -6101,5 +6101,30 @@
       "views": 2,
       "lastViewed": "2026-05-03T03:08:19.394Z"
     }
+  },
+  "SuperRogue@the-Astra": {
+    "id": "SuperRogue",
+    "name": "SuperRogue",
+    "author": [
+      "theAstra"
+    ],
+    "description": "SuperRogue is a mod designed to add another Rogue-like layer to Balatro",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "d90e00",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-1016c)",
+      "Lovely (>=0.7.1)"
+    ],
+    "git_owner": "the-Astra",
+    "published_at": "2026-05-03T03:19:59.631Z",
+    "type": "Mod",
+    "tags": [
+      "Mechanics",
+      "Misc"
+    ],
+    "externalWiki": null,
+    "updated_at": "2026-05-03T03:19:06Z",
+    "readme": "# SuperRogue is a mod that allows the player to activate content from different Mods as their run progresses! It is highly configurable and allows you to fine-tune how Mods can and will activate. \n\nThe configuration options are as follows:\n- \"Start round with mod being activated\": Activates a Mod through whatever trigger method chosen when starting a run\n- \"Trigger Type\": When a Mod will be activated; Choice of \"Round\" or \"Ante\"\n- \"Mod Activation Threashold\": How many triggers (as specified from Trigger Type) must pass before the next Mod gets activated\n- \"Mod Activation Mode\": How Mods are activated; Choice of \"Random,\" a random Mod will be activated on trigger, or \"Choose\", open a Mod Pack and choose between two random Mods presented to you\n- \"Blacklist\": As the name suggest, this menu will allow you to blacklist certain mods from being activated. It is suggested to add any non-content mod to this\n- \"Starting Mods\": Mods selected through this menu will be activated from the start automatically\n\nThis was an awesome little project to work on, so hopefully you enjoy this new way of playing Balatro! \nSpecial thanks to MurphyOBV for the inspiration of this mod. If you're reading this I hope you get some fun out of it too!\n"
   }
 }
