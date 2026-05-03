@@ -5729,6 +5729,183 @@
     ],
     "externalWiki": null,
     "updated_at": "2026-05-03T02:45:29Z",
-    "readme": "<p align=\"center\">\n  <img width=\"800\" height=\"345\" alt=\"hotpotlogo\" src=\"https://github.com/user-attachments/assets/fea511c2-9b8d-4df6-a868-1323a1678d54\" />\n</p>\n\n\n# Developer Chaos\nHot Potato is a Balatro Mod Developer Event where teams were created and given a week on their own to contribute to a mod. Cross-team communication was not allowed outside of major bugfixing efforts. The ordeal took 2 months, and this mod is the culmination of this work.\n\n## These are your teams:\n\n### Perkeocoin - Week 1\n- Opal\n- dottykitty\n- CampfireCollective\n- stupid\n- Omegaflowey18\n- ProdByProto\n\n### Sillyposting - Week 2\n- Jaydchw\n- Eris\n- UnusedParadox\n- PokerThePoker\n- Supernova\n- Victin\n\n### Jtem - Week 3\n- aikoyori\n- Haya\n- SleepyG11\n- squidguset\n- missingnumber\n\n### Team Name - Week 4\n- Corobo\n- Revo\n- GoldenLeaf\n- GhostSalt\n- Jogla\n- Violet\n\n### Team :) - Week 5\n- notmario\n- PokeRen\n- RGBeet\n- basil_squared\n\n### The four horsechicots of the potatolypse - Week 6\n- lord.ruby\n- nxkoo\n- Lily Felli\n- cg223\n- pangaea47\n- baccon4\n\n### Oops! All Programmers - Week 7\n- theAstra\n- Mysthaps\n- th30ne\n- trif\n- Liafeon\n- SadCube\n- factwixard\n\n### pissdrawer - Week 8\n- N'\n- Eremel\n- deadbeet\n- SDM_0\n- BepisFever\n- Fey\n- tacashumi\n\n### Teamless contributors (bug fixes)\n- WilsontheWolf\n\n## Note:\nHot Potato was not designed with cross-content mod compatibility in mind. It is recommended to not play Hot Potato with other mods installed. If you forego this warning, expect things to break!!\n\n***If you are experiencing a crash on startup,*** please be sure that your folders are not **nested**. If your Mod's folder looks like `Balatro/Mods/Hot-Potato/Hot-Potato/<mod files here>`, cut and paste the mod files from the second folder to the first, so that the mod's files are only one \"layer\" deep. The Mod's folder should look like this: `Balatro/Mods/Hot-Potato/<mod files here>`.\n\n**If your mod folder looks correct and you are still experiencing crashes of any kind**, please create an issue on this repository, or send a crash log in the mod's [thread in the Balatro Discord](https://discord.com/channels/1116389027176787968/1397989781178155009).\n"
+    "readme": "<p align=\"center\">\n  <img width=\"800\" height=\"345\" alt=\"hotpotlogo\" src=\"https://github.com/user-attachments/assets/fea511c2-9b8d-4df6-a868-1323a1678d54\" />\n</p>\n\n\n# Developer Chaos\nHot Potato is a Balatro Mod Developer Event where teams were created and given a week on their own to contribute to a mod. Cross-team communication was not allowed outside of major bugfixing efforts. The ordeal took 2 months, and this mod is the culmination of this work.\n\n## These are your teams:\n\n### Perkeocoin - Week 1\n- Opal\n- dottykitty\n- CampfireCollective\n- stupid\n- Omegaflowey18\n- ProdByProto\n\n### Sillyposting - Week 2\n- Jaydchw\n- Eris\n- UnusedParadox\n- PokerThePoker\n- Supernova\n- Victin\n\n### Jtem - Week 3\n- aikoyori\n- Haya\n- SleepyG11\n- squidguset\n- missingnumber\n\n### Team Name - Week 4\n- Corobo\n- Revo\n- GoldenLeaf\n- GhostSalt\n- Jogla\n- Violet\n\n### Team :) - Week 5\n- notmario\n- PokeRen\n- RGBeet\n- basil_squared\n\n### The four horsechicots of the potatolypse - Week 6\n- lord.ruby\n- nxkoo\n- Lily Felli\n- cg223\n- pangaea47\n- baccon4\n\n### Oops! All Programmers - Week 7\n- theAstra\n- Mysthaps\n- th30ne\n- trif\n- Liafeon\n- SadCube\n- factwixard\n\n### pissdrawer - Week 8\n- N'\n- Eremel\n- deadbeet\n- SDM_0\n- BepisFever\n- Fey\n- tacashumi\n\n### Teamless contributors (bug fixes)\n- WilsontheWolf\n\n## Note:\nHot Potato was not designed with cross-content mod compatibility in mind. It is recommended to not play Hot Potato with other mods installed. If you forego this warning, expect things to break!!\n\n***If you are experiencing a crash on startup,*** please be sure that your folders are not **nested**. If your Mod's folder looks like `Balatro/Mods/Hot-Potato/Hot-Potato/<mod files here>`, cut and paste the mod files from the second folder to the first, so that the mod's files are only one \"layer\" deep. The Mod's folder should look like this: `Balatro/Mods/Hot-Potato/<mod files here>`.\n\n**If your mod folder looks correct and you are still experiencing crashes of any kind**, please create an issue on this repository, or send a crash log in the mod's [thread in the Balatro Discord](https://discord.com/channels/1116389027176787968/1397989781178155009).\n",
+    "versionHistory": [
+      {
+        "tag": "v1.0.12b",
+        "name": "v1.0.12b",
+        "body": "- Fixed Mega Mushroom not destroying itself properly, making it so joker_type_destroyed contexts do not run\\r\\n- Fixed a crash caused by Tori Gate indexing the incorrect reference value\\r\\n- Fixed Son Loaf not using a comparison for some reason\\r\\n- Fixed the Gambling event trying to access incorrect text keys, resulting in buttons displaying \\\"ERROR\\\"\\r\\n- Fixed Box of Frogs and Ad Blocker effects not excluding Jokers from the pool properly\\r\\n\\r\\nv1.0.12b is a maintenance update that adds support for SMODS 1501a ",
+        "publishedAt": "2026-01-25T01:28:55Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.12b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.11",
+        "name": "v1.0.11",
+        "body": "- Fixed currency conversion method giving incorrect values\\r\\n- Reworked Reforging costs to be much more enticing\\r\\n- Fixed not being able to take cards from boosters when holding Ouroboros\\r\\n- Fix a a few mechanics not resetting buffers correctly\\r\\n- Fixed Team Packs crashing when trying to create a banned card\\r\\n- Fixed Delivery crashing when trying to spawn banned cards\\r\\n- Fixed Boosters and Vouchers in Respite Shop Events only considering base dollar amount as opposed to custom currencies",
+        "publishedAt": "2026-01-20T23:36:02Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.11",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.10",
+        "name": "v1.0.10",
+        "body": "## Fixes\\r\\n- Fixed Nigerian Prince crashing with Talisman\\r\\n- Fixed If Statements crashing with Talisman (again)\\r\\n- Fixed Creditable boss crashing with Talisman\\r\\n- Fixed a crash caused by Joker Delivery attempting to use an undefined variable for some stickers\\r\\n- card_limit modifiers are now no longer affected by Guts\\r\\n- Fixed ATM crashing due to a case-sensitive access that was changed in last SMODS update\\r\\n- OAP Self Insert is now unbreedable due to child description issues",
+        "publishedAt": "2026-01-11T05:26:41Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.10",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.9",
+        "name": "v1.0.9",
+        "body": "This update raises the SMODS dependency to BETA-1221a. There are no balance changes in this update and is purely for compatibility/bugfixing.",
+        "publishedAt": "2025-12-21T03:33:38Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.9",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.8b",
+        "name": "v1.0.8b",
+        "body": "- Panic Attack description has been reworded\\r\\n- Bitcoin to Jicks exchange rates have been buffed\\r\\n- Fixed a problem caused by a missing number_format() call\\r\\n- Moved some event loc_txt to the localization file\\r\\n- Cards added in combat events now call the card adding context\\r\\n\\r\\n## v1.0.8b changes\\r\\n- Added Korean localization (Thank you @NegativeNev!)\\r\\n- Fixed PBA 10 event localization keys being incorrect\\r\\n- Fixed Trolley Problem event assuming card types, leading to cards ending up in weird locations",
+        "publishedAt": "2025-11-22T07:01:34Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.8b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.7b",
+        "name": "v1.0.7b",
+        "body": "- Child joker spawning no longer immediately calls child's add_to_deck function\\r\\n- Inspiration tarot and Aura of Power now have the `hidden` property\\r\\n- Imaginary Cards no longer show Use buttons\\r\\n- Fix Polymorph and Grand Diagonal causing crashes\\r\\n- Social Credit now only runs its main add_to_deck functions when initially acquired\\r\\n- Social Credit sprites are now more consistent (would sometimes change when placed outside of main Joker area)\\r\\n- The Nursery's Mother card is now unselected on successful breed (prevents cheese that allowed retrieving a pregnant mother)\\r\\n- Various minor enhancements\\r\\n\\r\\n### v1.0.7b Changes\\r\\n- Fix child card not getting emplaced\\r\\n- Ultra packs of vanilla card types now use the default card creating method (makes them compatible with booster vouchers)",
+        "publishedAt": "2025-11-04T02:36:08Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.7b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.6",
+        "name": "v1.0.6",
+        "body": "- Rewrote some localization entries for clarity, neatness, and to fix some typos\\r\\n- Undying is now incompatible with Eternal, Redirect, C4, and Fragile\\r\\n- Fixed Precognition never giving mult\\r\\n- Made copying children effects less janky\\r\\n- Fixed some destruction triggers going off in unintended situations (e.g. Fragile going off when swapping shop tabs)\\r\\n- Joker Stencil now properly detects Child jokers with Stencil as an effect\\r\\n- Fixed Undying's respawn potentially causing infinite loops during destroy events\\r\\n- Invisible Joker is now unbreedable due to too many issues with it",
+        "publishedAt": "2025-10-27T04:19:35Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.6",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.5",
+        "name": "1.0.5",
+        "body": "- Fix Postlatro ad being too loud and crashing the game sometimes\\r\\n- Fix Delivery juicing when joker slots are full doing it too hard",
+        "publishedAt": "2025-10-23T06:43:40Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/1.0.5",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "1.0.4",
+        "name": "1.0.4",
+        "body": "- JokerDisplay Compatibility\\r\\n- Talisman compatibility\\r\\n- Added alerts for deliveries & nursery\\r\\n- Some UI Adjustments to make it easier to see\\r\\n- Fixed a few mod compatibilities\\r\\n- Video should play on all desktop platform (i could not figure out how to make audio play on macos tho)\\r\\n- Wee Joker is now unbreedable (thank god)\\r\\n- A handful of balancing changes\\r\\n- Other smaller changes\\r\\n\\r\\n**Full Changelog**: https://github.com/the-Astra/Hot-Potato/compare/v1.0.3...1.0.4",
+        "publishedAt": "2025-10-23T04:27:54Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/1.0.4",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4-pre4",
+        "name": "v1.0.4-pre4",
+        "body": "- Credits now stored in profile as number to prevent bricking profile\\r\\n- Fixed blunder, greedy and damaged stickers\\r\\n- Wee joker is a minor, keep him alone",
+        "publishedAt": "2025-10-21T21:13:32Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.4-pre4",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4-pre3",
+        "name": "v1.0.4-pre3",
+        "body": "- Attempt to fix compat with other mods that don't check `nil` on `should_apply`",
+        "publishedAt": "2025-10-21T05:59:07Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.4-pre3",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4-pre2",
+        "name": "v1.0.4-pre2",
+        "body": "- Adjusted some UI colours to make some buttons more clear\\r\\n- Adjusted some help text to clarify joker selection\\r\\n- Joker Delivery now juices and notifies when delivery is about to be delivered\\r\\n- potentially fix a crash when center is `nil` for some reason",
+        "publishedAt": "2025-10-21T05:39:55Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.4-pre2",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4-pre1",
+        "name": "v1.0.4-pre1",
+        "body": "- Talisman compatibility\\r\\n- Bug fixes\\r\\n- Balance changes\\r\\n- JokerDisplay compatibility",
+        "publishedAt": "2025-10-21T02:10:34Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.4-pre1",
+        "assets": [],
+        "prerelease": true,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.3-qf1",
+        "name": "v1.0.3",
+        "body": "### Multiplayer compatibility, Balance changes and Bug fixes\\r\\n- Mod now works with Multiplayer\\r\\n- Nerfed credits conversion on transaction events\\r\\n- Nerfed Social Credit\\r\\n- Nerfed Nuke sticker",
+        "publishedAt": "2025-10-19T13:55:37Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.3-qf1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.2-iforgottoupdatetheversion",
+        "name": "v1.0.2",
+        "body": "# This update employs various bugfixes, balance changes, and enhancements\\r\\n## Enhancements\\r\\n- Reworded \\\"negative stickers\\\" to \\\"bad stickers\\\"\\r\\n- Death Note immediately changes rank on trigger\\r\\n- Unstable Deck no longer affects Blue, Red, and Yellow Deck Joker card requirements\\r\\n- Jokers can now be designated as unbreedable by defining `hpot_unbreedable` in their configs\\r\\n- Nursery breed button now supports Talisman (this does not necessarily mean the entire mod is safe to use with Talisman yet)\\r\\n- Added a number of nil checks to improve reliability\\r\\n- Added JokerDisplay support\\r\\n- The Video Ad no longer looks terrible\\r\\n- Added a TON of sticker compatibility checks\\r\\n- Added Reforge sound to Cap Modification\\r\\n\\r\\n## Fixes\\r\\n- Fixed Overstock crashing in shop events (Fixes #19)\\r\\n- Black Market, Delivery, and the Wheel no longer offer Jokers with Jokerless modifier\\r\\n- Fix multiple Aura of Power crashes (Fixes #23)\\r\\n- Fix Blueprint triggering with Kitchen Gun\\r\\n- Black Market reroll value is now properly set at run start\\r\\n- Fix a crash caused by Molten Melvin and Chipper Charlie (Fixes #18)\\r\\n- Fixed Ouroboros not eating cards when card limit is over expected value (Fixes #25)\\r\\n- Fix cryptocurrency easing causing crashes from nil values (Fixes #21)\\r\\n- Fixed vanilla jokers not being detected with passives on quantums\\r\\n- Training stickers can no longer be applied at random\\r\\n- Fixed Creditable cards not checking can_buy during Transaction Events\\r\\n- Oops All 6s now properly works as a Child joker effect (Fixes #26)\\r\\n- Fixed Box of Frogs not respecting forced_key\\r\\n- Fixed Yellow Deck Joker not showing any trigger messages\\r\\n- Fixed issues caused by copy_card and quantum jokers (child jokers)\\r\\n- Fixed blueprint incompatibility with Bungaloid\\r\\n- Ban list for Isolated Wizard challenge has been updated\\r\\n\\r\\n## Changes\\r\\n- Remove a sound asset at the request of its creator\\r\\n- Goblin Tinkerer is no longer blueprint compatible\\r\\n- Death Note now also changes rank at end of round\\r\\n- Shitpost ads now appear slightly more frequently\\r\\n- Imaginary Cards now appear less often in the shop\\r\\n- SMODS is now discovered by default",
+        "publishedAt": "2025-10-19T02:56:30Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.2-iforgottoupdatetheversion",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1b",
+        "name": "v1.0.1b",
+        "body": "# This update employs various bugfixes and balance changes\\r\\n- Added a check for nested folders for a clearer crash report\\r\\n- Added a check for outdated SMODS versions\\r\\n- Talismaan is officially a conflict\\r\\n- Capped plinko FPS at 50\\r\\n- Object types that can spawn in Team Packs are now limited (aka decks cannot spawn)\\r\\n- Social Credit reigned in a bit\\r\\n- Aura of Power can no longer copy children\\r\\n- Panic Attack can no longer go below X1\\r\\n- Genghis Khan has been buffed\\r\\n- Use more SMODS.destroy_cards\\r\\n- Tribcoin can no longer go below X1\\r\\n- Fixed Terrible Dragon not counting trained jokers properly\\r\\n- Ouroboros now properly checks for eternals",
+        "publishedAt": "2025-10-17T16:03:04Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.0.1b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.0b",
+        "name": "v1.0.0b",
+        "body": "# AFTER MONTHS OF WORK, HOT POTATO IS FINALLY AVAILABLE!!!\\r\\nA love letter to the Balatro modding community, with nearly 50 individual developers involved. Please enjoy the chaos",
+        "publishedAt": "2025-10-16T21:34:33Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Hot-Potato/releases/tag/v1.1.0b",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-05-03T03:03:20.550Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-05-03T03:03:20.616Z"
+    }
   }
 }
