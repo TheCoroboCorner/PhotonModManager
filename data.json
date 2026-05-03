@@ -5915,7 +5915,7 @@
       "The Potato Patch"
     ],
     "description": "A util library for mods created by the Potato Patch",
-    "favourites": 0,
+    "favourites": 1,
     "allow_redistribution": true,
     "badge_colour": "#f5e27a",
     "dependencies": [
