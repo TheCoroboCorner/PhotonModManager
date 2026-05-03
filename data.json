@@ -6229,5 +6229,30 @@
       "views": 3,
       "lastViewed": "2026-05-03T07:46:54.218Z"
     }
+  },
+  "0-ERROR@notmario": {
+    "id": "zeroError",
+    "name": "0 ERROR",
+    "author": [
+      "missingnumber",
+      "notmario"
+    ],
+    "description": "[todo]",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "4F6367",
+    "published_at": "2026-05-03T12:34:02.532Z",
+    "type": "Mod",
+    "tags": [
+      "SFX",
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Modifiers",
+      "Mechanics"
+    ],
+    "externalWiki": null,
+    "updated_at": "2026-03-29T20:48:03Z",
+    "readme": ""
   }
 }
