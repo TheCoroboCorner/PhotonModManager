@@ -5974,6 +5974,33 @@
     ],
     "externalWiki": null,
     "updated_at": "2026-05-03T02:44:29Z",
-    "readme": "<img width=\"1445\" height=\"812\" alt=\"wormhole thumbnail\" src=\"https://github.com/user-attachments/assets/943ff2e0-384f-4b13-b217-b4dd8dfa909d\" />\n\n# PRESENTING WORMHOLE\nA space-themed Balatro mod created during MurphyOBV's Joker Jam event! 25 Teams and over 120 Developers came together to create the final product of this mod, making this the largest Balatro collab mod ever! We hope you enjoy this experience\n\n## Wormhole depends on PotatoPatchUtils, which you can download here: https://github.com/Balatro-Potato-Patch/Potato-Patch-Utils\n"
+    "readme": "<img width=\"1445\" height=\"812\" alt=\"wormhole thumbnail\" src=\"https://github.com/user-attachments/assets/943ff2e0-384f-4b13-b217-b4dd8dfa909d\" />\n\n# PRESENTING WORMHOLE\nA space-themed Balatro mod created during MurphyOBV's Joker Jam event! 25 Teams and over 120 Developers came together to create the final product of this mod, making this the largest Balatro collab mod ever! We hope you enjoy this experience\n\n## Wormhole depends on PotatoPatchUtils, which you can download here: https://github.com/Balatro-Potato-Patch/Potato-Patch-Utils\n",
+    "versionHistory": [
+      {
+        "tag": "v1.0.2",
+        "name": "v1.0.2",
+        "body": "### Fixes\\r\\n- Cleaned up redundant code\\r\\n- Fix Felicette (Team Meow) not scoring\\r\\n- Fix Meteor Seal triggering while in hand\\r\\n- Fixed Paradox Earth description\\r\\n- Fixed a crash caused by Astronaut Food \\r\\n- Fixed a crash caused by Schrodinger's Box when consumable slots are full\\r\\n- Space Pod shaders no longer override Eigengrau Emptiness' background\\r\\n- Fixed negative modules causing crashes\\r\\n- Fixed Urination Station's meters rendering over Spacetarts and while the card was flipped\\r\\n- Fixed some UB cards not being usable in packs\\r\\n- Fixed Eigengrau Emptiness' shader not reappearing on continued runs\\r\\n\\r\\n## Wormhole depends on PotatoPatchUtils, which you can download here: https://github.com/Balatro-Potato-Patch/Potato-Patch-Utils",
+        "publishedAt": "2026-05-03T00:57:10Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Wormhole/releases/tag/v1.0.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1",
+        "name": "v1.0.1",
+        "body": "Initial release, enjoy exploring the WORMHOLE!!!!\\r\\n\\r\\n## Wormhole depends on PotatoPatchUtils, which you can download here: https://github.com/Balatro-Potato-Patch/Potato-Patch-Utils",
+        "publishedAt": "2026-05-02T16:16:04Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Wormhole/releases/tag/v1.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-05-03T03:05:35.097Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-05-03T03:05:35.169Z"
+    }
   }
 }
