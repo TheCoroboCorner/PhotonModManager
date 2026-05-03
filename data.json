@@ -5946,5 +5946,34 @@
       "views": 1,
       "lastViewed": "2026-05-03T03:04:20.941Z"
     }
+  },
+  "Wormhole@Balatro-Potato-Patch": {
+    "id": "Wormhole",
+    "name": "Wormhole",
+    "author": [
+      "The Potato Patch"
+    ],
+    "description": "The mod created during MurphyObv's Sealab Joker Jam! ",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "011638",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-1620a)",
+      "Lovely (>=0.9)",
+      "PotatoPatchUtils (>=1.0.10)"
+    ],
+    "published_at": "2026-05-03T03:05:32.191Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Blinds",
+      "Modifiers",
+      "Mechanics"
+    ],
+    "externalWiki": null,
+    "updated_at": "2026-05-03T02:44:29Z",
+    "readme": "<img width=\"1445\" height=\"812\" alt=\"wormhole thumbnail\" src=\"https://github.com/user-attachments/assets/943ff2e0-384f-4b13-b217-b4dd8dfa909d\" />\n\n# PRESENTING WORMHOLE\nA space-themed Balatro mod created during MurphyOBV's Joker Jam event! 25 Teams and over 120 Developers came together to create the final product of this mod, making this the largest Balatro collab mod ever! We hope you enjoy this experience\n\n## Wormhole depends on PotatoPatchUtils, which you can download here: https://github.com/Balatro-Potato-Patch/Potato-Patch-Utils\n"
   }
 }
