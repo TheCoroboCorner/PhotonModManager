@@ -1,0 +1,1226 @@
+{
+  "locMap": {
+    "b_stocking_animate_areas": {
+      "name": "'Card Area Animation Behavior'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_stocking_custom_menu": {
+      "name": "\"Enable Custom Menu\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_stocking_disable_animations": {
+      "name": "\"Disable Animations\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_stocking_jumpscare": {
+      "name": "'Enable Jumpscare'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_stocking_switch_on_trigger": {
+      "name": "\"Switch Card Areas on Trigger\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_stocking_present": {
+      "name": "'Present'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "k_stocking_wrapped_present": {
+      "name": "'Wrapped Present'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_stocking_present_cards": {
+      "name": "'Presents'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "b_stocking_wrapped_present_cards": {
+      "name": "'Presents'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_to_jokers": {
+      "name": "'Show Jokers'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_to_presents": {
+      "name": "'Show Presents'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_present_count": {
+      "name": "'Presents: '",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_under_the_tree": {
+      "name": "'Under the Tree'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "PotatoPatchUtils_first_time_disable": {
+      "name": "\"Do not show again\"",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_received": {
+      "name": "' received!'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_before": {
+      "name": "'before'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_after": {
+      "name": "'after'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_usable": {
+      "name": "'usable'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_gift_tag": {
+      "name": "'From '",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_art_credit": {
+      "name": "'Art by '",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_code_credit": {
+      "name": "'Code by '",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_and_spacer": {
+      "name": "' and '",
+      "text": [],
+      "type": "dictionary"
+    },
+    "stocking_stuffer_comma_spacer": {
+      "name": "'",
+      "text": [],
+      "type": "dictionary"
+    },
+    "developer": {
+      "name": "",
+      "text": [
+        "{s:0.5}From {V:1,s:0.5}#1#"
+      ],
+      "type": "stocking_wrapped_present"
+    },
+    "default_text": {
+      "name": "Placeholder",
+      "text": [
+        "{C:red}#1#",
+        "Use {C:red}key{} above in",
+        "loc file :)"
+      ],
+      "type": "stocking_present"
+    },
+    "theAstra_stocking_present": {
+      "name": "{V:1}Gift!",
+      "text": [
+        "  {C:inactive}Have you been naughty?  ",
+        "{C:inactive}Open me to find out!"
+      ],
+      "type": "stocking_wrapped_present"
+    },
+    "undiscovered_stocking_wrapped_present": {
+      "name": "Unopened Present",
+      "text": [
+        "Unwrap this gift in a",
+        "run to find out what it does"
+      ],
+      "type": "Other"
+    },
+    "undiscovered_stocking_present": {
+      "name": "Undiscovered Present",
+      "text": [
+        "Find this Present in a",
+        "run to find out what it does"
+      ],
+      "type": "Other"
+    },
+    "stocking_stuffer_tutorial_text": {
+      "name": "",
+      "text": [
+        "Presents {C:gold}that{} you {C:green}unwrap",
+        "are",
+        "great!"
+      ],
+      "type": "Other"
+    },
+    "stocking_achievement_quip_1": {
+      "name": "",
+      "text": [
+        "{E:1,C:stocking_present}Your jolly journey is just beginning..."
+      ],
+      "type": "Other"
+    },
+    "stocking_achievement_quip_2": {
+      "name": "",
+      "text": [
+        "{E:1,C:stocking_present}It seems you're determined to be especially jolly..."
+      ],
+      "type": "Other"
+    },
+    "stocking_achievement_quip_3": {
+      "name": "",
+      "text": [
+        "{E:1,C:stocking_present}You'll have to be extra nice this year to finish this..."
+      ],
+      "type": "Other"
+    },
+    "stocking_achievement_quip_4": {
+      "name": "",
+      "text": [
+        "{E:1,C:stocking_present}You're so close to the end! Don't give up!'"
+      ],
+      "type": "Other"
+    },
+    "stocking_achievement_quip_5": {
+      "name": "",
+      "text": [
+        "{E:1,C:stocking_present}You've done it! Santa will be asking YOU for help next year..."
+      ],
+      "type": "Other"
+    },
+    "stocking_credit": {
+      "name": "",
+      "text": [
+        "Special thanks to {V:1}#1#{}, {V:2}#2#{} and {V:3}#3#{} for organising.",
+        "Thanks to {V:4}#4#{}, {V:5}#5#{}, {V:6}#6#{}, {V:7}#7#{}, {V:8}#8#{},",
+        "{V:9}#9#{}, {V:10}#10#{} and {V:11}#11#{} for playtesting."
+      ],
+      "type": "Other"
+    },
+    "stocking": {
+      "name": "Stocking Stuffer",
+      "text": [
+        "The {C:purple}Potato Patch{} has been busy and generous for the {C:green}Festive Season{}!",
+        "Under the {C:green}Christmas Tree{} lay a variety of {C:stocking_present}Presents{},",
+        "lovingly prepared and 'wrapped' by {C:attention}#4#{} community members!",
+        " ",
+        "With gifts such as {C:purple}#1#{}, {C:gold}#2#{}",
+        "and {C:red}#3#{}, there's a gift fit for everyone!",
+        "So head on down to the {C:green}Christmas Tree{} and get {C:stocking_present}unwrapping{}!"
+      ],
+      "type": "Mod"
+    }
+  },
+  "atlases": {
+    "modicon": {
+      "path": "modicon.png",
+      "px": 34,
+      "py": 34,
+      "localPath": "/wiki-data/Stocking-Stuffer@Balatro-Potato-Patch/v1.0.3/modicon.png",
+      "resolvedGitHubPath": "assets/1x/modicon.png"
+    }
+  },
+  "cards": [
+    {
+      "type": "Sticker",
+      "key": "line",
+      "name": "line",
+      "atlas": "stocking_Breuhh_presents",
+      "pos": {
+        "x": 4,
+        "y": 3
+      },
+      "raw": "key = \"line\",\n    loc_txt =  {name = \"line\",text = {\"easter egg- I mean christmas egg\"}},\n    atlas = \"stocking_Breuhh_presents\",\n    pos = { x = 4, y = 3 },\n    hide_badge = true,\n    default_compat = false,\n    no_collection = true",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "abadeus",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"abadeus\",\n                            guaranteed = true",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scaling",
+      "key": "a_xchips",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "message = localize { type = 'variable', key = 'a_xchips', vars = { card.ability.extra.xchips } },\n                    colour = G.C.CHIPS",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "xCheerBack",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"xCheerBack\",\n    colours = {G.C.RED,G.C.GREEN,G.C.GOLD,HEX(\"FFFBF7\")},\n    cycle = 8,\n    interpolation = \"linear\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "xCheerFront",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"xCheerFront\",\n    colours = {G.C.WHITE,G.C.WHITE,HEX(\"FFFBF7\"),G.C.UI.TEXT_DARK},\n    cycle = 8,\n    interpolation = \"linear\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_silksong",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_silksong\",\n    path = \"music_silksong_drip.ogg\",\n    pitch = 1,\n    volume = 0.9,\n    sync = {\n        [\"music1\"] = true\n    },\n    select_music_track = function (self)\n    if not G.screenwipe and G.GAME.drip then\n      return 1.7e308\n    end\n  end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_list1",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_list1\",\n    path = \"music_list1.ogg\",\n    pitch = 1,\n    volume = 0.8,\n    select_music_track = function (self)\n        if not G.screenwipe and G.GAME.play_list and G.GAME.play_track == 1 then\n            return 1.7e308\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_list2",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_list2\",\n    path = \"music_list2.ogg\",\n    pitch = 1,\n    volume = 0.8,\n    select_music_track = function (self)\n        if not G.screenwipe and G.GAME.play_list and G.GAME.play_track == 2 then\n            return 1.7e308\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_list3",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_list3\",\n    path = \"music_list3.ogg\",\n    pitch = 1,\n    volume = 0.8,\n    sync = {\n        [\"music_list1\"] = true,\n        [\"music_list2\"] = true,\n    },\n    select_music_track = function (self)\n        if not G.screenwipe and G.GAME.play_list and G.GAME.play_track == 3 then\n            return 1.7e308\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "proto_handbag",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"proto_handbag\",\n    path = 'proto_handbag.png',\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "qr_code",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"qr_code\",\n    path = \"qr_code.png\",\n    px = 300,\n    py = 300",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "Aikoyori_stocking_get_consumable",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "set = \"Other\", key = \"Aikoyori_stocking_get_consumable\", \n        vars = {\n            localize(\"k_\"..(string.lower(StockingStuffer.aikoyori.lower_tier_consumable_map[_c.set]) or \"\"))\n        }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scoring_Parameter",
+      "key": "jolly_glop",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'jolly_glop',\n    default_value = 1,\n    colour = G.C.GREEN,\n    calculation_keys = { 'jolly_glop' },\n    calc_effect = function(self, effect, scored_card, key, amount, from_edition)\n        if key == 'jolly_glop' and amount then\n            if effect.card and effect.card ~= scored_card then juice_card(effect.card) end\n            self:modify(amount)\n            card_eval_status_text(scored_card, 'extra', nil, percent, nil,\n                { message = localize { type = 'variable', key = to_big(amount) > to_big(0) and 'a_chips' or 'a_chips_minus', vars = { amount } }, colour =\n                self.colour })\n            return true\n        end\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Scoring_Calculation",
+      "key": "jolly_glop",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'jolly_glop',\n    parameters = { 'mult', 'chips', 'stocking_jolly_glop' },\n    func = function(self, chips, mult, flames)\n        local jolly_glop = SMODS.get_scoring_parameter('stocking_jolly_glop', flames)\n        return chips * mult * jolly_glop\n    end,\n    -- borrowed ui from potassium remake because deadline battle advanced not enough time to learn how to ui\n    replace_ui = function(self) --[[@overload fun(self): table]]\n        local scale = 0.3\n        return\n        {\n            n = G.UIT.R,\n            config = { align = \"cm\", minh = 1, padding = 0.1 },\n            nodes = {\n                {\n                    n = G.UIT.C,\n                    config = { align = 'cm', id = 'hand_chips_container' },\n                    nodes = {\n                        SMODS.GUI.score_container({\n                            type = 'chips',\n                            text = 'chip_text',\n                            align = 'cr',\n                            w = 1.3,\n                            h = 0.7,\n                            scale = scale\n                        })\n                    }\n                },\n                SMODS.GUI.operator(scale * 0.75),\n                {\n                    n = G.UIT.C,\n                    config = { align = 'cm', id = 'hand_mult_container' },\n                    nodes = {\n                        SMODS.GUI.score_container({\n                            type = 'mult',\n                            align = 'cm',\n                            w = 1.3,\n                            h = 0.7,\n                            scale = scale\n                        })\n                    }\n                },\n                SMODS.GUI.operator(scale * 0.75),\n                {\n                    n = G.UIT.C,\n                    config = { align = 'cm', id = 'hand_stocking_jolly_glop_container' },\n                    nodes = {\n                        SMODS.GUI.score_container({\n                            type = 'stocking_jolly_glop',\n                            align = 'cl',\n                            w = 1.3,\n                            h = 0.7,\n                            scale = scale\n                        })\n                    }\n                },\n            }\n        }\n    end",
+      "config": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "ability": {
+        "align": "cm",
+        "minh": 1,
+        "padding": 0.1
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "ennway_rotoscoped_dancing_robot",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "atlas_table = 'ANIMATION_ATLAS',\n    key = 'ennway_rotoscoped_dancing_robot',\n    path = 'ennway_rotoscoped_dancing_robot.png',\n    px = 49,\n    py = 51,\n    frames = 22,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "ennway_robot_sfx",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ennway_robot_sfx',\n    path = 'ennway_robot_sfx.ogg',",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "ennway_face_charge",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ennway_face_charge',\n    path = 'ennway_face_charge.ogg',",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "ennway_face_unleash",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ennway_face_unleash',\n    path = 'ennway_face_unleash.ogg',",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "wrapped",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'wrapped',\n    path = display_name .. '/wrapped.png',\n    px = 61,\n    py = 62",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "decatone",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'decatone',\n    path = display_name .. '/deca.png',\n    px = 59,\n    py = 49",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "toybox",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'toybox',\n    path = display_name .. '/toybox.png',\n    px = 51,\n    py = 59",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "friend",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'friend',\n    path = display_name .. '/friend.png',\n    px = 55,\n    py = 57",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "chest",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'chest',\n    path = display_name .. '/chest.png',\n    px = 53,\n    py = 57",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "fcukbox",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'fcukbox',\n    path = display_name .. '/fcukbox.png',\n    px = 22,\n    py = 22",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "gappie_hearts",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'gappie_hearts',\n    path = 'gappie_hearts.png',\n    px = 31, py = 31",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "gappie_powers",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'gappie_powers',\n    path = 'gappie_power_ups.png',\n    px = 38, py = 38",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "gappie_stocking_buttons",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'gappie_stocking_buttons',\n\torder = -30,\n\tfunc = function(self)\n\t\t--Draw any buttons\n\t\tif self.children.gappie_power_toss and self.highlighted then self.children.gappie_power_toss:draw() end\n        if self.children.gappie_power_zap and self.highlighted then self.children.gappie_power_zap:draw() end\n        if self.children.gappie_power_snow and self.highlighted then self.children.gappie_power_snow:draw() end\n        if self.children.gappie_fume_ice and self.highlighted then self.children.gappie_fume_ice:draw() end\n        if self.children.gappie_fume_gloom and self.highlighted then self.children.gappie_fume_gloom:draw() end\n\tend,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Font",
+      "key": "emoji",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"emoji\",\n    path = \"NotoEmoji-Bold.ttf\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "gl_ditto_mist",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'gl_ditto_mist',\n    path = 'gl_ditto_mist.png',\n    px = 80,\n    py = 80",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "ditto",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'ditto',\n        order = -25,\n        func = function(card, layer)\n            if (card.ditto or card.config.center.key == \"[REDACTED]Autumn_stocking_ditto\") and (card.config.center.discovered or card.bypass_discovery_center) then\n                card.children.particles = card.children.particles or Particles(1, 1, 0, 0, {\n                    timer = 0.1,\n                    scale = 0.075,\n                    initialize = false,\n                    speed = 0.25,\n                    padding = 1,\n                    attach = card,\n                    fill = true,\n                    colours = { G.C.PURPLE },\n                })\n                local _xOffset = (71 - 80) / 2 / 30\n                local _yOffset = (95 - 80) / 2 / 30\n                local scale_mod = 0.02 * math.sin(1.8 * G.TIMERS.REAL)\n                local rotate_mod = 0\n                StockingStuffer.GlVars.ditto_sprite = StockingStuffer.GlVars.ditto_sprite or\n                Sprite(card.T.x + 0, card.T.y + 0, 80, 80, G.ASSET_ATLAS[\"stocking_gl_ditto_mist\"], { x = 0, y = 0 })\n                StockingStuffer.GlVars.ditto_sprite.role.draw_major = card\n                StockingStuffer.GlVars.ditto_sprite:draw_shader('dissolve', 0, nil, nil, card.children.center, scale_mod,\n                    rotate_mod, _xOffset, 0.1 + 0.03 + _yOffset, nil, 0.6)\n                StockingStuffer.GlVars.ditto_sprite:draw_shader('dissolve', nil, nil, nil, card.children.center,\n                    scale_mod, rotate_mod, _xOffset, _yOffset)\n            end\n        end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "gote_presents",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'gote_presents',\n    path = 'gote_presents.png',\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "haya_snap_",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"haya_snap_\" .. type,\n\t\tpath = \"haya/power_\" .. type .. \".ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "haya_snap_revolver_",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"haya_snap_revolver_\" .. type,\n\t\tpath = \"haya/revolver\" .. (type:gsub(\"^%l\", string.upper)) .. \".ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "haya_snap_revolver",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"haya_snap_revolver\",\n\tpath = \"haya/revolver.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "stocking_",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'stocking_'..display_name..'_presents',\n    path = display_name..'_presents.png',\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "stocking_",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'stocking_'..display_name..'_presents_gf',\n    path = display_name..'_presents_gf.png',\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "MissingNumber_gradient",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"MissingNumber_gradient\",\n    colours = {\n        HEX(\"FC5959\"),\n        HEX(\"FCBB59\"),\n        HEX(\"95FC59\"),\n        HEX(\"59F1FC\"),\n        HEX(\"5969FC\"),\n        HEX(\"BB59FC\"),\n    },\n    cycle = 10,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "PokerHandPart",
+      "key": "plushie_all",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'plushie_all',\n    func = function(hand) if #hand > 0 then return {hand} end end,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Blind",
+      "key": "the_paul",
+      "name": "The Paul",
+      "atlas": "notmario_thepaul",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "key = \"the_paul\",\n    name = \"The Paul\",\n\n    atlas = \"notmario_thepaul\",\n    pos = {x=0,y=0},\n\n    discovered = true,\n    no_collection = true,\n\n    dollars = 8,\n    mult = 6,\n\n    boss_colour = HEX('ac3232'),\n\n    boss = {\n      min=9, max=10\n    },\n\n    disable = function(self)\n        G.GAME.blind.chips = G.GAME.blind.chips/2.5\n        G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)\n    end,\n\n    in_pool = function(self) \n        return false\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "presentskilled",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"presentskilled\",\n\tpath = \"presentkilled.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "playerskilled",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"playerskilled\",\n\tpath = \"playerkilled.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Font",
+      "key": "DETERMINATION",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"DETERMINATION\",\n\tpath = \"determination.ttf\",\n\trender_scale = 200,\n\tTEXT_HEIGHT_SCALE = 0.75,\n\tTEXT_OFFSET = { x = 10, y = -17 },\n\tFONTSCALE = 0.075,\n\tsquish = 1,\n\tDESCSCALE = 1,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "blood",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"blood\",\n\tcolours = {\n\t\tHEX(\"d2ffe0\"),\n\t\tHEX(\"d3faff\"),\n\t\tHEX(\"d9ccff\"),\n\t\tHEX(\"ffc4ee\"),\n\t\tHEX(\"ffdbbe\"),\n\t\tHEX(\"f5fdb7\"),\n\t\tHEX(\"b3fec3\"),\n\t\tHEX(\"b8f5ff\"),\n\t\tHEX(\"b9b9fe\"),\n\t\tHEX(\"fbbeff\"),\n\t},\n\tcycle = 2,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "camcorder_beep",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"camcorder_beep\", path = \"camcorder_beep.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "camcorder_targeted",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"camcorder_targeted\",\n\torder = 25,\n\tfunc = function(self)\n        if not G.stocking_camcorder_sprite then return nil end\n        if not self.camcorder_targeted then return nil end\n        G.stocking_camcorder_sprite.role.draw_major = self\n        G.stocking_camcorder_sprite:set_sprite_pos({x=(math.fmod(camcorder_timer, 2.0) > 1.0 and not StockingStuffer.config.disable_animations) and 1 or 0, y=0})\n        G.stocking_camcorder_sprite:draw_shader(shader, nil, nil, nil, self.children.center)\n    end,\n\tconditions = { vortex = false, facing = \"front\" },",
+      "config": {
+        "vortex": false,
+        "facing": "front"
+      },
+      "ability": {
+        "vortex": false,
+        "facing": "front"
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "splatpresent",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"splatpresent\",\n\tpath = \"splatpresent2.ogg\",",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "realeddyplayz_presents",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'realeddyplayz_presents',\n    path = 'realeddyplayz_presents.png',\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "realeddyplayz_christmas_card",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'realeddyplayz_christmas_card',\n    path = 'realeddyplayz_christmas_card.png',\n    px = 77,\n    py = 84",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_alibi_christmas",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"music_alibi_christmas\",\n    path = \"music_alibi_christmas.ogg\",\n\n    select_music_track = function(self)\n        local _, found_card = next(SMODS.find_card(\"Edward Robinson_stocking_christmas_card\"));\n        if found_card and found_card.ability.extra.state == 1 then\n            found_card.children.center:set_sprite_pos({x = found_card.ability.extra.state == -1 and 0 or 1, y = 0})\n            \n            return 100;\n        end\n\n        return false;\n    end,\n\n    pitch = 1.0,\n    volume = 1.0",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "ruby_gradient",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"ruby_gradient\",\n    colours = {\n        HEX(\"FF0000\"),\n        HEX(\"FF00E8\")\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "redfilter",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"redfilter\",\n    path = \"redfilter.fs\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "redfilter",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'redfilter',\n    order = 21,\n    func = function(self)\n        if self.ability and self.ability.stocking_was_dough then\n            self.children.center:draw_shader('stocking_redfilter', nil, self.ARGS.send_to_shader)\n            if self.children.front then\n                self.children.front:draw_shader('stocking_redfilter', nil, self.ARGS.send_to_shader)\n            end\n        end\n    end,\n    conditions = {vortex = false, facing = 'front'}",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Shader",
+      "key": "clay",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'clay', path = 'soulware-clay.fs'",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "DrawStep",
+      "key": "evil_clay_thing",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'evil_clay_thing',\n    order = 25, -- depends on when you want it to apply (layering thing)\n    func = function(self, layer)\n        if self.ability and self.ability.MGB_clay_spawned then\n            self.children.center:draw_shader('stocking_clay', nil, self.ARGS.send_to_shader) -- used for anything almost else\n        end\n    end,\n    conditions = { vortex = false, facing = 'front' },",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "duck",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"duck\", path = \"duck.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "kcud",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"kcud\", path = \"kcud.ogg\"",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "ThunderEdgeGradient",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"ThunderEdgeGradient\",\n\tcolours = {\n\t\tHEX(\"89C41B\"),\n\t\tHEX(\"C5CC41\"),\n\t},\n\tcycle = 1.5,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "hurt",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"hurt\",\n-- \tpath = \"snd_hurt1.wav\",\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "graze",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"graze\",\n-- \tpath = \"snd_graze.wav\",\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "anything",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"anything\",\n-- \tpath = \"snd_joker_anything.wav\",\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "byebye",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"byebye\",\n-- \tpath = \"snd_joker_byebye.wav\",\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "metamorphosis",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"metamorphosis\",\n-- \tpath = \"snd_joker_metamorphosis.wav\",\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "oh",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"oh\",\n-- \tpath = \"snd_joker_oh.wav\",\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "chaos",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "-- \tkey = \"chaos\",\n-- \tpath = \"snd_joker_chaos.wav\",\n--",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Seal",
+      "key": "VMan_2002_kittyseal",
+      "name": null,
+      "atlas": "VMan_2002_presents",
+      "pos": {
+        "x": 5,
+        "y": 0
+      },
+      "raw": "developer = display_name,\n\tkey = \"VMan_2002_kittyseal\",\n\tatlas = \"VMan_2002_presents\",\n    config = { extra = {odds = 3} },\n\tpos = {x = 5, y = 0},\n\tvman_ch_icon = 0, --maya\n\tbadge_colour = HEX(\"FF3DEE\"),\n\tno_collection = true,\n    loc_vars = function(self, info_queue, card)\n\t\tGt_kittyseal_card = card\n        return {\n            vars = { SMODS.get_probability_vars(card, 1, card.ability.seal.extra.odds, 'stocking_VMan_2002_kittyseal') },\n        }\n    end,\n\tin_pool = returnFalse,\n\tcalculate = function(self, card, context)\n\t\t--[[if context.poker_hands then\n\t\t\tGt_kittyseal_context = context\n\t\t\tif context.scoring_name then\n\t\t\t\tprint(context.poker_hands[context.scoring_name])\n\t\t\telse\n\t\t\t\tprint(context.poker_hands)\n\t\t\tend\n\t\tend]]\n\t\tif\n\t\t\tcontext.before\n\t\t\tand context.cardarea == G.play\n\t\t\tand card.config.center.set == \"Enhanced\"\n\t\t\tand SMODS.pseudorandom_probability(card, pseudoseed('stocking_VMan_2002_kittyseal'), 1, card.ability.seal.extra.odds, \"stocking_VMan_2002_kittyseal\")\n\t\tthen\n\t\t\tif scoredCards(context, card) then\n\t\t\t\tlocal candidates = {}\n\t\t\t\t--print(\"Kittyseal calculate\")\n\t\t\t\tfor k,v in pairs(context.poker_hands[context.scoring_name][1]) do\n\t\t\t\t\t--print(\"See card\")\n\t\t\t\t\tif v.config.center.set ~= \"Enhanced\" then\n\t\t\t\t\t\t--print(\"Add candidate\")\n\t\t\t\t\t\tcandidates[#candidates + 1] = v\n\t\t\t\t\tend\n\t\t\t\tend\n\t\t\t\tif #candidates == 0 then return --[[ print(\"Kitty seal no candidates\") ]] end\n\t\t\t\t--print(\"Kitty seal success\")\n\t\t\t\tlocal target = candidates[math.random(#candidates)]\n\t\t\t\ttarget:set_ability(G.P_CENTERS[card.config.center.key], nil, true)\n\t\t\t\ttarget:juice_up()\n\t\t\t\treturn {\n\t\t\t\t\tmessage = localize(\"vman_2002_kittyseal_enhance\")\n\t\t\t\t}\n\t\t\tend\n\t\t\t--print(\"Didnt find the kittyseal card\")\n\t\tend\n\tend",
+      "config": {
+        "extra": {
+          "odds": 3
+        }
+      },
+      "ability": {
+        "extra": {
+          "odds": 3
+        }
+      },
+      "vars": [
+        1,
+        null,
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "Gradient",
+      "key": "wilson_colour",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"wilson_colour\",\n    cycle = 60,\n    colours = {\n        G.C.GOLD,\n        lighten(G.C.PURPLE, 0.2),\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "modicon",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = \"modicon\",\n    path = \"modicon.png\",\n    px = 34,\n    py = 34,",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "achievements",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'achievements',\n    path = 'achievements.png',\n    px = 66,\n    py = 66",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Consumable",
+      "key": "present",
+      "name": null,
+      "atlas": "stocking_achievements",
+      "pos": {
+        "x": 0,
+        "y": 0
+      },
+      "raw": "required_params = {\n        'key',\n        'developer'\n    },\n    key = 'present',\n    set = 'stocking_wrapped_present',\n    atlas = false,\n    class_prefix = false,\n    discovered = true,\n    pos = { x = 0, y = 0 },\n    inject = function(self)\n        self.dissolve_colours = { StockingStuffer.Developers[self.developer].colour,\n            darken(StockingStuffer.Developers[self.developer].colour, 0.5), lighten(\n            StockingStuffer.Developers[self.developer].colour, 0.5),\n            darken(G.C.RED, 0.2), G.C.GREEN\n        }\n        SMODS.Consumable.inject(self)\n        table.remove(G.P_CENTER_POOLS.Consumeables, #G.P_CENTER_POOLS.Consumeables)\n        local dev_name = StockingStuffer.Developers[self.developer].loc and\n            localize(StockingStuffer.Developers[self.developer].loc) or StockingStuffer.Developers[self.developer].name\n        SMODS.Achievement({\n            key = 'stocking_open_' .. self.developer,\n            loc_txt = {\n                name = dev_name .. '\\'s Present',\n                description = {\n                    'Open a present',\n                    'from ' .. dev_name\n                }\n            },\n            atlas = 'stocking_achievements',\n            hidden_name = false,\n            bypass_all_unlocked = true,\n            order = achievement_inc,\n            developer = self.developer,\n            unlock_condition = function(self, args)\n                if args.present_opened and args.developer == self.developer then return true end\n            end,\n            mod = StockingStuffer\n        })\n        achievement_inc = achievement_inc + 1\n        SMODS.Achievement({\n            key = 'stocking_collect_' .. self.developer,\n            loc_txt = {\n                name = dev_name .. '\\'s Collection',\n                description = {\n                    'Collect all of',\n                    dev_name .. '\\'s presents'\n                }\n            },\n            atlas = 'stocking_achievements',\n            loc_vars = function()\n                print('test')\n            end,\n            hidden_name = false,\n            bypass_all_unlocked = true,\n            order = achievement_inc,\n            developer = self.developer,\n            unlock_condition = function(self, args)\n                if args.present_opened and args.developer == self.developer then\n                    G.PROFILES[G.SETTINGS.profile].Stocking_Collected_Tracker = G.PROFILES[G.SETTINGS.profile]\n                        .Stocking_Collected_Tracker or {}\n                    G.PROFILES[G.SETTINGS.profile].Stocking_Collected_Tracker[self.developer] = G.PROFILES\n                        [G.SETTINGS.profile].Stocking_Collected_Tracker[self.developer] or {}\n                    G.PROFILES[G.SETTINGS.profile].Stocking_Collected_Tracker[self.developer][args.current_gift] = true\n\n                    local all_collected = true\n                    for _, present in ipairs(G.P_CENTER_POOLS.stocking_present) do\n                        if present.developer == self.developer and not present.no_collection then\n                            if not G.PROFILES[G.SETTINGS.profile].Stocking_Collected_Tracker[self.developer][present.key] then\n                                all_collected = false\n                                break\n                            end\n                        end\n                    end\n                    return all_collected\n                end\n            end,\n            mod = StockingStuffer\n        })\n        achievement_inc = achievement_inc + 1\n    end,\n    pre_inject_class = function(self, func)\n        for _, obj in pairs(self.obj_table) do\n            if obj.set == 'stocking_wrapped_present' then\n                obj.atlas = obj.atlas or 'stocking_' .. StockingStuffer.Developers[obj.developer].name .. '_presents'\n            end\n        end\n    end,\n    loc_vars = function(self, info_queue, card)\n        return { vars = { colours = { StockingStuffer.Developers[self.developer].colour } } }\n    end,\n    process_loc_text = function(self)\n        SMODS.process_loc_text(G.localization.descriptions[self.set], self.key,\n            G.localization.descriptions.stocking_wrapped_present[self.key] or\n            self.loc_txt or\n            G.localization.descriptions.stocking_wrapped_present.default_text)\n    end,\n    can_use = function(self, card)\n        return true\n    end,\n    use = function(self, card, area, copier)\n        local gift = nil\n        card.dissolve_colours = self.dissolve_colours\n        G.E_MANAGER:add_event(Event({\n            trigger = 'immediate',\n            blocking = true,\n            func = function()\n                card.children.particles = Particles(1, 1, 0, 0, {\n                    timer = 0.01,\n                    scale = 0.2,\n                    initialize = true,\n                    speed = 3,\n                    padding = 1,\n                    attach = card,\n                    fill = true,\n                    colours = card.dissolve_colours,\n                })\n                card.children.particles.fade_alpha = 1\n                card.children.particles:fade(1, 0)\n                local eval = function(target) return card.children.particles end\n                juice_card_until(card, eval, true)\n                return true\n            end\n        }))\n        G.E_MANAGER:add_event(Event({\n            trigger = 'after',\n            delay = 2,\n            func = function()\n                G.gift.T.y = card.T.y\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'after',\n                    delay = 0.2,\n                    func = function()\n                        local pool = get_current_pool('stocking_present')\n                        local key = pseudorandom_element(pool, 'stocking_present_open',\n                            {\n                                in_pool = function(v, args)\n                                    return G.P_CENTERS[v] and\n                                        G.P_CENTERS[v].developer == self.developer\n                                end\n                            })\n                        discover_card(G.P_CENTERS[key])\n                        gift = SMODS.add_card({ area = G.gift, set = 'stocking_present', key = key, bypass_discovery_center = true, bypass_discovery_ui = true })\n                        return true\n                    end\n                }))\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'ease',\n                    delay = 1,\n                    ref_table = G.gift.T,\n                    ref_value = 'y',\n                    ease_to = G.play.T.y,\n                    func = (function(t) return t end)\n                }))\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'after',\n                    delay = 0.4,\n                    func = function()\n                        local key = gift.config.center_key\n                        gift.spawning = true\n                        local vars = gift.config.center:loc_vars({}, gift)\n                        gift.spawning = false\n                        key = vars and vars.key or key\n                        attention_text({\n                            scale = 0.8,\n                            rotate = true,\n                            text = localize({\n                                type = 'name_text',\n                                key = key,\n                                set =\n                                'stocking_present'\n                            }) .. localize('stocking_stuffer_received'),\n                            hold = 3,\n                            align = 'cm',\n                            offset = { x = 0, y = -1.7 },\n                            major =\n                                G.play\n                        })\n                        return true\n                    end\n                }))\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'after',\n                    delay = 2.5,\n                    func = function()\n                        card.children.particles:remove()\n                        card.children.particles = nil\n                        return true\n                    end\n                }))\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'immediate',\n                    func = function()\n                        draw_card(G.gift, G.stocking_present, nil, 'up', nil, gift)\n                        return true\n                    end\n                }))\n                G.E_MANAGER:add_event(Event({\n                    trigger = 'after',\n                    delay = 0.4,\n                    func = function()\n                        check_for_unlock({\n                            present_opened = true,\n                            developer = self.developer,\n                            current_gift = gift.config.center_key\n                        })\n                        return true\n                    end\n                }))\n                return true\n            end\n        }))\n    end",
+      "config": {},
+      "ability": {},
+      "vars": [
+        null
+      ],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "stocking_present",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'stocking_present',\n    primary_colour = HEX(\"22A617\"),\n    secondary_colour = HEX(\"22A617\"),\n    collection_rows = { 6, 6, 6 },\n    shop_rate = 0,\n    default = 'Santa Claus_stocking_coal',\n    create_UIBox_your_collection = function(self)\n        local type_buf = {}\n        for _, v in ipairs(SMODS.ConsumableType.visible_buffer) do\n            if not v.no_collection and (not G.ACTIVE_MOD_UI or modsCollectionTally(G.P_CENTER_POOLS[v]).of > 0) then\n                type_buf[#type_buf + 1] =\n                    v\n            end\n        end\n        local pool = {}\n        for _, present in ipairs(G.P_CENTER_POOLS.stocking_wrapped_present) do\n            table.insert(pool, present)\n            local count = 0\n            for _, filler in ipairs(G.P_CENTER_POOLS.stocking_present) do\n                if filler.developer == present.developer and not filler.no_collection then\n                    table.insert(pool, filler)\n                    count = count + 1\n                end\n                if count == 5 then break end\n            end\n            for i = count + 1, 5 do\n                table.insert(pool, G.P_CENTERS.j_stocking_dummy)\n            end\n        end\n        local collection = SMODS.card_collection_UIBox(pool, self.collection_rows,\n            {\n                stocking_id = 'stocking_cycler',\n                back_func = #type_buf > 3 and 'your_collection_consumables' or nil,\n                show_no_collection = true,\n                modify_card = function(card) card.collection_present = true end\n            })\n        local target_node = SMODS.deepfind(collection, \"stocking_cycler\", true)[1]\n        target_node = target_node.objtree[#target_node.objtree - 6]\n\n        table.insert(target_node.nodes,\n            {\n                n = G.UIT.C,\n                config = { align = 'cm' },\n                nodes = {\n                    {\n                        n = G.UIT.R,\n                        config = { colour = G.C.WHITE, padding = 0.05, emboss = 0.05, maxh = 0.6, minh = 0.6, minw = 0.6, r = 0.1, align = 'cm' },\n                        nodes = {\n                            {\n                                n = G.UIT.R,\n                                config = { align = 'cm', colour = HEX(\"22A617\"), button = 'stocking_stuffer_help', hover = true, button_dist = 0, maxh = 0.5, minh = 0.5, minw = 0.5, r = 0.1 },\n                                nodes = {\n                                    { n = G.UIT.T, config = { text = '?', scale = 0.4, colour = G.C.WHITE, shadow = true } }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        )\n\n        return collection\n    end,",
+      "config": {
+        "align": "cm"
+      },
+      "ability": {
+        "align": "cm"
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Booster",
+      "key": "stocking_present_select",
+      "name": null,
+      "atlas": "sack",
+      "pos": null,
+      "raw": "key = 'stocking_present_select',\n    group_key = 'stocking_stuffer_under_the_tree',\n    atlas = 'sack',\n    discovered = true,\n    config = { choose = 1, extra = 3 },\n    display_size = { w = 71 * 2.5, h = 95 * 2.5 },\n    ease_background_colour = function(self)\n        ease_colour(G.C.DYN_UI.MAIN, HEX(\"22A617\"))\n        ease_background_colour { new_colour = G.C.RED, special_colour = HEX(\"22A617\"), contrast = 2 }\n        ease_value(G.HUD.alignment.offset, 'x', -7, nil, nil, nil, 1)\n        ease_value(G.christmas_tree.alignment.offset, 'x', 12, nil, nil, nil, 1)\n    end,\n    draw_hand = false,\n    create_card = function(self, card, i)\n        return create_card('stocking_wrapped_present', G.pack_cards, nil, nil, true, true, nil, \"stocking_present\")\n    end,\n    no_collection = true,\n    in_pool = function() return false end",
+      "config": {
+        "choose": 1,
+        "extra": 3
+      },
+      "ability": {
+        "choose": 1,
+        "extra": 3
+      },
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Sound",
+      "key": "music_under_the_tree",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'music_under_the_tree',\n    path = 'core/ChristmasSpirit.ogg',\n    volume = 0.25,\n    pitch = 1,\n    select_music_track = function(self)\n        if not G.screenwipe and G.STATE == G.STATES.SMODS_BOOSTER_OPENED and SMODS.OPENED_BOOSTER and booster_obj and booster_obj.key == 'p_stocking_present_select' then\n            return 1339\n        end\n    end,\n    sync = {\n        ['music1'] = true,\n        ['music2'] = true,\n        ['music3'] = true,\n        ['music4'] = true,\n        ['music5'] = true\n    }",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "ConsumableType",
+      "key": "stocking_wrapped_present",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'stocking_wrapped_present',\n    primary_colour = HEX(\"22A617\"),\n    secondary_colour = HEX(\"22A617\"),\n    shop_rate = 0,\n    no_collection = true,\n    default = 'Santa Claus_stocking_present',",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Joker",
+      "key": "dummy",
+      "name": null,
+      "atlas": "presents",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "raw": "key = 'dummy',\n    atlas = 'presents',\n    pos = { x = 0, y = 1 },\n    discovered = true,\n    in_pool = function() return false end,\n    no_collection = true",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "presents",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'presents',\n    path = 'presents.png',\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "sack",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'sack',\n    path = 'sack.png',\n    px = 71,\n    py = 95",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "christmas_tree",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'christmas_tree',\n    path = 'tree.png',\n    px = 550,\n    py = 800,\n    atlas_table = 'ANIMATION_ATLAS',\n    frames = 4,\n    fps = 5",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    },
+    {
+      "type": "Atlas",
+      "key": "logo",
+      "name": null,
+      "atlas": null,
+      "pos": null,
+      "raw": "key = 'logo',\n    path = 'logo.png',\n    px = 231,\n    py = 117",
+      "config": {},
+      "ability": {},
+      "vars": [],
+      "infoQueue": []
+    }
+  ],
+  "version": "v1.0.3"
+}
