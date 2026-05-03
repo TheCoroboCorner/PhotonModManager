@@ -6125,6 +6125,109 @@
     ],
     "externalWiki": null,
     "updated_at": "2026-05-03T03:19:06Z",
-    "readme": "# SuperRogue is a mod that allows the player to activate content from different Mods as their run progresses! It is highly configurable and allows you to fine-tune how Mods can and will activate. \n\nThe configuration options are as follows:\n- \"Start round with mod being activated\": Activates a Mod through whatever trigger method chosen when starting a run\n- \"Trigger Type\": When a Mod will be activated; Choice of \"Round\" or \"Ante\"\n- \"Mod Activation Threashold\": How many triggers (as specified from Trigger Type) must pass before the next Mod gets activated\n- \"Mod Activation Mode\": How Mods are activated; Choice of \"Random,\" a random Mod will be activated on trigger, or \"Choose\", open a Mod Pack and choose between two random Mods presented to you\n- \"Blacklist\": As the name suggest, this menu will allow you to blacklist certain mods from being activated. It is suggested to add any non-content mod to this\n- \"Starting Mods\": Mods selected through this menu will be activated from the start automatically\n\nThis was an awesome little project to work on, so hopefully you enjoy this new way of playing Balatro! \nSpecial thanks to MurphyOBV for the inspiration of this mod. If you're reading this I hope you get some fun out of it too!\n"
+    "readme": "# SuperRogue is a mod that allows the player to activate content from different Mods as their run progresses! It is highly configurable and allows you to fine-tune how Mods can and will activate. \n\nThe configuration options are as follows:\n- \"Start round with mod being activated\": Activates a Mod through whatever trigger method chosen when starting a run\n- \"Trigger Type\": When a Mod will be activated; Choice of \"Round\" or \"Ante\"\n- \"Mod Activation Threashold\": How many triggers (as specified from Trigger Type) must pass before the next Mod gets activated\n- \"Mod Activation Mode\": How Mods are activated; Choice of \"Random,\" a random Mod will be activated on trigger, or \"Choose\", open a Mod Pack and choose between two random Mods presented to you\n- \"Blacklist\": As the name suggest, this menu will allow you to blacklist certain mods from being activated. It is suggested to add any non-content mod to this\n- \"Starting Mods\": Mods selected through this menu will be activated from the start automatically\n\nThis was an awesome little project to work on, so hopefully you enjoy this new way of playing Balatro! \nSpecial thanks to MurphyOBV for the inspiration of this mod. If you're reading this I hope you get some fun out of it too!\n",
+    "versionHistory": [
+      {
+        "tag": "v1.2.3b",
+        "name": "v1.2.3b",
+        "body": "# The Manipulation Update\\r\\n\\r\\nThis update brings the ability for players to disable sets of vanilla content at the click of a button! Due to game limitations, if no mods are active, default vanilla objects may spawn instead (i.e. Jimbo or Blank Voucher). Shop Booster spawning is also not affected by these options again because of game limitations.\\r\\n\\r\\nThis update also breaks up the config tab into pages, making it much more user friendly to navigate the many options SuperRogue gives the player to choose from.\\r\\n\\r\\n## 1.2.0b changes\\r\\n- Fixed random starting mods attempting to activate mods when none are valid\\r\\n\\r\\n## 1.2.1 changes\\r\\n- Changed pool fixing methods to be far less likely to be overridden by other mods\\r\\n- Backported upcoming SMODS changes that fixes ante_end incompatibilities from other mods using an ease_ante hook\\r\\n\\r\\n## 1.2.2 changes\\r\\n- Fixed a flaw in vanilla object blacklisting\\r\\n- Boss blinds will revert to the original pool if no blinds pass the active mod check\\r\\n\\r\\n## 1.2.3 changes\\r\\n- Fixed flaw in vanilla booster blacklisting\\r\\n\\r\\n## 1.2.3b changes\\r\\n- Removed ante_end compat layer since it is no longer necessary\\r\\n- Updated SMODS dependency",
+        "publishedAt": "2025-09-23T22:02:24Z",
+        "htmlUrl": "https://github.com/the-Astra/SuperRogue/releases/tag/v1.2.3b",
+        "assets": [
+          {
+            "name": "SuperRogue-main.zip",
+            "size": 27365,
+            "downloadUrl": "https://github.com/the-Astra/SuperRogue/releases/download/v1.2.3b/SuperRogue-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.4",
+        "name": "v1.1.4",
+        "body": "# The Randomness Update\\r\\nAdds a new config option that allows the player to designate a quantity of random starting mods. The limit is decided by the amount of mods SuperRogue can activate, and therefore all SuperRogue-compatible mods can be designated as \\\"Random Starting Mods\\\" if wanted for whatever reason.",
+        "publishedAt": "2025-09-22T16:09:48Z",
+        "htmlUrl": "https://github.com/the-Astra/SuperRogue/releases/tag/v1.1.4",
+        "assets": [
+          {
+            "name": "SuperRogue-main.zip",
+            "size": 26192,
+            "downloadUrl": "https://github.com/the-Astra/SuperRogue/releases/download/v1.1.4/SuperRogue-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.3b",
+        "name": "v1.1.3b",
+        "body": "# The Mutable Update\\r\\nAdds two new config options that allow the player to change the size and choice values of Mod Packs!\\r\\n\\r\\nThis update also fixes an issue where Mod Packs do not open due to SuperRogue not being activated.\\r\\n\\r\\n## Fixes for v1.1.3b\\r\\n- Fixed Mod Info tracking text taking wrong keys\\r\\n- Fixed Prism compat being inexcusably messed up ",
+        "publishedAt": "2025-09-15T21:08:44Z",
+        "htmlUrl": "https://github.com/the-Astra/SuperRogue/releases/tag/v1.1.3b",
+        "assets": [
+          {
+            "name": "SuperRogue-main.zip",
+            "size": 25786,
+            "downloadUrl": "https://github.com/the-Astra/SuperRogue/releases/download/v1.1.3b/SuperRogue-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.2",
+        "name": "v1.1.2",
+        "body": "# The Automation Update\\r\\n\\r\\nA small update that detects if a mod has content. This allows non-content mods to automatically be excluded from the mod selection pool, enabling greater ease of use (i.e. no more needing to blacklist all of your non-content mods in the config)!",
+        "publishedAt": "2025-09-10T00:12:28Z",
+        "htmlUrl": "https://github.com/the-Astra/SuperRogue/releases/tag/v1.1.2",
+        "assets": [
+          {
+            "name": "SuperRogue-main.zip",
+            "size": 25487,
+            "downloadUrl": "https://github.com/the-Astra/SuperRogue/releases/download/v1.1.2/SuperRogue-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.1.1d",
+        "name": "v1.1.1d",
+        "body": "# The Pack Update!\\r\\n\\r\\n- Mod Packs now have their own art! Thank you @SadCubeArt!!\\r\\n- A new config option has been added that allows Mod Packs to appear in the shop! They cost $15 and are as rare as a standard Buffoon Pack\\r\\n\\r\\n### Additional Fixes\\r\\n- SuperRogue now looks for an object's original mod instead of current. This makes it so objects taken over by other mods will still only spawn when their original mod is active (this goes for vanilla Balatro objects taken over by mods as well)\\r\\n- Updated config UI to hopefully not overflow off the screen\\r\\n- Prism and Ortalab no longer cause unintended behavior\\r\\n   - Ortalab Mythos Cards will now also not spawn in their exclusive shop slot when Ortalab is not activated\\r\\n- Random mode threashold value can no longer be immediately changed during a run\\r\\n- Fixed crashes caused by Cryptid patches",
+        "publishedAt": "2025-09-05T04:52:08Z",
+        "htmlUrl": "https://github.com/the-Astra/SuperRogue/releases/tag/v1.1.1d",
+        "assets": [
+          {
+            "name": "SuperRogue-main.zip",
+            "size": 25199,
+            "downloadUrl": "https://github.com/the-Astra/SuperRogue/releases/download/v1.1.1d/SuperRogue-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.4",
+        "name": "v1.0.4",
+        "body": "# First release!\\r\\nSuperRogue is a mod that allows the player to activate content from different Mods as their run progresses! It is highly configurable and allows you to fine-tune how Mods can and will activate. \\r\\n\\r\\nThe configuration options are as follows:\\r\\n- \\\"Start round with mod being activated\\\": Activates a Mod through whatever trigger method chosen when starting a run\\r\\n- \\\"Trigger Type\\\": When a Mod will be activated; Choice of \\\"Round\\\" or \\\"Ante\\\"\\r\\n- \\\"Mod Activation Threashold\\\": How many triggers (as specified from Trigger Type) must pass before the next Mod gets activated\\r\\n- \\\"Mod Activation Mode\\\": How Mods are activated; Choice of \\\"Random,\\\" a random Mod will be activated on trigger, or \\\"Choose\\\", open a Mod Pack and choose between two random Mods presented to you\\r\\n- \\\"Blacklist\\\": As the name suggest, this menu will allow you to blacklist certain mods from being activated. It is suggested to add any non-content mod to this\\r\\n- \\\"Starting Mods\\\": Mods selected through this menu will be activated from the start automatically\\r\\n\\r\\nThis was an awesome little project to work on, so hopefully you enjoy this new way of playing Balatro!",
+        "publishedAt": "2025-08-26T06:15:35Z",
+        "htmlUrl": "https://github.com/the-Astra/SuperRogue/releases/tag/v1.0.4",
+        "assets": [
+          {
+            "name": "SuperRogue-main.zip",
+            "size": 15301,
+            "downloadUrl": "https://github.com/the-Astra/SuperRogue/releases/download/v1.0.4/SuperRogue-main.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-05-03T03:20:02.554Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-05-03T03:20:02.612Z"
+    }
   }
 }
