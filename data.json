@@ -5698,5 +5698,37 @@
       "downloads": 1,
       "lastDownloaded": "2026-04-02T01:27:46.936Z"
     }
+  },
+  "Hot-Potato@Balatro-Potato-Patch": {
+    "id": "HotPotato",
+    "name": "Hot Potato",
+    "author": [
+      "Various Developers"
+    ],
+    "description": "Mod Developer Chaos",
+    "favourites": 0,
+    "allow_redistribution": true,
+    "badge_colour": "#f5e27a",
+    "dependencies": [
+      "Steamodded (>=1.0.0~BETA-1501a)",
+      "Lovely (>=0.9)"
+    ],
+    "conflicts": [
+      "SlayTheJokers"
+    ],
+    "published_at": "2026-05-03T03:03:17.666Z",
+    "type": "Mod",
+    "tags": [
+      "Jokers",
+      "Consumables",
+      "Cards",
+      "Blinds",
+      "Modifiers",
+      "Mechanics",
+      "Misc"
+    ],
+    "externalWiki": null,
+    "updated_at": "2026-05-03T02:45:29Z",
+    "readme": "<p align=\"center\">\n  <img width=\"800\" height=\"345\" alt=\"hotpotlogo\" src=\"https://github.com/user-attachments/assets/fea511c2-9b8d-4df6-a868-1323a1678d54\" />\n</p>\n\n\n# Developer Chaos\nHot Potato is a Balatro Mod Developer Event where teams were created and given a week on their own to contribute to a mod. Cross-team communication was not allowed outside of major bugfixing efforts. The ordeal took 2 months, and this mod is the culmination of this work.\n\n## These are your teams:\n\n### Perkeocoin - Week 1\n- Opal\n- dottykitty\n- CampfireCollective\n- stupid\n- Omegaflowey18\n- ProdByProto\n\n### Sillyposting - Week 2\n- Jaydchw\n- Eris\n- UnusedParadox\n- PokerThePoker\n- Supernova\n- Victin\n\n### Jtem - Week 3\n- aikoyori\n- Haya\n- SleepyG11\n- squidguset\n- missingnumber\n\n### Team Name - Week 4\n- Corobo\n- Revo\n- GoldenLeaf\n- GhostSalt\n- Jogla\n- Violet\n\n### Team :) - Week 5\n- notmario\n- PokeRen\n- RGBeet\n- basil_squared\n\n### The four horsechicots of the potatolypse - Week 6\n- lord.ruby\n- nxkoo\n- Lily Felli\n- cg223\n- pangaea47\n- baccon4\n\n### Oops! All Programmers - Week 7\n- theAstra\n- Mysthaps\n- th30ne\n- trif\n- Liafeon\n- SadCube\n- factwixard\n\n### pissdrawer - Week 8\n- N'\n- Eremel\n- deadbeet\n- SDM_0\n- BepisFever\n- Fey\n- tacashumi\n\n### Teamless contributors (bug fixes)\n- WilsontheWolf\n\n## Note:\nHot Potato was not designed with cross-content mod compatibility in mind. It is recommended to not play Hot Potato with other mods installed. If you forego this warning, expect things to break!!\n\n***If you are experiencing a crash on startup,*** please be sure that your folders are not **nested**. If your Mod's folder looks like `Balatro/Mods/Hot-Potato/Hot-Potato/<mod files here>`, cut and paste the mod files from the second folder to the first, so that the mod's files are only one \"layer\" deep. The Mod's folder should look like this: `Balatro/Mods/Hot-Potato/<mod files here>`.\n\n**If your mod folder looks correct and you are still experiencing crashes of any kind**, please create an issue on this repository, or send a crash log in the mod's [thread in the Balatro Discord](https://discord.com/channels/1116389027176787968/1397989781178155009).\n"
   }
 }
