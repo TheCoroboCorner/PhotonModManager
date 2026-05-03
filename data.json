@@ -6253,6 +6253,12 @@
     ],
     "externalWiki": null,
     "updated_at": "2026-03-29T20:48:03Z",
-    "readme": ""
+    "readme": "",
+    "versionHistory": [],
+    "versionHistoryLastCheck": "2026-05-03T12:34:08.140Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-05-03T12:34:08.395Z"
+    }
   }
 }
