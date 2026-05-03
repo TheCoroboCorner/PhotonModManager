@@ -6025,6 +6025,53 @@
     ],
     "externalWiki": null,
     "updated_at": "2026-05-03T02:45:09Z",
-    "readme": "\n<img width=\"924\" height=\"468\" alt=\"logo\" src=\"https://github.com/user-attachments/assets/ef5cc31e-2bf5-4ec6-9345-69b517519ccd\" />\n\n# A Balatro modjam mod about opening presents\n\nParticipants were tasked with creating up to 5 Presents for players to unwrap from each developer's own unique container and play with across their run! Present effects can range from extremely powerful to actively detrimental, so be careful which ones you pick, as you cannot get rid of them! \n\n<sub>Who would throw away a gift anyways? Rude...</sub>\n\n### Enjoy the mod, and have a happy holiday!\n\n<br></br>\n## Credits:\n### Organizers:\n- theAstra\n- WilsontheWolf\n- Eremel\n### Participants:\n- aikoyori\n- athebyne\n- BakersDozenBagels\n- blanthos\n- Breuhh\n- Chartreuse Chamber\n- cloudzXIII\n- deadbeet (a.k.a tomatose)\n- ellestuff.\n- ENNWAY\n- Eremel\n- Eris\n- Evgast\n- Freh\n- Gappie\n- Garb\n- GoldenLeaf\n- BarrierTrio (a.k.a. Gote)\n- haya\n- J8-Bit\n- Jogla\n- LFMoth\n- MissingNumber\n- mys. minty\n- Mysthaps\n- notmario\n- Nxkoo\n- pangaea47\n- pi_cubed\n- Plasma\n- ProdByProto\n- Rainstar\n- RattlingSnow353\n- Edward Robinson\n- Ruby\n- Santa Claus (yes the real one)\n- SDM_0\n- Kitty\n- Soulware1\n- TheOneGoofAli\n- ThunderEdge\n- UnusedParadox\n- VMan_2002\n- WilsontheWolf\n- Youh Kirisame\n### Non-participant Contributors\n- Spikeberd (a.k.a Lyman)\n- DigitalDetective47\n- Lily Felli\n### Bugfixing, Playtesting, and Polish\n- Edward Robinson\n- ThunderEdge\n- Nxkoo\n- SDM_0\n- triple6lexi\n- pi_cubed\n- pangaea47\n- theAstra\n- Eremel\n- WilsontheWolf\n- canicao\n\n## Are you a developer or artist interested in participating in these events yourself? Join the Potato Patch Discord Server! https://discord.gg/sSPMcUucvz\n"
+    "readme": "\n<img width=\"924\" height=\"468\" alt=\"logo\" src=\"https://github.com/user-attachments/assets/ef5cc31e-2bf5-4ec6-9345-69b517519ccd\" />\n\n# A Balatro modjam mod about opening presents\n\nParticipants were tasked with creating up to 5 Presents for players to unwrap from each developer's own unique container and play with across their run! Present effects can range from extremely powerful to actively detrimental, so be careful which ones you pick, as you cannot get rid of them! \n\n<sub>Who would throw away a gift anyways? Rude...</sub>\n\n### Enjoy the mod, and have a happy holiday!\n\n<br></br>\n## Credits:\n### Organizers:\n- theAstra\n- WilsontheWolf\n- Eremel\n### Participants:\n- aikoyori\n- athebyne\n- BakersDozenBagels\n- blanthos\n- Breuhh\n- Chartreuse Chamber\n- cloudzXIII\n- deadbeet (a.k.a tomatose)\n- ellestuff.\n- ENNWAY\n- Eremel\n- Eris\n- Evgast\n- Freh\n- Gappie\n- Garb\n- GoldenLeaf\n- BarrierTrio (a.k.a. Gote)\n- haya\n- J8-Bit\n- Jogla\n- LFMoth\n- MissingNumber\n- mys. minty\n- Mysthaps\n- notmario\n- Nxkoo\n- pangaea47\n- pi_cubed\n- Plasma\n- ProdByProto\n- Rainstar\n- RattlingSnow353\n- Edward Robinson\n- Ruby\n- Santa Claus (yes the real one)\n- SDM_0\n- Kitty\n- Soulware1\n- TheOneGoofAli\n- ThunderEdge\n- UnusedParadox\n- VMan_2002\n- WilsontheWolf\n- Youh Kirisame\n### Non-participant Contributors\n- Spikeberd (a.k.a Lyman)\n- DigitalDetective47\n- Lily Felli\n### Bugfixing, Playtesting, and Polish\n- Edward Robinson\n- ThunderEdge\n- Nxkoo\n- SDM_0\n- triple6lexi\n- pi_cubed\n- pangaea47\n- theAstra\n- Eremel\n- WilsontheWolf\n- canicao\n\n## Are you a developer or artist interested in participating in these events yourself? Join the Potato Patch Discord Server! https://discord.gg/sSPMcUucvz\n",
+    "versionHistory": [
+      {
+        "tag": "v1.0.3",
+        "name": "v1.0.3",
+        "body": "Maintenance update to utilize new SMODS release",
+        "publishedAt": "2026-03-01T03:53:12Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Stocking-Stuffer/releases/tag/v1.0.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.2",
+        "name": "v1.0.2",
+        "body": "- Fixed the Sack Booster not being discovered by default\\r\\n- Fixed Shower Gel sometimes not disabling boss blinds\\r\\n- Ditto and Portable Slot can no longer pick presents that are not in the available present pool\\r\\n- Fixed Evil Bomb never incrementing\\r\\n- Added compatibility with Talisman's Disable Scoring Animations config option\\r\\n- Replaced a placeholder sprite with its intended one\\r\\n- Fixed Cool Feather modifying probabilities twice\\r\\n- Fixed Star of Bethlehem attempting to access cards in hand when there are none\\r\\n- Fixed various cross-mod crashes relating to Credits\\r\\n- Fixed Card Shuffler showing cards on screen\\r\\n- Fixed Merchandise being able to copy Loyalty Card, causing a crash\\r\\n- Fixed Locked Door being affected by probability-altering effects\\r\\n- Added compatibility with Banner\\r\\n- Fixed DEALMAKER prices being different that what was shown, sometimes causing negative dollars",
+        "publishedAt": "2025-12-29T03:19:35Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Stocking-Stuffer/releases/tag/v1.0.2",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.1",
+        "name": "v1.0.1",
+        "body": "- Fixed evgast's wrapped present missing localization entries\\r\\n- Fixed a render scale bug with notmario's 3D models\\r\\n- Fixed an incorrect hook affecting the update function\\r\\n- Fixed presents screen not showing when going easing negative antes\\r\\n- Fixed a crash caused by Star Fruit\\r\\n- Fixed The Book 2 ignoring consumable limit\\r\\n- Tweaked 8 Crazy Antes to show the correct Xmult at all times\\r\\n- Fixed Improvised Painter not checking for Repetitions\\r\\n- Fixed Improvised Painter not resetting cards to \\\"base\\\"\\r\\n- Better Too Many Jokers compatibility\\r\\n- Fixed a typo with Soulware's \\\"Glpyh\\\"\\r\\n- Various other small fixes",
+        "publishedAt": "2025-12-27T05:51:59Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Stocking-Stuffer/releases/tag/v1.0.1",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
+        "tag": "v1.0.0",
+        "name": "v1.0.0",
+        "body": "# INITIAL RELEASE, HAPPY HOLIDAYS EVERYONE!!!",
+        "publishedAt": "2025-12-25T16:52:05Z",
+        "htmlUrl": "https://github.com/Balatro-Potato-Patch/Stocking-Stuffer/releases/tag/v1.0.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      }
+    ],
+    "versionHistoryLastCheck": "2026-05-03T03:07:00.877Z",
+    "analytics": {
+      "views": 1,
+      "lastViewed": "2026-05-03T03:07:00.958Z"
+    }
   }
 }
