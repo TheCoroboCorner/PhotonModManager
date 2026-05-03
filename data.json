@@ -5570,7 +5570,7 @@
       "ThunderEdge73"
     ],
     "description": "A mod containing only Al content.",
-    "favourites": 2,
+    "favourites": 1,
     "allow_redistribution": true,
     "badge_colour": "374244",
     "dependencies": [
@@ -6226,8 +6226,8 @@
     ],
     "versionHistoryLastCheck": "2026-05-03T03:20:02.554Z",
     "analytics": {
-      "views": 2,
-      "lastViewed": "2026-05-03T03:22:50.462Z"
+      "views": 3,
+      "lastViewed": "2026-05-03T07:46:54.218Z"
     }
   }
 }
