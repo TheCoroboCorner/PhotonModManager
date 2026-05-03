@@ -1062,7 +1062,7 @@
       "Somethingcom515"
     ],
     "description": "Allows seals on Everything also comes with more seals",
-    "favourites": 19,
+    "favourites": 20,
     "badge_colour": "E8463D",
     "dependencies": [
       "Steamodded (>=1.0.0~BETA-0509b-STEAMODDED)",
@@ -1221,8 +1221,8 @@
     ],
     "versionHistoryLastCheck": "2026-05-03T03:09:59.055Z",
     "analytics": {
-      "views": 87,
-      "lastViewed": "2026-05-03T11:25:07.647Z",
+      "views": 88,
+      "lastViewed": "2026-05-03T11:25:13.718Z",
       "downloads": 3,
       "lastDownloaded": "2026-03-30T11:01:07.341Z"
     }
