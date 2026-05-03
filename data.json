@@ -281,7 +281,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.283Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.061Z"
   },
   "Maximus@the-Astra": {
     "id": "Maximus",
@@ -831,7 +831,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:42.288Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:58.262Z"
   },
   "Lucky-Rabbit@Trif3ctal": {
     "id": "LuckyRabbit",
@@ -1031,7 +1031,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.284Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.664Z"
   },
   "Ortalab@Eremel": {
     "id": "ortalab",
@@ -1075,7 +1075,7 @@
       {
         "tag": "4.0.0",
         "name": "4.0.0",
-        "body": "1. Added Synonym Jokers\\r\\n2. Added 4 new decks\\r\\n3. Added the ability to merge cards\\r\\n4. More optimizations\\r\\n5. Added upgraded seals\\r\\n6. Added negative seal effects for jokers and consumables\\r\\n7. Added the frozen edition\\r\\n8. Added the ability to play jokers and also make them trigger\\r\\n9. Added 3 new vouchers\\r\\n10. Added 3 new config options\\r\\n11. Made Sacrifice less useless\\r\\n12. Changed Seal Seal effect",
+        "body": "1. Added Synonym Jokers\\r\\n2. Added 4 new decks\\r\\n3. Added the ability to merge cards\\r\\n4. More optimizations\\r\\n5. Added upgraded seals\\r\\n6. Added negative seal effects for jokers and consumables\\r\\n7. Added the frozen edition\\r\\n8. Added the ability to play jokers and also make them trigger\\r\\n9. Added 3 new vouchers\\r\\n10. Added 3 new config options\\r\\n11. Changed Sacrifice and Seal Seal effects",
         "publishedAt": "2026-03-30T08:21:58Z",
         "htmlUrl": "https://github.com/Somethingcom515/SealsOnJokers/releases/tag/4.0.0",
         "assets": [
@@ -1217,7 +1217,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.282Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.055Z",
     "analytics": {
       "views": 78,
       "lastViewed": "2026-04-09T14:02:10.987Z",
@@ -1290,7 +1290,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.284Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.055Z",
     "analytics": {
       "views": 3,
       "lastViewed": "2026-04-14T21:39:12.325Z",
@@ -1322,6 +1322,22 @@
     "type": "Mod",
     "tags": [],
     "versionHistory": [
+      {
+        "tag": "v1.9.2",
+        "name": "V1.9.2",
+        "body": "Fix `attempt to index field 'deck' (a nil value)` crash when starting some runs by @nh6574 ",
+        "publishedAt": "2026-04-21T13:40:51Z",
+        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.9.2",
+        "assets": [
+          {
+            "name": "CardSleeves-1.9.2.zip",
+            "size": 500996,
+            "downloadUrl": "https://github.com/larswijn/CardSleeves/releases/download/v1.9.2/CardSleeves-1.9.2.zip"
+          }
+        ],
+        "prerelease": false,
+        "draft": false
+      },
       {
         "tag": "v1.9.1",
         "name": "V1.9.1",
@@ -1725,19 +1741,9 @@
         "assets": [],
         "prerelease": false,
         "draft": false
-      },
-      {
-        "tag": "v1.3.10",
-        "name": "V1.3.10",
-        "body": "+ Fix issue with Galdur's random sleeve button not properly loading the sleeve",
-        "publishedAt": "2024-09-22T14:10:35Z",
-        "htmlUrl": "https://github.com/larswijn/CardSleeves/releases/tag/v1.3.10",
-        "assets": [],
-        "prerelease": false,
-        "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.289Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.665Z"
   },
   "JokerDisplay@nh6574": {
     "id": "JokerDisplay",
@@ -1757,11 +1763,11 @@
     "tags": [],
     "versionHistory": [
       {
-        "tag": "v1.10.0",
-        "name": "v1.10.0",
-        "body": "## What's Changed\\r\\n* Optimization by @SleepyG11 in https://github.com/nh6574/JokerDisplay/pull/84\\r\\n\\r\\n### Installation\\r\\n* Install/update [Lovely](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation)\\r\\n* Delete your previous JokerDisplay files if any\\r\\n* Download \\\"Source Code (zip)\\\" and put it inside your Balatro mods folder (%appdata%\\\\Balatro\\\\Mods)\\r\\n\\r\\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.9.6...v1.10.0",
+        "tag": "v1.10.1",
+        "name": "v1.10.1",
+        "body": "## What's Changed\\r\\n1.10.1:\\r\\n* Fix high number display in multiplier, closes #86 by @largereptile in https://github.com/nh6574/JokerDisplay/pull/87\\r\\n* Support unloaded icon in SMODS\\r\\n\\r\\n1.10.0:\\r\\n* Optimization by @SleepyG11 in https://github.com/nh6574/JokerDisplay/pull/84\\r\\n\\r\\n### Installation\\r\\n* Install/update [Lovely](https://github.com/ethangreen-dev/lovely-injector?tab=readme-ov-file#manual-installation)\\r\\n* Delete your previous JokerDisplay files if any\\r\\n* Download \\\"Source Code (zip)\\\" and put it inside your Balatro mods folder (%appdata%\\\\Balatro\\\\Mods)\\r\\n\\r\\n**Full Changelog**: https://github.com/nh6574/JokerDisplay/compare/v1.9.6...v1.10.0",
         "publishedAt": "2026-04-10T21:34:12Z",
-        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.10.0",
+        "htmlUrl": "https://github.com/nh6574/JokerDisplay/releases/tag/v1.10.1",
         "assets": [],
         "prerelease": false,
         "draft": false
@@ -2123,7 +2129,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-19T13:03:17.617Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.666Z",
     "analytics": {
       "views": 1,
       "downloads": 1,
@@ -2385,7 +2391,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-19T09:10:04.130Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.665Z"
   },
   "balatro-typist-mod@kasimeka": {
     "id": "typist",
@@ -2622,7 +2628,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.283Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.664Z"
   },
   "SystemClock@Breezebuilder": {
     "id": "SystemClock",
@@ -2879,7 +2885,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.284Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.665Z"
   },
   "DismissAlert@Breezebuilder": {
     "id": "DismissAlert",
@@ -2912,7 +2918,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:42.885Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.055Z"
   },
   "Balatro-Aikoyoris-Shenanigans@Aikoyori": {
     "id": "aikoyorisshenanigans",
@@ -3236,7 +3242,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.289Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.665Z"
   },
   "BalatroBakery@BakersDozenBagels": {
     "id": "Bakery",
@@ -3265,7 +3271,7 @@
     ],
     "readme": "# Bakery\n\nA mod for [Balatro](https://www.playbalatro.com/) that adds various miscellaneous things, created by BakersDozenBagels.\n\nAdditions are generally meant to be well-balanced with vanilla, although the decks are a bit wackier.\n\nCurrent contents:\n\n- 22 Jokers\n- 10 Charms (a new kind of thing in the shop)\n- 20 Tags\n- 3 Decks\n- 3 [Deck Sleeves](https://github.com/larswijn/CardSleeves)\n- 5 Blinds\n- 3 Challenges\n- 1 Tarot Card\n- 2 Spectral Cards\n- 2 Enhancements\n- 1 Edition\n- Miscellaneous modding API features (If this mod does something interesting, it can probably be used as a dependency to do that thing)\n\n## Cross-Mod Content\n\nWith certain other mods installed, Bakery will add extra items:\n- [Revo's Vault](https://github.com/Cdrvo/Revos-Vault---Balatro-Mod) - 1 Charm\n- [MoreFluff](https://github.com/notmario/MoreFluff) - 1 Charm\n- [Cryptid](https://github.com/SpectralPack/Cryptid) - 2 Charms\n\n## Installation\n\n1. Bakery requires [Steamodded](https://github.com/Steamodded/smods). Follow the instructions to install it if you haven't already.\n2. Clone this repository into your mods folder, or download it as a zip and place it there.\n3. Enjoy!\n\n## Lite Version\n\nIf another mod depends on Bakery, but you do not want Bakery's additions, you can install the [lite version](https://github.com/BakersDozenBagels/BalatroBakery/tree/lite). This version only has a modding API and nothing else. Note that both versions can be installed together without issue so long as both are up-to-date.\n\n## Other Contributors\n\nThanks to GhostSalt (@ghost12salt) and SadCube (@sadcube) on Discord for some of the artwork used.\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-04-17T21:16:42.789Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:58.765Z",
     "analytics": {
       "views": 3,
       "lastViewed": "2026-04-15T09:52:51.930Z",
@@ -3295,7 +3301,7 @@
     ],
     "readme": "# Balatest - Unit Testing for Balatro\n\nBalatest is a unit testing framework for Balatro mods. See [Bakery's unit tests](https://github.com/BakersDozenBagels/BalatroBakery/tree/main/test) for example code using Balatest.\n\n## How To Use\n\nFirst, register some unit tests with `Balatest.TestPlay` (see below). Then, to run tests, execute `Balatest.run_tests()` (I recommend using [DebugPlus](https://github.com/WilsontheWolf/DebugPlus) to do so). Balatest will put test results in the console/log. You can also only run the tests from a given mod (`Balatest.run_tests 'Bakery'`) or from a category in a mod (`Balatest.run_tests('Bakery', 'blinds')`).\n\n## Writing Tests\n\nA test in Balatest is fundamentally a [challenge](https://github.com/Steamodded/smods/wiki/SMODS.Challenge). Many of the keys in a challenge will also work in a test. Balatest will automatically begin the challenge and navigate to the Small Blind (note that every blind is Small by default). From there, `test.execute()` is called, where you will play, discard, navigate rounds, etc. Finally, `test.assert()` is called to evaluate the results of the test.\n\n### `execute`\n\nHere you will put some actions in a queue to set up the test. Note that this queue is *not* the default one; use `Balatest.q()` to add to it (`q` accepts bare functions as well as `Event`s for added convenience. Additionally, it will automatically `return true` for you unless you explicitly `return false`).\n\nBalatest also provides some pre-built events for you (each of these adds to the queue for you):\n- `Balatest.next_round()` ends the round and navigates to the next one.\n- `Balatest.end_round()` ends the round and waits on the evaluation screen.\n- `Balatest.cash_out()` cashes out the round evaluation screen.\n- `Balatest.exit_shop()` exits the shop.\n- `Balatest.start_round()` selects the next blind.\n- `Balatest.skip_blind(for_tag)` skips the next blind for the given tag (by key).\n- `Balatest.play_hand { '2S', '10H' }` plays those cards in that order. Note that this fails if the cards are not in hand.\n- `Balatest.discard { 'Ts', 'Qc' }` discards those cards. Note that this fails if the cards are not in hand.\n- `Balatest.highlight { '2S', '10H' }` highlights those cards in that order. Note that this fails if the cards are not in hand.\n- `Balatest.unhighlight_all()` unhighlights the hand.\n- `Balatest.use(card, instant)` uses a consumable. E.g. `Balatest.use(G.consumeables.cards[1])` (you can also pass a function as in `buy`)\n- `Balatest.buy(func)` buys something from the shop. E.g. `Balatest.buy(function() return G.shop_jokers.cards[1] end)`\n- `Balatest.hook(obj, name, func)` hooks a function until the test concludes. See below for more information.\n- `Balatest.hook_raw(obj, name, new)` overwrites an object until the test concludes.\n- `Balatest.wait_for_input(state, front)` waits until the game will accept input.\n- `Balatest.reload()` saves and loads the game as if by returning to the main menu.\n- `Balatest.wait()` waits until everything currently in the standard event queue completes.\n\n### `assert`\n\nHere you will write some assertions on the final state of the test. Balatest provides a few helpers for this:\n- `Balatest.assert(bool, message?)` is a bare assertion.\n- `Balatest.assert_eq(a, b, message?)` asserts that two numbers are equal with or without Talisman.\n- `Balatest.assert_neq(a, b, message?)` asserts that two numbers are unequal with or without Talisman.\n- `Balatest.assert_chips(num, message?)` asserts that `G.GAME.chips` is equal to the supplied number.\n\n## Example Test\n\n```lua\nBalatest.TestPlay {\n    jokers = { 'j_joker' }, -- Start with a Joker\n    execute = function()\n        Balatest.play_hand { '2S' } -- Play a High Card\n    end,\n    assert = function()\n        Balatest.assert_chips(35) -- Total round score, *not* the last hand\n    end\n}\n```\n\n## Default Values\n\nBalatest will run each test with the following defaults:\n- `back = 'Red Deck'`\n- `stake = 1`\n- `seed = nil`\n- `jokers = {}`\n- `consumeables = {}`\n- `vouchers = {}`\n- `dollars = 0` (Starting money)\n- `discards = 999`\n- `hands = 999`\n- `hand_size = 52`\n- `modifiers = {}` (`challenge.rules.modifiers`)\n- `custom = {}` (`challenge.rules.custom`)\n- `deck = nil`\n- `blind = 'bl_small'`\n- `no_auto_start = false`\n\n# Advanced Features\n\n- Specify `blind = 'bl_wheel'` to make every blind The Wheel. By default, every blind is a Small Blind.\n- Specify `name = 'something'` to give your test a descriptive name. Names are automatically prefixed with your mod's ID.\n- Specify `category = 'my_category'` to be able to run a subset of your tests. You can specify multiple categories in a table.\n- Use `Balatest.run_test { ... }` to run a single test not defined elsewhere.\n- Use `Balatest.run_test 'mod_id_test_name'` to run a single test.\n- Check `Balatest.current_test` for the name of the currently running test.\n- Check `Balatest.current_test_object` for the whole config of the currently running test.\n- Inspect `Balatest.done` for more detailed results of your tests.\n\n## `Balatest.hook`\n\nSometimes it's necessary to hook a function in the middle of a test, for example to control RNG.\nBalatest provides a fixture to do this and automatically unhook the functions later.\n\nConsider the following quite silly test:\n\n```lua\nBalatest.run_test {\n    consumeables = { 'c_judgement' },\n    execute = function()\n        Balatest.hook(_G, 'create_card', function(orig, t, a, l, r, k, s, forced_key, ...)\n            return orig(t, a, l, r, k, s, 'j_chicot', ...)\n        end)\n        Balatest.use(G.consumeables.cards[1])\n    end,\n    assert = function()\n        Balatest.assert_eq(#G.consumeables.cards, 0)\n        Balatest.assert_eq(#G.jokers.cards, 1)\n        Balatest.assert(G.jokers.cards[1].config.center.key == 'j_chicot')\n    end\n}\n```\n\nHere, we force the global function `create_card` to create a Chicot (which otherwise cannot spawn from Judgement).\nNote that the first argument to the new function is the previous function.\n\n```lua\nBalatest.run_test {\n    consumeables = { 'c_judgement', 'c_judgement' },\n    execute = function()\n        Balatest.hook(_G, 'create_card', function(orig, t, a, l, r, k, s, forced_key, ...)\n            return orig(t, a, l, r, k, s, 'j_perkeo', ...)\n        end)\n        Balatest.use(G.consumeables.cards[1])\n        Balatest.hook(_G, 'create_card', function(orig, t, a, l, r, k, s, forced_key, ...)\n            return orig(t, a, l, r, k, s, 'j_caino', ...)\n        end)\n        Balatest.use(G.consumeables.cards[2]) -- The card is looked up before the other one gets destroyed.\n    end,\n    assert = function()\n        Balatest.assert_eq(#G.consumeables.cards, 0)\n        Balatest.assert_eq(#G.jokers.cards, 2)\n        Balatest.assert(G.jokers.cards[1].config.center.key == 'j_perkeo')\n        Balatest.assert(G.jokers.cards[2].config.center.key == 'j_caino')\n    end\n}\n```\n\nHere, we hook the same function twice. Note that when the second hook is applied, the first hook gets removed.\nAlso note that the application of the hook is queued.\nAfter running these tests, even if they fail, the function will be what it was originally.\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:58.760Z",
     "analytics": {
       "views": 1,
       "lastViewed": "2026-04-13T01:13:21.653Z"
@@ -3629,7 +3635,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.665Z"
   },
   "Balatro-Dream-BBQ-Mod@Noodlemire": {
     "id": "DreamBBQ",
@@ -3647,7 +3653,7 @@
     ],
     "readme": "# Balatro: Dream BBQ Mod\n\nContent mod for Balatro based on ENA: Dream BBQ. Currently adds 25 Jokers, and is at least intended to offer Vanilla-friendly balance... but no guarantees just yet.\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-04-17T21:16:42.790Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.056Z"
   },
   "Alloy@TheCoroboCorner": {
     "id": "Alloy",
@@ -3713,7 +3719,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.056Z"
   },
   "Tangents@Clickseee": {
     "id": "tangent",
@@ -3739,7 +3745,7 @@
     ],
     "readme": "<img width=\"1550\" height=\"500\" alt=\"logo\" src=\"https://github.com/user-attachments/assets/a52bbcdb-5fcf-4ea2-ac9e-a17104bd454b\" />\n\n# Tangents\n\n Shenanigans and Randomness had a hot steamy intimate time\n\n # CREDITS TO THESE PEOPLE WHO HELPED ME/FOR THEIR CODES REFERENCE\n- N' (@nh6574 on discord)\n- Somethingcom515 (on discord)\n- BepisFever (on discord)\n- HeavenPierceHer (@kxeine_ on discord)\n- Freh (on discord) [for their timer code]\n- Aikoyori (on discord) [for their SMODS.Font tutorial]\n- PERKOLATED (on discord) [for the card title screen code]\n- SleepyG11 (on discord)\n- HuyTheKiller (on discord)\n- senfinbrare (on discord)\n- Victin (on discord)\n\n# HOW TO DOWNLOAD??????????\ngreen big obvious button on top, said download ZIP, enjyo\n",
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.666Z",
     "analytics": {
       "views": 1,
       "lastViewed": "2026-01-31T17:06:01.991Z"
@@ -3864,7 +3870,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.664Z",
     "analytics": {
       "views": 1,
       "lastViewed": "2026-03-24T17:51:32.995Z"
@@ -4192,7 +4198,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.287Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.666Z",
     "analytics": {
       "views": 3,
       "lastViewed": "2026-03-21T09:57:25.758Z"
@@ -4221,7 +4227,7 @@
       "lastViewed": "2026-04-09T13:54:05.348Z"
     },
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.281Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.056Z"
   },
   "bloated_1_modpack": {
     "id": "bloated_1_modpack",
@@ -4481,7 +4487,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.283Z"
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.758Z"
   },
   "Medium@Goldofleaves": {
     "id": "Medium",
@@ -4513,7 +4519,7 @@
       "lastViewed": "2026-02-13T04:36:03.928Z"
     },
     "versionHistory": [],
-    "versionHistoryLastCheck": "2026-04-17T21:16:42.885Z"
+    "versionHistoryLastCheck": "2026-05-03T03:10:00.461Z"
   },
   "CoroboUtils@TheCoroboCorner": {
     "id": "CoroboUtils",
@@ -4566,7 +4572,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.758Z",
     "analytics": {
       "views": 3,
       "lastViewed": "2026-02-26T04:11:33.351Z"
@@ -4590,6 +4596,16 @@
     "updated_at": "2026-01-30T03:36:08Z",
     "readme": "# JimboAnd\nJimbo&amp;! is a silly little crossover Balatro mod, where every content pack is going to be whatever media I've got on my mind\nAs of now, the only available content pack is \"Jimbo & Azuma\", which contains 10 Yotsuba/Azumanga themed Jokers. I hate doing art.\n<img width=\"934\" height=\"508\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a27aff38-c9c8-4712-a4f8-4ffa1fe42931\" />\n",
     "versionHistory": [
+      {
+        "tag": "0.2.3",
+        "name": "Nothing new, just tweaking stuff",
+        "body": "-Danbo tweakery\\r\\n-Assigned attributes. Correctly too, I think.\\r\\n-Yomi relies on food attributes instead of pool\\r\\n-Kinda preparing for the Mewgenics pack",
+        "publishedAt": "2026-04-20T16:00:06Z",
+        "htmlUrl": "https://github.com/Evgast/JimboAnd/releases/tag/0.2.3",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
       {
         "tag": "0.2.2",
         "name": "Added Moon Knight... Deja vu...",
@@ -4651,7 +4667,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.666Z",
     "analytics": {
       "views": 5,
       "lastViewed": "2026-02-02T06:11:56.516Z"
@@ -4688,6 +4704,16 @@
     ],
     "versionHistory": [
       {
+        "tag": "v0.2.0",
+        "name": "0.2.0",
+        "body": "## What's Changed\\r\\n* Finished Erika's secret easter egg animation\\r\\n\\r\\n### Installation\\r\\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\\r\\n* Delete your previous Repertorium files if any\\r\\n* Download \\\"Source Code (zip)\\\" and put it inside your Balatro mods folder (%appdata%\\\\Balatro\\\\Mods)\\r\\n\\r\\nBetter enjoyed with [Blockbuster: Counters](https://github.com/icyethics/Blockbuster-Counters). \\r\\nAlso features [Balatro Goes Kino](https://github.com/icyethics/Kino) crossmod.",
+        "publishedAt": "2026-04-27T01:51:49Z",
+        "htmlUrl": "https://github.com/nh6574/Repertorium/releases/tag/v0.2.0",
+        "assets": [],
+        "prerelease": false,
+        "draft": false
+      },
+      {
         "tag": "v0.1.1",
         "name": "0.1.1",
         "body": "## What's Changed\\r\\nThis release requires [SMODS~BETA-0827c or higher](https://github.com/Steamodded/smods/releases/latest)\\r\\n* Initial release\\r\\n\\r\\n### Installation\\r\\n* Install/update [Steamodded](https://github.com/Steamodded/smods/wiki)\\r\\n* Delete your previous Repertorium files if any\\r\\n* Download \\\"Source Code (zip)\\\" and unzip it into a folder inside your Balatro mods folder (%appdata%\\\\Balatro\\\\Mods)\\r\\n\\r\\nBetter enjoyed with [Blockbuster: Counters](https://github.com/icyethics/Blockbuster-Counters). \\r\\nAlso features [Balatro Goes Kino](https://github.com/icyethics/Kino) crossmod.",
@@ -4698,7 +4724,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:43.284Z",
+    "versionHistoryLastCheck": "2026-05-03T03:10:00.457Z",
     "analytics": {
       "views": 3,
       "lastViewed": "2026-03-05T20:26:41.590Z"
@@ -4975,7 +5001,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.666Z",
     "analytics": {
       "views": 31,
       "lastViewed": "2026-04-01T21:47:13.189Z",
@@ -5194,7 +5220,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.666Z",
     "analytics": {
       "views": 9,
       "lastViewed": "2026-04-13T11:19:55.246Z",
@@ -5529,7 +5555,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.287Z",
+    "versionHistoryLastCheck": "2026-05-03T03:09:59.758Z",
     "analytics": {
       "views": 5,
       "lastViewed": "2026-04-01T21:36:09.971Z"
@@ -5691,7 +5717,7 @@
         "draft": false
       }
     ],
-    "versionHistoryLastCheck": "2026-04-17T21:16:44.283Z",
+    "versionHistoryLastCheck": "2026-05-03T03:10:00.461Z",
     "analytics": {
       "views": 9,
       "lastViewed": "2026-04-09T14:02:25.224Z",
